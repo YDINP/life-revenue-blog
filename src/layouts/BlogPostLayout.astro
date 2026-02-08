@@ -1,0 +1,399 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import CoupangBanner from '../components/CoupangBanner.astro';
+import AdSlot from '../components/AdSlot.astro';
+import RelatedPosts from '../components/RelatedPosts.astro';
+import NewsletterCTA from '../components/NewsletterCTA.astro';
+
+interface Props {
+  frontmatter: {
+    title: string;
+    description: string;
+    pubDate: string;
+    updatedDate?: string;
+    author: string;
+    category: string;
+    tags: string[];
+    heroImage?: string;
+    coupangLinks?: { title: string; url: string; imageUrl?: string }[];
+  };
+}
+
+const { frontmatter } = Astro.props;
+const {
+  title,
+  description,
+  pubDate,
+  updatedDate,
+  author,
+  category,
+  tags,
+  heroImage,
+  coupangLinks,
+} = frontmatter;
+
+const pubDateObj = new Date(pubDate);
+const formattedDate = pubDateObj.toLocaleDateString('ko-KR', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+// Category labels
+const categoryLabel: Record<string, string> = {
+  lifestyle: '라이프스타일',
+  finance: '금융',
+  health: '건강',
+  education: '교육',
+  travel: '여행',
+};
+const catLabel = category ? categoryLabel[category.toLowerCase()] || category : 'Blog';
+
+// JSON-LD structured data for SEO
+const canonicalUrl = Astro.url.href;
+const imageObj = heroImage ? { url: heroImage, alt: title } : undefined;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description: description,
+  datePublished: pubDateObj.toISOString(),
+  ...(updatedDate && { dateModified: new Date(updatedDate).toISOString() }),
+  author: {
+    '@type': 'Person',
+    name: author,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'TechFlow Blog',
+    url: 'https://ai-revenue-blog.vercel.app',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://ai-revenue-blog.vercel.app/favicon.svg',
+    },
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': canonicalUrl,
+  },
+  keywords: tags.join(', '),
+  ...(imageObj && {
+    image: {
+      '@type': 'ImageObject',
+      url: imageObj.url,
+      alt: imageObj.alt,
+    },
+  }),
+};
+
+// BreadcrumbList schema for navigation hierarchy
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: '홈',
+      item: 'https://ai-revenue-blog.vercel.app/',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: '블로그',
+      item: 'https://ai-revenue-blog.vercel.app/blog/',
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: catLabel,
+      item: `https://ai-revenue-blog.vercel.app/blog/${category.toLowerCase()}/`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 4,
+      name: title,
+    },
+  ],
+};
+
+// Get slug from URL
+const currentSlug = Astro.url.pathname.split('/').filter(Boolean).pop() || '';
+---
+
+<BaseLayout title={title} description={description} image={imageObj?.url}>
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+
+  <article class="blog-post">
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <ol>
+        <li><a href="/">홈</a></li>
+        <li><a href="/blog/">블로그</a></li>
+        <li><a href={`/blog/${category.toLowerCase()}/`}>{catLabel}</a></li>
+        <li aria-current="page">{title}</li>
+      </ol>
+    </nav>
+
+    <header class="post-header">
+      <div class="post-meta">
+        <span class="post-category" data-cat={category.toLowerCase()}>{category}</span>
+        <time datetime={pubDateObj.toISOString()}>{formattedDate}</time>
+        <span class="post-reading-time">읽기 약 3분</span>
+        {
+          updatedDate && (
+            <span class="post-updated">
+              (수정:{' '}
+              {new Date(updatedDate).toLocaleDateString('ko-KR', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+              })}
+              )
+            </span>
+          )
+        }
+      </div>
+      <h1>{title}</h1>
+      <p class="post-description">{description}</p>
+      <div class="post-tags">
+        {tags.map((tag) => (
+          <a href={`/blog/tags/${encodeURIComponent(tag)}/`} class="tag">#{tag}</a>
+        ))}
+      </div>
+
+      <!-- Social Share Buttons -->
+      <div class="share-buttons">
+        <span class="share-label">공유하기</span>
+        <a
+          href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(canonicalUrl)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="share-btn share-twitter"
+          aria-label="트위터에 공유"
+          title="트위터에 공유"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+        <a
+          href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(canonicalUrl)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="share-btn share-facebook"
+          aria-label="페이스북에 공유"
+          title="페이스북에 공유"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </a>
+        <a
+          href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(canonicalUrl)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="share-btn share-linkedin"
+          aria-label="링크드인에 공유"
+          title="링크드인에 공유"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </a>
+        <button
+          type="button"
+          class="share-btn share-copy"
+          id="copy-link-btn"
+          aria-label="링크 복사"
+          title="링크 복사"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+          </svg>
+        </button>
+        <div class="copy-tooltip" id="copy-tooltip">링크가 복사되었습니다!</div>
+      </div>
+    </header>
+
+    {imageObj && <img src={imageObj.url} alt={imageObj.alt} class="post-hero-image" />}
+
+    <!-- 목차 (ToC) - JS로 자동 생성 -->
+    <nav class="toc" id="toc"></nav>
+
+    <!-- 상단 광고 슬롯 -->
+    <AdSlot position="top" />
+
+    <div class="post-content" id="post-content">
+      <slot />
+    </div>
+
+    <!-- 쿠팡 추천 상품 -->
+    {coupangLinks && coupangLinks.length > 0 && (
+      <CoupangBanner links={coupangLinks} />
+    )}
+
+    <!-- 관련 글 추천 -->
+    {currentSlug && (
+      <RelatedPosts currentSlug={currentSlug} category={category} tags={tags} />
+    )}
+
+    <!-- Newsletter CTA -->
+    <NewsletterCTA />
+
+    <!-- Post navigation removed for simplicity -->
+
+    <!-- 관련 글 안내 -->
+    <div class="post-cta">
+      <h3>이 글이 도움이 되셨나요?</h3>
+      <p>더 많은 유용한 콘텐츠를 확인해보세요.</p>
+      <div class="post-cta-buttons">
+        <a href="/blog/" class="btn-primary">전체 글 보기</a>
+        <a href={`/blog/${category.toLowerCase()}/`} class="btn-secondary">{catLabel} 더 보기</a>
+      </div>
+    </div>
+
+    <!-- 하단 광고 슬롯 -->
+    <AdSlot position="bottom" />
+  </article>
+
+  <script>
+    // Copy link to clipboard
+    (function() {
+      const copyBtn = document.getElementById('copy-link-btn');
+      const tooltip = document.getElementById('copy-tooltip');
+
+      if (copyBtn && tooltip) {
+        copyBtn.addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText(window.location.href);
+            tooltip.classList.add('show');
+            setTimeout(() => {
+              tooltip.classList.remove('show');
+            }, 2000);
+          } catch (err) {
+            console.error('Failed to copy:', err);
+          }
+        });
+      }
+    })();
+
+    // Auto-generate Table of Contents
+    (function() {
+      const content = document.getElementById('post-content');
+      const toc = document.getElementById('toc');
+      if (!content || !toc) return;
+
+      const headings = content.querySelectorAll('h2, h3');
+      if (headings.length < 2) { toc.style.display = 'none'; return; }
+
+      let html = '<h4>목차</h4><ul>';
+      headings.forEach((h, i) => {
+        const id = 'heading-' + i;
+        h.id = id;
+        const indent = h.tagName === 'H3' ? ' class="toc-sub"' : '';
+        html += `<li${indent}><a href="#${id}">${h.textContent}</a></li>`;
+      });
+      html += '</ul>';
+      toc.innerHTML = html;
+
+      // Estimate reading time
+      const text = content.textContent || '';
+      const minutes = Math.max(1, Math.round(text.length / 500));
+      const readingEl = document.querySelector('.post-reading-time');
+      if (readingEl) readingEl.textContent = `읽기 약 ${minutes}분`;
+
+      // === Chart Rendering System (Enhanced) ===
+      function hexToRgba(hex, alpha) {
+        const r = parseInt(hex.slice(1,3), 16);
+        const g = parseInt(hex.slice(3,5), 16);
+        const b = parseInt(hex.slice(5,7), 16);
+        return `rgba(${r},${g},${b},${alpha})`;
+      }
+
+      // IntersectionObserver for scroll animation
+      const chartObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.querySelectorAll('.chart-fill, .radar-score-fill').forEach(fill => {
+              fill.classList.add('animated');
+            });
+            chartObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      // 1) Render bar charts
+      document.querySelectorAll('.chart-bar').forEach(el => {
+        const labels = (el.dataset.labels || '').split(',');
+        const values = (el.dataset.values || '').split(',').map(Number);
+        const colors = (el.dataset.colors || '#3b82f6,#f59e0b,#10b981,#ef4444,#8b5cf6').split(',');
+        const title = el.dataset.title || '';
+        const unit = el.dataset.unit || '';
+        const max = Math.max(...values) * 1.15;
+
+        let html = '';
+        if (title) html += `<div class="chart-title">${title}</div>`;
+        html += '<div class="chart-bars">';
+        labels.forEach((label, i) => {
+          const pct = max > 0 ? (values[i] / max) * 100 : 0;
+          const color = colors[i % colors.length].trim();
+          const grad = `linear-gradient(90deg, ${color}, ${hexToRgba(color, 0.7)})`;
+          html += `<div class="chart-row">
+            <span class="chart-label">${label.trim()}</span>
+            <div class="chart-track">
+              <div class="chart-fill" style="width:${pct}%;background:${grad}">
+                ${pct > 25 ? `<span class="chart-fill-inner-val">${values[i]}${unit}</span>` : ''}
+              </div>
+            </div>
+            <span class="chart-value">${values[i]}${unit}</span>
+          </div>`;
+        });
+        html += '</div>';
+        el.innerHTML = html;
+        chartObserver.observe(el);
+      });
+
+      // 2) Render radar/score charts
+      document.querySelectorAll('.chart-radar').forEach(el => {
+        const items = JSON.parse(el.dataset.items || '[]');
+        const title = el.dataset.title || '';
+        let html = '';
+        if (title) html += `<div class="chart-title">${title}</div>`;
+        html += '<div class="chart-radar-grid">';
+        items.forEach(item => {
+          const scores = item.scores || [];
+          const avg = scores.length > 0 ? (scores.reduce((a,s) => a + s.value, 0) / scores.length).toFixed(1) : '0';
+          const mainColor = scores[0]?.color || '#3b82f6';
+          html += `<div class="radar-item">
+            <div class="radar-item-accent" style="background:${mainColor}"></div>
+            <div class="radar-name" style="color:${mainColor}">${item.name}</div>
+            <div class="radar-avg">
+              <span class="radar-avg-badge" style="background:${hexToRgba(mainColor, 0.12)};color:${mainColor}">
+                평균 ${avg}/10
+              </span>
+            </div>
+            <div class="radar-scores">`;
+          scores.forEach(s => {
+            const pct = (s.value / 10) * 100;
+            const grad = `linear-gradient(90deg, ${s.color || '#3b82f6'}, ${hexToRgba(s.color || '#3b82f6', 0.6)})`;
+            html += `<div class="radar-score-row">
+              <span class="radar-score-label">${s.label}</span>
+              <div class="radar-score-track">
+                <div class="radar-score-fill" style="width:${pct}%;background:${grad}"></div>
+              </div>
+              <span class="radar-score-val" style="color:${s.color || '#3b82f6'}">${s.value}</span>
+            </div>`;
+          });
+          html += '</div></div>';
+        });
+        html += '</div>';
+        el.innerHTML = html;
+        chartObserver.observe(el);
+      });
+    })();
+  </script>
+</BaseLayout>

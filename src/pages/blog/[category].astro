@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../../components/PostCard.astro';
+
+export async function getStaticPaths() {
+  const allPosts = await import.meta.glob('../../blog/**/*.md', { eager: true });
+  const posts = Object.entries(allPosts).map(([path, post]) => ({
+    ...post,
+    url: path.replace('../../blog', '/blog').replace('.md', '/'),
+  }));
+
+  const categories = ['lifestyle', 'finance', 'health', 'education', 'travel'];
+
+  return categories.map(category => {
+    const categoryPosts = posts.filter(
+      post => post.frontmatter.category === category
+    ).sort((a, b) => new Date(b.frontmatter.pubDate).getTime() - new Date(a.frontmatter.pubDate).getTime());
+
+    return {
+      params: { category },
+      props: { posts: categoryPosts },
+    };
+  });
+}
+
+const { category } = Astro.params;
+const { posts } = Astro.props;
+
+const categoryLabels = {
+  lifestyle: '라이프스타일',
+  finance: '금융',
+  health: '건강',
+  education: '교육',
+  travel: '여행',
+};
+
+const categoryEmoji = {
+  lifestyle: '✨',
+  finance: '💰',
+  health: '💪',
+  education: '📚',
+  travel: '✈️',
+};
+
+const label = categoryLabels[category] || category;
+const emoji = categoryEmoji[category] || '📁';
+---
+
+<BaseLayout
+  title={`${label} - LifeFlow`}
+  description={`${label} 카테고리의 모든 글을 확인하세요.`}
+>
+  <div class="category-header">
+    <div class="category-icon">{emoji}</div>
+    <h1>{label}</h1>
+    <p>{posts.length}개의 글</p>
+  </div>
+
+  <div class="post-grid">
+    {posts.map(post => (
+      <PostCard
+        title={post.frontmatter.title}
+        description={post.frontmatter.description}
+        pubDate={post.frontmatter.pubDate}
+        category={post.frontmatter.category}
+        slug={post.url}
+        image={post.frontmatter.heroImage ? { url: post.frontmatter.heroImage, alt: post.frontmatter.title } : undefined}
+        tags={post.frontmatter.tags}
+      />
+    ))}
+  </div>
+
+  {posts.length === 0 && (
+    <div class="empty-state">
+      <p>이 카테고리에는 아직 글이 없습니다.</p>
+    </div>
+  )}
+</BaseLayout>
+
+<style>
+.category-header {
+  text-align: center;
+  padding: 3rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.category-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.category-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.category-header p {
+  color: var(--color-text-secondary);
+}
+
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem 1rem;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+  .post-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

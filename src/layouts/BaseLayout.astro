@@ -1,0 +1,199 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  canonicalUrl?: string;
+}
+
+const { title, description, image, canonicalUrl } = Astro.props;
+const siteTitle = 'LifeFlow - 더 나은 삶을 위한 인사이트';
+const fullTitle = title === siteTitle ? title : `${title} | ${siteTitle}`;
+const defaultOgImage = 'https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&dpr=1';
+const ogImage = image || defaultOgImage;
+const canonical = canonicalUrl || Astro.url.href;
+const currentPath = Astro.url.pathname;
+
+// WebSite JSON-LD schema with SearchAction
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'LifeFlow',
+  alternateName: 'LifeFlow Blog',
+  url: 'https://life-revenue-blog.vercel.app',
+  description: '라이프스타일, 금융, 건강, 교육, 여행 전문 블로그 - 더 나은 삶을 위한 실용 정보',
+  inLanguage: 'ko-KR',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://life-revenue-blog.vercel.app/blog/?q={search_term_string}',
+    },
+    'query-input': 'required name=search_term_string',
+  },
+};
+---
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- SEO -->
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="LifeFlow" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#ec4899" />
+    <link rel="canonical" href={canonical} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:site_name" content={siteTitle} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="alternate" type="application/rss+xml" title={siteTitle} href="/rss.xml" />
+
+    <!-- WebSite Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+
+    <!-- Pretendard Font -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet" />
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9400779918671270" crossorigin="anonymous"></script>
+
+    <!-- Dark Mode Init (FOUC 방지) -->
+    <script is:inline>
+      (function() {
+        const t = localStorage.getItem('theme');
+        if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+  </head>
+
+  <body>
+    <!-- Reading Progress -->
+    <div class="reading-progress" id="reading-progress"></div>
+
+    <header class="site-header">
+      <nav class="nav-container">
+        <a href="/" class="site-logo">LifeFlow</a>
+        <div class="nav-right">
+          <div class="nav-links" id="nav-menu">
+            <a href="/blog/" class={currentPath === '/blog/' ? 'active' : ''}>Blog</a>
+            <a href="/blog/lifestyle/" class={currentPath.includes('/blog/lifestyle') ? 'active' : ''}>라이프스타일</a>
+            <a href="/blog/finance/" class={currentPath.includes('/blog/finance') ? 'active' : ''}>금융</a>
+            <a href="/blog/health/" class={currentPath.includes('/blog/health') ? 'active' : ''}>건강</a>
+            <a href="/blog/education/" class={currentPath.includes('/blog/education') ? 'active' : ''}>교육</a>
+            <a href="/blog/travel/" class={currentPath.includes('/blog/travel') ? 'active' : ''}>여행</a>
+          </div>
+          <button class="theme-toggle" id="theme-toggle" aria-label="다크 모드 토글">
+            <span id="theme-icon">🌙</span>
+          </button>
+          <button class="nav-toggle" id="nav-toggle" aria-label="메뉴 열기">☰</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <h4>카테고리</h4>
+            <ul>
+              <li><a href="/blog/lifestyle/">라이프스타일</a></li>
+              <li><a href="/blog/finance/">금융 & 재테크</a></li>
+              <li><a href="/blog/health/">건강 & 운동</a></li>
+              <li><a href="/blog/education/">교육 & 학습</a></li>
+              <li><a href="/blog/travel/">여행</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>바로가기</h4>
+            <ul>
+              <li><a href="/blog/">전체 글</a></li>
+              <li><a href="/rss.xml">RSS 피드</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>LifeFlow</h4>
+            <ul>
+              <li><a href="/">홈</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; {new Date().getFullYear()} LifeFlow. All rights reserved.</p>
+          <p class="footer-note">
+            이 사이트의 일부 링크는 제휴 마케팅 링크이며, 구매 시 소정의 수수료를 받을 수 있습니다.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="back-to-top" aria-label="맨 위로">↑</button>
+
+    <script>
+      // Reading progress
+      function updateProgress() {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        const bar = document.getElementById('reading-progress');
+        if (bar) bar.style.width = pct + '%';
+      }
+      window.addEventListener('scroll', updateProgress);
+
+      // Back to top
+      const btt = document.getElementById('back-to-top');
+      window.addEventListener('scroll', () => {
+        if (btt) btt.classList.toggle('show', window.scrollY > 400);
+      });
+      btt?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+      // Dark mode toggle
+      const toggle = document.getElementById('theme-toggle');
+      const icon = document.getElementById('theme-icon');
+      function syncIcon() {
+        if (icon) icon.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+      }
+      syncIcon();
+      toggle?.addEventListener('click', () => {
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        syncIcon();
+      });
+
+      // Mobile nav toggle
+      const navToggle = document.getElementById('nav-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      navToggle?.addEventListener('click', () => navMenu?.classList.toggle('open'));
+    </script>
+  </body>
+</html>

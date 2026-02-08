@@ -1,0 +1,116 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../../components/PostCard.astro';
+
+const allPosts = await Astro.glob('../../blog/**/*.md');
+const sortedPosts = allPosts.sort(
+  (a, b) => new Date(b.frontmatter.pubDate).getTime() - new Date(a.frontmatter.pubDate).getTime()
+);
+---
+
+<BaseLayout
+  title="Blog"
+  description="라이프스타일, 금융, 건강, 교육, 여행에 대한 모든 글을 확인하세요."
+>
+  <div class="blog-header">
+    <div>
+      <h1>Blog</h1>
+      <p style="color: var(--color-text-secondary);">
+        총 {sortedPosts.length}개의 글
+      </p>
+    </div>
+    <div class="view-toggle" id="view-toggle">
+      <button class="view-btn active" data-view="grid" aria-label="그리드 보기" title="그리드 보기">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="1" y="1" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="10" y="1" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="1" y="10" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/><rect x="10" y="10" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/></svg>
+      </button>
+      <button class="view-btn" data-view="list" aria-label="리스트 보기" title="리스트 보기">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="1" y="2" width="16" height="3" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="1" y="7.5" width="16" height="3" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="1" y="13" width="16" height="3" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <svg class="search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <circle cx="9" cy="9" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M13 13L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+    <input
+      type="text"
+      id="search-input"
+      class="search-input"
+      placeholder="제목, 설명, 태그로 검색..."
+      aria-label="블로그 글 검색"
+    />
+    <span class="search-count" id="search-count"></span>
+  </div>
+
+  <div class="post-grid" id="post-container">
+    {
+      sortedPosts.map((post) => (
+        <PostCard
+          title={post.frontmatter.title}
+          description={post.frontmatter.description}
+          pubDate={post.frontmatter.pubDate}
+          category={post.frontmatter.category}
+          slug={post.url}
+          image={post.frontmatter.heroImage ? { url: post.frontmatter.heroImage, alt: post.frontmatter.title } : undefined}
+          tags={post.frontmatter.tags}
+        />
+      ))
+    }
+  </div>
+
+  <script>
+    (function() {
+      const container = document.getElementById('post-container');
+      const buttons = document.querySelectorAll('.view-btn');
+      const saved = localStorage.getItem('blog-view') || 'grid';
+
+      function setView(view) {
+        if (!container) return;
+        container.className = view === 'list' ? 'post-list' : 'post-grid';
+        buttons.forEach(b => b.classList.toggle('active', b.dataset.view === view));
+        localStorage.setItem('blog-view', view);
+      }
+
+      setView(saved);
+      buttons.forEach(b => b.addEventListener('click', () => setView(b.dataset.view)));
+
+      // Search functionality
+      const searchInput = document.getElementById('search-input');
+      const searchCount = document.getElementById('search-count');
+      const allCards = Array.from(document.querySelectorAll('.post-card'));
+
+      function performSearch() {
+        const query = searchInput.value.toLowerCase().trim();
+
+        if (!query) {
+          allCards.forEach(card => card.style.display = '');
+          searchCount.textContent = '';
+          return;
+        }
+
+        let visibleCount = 0;
+        allCards.forEach(card => {
+          const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
+          const description = card.querySelector('p')?.textContent.toLowerCase() || '';
+          const category = card.querySelector('.post-category')?.textContent.toLowerCase() || '';
+          const tags = card.dataset.tags?.toLowerCase() || '';
+
+          const searchText = `${title} ${description} ${category} ${tags}`;
+          const isMatch = searchText.includes(query);
+
+          card.style.display = isMatch ? '' : 'none';
+          if (isMatch) visibleCount++;
+        });
+
+        searchCount.textContent = `${visibleCount}개의 검색 결과`;
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', performSearch);
+      }
+    })();
+  </script>
+</BaseLayout>

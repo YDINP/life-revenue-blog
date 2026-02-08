@@ -1,0 +1,197 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostCard from '../components/PostCard.astro';
+
+const allPosts = await Astro.glob('../blog/**/*.md');
+const sortedPosts = allPosts
+  .sort((a, b) => new Date(b.frontmatter.pubDate).getTime() - new Date(a.frontmatter.pubDate).getTime())
+  .slice(0, 6);
+
+const categories = [
+  { slug: 'lifestyle', label: '라이프스타일', emoji: '✨', desc: '더 나은 삶을 위한 습관과 팁' },
+  { slug: 'finance', label: '금융', emoji: '💰', desc: '재테크와 자산 관리' },
+  { slug: 'health', label: '건강', emoji: '💪', desc: '운동과 영양 관리' },
+  { slug: 'education', label: '교육', emoji: '📚', desc: '자기계발과 학습법' },
+  { slug: 'travel', label: '여행', emoji: '✈️', desc: '국내외 여행 정보' },
+];
+---
+
+<BaseLayout
+  title="LifeFlow - 더 나은 삶을 위한 인사이트"
+  description="라이프스타일, 금융, 건강, 교육, 여행 최신 정보를 제공하는 블로그"
+>
+  <div class="home-hero">
+    <h1 class="hero-title">LifeFlow</h1>
+    <p class="hero-subtitle">더 나은 삶을 위한 인사이트</p>
+    <p class="hero-desc">금융, 건강, 교육, 여행, 라이프스타일 최신 정보</p>
+  </div>
+
+  <section class="category-quick-links">
+    <h2 class="section-title">카테고리 둘러보기</h2>
+    <div class="category-grid">
+      {categories.map(cat => (
+        <a href={`/blog/${cat.slug}/`} class="category-card">
+          <div class="category-emoji">{cat.emoji}</div>
+          <h3>{cat.label}</h3>
+          <p>{cat.desc}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="latest-posts">
+    <h2 class="section-title">최신 글</h2>
+    <div class="posts-grid">
+      {sortedPosts.map(post => (
+        <PostCard
+          title={post.frontmatter.title}
+          description={post.frontmatter.description}
+          pubDate={post.frontmatter.pubDate}
+          category={post.frontmatter.category}
+          slug={post.url}
+          image={post.frontmatter.heroImage ? { url: post.frontmatter.heroImage, alt: post.frontmatter.title } : undefined}
+          tags={post.frontmatter.tags}
+        />
+      ))}
+    </div>
+    <div class="view-all">
+      <a href="/blog/" class="btn-primary">전체 글 보기 →</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.home-hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, #fce7f3 0%, #e0f2fe 100%);
+  border-radius: 16px;
+  margin-bottom: 3rem;
+}
+
+:root.dark .home-hero {
+  background: linear-gradient(135deg, #831843 0%, #164e63 100%);
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #ec4899 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.hero-desc {
+  font-size: 1.125rem;
+  color: var(--color-text-secondary);
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--color-text);
+}
+
+.category-quick-links {
+  margin-bottom: 3rem;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--color-text);
+  transition: all 0.2s;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
+}
+
+.category-emoji {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.category-card h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.category-card p {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.latest-posts {
+  margin-bottom: 3rem;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.view-all {
+  text-align: center;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: var(--color-primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+  .posts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

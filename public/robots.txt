@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /dashboard
+
+# Crawl-delay for polite bots
+Crawl-delay: 1
+
+Sitemap: https://ai-revenue-blog.vercel.app/sitemap-index.xml
+
+# AI Revenue Blog - TechFlow
+# https://ai-revenue-blog.vercel.app

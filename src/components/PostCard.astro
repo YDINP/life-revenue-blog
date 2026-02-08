@@ -1,0 +1,53 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  pubDate: Date;
+  category: string;
+  slug: string;
+  image?: { url: string; alt: string };
+  tags?: string[];
+}
+
+const { title, description, pubDate, category, slug, image, tags } = Astro.props;
+const dateObj = pubDate instanceof Date ? pubDate : new Date(pubDate);
+const formattedDate = dateObj.toLocaleDateString('ko-KR', {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
+});
+---
+
+<div class="post-card" data-tags={tags?.join(' ')}>
+  <a href={`/blog/${slug}/`}>
+    <div class="post-card-image-wrap">
+      {image ? (
+        <img
+          src={image.url}
+          alt={image.alt}
+          class="post-card-image"
+          loading="lazy"
+        />
+      ) : (
+        <div class="post-card-image-placeholder">
+          <span>{category}</span>
+        </div>
+      )}
+    </div>
+    <div class="post-card-body">
+      <h3>{title}</h3>
+      <p>{description}</p>
+      {tags && tags.length > 0 && (
+        <div class="post-tags-inline">
+          {tags.slice(0, 3).map(tag => (
+            <a href={`/blog/tags/${encodeURIComponent(tag)}/`} class="post-tag">#{tag}</a>
+          ))}
+        </div>
+      )}
+      <div class="post-card-footer">
+        <span class="post-category" data-cat={category.toLowerCase()}>{category}</span>
+        <time datetime={dateObj.toISOString()}>{formattedDate}</time>
+      </div>
+    </div>
+  </a>
+</div>
