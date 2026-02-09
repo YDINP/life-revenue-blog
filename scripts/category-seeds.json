@@ -1,0 +1,29 @@
+{
+  "categories": [
+    {
+      "name": "lifestyle",
+      "keywords": ["미니멀 라이프 실천법", "디지털 디톡스 가이드", "모닝 루틴 만들기", "홈 오피스 환경 꾸미기", "시간 관리 전략"],
+      "searchTerms": ["minimalist lifestyle", "digital detox", "morning routine", "home office setup", "time management"]
+    },
+    {
+      "name": "finance",
+      "keywords": ["ETF 투자 입문", "2026 재테크 전략", "자산 배분 가이드", "부업 수익화 방법", "절약 습관 만들기"],
+      "searchTerms": ["ETF investing beginner", "financial planning 2026", "asset allocation", "side income", "saving habits"]
+    },
+    {
+      "name": "health",
+      "keywords": ["홈 트레이닝 루틴", "건강한 식단 가이드", "수면 개선 방법", "스트레스 관리법", "직장인 운동법"],
+      "searchTerms": ["home workout routine", "healthy meal prep", "sleep improvement", "stress management", "office exercise"]
+    },
+    {
+      "name": "education",
+      "keywords": ["효과적인 자기 학습법", "온라인 강의 추천", "독서 습관 만들기", "외국어 학습 전략", "코딩 입문 가이드"],
+      "searchTerms": ["self learning strategies", "online course comparison", "reading habits", "language learning", "coding for beginners"]
+    },
+    {
+      "name": "travel",
+      "keywords": ["국내 숨은 명소 TOP 10", "제주도 여행 가이드", "일본 여행 예산", "유럽 배낭여행 팁", "동남아 한 달 살기"],
+      "searchTerms": ["Korea hidden gems", "Jeju travel guide", "Japan budget travel", "Europe backpacking", "Southeast Asia living"]
+    }
+  ]
+}
