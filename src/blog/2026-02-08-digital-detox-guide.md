@@ -8,11 +8,11 @@ tags: ["디지털디톡스", "스크린타임", "라이프스타일", "습관", 
 heroImage: "https://images.pexels.com/photos/3771074/pexels-photo-3771074.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "디지털 미니멀리즘 도서"
-    url: "https://link.coupang.com/a/dH55N7"
+    url: "https://link.coupang.com/a/dJhOT3"
   - title: "아날로그 알람시계"
-    url: "https://link.coupang.com/a/dH56O8"
+    url: "https://link.coupang.com/a/dJhOT3"
   - title: "종이 다이어리"
-    url: "https://link.coupang.com/a/dH5mF4"
+    url: "https://link.coupang.com/a/dJhOT3"
 ---
 
 # 디지털 디톡스: 스마트폰에서 벗어나는 법

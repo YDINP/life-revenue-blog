@@ -8,9 +8,9 @@ tags: ["미니멀라이프", "라이프스타일", "정리정돈", "삶의질"]
 heroImage: "https://images.pexels.com/photos/1907642/pexels-photo-1907642.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "정리의 힘 도서"
-    url: "https://link.coupang.com/a/dH53L5"
+    url: "https://link.coupang.com/a/dJhOT3"
   - title: "수납 정리함"
-    url: "https://link.coupang.com/a/dH54M6"
+    url: "https://link.coupang.com/a/dJhOT3"
 ---
 
 # 미니멀 라이프 시작하기

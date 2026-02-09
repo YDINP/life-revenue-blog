@@ -8,9 +8,9 @@ tags: ["영양", "식단", "건강", "직장인"]
 heroImage: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "도시락 용기 세트"
-    url: "https://link.coupang.com/a/dH5tB5"
+    url: "https://link.coupang.com/a/dJhOT3"
   - title: "건강 식단 레시피북"
-    url: "https://link.coupang.com/a/dH5uC6"
+    url: "https://link.coupang.com/a/dJhOT3"
 ---
 
 # 건강한 식단 가이드: 바쁜 직장인을 위한 영양 관리

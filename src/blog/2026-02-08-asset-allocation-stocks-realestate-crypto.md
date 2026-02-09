@@ -8,9 +8,9 @@ tags: ["자산배분", "투자", "부동산", "주식", "암호화폐"]
 heroImage: "https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "자산배분 투자 도서"
-    url: "https://link.coupang.com/a/dH5mF4"
+    url: "https://link.coupang.com/a/dJhOT3"
   - title: "재테크 다이어리"
-    url: "https://link.coupang.com/a/dH5k3n"
+    url: "https://link.coupang.com/a/dJhOT3"
 ---
 
 # 2026 자산 배분 전략: 어디에 투자해야 할까?

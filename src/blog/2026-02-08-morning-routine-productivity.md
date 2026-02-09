@@ -8,9 +8,9 @@ tags: ["모닝루틴", "생산성", "습관", "라이프스타일"]
 heroImage: "https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "모닝루틴 도서"
-    url: "https://link.coupang.com/a/dH55N7"
+    url: "https://link.coupang.com/a/dJhOT3"
   - title: "알람시계"
-    url: "https://link.coupang.com/a/dH56O8"
+    url: "https://link.coupang.com/a/dJhOT3"
 ---
 
 # 모닝 루틴의 힘: 하루를 바꾸는 아침 습관

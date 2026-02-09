@@ -8,9 +8,9 @@ tags: ["자기계발", "학습법", "생산성", "교육"]
 heroImage: "https://images.pexels.com/photos/6533345/pexels-photo-6533345.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "공부법 도서"
-    url: "https://link.coupang.com/a/dH5vD7"
+    url: "https://link.coupang.com/a/dJhOT3"
   - title: "학습 플래너"
-    url: "https://link.coupang.com/a/dH5wE8"
+    url: "https://link.coupang.com/a/dJhOT3"
 ---
 
 # 효과적인 자기 학습법: 2026년 전략 TOP 5

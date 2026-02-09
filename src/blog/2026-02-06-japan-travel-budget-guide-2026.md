@@ -8,9 +8,9 @@ tags: ["일본여행", "여행예산", "해외여행", "여행팁"]
 heroImage: "https://images.pexels.com/photos/402028/pexels-photo-402028.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "여행용 캐리어"
-    url: "https://link.coupang.com/a/dH5zH1"
+    url: "https://link.coupang.com/a/dJhOT3"
   - title: "휴대용 보조배터리"
-    url: "https://link.coupang.com/a/dH50I2"
+    url: "https://link.coupang.com/a/dJhOT3"
 ---
 
 # 일본 여행 예산 가이드: 2026년 완벽 플랜

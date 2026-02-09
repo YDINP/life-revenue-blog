@@ -8,9 +8,9 @@ tags: ["국내여행", "숨은명소", "여행추천", "주말여행"]
 heroImage: "https://images.pexels.com/photos/3990359/pexels-photo-3990359.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "차박 용품"
-    url: "https://link.coupang.com/a/dH51J3"
+    url: "https://link.coupang.com/a/dJhOT3"
   - title: "여행용 카메라"
-    url: "https://link.coupang.com/a/dH52K4"
+    url: "https://link.coupang.com/a/dJhOT3"
 ---
 
 # 국내 여행 숨은 명소 TOP 10

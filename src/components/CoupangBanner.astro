@@ -9,6 +9,7 @@ interface Props {
   links: CoupangLink[];
 }
 
+const DEFAULT_URL = 'https://link.coupang.com/a/dJhOT3';
 const { links } = Astro.props;
 ---
 
@@ -18,7 +19,7 @@ const { links } = Astro.props;
     {
       links.map((link) => (
         <a
-          href={link.url}
+          href={link.url || DEFAULT_URL}
           target="_blank"
           rel="noopener noreferrer nofollow"
           class="coupang-link-item"

@@ -8,9 +8,9 @@ tags: ["홈트레이닝", "운동", "건강", "다이어트"]
 heroImage: "https://images.pexels.com/photos/4162491/pexels-photo-4162491.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "요가매트"
-    url: "https://link.coupang.com/a/dH5rK2"
+    url: "https://link.coupang.com/a/dJhOT3"
   - title: "홈트레이닝 밴드"
-    url: "https://link.coupang.com/a/dH5sA4"
+    url: "https://link.coupang.com/a/dJhOT3"
 ---
 
 # 홈 트레이닝 완벽 가이드

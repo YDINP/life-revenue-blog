@@ -8,9 +8,9 @@ tags: ["ETF", "투자", "주식", "금융"]
 heroImage: "https://images.pexels.com/photos/7788009/pexels-photo-7788009.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "ETF 투자 입문서"
-    url: "https://link.coupang.com/a/dH5pW9"
+    url: "https://link.coupang.com/a/dJhOT3"
   - title: "투자 공부 노트"
-    url: "https://link.coupang.com/a/dH5qT1"
+    url: "https://link.coupang.com/a/dJhOT3"
 ---
 
 # ETF 투자 입문: 2026년 완벽 가이드

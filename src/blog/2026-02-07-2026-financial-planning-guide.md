@@ -8,9 +8,9 @@ tags: ["재테크", "자산관리", "투자입문", "금융"]
 heroImage: "https://images.pexels.com/photos/3943716/pexels-photo-3943716.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "부의 추월차선 도서"
-    url: "https://link.coupang.com/a/dH5mF4"
+    url: "https://link.coupang.com/a/dJhOT3"
   - title: "재테크 다이어리"
-    url: "https://link.coupang.com/a/dH5k3n"
+    url: "https://link.coupang.com/a/dJhOT3"
 ---
 
 # 2026년 재테크 완벽 가이드

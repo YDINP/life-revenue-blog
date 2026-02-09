@@ -8,9 +8,9 @@ tags: ["온라인강의", "자기계발", "교육", "플랫폼비교"]
 heroImage: "https://images.pexels.com/photos/4145153/pexels-photo-4145153.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "온라인 학습용 태블릿"
-    url: "https://link.coupang.com/a/dH5xF9"
+    url: "https://link.coupang.com/a/dJhOT3"
   - title: "무선 이어폰"
-    url: "https://link.coupang.com/a/dH5yG0"
+    url: "https://link.coupang.com/a/dJhOT3"
 ---
 
 # 온라인 강의 플랫폼 비교: 2026년 완벽 가이드

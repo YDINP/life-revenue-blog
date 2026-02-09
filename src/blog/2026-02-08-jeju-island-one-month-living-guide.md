@@ -8,11 +8,11 @@ tags: ["제주도", "한달살기", "워케이션", "여행", "디지털노마�
 heroImage: "https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "캐리어 28인치"
-    url: "https://link.coupang.com/a/dH56O8"
+    url: "https://link.coupang.com/a/dJhOT3"
   - title: "노이즈캔슬링 이어폰"
-    url: "https://link.coupang.com/a/dH5n1h"
+    url: "https://link.coupang.com/a/dJhOT3"
   - title: "여행용 보조배터리"
-    url: "https://link.coupang.com/a/dH5k3n"
+    url: "https://link.coupang.com/a/dJhOT3"
 ---
 
 # 제주도 한 달 살기: 현실적인 가이드
