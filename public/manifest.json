@@ -1,0 +1,17 @@
+{
+  "name": "LifeFlow - 더 나은 삶을 위한 인사이트",
+  "short_name": "LifeFlow",
+  "description": "라이프스타일, 금융, 건강, 교육, 여행 전문 블로그",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

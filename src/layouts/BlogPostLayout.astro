@@ -119,6 +119,27 @@ const breadcrumbLd = {
 
 // Get slug from URL
 const currentSlug = Astro.url.pathname.split('/').filter(Boolean).pop() || '';
+
+// Get all posts for prev/next navigation
+const allPostModules = import.meta.glob('../blog/**/*.md', { eager: true });
+const allPosts = Object.entries(allPostModules)
+  .map(([path, post]: [string, any]) => {
+    const slug = path
+      .replace('../blog/', '')
+      .replace('.md', '')
+      .split('/')
+      .slice(-1)[0];
+    return {
+      slug,
+      title: post.frontmatter.title,
+      pubDate: post.frontmatter.pubDate,
+    };
+  })
+  .sort((a, b) => new Date(a.pubDate).getTime() - new Date(b.pubDate).getTime());
+
+const currentIndex = allPosts.findIndex((p) => p.slug === currentSlug);
+const prevPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null;
+const nextPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
 ---
 
 <BaseLayout title={title} description={description} image={imageObj?.url}>
@@ -244,7 +265,25 @@ const currentSlug = Astro.url.pathname.split('/').filter(Boolean).pop() || '';
     <!-- Newsletter CTA -->
     <NewsletterCTA />
 
-    <!-- Post navigation removed for simplicity -->
+    <!-- Post Navigation (Prev/Next) -->
+    {(prevPost || nextPost) && (
+      <nav class="post-navigation">
+        <div class="post-nav-grid">
+          {prevPost && (
+            <a href={`/blog/${prevPost.slug}/`} class="post-nav-link prev">
+              <span class="post-nav-label">&larr; 이전 글</span>
+              <span class="post-nav-title">{prevPost.title}</span>
+            </a>
+          )}
+          {nextPost && (
+            <a href={`/blog/${nextPost.slug}/`} class="post-nav-link next">
+              <span class="post-nav-label">다음 글 &rarr;</span>
+              <span class="post-nav-title">{nextPost.title}</span>
+            </a>
+          )}
+        </div>
+      </nav>
+    )}
 
     <!-- 관련 글 안내 -->
     <div class="post-cta">

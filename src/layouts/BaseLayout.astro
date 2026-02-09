@@ -66,8 +66,13 @@ const websiteSchema = {
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
 
-    <!-- Favicon -->
+    <!-- Favicon & PWA -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="LifeFlow" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="alternate" type="application/rss+xml" title={siteTitle} href="/rss.xml" />
 
@@ -107,6 +112,7 @@ const websiteSchema = {
             <a href="/blog/health/" class={currentPath.includes('/blog/health') ? 'active' : ''}>건강</a>
             <a href="/blog/education/" class={currentPath.includes('/blog/education') ? 'active' : ''}>교육</a>
             <a href="/blog/travel/" class={currentPath.includes('/blog/travel') ? 'active' : ''}>여행</a>
+            <a href="/blog/tags/" class={currentPath.includes('/blog/tags') ? 'active' : ''}>태그</a>
           </div>
           <button class="theme-toggle" id="theme-toggle" aria-label="다크 모드 토글">
             <span id="theme-icon">🌙</span>
@@ -158,6 +164,15 @@ const websiteSchema = {
 
     <!-- Back to Top -->
     <button class="back-to-top" id="back-to-top" aria-label="맨 위로">↑</button>
+
+    <!-- Service Worker 등록 -->
+    <script is:inline>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(() => {});
+        });
+      }
+    </script>
 
     <script>
       // Reading progress

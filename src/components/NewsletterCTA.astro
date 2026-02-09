@@ -1,29 +1,104 @@
 ---
-// Newsletter CTA component
+interface Props {
+  variant?: 'default' | 'compact';
+}
+
+const { variant = 'default' } = Astro.props;
+const isCompact = variant === 'compact';
 ---
 
-<div class="newsletter-cta">
-  <h3>새 글 알림 받기</h3>
-  <p>새로운 글이 올라올 때마다 이메일로 알림을 받아보세요.</p>
-  <!-- 추후 뉴스레터 폼 추가 -->
+<div class={`newsletter-cta ${isCompact ? 'newsletter-cta-compact' : ''}`}>
+  <h3>LifeFlow 뉴스레터 구독</h3>
+  <p>매주 라이프스타일, 금융, 건강, 교육, 여행 분야의 유용한 인사이트를 받아보세요.</p>
+
+  <form class="newsletter-form" id="newsletter-form">
+    <input
+      type="email"
+      name="email"
+      id="newsletter-email"
+      placeholder="이메일 주소를 입력하세요"
+      required
+      aria-label="이메일 주소"
+    />
+    <button type="submit">구독하기</button>
+  </form>
+
+  <div class="newsletter-success" id="newsletter-success">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="display: inline-block; vertical-align: middle; margin-right: 0.5rem;">
+      <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="2" fill="none"/>
+      <path d="M6 10L9 13L14 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </svg>
+    <span>구독 신청이 완료되었습니다! 감사합니다.</span>
+  </div>
+
+  <div class="newsletter-error" id="newsletter-error">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="display: inline-block; vertical-align: middle; margin-right: 0.5rem;">
+      <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="2" fill="none"/>
+      <path d="M10 6V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="10" cy="14" r="1" fill="currentColor"/>
+    </svg>
+    <span>오류가 발생했습니다. 다시 시도해주세요.</span>
+  </div>
+
+  <p class="newsletter-privacy">
+    구독은 언제든 취소할 수 있습니다.
+  </p>
 </div>
 
-<style>
-.newsletter-cta {
-  background: var(--color-bg-secondary);
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
-  padding: 2rem;
-  margin: 3rem 0;
-  text-align: center;
-}
+<script>
+  (function() {
+    const form = document.getElementById('newsletter-form');
+    const successMsg = document.getElementById('newsletter-success');
+    const errorMsg = document.getElementById('newsletter-error');
+    const emailInput = document.getElementById('newsletter-email');
 
-.newsletter-cta h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.5rem;
-}
+    if (!form || !successMsg || !errorMsg || !emailInput) return;
 
-.newsletter-cta p {
-  color: var(--color-text-secondary);
-}
-</style>
+    // 이미 구독한 사용자
+    if (localStorage.getItem('newsletter-subscribed') === 'true') {
+      successMsg.style.display = 'block';
+      form.style.display = 'none';
+      return;
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Hide previous messages
+      successMsg.style.display = 'none';
+      errorMsg.style.display = 'none';
+
+      const email = emailInput.value.trim();
+      if (!email) {
+        errorMsg.style.display = 'block';
+        return;
+      }
+
+      try {
+        const ANALYTICS_URL = 'https://mkatzcmsrdntsmnykxpt.supabase.co/functions/v1/analytics-ingest';
+
+        const response = await fetch(ANALYTICS_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            event_type: 'newsletter_subscribe',
+            source: 'lifeflow',
+            metadata: {
+              email: email,
+              page: window.location.pathname,
+              subscribed_at: new Date().toISOString()
+            }
+          })
+        });
+
+        // Success
+        successMsg.style.display = 'block';
+        form.style.display = 'none';
+        localStorage.setItem('newsletter-subscribed', 'true');
+      } catch (error) {
+        console.error('Newsletter subscription error:', error);
+        errorMsg.style.display = 'block';
+      }
+    });
+  })();
+</script>
