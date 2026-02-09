@@ -1,0 +1,797 @@
+---
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Revenue Dashboard | LifeFlow</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet" />
+    <style>
+      :root {
+        --dash-bg: #0f172a;
+        --dash-surface: #1e293b;
+        --dash-surface-hover: #334155;
+        --dash-border: #334155;
+        --dash-text: #f1f5f9;
+        --dash-text-dim: #94a3b8;
+        --dash-accent: #3b82f6;
+        --dash-green: #22c55e;
+        --dash-yellow: #eab308;
+        --dash-red: #ef4444;
+        --dash-purple: #a855f7;
+        --dash-orange: #f97316;
+        --dash-pink: #ec4899;
+        --dash-cyan: #06b6d4;
+      }
+
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+
+      body {
+        font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: var(--dash-bg);
+        color: var(--dash-text);
+        min-height: 100vh;
+      }
+
+      .dash-header {
+        background: var(--dash-surface);
+        border-bottom: 1px solid var(--dash-border);
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .dash-header h1 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .dash-header .logo { color: var(--dash-green); }
+
+      .dash-header .meta {
+        font-size: 0.8125rem;
+        color: var(--dash-text-dim);
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .live-dot {
+        width: 8px; height: 8px;
+        background: var(--dash-green);
+        border-radius: 50%;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.4; }
+      }
+
+      .dash-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1.5rem;
+      }
+
+      /* Summary Cards */
+      .summary-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .summary-card {
+        background: var(--dash-surface);
+        border: 1px solid var(--dash-border);
+        border-radius: 12px;
+        padding: 1.25rem;
+      }
+
+      .summary-card .label {
+        font-size: 0.75rem;
+        color: var(--dash-text-dim);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.5rem;
+      }
+
+      .summary-card .value {
+        font-size: 2rem;
+        font-weight: 800;
+        line-height: 1;
+        margin-bottom: 0.25rem;
+      }
+
+      .summary-card .sub {
+        font-size: 0.75rem;
+        color: var(--dash-text-dim);
+      }
+
+      /* Category Cards */
+      .cat-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .cat-card {
+        background: var(--dash-surface);
+        border: 1px solid var(--dash-border);
+        border-radius: 10px;
+        padding: 1rem;
+        text-align: center;
+        transition: border-color 0.2s;
+      }
+
+      .cat-card:hover { border-color: var(--dash-accent); }
+
+      .cat-card .cat-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+      .cat-card .cat-name { font-size: 0.8125rem; font-weight: 600; margin-bottom: 0.25rem; }
+      .cat-card .cat-count { font-size: 0.75rem; color: var(--dash-text-dim); }
+
+      /* Chart Section */
+      .chart-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .chart-panel {
+        background: var(--dash-surface);
+        border: 1px solid var(--dash-border);
+        border-radius: 12px;
+        padding: 1.25rem;
+      }
+
+      .chart-panel h3 {
+        font-size: 0.875rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: var(--dash-text-dim);
+      }
+
+      /* Bar Chart */
+      .bar-chart {
+        display: flex;
+        align-items: flex-end;
+        gap: 6px;
+        height: 180px;
+        padding-top: 1rem;
+      }
+
+      .bar-group {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        height: 100%;
+        justify-content: flex-end;
+      }
+
+      .bar-fill {
+        width: 100%;
+        border-radius: 4px 4px 0 0;
+        background: linear-gradient(180deg, var(--dash-accent), var(--dash-green));
+        transition: height 0.5s ease;
+        min-height: 2px;
+      }
+
+      .bar-label {
+        font-size: 0.625rem;
+        color: var(--dash-text-dim);
+      }
+
+      .bar-value {
+        font-size: 0.5625rem;
+        color: var(--dash-text-dim);
+      }
+
+      /* Donut */
+      .donut-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .donut-svg { width: 160px; height: 160px; }
+
+      .donut-legend {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+      }
+
+      .legend-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 0.8125rem;
+      }
+
+      .legend-dot {
+        width: 10px; height: 10px;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+      }
+
+      .legend-name {
+        display: flex;
+        align-items: center;
+        color: var(--dash-text-dim);
+      }
+
+      .legend-value { font-weight: 600; }
+
+      /* Posts Table */
+      .table-panel {
+        background: var(--dash-surface);
+        border: 1px solid var(--dash-border);
+        border-radius: 12px;
+        padding: 1.25rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .table-panel h3 {
+        font-size: 0.875rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: var(--dash-text-dim);
+      }
+
+      .dash-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .dash-table th {
+        text-align: left;
+        font-size: 0.6875rem;
+        color: var(--dash-text-dim);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        padding: 0.5rem 0.75rem;
+        border-bottom: 1px solid var(--dash-border);
+      }
+
+      .dash-table td {
+        padding: 0.75rem;
+        font-size: 0.8125rem;
+        border-bottom: 1px solid var(--dash-border);
+      }
+
+      .dash-table tr:last-child td { border-bottom: none; }
+      .dash-table tr:hover td { background: var(--dash-surface-hover); }
+
+      .rank { font-weight: 700; color: var(--dash-accent); }
+
+      .post-title-cell {
+        max-width: 300px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .cat-badge {
+        display: inline-block;
+        padding: 0.125rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.6875rem;
+        font-weight: 600;
+      }
+
+      .cat-lifestyle { background: rgba(236,72,153,0.2); color: #f472b6; }
+      .cat-finance { background: rgba(59,130,246,0.2); color: #60a5fa; }
+      .cat-health { background: rgba(34,197,94,0.2); color: #4ade80; }
+      .cat-education { background: rgba(168,85,247,0.2); color: #c084fc; }
+      .cat-travel { background: rgba(249,115,22,0.2); color: #fb923c; }
+
+      /* Bottom Grid */
+      .bottom-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+
+      .status-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid var(--dash-border);
+        font-size: 0.8125rem;
+      }
+
+      .status-row:last-child { border-bottom: none; }
+
+      .status-badge {
+        padding: 0.125rem 0.5rem;
+        border-radius: 9999px;
+        font-size: 0.6875rem;
+        font-weight: 600;
+      }
+
+      .status-badge.online { background: rgba(34,197,94,0.2); color: #4ade80; }
+      .status-badge.pending { background: rgba(234,179,8,0.2); color: #facc15; }
+      .status-badge.offline { background: rgba(239,68,68,0.2); color: #f87171; }
+
+      .activity-item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.625rem 0;
+        border-bottom: 1px solid var(--dash-border);
+        font-size: 0.8125rem;
+      }
+
+      .activity-item:last-child { border-bottom: none; }
+
+      .activity-icon {
+        width: 32px; height: 32px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.875rem;
+        flex-shrink: 0;
+      }
+
+      .activity-icon.view { background: rgba(59,130,246,0.15); }
+      .activity-icon.click { background: rgba(34,197,94,0.15); }
+      .activity-icon.sub { background: rgba(168,85,247,0.15); }
+
+      .activity-text { color: var(--dash-text-dim); flex: 1; }
+      .activity-time { font-size: 0.6875rem; color: var(--dash-text-dim); white-space: nowrap; }
+
+      /* Banner */
+      .data-banner {
+        padding: 1rem 1.25rem;
+        border-radius: 10px;
+        margin-bottom: 1.25rem;
+        font-size: 0.85rem;
+        line-height: 1.6;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+
+      .data-banner.info {
+        background: rgba(59,130,246,0.1);
+        border: 1px solid rgba(59,130,246,0.25);
+        color: #93bbfd;
+      }
+
+      .data-banner .banner-icon { font-size: 1.25rem; flex-shrink: 0; }
+
+      .empty-state {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 140px;
+        color: var(--dash-text-dim);
+        text-align: center;
+        gap: 0.5rem;
+      }
+
+      .empty-state .empty-icon { font-size: 2rem; opacity: 0.5; }
+      .empty-state .empty-text { font-size: 0.8125rem; }
+
+      .loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100px;
+        color: var(--dash-text-dim);
+      }
+
+      .spinner {
+        width: 24px; height: 24px;
+        border: 3px solid var(--dash-border);
+        border-top-color: var(--dash-accent);
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+        margin-right: 0.75rem;
+      }
+
+      @keyframes spin { to { transform: rotate(360deg); } }
+
+      @media (max-width: 768px) {
+        .summary-grid { grid-template-columns: repeat(2, 1fr); }
+        .cat-grid { grid-template-columns: repeat(3, 1fr); }
+        .chart-grid { grid-template-columns: 1fr; }
+        .bottom-grid { grid-template-columns: 1fr; }
+        .dash-header { flex-direction: column; gap: 0.5rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="dash-header">
+      <h1><span class="logo">LifeFlow</span> Revenue Dashboard</h1>
+      <div class="meta">
+        <span class="live-dot"></span>
+        <span id="last-updated">Loading...</span>
+        <a href="/" style="color: var(--dash-green); text-decoration: none; font-size: 0.8125rem;">Blog &rarr;</a>
+      </div>
+    </header>
+
+    <div class="dash-container">
+      <div id="data-banner" class="data-banner" style="display:none;"></div>
+
+      <!-- Summary Cards -->
+      <div class="summary-grid">
+        <div class="summary-card">
+          <div class="label">Page Views</div>
+          <div class="value" id="total-views">--</div>
+          <div class="sub" id="views-sub">로딩 중...</div>
+        </div>
+        <div class="summary-card">
+          <div class="label">Published Posts</div>
+          <div class="value">10</div>
+          <div class="sub">5개 카테고리</div>
+        </div>
+        <div class="summary-card">
+          <div class="label">Coupang Clicks</div>
+          <div class="value" id="total-clicks">--</div>
+          <div class="sub" id="clicks-sub">추적 중...</div>
+        </div>
+        <div class="summary-card">
+          <div class="label">Newsletter</div>
+          <div class="value" id="total-subs">--</div>
+          <div class="sub" id="subs-sub">구독자 수집 중</div>
+        </div>
+      </div>
+
+      <!-- Category Overview -->
+      <div class="cat-grid">
+        <div class="cat-card">
+          <div class="cat-icon">✨</div>
+          <div class="cat-name">라이프스타일</div>
+          <div class="cat-count">2편</div>
+        </div>
+        <div class="cat-card">
+          <div class="cat-icon">💰</div>
+          <div class="cat-name">금융</div>
+          <div class="cat-count">2편</div>
+        </div>
+        <div class="cat-card">
+          <div class="cat-icon">💪</div>
+          <div class="cat-name">건강</div>
+          <div class="cat-count">2편</div>
+        </div>
+        <div class="cat-card">
+          <div class="cat-icon">📚</div>
+          <div class="cat-name">교육</div>
+          <div class="cat-count">2편</div>
+        </div>
+        <div class="cat-card">
+          <div class="cat-icon">✈️</div>
+          <div class="cat-name">여행</div>
+          <div class="cat-count">2편</div>
+        </div>
+      </div>
+
+      <!-- Charts -->
+      <div class="chart-grid">
+        <div class="chart-panel">
+          <h3>일별 페이지뷰 (최근 14일)</h3>
+          <div id="bar-chart" class="bar-chart">
+            <div class="loading"><div class="spinner"></div>Loading...</div>
+          </div>
+        </div>
+        <div class="chart-panel">
+          <h3>카테고리별 비율</h3>
+          <div id="donut-chart" class="donut-container">
+            <svg class="donut-svg" viewBox="0 0 160 160">
+              <circle cx="80" cy="80" r="60" fill="none" stroke="#ec4899" stroke-width="20" stroke-dasharray="75.4 301.6" stroke-dashoffset="0" transform="rotate(-90 80 80)" />
+              <circle cx="80" cy="80" r="60" fill="none" stroke="#3b82f6" stroke-width="20" stroke-dasharray="75.4 301.6" stroke-dashoffset="-75.4" transform="rotate(-90 80 80)" />
+              <circle cx="80" cy="80" r="60" fill="none" stroke="#22c55e" stroke-width="20" stroke-dasharray="75.4 301.6" stroke-dashoffset="-150.8" transform="rotate(-90 80 80)" />
+              <circle cx="80" cy="80" r="60" fill="none" stroke="#a855f7" stroke-width="20" stroke-dasharray="75.4 301.6" stroke-dashoffset="-226.2" transform="rotate(-90 80 80)" />
+              <circle cx="80" cy="80" r="60" fill="none" stroke="#f97316" stroke-width="20" stroke-dasharray="75.4 301.6" stroke-dashoffset="-301.6" transform="rotate(-90 80 80)" />
+              <text x="80" y="76" text-anchor="middle" fill="#f1f5f9" font-size="16" font-weight="800">10</text>
+              <text x="80" y="94" text-anchor="middle" fill="#94a3b8" font-size="9">포스트</text>
+            </svg>
+            <div class="donut-legend">
+              <div class="legend-item"><span class="legend-name"><span class="legend-dot" style="background:#ec4899"></span>라이프스타일</span><span class="legend-value">2편</span></div>
+              <div class="legend-item"><span class="legend-name"><span class="legend-dot" style="background:#3b82f6"></span>금융</span><span class="legend-value">2편</span></div>
+              <div class="legend-item"><span class="legend-name"><span class="legend-dot" style="background:#22c55e"></span>건강</span><span class="legend-value">2편</span></div>
+              <div class="legend-item"><span class="legend-name"><span class="legend-dot" style="background:#a855f7"></span>교육</span><span class="legend-value">2편</span></div>
+              <div class="legend-item"><span class="legend-name"><span class="legend-dot" style="background:#f97316"></span>여행</span><span class="legend-value">2편</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Posts Table -->
+      <div class="table-panel">
+        <h3>전체 포스트</h3>
+        <table class="dash-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Title</th>
+              <th>Category</th>
+              <th>Views</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody id="posts-body">
+            <tr><td colspan="5" class="loading"><div class="spinner"></div>Loading...</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Bottom Grid -->
+      <div class="bottom-grid">
+        <div class="chart-panel">
+          <h3>최근 활동</h3>
+          <div id="activity-list">
+            <div class="loading"><div class="spinner"></div>Loading...</div>
+          </div>
+        </div>
+        <div class="chart-panel">
+          <h3>시스템 상태</h3>
+          <div id="system-status">
+            <div class="status-row">
+              <span>Blog (Vercel)</span>
+              <span class="status-badge online">Online</span>
+            </div>
+            <div class="status-row">
+              <span>Supabase DB</span>
+              <span class="status-badge" id="supabase-status">Checking...</span>
+            </div>
+            <div class="status-row">
+              <span>Pageview Tracking</span>
+              <span class="status-badge online">Active</span>
+            </div>
+            <div class="status-row">
+              <span>AdSense</span>
+              <span class="status-badge pending">승인 대기</span>
+            </div>
+            <div class="status-row">
+              <span>Coupang Partners</span>
+              <span class="status-badge pending">링크 등록 필요</span>
+            </div>
+            <div class="status-row">
+              <span>Newsletter</span>
+              <span class="status-badge online">Active</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script define:vars={{
+      SUPABASE_URL: 'https://mkatzcmsrdntsmnykxpt.supabase.co',
+      SUPABASE_ANON_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1rYXR6Y21zcmRudHNtbnlreHB0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAxOTM4MzQsImV4cCI6MjA4NTc2OTgzNH0.rl_c2-29eA9RNSnQGM9S1XeYG2sl6m2UpsMuhWZiRhQ',
+      ANALYTICS_URL: 'https://mkatzcmsrdntsmnykxpt.supabase.co/functions/v1/analytics-ingest'
+    }}>
+      const headers = {
+        'apikey': SUPABASE_ANON_KEY,
+        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+        'Content-Type': 'application/json'
+      };
+
+      const POSTS = [
+        { slug: '2026-02-08-morning-routine-productivity', title: '모닝 루틴의 힘: 하루를 바꾸는 아침 습관 7가지', category: 'lifestyle', date: '2026-02-08' },
+        { slug: '2026-02-06-minimalist-lifestyle-guide', title: '미니멀 라이프: 적게 소유하고 더 풍요롭게 사는 법', category: 'lifestyle', date: '2026-02-06' },
+        { slug: '2026-02-08-etf-investment-beginners-2026', title: '2026 ETF 투자 입문: 초보자를 위한 완벽 가이드', category: 'finance', date: '2026-02-08' },
+        { slug: '2026-02-07-2026-financial-planning-guide', title: '2026년 재테크 전략: 금리 시대의 스마트한 자산관리', category: 'finance', date: '2026-02-07' },
+        { slug: '2026-02-08-nutrition-guide-healthy-eating', title: '영양학 기초: 건강한 식단 관리 완벽 가이드', category: 'health', date: '2026-02-08' },
+        { slug: '2026-02-07-home-workout-routine-2026', title: '홈 트레이닝 완벽 가이드: 집에서 만드는 건강한 몸', category: 'health', date: '2026-02-07' },
+        { slug: '2026-02-08-online-course-platform-comparison', title: '온라인 강의 플랫폼 비교 2026: 클래스101 vs 인프런 vs 유데미', category: 'education', date: '2026-02-08' },
+        { slug: '2026-02-07-self-learning-strategies-2026', title: '효과적인 독학 전략: 혼자서도 성공하는 학습법', category: 'education', date: '2026-02-07' },
+        { slug: '2026-02-06-japan-travel-budget-guide-2026', title: '2026 일본 여행 예산 가이드: 알뜰하게 즐기는 일본', category: 'travel', date: '2026-02-06' },
+        { slug: '2026-02-07-domestic-travel-hidden-gems-2026', title: '국내 숨은 여행지 TOP 10: 2026년 꼭 가봐야 할 곳', category: 'travel', date: '2026-02-07' },
+      ];
+
+      const CAT_COLORS = {
+        lifestyle: '#ec4899', finance: '#3b82f6', health: '#22c55e',
+        education: '#a855f7', travel: '#f97316'
+      };
+      const CAT_NAMES = {
+        lifestyle: '라이프스타일', finance: '금융', health: '건강',
+        education: '교육', travel: '여행'
+      };
+
+      function fmt(n) {
+        if (n >= 10000) return (n / 10000).toFixed(1) + '만';
+        return n.toLocaleString();
+      }
+
+      function empty(icon, text) {
+        return `<div class="empty-state"><span class="empty-icon">${icon}</span><span class="empty-text">${text}</span></div>`;
+      }
+
+      async function fetchAnalytics() {
+        try {
+          // Fetch analytics events from REST API
+          const res = await fetch(
+            `${SUPABASE_URL}/rest/v1/analytics?select=event_type,metadata,created_at&order=created_at.desc&limit=500`,
+            { headers }
+          );
+          if (!res.ok) throw new Error('Analytics fetch failed');
+          return await res.json();
+        } catch (e) {
+          console.warn('Analytics fetch error:', e);
+          return [];
+        }
+      }
+
+      function processAnalytics(events) {
+        let pageviews = 0, coupangClicks = 0, newsletters = 0;
+        const dailyViews = {};
+        const recentActivity = [];
+
+        events.forEach(e => {
+          const meta = typeof e.metadata === 'string' ? JSON.parse(e.metadata) : (e.metadata || {});
+          const path = meta.path || meta.slug || '';
+
+          // Filter to LifeFlow paths only (not /blog/ai/, /blog/dev/, etc.)
+          const isLifeFlow = meta.source === 'lifeflow' ||
+            path.includes('/blog/2026-02-0') ||
+            ['lifestyle','finance','health','education','travel'].some(c => path.includes(`/blog/${c}`));
+
+          if (e.event_type === 'pageview') {
+            if (isLifeFlow || !path.startsWith('/blog/')) {
+              pageviews++;
+              const day = e.created_at?.substring(0, 10);
+              if (day) dailyViews[day] = (dailyViews[day] || 0) + 1;
+            }
+          } else if (e.event_type === 'coupang_click' && isLifeFlow) {
+            coupangClicks++;
+          } else if (e.event_type === 'newsletter_subscribe' && (meta.source === 'lifeflow' || !meta.source)) {
+            newsletters++;
+          }
+
+          if (recentActivity.length < 10 && isLifeFlow) {
+            recentActivity.push(e);
+          }
+        });
+
+        return { pageviews, coupangClicks, newsletters, dailyViews, recentActivity };
+      }
+
+      function renderBarChart(dailyViews) {
+        const container = document.getElementById('bar-chart');
+        const days = [];
+        for (let i = 13; i >= 0; i--) {
+          const d = new Date();
+          d.setDate(d.getDate() - i);
+          const key = d.toISOString().substring(0, 10);
+          days.push({ date: key, views: dailyViews[key] || 0 });
+        }
+
+        const maxVal = Math.max(...days.map(d => d.views), 1);
+
+        if (days.every(d => d.views === 0)) {
+          container.innerHTML = empty('📊', '페이지뷰 데이터가 아직 없습니다');
+          return;
+        }
+
+        container.innerHTML = days.map(d => {
+          const h = Math.max(2, (d.views / maxVal) * 160);
+          const dt = new Date(d.date);
+          const label = `${dt.getMonth()+1}/${dt.getDate()}`;
+          return `<div class="bar-group">
+            <div class="bar-value">${d.views > 0 ? d.views : ''}</div>
+            <div class="bar-fill" style="height:${h}px" title="${label}: ${d.views}뷰"></div>
+            <span class="bar-label">${label}</span>
+          </div>`;
+        }).join('');
+      }
+
+      function renderPostsTable() {
+        const tbody = document.getElementById('posts-body');
+        tbody.innerHTML = POSTS.map((p, i) => {
+          const catClass = `cat-${p.category}`;
+          return `<tr>
+            <td class="rank">${i + 1}</td>
+            <td class="post-title-cell"><a href="/blog/${p.slug}/" style="color:var(--dash-text);text-decoration:none;">${p.title}</a></td>
+            <td><span class="cat-badge ${catClass}">${CAT_NAMES[p.category]}</span></td>
+            <td>-</td>
+            <td>${p.date}</td>
+          </tr>`;
+        }).join('');
+      }
+
+      function renderActivity(events) {
+        const container = document.getElementById('activity-list');
+        if (!events.length) {
+          container.innerHTML = empty('📋', '아직 기록된 활동이 없습니다');
+          return;
+        }
+
+        container.innerHTML = events.map(e => {
+          const meta = typeof e.metadata === 'string' ? JSON.parse(e.metadata) : (e.metadata || {});
+          const icons = {
+            pageview: ['view', '👁'],
+            coupang_click: ['click', '🛒'],
+            newsletter_subscribe: ['sub', '📧']
+          };
+          const [cls, icon] = icons[e.event_type] || ['view', '📌'];
+          const desc = e.event_type === 'pageview'
+            ? `페이지뷰: ${(meta.slug || meta.path || '').substring(0, 35)}...`
+            : e.event_type === 'coupang_click'
+            ? `쿠팡 클릭: ${meta.product || 'unknown'}`
+            : e.event_type === 'newsletter_subscribe'
+            ? `뉴스레터 구독`
+            : e.event_type;
+          const time = new Date(e.created_at).toLocaleString('ko-KR', {
+            month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit'
+          });
+          return `<div class="activity-item">
+            <div class="activity-icon ${cls}">${icon}</div>
+            <span class="activity-text">${desc}</span>
+            <span class="activity-time">${time}</span>
+          </div>`;
+        }).join('');
+      }
+
+      async function checkSupabase() {
+        const badge = document.getElementById('supabase-status');
+        try {
+          const res = await fetch(`${SUPABASE_URL}/rest/v1/analytics?select=id&limit=1`, {
+            headers: { 'apikey': SUPABASE_ANON_KEY }
+          });
+          if (res.ok) {
+            badge.textContent = 'Connected';
+            badge.className = 'status-badge online';
+          } else {
+            badge.textContent = 'Error';
+            badge.className = 'status-badge offline';
+          }
+        } catch {
+          badge.textContent = 'Offline';
+          badge.className = 'status-badge offline';
+        }
+      }
+
+      async function init() {
+        const events = await fetchAnalytics();
+        const data = processAnalytics(events);
+
+        document.getElementById('total-views').textContent = fmt(data.pageviews);
+        document.getElementById('views-sub').textContent = data.pageviews > 0 ? '실시간 추적' : '방문자 수집 시작';
+        document.getElementById('total-clicks').textContent = fmt(data.coupangClicks);
+        document.getElementById('clicks-sub').textContent = data.coupangClicks > 0 ? '쿠팡파트너스' : '클릭 대기 중';
+        document.getElementById('total-subs').textContent = fmt(data.newsletters);
+        document.getElementById('subs-sub').textContent = data.newsletters > 0 ? '이메일 구독자' : '구독자 모집 중';
+
+        if (data.pageviews === 0) {
+          const banner = document.getElementById('data-banner');
+          banner.className = 'data-banner info';
+          banner.innerHTML = '<span class="banner-icon">ℹ️</span><div><strong>데이터 수집이 시작되었습니다.</strong><br>블로그 방문자가 발생하면 실시간으로 페이지뷰가 기록됩니다.</div>';
+          banner.style.display = 'flex';
+        }
+
+        renderBarChart(data.dailyViews);
+        renderPostsTable();
+        renderActivity(data.recentActivity);
+        checkSupabase();
+
+        document.getElementById('last-updated').textContent =
+          `업데이트: ${new Date().toLocaleString('ko-KR')}`;
+      }
+
+      init();
+      setInterval(init, 300000);
+    </script>
+  </body>
+</html>
