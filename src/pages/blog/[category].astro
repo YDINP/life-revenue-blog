@@ -6,7 +6,7 @@ export async function getStaticPaths() {
   const allPosts = await import.meta.glob('../../blog/**/*.md', { eager: true });
   const posts = Object.entries(allPosts).map(([path, post]) => ({
     ...post,
-    url: path.replace('../../blog', '/blog').replace('.md', '/'),
+    slug: path.split('/').pop().replace('.md', ''),
   }));
 
   const categories = ['lifestyle', 'finance', 'health', 'education', 'travel'];
@@ -63,7 +63,7 @@ const emoji = categoryEmoji[category] || '📁';
         description={post.frontmatter.description}
         pubDate={post.frontmatter.pubDate}
         category={post.frontmatter.category}
-        slug={post.url}
+        slug={post.slug}
         image={post.frontmatter.heroImage ? { url: post.frontmatter.heroImage, alt: post.frontmatter.title } : undefined}
         tags={post.frontmatter.tags}
       />

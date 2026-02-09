@@ -47,17 +47,19 @@ const sortedPosts = allPosts.sort(
 
   <div class="post-grid" id="post-container">
     {
-      sortedPosts.map((post) => (
+      sortedPosts.map((post) => {
+        const slug = post.file.replace(/\\/g, '/').split('/').pop().replace('.md', '');
+        return (
         <PostCard
           title={post.frontmatter.title}
           description={post.frontmatter.description}
           pubDate={post.frontmatter.pubDate}
           category={post.frontmatter.category}
-          slug={post.url}
+          slug={slug}
           image={post.frontmatter.heroImage ? { url: post.frontmatter.heroImage, alt: post.frontmatter.title } : undefined}
           tags={post.frontmatter.tags}
         />
-      ))
+        );})
     }
   </div>
 
