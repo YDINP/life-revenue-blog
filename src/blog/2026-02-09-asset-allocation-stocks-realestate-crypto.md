@@ -19,7 +19,7 @@ coupangLinks:
 
 ## 세 자산의 종합 비교
 
-<div class="chart-radar" data-title="투자 자산 종합 비교 (10점 만점)" data-items='[{"name":"부동산","scores":{"수익률":6,"안정성":8,"유동성":3,"진입장벽":2,"성장성":5}},{"name":"주식(ETF)","scores":{"수익률":7,"안정성":6,"유동성":9,"진입장벽":9,"성장성":7}},{"name":"암호화폐","scores":{"수익률":9,"안정성":3,"유동성":8,"진입장벽":8,"성장성":9}}]'></div>
+<div class="chart-radar" data-title="투자 자산 종합 비교 (10점 만점)" data-items='[{"name":"부동산","scores":[{"label":"수익률","value":6,"color":"#10b981"},{"label":"안정성","value":8,"color":"#3b82f6"},{"label":"유동성","value":3,"color":"#f59e0b"},{"label":"진입장벽","value":2,"color":"#ef4444"},{"label":"성장성","value":5,"color":"#8b5cf6"}]},{"name":"주식(ETF)","scores":[{"label":"수익률","value":7,"color":"#10b981"},{"label":"안정성","value":6,"color":"#3b82f6"},{"label":"유동성","value":9,"color":"#f59e0b"},{"label":"진입장벽","value":9,"color":"#ef4444"},{"label":"성장성","value":7,"color":"#8b5cf6"}]},{"name":"암호화폐","scores":[{"label":"수익률","value":9,"color":"#10b981"},{"label":"안정성","value":3,"color":"#3b82f6"},{"label":"유동성","value":8,"color":"#f59e0b"},{"label":"진입장벽","value":8,"color":"#ef4444"},{"label":"성장성","value":9,"color":"#8b5cf6"}]}]'></div>
 
 ## 1. 부동산 — 안정적이지만 무거운 자산
 
