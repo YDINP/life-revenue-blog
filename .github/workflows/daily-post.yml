@@ -21,9 +21,31 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
       - name: Commit and Push
+        id: commit
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
           git add src/blog/*.md
-          git diff --staged --quiet || git commit -m "[auto] 오늘의 블로그 포스트 자동 생성"
-          git push
+          if git diff --staged --quiet; then
+            echo "no_changes=true" >> $GITHUB_OUTPUT
+          else
+            git commit -m "[auto] 오늘의 블로그 포스트 자동 생성"
+            git push
+            echo "no_changes=false" >> $GITHUB_OUTPUT
+          fi
+      - name: Notify IndexNow (Bing/Yandex)
+        if: steps.commit.outputs.no_changes != 'true'
+        run: |
+          NEW_FILE=$(git diff --name-only HEAD~1 HEAD -- src/blog/ | head -1)
+          if [ -n "$NEW_FILE" ]; then
+            SLUG=$(basename "$NEW_FILE" .md)
+            curl -s -X POST "https://api.indexnow.org/indexnow" \
+              -H "Content-Type: application/json" \
+              -d "{\"host\":\"life-revenue-blog.vercel.app\",\"key\":\"c9d3f7a2e8b104569abc7d8e9f0a1b2c\",\"urlList\":[\"https://life-revenue-blog.vercel.app/blog/${SLUG}/\",\"https://life-revenue-blog.vercel.app/\",\"https://life-revenue-blog.vercel.app/blog/\"]}"
+            echo "[IndexNow] Submitted: /blog/${SLUG}/"
+          fi
+      - name: Ping Google Sitemap
+        if: steps.commit.outputs.no_changes != 'true'
+        run: |
+          curl -s "https://www.google.com/ping?sitemap=https://life-revenue-blog.vercel.app/sitemap-index.xml" || true
+          echo "[Google] Sitemap ping sent"
