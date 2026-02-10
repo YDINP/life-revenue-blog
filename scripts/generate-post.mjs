@@ -125,15 +125,15 @@ async function main() {
     keyword.includes('추천') || keyword.includes('전략') || keyword.includes('가이드');
 
   const chartInstruction = isComparisonKeyword
-    ? `반드시 본문에 chart-bar 또는 chart-radar HTML을 포함해주세요.
-chart-bar 예시:
-<div class="chart-bar">
-  <div class="chart-bar-item" style="--value: 85; --color: ${CHART_COLORS[0]}"><span class="label">항목1</span><div class="bar"><div class="fill"></div></div><span class="value">85점</span></div>
-  <div class="chart-bar-item" style="--value: 72; --color: ${CHART_COLORS[1]}"><span class="label">항목2</span><div class="bar"><div class="fill"></div></div><span class="value">72점</span></div>
-</div>
+    ? `반드시 본문에 chart-bar 또는 chart-radar HTML을 1~2개 포함해주세요.
 
-chart-radar 예시:
-<div class="chart-radar" data-items='[{"label":"항목1","value":85},{"label":"항목2","value":72}]' data-colors='["${CHART_COLORS[0]}","${CHART_COLORS[1]}"]'></div>`
+chart-bar 예시 (data 속성으로 데이터 전달, div 안에 자식 요소 없음):
+<div class="chart-bar" data-title="차트 제목" data-labels="항목1,항목2,항목3" data-values="85,72,90" data-colors="#10b981,#3b82f6,#f59e0b" data-unit="점"></div>
+
+chart-radar 예시 (data-items JSON, value는 1~10 범위):
+<div class="chart-radar" data-title="종합 비교" data-items='[{"name":"제품A","scores":[{"label":"성능","value":9,"color":"#10b981"},{"label":"가격","value":7,"color":"#3b82f6"}]},{"name":"제품B","scores":[{"label":"성능","value":8,"color":"#f59e0b"},{"label":"가격","value":9,"color":"#ef4444"}]}]'></div>
+
+주의: div 안에 자식 요소를 넣지 마세요. 항목 3~5개로 구성.`
     : '비교/리뷰 성격의 내용이 있다면 chart-bar 또는 chart-radar HTML을 포함해도 좋습니다.';
 
   const prompt = `당신은 한국어 블로그 작성 전문가입니다.
