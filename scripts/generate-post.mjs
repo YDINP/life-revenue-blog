@@ -121,20 +121,25 @@ async function main() {
   }
 
   // 1. Generate blog post via Claude
-  const isComparisonKeyword = keyword.includes('비교') || keyword.includes('TOP') ||
-    keyword.includes('추천') || keyword.includes('전략') || keyword.includes('가이드');
+  const chartInstruction = `반드시 본문에 아래 5가지 차트 유형 중 주제에 맞는 것을 1~2개 선택하여 포함하세요:
 
-  const chartInstruction = isComparisonKeyword
-    ? `반드시 본문에 chart-bar 또는 chart-radar HTML을 1~2개 포함해주세요.
-
-chart-bar 예시 (data 속성으로 데이터 전달, div 안에 자식 요소 없음):
+1) chart-bar (막대 차트) - 항목별 수치 비교:
 <div class="chart-bar" data-title="차트 제목" data-labels="항목1,항목2,항목3" data-values="85,72,90" data-colors="#10b981,#3b82f6,#f59e0b" data-unit="점"></div>
 
-chart-radar 예시 (data-items JSON, value는 1~10 범위):
+2) chart-radar (카드형 점수 비교) - 제품/서비스 다항목 평가:
 <div class="chart-radar" data-title="종합 비교" data-items='[{"name":"제품A","scores":[{"label":"성능","value":9,"color":"#10b981"},{"label":"가격","value":7,"color":"#3b82f6"}]},{"name":"제품B","scores":[{"label":"성능","value":8,"color":"#f59e0b"},{"label":"가격","value":9,"color":"#ef4444"}]}]'></div>
 
-주의: div 안에 자식 요소를 넣지 마세요. 항목 3~5개로 구성.`
-    : '비교/리뷰 성격의 내용이 있다면 chart-bar 또는 chart-radar HTML을 포함해도 좋습니다.';
+3) chart-donut (도넛 차트) - 비율/점유율/구성비 시각화:
+<div class="chart-donut" data-title="시장 점유율" data-labels="항목1,항목2,항목3" data-values="60,25,15" data-colors="#3b82f6,#10b981,#f59e0b" data-unit="%"></div>
+
+4) chart-versus (VS 비교) - 두 대상 1:1 대결 비교:
+<div class="chart-versus" data-title="A vs B" data-name-a="제품A" data-name-b="제품B" data-color-a="#3b82f6" data-color-b="#10b981" data-items='[{"label":"성능","a":85,"b":90},{"label":"가격","a":70,"b":80}]'></div>
+
+5) chart-progress (원형 게이지) - 개별 점수/달성률:
+<div class="chart-progress" data-title="평가 점수" data-labels="항목1,항목2,항목3" data-values="85,72,90" data-colors="#10b981,#3b82f6,#f59e0b" data-max="100" data-unit="점"></div>
+
+선택 가이드: 비율/점유율→donut, 1:1 대결→versus, 개별 평점→progress, 수치 비교→bar, 다항목 제품 평가→radar.
+주의: div 안에 자식 요소를 넣지 마세요. 항목 3~5개. chart-bar만 반복하지 말고 다양한 유형을 활용하세요.`;
 
   const prompt = `당신은 한국어 블로그 작성 전문가입니다.
 "${keyword}" 주제로 SEO 최적화된 블로그 포스트를 작성해주세요.

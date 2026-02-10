@@ -357,8 +357,11 @@ const nextPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1]
       const chartObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            entry.target.querySelectorAll('.chart-fill, .radar-score-fill').forEach(fill => {
+            entry.target.querySelectorAll('.chart-fill, .radar-score-fill, .versus-fill').forEach(fill => {
               fill.classList.add('animated');
+            });
+            entry.target.querySelectorAll('.progress-ring').forEach(ring => {
+              ring.style.strokeDashoffset = ring.dataset.target;
             });
             chartObserver.unobserve(entry.target);
           }
@@ -428,6 +431,121 @@ const nextPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1]
             </div>`;
           });
           html += '</div></div>';
+        });
+        html += '</div>';
+        el.innerHTML = html;
+        chartObserver.observe(el);
+      });
+
+      // 3) Render donut charts
+      document.querySelectorAll('.chart-donut').forEach(el => {
+        const labels = (el.dataset.labels || '').split(',');
+        const values = (el.dataset.values || '').split(',').map(Number);
+        const colors = (el.dataset.colors || '#3b82f6,#10b981,#f59e0b,#ef4444,#8b5cf6').split(',');
+        const title = el.dataset.title || '';
+        const unit = el.dataset.unit || '';
+        const total = values.reduce((a, v) => a + v, 0);
+
+        let gradient = '';
+        let cumPct = 0;
+        values.forEach((v, i) => {
+          const pct = total > 0 ? (v / total) * 100 : 0;
+          const color = colors[i % colors.length].trim();
+          gradient += `${color} ${cumPct}% ${cumPct + pct}%`;
+          cumPct += pct;
+          if (i < values.length - 1) gradient += ', ';
+        });
+
+        let html = '';
+        if (title) html += `<div class="chart-title">${title}</div>`;
+        html += '<div class="chart-donut-container">';
+        html += `<div class="donut-ring" style="background:conic-gradient(${gradient})">`;
+        html += `<div class="donut-hole"><span class="donut-total">${total}${unit}</span><span class="donut-total-label">합계</span></div>`;
+        html += '</div>';
+        html += '<div class="donut-legend">';
+        labels.forEach((label, i) => {
+          const pct = total > 0 ? ((values[i] / total) * 100).toFixed(1) : '0';
+          html += `<div class="donut-legend-item">
+            <span class="donut-legend-dot" style="background:${colors[i % colors.length].trim()}"></span>
+            <span class="donut-legend-label">${label.trim()}</span>
+            <span class="donut-legend-value">${values[i]}${unit} (${pct}%)</span>
+          </div>`;
+        });
+        html += '</div></div>';
+        el.innerHTML = html;
+      });
+
+      // 4) Render versus charts
+      document.querySelectorAll('.chart-versus').forEach(el => {
+        const items = JSON.parse(el.dataset.items || '[]');
+        const title = el.dataset.title || '';
+        const nameA = el.dataset.nameA || 'A';
+        const nameB = el.dataset.nameB || 'B';
+        const colorA = el.dataset.colorA || '#3b82f6';
+        const colorB = el.dataset.colorB || '#10b981';
+        const maxVal = Math.max(...items.flatMap(i => [i.a, i.b])) * 1.1;
+
+        let html = '';
+        if (title) html += `<div class="chart-title">${title}</div>`;
+        html += `<div class="versus-header">
+          <span class="versus-name" style="color:${colorA}">${nameA}</span>
+          <span class="versus-vs">VS</span>
+          <span class="versus-name" style="color:${colorB}">${nameB}</span>
+        </div>`;
+        html += '<div class="versus-rows">';
+        items.forEach(item => {
+          const pctA = maxVal > 0 ? (item.a / maxVal) * 100 : 0;
+          const pctB = maxVal > 0 ? (item.b / maxVal) * 100 : 0;
+          html += `<div class="versus-row">
+            <div class="versus-bar-left">
+              <span class="versus-val">${item.a}</span>
+              <div class="versus-track versus-track-left">
+                <div class="versus-fill" style="width:${pctA}%;background:linear-gradient(270deg, ${colorA}, ${hexToRgba(colorA, 0.6)})"></div>
+              </div>
+            </div>
+            <div class="versus-label">${item.label}</div>
+            <div class="versus-bar-right">
+              <div class="versus-track">
+                <div class="versus-fill" style="width:${pctB}%;background:linear-gradient(90deg, ${colorB}, ${hexToRgba(colorB, 0.6)})"></div>
+              </div>
+              <span class="versus-val">${item.b}</span>
+            </div>
+          </div>`;
+        });
+        html += '</div>';
+        el.innerHTML = html;
+        chartObserver.observe(el);
+      });
+
+      // 5) Render progress circle charts
+      document.querySelectorAll('.chart-progress').forEach(el => {
+        const labels = (el.dataset.labels || '').split(',');
+        const values = (el.dataset.values || '').split(',').map(Number);
+        const colors = (el.dataset.colors || '#3b82f6,#10b981,#f59e0b,#ef4444,#8b5cf6').split(',');
+        const title = el.dataset.title || '';
+        const max = Number(el.dataset.max || '100');
+        const unit = el.dataset.unit || '';
+        const circumference = 2 * Math.PI * 45;
+
+        let html = '';
+        if (title) html += `<div class="chart-title">${title}</div>`;
+        html += '<div class="progress-grid">';
+        labels.forEach((label, i) => {
+          const pct = Math.min(values[i] / max, 1);
+          const offset = circumference - (circumference * pct);
+          const color = colors[i % colors.length].trim();
+          html += `<div class="progress-item">
+            <div class="progress-circle">
+              <svg viewBox="0 0 100 100">
+                <circle class="progress-bg" cx="50" cy="50" r="45" />
+                <circle class="progress-ring" cx="50" cy="50" r="45"
+                  style="stroke:${color};stroke-dasharray:${circumference};stroke-dashoffset:${circumference}"
+                  data-target="${offset}" />
+              </svg>
+              <div class="progress-value" style="color:${color}">${values[i]}${unit}</div>
+            </div>
+            <div class="progress-label">${label.trim()}</div>
+          </div>`;
         });
         html += '</div>';
         el.innerHTML = html;
