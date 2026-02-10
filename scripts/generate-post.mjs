@@ -145,6 +145,7 @@ ${chartInstruction}
 반드시 아래 JSON 형식으로만 응답하세요 (다른 텍스트 없이):
 {
   "title": "...",
+  "slug": "english-slug-for-url (영문 소문자, 하이픈으로 연결, 예: time-management-tips-2026)",
   "description": "...",
   "tags": ["...", "..."],
   "content": "마크다운 본문..."
@@ -166,7 +167,7 @@ ${chartInstruction}
     process.exit(1);
   }
 
-  const { title, description, tags, content } = postData;
+  const { title, slug: postSlug, description, tags, content } = postData;
   console.log(`Title: ${title}`);
 
   // 2. Fetch hero image from Pexels
@@ -186,7 +187,7 @@ ${chartInstruction}
   }
 
   // 5. Build frontmatter + full markdown
-  const slug = slugify(title);
+  const slug = postSlug || slugify(title);
   const fileName = `${dateStr}-${slug}.md`;
 
   const tagsYaml = tags.map(t => `  - "${t}"`).join('\n');
