@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -60,7 +60,7 @@ async function callClaude(prompt) {
     },
     body: JSON.stringify({
       model: 'claude-haiku-4-5-20251001',
-      max_tokens: 4096,
+      max_tokens: 8192,
       messages: [{ role: 'user', content: prompt }],
     }),
   });
@@ -109,6 +109,17 @@ function pickCoupangProducts(categoryName, count = 2) {
 
 // ── Main ────────────────────────────────────────────────────────────
 async function main() {
+  // 0. 중복 확인 - 같은 날짜 파일이 이미 있으면 스킵
+  const blogDir = join(ROOT, 'src', 'blog');
+  if (existsSync(blogDir)) {
+    const existing = readdirSync(blogDir).filter(f => f.startsWith(dateStr));
+    if (existing.length > 0) {
+      console.log(`[Skip] Today's post already exists: ${existing[0]}`);
+      console.log('Done (skipped)');
+      process.exit(0);
+    }
+  }
+
   // 1. Generate blog post via Claude
   const isComparisonKeyword = keyword.includes('비교') || keyword.includes('TOP') ||
     keyword.includes('추천') || keyword.includes('전략') || keyword.includes('가이드');
@@ -154,17 +165,45 @@ ${chartInstruction}
   console.log('Calling Claude API...');
   const rawResponse = await callClaude(prompt);
 
-  // Parse JSON from Claude response
+  // Parse JSON from Claude response (코드블록 + 잘림 대응)
   let postData;
+  let jsonStr = rawResponse.trim().replace(/^```json?\s*/, '').replace(/\s*```$/, '');
   try {
-    // Try to extract JSON from response (may be wrapped in code blocks)
-    const jsonMatch = rawResponse.match(/\{[\s\S]*\}/);
-    if (!jsonMatch) throw new Error('No JSON found in response');
-    postData = JSON.parse(jsonMatch[0]);
+    postData = JSON.parse(jsonStr);
   } catch (parseErr) {
-    console.error('Failed to parse Claude response:', parseErr.message);
-    console.error('Raw response:', rawResponse.slice(0, 500));
-    process.exit(1);
+    console.warn('[WARN] Direct JSON parse failed, attempting recovery...');
+    try {
+      // content 필드에서 잘린 JSON 복구 시도
+      const titleMatch = jsonStr.match(/"title"\s*:\s*"([^"]+)"/);
+      const slugMatch = jsonStr.match(/"slug"\s*:\s*"([^"]+)"/);
+      const descMatch = jsonStr.match(/"description"\s*:\s*"([^"]+)"/);
+      const tagsMatch = jsonStr.match(/"tags"\s*:\s*\[([^\]]+)\]/);
+      const contentMatch = jsonStr.match(/"content"\s*:\s*"([\s\S]+)/);
+
+      if (titleMatch && contentMatch) {
+        const tags = tagsMatch
+          ? tagsMatch[1].match(/"([^"]+)"/g).map(t => t.replace(/"/g, ''))
+          : ['자동생성'];
+        let rawContent = contentMatch[1];
+        const lastQuote = rawContent.lastIndexOf('"');
+        if (lastQuote > 0) rawContent = rawContent.slice(0, lastQuote);
+        rawContent = rawContent.replace(/\\n/g, '\n').replace(/\\"/g, '"').replace(/\\\\/g, '\\');
+
+        postData = {
+          title: titleMatch[1],
+          slug: slugMatch ? slugMatch[1] : null,
+          description: descMatch ? descMatch[1] : titleMatch[1],
+          tags,
+          content: rawContent,
+        };
+      } else {
+        throw new Error('Could not extract required fields');
+      }
+    } catch (e2) {
+      console.error('Failed to parse Claude response:', parseErr.message);
+      console.error('Raw response:', rawResponse.slice(0, 500));
+      process.exit(1);
+    }
   }
 
   const { title, slug: postSlug, description, tags, content } = postData;
