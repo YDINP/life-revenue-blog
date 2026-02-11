@@ -242,7 +242,7 @@ ${chartInstruction}
   const frontmatter = `---
 title: "${title}"
 description: "${description}"
-pubDate: "${dateStr}"
+pubDate: ${dateStr}
 author: "${AUTHOR}"
 category: "${category.name}"
 tags:
@@ -258,7 +258,7 @@ ${content}${coupangSection}
 `;
 
   // 6. Write file
-  const blogDir = join(ROOT, 'src', 'blog');
+  // const blogDir = join(ROOT, 'src', 'blog');
   if (!existsSync(blogDir)) {
     mkdirSync(blogDir, { recursive: true });
   }
