@@ -31,13 +31,22 @@ const mm = String(today.getMonth() + 1).padStart(2, '0');
 const dd = String(today.getDate()).padStart(2, '0');
 const dateStr = `${yyyy}-${mm}-${dd}`;
 
-const categoryIndex = today.getDate() % seeds.categories.length;
-const category = seeds.categories[categoryIndex];
-const keywordIndex = Math.floor(Math.random() * category.keywords.length);
-const keyword = category.keywords[keywordIndex];
-const searchTerm = category.searchTerms[keywordIndex];
+const CATEGORY_ORDER = ["lifestyle", "finance", "health", "education", "travel"];
 
-console.log(`[${dateStr}] Category: ${category.name}, Keyword: ${keyword}`);
+/**
+ * 3개의 서로 다른 카테고리를 날짜 기반으로 선택
+ */
+function selectCategories(count = 3) {
+  const dayOfMonth = today.getDate();
+  const categories = [];
+  for (let i = 0; i < count; i++) {
+    const index = (dayOfMonth + i) % CATEGORY_ORDER.length;
+    categories.push(CATEGORY_ORDER[index]);
+  }
+  return categories;
+}
+
+console.log(`[${dateStr}] Generating 3 posts...`);
 
 // ── Helpers ─────────────────────────────────────────────────────────
 function slugify(title) {
@@ -108,19 +117,11 @@ function pickCoupangProducts(categoryName, count = 2) {
 }
 
 // ── Main ────────────────────────────────────────────────────────────
-async function main() {
-  // 0. 중복 확인 - 같은 날짜 파일이 이미 있으면 스킵
-  const blogDir = join(ROOT, 'src', 'blog');
-  if (existsSync(blogDir)) {
-    const existing = readdirSync(blogDir).filter(f => f.startsWith(dateStr));
-    if (existing.length > 0) {
-      console.log(`[Skip] Today's post already exists: ${existing[0]}`);
-      console.log('Done (skipped)');
-      process.exit(0);
-    }
-  }
+async function generateOnePost(categoryName, keyword, searchTerm, blogDir, postIndex) {
+  console.log(`\n--- Post ${postIndex}/3: ${categoryName} ---`);
+  console.log(`[Info] Keyword: ${keyword}`);
+  console.log(`[Info] Search term: ${searchTerm}`);
 
-  // 1. Generate blog post via Claude
   const chartInstruction = `반드시 본문에 아래 5가지 차트 유형 중 주제에 맞는 것을 1~2개 선택하여 포함하세요:
 
 1) chart-bar (막대 차트) - 항목별 수치 비교:
@@ -144,7 +145,12 @@ async function main() {
   const prompt = `당신은 한국어 블로그 작성 전문가입니다.
 "${keyword}" 주제로 SEO 최적화된 블로그 포스트를 작성해주세요.
 
-카테고리: ${category.name}
+카테고리: ${categoryName}
+
+**중요**: 2026년 2월 기준 가장 최신 뉴스, 트렌드, 이슈를 기반으로 작성하세요.
+- 최신 제품 출시, 업데이트, 시장 변화를 반영
+- 단순 일반론이 아닌 구체적인 시의성 있는 내용 위주
+- 제목에 "2026" 또는 구체적 시점을 포함
 
 요구사항:
 - 제목(title): 매력적이고 클릭을 유도하는 한국어 제목
@@ -178,7 +184,6 @@ ${chartInstruction}
   } catch (parseErr) {
     console.warn('[WARN] Direct JSON parse failed, attempting recovery...');
     try {
-      // content 필드에서 잘린 JSON 복구 시도
       const titleMatch = jsonStr.match(/"title"\s*:\s*"([^"]+)"/);
       const slugMatch = jsonStr.match(/"slug"\s*:\s*"([^"]+)"/);
       const descMatch = jsonStr.match(/"description"\s*:\s*"([^"]+)"/);
@@ -214,14 +219,14 @@ ${chartInstruction}
   const { title, slug: postSlug, description, tags, content } = postData;
   console.log(`Title: ${title}`);
 
-  // 2. Fetch hero image from Pexels
+  // Fetch hero image from Pexels
   console.log(`Fetching Pexels image for: ${searchTerm}`);
   const heroImage = await fetchPexelsImage(searchTerm);
 
-  // 3. Pick coupang products
-  const coupangProducts = pickCoupangProducts(category.name, 2);
+  // Pick coupang products
+  const coupangProducts = pickCoupangProducts(categoryName, 2);
 
-  // 4. Build coupang section
+  // Build coupang section
   let coupangSection = '';
   if (coupangProducts.length > 0) {
     coupangSection = `\n\n---\n\n## 추천 상품\n\n> 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.\n\n`;
@@ -230,7 +235,7 @@ ${chartInstruction}
     }
   }
 
-  // 5. Build frontmatter + full markdown
+  // Build frontmatter + full markdown
   const slug = postSlug || slugify(title);
   const fileName = `${dateStr}-${slug}.md`;
 
@@ -244,7 +249,7 @@ title: "${title}"
 description: "${description}"
 pubDate: ${dateStr}
 author: "${AUTHOR}"
-category: "${category.name}"
+category: "${categoryName}"
 tags:
 ${tagsYaml}
 heroImage: "${heroImage.url}"
@@ -257,8 +262,7 @@ ${coupangYaml}
 ${content}${coupangSection}
 `;
 
-  // 6. Write file
-  // const blogDir = join(ROOT, 'src', 'blog');
+  // Write file
   if (!existsSync(blogDir)) {
     mkdirSync(blogDir, { recursive: true });
   }
@@ -266,7 +270,44 @@ ${content}${coupangSection}
   const filePath = join(blogDir, fileName);
   writeFileSync(filePath, fullContent, 'utf-8');
   console.log(`Blog post written: src/blog/${fileName}`);
-  console.log('Done!');
+}
+
+async function main() {
+  console.log(`=== Daily Blog Post Generator (3 posts) ===\n`);
+  console.log(`[Info] Date: ${dateStr}`);
+
+  // 0. 중복 확인 - 같은 날짜 파일이 3개 이상이면 스킵
+  const blogDir = join(ROOT, 'src', 'blog');
+  if (existsSync(blogDir)) {
+    const existing = readdirSync(blogDir).filter(f => f.startsWith(dateStr));
+    if (existing.length >= 3) {
+      console.log(`[Skip] Today's 3 posts already exist: ${existing.join(', ')}`);
+      console.log('Done (skipped)');
+      process.exit(0);
+    }
+  }
+
+  // 1. Select 3 different categories
+  const categoryNames = selectCategories(3);
+  console.log(`[Info] Categories: ${categoryNames.join(', ')}`);
+
+  // 2. Generate 3 posts sequentially
+  for (let i = 0; i < categoryNames.length; i++) {
+    const categoryName = categoryNames[i];
+    const categoryData = seeds.categories.find(c => c.name === categoryName);
+    if (!categoryData) {
+      console.error(`[ERROR] Category "${categoryName}" not found in seeds`);
+      continue;
+    }
+
+    const keywordIndex = Math.floor(Math.random() * categoryData.keywords.length);
+    const keyword = categoryData.keywords[keywordIndex];
+    const searchTerm = categoryData.searchTerms[keywordIndex];
+
+    await generateOnePost(categoryName, keyword, searchTerm, blogDir, i + 1);
+  }
+
+  console.log('\n=== Done! (3 posts generated) ===');
 }
 
 main().catch((err) => {

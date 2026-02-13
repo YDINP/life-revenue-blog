@@ -1,27 +1,27 @@
 {
   "lifestyle": [
-    {"title": "디지털 미니멀리즘 도서", "url": "https://link.coupang.com/a/dJhOT3"},
-    {"title": "아날로그 알람시계", "url": "https://link.coupang.com/a/dJhOT3"},
-    {"title": "종이 다이어리", "url": "https://link.coupang.com/a/dJhOT3"}
+    {"title": "디지털 미니멀리즘 도서", "url": "https://link.coupang.com/a/dJhOT3", "imageUrl": "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=200"},
+    {"title": "아날로그 알람시계", "url": "https://link.coupang.com/a/dJhOT3", "imageUrl": "https://images.pexels.com/photos/1198264/pexels-photo-1198264.jpeg?auto=compress&cs=tinysrgb&w=200"},
+    {"title": "종이 다이어리", "url": "https://link.coupang.com/a/dJhOT3", "imageUrl": "https://images.pexels.com/photos/733857/pexels-photo-733857.jpeg?auto=compress&cs=tinysrgb&w=200"}
   ],
   "finance": [
-    {"title": "부자 아빠 가난한 아빠", "url": "https://link.coupang.com/a/dJhOT3"},
-    {"title": "주식투자 무작정 따라하기", "url": "https://link.coupang.com/a/dJhOT3"},
-    {"title": "ETF 투자 가이드북", "url": "https://link.coupang.com/a/dJhOT3"}
+    {"title": "부자 아빠 가난한 아빠", "url": "https://link.coupang.com/a/dJhOT3", "imageUrl": "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=200"},
+    {"title": "주식투자 무작정 따라하기", "url": "https://link.coupang.com/a/dJhOT3", "imageUrl": "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=200"},
+    {"title": "ETF 투자 가이드북", "url": "https://link.coupang.com/a/dJhOT3", "imageUrl": "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=200"}
   ],
   "health": [
-    {"title": "홈트레이닝 요가매트", "url": "https://link.coupang.com/a/dJhOT3"},
-    {"title": "스마트 체중계", "url": "https://link.coupang.com/a/dJhOT3"},
-    {"title": "건강한 식단 도서", "url": "https://link.coupang.com/a/dJhOT3"}
+    {"title": "홈트레이닝 요가매트", "url": "https://link.coupang.com/a/dJhOT3", "imageUrl": "https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg?auto=compress&cs=tinysrgb&w=200"},
+    {"title": "스마트 체중계", "url": "https://link.coupang.com/a/dJhOT3", "imageUrl": "https://images.pexels.com/photos/4474052/pexels-photo-4474052.jpeg?auto=compress&cs=tinysrgb&w=200"},
+    {"title": "건강한 식단 도서", "url": "https://link.coupang.com/a/dJhOT3", "imageUrl": "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=200"}
   ],
   "education": [
-    {"title": "자기계발 도서 모음", "url": "https://link.coupang.com/a/dJhOT3"},
-    {"title": "아이패드 에어 M2", "url": "https://link.coupang.com/a/dJjUUj"},
-    {"title": "독서등 LED", "url": "https://link.coupang.com/a/dJhOT3"}
+    {"title": "자기계발 도서 모음", "url": "https://link.coupang.com/a/dJhOT3", "imageUrl": "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=200"},
+    {"title": "아이패드 에어 M2", "url": "https://link.coupang.com/a/dJjUUj", "imageUrl": "https://images.pexels.com/photos/1334597/pexels-photo-1334597.jpeg?auto=compress&cs=tinysrgb&w=200"},
+    {"title": "독서등 LED", "url": "https://link.coupang.com/a/dJhOT3", "imageUrl": "https://images.pexels.com/photos/1112048/pexels-photo-1112048.jpeg?auto=compress&cs=tinysrgb&w=200"}
   ],
   "travel": [
-    {"title": "캐리어 28인치", "url": "https://link.coupang.com/a/dJhOT3"},
-    {"title": "여행용 보조배터리", "url": "https://link.coupang.com/a/dJhOT3"},
-    {"title": "여행 가이드북", "url": "https://link.coupang.com/a/dJhOT3"}
+    {"title": "캐리어 28인치", "url": "https://link.coupang.com/a/dJhOT3", "imageUrl": "https://images.pexels.com/photos/1008155/pexels-photo-1008155.jpeg?auto=compress&cs=tinysrgb&w=200"},
+    {"title": "여행용 보조배터리", "url": "https://link.coupang.com/a/dJhOT3", "imageUrl": "https://images.pexels.com/photos/4526407/pexels-photo-4526407.jpeg?auto=compress&cs=tinysrgb&w=200"},
+    {"title": "여행 가이드북", "url": "https://link.coupang.com/a/dJhOT3", "imageUrl": "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=200"}
   ]
 }
