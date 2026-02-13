@@ -45,7 +45,7 @@ const { links } = Astro.props;
       const product = link.getAttribute('data-product') || '';
       const url = link.getAttribute('href') || '';
       const slug = window.location.pathname.replace(/^\/blog\//, '').replace(/\/$/, '');
-      fetch('https://mkatzcmsrdntsmnykxpt.supabase.co/functions/v1/analytics-ingest', {
+      fetch('https://xyprbsmagtlzebxyxsvj.supabase.co/functions/v1/analytics-ingest', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
