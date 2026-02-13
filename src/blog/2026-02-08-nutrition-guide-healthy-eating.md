@@ -19,7 +19,7 @@ coupangLinks:
 
 ## 1. 건강한 식단의 기본 원칙
 
-<div class="chart-donut" data-title="이상적인 식단 구성 비율" data-labels="탄수화물,단백질,지방,채소,과일" data-values="40,30,20,7,3" data-colors="#f59e0b,#ef4444,#8b5cf6,#10b981,#ec4899" data-unit="%"></div>
+<div class="chart-donut" data-title="이상적인 식단 구성 비율" data-labels="탄수화물,단백질,지방,채소/과일" data-values="40,25,15,20" data-colors="#f59e0b,#ef4444,#8b5cf6,#10b981" data-unit="%"></div>
 
 ### 균형 잡힌 영양소
 
