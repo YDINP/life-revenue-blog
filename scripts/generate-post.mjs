@@ -15,10 +15,6 @@ if (!ANTHROPIC_API_KEY) {
   console.error('ERROR: ANTHROPIC_API_KEY is not set');
   process.exit(1);
 }
-if (!PEXELS_API_KEY) {
-  console.error('ERROR: PEXELS_API_KEY is not set');
-  process.exit(1);
-}
 
 // ── Load seed data ──────────────────────────────────────────────────
 const seeds = JSON.parse(readFileSync(join(__dirname, 'category-seeds.json'), 'utf-8'));
@@ -76,7 +72,7 @@ async function callClaude(prompt) {
 
   if (!res.ok) {
     const errBody = await res.text();
-    throw new Error(`Claude API error ${res.status}: ${errBody}`);
+    throw new Error(`Claude API ${res.status}: ${errBody}`);
   }
 
   const data = await res.json();
@@ -210,9 +206,7 @@ ${chartInstruction}
         throw new Error('Could not extract required fields');
       }
     } catch (e2) {
-      console.error('Failed to parse Claude response:', parseErr.message);
-      console.error('Raw response:', rawResponse.slice(0, 500));
-      process.exit(1);
+      throw new Error(`Failed to parse Claude response: ${rawResponse.slice(0, 200)}`);
     }
   }
 
@@ -237,7 +231,7 @@ ${chartInstruction}
 
   // Build frontmatter + full markdown
   const slug = postSlug || slugify(title);
-  const fileName = `${dateStr}-${slug}.md`;
+  const fileName = `${dateStr}-${categoryName}-${slug}.md`;
 
   const tagsYaml = tags.map(t => `  - "${t}"`).join('\n');
   const coupangYaml = coupangProducts
@@ -304,7 +298,13 @@ async function main() {
     const keyword = categoryData.keywords[keywordIndex];
     const searchTerm = categoryData.searchTerms[keywordIndex];
 
-    await generateOnePost(categoryName, keyword, searchTerm, blogDir, i + 1);
+    try {
+      await generateOnePost(categoryName, keyword, searchTerm, blogDir, i + 1);
+    } catch (err) {
+      console.error(`[ERROR] Post ${i + 1}/3 (${categoryName}) failed: ${err.message}`);
+      console.log(`[Info] Continuing to next post...`);
+      continue;
+    }
   }
 
   console.log('\n=== Done! (3 posts generated) ===');
