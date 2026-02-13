@@ -37,12 +37,7 @@ coupangLinks:
 - 가진 것에 만족하는 것 ✓
 - 공간과 시간의 여유 ✓
 
-<chart-bar
-  title="미니멀 라이프 효과 (만족도 %)"
-  labels='["스트레스감소", "시간절약", "돈절약", "정신건강", "삶의질"]'
-  data='[90, 85, 80, 95, 92]'
-  colors='["#10b981", "#3b82f6", "#f59e0b", "#8b5cf6", "#ec4899"]'
-/>
+<div class="chart-progress" data-title="미니멀 라이프 효과 (만족도)" data-labels="스트레스감소,시간절약,돈절약,정신건강,삶의질" data-values="90,85,80,95,92" data-colors="#10b981,#3b82f6,#f59e0b,#8b5cf6,#ec4899" data-max="100" data-unit="%"></div>
 
 ## 2. 미니멀 라이프의 장점
 
@@ -98,15 +93,7 @@ coupangLinks:
 - 다시 살 것인가?
 - 없어도 괜찮은가?
 
-<chart-radar
-  title="정리 방법 비교"
-  labels='["속도", "완성도", "지속가능성", "스트레스", "만족도"]'
-  datasets='[
-    {"label": "한번에 대청소", "data": [90, 60, 50, 40, 70]},
-    {"label": "카테고리별", "data": [70, 85, 80, 70, 85]},
-    {"label": "조금씩 매일", "data": [50, 75, 95, 90, 80]}
-  ]'
-/>
+<div class="chart-radar" data-title="정리 방법 비교" data-items='[{"name":"한번에 대청소","scores":[{"label":"속도","value":90,"color":"#ef4444"},{"label":"완성도","value":60,"color":"#ef4444"},{"label":"지속가능성","value":50,"color":"#ef4444"},{"label":"스트레스","value":40,"color":"#ef4444"},{"label":"만족도","value":70,"color":"#ef4444"}]},{"name":"카테고리별","scores":[{"label":"속도","value":70,"color":"#3b82f6"},{"label":"완성도","value":85,"color":"#3b82f6"},{"label":"지속가능성","value":80,"color":"#3b82f6"},{"label":"스트레스","value":70,"color":"#3b82f6"},{"label":"만족도","value":85,"color":"#3b82f6"}]},{"name":"조금씩 매일","scores":[{"label":"속도","value":50,"color":"#10b981"},{"label":"완성도","value":75,"color":"#10b981"},{"label":"지속가능성","value":95,"color":"#10b981"},{"label":"스트레스","value":90,"color":"#10b981"},{"label":"만족도","value":80,"color":"#10b981"}]}]'></div>
 
 ### 4단계: 실행
 

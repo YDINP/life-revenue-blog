@@ -31,12 +31,7 @@ coupangLinks:
 
 매일 반복되는 루틴은 **의지력을 아끼고 자동화**시킵니다.
 
-<chart-bar
-  title="모닝 루틴 실천 효과 (100점 만점)"
-  labels='["생산성", "기분", "건강", "목표달성", "스트레스관리"]'
-  data='[90, 85, 88, 92, 87]'
-  colors='["#3b82f6", "#10b981", "#ec4899", "#f59e0b", "#8b5cf6"]'
-/>
+<div class="chart-progress" data-title="모닝 루틴 실천 효과 (100점 만점)" data-labels="생산성,기분,건강,목표달성,스트레스관리" data-values="90,85,88,92,87" data-colors="#3b82f6,#10b981,#ec4899,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
 
 ## 2. 성공한 사람들의 모닝 루틴
 
@@ -72,15 +67,7 @@ coupangLinks:
 
 ## 3. 하루를 바꾸는 아침 습관 7가지
 
-<chart-radar
-  title="아침 습관별 효과 분석"
-  labels='["에너지", "집중력", "기분", "장기효과", "실천난이도"]'
-  datasets='[
-    {"label": "운동", "data": [95, 85, 90, 95, 70]},
-    {"label": "명상", "data": [70, 90, 95, 95, 80]},
-    {"label": "독서", "data": [60, 95, 80, 90, 90]}
-  ]'
-/>
+<div class="chart-radar" data-title="아침 습관별 효과 분석" data-items='[{"name":"운동","scores":[{"label":"에너지","value":95,"color":"#10b981"},{"label":"집중력","value":85,"color":"#10b981"},{"label":"기분","value":90,"color":"#10b981"},{"label":"장기효과","value":95,"color":"#10b981"},{"label":"실천난이도","value":70,"color":"#10b981"}]},{"name":"명상","scores":[{"label":"에너지","value":70,"color":"#8b5cf6"},{"label":"집중력","value":90,"color":"#8b5cf6"},{"label":"기분","value":95,"color":"#8b5cf6"},{"label":"장기효과","value":95,"color":"#8b5cf6"},{"label":"실천난이도","value":80,"color":"#8b5cf6"}]},{"name":"독서","scores":[{"label":"에너지","value":60,"color":"#3b82f6"},{"label":"집중력","value":95,"color":"#3b82f6"},{"label":"기분","value":80,"color":"#3b82f6"},{"label":"장기효과","value":90,"color":"#3b82f6"},{"label":"실천난이도","value":90,"color":"#3b82f6"}]}]'></div>
 
 ### 1. 일정한 시간에 일어나기
 

@@ -28,12 +28,7 @@ coupangLinks:
 3. **빈틈 찾기**: 설명이 막히는 부분을 다시 공부합니다.
 4. **단순화**: 더 쉽고 간결하게 다시 정리합니다.
 
-<chart-bar
-  title="학습 방법별 기억 지속률"
-  labels='["읽기", "듣기", "보기", "토론", "가르치기"]'
-  data='[10, 20, 30, 50, 90]'
-  colors='["#ef4444", "#f59e0b", "#eab308", "#10b981", "#3b82f6"]'
-/>
+<div class="chart-progress" data-title="학습 방법별 기억 지속률" data-labels="읽기,듣기,보기,토론,가르치기" data-values="10,20,30,50,90" data-colors="#ef4444,#f59e0b,#eab308,#10b981,#3b82f6" data-max="100" data-unit="%"></div>
 
 **핵심**: 남에게 가르칠 수 있을 때 진정으로 이해한 것입니다.
 
@@ -68,15 +63,7 @@ coupangLinks:
 - **2주 후**: 네 번째 복습
 - **1개월 후**: 다섯 번째 복습
 
-<chart-radar
-  title="학습 전략 효과 비교"
-  labels='["기억력", "이해도", "시간효율", "동기부여", "실전활용"]'
-  datasets='[
-    {"label": "페인만 기법", "data": [85, 95, 70, 80, 90]},
-    {"label": "포모도로", "data": [70, 75, 95, 85, 75]},
-    {"label": "간격 반복", "data": [95, 80, 80, 70, 85]}
-  ]'
-/>
+<div class="chart-radar" data-title="학습 전략 효과 비교" data-items='[{"name":"페인만 기법","scores":[{"label":"기억력","value":85,"color":"#8b5cf6"},{"label":"이해도","value":95,"color":"#8b5cf6"},{"label":"시간효율","value":70,"color":"#8b5cf6"},{"label":"동기부여","value":80,"color":"#8b5cf6"},{"label":"실전활용","value":90,"color":"#8b5cf6"}]},{"name":"포모도로","scores":[{"label":"기억력","value":70,"color":"#f59e0b"},{"label":"이해도","value":75,"color":"#f59e0b"},{"label":"시간효율","value":95,"color":"#f59e0b"},{"label":"동기부여","value":85,"color":"#f59e0b"},{"label":"실전활용","value":75,"color":"#f59e0b"}]},{"name":"간격 반복","scores":[{"label":"기억력","value":95,"color":"#10b981"},{"label":"이해도","value":80,"color":"#10b981"},{"label":"시간효율","value":80,"color":"#10b981"},{"label":"동기부여","value":70,"color":"#10b981"},{"label":"실전활용","value":85,"color":"#10b981"}]}]'></div>
 
 **앱 추천**: Anki, Quizlet, RemNote
 

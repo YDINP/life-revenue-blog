@@ -19,12 +19,7 @@ coupangLinks:
 
 ## 1. 건강한 식단의 기본 원칙
 
-<chart-bar
-  title="이상적인 식단 구성 비율"
-  labels='["탄수화물", "단백질", "지방", "채소", "과일"]'
-  data='[40, 30, 20, 7, 3]'
-  colors='["#f59e0b", "#ef4444", "#8b5cf6", "#10b981", "#ec4899"]'
-/>
+<div class="chart-donut" data-title="이상적인 식단 구성 비율" data-labels="탄수화물,단백질,지방,채소,과일" data-values="40,30,20,7,3" data-colors="#f59e0b,#ef4444,#8b5cf6,#10b981,#ec4899" data-unit="%"></div>
 
 ### 균형 잡힌 영양소
 
@@ -61,15 +56,7 @@ coupangLinks:
 - 생선구이 + 나물
 - 닭가슴살 샐러드
 
-<chart-radar
-  title="식사 타이밍별 영양 밸런스"
-  labels='["칼로리", "단백질", "탄수화물", "비타민", "포만감"]'
-  datasets='[
-    {"label": "아침", "data": [60, 50, 70, 80, 60]},
-    {"label": "점심", "data": [100, 90, 95, 85, 90]},
-    {"label": "저녁", "data": [70, 80, 50, 90, 75]}
-  ]'
-/>
+<div class="chart-radar" data-title="식사 타이밍별 영양 밸런스" data-items='[{"name":"아침","scores":[{"label":"칼로리","value":60,"color":"#f59e0b"},{"label":"단백질","value":50,"color":"#f59e0b"},{"label":"탄수화물","value":70,"color":"#f59e0b"},{"label":"비타민","value":80,"color":"#f59e0b"},{"label":"포만감","value":60,"color":"#f59e0b"}]},{"name":"점심","scores":[{"label":"칼로리","value":100,"color":"#3b82f6"},{"label":"단백질","value":90,"color":"#3b82f6"},{"label":"탄수화물","value":95,"color":"#3b82f6"},{"label":"비타민","value":85,"color":"#3b82f6"},{"label":"포만감","value":90,"color":"#3b82f6"}]},{"name":"저녁","scores":[{"label":"칼로리","value":70,"color":"#8b5cf6"},{"label":"단백질","value":80,"color":"#8b5cf6"},{"label":"탄수화물","value":50,"color":"#8b5cf6"},{"label":"비타민","value":90,"color":"#8b5cf6"},{"label":"포만감","value":75,"color":"#8b5cf6"}]}]'></div>
 
 ## 3. 간편 도시락 레시피
 

@@ -19,12 +19,7 @@ coupangLinks:
 
 ## 1. 일본 여행 예산 개요
 
-<chart-bar
-  title="일본 여행 4박 5일 예산 (1인)"
-  labels='["항공권", "숙박", "식비", "교통", "쇼핑/관광"]'
-  data='[40, 25, 15, 10, 10]'
-  colors='["#3b82f6", "#10b981", "#f59e0b", "#8b5cf6", "#ec4899"]'
-/>
+<div class="chart-donut" data-title="일본 여행 4박 5일 예산 비율" data-labels="항공권,숙박,식비,교통,쇼핑/관광" data-values="40,25,15,10,10" data-colors="#3b82f6,#10b981,#f59e0b,#8b5cf6,#ec4899" data-unit="%"></div>
 
 ### 4박 5일 예산 (1인 기준)
 
@@ -58,15 +53,7 @@ coupangLinks:
 
 ## 3. 숙박 (1박 3~15만원)
 
-<chart-radar
-  title="숙소 유형별 평가"
-  labels='["가격", "위치", "시설", "체험", "편의성"]'
-  datasets='[
-    {"label": "호스텔", "data": [95, 70, 50, 70, 60]},
-    {"label": "비즈니스호텔", "data": [75, 85, 80, 50, 95]},
-    {"label": "료칸", "data": [30, 60, 95, 100, 70]}
-  ]'
-/>
+<div class="chart-radar" data-title="숙소 유형별 평가" data-items='[{"name":"호스텔","scores":[{"label":"가격","value":95,"color":"#10b981"},{"label":"위치","value":70,"color":"#10b981"},{"label":"시설","value":50,"color":"#10b981"},{"label":"체험","value":70,"color":"#10b981"},{"label":"편의성","value":60,"color":"#10b981"}]},{"name":"비즈니스호텔","scores":[{"label":"가격","value":75,"color":"#3b82f6"},{"label":"위치","value":85,"color":"#3b82f6"},{"label":"시설","value":80,"color":"#3b82f6"},{"label":"체험","value":50,"color":"#3b82f6"},{"label":"편의성","value":95,"color":"#3b82f6"}]},{"name":"료칸","scores":[{"label":"가격","value":30,"color":"#f59e0b"},{"label":"위치","value":60,"color":"#f59e0b"},{"label":"시설","value":95,"color":"#f59e0b"},{"label":"체험","value":100,"color":"#f59e0b"},{"label":"편의성","value":70,"color":"#f59e0b"}]}]'></div>
 
 ### 호스텔/게스트하우스
 

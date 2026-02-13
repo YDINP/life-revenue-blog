@@ -92,7 +92,7 @@ AI 산업 성장세가 이어지며 기술주 강세. 한국 코스피는 2,800~
 
 ## 연령대별 포트폴리오 제안
 
-<div class="chart-bar" data-title="연령대별 추천 자산 배분 (%)" data-labels="20대,30대,40대,50대" data-values="70,60,50,30" data-colors="#3b82f6,#22c55e,#f59e0b,#ef4444" data-unit="%"></div>
+<div class="chart-progress" data-title="연령대별 추천 공격적 자산 비중 (%)" data-labels="20대,30대,40대,50대" data-values="70,60,50,30" data-colors="#3b82f6,#22c55e,#f59e0b,#ef4444" data-max="100" data-unit="%"></div>
 
 *(위 수치는 주식+암호화폐 등 공격적 자산의 비중)*
 

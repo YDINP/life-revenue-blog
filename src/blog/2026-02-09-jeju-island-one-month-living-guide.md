@@ -23,7 +23,7 @@ coupangLinks:
 
 ## 월별 제주도 방문 비용 비교
 
-<div class="chart-bar" data-title="월별 항공+숙소 평균 비용 (만원)" data-labels="1월,3월,5월,7월,9월,11월" data-values="85,95,120,160,110,80" data-colors="#3b82f6,#22c55e,#f59e0b,#ef4444,#a855f7,#06b6d4" data-unit="만원"></div>
+<div class="chart-progress" data-title="월별 항공+숙소 평균 비용 (만원)" data-labels="1월,3월,5월,7월,9월,11월" data-values="85,95,120,160,110,80" data-colors="#3b82f6,#22c55e,#f59e0b,#ef4444,#a855f7,#06b6d4" data-max="180" data-unit="만원"></div>
 
 **꿀팁**: 11월~2월이 비수기로 비용이 가장 저렴합니다. 날씨는 춥지만 한적한 제주를 즐길 수 있어요.
 

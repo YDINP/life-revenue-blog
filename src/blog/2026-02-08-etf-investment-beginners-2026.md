@@ -28,12 +28,7 @@ ETF는 **상장지수펀드**로, 특정 지수를 추종하는 펀드를 주식
 **분산 투자**: 한 번의 매수로 수십~수백 개 종목에 투자.
 **투명성**: 보유 종목과 비중이 공개됩니다.
 
-<chart-bar
-  title="ETF vs 개별주식 vs 펀드 비교"
-  labels='["수수료", "분산투자", "거래편의", "전문성필요", "투명성"]'
-  data='[90, 95, 85, 30, 95]'
-  colors='["#10b981", "#3b82f6", "#8b5cf6", "#f59e0b", "#ec4899"]'
-/>
+<div class="chart-progress" data-title="ETF 투자 만족도 지표 (100점 만점)" data-labels="수수료,분산투자,거래편의,전문성필요,투명성" data-values="90,95,85,30,95" data-colors="#10b981,#3b82f6,#8b5cf6,#f59e0b,#ec4899" data-max="100" data-unit="점"></div>
 
 ## 2. ETF의 장점과 단점
 
@@ -52,15 +47,7 @@ ETF는 **상장지수펀드**로, 특정 지수를 추종하는 펀드를 주식
 
 ## 3. 인기 ETF 종류
 
-<chart-radar
-  title="ETF 유형별 특성 비교"
-  labels='["안정성", "수익성", "유동성", "세금효율", "접근성"]'
-  datasets='[
-    {"label": "국내 주식형", "data": [70, 65, 95, 100, 95]},
-    {"label": "미국 주식형", "data": [75, 80, 90, 70, 90]},
-    {"label": "채권형", "data": [95, 45, 85, 90, 85]}
-  ]'
-/>
+<div class="chart-radar" data-title="ETF 유형별 특성 비교" data-items='[{"name":"국내 주식형","scores":[{"label":"안정성","value":70,"color":"#3b82f6"},{"label":"수익성","value":65,"color":"#3b82f6"},{"label":"유동성","value":95,"color":"#3b82f6"},{"label":"세금효율","value":100,"color":"#3b82f6"},{"label":"접근성","value":95,"color":"#3b82f6"}]},{"name":"미국 주식형","scores":[{"label":"안정성","value":75,"color":"#10b981"},{"label":"수익성","value":80,"color":"#10b981"},{"label":"유동성","value":90,"color":"#10b981"},{"label":"세금효율","value":70,"color":"#10b981"},{"label":"접근성","value":90,"color":"#10b981"}]},{"name":"채권형","scores":[{"label":"안정성","value":95,"color":"#f59e0b"},{"label":"수익성","value":45,"color":"#f59e0b"},{"label":"유동성","value":85,"color":"#f59e0b"},{"label":"세금효율","value":90,"color":"#f59e0b"},{"label":"접근성","value":85,"color":"#f59e0b"}]}]'></div>
 
 ### 국내 주식형 ETF
 

@@ -35,12 +35,7 @@ coupangLinks:
 
 남의 시선을 의식하지 않고 편하게 운동할 수 있습니다.
 
-<chart-bar
-  title="홈트레이닝 장점 비교"
-  labels='["시간절약", "비용절약", "편의성", "지속성", "효과성"]'
-  data='[95, 100, 90, 85, 80]'
-  colors='["#10b981", "#3b82f6", "#8b5cf6", "#f59e0b", "#ec4899"]'
-/>
+<div class="chart-progress" data-title="홈트레이닝 장점 비교 (100점 만점)" data-labels="시간절약,비용절약,편의성,지속성,효과성" data-values="95,100,90,85,80" data-colors="#10b981,#3b82f6,#8b5cf6,#f59e0b,#ec4899" data-max="100" data-unit="점"></div>
 
 ## 2. 필수 준비물
 
@@ -94,15 +89,7 @@ coupangLinks:
 3. **누워서 무릎 당기기**: 30초
 4. **심호흡**: 1분
 
-<chart-radar
-  title="운동 부위별 효과"
-  labels='["가슴", "등", "하체", "코어", "유산소"]'
-  datasets='[
-    {"label": "초급 루틴", "data": [60, 50, 85, 80, 40]},
-    {"label": "중급 루틴", "data": [80, 75, 90, 90, 60]},
-    {"label": "고급 루틴", "data": [90, 85, 95, 95, 80]}
-  ]'
-/>
+<div class="chart-radar" data-title="운동 부위별 효과" data-items='[{"name":"초급 루틴","scores":[{"label":"가슴","value":60,"color":"#10b981"},{"label":"등","value":50,"color":"#10b981"},{"label":"하체","value":85,"color":"#10b981"},{"label":"코어","value":80,"color":"#10b981"},{"label":"유산소","value":40,"color":"#10b981"}]},{"name":"중급 루틴","scores":[{"label":"가슴","value":80,"color":"#3b82f6"},{"label":"등","value":75,"color":"#3b82f6"},{"label":"하체","value":90,"color":"#3b82f6"},{"label":"코어","value":90,"color":"#3b82f6"},{"label":"유산소","value":60,"color":"#3b82f6"}]},{"name":"고급 루틴","scores":[{"label":"가슴","value":90,"color":"#8b5cf6"},{"label":"등","value":85,"color":"#8b5cf6"},{"label":"하체","value":95,"color":"#8b5cf6"},{"label":"코어","value":95,"color":"#8b5cf6"},{"label":"유산소","value":80,"color":"#8b5cf6"}]}]'></div>
 
 ### 중급 루틴 (주 4회, 45분)
 

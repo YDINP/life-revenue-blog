@@ -19,15 +19,7 @@ coupangLinks:
 
 ## 1. 플랫폼 개요
 
-<chart-radar
-  title="플랫폼별 특성 비교"
-  labels='["강의수", "가격만족", "강의품질", "커뮤니티", "학습관리"]'
-  datasets='[
-    {"label": "클래스101", "data": [65, 70, 85, 80, 90]},
-    {"label": "인프런", "data": [85, 80, 90, 85, 85]},
-    {"label": "유데미", "data": [100, 90, 75, 60, 70]}
-  ]'
-/>
+<div class="chart-radar" data-title="플랫폼별 특성 비교" data-items='[{"name":"클래스101","scores":[{"label":"강의수","value":65,"color":"#ec4899"},{"label":"가격만족","value":70,"color":"#ec4899"},{"label":"강의품질","value":85,"color":"#ec4899"},{"label":"커뮤니티","value":80,"color":"#ec4899"},{"label":"학습관리","value":90,"color":"#ec4899"}]},{"name":"인프런","scores":[{"label":"강의수","value":85,"color":"#3b82f6"},{"label":"가격만족","value":80,"color":"#3b82f6"},{"label":"강의품질","value":90,"color":"#3b82f6"},{"label":"커뮤니티","value":85,"color":"#3b82f6"},{"label":"학습관리","value":85,"color":"#3b82f6"}]},{"name":"유데미","scores":[{"label":"강의수","value":100,"color":"#f59e0b"},{"label":"가격만족","value":90,"color":"#f59e0b"},{"label":"강의품질","value":75,"color":"#f59e0b"},{"label":"커뮤니티","value":60,"color":"#f59e0b"},{"label":"학습관리","value":70,"color":"#f59e0b"}]}]'></div>
 
 ### 클래스101
 
@@ -49,12 +41,7 @@ coupangLinks:
 
 ## 2. 상세 비교
 
-<chart-bar
-  title="주요 지표 비교 (100점 만점)"
-  labels='["강의수", "한국어지원", "가격", "커뮤니티", "모바일앱"]'
-  data='[85, 95, 70, 80, 90]'
-  colors='["#ec4899", "#3b82f6", "#10b981", "#f59e0b", "#8b5cf6"]'
-/>
+<div class="chart-progress" data-title="주요 지표 비교 (100점 만점)" data-labels="강의수,한국어지원,가격,커뮤니티,모바일앱" data-values="85,95,70,80,90" data-colors="#ec4899,#3b82f6,#10b981,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
 
 ### 가격 비교
 
