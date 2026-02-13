@@ -214,5 +214,22 @@ const websiteSchema = {
       const navMenu = document.getElementById('nav-menu');
       navToggle?.addEventListener('click', () => navMenu?.classList.toggle('open'));
     </script>
+
+    <script>
+      // Pageview tracking
+      (function() {
+        const ANALYTICS_URL = 'https://xyprbsmagtlzebxyxsvj.supabase.co/functions/v1/analytics-ingest';
+        const slug = window.location.pathname.replace(/^\/blog\//, '').replace(/\/$/, '');
+        fetch(ANALYTICS_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            event_type: 'pageview',
+            source: 'lifeflow',
+            metadata: { slug, title: document.title, path: window.location.pathname, referrer: document.referrer || 'direct', user_agent: navigator.userAgent }
+          })
+        }).catch(() => {});
+      })();
+    </script>
   </body>
 </html>
