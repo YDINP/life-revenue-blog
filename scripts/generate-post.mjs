@@ -244,7 +244,10 @@ ${chartInstruction}
     }
   }
 
-  const { title, slug: postSlug, description, tags, content } = postData;
+  const { title: rawTitle, slug: postSlug, description: rawDesc, tags, content } = postData;
+  // YAML frontmatter 안전: 내부 따옴표 제거
+  const title = rawTitle.replace(/"/g, '');
+  const description = rawDesc.replace(/"/g, '');
   console.log(`Title: ${title}`);
 
   // Fetch hero image from Pexels
