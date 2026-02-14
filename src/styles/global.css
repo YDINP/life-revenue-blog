@@ -2508,3 +2508,46 @@ section > h2::after {
 @media (max-width: 600px) {
   .comment-form-row { flex-direction: column; }
 }
+
+/* ===== Comment Hide/Unhide (Admin) ===== */
+.comment-hidden {
+  opacity: 0.5;
+  border-left: 3px solid #ef4444;
+  background: rgba(239, 68, 68, 0.05);
+}
+.comment-hidden .comment-body {
+  text-decoration: line-through;
+  color: var(--color-text-muted, #888);
+}
+.comment-hidden-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: #ef4444;
+  color: #fff;
+  font-weight: 600;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.comment-hide-btn {
+  background: none;
+  border: 1px solid var(--color-border, #e5e7eb);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 2px 6px;
+  margin-left: 4px;
+  color: var(--color-text-muted, #888);
+  transition: all 0.2s;
+}
+.comment-hide-btn:hover {
+  background: #fef2f2;
+  border-color: #ef4444;
+  color: #ef4444;
+}
+.comment-hide-btn.unhide:hover {
+  background: #f0fdf4;
+  border-color: #10b981;
+  color: #10b981;
+}

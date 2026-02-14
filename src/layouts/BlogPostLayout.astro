@@ -657,6 +657,9 @@ const nextPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1]
       const postSlug = section.dataset.slug || '';
       const blogSource = section.dataset.blog || 'lifeflow';
 
+      // Admin mode: localhost access
+      const isAdmin = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+
       const form = document.getElementById('comment-form');
       const nameInput = document.getElementById('comment-name');
       const pwInput = document.getElementById('comment-password');
@@ -697,11 +700,33 @@ const nextPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1]
         return d.innerHTML;
       }
 
+      // Toggle comment visibility (admin only)
+      async function toggleHide(commentId) {
+        try {
+          const res = await fetch(`${RPC}/toggle_comment_visibility`, {
+            method: 'POST', headers,
+            body: JSON.stringify({ p_comment_id: commentId })
+          });
+          const result = await res.json();
+          if (result.success) {
+            await loadComments();
+          } else {
+            alert(result.message || '처리에 실패했습니다.');
+          }
+        } catch (err) {
+          alert('처리 중 오류가 발생했습니다.');
+        }
+      }
+
       async function loadComments() {
         try {
+          const body = { p_post_slug: postSlug, p_blog_source: blogSource };
+          // Admin sees all comments including hidden ones
+          if (isAdmin) body.p_include_hidden = true;
+
           const res = await fetch(`${RPC}/get_comments`, {
             method: 'POST', headers,
-            body: JSON.stringify({ p_post_slug: postSlug, p_blog_source: blogSource })
+            body: JSON.stringify(body)
           });
           const data = await res.json();
           if (loadingEl) loadingEl.style.display = 'none';
@@ -712,14 +737,23 @@ const nextPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1]
             return;
           }
 
-          if (countEl) countEl.textContent = `(${data.length})`;
+          const visibleCount = data.filter(c => !c.is_hidden).length;
+          if (countEl) countEl.textContent = isAdmin ? `(${visibleCount}/${data.length})` : `(${data.length})`;
 
           let html = '';
           data.forEach(c => {
-            html += `<div class="comment-item" data-id="${c.id}">
+            const hiddenClass = c.is_hidden ? ' comment-hidden' : '';
+            const hiddenBadge = c.is_hidden ? '<span class="comment-hidden-badge">숨김</span>' : '';
+            const hideBtn = isAdmin
+              ? `<button type="button" class="comment-hide-btn${c.is_hidden ? ' unhide' : ''}" data-id="${c.id}" title="${c.is_hidden ? '보이기' : '감추기'}">${c.is_hidden ? '&#128065;' : '&#128064;'}</button>`
+              : '';
+
+            html += `<div class="comment-item${hiddenClass}" data-id="${c.id}">
               <div class="comment-header">
                 <span class="comment-author">${esc(c.author_name)}</span>
+                ${hiddenBadge}
                 <span class="comment-date">${timeAgo(c.created_at)}</span>
+                ${hideBtn}
                 <button type="button" class="comment-del-btn" data-id="${c.id}" title="삭제">&#10005;</button>
               </div>
               <div class="comment-body">${esc(c.content).replace(/\n/g, '<br>')}</div>
@@ -730,6 +764,13 @@ const nextPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1]
           listEl.querySelectorAll('.comment-del-btn').forEach(btn => {
             btn.addEventListener('click', () => openDeleteModal(Number(btn.dataset.id)));
           });
+
+          // Attach hide/unhide handlers (admin only)
+          if (isAdmin) {
+            listEl.querySelectorAll('.comment-hide-btn').forEach(btn => {
+              btn.addEventListener('click', () => toggleHide(Number(btn.dataset.id)));
+            });
+          }
         } catch (e) {
           if (loadingEl) loadingEl.textContent = '댓글을 불러올 수 없습니다.';
         }
