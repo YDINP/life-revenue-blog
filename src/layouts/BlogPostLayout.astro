@@ -719,17 +719,18 @@ const nextPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1]
       }
 
       // Render a single comment HTML
-      function renderComment(c, isReply) {
+      function renderComment(c, depth) {
         const isHidden = c.is_hidden;
         const hiddenClass = isHidden ? ' comment-hidden' : '';
-        const replyClass = isReply ? ' comment-reply' : '';
+        const depthClass = depth > 0 ? ' comment-reply' : '';
+        const depthStyle = depth > 0 ? ` style="margin-left:${Math.min(depth, 5) * 1.5}rem"` : '';
         const hideBtn = isAdmin
           ? `<button type="button" class="comment-hide-btn${isHidden ? ' unhide' : ''}" data-id="${c.id}" title="${isHidden ? '보이기' : '감추기'}">${isHidden ? '&#128065;' : '&#128064;'}</button>`
           : '';
         const delBtn = isAdmin || !isHidden
           ? `<button type="button" class="comment-del-btn" data-id="${c.id}" title="삭제">&#10005;</button>`
           : '';
-        const replyBtn = !isReply && !isHidden
+        const replyBtn = !isHidden
           ? `<button type="button" class="comment-reply-btn" data-id="${c.id}">답글</button>`
           : '';
 
@@ -739,7 +740,7 @@ const nextPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1]
         const authorDisplay = isHidden && !isAdmin ? '' : `<span class="comment-author">${esc(c.author_name)}</span>`;
         const dateDisplay = isHidden && !isAdmin ? '' : `<span class="comment-date">${timeAgo(c.created_at)}</span>`;
 
-        return `<div class="comment-item${hiddenClass}${replyClass}" data-id="${c.id}">
+        return `<div class="comment-item${hiddenClass}${depthClass}" data-id="${c.id}"${depthStyle}>
           <div class="comment-header">
             ${authorDisplay}
             ${dateDisplay}
@@ -749,6 +750,18 @@ const nextPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1]
           </div>
           <div class="comment-body">${bodyContent}</div>
         </div>`;
+      }
+
+      // Recursive render: comment + all descendants
+      function renderTree(commentId, repliesMap, depth) {
+        let html = '';
+        if (repliesMap[commentId]) {
+          repliesMap[commentId].forEach(child => {
+            html += renderComment(child, depth);
+            html += renderTree(child.id, repliesMap, depth + 1);
+          });
+        }
+        return html;
       }
 
       // Show inline reply form
@@ -841,12 +854,8 @@ const nextPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1]
 
           let html = '';
           roots.forEach(c => {
-            html += renderComment(c, false);
-            if (repliesMap[c.id]) {
-              repliesMap[c.id].forEach(r => {
-                html += renderComment(r, true);
-              });
-            }
+            html += renderComment(c, 0);
+            html += renderTree(c.id, repliesMap, 1);
           });
           listEl.innerHTML = html;
 
