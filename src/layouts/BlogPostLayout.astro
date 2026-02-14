@@ -311,6 +311,43 @@ const nextPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1]
     <aside class="ai-disclaimer">
       <p>이 글은 AI 기술을 활용하여 작성되었습니다. 핵심 정보와 데이터는 검증을 거쳤으나, 정확한 의사결정을 위해 공식 출처를 통한 추가 확인을 권장합니다.</p>
     </aside>
+
+    <!-- 익명 댓글 시스템 -->
+    <section class="comments-section" id="comments-section" data-slug={currentSlug} data-blog="lifeflow">
+      <h3>댓글 <span class="comment-count" id="comment-count"></span></h3>
+
+      <!-- 댓글 작성 폼 -->
+      <form class="comment-form" id="comment-form">
+        <div class="comment-form-row">
+          <input type="text" id="comment-name" placeholder="이름 (선택, 미입력 시 '익명')" maxlength="20" class="comment-input" />
+          <input type="password" id="comment-password" placeholder="삭제용 비밀번호 (필수)" maxlength="30" required class="comment-input" />
+        </div>
+        <textarea id="comment-content" placeholder="댓글을 입력하세요..." rows="3" maxlength="1000" required class="comment-textarea"></textarea>
+        <div class="comment-form-footer">
+          <span class="comment-char-count" id="comment-char-count">0 / 1000</span>
+          <button type="submit" class="comment-submit-btn" id="comment-submit-btn">댓글 등록</button>
+        </div>
+      </form>
+
+      <!-- 댓글 목록 -->
+      <div class="comment-list" id="comment-list">
+        <p class="comment-loading" id="comment-loading">댓글을 불러오는 중...</p>
+      </div>
+
+      <!-- 삭제 모달 -->
+      <div class="comment-modal-overlay" id="delete-modal" style="display:none;">
+        <div class="comment-modal">
+          <h4>댓글 삭제</h4>
+          <p>작성 시 입력한 비밀번호를 입력하세요.</p>
+          <input type="password" id="delete-password" placeholder="비밀번호" class="comment-input" />
+          <div class="comment-modal-btns">
+            <button type="button" class="comment-cancel-btn" id="delete-cancel">취소</button>
+            <button type="button" class="comment-delete-btn" id="delete-confirm">삭제</button>
+          </div>
+          <p class="comment-error" id="delete-error" style="display:none;"></p>
+        </div>
+      </div>
+    </section>
   </article>
 
   <script>
@@ -606,6 +643,191 @@ const nextPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1]
         el.innerHTML = html;
         chartObserver.observe(el);
       });
+    })();
+
+    // ===== Anonymous Comment System =====
+    (function() {
+      const SUPABASE_URL = 'https://xyprbsmagtlzebxyxsvj.supabase.co';
+      const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh5cHJic21hZ3RsemVieHl4c3ZqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA0NjY4NTQsImV4cCI6MjA4NjA0Mjg1NH0.dajN0n0IWzOgYOSCglxVLzddg7jJFRHNCHwTWMG62uU';
+      const RPC = `${SUPABASE_URL}/rest/v1/rpc`;
+      const headers = { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}`, 'Content-Type': 'application/json' };
+
+      const section = document.getElementById('comments-section');
+      if (!section) return;
+      const postSlug = section.dataset.slug || '';
+      const blogSource = section.dataset.blog || 'lifeflow';
+
+      const form = document.getElementById('comment-form');
+      const nameInput = document.getElementById('comment-name');
+      const pwInput = document.getElementById('comment-password');
+      const contentInput = document.getElementById('comment-content');
+      const charCount = document.getElementById('comment-char-count');
+      const submitBtn = document.getElementById('comment-submit-btn');
+      const listEl = document.getElementById('comment-list');
+      const loadingEl = document.getElementById('comment-loading');
+      const countEl = document.getElementById('comment-count');
+
+      const modal = document.getElementById('delete-modal');
+      const deletePwInput = document.getElementById('delete-password');
+      const deleteConfirm = document.getElementById('delete-confirm');
+      const deleteCancel = document.getElementById('delete-cancel');
+      const deleteError = document.getElementById('delete-error');
+      let deleteTargetId = null;
+
+      if (contentInput && charCount) {
+        contentInput.addEventListener('input', () => {
+          charCount.textContent = `${contentInput.value.length} / 1000`;
+        });
+      }
+
+      function timeAgo(dateStr) {
+        const now = new Date();
+        const d = new Date(dateStr);
+        const diff = Math.floor((now - d) / 1000);
+        if (diff < 60) return '방금 전';
+        if (diff < 3600) return `${Math.floor(diff / 60)}분 전`;
+        if (diff < 86400) return `${Math.floor(diff / 3600)}시간 전`;
+        if (diff < 2592000) return `${Math.floor(diff / 86400)}일 전`;
+        return d.toLocaleDateString('ko-KR', { year: 'numeric', month: 'short', day: 'numeric' });
+      }
+
+      function esc(str) {
+        const d = document.createElement('div');
+        d.textContent = str;
+        return d.innerHTML;
+      }
+
+      async function loadComments() {
+        try {
+          const res = await fetch(`${RPC}/get_comments`, {
+            method: 'POST', headers,
+            body: JSON.stringify({ p_post_slug: postSlug, p_blog_source: blogSource })
+          });
+          const data = await res.json();
+          if (loadingEl) loadingEl.style.display = 'none';
+
+          if (!Array.isArray(data) || data.length === 0) {
+            listEl.innerHTML = '<p class="comment-empty">아직 댓글이 없습니다. 첫 번째 댓글을 남겨보세요!</p>';
+            if (countEl) countEl.textContent = '';
+            return;
+          }
+
+          if (countEl) countEl.textContent = `(${data.length})`;
+
+          let html = '';
+          data.forEach(c => {
+            html += `<div class="comment-item" data-id="${c.id}">
+              <div class="comment-header">
+                <span class="comment-author">${esc(c.author_name)}</span>
+                <span class="comment-date">${timeAgo(c.created_at)}</span>
+                <button type="button" class="comment-del-btn" data-id="${c.id}" title="삭제">&#10005;</button>
+              </div>
+              <div class="comment-body">${esc(c.content).replace(/\n/g, '<br>')}</div>
+            </div>`;
+          });
+          listEl.innerHTML = html;
+
+          listEl.querySelectorAll('.comment-del-btn').forEach(btn => {
+            btn.addEventListener('click', () => openDeleteModal(Number(btn.dataset.id)));
+          });
+        } catch (e) {
+          if (loadingEl) loadingEl.textContent = '댓글을 불러올 수 없습니다.';
+        }
+      }
+
+      if (form) {
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const name = nameInput.value.trim();
+          const pw = pwInput.value;
+          const content = contentInput.value.trim();
+          if (!content || !pw) return;
+
+          submitBtn.disabled = true;
+          submitBtn.textContent = '등록 중...';
+
+          try {
+            const res = await fetch(`${RPC}/add_comment`, {
+              method: 'POST', headers,
+              body: JSON.stringify({
+                p_post_slug: postSlug,
+                p_blog_source: blogSource,
+                p_author_name: name || '익명',
+                p_content: content,
+                p_password: pw
+              })
+            });
+            const result = await res.json();
+            if (result.success) {
+              contentInput.value = '';
+              pwInput.value = '';
+              nameInput.value = '';
+              if (charCount) charCount.textContent = '0 / 1000';
+              await loadComments();
+            } else {
+              alert(result.message || '댓글 등록에 실패했습니다.');
+            }
+          } catch (err) {
+            alert('댓글 등록 중 오류가 발생했습니다.');
+          }
+          submitBtn.disabled = false;
+          submitBtn.textContent = '댓글 등록';
+        });
+      }
+
+      function openDeleteModal(id) {
+        deleteTargetId = id;
+        modal.style.display = 'flex';
+        deletePwInput.value = '';
+        deleteError.style.display = 'none';
+        deletePwInput.focus();
+      }
+
+      if (deleteCancel) {
+        deleteCancel.addEventListener('click', () => {
+          modal.style.display = 'none';
+          deleteTargetId = null;
+        });
+      }
+
+      if (modal) {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) { modal.style.display = 'none'; deleteTargetId = null; }
+        });
+      }
+
+      if (deleteConfirm) {
+        deleteConfirm.addEventListener('click', async () => {
+          const pw = deletePwInput.value;
+          if (!pw || deleteTargetId === null) return;
+
+          deleteConfirm.disabled = true;
+          deleteConfirm.textContent = '삭제 중...';
+
+          try {
+            const res = await fetch(`${RPC}/delete_comment`, {
+              method: 'POST', headers,
+              body: JSON.stringify({ p_comment_id: deleteTargetId, p_password: pw })
+            });
+            const result = await res.json();
+            if (result.success) {
+              modal.style.display = 'none';
+              deleteTargetId = null;
+              await loadComments();
+            } else {
+              deleteError.textContent = result.message || '삭제에 실패했습니다.';
+              deleteError.style.display = 'block';
+            }
+          } catch (err) {
+            deleteError.textContent = '삭제 중 오류가 발생했습니다.';
+            deleteError.style.display = 'block';
+          }
+          deleteConfirm.disabled = false;
+          deleteConfirm.textContent = '삭제';
+        });
+      }
+
+      loadComments();
     })();
   </script>
 </BaseLayout>
