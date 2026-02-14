@@ -698,6 +698,47 @@ section > h2::after {
   border-radius: 0 8px 8px 0;
 }
 
+/* ── 콜아웃 박스 (강조 포인트) ── */
+.post-content .callout-tip,
+.post-content .callout-warning,
+.post-content .callout-info {
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  border-left: 4px solid;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.post-content .callout-tip {
+  background: rgba(16, 185, 129, 0.08);
+  border-left-color: #10b981;
+  color: var(--color-text);
+}
+
+.post-content .callout-warning {
+  background: rgba(245, 158, 11, 0.08);
+  border-left-color: #f59e0b;
+  color: var(--color-text);
+}
+
+.post-content .callout-info {
+  background: rgba(59, 130, 246, 0.08);
+  border-left-color: #3b82f6;
+  color: var(--color-text);
+}
+
+:root.dark .callout-tip { background: rgba(16, 185, 129, 0.12); }
+:root.dark .callout-warning { background: rgba(245, 158, 11, 0.12); }
+:root.dark .callout-info { background: rgba(59, 130, 246, 0.12); }
+
+.post-content .callout-tip strong,
+.post-content .callout-warning strong,
+.post-content .callout-info strong {
+  display: inline;
+  font-weight: 700;
+}
+
 .post-content pre {
   background: #1e293b;
   color: #e2e8f0;
