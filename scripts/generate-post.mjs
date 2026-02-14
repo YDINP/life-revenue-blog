@@ -265,6 +265,7 @@ ${dupeGuard}${engagingInstruction}${revenueInstruction}${internalLinkInstruction
   - 실용적인 정보, 팁, 가이드 포함
   - 표(table)를 1개 이상 포함
   - 자연스러운 SEO 키워드 배치
+  - 본문 마지막에 "## 참고 자료" 섹션을 추가하고, 글에서 참고한 공식 사이트·문서·통계 등 2~4개의 출처를 하이퍼링크로 제공하세요. 형식: "- [출처 이름](https://실제URL)"
 
 ${chartInstruction}
 
