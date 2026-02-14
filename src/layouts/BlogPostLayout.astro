@@ -713,6 +713,72 @@ const nextPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1]
       headings.forEach(h => observer.observe(h));
     })();
 
+    // ===== Sticky ToC Sidebar (Desktop) =====
+    (function() {
+      if (window.innerWidth < 1280) return;
+      const inlineToc = document.getElementById('toc');
+      const content = document.getElementById('post-content');
+      if (!inlineToc || !content) return;
+      const headings = content.querySelectorAll('h2[id], h3[id]');
+      if (headings.length < 2) return;
+
+      // Create sidebar ToC
+      const sidebar = document.createElement('nav');
+      sidebar.className = 'toc-sidebar';
+      sidebar.innerHTML = `
+        <div class="toc-sidebar-header">
+          <span class="toc-sidebar-title">목차</span>
+          <button class="toc-sidebar-close" aria-label="목차 닫기">&times;</button>
+        </div>
+        ${inlineToc.innerHTML.replace(/<h4[^>]*>.*?<\/h4>/i, '')}
+        <div class="toc-progress"><div class="toc-progress-bar"></div></div>
+      `;
+      document.body.appendChild(sidebar);
+
+      // Close button
+      sidebar.querySelector('.toc-sidebar-close').addEventListener('click', function() {
+        sidebar.classList.add('toc-hidden');
+      });
+
+      // Scroll highlight for sidebar
+      const sidebarLinks = sidebar.querySelectorAll('a');
+      const sidebarObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            sidebarLinks.forEach(a => a.classList.remove('toc-active'));
+            const active = sidebar.querySelector(`a[href="#${entry.target.id}"]`);
+            if (active) {
+              active.classList.add('toc-active');
+              active.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+            }
+          }
+        });
+      }, { rootMargin: '-80px 0px -70% 0px', threshold: 0 });
+      headings.forEach(h => sidebarObserver.observe(h));
+
+      // Reading progress bar
+      const progressBar = sidebar.querySelector('.toc-progress-bar');
+      if (progressBar) {
+        window.addEventListener('scroll', function() {
+          const rect = content.getBoundingClientRect();
+          const total = content.scrollHeight;
+          const scrolled = Math.max(0, -rect.top);
+          const pct = Math.min(100, (scrolled / (total - window.innerHeight)) * 100);
+          progressBar.style.width = pct + '%';
+        }, { passive: true });
+      }
+
+      // Show/hide based on content visibility
+      const visObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!sidebar.classList.contains('toc-hidden')) {
+            sidebar.style.opacity = entry.isIntersecting ? '1' : '0.3';
+          }
+        });
+      }, { threshold: 0.01 });
+      visObserver.observe(content);
+    })();
+
     // ===== Accordion FAQ =====
     (function() {
       const content = document.getElementById('post-content');

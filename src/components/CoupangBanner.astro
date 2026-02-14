@@ -15,29 +15,49 @@ const { links } = Astro.props;
 
 <aside class="coupang-banner">
   <div class="coupang-header">
-    <span class="coupang-icon">&#128722;</span>
-    <h4>이 글과 함께 보면 좋은 상품</h4>
+    <div class="coupang-header-left">
+      <span class="coupang-icon">&#128722;</span>
+      <h4>이 글과 함께 보면 좋은 상품</h4>
+    </div>
+    <span class="coupang-badge-count">{links.length}개 추천</span>
   </div>
   <div class="coupang-links">
     {
-      links.map((link) => (
+      links.map((link, i) => (
         <a
           href={link.url || DEFAULT_URL}
           target="_blank"
           rel="noopener noreferrer nofollow"
-          class="coupang-link-item"
+          class={`coupang-link-item ${i === 0 ? 'coupang-best' : ''}`}
           data-product={link.title}
         >
-          {link.imageUrl && (
-            <img src={link.imageUrl} alt={link.title} loading="lazy" />
-          )}
+          {i === 0 && <span class="coupang-ribbon">BEST</span>}
+          <div class="coupang-img-wrap">
+            {link.imageUrl ? (
+              <img src={link.imageUrl} alt={link.title} loading="lazy" />
+            ) : (
+              <div class="coupang-img-placeholder">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                </svg>
+              </div>
+            )}
+          </div>
           <span class="coupang-title">{link.title}</span>
-          <span class="coupang-cta">최저가 확인하기</span>
+          <span class="coupang-cta">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align: -2px; margin-right: 4px;">
+              <path d="M9 5l7 7-7 7"/>
+            </svg>
+            최저가 확인하기
+          </span>
         </a>
       ))
     }
   </div>
   <p class="coupang-disclaimer">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: -1px; margin-right: 2px; opacity: 0.6;">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+    </svg>
     이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
   </p>
 </aside>
@@ -64,38 +84,58 @@ const { links } = Astro.props;
 <style>
   .coupang-banner {
     margin: 2.5rem 0;
-    padding: 1.5rem;
+    padding: 1.75rem;
     border: 2px solid transparent;
     border-radius: 16px;
     background:
       linear-gradient(#fff, #fff) padding-box,
       linear-gradient(135deg, #ff6b35 0%, #e44d26 50%, #ff8c42 100%) border-box;
-    box-shadow: 0 4px 20px rgba(228, 77, 38, 0.08);
+    box-shadow: 0 4px 24px rgba(228, 77, 38, 0.1);
   }
   :global(.dark) .coupang-banner {
     background:
       linear-gradient(var(--color-bg, #1a1a2e), var(--color-bg, #1a1a2e)) padding-box,
       linear-gradient(135deg, #ff6b35 0%, #e44d26 50%, #ff8c42 100%) border-box;
+    box-shadow: 0 4px 24px rgba(228, 77, 38, 0.15);
   }
   .coupang-header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+  }
+  .coupang-header-left {
+    display: flex;
+    align-items: center;
     gap: 0.5rem;
-    margin-bottom: 1rem;
   }
   .coupang-icon {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
   .coupang-banner h4 {
     margin: 0;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     color: var(--color-text, #333);
     font-weight: 700;
+  }
+  .coupang-badge-count {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #e44d26;
+    background: rgba(228, 77, 38, 0.08);
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(228, 77, 38, 0.15);
+  }
+  :global(.dark) .coupang-badge-count {
+    background: rgba(228, 77, 38, 0.15);
+    border-color: rgba(228, 77, 38, 0.25);
+    color: #ff8c42;
   }
   .coupang-links {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 0.75rem;
+    gap: 0.875rem;
   }
   .coupang-link-item {
     display: flex;
@@ -108,7 +148,7 @@ const { links } = Astro.props;
     background: var(--color-bg, #fff);
     text-decoration: none;
     color: var(--color-text, #333);
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
   }
@@ -121,54 +161,111 @@ const { links } = Astro.props;
     height: 3px;
     background: linear-gradient(90deg, #ff6b35, #e44d26);
     opacity: 0;
-    transition: opacity 0.25s;
+    transition: opacity 0.3s;
   }
   .coupang-link-item:hover {
     border-color: #e44d26;
-    box-shadow: 0 8px 24px rgba(228, 77, 38, 0.18);
-    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(228, 77, 38, 0.2);
+    transform: translateY(-4px) scale(1.01);
   }
   .coupang-link-item:hover::before {
     opacity: 1;
   }
+  /* BEST ribbon */
+  .coupang-ribbon {
+    position: absolute;
+    top: 10px;
+    left: -28px;
+    background: linear-gradient(135deg, #e44d26, #ff6b35);
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 3px 30px;
+    transform: rotate(-45deg);
+    letter-spacing: 1px;
+    box-shadow: 0 2px 6px rgba(228, 77, 38, 0.3);
+    z-index: 1;
+  }
+  .coupang-best {
+    border-color: rgba(228, 77, 38, 0.3);
+  }
+  .coupang-img-wrap {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: var(--color-bg-secondary, #f8f9fa);
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .coupang-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 6px;
+  }
+  .coupang-img-placeholder {
+    color: var(--color-text-muted, #aaa);
+    opacity: 0.5;
+  }
   .coupang-title {
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     text-align: center;
     line-height: 1.4;
+    word-break: keep-all;
   }
   .coupang-cta {
-    display: inline-block;
-    padding: 0.5rem 1.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.55rem 1.25rem;
     background: linear-gradient(135deg, #e44d26 0%, #ff6b35 100%);
     color: #fff;
     font-size: 0.85rem;
-    font-weight: 600;
+    font-weight: 700;
     border-radius: 8px;
-    transition: all 0.2s;
+    transition: all 0.25s;
     text-align: center;
     width: 100%;
     box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+  }
+  .coupang-cta::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+    animation: ctaShine 3s ease-in-out infinite;
+  }
+  @keyframes ctaShine {
+    0%, 100% { left: -100%; }
+    50% { left: 100%; }
   }
   .coupang-link-item:hover .coupang-cta {
     background: linear-gradient(135deg, #d4431f 0%, #e44d26 100%);
-    box-shadow: 0 2px 8px rgba(228, 77, 38, 0.3);
-  }
-  .coupang-link-item img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(228, 77, 38, 0.35);
+    transform: scale(1.02);
   }
   .coupang-disclaimer {
-    margin: 1rem 0 0;
+    margin: 1.25rem 0 0;
     font-size: 0.7rem;
     color: var(--color-text-muted, #999);
     text-align: center;
+    line-height: 1.6;
   }
   @media (max-width: 480px) {
     .coupang-links {
       grid-template-columns: 1fr;
+    }
+    .coupang-banner {
+      padding: 1.25rem;
     }
   }
 </style>
