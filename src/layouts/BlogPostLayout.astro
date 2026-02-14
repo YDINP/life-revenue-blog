@@ -718,6 +718,100 @@ const nextPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1]
         }
       }
 
+      // Render a single comment HTML
+      function renderComment(c, isReply) {
+        const isHidden = c.is_hidden;
+        const hiddenClass = isHidden ? ' comment-hidden' : '';
+        const replyClass = isReply ? ' comment-reply' : '';
+        const hideBtn = isAdmin
+          ? `<button type="button" class="comment-hide-btn${isHidden ? ' unhide' : ''}" data-id="${c.id}" title="${isHidden ? '보이기' : '감추기'}">${isHidden ? '&#128065;' : '&#128064;'}</button>`
+          : '';
+        const delBtn = isAdmin || !isHidden
+          ? `<button type="button" class="comment-del-btn" data-id="${c.id}" title="삭제">&#10005;</button>`
+          : '';
+        const replyBtn = !isReply && !isHidden
+          ? `<button type="button" class="comment-reply-btn" data-id="${c.id}">답글</button>`
+          : '';
+
+        const bodyContent = isHidden && !isAdmin
+          ? '<span class="comment-masked">관리자에 의해 숨겨진 댓글입니다.</span>'
+          : esc(c.content).replace(/\n/g, '<br>');
+        const authorDisplay = isHidden && !isAdmin ? '' : `<span class="comment-author">${esc(c.author_name)}</span>`;
+        const dateDisplay = isHidden && !isAdmin ? '' : `<span class="comment-date">${timeAgo(c.created_at)}</span>`;
+
+        return `<div class="comment-item${hiddenClass}${replyClass}" data-id="${c.id}">
+          <div class="comment-header">
+            ${authorDisplay}
+            ${dateDisplay}
+            ${replyBtn}
+            ${hideBtn}
+            ${delBtn}
+          </div>
+          <div class="comment-body">${bodyContent}</div>
+        </div>`;
+      }
+
+      // Show inline reply form
+      function showReplyForm(parentId) {
+        const existing = document.querySelector('.reply-form');
+        if (existing) existing.remove();
+
+        const parentEl = listEl.querySelector(`.comment-item[data-id="${parentId}"]`);
+        if (!parentEl) return;
+
+        const replyHtml = `<div class="reply-form" data-parent="${parentId}">
+          <div class="comment-form-row">
+            <input type="text" class="reply-name comment-input" placeholder="이름 (선택)" maxlength="20" />
+            <input type="password" class="reply-password comment-input" placeholder="삭제용 비밀번호" maxlength="30" required />
+          </div>
+          <textarea class="reply-content comment-textarea" placeholder="답글을 입력하세요..." rows="2" maxlength="500" required></textarea>
+          <div class="comment-form-footer">
+            <button type="button" class="reply-cancel-btn">취소</button>
+            <button type="button" class="reply-submit-btn">답글 등록</button>
+          </div>
+        </div>`;
+        parentEl.insertAdjacentHTML('afterend', replyHtml);
+
+        const formEl = document.querySelector('.reply-form');
+        formEl.querySelector('.reply-cancel-btn').addEventListener('click', () => formEl.remove());
+        formEl.querySelector('.reply-submit-btn').addEventListener('click', async () => {
+          const name = formEl.querySelector('.reply-name').value.trim();
+          const pw = formEl.querySelector('.reply-password').value;
+          const content = formEl.querySelector('.reply-content').value.trim();
+          if (!content || !pw) return;
+
+          const btn = formEl.querySelector('.reply-submit-btn');
+          btn.disabled = true;
+          btn.textContent = '등록 중...';
+
+          try {
+            const res = await fetch(`${RPC}/add_comment`, {
+              method: 'POST', headers,
+              body: JSON.stringify({
+                p_post_slug: postSlug, p_blog_source: blogSource,
+                p_author_name: name || '익명', p_content: content,
+                p_password: pw, p_parent_id: parentId
+              })
+            });
+            const result = await res.json();
+            if (result.success) {
+              formEl.remove();
+              await loadComments();
+            } else {
+              alert(result.message || '답글 등록에 실패했습니다.');
+              btn.disabled = false;
+              btn.textContent = '답글 등록';
+            }
+          } catch (err) {
+            alert('답글 등록 중 오류가 발생했습니다.');
+            btn.disabled = false;
+            btn.textContent = '답글 등록';
+          }
+        });
+
+        formEl.querySelector('.reply-content').focus();
+      }
+
       async function loadComments() {
         try {
           const body = { p_post_slug: postSlug, p_blog_source: blogSource, p_include_hidden: true };
@@ -737,33 +831,22 @@ const nextPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1]
 
           if (countEl) countEl.textContent = `(${data.length})`;
 
+          // Group into tree: root comments + replies
+          const roots = data.filter(c => !c.parent_id);
+          const repliesMap = {};
+          data.filter(c => c.parent_id).forEach(c => {
+            if (!repliesMap[c.parent_id]) repliesMap[c.parent_id] = [];
+            repliesMap[c.parent_id].push(c);
+          });
+
           let html = '';
-          data.forEach(c => {
-            const isHidden = c.is_hidden;
-            const hiddenClass = isHidden ? ' comment-hidden' : '';
-            const hideBtn = isAdmin
-              ? `<button type="button" class="comment-hide-btn${isHidden ? ' unhide' : ''}" data-id="${c.id}" title="${isHidden ? '보이기' : '감추기'}">${isHidden ? '&#128065;' : '&#128064;'}</button>`
-              : '';
-            const delBtn = isAdmin || !isHidden
-              ? `<button type="button" class="comment-del-btn" data-id="${c.id}" title="삭제">&#10005;</button>`
-              : '';
-
-            // Admin sees original content; regular users see masked message
-            const bodyContent = isHidden && !isAdmin
-              ? '<span class="comment-masked">관리자에 의해 숨겨진 댓글입니다.</span>'
-              : esc(c.content).replace(/\n/g, '<br>');
-            const authorDisplay = isHidden && !isAdmin ? '' : `<span class="comment-author">${esc(c.author_name)}</span>`;
-            const dateDisplay = isHidden && !isAdmin ? '' : `<span class="comment-date">${timeAgo(c.created_at)}</span>`;
-
-            html += `<div class="comment-item${hiddenClass}" data-id="${c.id}">
-              <div class="comment-header">
-                ${authorDisplay}
-                ${dateDisplay}
-                ${hideBtn}
-                ${delBtn}
-              </div>
-              <div class="comment-body">${bodyContent}</div>
-            </div>`;
+          roots.forEach(c => {
+            html += renderComment(c, false);
+            if (repliesMap[c.id]) {
+              repliesMap[c.id].forEach(r => {
+                html += renderComment(r, true);
+              });
+            }
           });
           listEl.innerHTML = html;
 
@@ -771,12 +854,15 @@ const nextPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1]
             btn.addEventListener('click', () => openDeleteModal(Number(btn.dataset.id)));
           });
 
-          // Attach hide/unhide handlers (admin only)
           if (isAdmin) {
             listEl.querySelectorAll('.comment-hide-btn').forEach(btn => {
               btn.addEventListener('click', () => toggleHide(Number(btn.dataset.id)));
             });
           }
+
+          listEl.querySelectorAll('.comment-reply-btn').forEach(btn => {
+            btn.addEventListener('click', () => showReplyForm(Number(btn.dataset.id)));
+          });
         } catch (e) {
           if (loadingEl) loadingEl.textContent = '댓글을 불러올 수 없습니다.';
         }
