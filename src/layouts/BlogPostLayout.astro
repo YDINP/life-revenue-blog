@@ -720,9 +720,7 @@ const nextPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1]
 
       async function loadComments() {
         try {
-          const body = { p_post_slug: postSlug, p_blog_source: blogSource };
-          // Admin sees all comments including hidden ones
-          if (isAdmin) body.p_include_hidden = true;
+          const body = { p_post_slug: postSlug, p_blog_source: blogSource, p_include_hidden: true };
 
           const res = await fetch(`${RPC}/get_comments`, {
             method: 'POST', headers,
@@ -737,26 +735,34 @@ const nextPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1]
             return;
           }
 
-          const visibleCount = data.filter(c => !c.is_hidden).length;
-          if (countEl) countEl.textContent = isAdmin ? `(${visibleCount}/${data.length})` : `(${data.length})`;
+          if (countEl) countEl.textContent = `(${data.length})`;
 
           let html = '';
           data.forEach(c => {
-            const hiddenClass = c.is_hidden ? ' comment-hidden' : '';
-            const hiddenBadge = c.is_hidden ? '<span class="comment-hidden-badge">숨김</span>' : '';
+            const isHidden = c.is_hidden;
+            const hiddenClass = isHidden ? ' comment-hidden' : '';
             const hideBtn = isAdmin
-              ? `<button type="button" class="comment-hide-btn${c.is_hidden ? ' unhide' : ''}" data-id="${c.id}" title="${c.is_hidden ? '보이기' : '감추기'}">${c.is_hidden ? '&#128065;' : '&#128064;'}</button>`
+              ? `<button type="button" class="comment-hide-btn${isHidden ? ' unhide' : ''}" data-id="${c.id}" title="${isHidden ? '보이기' : '감추기'}">${isHidden ? '&#128065;' : '&#128064;'}</button>`
               : '';
+            const delBtn = isAdmin || !isHidden
+              ? `<button type="button" class="comment-del-btn" data-id="${c.id}" title="삭제">&#10005;</button>`
+              : '';
+
+            // Admin sees original content; regular users see masked message
+            const bodyContent = isHidden && !isAdmin
+              ? '<span class="comment-masked">관리자에 의해 숨겨진 댓글입니다.</span>'
+              : esc(c.content).replace(/\n/g, '<br>');
+            const authorDisplay = isHidden && !isAdmin ? '' : `<span class="comment-author">${esc(c.author_name)}</span>`;
+            const dateDisplay = isHidden && !isAdmin ? '' : `<span class="comment-date">${timeAgo(c.created_at)}</span>`;
 
             html += `<div class="comment-item${hiddenClass}" data-id="${c.id}">
               <div class="comment-header">
-                <span class="comment-author">${esc(c.author_name)}</span>
-                ${hiddenBadge}
-                <span class="comment-date">${timeAgo(c.created_at)}</span>
+                ${authorDisplay}
+                ${dateDisplay}
                 ${hideBtn}
-                <button type="button" class="comment-del-btn" data-id="${c.id}" title="삭제">&#10005;</button>
+                ${delBtn}
               </div>
-              <div class="comment-body">${esc(c.content).replace(/\n/g, '<br>')}</div>
+              <div class="comment-body">${bodyContent}</div>
             </div>`;
           });
           listEl.innerHTML = html;
