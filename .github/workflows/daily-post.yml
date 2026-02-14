@@ -34,6 +34,11 @@ on:
           - '1'
           - '2'
           - '3'
+      engaging:
+        description: '독자 유입 극대화 (호기심 자극 + 클릭 유도 스타일)'
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -56,6 +61,7 @@ jobs:
           INPUT_CATEGORY: ${{ github.event.inputs.category || 'auto' }}
           INPUT_TOPIC: ${{ github.event.inputs.topic || '' }}
           INPUT_COUNT: ${{ github.event.inputs.count || '3' }}
+          INPUT_ENGAGING: ${{ github.event.inputs.engaging || 'false' }}
 
       - name: Commit and Push
         id: commit
