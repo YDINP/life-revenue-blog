@@ -1,8 +1,39 @@
-name: Daily Blog Post
+name: Blog Post Generator
+
 on:
+  # 자동 스케줄: 매일 한국시간 09:30 (UTC 00:30) - TechFlow와 30분 차이
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '30 0 * * *'
+
+  # 수동 트리거: GitHub 모바일/웹에서 "Run workflow" 클릭
   workflow_dispatch:
+    inputs:
+      category:
+        description: '카테고리 (auto = 날짜 기반 자동)'
+        required: false
+        default: 'auto'
+        type: choice
+        options:
+          - auto
+          - lifestyle
+          - finance
+          - health
+          - education
+          - travel
+      topic:
+        description: '주제 (비우면 자동 선택)'
+        required: false
+        default: ''
+        type: string
+      count:
+        description: '생성할 포스트 수'
+        required: false
+        default: '1'
+        type: choice
+        options:
+          - '1'
+          - '2'
+          - '3'
 
 permissions:
   contents: write
@@ -12,14 +43,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+
       - name: Generate blog post
         run: node scripts/generate-post.mjs
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          INPUT_CATEGORY: ${{ github.event.inputs.category || 'auto' }}
+          INPUT_TOPIC: ${{ github.event.inputs.topic || '' }}
+          INPUT_COUNT: ${{ github.event.inputs.count || '3' }}
+
       - name: Commit and Push
         id: commit
         run: |
@@ -29,21 +66,27 @@ jobs:
           if git diff --staged --quiet; then
             echo "no_changes=true" >> $GITHUB_OUTPUT
           else
-            git commit -m "[auto] 오늘의 블로그 포스트 3개 자동 생성"
+            COUNT=$(git diff --staged --name-only | wc -l)
+            git commit -m "[auto] 블로그 포스트 ${COUNT}개 자동 생성"
             git push
             echo "no_changes=false" >> $GITHUB_OUTPUT
           fi
+
       - name: Notify IndexNow (Bing/Yandex)
         if: steps.commit.outputs.no_changes != 'true'
         run: |
-          NEW_FILE=$(git diff --name-only HEAD~1 HEAD -- src/blog/ | head -1)
-          if [ -n "$NEW_FILE" ]; then
-            SLUG=$(basename "$NEW_FILE" .md)
-            curl -s -X POST "https://api.indexnow.org/indexnow" \
-              -H "Content-Type: application/json" \
-              -d "{\"host\":\"life-revenue-blog.vercel.app\",\"key\":\"c9d3f7a2e8b104569abc7d8e9f0a1b2c\",\"urlList\":[\"https://life-revenue-blog.vercel.app/blog/${SLUG}/\",\"https://life-revenue-blog.vercel.app/\",\"https://life-revenue-blog.vercel.app/blog/\"]}"
-            echo "[IndexNow] Submitted: /blog/${SLUG}/"
-          fi
+          FILES=$(git diff --name-only HEAD~1 HEAD -- src/blog/)
+          URLS=""
+          for FILE in $FILES; do
+            SLUG=$(basename "$FILE" .md)
+            URLS="${URLS}\"https://life-revenue-blog.vercel.app/blog/${SLUG}/\","
+          done
+          URLS="${URLS}\"https://life-revenue-blog.vercel.app/\",\"https://life-revenue-blog.vercel.app/blog/\""
+          curl -s -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json" \
+            -d "{\"host\":\"life-revenue-blog.vercel.app\",\"key\":\"c9d3f7a2e8b104569abc7d8e9f0a1b2c\",\"urlList\":[${URLS}]}"
+          echo "[IndexNow] Submitted new posts"
+
       - name: Ping Google Sitemap
         if: steps.commit.outputs.no_changes != 'true'
         run: |

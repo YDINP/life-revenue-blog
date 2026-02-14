@@ -112,11 +112,39 @@ function pickCoupangProducts(categoryName, count = 2) {
   return shuffled.slice(0, count);
 }
 
+/**
+ * 기존 블로그 포스트 제목 로드 (중복 방지용)
+ */
+function loadExistingPostTitles(blogDir, category) {
+  if (!existsSync(blogDir)) return [];
+  const files = readdirSync(blogDir).filter(f => f.endsWith('.md'));
+  const posts = [];
+  for (const file of files) {
+    try {
+      const content = readFileSync(join(blogDir, file), 'utf-8');
+      const fmMatch = content.match(/^---\n([\s\S]*?)\n---/);
+      if (!fmMatch) continue;
+      const fm = fmMatch[1];
+      const titleMatch = fm.match(/^title:\s*"?(.+?)"?\s*$/m);
+      const catMatch = fm.match(/^category:\s*"?(.+?)"?\s*$/m);
+      if (!titleMatch) continue;
+      const postCat = catMatch ? catMatch[1] : '';
+      if (postCat === category) {
+        posts.push(`[${postCat}] ${titleMatch[1]}`);
+      }
+    } catch { /* skip */ }
+  }
+  return posts;
+}
+
 // ── Main ────────────────────────────────────────────────────────────
-async function generateOnePost(categoryName, keyword, searchTerm, blogDir, postIndex) {
-  console.log(`\n--- Post ${postIndex}/3: ${categoryName} ---`);
+async function generateOnePost(categoryName, keyword, searchTerm, blogDir, postIndex, totalCount, existingTitles) {
+  console.log(`\n--- Post ${postIndex}/${totalCount}: ${categoryName} ---`);
   console.log(`[Info] Keyword: ${keyword}`);
   console.log(`[Info] Search term: ${searchTerm}`);
+  if (existingTitles && existingTitles.length > 0) {
+    console.log(`[Info] Existing ${categoryName} posts: ${existingTitles.length}개 (중복 방지)`);
+  }
 
   const chartInstruction = `반드시 본문에 아래 5가지 차트 유형 중 주제에 맞는 것을 1~2개 선택하여 포함하세요:
 
@@ -138,15 +166,21 @@ async function generateOnePost(categoryName, keyword, searchTerm, blogDir, postI
 선택 가이드: 비율/점유율→donut, 1:1 대결→versus, 개별 평점→progress, 수치 비교→bar, 다항목 제품 평가→radar.
 주의: div 안에 자식 요소를 넣지 마세요. 항목 3~5개. chart-bar만 반복하지 말고 다양한 유형을 활용하세요.`;
 
+  // 기존 포스트 중복 방지 지시
+  const dupeGuard = existingTitles && existingTitles.length > 0
+    ? `\n**중복 방지**: 아래는 이미 발행된 같은 카테고리 포스트입니다. 이들과 겹치지 않는 새로운 각도/주제로 작성하세요:\n${existingTitles.map(t => `- ${t}`).join('\n')}\n`
+    : '';
+
   const prompt = `당신은 한국어 블로그 작성 전문가입니다.
 "${keyword}" 주제로 SEO 최적화된 블로그 포스트를 작성해주세요.
 
 카테고리: ${categoryName}
-
+${dupeGuard}
 **중요**: 2026년 2월 기준 가장 최신 뉴스, 트렌드, 이슈를 기반으로 작성하세요.
 - 최신 제품 출시, 업데이트, 시장 변화를 반영
 - 단순 일반론이 아닌 구체적인 시의성 있는 내용 위주
 - 제목에 "2026" 또는 구체적 시점을 포함
+- 기존 포스트와 제목이나 핵심 내용이 유사하면 안 됩니다
 
 요구사항:
 - 제목(title): 매력적이고 클릭을 유도하는 한국어 제목
@@ -267,12 +301,19 @@ ${content}${coupangSection}
 }
 
 async function main() {
-  console.log(`=== Daily Blog Post Generator (3 posts) ===\n`);
+  const inputCategory = process.env.INPUT_CATEGORY || 'auto';
+  const inputTopic = process.env.INPUT_TOPIC || '';
+  const inputCount = parseInt(process.env.INPUT_COUNT || '3', 10);
+  const count = Math.min(Math.max(inputCount, 1), 3);
+
+  console.log('=== LifeFlow Blog Post Generator ===');
+  console.log(`[Mode] category=${inputCategory}, topic="${inputTopic}", count=${count}\n`);
   console.log(`[Info] Date: ${dateStr}`);
 
-  // 0. 중복 확인 - 같은 날짜 파일이 3개 이상이면 스킵
+  // 0. 스케줄 실행 시 중복 확인 (수동 트리거는 항상 실행)
+  const isManual = inputCategory !== 'auto' || inputTopic.trim() !== '';
   const blogDir = join(ROOT, 'src', 'blog');
-  if (existsSync(blogDir)) {
+  if (!isManual && existsSync(blogDir)) {
     const existing = readdirSync(blogDir).filter(f => f.startsWith(dateStr));
     if (existing.length >= 3) {
       console.log(`[Skip] Today's 3 posts already exist: ${existing.join(', ')}`);
@@ -281,11 +322,19 @@ async function main() {
     }
   }
 
-  // 1. Select 3 different categories
-  const categoryNames = selectCategories(3);
-  console.log(`[Info] Categories: ${categoryNames.join(', ')}`);
+  // 1. 카테고리 결정
+  let categoryNames;
+  if (inputCategory !== 'auto') {
+    categoryNames = Array(count).fill(inputCategory);
+  } else {
+    categoryNames = selectCategories(count);
+  }
+  const customTopic = inputTopic.trim();
+  console.log(`[Info] Categories: ${categoryNames.join(', ')} (${count}편)`);
+  if (customTopic) console.log(`[Info] Custom topic: "${customTopic}"`);
 
-  // 2. Generate 3 posts sequentially
+  // 2. Generate posts sequentially
+  let generated = 0;
   for (let i = 0; i < categoryNames.length; i++) {
     const categoryName = categoryNames[i];
     const categoryData = seeds.categories.find(c => c.name === categoryName);
@@ -294,20 +343,31 @@ async function main() {
       continue;
     }
 
-    const keywordIndex = Math.floor(Math.random() * categoryData.keywords.length);
-    const keyword = categoryData.keywords[keywordIndex];
-    const searchTerm = categoryData.searchTerms[keywordIndex];
+    // 수동 주제가 있으면 첫 번째 포스트에 적용
+    let keyword, searchTerm;
+    if (customTopic && i === 0) {
+      keyword = customTopic;
+      searchTerm = customTopic;
+    } else {
+      const keywordIndex = Math.floor(Math.random() * categoryData.keywords.length);
+      keyword = categoryData.keywords[keywordIndex];
+      searchTerm = categoryData.searchTerms[keywordIndex];
+    }
+
+    // 기존 포스트 제목 로드 (중복 방지)
+    const existingTitles = loadExistingPostTitles(blogDir, categoryName);
 
     try {
-      await generateOnePost(categoryName, keyword, searchTerm, blogDir, i + 1);
+      await generateOnePost(categoryName, keyword, searchTerm, blogDir, i + 1, count, existingTitles);
+      generated++;
     } catch (err) {
-      console.error(`[ERROR] Post ${i + 1}/3 (${categoryName}) failed: ${err.message}`);
+      console.error(`[ERROR] Post ${i + 1}/${count} (${categoryName}) failed: ${err.message}`);
       console.log(`[Info] Continuing to next post...`);
       continue;
     }
   }
 
-  console.log('\n=== Done! (3 posts generated) ===');
+  console.log(`\n=== Done! (${generated}/${count} posts generated) ===`);
 }
 
 main().catch((err) => {
