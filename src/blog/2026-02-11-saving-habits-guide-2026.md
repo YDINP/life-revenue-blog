@@ -18,7 +18,6 @@ coupangLinks:
   - title: "주식투자 무작정 따라하기"
     url: "https://link.coupang.com/a/dJhOT3"
 ---
-
 # 절약 습관으로 경제 자유를 향해 가는 첫 걸음
 
 현대인의 가장 큰 고민 중 하나는 월급이 모두 어디로 사라지는가 하는 것입니다. 매달 받는 급여가 충분한데도 불구하고 저축은 늘어나지 않고, 신용카드 청구액만 증가하는 악순환에 빠져 있다면 이 글이 도움이 될 것입니다.
@@ -36,6 +35,8 @@ coupangLinks:
 - 재정적 자유도에 한 발 더 가까워집니다
 
 <div class="chart-progress" data-title="절약 성공률" data-labels="예산 관리,지출 추적,자동 저축,소비 습관 개선" data-values="82,78,85,72" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444" data-max="100" data-unit="%"></div>
+
+<div class="callout-tip">💡 <strong>핵심 포인트</strong>: 자신의 재정 상황을 정확히 파악하고, 우선순위에 따라 현명하게 소비하는 능력</div>
 
 ## 절약 습관 5단계 실행 계획
 
@@ -129,6 +130,8 @@ coupangLinks:
 
 **심리적 보상 부재:** 작은 성취도 축하하고 기록하세요. 월별 저축 목표 달성 시 소소한 보상을 스스로에게 주세요.
 
+<div class="callout-warning">⚠️ <strong>주의사항</strong>: 과도한 절약:</div>
+
 ## 장기적 절약 습관 유지 전략
 
 ### 1개월 차: 기초 습관 형성
@@ -178,3 +181,10 @@ coupangLinks:
 - [부자 아빠 가난한 아빠](https://link.coupang.com/a/dJhOT3)
 - [주식투자 무작정 따라하기](https://link.coupang.com/a/dJhOT3)
 
+
+
+## 참고 자료
+
+- [라이프해커 코리아](https://lifehacker.com/)
+- [브런치스토리](https://brunch.co.kr/)
+- [핀터레스트 라이프스타일](https://www.pinterest.com/)

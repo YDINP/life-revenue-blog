@@ -12,7 +12,6 @@ coupangLinks:
   - title: "여행용 카메라"
     url: "https://link.coupang.com/a/dJhOT3"
 ---
-
 # 국내 여행 숨은 명소 TOP 10
 
 제주도, 부산, 강릉은 이미 알고 있죠? 이번에는 사람들이 잘 모르는 국내 숨은 명소를 소개합니다. 관광객이 적고, 조용하고, 힐링되는 곳들입니다.
@@ -41,6 +40,8 @@ coupangLinks:
 - 입장료: 무료 (죽녹원 2천원)
 - 주차: 무료
 - 숙박: 펜션 10~15만원
+
+<div class="callout-tip">💡 <strong>핵심 포인트</strong>: 추천 계절</div>
 
 ## 2. 경북 문경 옛길
 
@@ -201,6 +202,8 @@ coupangLinks:
 - 주차: 5천원
 - 인근 펜션: 10~15만원
 
+<div class="callout-warning">⚠️ <strong>주의사항</strong>: 추천 계절</div>
+
 ## 9. 제주 비양도
 
 **위치**: 제주도 한림읍
@@ -319,3 +322,12 @@ coupangLinks:
 국내에도 아직 모르는 멋진 곳이 많습니다. 해외여행도 좋지만, 가까운 국내 여행지에서 힐링하는 것도 좋습니다.
 
 이번 주말, 차를 몰고 숨은 명소로 떠나보세요. 사람들로 붐비지 않는 조용한 풍경 속에서 진정한 휴식을 느낄 수 있을 것입니다!
+
+<div class="callout-info">ℹ️ <strong>참고</strong>: 국내에도 아직 모르는 멋진 곳이 많습니다. 해외여행도 좋지만, 가까운 국내 여행지에서 힐링하는 것도 좋습니다.</div>
+
+
+## 참고 자료
+
+- [라이프해커 코리아](https://lifehacker.com/)
+- [브런치스토리](https://brunch.co.kr/)
+- [핀터레스트 라이프스타일](https://www.pinterest.com/)

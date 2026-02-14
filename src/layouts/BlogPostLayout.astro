@@ -667,6 +667,115 @@ const nextPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1]
       });
     })();
 
+    // ===== Code Copy Button =====
+    (function() {
+      const content = document.getElementById('post-content');
+      if (!content) return;
+      content.querySelectorAll('pre').forEach(pre => {
+        if (pre.parentElement.classList.contains('code-block-wrapper')) return;
+        const wrapper = document.createElement('div');
+        wrapper.className = 'code-block-wrapper';
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(pre);
+        const btn = document.createElement('button');
+        btn.className = 'code-copy-btn';
+        btn.textContent = '복사';
+        btn.addEventListener('click', async () => {
+          const code = pre.querySelector('code') || pre;
+          try {
+            await navigator.clipboard.writeText(code.textContent);
+            btn.textContent = '복사됨!';
+            btn.classList.add('copied');
+            setTimeout(() => { btn.textContent = '복사'; btn.classList.remove('copied'); }, 2000);
+          } catch(e) { btn.textContent = '실패'; }
+        });
+        wrapper.appendChild(btn);
+      });
+    })();
+
+    // ===== ToC Scroll Highlight =====
+    (function() {
+      const toc = document.getElementById('toc');
+      const content = document.getElementById('post-content');
+      if (!toc || !content) return;
+      const headings = content.querySelectorAll('h2[id], h3[id]');
+      if (headings.length < 2) return;
+      const tocLinks = toc.querySelectorAll('a');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            tocLinks.forEach(a => a.classList.remove('toc-active'));
+            const active = toc.querySelector(`a[href="#${entry.target.id}"]`);
+            if (active) active.classList.add('toc-active');
+          }
+        });
+      }, { rootMargin: '-80px 0px -70% 0px', threshold: 0 });
+      headings.forEach(h => observer.observe(h));
+    })();
+
+    // ===== Accordion FAQ =====
+    (function() {
+      const content = document.getElementById('post-content');
+      if (!content) return;
+      const faqHeading = Array.from(content.querySelectorAll('h2')).find(
+        h => h.textContent.includes('자주 묻는 질문') || h.textContent.includes('FAQ')
+      );
+      if (!faqHeading) return;
+      const items = [];
+      let el = faqHeading.nextElementSibling;
+      let currentQ = null;
+      let currentA = [];
+      while (el && el.tagName !== 'H2') {
+        if (el.tagName === 'H3') {
+          if (currentQ) items.push({ q: currentQ, a: currentA.join('') });
+          currentQ = el.textContent.replace(/^Q\d*[\.\:]\s*/, '').replace(/^\d+\.\s*/, '');
+          currentA = [];
+        } else if (currentQ) {
+          currentA.push(el.outerHTML);
+        }
+        el = el.nextElementSibling;
+      }
+      if (currentQ) items.push({ q: currentQ, a: currentA.join('') });
+      if (items.length === 0) return;
+      const container = document.createElement('div');
+      container.className = 'faq-accordion';
+      items.forEach(item => {
+        const details = document.createElement('details');
+        details.className = 'faq-item';
+        details.innerHTML = `<summary>${item.q}</summary><div class="faq-answer">${item.a}</div>`;
+        container.appendChild(details);
+      });
+      let removeEl = faqHeading.nextElementSibling;
+      while (removeEl && removeEl.tagName !== 'H2') {
+        const next = removeEl.nextElementSibling;
+        removeEl.remove();
+        removeEl = next;
+      }
+      faqHeading.after(container);
+    })();
+
+    // ===== Difficulty Badge (auto-detect) =====
+    (function() {
+      const content = document.getElementById('post-content');
+      const meta = document.querySelector('.post-meta');
+      if (!content || !meta) return;
+      const text = content.textContent || '';
+      const codeBlocks = content.querySelectorAll('pre code').length;
+      const length = text.length;
+      let level = 'beginner';
+      let label = '초급';
+      let icon = '\uD83D\uDFE2';
+      if (length > 8000 || codeBlocks > 5) {
+        level = 'advanced'; label = '고급'; icon = '\uD83D\uDD34';
+      } else if (length > 4000 || codeBlocks > 2) {
+        level = 'intermediate'; label = '중급'; icon = '\uD83D\uDFE1';
+      }
+      const badge = document.createElement('span');
+      badge.className = `difficulty-badge ${level}`;
+      badge.textContent = `${icon} ${label}`;
+      meta.appendChild(badge);
+    })();
+
     // ===== Anonymous Comment System =====
     (function() {
       const SUPABASE_URL = 'https://xyprbsmagtlzebxyxsvj.supabase.co';

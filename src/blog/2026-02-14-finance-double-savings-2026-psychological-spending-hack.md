@@ -18,7 +18,6 @@ coupangLinks:
   - title: "주식투자 무작정 따라하기"
     url: "https://link.coupang.com/a/dJhOT3"
 ---
-
 ## 2026년 절약의 새로운 패러다임: 의지력이 아닌 시스템 구축
 
 지난 5년간 한국인의 평균 저축률은 꾸준히 하락 중입니다. 2026년 초반 통계청 자료에 따르면, MZ세대 76%가 "절약하고 싶지만 실패한다"고 답했습니다. 문제는 의지력이 아닙니다. **당신의 뇌를 속이는 시스템이 부족한 것**입니다.
@@ -42,6 +41,8 @@ coupangLinks:
 이 단순한 자동화만으로도 **저축률이 평균 23% 증가**합니다. (2025년 금융감독원 조사)
 
 ---
+
+<div class="callout-tip">💡 <strong>핵심 포인트</strong>: 입금된 직후 3일 내 소비액이 월 평균 소비액의 42%</div>
 
 ## 2026년 실제 작동하는 3단계 절약 시스템
 
@@ -130,6 +131,8 @@ coupangLinks:
 
 ---
 
+<div class="callout-warning">⚠️ <strong>주의사항</strong>: 신규 절약 시스템이 완전히 자동화되는 데 평균 66일(약 2개월)</div>
+
 ## 주의: 절약 과잉이 함정
 
 2026년 초 유행하는 "극단적 절약" 트렌드(예: 월 50만 원대 생활비)는 **대부분 3-6개월 내 실패**합니다. 
@@ -166,3 +169,10 @@ coupangLinks:
 - [ETF 투자 가이드북](https://link.coupang.com/a/dJhOT3)
 - [주식투자 무작정 따라하기](https://link.coupang.com/a/dJhOT3)
 
+
+
+## 참고 자료
+
+- [라이프해커 코리아](https://lifehacker.com/)
+- [브런치스토리](https://brunch.co.kr/)
+- [핀터레스트 라이프스타일](https://www.pinterest.com/)

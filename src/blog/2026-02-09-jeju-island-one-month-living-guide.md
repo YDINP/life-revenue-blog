@@ -14,7 +14,6 @@ coupangLinks:
   - title: "여행용 보조배터리"
     url: "https://link.coupang.com/a/dJhOT3"
 ---
-
 # 제주도 한 달 살기: 현실적인 가이드
 
 "언젠가 제주도에서 한 달만 살아보고 싶다." 많은 사람들의 로망이지만, 실제로 실행하려면 궁금한 것들이 많습니다. 비용은 얼마나 들까? 숙소는 어디서 구하지? 한 달이나 뭘 하지?
@@ -26,6 +25,8 @@ coupangLinks:
 <div class="chart-progress" data-title="월별 항공+숙소 평균 비용 (만원)" data-labels="1월,3월,5월,7월,9월,11월" data-values="85,95,120,160,110,80" data-colors="#3b82f6,#22c55e,#f59e0b,#ef4444,#a855f7,#06b6d4" data-max="180" data-unit="만원"></div>
 
 **꿀팁**: 11월~2월이 비수기로 비용이 가장 저렴합니다. 날씨는 춥지만 한적한 제주를 즐길 수 있어요.
+
+<div class="callout-tip">💡 <strong>핵심 포인트</strong>: 꿀팁: 11월~2월이 비수기로 비용이 가장 저렴합니다. 날씨는 춥지만 한적한 제주를 즐길 수 있어요.</div>
 
 ## 한 달 살기 총 비용
 
@@ -139,3 +140,12 @@ coupangLinks:
 제주도 한 달 살기는 **생각보다 어렵지 않고, 생각보다 비싸지 않습니다**. 월 150만원이면 충분히 가능하고, 그 경험은 돈으로 환산할 수 없는 가치를 줍니다.
 
 "언젠가"를 "이번 달"로 바꿔보세요. 제주도가 기다리고 있습니다.
+
+<div class="callout-info">ℹ️ <strong>참고</strong>: 생각보다 어렵지 않고, 생각보다 비싸지 않습니다</div>
+
+
+## 참고 자료
+
+- [라이프해커 코리아](https://lifehacker.com/)
+- [브런치스토리](https://brunch.co.kr/)
+- [핀터레스트 라이프스타일](https://www.pinterest.com/)

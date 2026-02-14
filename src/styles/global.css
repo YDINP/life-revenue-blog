@@ -739,6 +739,100 @@ section > h2::after {
   font-weight: 700;
 }
 
+/* ─── Code Copy Button ─── */
+.code-block-wrapper {
+  position: relative;
+}
+.code-copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.7);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s, background 0.2s;
+  z-index: 2;
+}
+.code-block-wrapper:hover .code-copy-btn { opacity: 1; }
+.code-copy-btn:hover { background: rgba(255,255,255,0.2); color: #fff; }
+.code-copy-btn.copied {
+  background: #10b981;
+  border-color: #10b981;
+  color: #fff;
+  opacity: 1;
+}
+
+/* ─── ToC Scroll Highlight ─── */
+.toc a.toc-active {
+  color: var(--color-primary) !important;
+  font-weight: 700;
+  border-left: 3px solid var(--color-primary);
+  padding-left: 8px;
+  background: rgba(99,102,241,0.06);
+  border-radius: 0 4px 4px 0;
+}
+
+/* ─── Accordion FAQ ─── */
+.faq-item {
+  border: 1px solid var(--color-border, #e5e7eb);
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+.faq-item:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.faq-item summary {
+  padding: 1rem 1.25rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  user-select: none;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::before {
+  content: '\25B6';
+  font-size: 0.7rem;
+  color: var(--color-primary);
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+.faq-item[open] summary::before { transform: rotate(90deg); }
+.faq-item .faq-answer {
+  padding: 0 1.25rem 1rem;
+  line-height: 1.8;
+  color: var(--color-text-secondary, #6b7280);
+  border-top: 1px solid var(--color-border, #e5e7eb);
+}
+:root.dark .faq-item { border-color: #374151; }
+:root.dark .faq-item .faq-answer { border-top-color: #374151; }
+
+/* ─── Difficulty Badge ─── */
+.difficulty-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.difficulty-badge.beginner { background: rgba(16,185,129,0.12); color: #059669; }
+.difficulty-badge.intermediate { background: rgba(245,158,11,0.12); color: #d97706; }
+.difficulty-badge.advanced { background: rgba(239,68,68,0.12); color: #dc2626; }
+:root.dark .difficulty-badge.beginner { background: rgba(16,185,129,0.2); color: #34d399; }
+:root.dark .difficulty-badge.intermediate { background: rgba(245,158,11,0.2); color: #fbbf24; }
+:root.dark .difficulty-badge.advanced { background: rgba(239,68,68,0.2); color: #f87171; }
+
 .post-content pre {
   background: #1e293b;
   color: #e2e8f0;

@@ -19,7 +19,6 @@ coupangLinks:
   - title: "여행용 보조배터리"
     url: "https://link.coupang.com/a/dJhOT3"
 ---
-
 ## 여행에서 도파민 중독이 문제인 이유
 
 2026년 현재, 한국인의 일일 스마트폰 사용 시간은 평균 4시간 이상입니다. 특히 여행 중에는 더 심한데, SNS에 사진을 올리고 좋아요를 기다리며, 실시간 댓글을 확인하는 과정에서 **도파민 중독 상태**에 빠지게 됩니다. 
@@ -97,6 +96,8 @@ coupangLinks:
 
 ---
 
+<div class="callout-tip">💡 <strong>핵심 포인트</strong>: 휴대폰 설정 최적화</div>
+
 ## 돌아오는 길의 도파민 관리
 
 ### 귀국 직후 1주일 계획
@@ -139,6 +140,8 @@ coupangLinks:
 
 ---
 
+<div class="callout-warning">⚠️ <strong>주의사항</strong>: 기억에 오래 남는 여행의 특징</div>
+
 ## 도파민 중독 탈출, 진정한 여행의 시작
 
 2026년, 더 많은 여행객들이 '경험의 질'을 추구하고 있습니다. 휴대폰 화면을 내려놓을 때, 비로소 눈앞의 풍경이 보이고, 귀에 현지의 소리가 들리며, 마음에 진정한 휴식이 찾아옵니다.
@@ -156,3 +159,10 @@ coupangLinks:
 - [캐리어 28인치](https://link.coupang.com/a/dJhOT3)
 - [여행용 보조배터리](https://link.coupang.com/a/dJhOT3)
 
+
+
+## 참고 자료
+
+- [라이프해커 코리아](https://lifehacker.com/)
+- [브런치스토리](https://brunch.co.kr/)
+- [핀터레스트 라이프스타일](https://www.pinterest.com/)

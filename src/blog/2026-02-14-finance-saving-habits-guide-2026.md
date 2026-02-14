@@ -18,7 +18,6 @@ coupangLinks:
   - title: "주식투자 무작정 따라하기"
     url: "https://link.coupang.com/a/dJhOT3"
 ---
-
 ## 2026년 절약 습관의 변화: 기존과 뭐가 다른가?
 
 최근 몇 년간 한국의 소비 문화와 금융 환경이 급격히 변했습니다. 2026년 현재, 절약 습관도 과거의 단순한 '지출 줄이기'에서 벗어나 **데이터 기반의 똑똑한 자산 관리**로 진화했습니다. 특히 MZ세대를 중심으로 AI 기반 가계부 앱, 자동화된 저축 시스템, 그리고 ESG 기반의 윤리적 소비가 대세입니다.
@@ -49,6 +48,8 @@ coupangLinks:
 - 자유비용 계좌 (20%)
 
 국내 주요 은행들이 모두 '자동이체 우선순위 서비스'를 출시했으며, 이를 통해 저축률이 평균 15~20% 향상되는 것으로 나타났습니다.
+
+<div class="callout-tip">💡 <strong>핵심 포인트</strong>: 토스, 카카오뱅크</div>
 
 ## 2026년 절약 습관 만들기 5단계
 
@@ -159,6 +160,8 @@ TikTok, Instagram, YouTube Shorts의 광고와 콘텐츠가 계획되지 않은 
 - 무료 문화생활 (공원 산책, 도서관, 무료 전시) 활용
 - 소비 대신 시간 투자 (취미, 운동, 독서)
 
+<div class="callout-warning">⚠️ <strong>주의사항</strong>: 대응 전략:</div>
+
 ## 2026년 절약과 투자의 균형
 
 <div class="chart-progress" data-title="최적의 자금 배분 목표" data-labels="생활비,긴급자금,투자,자유비용" data-values="50,20,20,10" data-colors="#10b981,#3b82f6,#f59e0b,#8b5cf6" data-max="100" data-unit="%"></div>
@@ -191,3 +194,10 @@ TikTok, Instagram, YouTube Shorts의 광고와 콘텐츠가 계획되지 않은 
 - [부자 아빠 가난한 아빠](https://link.coupang.com/a/dJhOT3)
 - [주식투자 무작정 따라하기](https://link.coupang.com/a/dJhOT3)
 
+
+
+## 참고 자료
+
+- [라이프해커 코리아](https://lifehacker.com/)
+- [브런치스토리](https://brunch.co.kr/)
+- [핀터레스트 라이프스타일](https://www.pinterest.com/)

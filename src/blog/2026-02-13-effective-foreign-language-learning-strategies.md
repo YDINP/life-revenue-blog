@@ -19,7 +19,6 @@ coupangLinks:
   - title: "자기계발 도서 모음"
     url: "https://link.coupang.com/a/dJhOT3"
 ---
-
 # 외국어 학습 전략: 효율적인 방법 5가지로 3개월 내 실력 UP하기
 
 외국어 학습은 많은 사람들이 도전하지만 중도에 포기하는 분야입니다. 시간만 투자한다고 해서 실력이 늘지 않으며, 올바른 외국어 학습 전략이 필수적입니다. 이 글에서는 과학적 근거에 기반한 효과적인 언어 학습 방법론을 소개하겠습니다.
@@ -33,6 +32,8 @@ coupangLinks:
 <div class="chart-bar" data-title="학습 방법별 3개월 실력 향상도" data-labels="전통 문법 중심,몰입식 학습,상황별 회화 연습,복합 전략" data-values="35,62,58,88" data-colors="#ef4444,#f59e0b,#3b82f6,#10b981" data-unit="점"></div>
 
 위 차트에서 보듯이 **복합 학습 전략**을 사용한 학습자들이 가장 빠른 실력 향상을 보였습니다.
+
+<div class="callout-tip">💡 <strong>핵심 포인트</strong>: 올바른 외국어 학습 전략</div>
 
 ## 1단계: 명확한 목표 설정 - "언어 학습 전략"의 시작점
 
@@ -102,6 +103,8 @@ Anki, Quizlet 같은 앱을 사용하면 자동으로 복습 일정을 관리할
 - **스스로 말하기**: 거울 앞에서 혼잣말하기
 - **상황 역할 연기**: 특정 상황(카페 주문, 병원 방문 등) 재현
 
+<div class="callout-warning">⚠️ <strong>주의사항</strong>: 언어 학습 전략</div>
+
 ## 주의사항: 피해야 할 외국어 학습 전략의 실수
 
 ### ❌ 비효율적인 학습 방법
@@ -137,3 +140,10 @@ Anki, Quizlet 같은 앱을 사용하면 자동으로 복습 일정을 관리할
 - [아이패드 에어 M2](https://link.coupang.com/a/dJjUUj)
 - [자기계발 도서 모음](https://link.coupang.com/a/dJhOT3)
 
+
+
+## 참고 자료
+
+- [라이프해커 코리아](https://lifehacker.com/)
+- [브런치스토리](https://brunch.co.kr/)
+- [핀터레스트 라이프스타일](https://www.pinterest.com/)

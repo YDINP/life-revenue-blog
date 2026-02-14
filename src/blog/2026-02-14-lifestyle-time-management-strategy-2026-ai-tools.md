@@ -19,7 +19,6 @@ coupangLinks:
   - title: "아날로그 알람시계"
     url: "https://link.coupang.com/a/dJhOT3"
 ---
-
 # 2026년 시간 관리 전략: AI 도구와 과학적 방법으로 생산성 2배 높이기
 
 ## 서론: 2026년 시간 관리의 새로운 패러다임
@@ -29,6 +28,8 @@ coupangLinks:
 최근 한국의 직장인을 대상으로 한 설문 조사(2026년 2월)에 따르면, 78%가 현재의 시간 관리 방식에 만족하지 못하고 있으며, 특히 **디지털 피로와 집중력 저하**를 주요 원인으로 꼽았습니다. 이 글에서는 2026년에 실제로 효과를 보이는 과학 기반의 시간 관리 전략을 소개합니다.
 
 ---
+
+<div class="callout-tip">💡 <strong>핵심 포인트</strong>: AI 기반 시간 관리 도구</div>
 
 ## 시간 관리 도구 현황: 2026년 최신 트렌드
 
@@ -182,6 +183,8 @@ Cal Newport의 "Deep Work" 이론을 2026년 현실에 맞게 재해석하면:
 
 ---
 
+<div class="callout-warning">⚠️ <strong>주의사항</strong>: 측정 결과:</div>
+
 ## 개인별 맞춤 시간 관리 체크리스트
 
 ### 당신의 시간 관리 유형 진단
@@ -254,3 +257,10 @@ AI 도구는 단순한 보조 수단일 뿐, 가장 중요한 것은:
 - [디지털 미니멀리즘 도서](https://link.coupang.com/a/dJhOT3)
 - [아날로그 알람시계](https://link.coupang.com/a/dJhOT3)
 
+
+
+## 참고 자료
+
+- [라이프해커 코리아](https://lifehacker.com/)
+- [브런치스토리](https://brunch.co.kr/)
+- [핀터레스트 라이프스타일](https://www.pinterest.com/)

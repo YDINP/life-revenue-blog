@@ -12,7 +12,6 @@ coupangLinks:
   - title: "투자 공부 노트"
     url: "https://link.coupang.com/a/dJhOT3"
 ---
-
 # ETF 투자 입문: 2026년 완벽 가이드
 
 ETF(Exchange Traded Fund)는 초보 투자자에게 가장 추천하는 투자 상품입니다. 워런 버핏도 일반 투자자에게 ETF를 권장할 정도로, ETF는 안전하고 효율적인 투자 수단입니다. 이 가이드에서는 ETF의 기초부터 실전 투자 전략까지 상세히 알아보겠습니다.
@@ -29,6 +28,8 @@ ETF는 **상장지수펀드**로, 특정 지수를 추종하는 펀드를 주식
 **투명성**: 보유 종목과 비중이 공개됩니다.
 
 <div class="chart-progress" data-title="ETF 투자 만족도 지표 (100점 만점)" data-labels="수수료,분산투자,거래편의,전문성필요,투명성" data-values="90,95,85,30,95" data-colors="#10b981,#3b82f6,#8b5cf6,#f59e0b,#ec4899" data-max="100" data-unit="점"></div>
+
+<div class="callout-tip">💡 <strong>핵심 포인트</strong>: 상장지수펀드</div>
 
 ## 2. ETF의 장점과 단점
 
@@ -131,6 +132,8 @@ KODEX 200이나 TIGER 미국S&P500처럼 안정적인 ETF부터 시작하세요.
 
 연간 총보수가 낮을수록 유리합니다. 일반적으로 0.5% 이하가 적정합니다.
 
+<div class="callout-warning">⚠️ <strong>주의사항</strong>: 최소 1000억 원 이상인 ETF를 선택하세요. 규모가 작으면 상장폐지 위험이 있습니다.</div>
+
 ## 7. 실전 포트폴리오 예시
 
 ### 보수형 (안정 중시)
@@ -179,3 +182,12 @@ KODEX 200이나 TIGER 미국S&P500처럼 안정적인 ETF부터 시작하세요.
 ETF는 초보 투자자에게 최고의 선택입니다. 낮은 비용으로 분산 투자 효과를 누릴 수 있고, 장기적으로 안정적인 수익을 기대할 수 있습니다.
 
 오늘부터 소액으로 시작해보세요. KODEX 200이나 TIGER 미국S&P500 한 주만 사도 투자자로서의 첫 걸음을 뗀 것입니다. 꾸준함이 큰 자산을 만듭니다!
+
+<div class="callout-info">ℹ️ <strong>참고</strong>: ETF는 초보 투자자에게 최고의 선택입니다. 낮은 비용으로 분산 투자 효과를 누릴 수 있고, 장기적으로 안정적인 수익을 기대할 수 있습니다.</div>
+
+
+## 참고 자료
+
+- [라이프해커 코리아](https://lifehacker.com/)
+- [브런치스토리](https://brunch.co.kr/)
+- [핀터레스트 라이프스타일](https://www.pinterest.com/)
