@@ -39,6 +39,11 @@ on:
         required: false
         default: false
         type: boolean
+      revenue:
+        description: '수익 극대화 모드 (자연스러운 상품 추천 + 구매 유도)'
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -62,6 +67,7 @@ jobs:
           INPUT_TOPIC: ${{ github.event.inputs.topic || '' }}
           INPUT_COUNT: ${{ github.event.inputs.count || '3' }}
           INPUT_ENGAGING: ${{ github.event.inputs.engaging || 'false' }}
+          INPUT_REVENUE: ${{ github.event.inputs.revenue || 'false' }}
 
       - name: Commit and Push
         id: commit

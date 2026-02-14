@@ -2,28 +2,28 @@
   "categories": [
     {
       "name": "lifestyle",
-      "keywords": ["미니멀 라이프 실천법", "디지털 디톡스 가이드", "모닝 루틴 만들기", "홈 오피스 환경 꾸미기", "시간 관리 전략"],
-      "searchTerms": ["minimalist lifestyle", "digital detox", "morning routine", "home office setup", "time management"]
+      "keywords": ["미니멀 라이프 실천법", "디지털 디톡스 가이드", "모닝 루틴 만들기", "홈 오피스 환경 꾸미기", "시간 관리 전략", "홈오피스 필수템 추천", "미니멀 라이프 추천 아이템", "1인 가구 가성비 살림템"],
+      "searchTerms": ["minimalist lifestyle", "digital detox", "morning routine", "home office setup", "time management", "home office essentials", "minimalist items", "budget home items"]
     },
     {
       "name": "finance",
-      "keywords": ["ETF 투자 입문", "2026 재테크 전략", "자산 배분 가이드", "부업 수익화 방법", "절약 습관 만들기"],
-      "searchTerms": ["ETF investing beginner", "financial planning 2026", "asset allocation", "side income", "saving habits"]
+      "keywords": ["ETF 투자 입문", "2026 재테크 전략", "자산 배분 가이드", "부업 수익화 방법", "절약 습관 만들기", "재테크 도서 추천", "ETF 입문 가이드 책", "월급 관리 앱 비교"],
+      "searchTerms": ["ETF investing beginner", "financial planning 2026", "asset allocation", "side income", "saving habits", "finance books recommendation", "ETF guide books", "salary management app"]
     },
     {
       "name": "health",
-      "keywords": ["홈 트레이닝 루틴", "건강한 식단 가이드", "수면 개선 방법", "스트레스 관리법", "직장인 운동법"],
-      "searchTerms": ["home workout routine", "healthy meal prep", "sleep improvement", "stress management", "office exercise"]
+      "keywords": ["홈 트레이닝 루틴", "건강한 식단 가이드", "수면 개선 방법", "스트레스 관리법", "직장인 운동법", "홈트 장비 가성비 추천", "건강식품 비교 TOP 5", "수면 보조 제품 추천"],
+      "searchTerms": ["home workout routine", "healthy meal prep", "sleep improvement", "stress management", "office exercise", "budget home gym equipment", "health supplement comparison", "sleep aid products"]
     },
     {
       "name": "education",
-      "keywords": ["효과적인 자기 학습법", "온라인 강의 추천", "독서 습관 만들기", "외국어 학습 전략", "코딩 입문 가이드"],
-      "searchTerms": ["self learning strategies", "online course comparison", "reading habits", "language learning", "coding for beginners"]
+      "keywords": ["효과적인 자기 학습법", "온라인 강의 추천", "독서 습관 만들기", "외국어 학습 전략", "코딩 입문 가이드", "온라인 강의 플랫폼 비교", "자기계발 도서 추천", "학습 도구 가성비 추천"],
+      "searchTerms": ["self learning strategies", "online course comparison", "reading habits", "language learning", "coding for beginners", "online platform comparison", "self improvement books", "budget learning tools"]
     },
     {
       "name": "travel",
-      "keywords": ["국내 숨은 명소 TOP 10", "제주도 여행 가이드", "일본 여행 예산", "유럽 배낭여행 팁", "동남아 한 달 살기"],
-      "searchTerms": ["Korea hidden gems", "Jeju travel guide", "Japan budget travel", "Europe backpacking", "Southeast Asia living"]
+      "keywords": ["국내 숨은 명소 TOP 10", "제주도 여행 가이드", "일본 여행 예산", "유럽 배낭여행 팁", "동남아 한 달 살기", "여행 필수 준비물 추천", "캐리어 가성비 비교", "여행자 보험 비교"],
+      "searchTerms": ["Korea hidden gems", "Jeju travel guide", "Japan budget travel", "Europe backpacking", "Southeast Asia living", "travel essentials", "budget luggage comparison", "travel insurance comparison"]
     }
   ]
 }

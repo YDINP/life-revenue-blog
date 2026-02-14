@@ -5,6 +5,11 @@ import AdSlot from '../components/AdSlot.astro';
 import RelatedPosts from '../components/RelatedPosts.astro';
 import NewsletterCTA from '../components/NewsletterCTA.astro';
 
+interface FaqItem {
+  q: string;
+  a: string;
+}
+
 interface Props {
   frontmatter: {
     title: string;
@@ -16,6 +21,7 @@ interface Props {
     tags: string[];
     heroImage?: string;
     coupangLinks?: { title: string; url: string; imageUrl?: string }[];
+    faq?: FaqItem[];
   };
 }
 
@@ -30,6 +36,7 @@ const {
   tags,
   heroImage,
   coupangLinks,
+  faq,
 } = frontmatter;
 
 const pubDateObj = new Date(pubDate);
@@ -117,6 +124,20 @@ const breadcrumbLd = {
   ],
 };
 
+// FAQPage JSON-LD (구글 FAQ 리치 스니펫)
+const faqLd = faq && faq.length > 0 ? {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map(item => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.a,
+    },
+  })),
+} : null;
+
 // Get slug from URL
 const currentSlug = Astro.url.pathname.split('/').filter(Boolean).pop() || '';
 
@@ -146,6 +167,7 @@ const nextPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1]
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+  {faqLd && <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />}
 
   <article class="blog-post">
     <!-- Breadcrumb Navigation -->

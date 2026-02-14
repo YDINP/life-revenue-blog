@@ -6,10 +6,10 @@ Disallow: /dashboard
 # Crawl-delay for polite bots
 Crawl-delay: 1
 
-Sitemap: https://ai-revenue-blog.vercel.app/sitemap-index.xml
+Sitemap: https://life-revenue-blog.vercel.app/sitemap-index.xml
 
 # IndexNow
 # Key: c9d3f7a2e8b104569abc7d8e9f0a1b2c
 
-# AI Revenue Blog - TechFlow
-# https://ai-revenue-blog.vercel.app
+# Life Revenue Blog - LifeFlow
+# https://life-revenue-blog.vercel.app

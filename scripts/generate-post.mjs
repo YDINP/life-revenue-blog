@@ -113,6 +113,29 @@ function pickCoupangProducts(categoryName, count = 2) {
 }
 
 /**
+ * 기존 블로그 포스트 슬러그+제목 로드 (내부 링크용)
+ */
+function loadExistingPostSlugs() {
+  const blogDir = join(ROOT, 'src', 'blog');
+  if (!existsSync(blogDir)) return [];
+  const files = readdirSync(blogDir).filter(f => f.endsWith('.md'));
+  const posts = [];
+  for (const file of files) {
+    try {
+      const content = readFileSync(join(blogDir, file), 'utf-8');
+      const fmMatch = content.match(/^---\n([\s\S]*?)\n---/);
+      if (!fmMatch) continue;
+      const fm = fmMatch[1];
+      const titleMatch = fm.match(/^title:\s*"?(.+?)"?\s*$/m);
+      if (!titleMatch) continue;
+      const slug = file.replace('.md', '');
+      posts.push({ title: titleMatch[1], slug });
+    } catch { /* skip */ }
+  }
+  return posts;
+}
+
+/**
  * 기존 블로그 포스트 제목 로드 (중복 방지용)
  */
 function loadExistingPostTitles(blogDir, category) {
@@ -138,7 +161,7 @@ function loadExistingPostTitles(blogDir, category) {
 }
 
 // ── Main ────────────────────────────────────────────────────────────
-async function generateOnePost(categoryName, keyword, searchTerm, blogDir, postIndex, totalCount, existingTitles, engaging = false) {
+async function generateOnePost(categoryName, keyword, searchTerm, blogDir, postIndex, totalCount, existingTitles, engaging = false, revenue = false, allPosts = []) {
   console.log(`\n--- Post ${postIndex}/${totalCount}: ${categoryName} ---`);
   console.log(`[Info] Keyword: ${keyword}`);
   console.log(`[Info] Search term: ${searchTerm}`);
@@ -184,11 +207,28 @@ async function generateOnePost(categoryName, keyword, searchTerm, blogDir, postI
 - 단, 허위/과장 금지 — 팩트 기반으로 흥미롭게 포장
 ` : '';
 
+  // 수익 극대화 모드
+  const revenueInstruction = revenue ? `
+**수익 극대화 모드 (필수 적용)**:
+- 본문 중간에 자연스럽게 상품/서비스 추천을 삽입 ("이 작업에는 **[상품명]**이 가장 효과적이었습니다")
+- "추천 이유", "실사용 후기" 톤으로 제품 언급 (자연스러운 네이티브 광고 스타일)
+- 비교표에 "구매 포인트" 또는 "추천도" 컬럼 추가
+- 결론부에 "가장 추천하는 제품/서비스" 명시
+- 단, 지나친 광고 톤 금지 — 정보성 콘텐츠 안에 자연스러운 추천 삽입
+` : '';
+
+  // 내부 링크 지시
+  const internalLinkInstruction = allPosts.length > 0 ? `
+**내부 링크 삽입 (SEO 필수)**:
+아래는 기존 발행된 포스트 목록입니다. 본문에서 관련 주제가 나올 때 자연스럽게 1~2개를 링크하세요:
+${allPosts.slice(-20).map(p => `- "${p.title}" → /blog/${p.slug}/`).join('\n')}
+` : '';
+
   const prompt = `당신은 한국어 블로그 작성 전문가입니다.
 "${keyword}" 주제로 SEO 최적화된 블로그 포스트를 작성해주세요.
 
 카테고리: ${categoryName}
-${dupeGuard}${engagingInstruction}
+${dupeGuard}${engagingInstruction}${revenueInstruction}${internalLinkInstruction}
 **최우선 원칙 — 최신 데이터 기반 작성 (정보 신뢰도가 핵심)**:
 - 오늘은 ${dateStr}입니다. 이 시점 기준 실제 존재하는 제품, 서비스, 통계 수치만 사용
 - 허구의 수치나 브랜드명을 만들어내지 말 것. 확실하지 않으면 "공식 발표 예정" 등으로 표기
@@ -210,13 +250,24 @@ ${dupeGuard}${engagingInstruction}
 
 ${chartInstruction}
 
+**메타 설명(description) 작성 규칙**:
+- 반드시 숫자 포함 ("TOP 5", "3가지", "7단계")
+- 행동 유도 문구 포함 ("지금 확인하세요", "바로 비교해보세요")
+- 궁금증 유발 ("이것만 알면 충분합니다", "모르면 손해")
+- 120~160자 범위 엄수
+
 반드시 아래 JSON 형식으로만 응답하세요 (다른 텍스트 없이):
 {
   "title": "...",
   "slug": "english-slug-for-url (영문 소문자, 하이픈으로 연결, 예: time-management-tips-2026)",
   "description": "...",
   "tags": ["...", "..."],
-  "content": "마크다운 본문..."
+  "content": "마크다운 본문...",
+  "faq": [
+    {"q": "자주 묻는 질문 1", "a": "답변 1 (2~3문장)"},
+    {"q": "자주 묻는 질문 2", "a": "답변 2 (2~3문장)"},
+    {"q": "자주 묻는 질문 3", "a": "답변 3 (2~3문장)"}
+  ]
 }`;
 
   console.log('Calling Claude API...');
@@ -260,6 +311,15 @@ ${chartInstruction}
     }
   }
 
+  // FAQ가 있으면 본문 하단에 "자주 묻는 질문" 섹션 추가
+  if (postData.faq && Array.isArray(postData.faq) && postData.faq.length > 0) {
+    let faqSection = '\n\n---\n\n## 자주 묻는 질문\n\n';
+    for (const item of postData.faq) {
+      faqSection += `### ${item.q}\n\n${item.a}\n\n`;
+    }
+    postData.content += faqSection;
+  }
+
   const { title: rawTitle, slug: postSlug, description: rawDesc, tags, content } = postData;
   // YAML frontmatter 안전: 내부 따옴표 제거
   const title = rawTitle.replace(/"/g, '');
@@ -291,6 +351,15 @@ ${chartInstruction}
     .map(p => `  - title: "${p.title}"\n    url: "${p.url}"`)
     .join('\n');
 
+  // FAQ YAML
+  let faqYaml = '';
+  if (postData.faq && Array.isArray(postData.faq) && postData.faq.length > 0) {
+    faqYaml = 'faq:\n';
+    for (const item of postData.faq) {
+      faqYaml += `  - q: "${item.q.replace(/"/g, '\\"')}"\n    a: "${item.a.replace(/"/g, '\\"')}"\n`;
+    }
+  }
+
   const frontmatter = `---
 title: "${title}"
 description: "${description}"
@@ -302,7 +371,7 @@ ${tagsYaml}
 heroImage: "${heroImage.url}"
 coupangLinks:
 ${coupangYaml}
----`;
+${faqYaml}---`;
 
   const fullContent = `${frontmatter}
 
@@ -324,12 +393,16 @@ async function main() {
   const inputTopic = process.env.INPUT_TOPIC || '';
   const inputCount = parseInt(process.env.INPUT_COUNT || '3', 10);
   const inputEngaging = process.env.INPUT_ENGAGING === 'true';
+  const inputRevenue = process.env.INPUT_REVENUE === 'true';
   const count = Math.min(Math.max(inputCount, 1), 3);
 
   console.log('=== LifeFlow Blog Post Generator ===');
   console.log(`[Mode] category=${inputCategory}, topic="${inputTopic}", count=${count}\n`);
   console.log(`[Info] Date: ${dateStr}`);
+  const allPostSlugs = loadExistingPostSlugs();
+  console.log(`[Info] Existing posts for internal linking: ${allPostSlugs.length}개`);
   if (inputEngaging) console.log(`[Info] Engaging mode: ON (독자 유입 극대화)`);
+  if (inputRevenue) console.log(`[Info] Revenue mode: ON (수익 극대화)`);
 
   // 0. 스케줄 실행 시 중복 확인 (수동 트리거는 항상 실행)
   const isManual = inputCategory !== 'auto' || inputTopic.trim() !== '';
@@ -379,7 +452,7 @@ async function main() {
     const existingTitles = loadExistingPostTitles(blogDir, categoryName);
 
     try {
-      await generateOnePost(categoryName, keyword, searchTerm, blogDir, i + 1, count, existingTitles, inputEngaging);
+      await generateOnePost(categoryName, keyword, searchTerm, blogDir, i + 1, count, existingTitles, inputEngaging, inputRevenue, allPostSlugs);
       generated++;
     } catch (err) {
       console.error(`[ERROR] Post ${i + 1}/${count} (${categoryName}) failed: ${err.message}`);
