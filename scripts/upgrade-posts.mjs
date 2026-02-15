@@ -63,8 +63,11 @@ function loadAllPosts() {
     .filter(Boolean);
 }
 
-// ─── 콜아웃 박스 삽입 ──────────────────────────────────────────────────
+// ─── 콜아웃 박스 삽입 (비활성화: 본문 중복 문제로 제거) ──────────────
 function addCallouts(body) {
+  // 콜아웃 자동 생성 비활성화 — 본문 키워드를 그대로 반복하는 저품질 콜아웃 방지
+  return body;
+  /* 아래 로직은 비활성화됨
   if (
     body.includes("callout-tip") ||
     body.includes("callout-warning") ||
@@ -170,6 +173,7 @@ function addCallouts(body) {
   }
 
   return result;
+  */ // 비활성화 끝
 }
 
 // ─── 내부 링크 삽입 ───────────────────────────────────────────────────

@@ -36,8 +36,6 @@ coupangLinks:
 
 <div class="chart-progress" data-title="절약 성공률" data-labels="예산 관리,지출 추적,자동 저축,소비 습관 개선" data-values="82,78,85,72" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444" data-max="100" data-unit="%"></div>
 
-<div class="callout-tip">💡 <strong>핵심 포인트</strong>: 자신의 재정 상황을 정확히 파악하고, 우선순위에 따라 현명하게 소비하는 능력</div>
-
 ## 절약 습관 5단계 실행 계획
 
 ### 1단계: 현재 지출 상황 파악하기
@@ -130,8 +128,6 @@ coupangLinks:
 
 **심리적 보상 부재:** 작은 성취도 축하하고 기록하세요. 월별 저축 목표 달성 시 소소한 보상을 스스로에게 주세요.
 
-<div class="callout-warning">⚠️ <strong>주의사항</strong>: 과도한 절약:</div>
-
 ## 장기적 절약 습관 유지 전략
 
 ### 1개월 차: 기초 습관 형성
@@ -180,8 +176,6 @@ coupangLinks:
 
 - [부자 아빠 가난한 아빠](https://link.coupang.com/a/dJhOT3)
 - [주식투자 무작정 따라하기](https://link.coupang.com/a/dJhOT3)
-
-
 
 ## 참고 자료
 

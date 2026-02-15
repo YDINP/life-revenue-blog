@@ -42,8 +42,6 @@ coupangLinks:
 
 ---
 
-<div class="callout-tip">💡 <strong>핵심 포인트</strong>: 입금된 직후 3일 내 소비액이 월 평균 소비액의 42%</div>
-
 ## 2026년 실제 작동하는 3단계 절약 시스템
 
 ### 1단계: "보이지 않는 돈" 만들기 (자동이체)
@@ -131,8 +129,6 @@ coupangLinks:
 
 ---
 
-<div class="callout-warning">⚠️ <strong>주의사항</strong>: 신규 절약 시스템이 완전히 자동화되는 데 평균 66일(약 2개월)</div>
-
 ## 주의: 절약 과잉이 함정
 
 2026년 초 유행하는 "극단적 절약" 트렌드(예: 월 50만 원대 생활비)는 **대부분 3-6개월 내 실패**합니다. 
@@ -168,8 +164,6 @@ coupangLinks:
 
 - [ETF 투자 가이드북](https://link.coupang.com/a/dJhOT3)
 - [주식투자 무작정 따라하기](https://link.coupang.com/a/dJhOT3)
-
-
 
 ## 참고 자료
 

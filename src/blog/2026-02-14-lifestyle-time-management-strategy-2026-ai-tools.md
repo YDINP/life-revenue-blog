@@ -29,8 +29,6 @@ coupangLinks:
 
 ---
 
-<div class="callout-tip">💡 <strong>핵심 포인트</strong>: AI 기반 시간 관리 도구</div>
-
 ## 시간 관리 도구 현황: 2026년 최신 트렌드
 
 ### 주요 AI 기반 시간 관리 앱의 기능 비교
@@ -183,8 +181,6 @@ Cal Newport의 "Deep Work" 이론을 2026년 현실에 맞게 재해석하면:
 
 ---
 
-<div class="callout-warning">⚠️ <strong>주의사항</strong>: 측정 결과:</div>
-
 ## 개인별 맞춤 시간 관리 체크리스트
 
 ### 당신의 시간 관리 유형 진단
@@ -256,8 +252,6 @@ AI 도구는 단순한 보조 수단일 뿐, 가장 중요한 것은:
 
 - [디지털 미니멀리즘 도서](https://link.coupang.com/a/dJhOT3)
 - [아날로그 알람시계](https://link.coupang.com/a/dJhOT3)
-
-
 
 ## 참고 자료
 

@@ -38,8 +38,6 @@ coupangLinks:
 
 <div class="chart-progress" data-title="미니멀 라이프 효과 (만족도)" data-labels="스트레스감소,시간절약,돈절약,정신건강,삶의질" data-values="90,85,80,95,92" data-colors="#10b981,#3b82f6,#f59e0b,#8b5cf6,#ec4899" data-max="100" data-unit="%"></div>
 
-<div class="callout-tip">💡 <strong>핵심 포인트</strong>: Less is More</div>
-
 ## 2. 미니멀 라이프의 장점
 
 ### 정신적 이득
@@ -195,8 +193,6 @@ coupangLinks:
 
 새 물건을 사면 기존 물건 하나를 버리세요.
 
-<div class="callout-warning">⚠️ <strong>주의사항</strong>: 충동구매를 막기 위해 하루 기다려보세요. 대부분 필요 없어집니다.</div>
-
 ## 7. 디지털 미니멀리즘
 
 ### 스마트폰
@@ -262,9 +258,6 @@ coupangLinks:
 미니멀 라이프는 불편한 게 아니라 자유입니다. 물건이 적을수록 관리할 것이 적고, 시간과 공간의 여유가 생깁니다.
 
 완벽을 추구하지 마세요. 오늘 서랍 하나, 옷장 한 칸부터 시작하세요. 작은 변화가 모여 삶 전체를 바꿉니다. 지금 바로 버릴 물건 3가지를 찾아보세요!
-
-<div class="callout-info">ℹ️ <strong>참고</strong>: 미니멀 라이프는 불편한 게 아니라 자유입니다. 물건이 적을수록 관리할 것이 적고, 시간과 공간의 여유가 생깁니다.</div>
-
 
 ## 참고 자료
 

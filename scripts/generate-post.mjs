@@ -189,22 +189,10 @@ async function generateOnePost(categoryName, keyword, searchTerm, blogDir, postI
 선택 가이드: 비율/점유율→donut, 1:1 대결→versus, 개별 평점→progress, 수치 비교→bar, 다항목 제품 평가→radar.
 주의: div 안에 자식 요소를 넣지 마세요. 항목 3~5개. chart-bar만 반복하지 말고 다양한 유형을 활용하세요.
 
-**강조 포인트 (콜아웃 박스) — 반드시 2~3개 포함**:
-본문 중 독자가 꼭 알아야 할 핵심 내용, 주의사항, 유용한 팁을 아래 콜아웃 박스로 강조하세요:
-
-1) 핵심 포인트 (초록) — 가장 중요한 결론이나 인사이트:
-<div class="callout-tip">💡 <strong>핵심 포인트</strong>: 여기에 핵심 내용을 작성하세요.</div>
-
-2) 주의사항 (주황) — 흔한 실수, 주의할 점, 함정:
-<div class="callout-warning">⚠️ <strong>주의사항</strong>: 여기에 주의할 내용을 작성하세요.</div>
-
-3) 참고 정보 (파랑) — 알아두면 유용한 부가 정보, 꿀팁:
-<div class="callout-info">ℹ️ <strong>참고</strong>: 여기에 참고 정보를 작성하세요.</div>
-
-배치 규칙:
-- 본문 전체에 걸쳐 2~3개를 적절히 분산 배치 (도입부 1개, 중간 1개, 결론 근처 1개)
-- 각 콜아웃은 1~2문장으로 간결하게 작성
-- div 안에 다른 HTML 태그를 넣지 마세요 (strong만 허용)`;
+**강조 포인트 — 콜아웃 박스 사용 금지**:
+- 콜아웃 박스(callout-tip/warning/info)를 사용하지 마세요.
+- 강조할 내용은 마크다운 **bold** 또는 > blockquote로 충분합니다.
+- 본문에서 이미 설명한 내용을 별도 박스로 반복하는 것은 가독성을 해칩니다.`;
 
   // 기존 포스트 중복 방지 지시
   const dupeGuard = existingTitles && existingTitles.length > 0
