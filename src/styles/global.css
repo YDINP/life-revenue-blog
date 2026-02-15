@@ -942,6 +942,212 @@ section > h2::after {
 :root.dark .difficulty-badge.intermediate { background: rgba(245,158,11,0.2); color: #fbbf24; }
 :root.dark .difficulty-badge.advanced { background: rgba(239,68,68,0.2); color: #f87171; }
 
+/* ─── Bookmark Button ─── */
+.post-title-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+.post-title-row h1 { flex: 1; }
+.bookmark-btn {
+  flex-shrink: 0;
+  background: none;
+  border: 1px solid var(--color-border, #e5e7eb);
+  border-radius: 8px;
+  padding: 6px 8px;
+  cursor: pointer;
+  color: var(--color-text-muted, #999);
+  transition: all 0.25s;
+  margin-top: 0.25rem;
+}
+.bookmark-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: rgba(99,102,241,0.06);
+}
+.bookmark-btn.bookmarked {
+  color: #f59e0b;
+  border-color: #f59e0b;
+  background: rgba(245,158,11,0.08);
+}
+.bookmark-btn.bookmarked .bookmark-icon { fill: #f59e0b; stroke: #f59e0b; }
+
+/* ─── Interactive Table Sort ─── */
+.sortable-table th {
+  user-select: none;
+  position: relative;
+}
+.sortable-table th:hover {
+  background: rgba(99,102,241,0.08);
+}
+.sort-arrow {
+  font-size: 0.7rem;
+  opacity: 0.5;
+  margin-left: 2px;
+}
+.sortable-table th:hover .sort-arrow { opacity: 1; }
+.sortable-table tbody tr {
+  transition: background 0.15s;
+}
+.sortable-table tbody tr:hover {
+  background: rgba(99,102,241,0.04);
+}
+
+/* ─── Series Box ─── */
+.series-box {
+  margin: 2.5rem 0;
+  padding: 1.5rem;
+  background: var(--color-bg-secondary);
+  border-radius: 12px;
+  border: 1px solid var(--color-border, #e5e7eb);
+}
+.series-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+.series-icon { font-size: 1.3rem; }
+.series-label {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+.series-progress {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-left: 0.5rem;
+}
+.series-progress-bar {
+  height: 3px;
+  background: var(--color-border, #e5e7eb);
+  border-radius: 2px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+.series-progress-fill {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: 2px;
+  transition: width 0.3s;
+}
+.series-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.series-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 0.25rem;
+  transition: background 0.15s;
+}
+.series-item:hover { background: rgba(99,102,241,0.04); }
+.series-current {
+  background: rgba(99,102,241,0.08);
+  border-left: 3px solid var(--color-primary);
+}
+.series-num {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: var(--color-border, #e5e7eb);
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+}
+.series-current .series-num {
+  background: var(--color-primary);
+  color: #fff;
+}
+.series-title-current {
+  font-weight: 600;
+  color: var(--color-primary);
+  font-size: 0.9rem;
+}
+.series-title-link {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+.series-title-link:hover { color: var(--color-primary); }
+
+/* ─── Popular Posts Widget ─── */
+.popular-posts-widget {
+  margin: 2.5rem 0;
+  padding: 1.5rem;
+  background: var(--color-bg-secondary);
+  border-radius: 12px;
+  border: 1px solid var(--color-border, #e5e7eb);
+}
+.popular-posts-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  color: var(--color-text);
+}
+.popular-post-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+.popular-post-item:hover { background: rgba(99,102,241,0.06); }
+.popular-post-rank {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: 800;
+  background: var(--color-primary);
+  color: #fff;
+  flex-shrink: 0;
+}
+.popular-post-item:nth-child(n+4) .popular-post-rank {
+  background: var(--color-border, #e5e7eb);
+  color: var(--color-text-secondary);
+}
+.popular-post-title {
+  flex: 1;
+  font-size: 0.88rem;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.popular-post-views {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+.popular-posts-empty {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  padding: 1rem 0;
+}
+.popular-posts-loading {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  padding: 1rem 0;
+}
+
 .post-content pre {
   background: #1e293b;
   color: #e2e8f0;

@@ -154,6 +154,7 @@ const allPosts = Object.entries(allPostModules)
       slug,
       title: post.frontmatter.title,
       pubDate: post.frontmatter.pubDate,
+      category: post.frontmatter.category || '',
     };
   })
   .sort((a, b) => new Date(a.pubDate).getTime() - new Date(b.pubDate).getTime());
@@ -161,6 +162,11 @@ const allPosts = Object.entries(allPostModules)
 const currentIndex = allPosts.findIndex((p) => p.slug === currentSlug);
 const prevPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null;
 const nextPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
+
+// Same-category series navigation
+const seriesPosts = allPosts.filter(p => p.category.toLowerCase() === category.toLowerCase());
+const seriesIndex = seriesPosts.findIndex(p => p.slug === currentSlug);
+const seriesTotal = seriesPosts.length;
 ---
 
 <BaseLayout title={title} description={description} image={imageObj?.url}>
@@ -199,7 +205,14 @@ const nextPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1]
           )
         }
       </div>
-      <h1>{title}</h1>
+      <div class="post-title-row">
+        <h1>{title}</h1>
+        <button class="bookmark-btn" id="bookmark-btn" data-slug={currentSlug} aria-label="북마크" title="이 글 북마크하기">
+          <svg class="bookmark-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+          </svg>
+        </button>
+      </div>
       <p class="post-description">{description}</p>
       <div class="post-tags">
         {tags.map((tag) => (
@@ -306,6 +319,42 @@ const nextPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1]
         </div>
       </nav>
     )}
+
+    <!-- 시리즈 네비게이션 -->
+    {seriesTotal > 1 && (
+      <div class="series-box">
+        <div class="series-header">
+          <span class="series-icon">&#128218;</span>
+          <div>
+            <span class="series-label">{catLabel} 시리즈</span>
+            <span class="series-progress">{seriesIndex + 1} / {seriesTotal}</span>
+          </div>
+        </div>
+        <div class="series-progress-bar">
+          <div class="series-progress-fill" style={`width: ${((seriesIndex + 1) / seriesTotal) * 100}%`}></div>
+        </div>
+        <ul class="series-list">
+          {seriesPosts.map((p, i) => (
+            <li class={`series-item ${i === seriesIndex ? 'series-current' : ''}`}>
+              <span class="series-num">{i + 1}</span>
+              {i === seriesIndex ? (
+                <span class="series-title-current">{p.title}</span>
+              ) : (
+                <a href={`/blog/${p.slug}/`} class="series-title-link">{p.title}</a>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+
+    <!-- 인기글 위젯 -->
+    <div class="popular-posts-widget" id="popular-posts-widget">
+      <h4 class="popular-posts-title">&#128293; 인기 글 TOP 5</h4>
+      <div class="popular-posts-list" id="popular-posts-list">
+        <div class="popular-posts-loading">로딩 중...</div>
+      </div>
+    </div>
 
     <!-- 추천 버튼 -->
     <div class="like-section">
@@ -840,6 +889,114 @@ const nextPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1]
       badge.className = `difficulty-badge ${level}`;
       badge.textContent = `${icon} ${label}`;
       meta.appendChild(badge);
+    })();
+
+    // ===== Bookmark Toggle =====
+    (function() {
+      const btn = document.getElementById('bookmark-btn');
+      if (!btn) return;
+      const slug = btn.dataset.slug || '';
+      const KEY = 'blog_bookmarks';
+      function getBookmarks() {
+        try { return JSON.parse(localStorage.getItem(KEY) || '[]'); } catch { return []; }
+      }
+      function isBookmarked() { return getBookmarks().includes(slug); }
+      function render() {
+        const icon = btn.querySelector('.bookmark-icon');
+        if (isBookmarked()) {
+          btn.classList.add('bookmarked');
+          if (icon) { icon.setAttribute('fill', 'currentColor'); }
+        } else {
+          btn.classList.remove('bookmarked');
+          if (icon) { icon.setAttribute('fill', 'none'); }
+        }
+      }
+      btn.addEventListener('click', function() {
+        let bm = getBookmarks();
+        if (bm.includes(slug)) {
+          bm = bm.filter(s => s !== slug);
+        } else {
+          bm.push(slug);
+        }
+        localStorage.setItem(KEY, JSON.stringify(bm));
+        render();
+      });
+      render();
+    })();
+
+    // ===== Interactive Table Sort =====
+    (function() {
+      const content = document.getElementById('post-content');
+      if (!content) return;
+      content.querySelectorAll('table').forEach(function(table) {
+        const thead = table.querySelector('thead');
+        const tbody = table.querySelector('tbody');
+        if (!thead || !tbody) return;
+        const headers = thead.querySelectorAll('th');
+        if (headers.length < 2) return;
+        table.classList.add('sortable-table');
+        headers.forEach(function(th, colIdx) {
+          th.style.cursor = 'pointer';
+          th.setAttribute('title', '클릭하여 정렬');
+          const arrow = document.createElement('span');
+          arrow.className = 'sort-arrow';
+          arrow.textContent = ' ↕';
+          th.appendChild(arrow);
+          let asc = true;
+          th.addEventListener('click', function() {
+            const rows = Array.from(tbody.querySelectorAll('tr'));
+            rows.sort(function(a, b) {
+              const aText = (a.children[colIdx]?.textContent || '').trim();
+              const bText = (b.children[colIdx]?.textContent || '').trim();
+              const aNum = parseFloat(aText.replace(/[^0-9.\-]/g, ''));
+              const bNum = parseFloat(bText.replace(/[^0-9.\-]/g, ''));
+              if (!isNaN(aNum) && !isNaN(bNum)) {
+                return asc ? aNum - bNum : bNum - aNum;
+              }
+              return asc ? aText.localeCompare(bText, 'ko') : bText.localeCompare(aText, 'ko');
+            });
+            rows.forEach(r => tbody.appendChild(r));
+            headers.forEach(h => {
+              const a = h.querySelector('.sort-arrow');
+              if (a) a.textContent = ' ↕';
+            });
+            arrow.textContent = asc ? ' ↑' : ' ↓';
+            asc = !asc;
+          });
+        });
+      });
+    })();
+
+    // ===== Popular Posts Widget =====
+    (function() {
+      const widget = document.getElementById('popular-posts-widget');
+      const list = document.getElementById('popular-posts-list');
+      if (!widget || !list) return;
+      const SUPABASE_URL = 'https://xyprbsmagtlzebxyxsvj.supabase.co';
+      const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh5cHJic21hZ3RsemVieHl4c3ZqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA0NjY4NTQsImV4cCI6MjA4NjA0Mjg1NH0.dajN0n0IWzOgYOSCglxVLzddg7jJFRHNCHwTWMG62uU';
+      fetch(`${SUPABASE_URL}/rest/v1/analytics?select=page_path,page_views&order=page_views.desc&limit=5&page_path=like./blog/*`, {
+        headers: { 'apikey': SUPABASE_KEY, 'Authorization': `Bearer ${SUPABASE_KEY}` }
+      })
+      .then(r => r.json())
+      .then(function(data) {
+        if (!Array.isArray(data) || data.length === 0) {
+          list.innerHTML = '<p class="popular-posts-empty">아직 충분한 데이터가 없습니다.</p>';
+          return;
+        }
+        list.innerHTML = data.map(function(item, i) {
+          const path = item.page_path || '';
+          const title = path.replace(/^\/blog\//, '').replace(/\/$/, '').replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+          const views = item.page_views || 0;
+          return `<a href="${path}" class="popular-post-item">
+            <span class="popular-post-rank">${i + 1}</span>
+            <span class="popular-post-title">${title}</span>
+            <span class="popular-post-views">${views.toLocaleString()} views</span>
+          </a>`;
+        }).join('');
+      })
+      .catch(function() {
+        list.innerHTML = '<p class="popular-posts-empty">인기글을 불러올 수 없습니다.</p>';
+      });
     })();
 
     // ===== Anonymous Comment System =====
