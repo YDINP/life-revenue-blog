@@ -1,9 +1,9 @@
 name: Blog Post Generator
 
 on:
-  # 자동 스케줄: 매일 한국시간 09:30 (UTC 00:30) - TechFlow와 30분 차이
+  # 자동 스케줄: 매주 월요일 한국시간 09:30 (UTC 00:30) - ai-revenue와 30분 차이
   schedule:
-    - cron: '30 0 * * *'
+    - cron: '30 0 * * 1'
 
   # 수동 트리거: GitHub 모바일/웹에서 "Run workflow" 클릭
   workflow_dispatch:
@@ -65,7 +65,7 @@ jobs:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           INPUT_CATEGORY: ${{ github.event.inputs.category || 'auto' }}
           INPUT_TOPIC: ${{ github.event.inputs.topic || '' }}
-          INPUT_COUNT: ${{ github.event.inputs.count || '3' }}
+          INPUT_COUNT: ${{ github.event.inputs.count || '1' }}
           INPUT_ENGAGING: ${{ github.event.inputs.engaging || 'false' }}
           INPUT_REVENUE: ${{ github.event.inputs.revenue || 'false' }}
 
