@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import PaperdocBanner from '../components/PaperdocBanner.astro';
 
 interface Props {
   title: string;
@@ -126,6 +127,7 @@ const websiteSchema = {
     </header>
 
     <main>
+      <PaperdocBanner />
       <slot />
     </main>
 

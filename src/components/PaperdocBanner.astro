@@ -1,0 +1,123 @@
+---
+// 페이퍼닥 프로모션 배너 (모든 페이지 상단 고정) — 클릭 유도 연출 포함
+---
+<a class="paperdoc-banner-link" href="https://paperdoc-web.vercel.app/" target="_blank" rel="noopener sponsored" aria-label="페이퍼닥 - 계약서 AI 분석 플랫폼 바로가기">
+  <span class="paperdoc-banner-frame">
+    <img class="paperdoc-banner" src="/banner.webp" alt="페이퍼닥 - 계약서 AI 분석 플랫폼 배너" width="1200" height="514" loading="eager" />
+    <span class="paperdoc-shine" aria-hidden="true"></span>
+    <span class="paperdoc-cta" aria-hidden="true">
+      지금 무료로 계약서 검토받기
+      <span class="paperdoc-cta-arrow">→</span>
+    </span>
+  </span>
+</a>
+
+<style>
+  .paperdoc-banner-link {
+    display: block;
+    width: 100%;
+    margin: 0 0 2rem;
+  }
+
+  .paperdoc-banner-frame {
+    position: relative;
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    animation: paperdoc-breathe 3.2s ease-in-out infinite;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .paperdoc-banner {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .paperdoc-shine {
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 45%;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(
+      100deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.05) 35%,
+      rgba(255, 255, 255, 0.35) 50%,
+      rgba(255, 255, 255, 0.05) 65%,
+      transparent 100%
+    );
+    transform: skewX(-18deg);
+    animation: paperdoc-shine 4.5s ease-in-out infinite;
+  }
+
+  .paperdoc-cta {
+    position: absolute;
+    right: 3%;
+    bottom: 8%;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0.5em 1em;
+    font-size: clamp(0.7rem, 1.6vw, 0.95rem);
+    font-weight: 700;
+    color: #1e293b;
+    background: #ffd400;
+    border-radius: 999px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+    white-space: nowrap;
+    animation: paperdoc-cta-pulse 1.6s ease-in-out infinite;
+  }
+
+  .paperdoc-cta-arrow {
+    display: inline-block;
+    animation: paperdoc-arrow 1.1s ease-in-out infinite;
+  }
+
+  .paperdoc-banner-link:hover .paperdoc-banner-frame {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35);
+    animation-play-state: paused;
+  }
+  .paperdoc-banner-link:hover .paperdoc-cta {
+    background: #ffe14d;
+    transform: scale(1.06);
+  }
+
+  @keyframes paperdoc-breathe {
+    0%, 100% { box-shadow: 0 0 0 rgba(37, 99, 235, 0); }
+    50%      { box-shadow: 0 6px 26px rgba(37, 99, 235, 0.35); }
+  }
+
+  @keyframes paperdoc-shine {
+    0%   { left: -60%; }
+    45%  { left: 120%; }
+    100% { left: 120%; }
+  }
+
+  @keyframes paperdoc-cta-pulse {
+    0%, 100% { transform: scale(1); }
+    50%      { transform: scale(1.05); }
+  }
+
+  @keyframes paperdoc-arrow {
+    0%, 100% { transform: translateX(0); }
+    50%      { transform: translateX(4px); }
+  }
+
+  @media (max-width: 480px) {
+    .paperdoc-cta { display: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .paperdoc-banner-frame,
+    .paperdoc-shine,
+    .paperdoc-cta,
+    .paperdoc-cta-arrow {
+      animation: none;
+    }
+  }
+</style>
