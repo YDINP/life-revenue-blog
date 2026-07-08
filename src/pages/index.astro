@@ -3,197 +3,256 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PostCard from '../components/PostCard.astro';
 
 const allPosts = await Astro.glob('../blog/**/*.md');
-const sortedPosts = allPosts
-  .sort((a, b) => new Date(b.frontmatter.pubDate).getTime() - new Date(a.frontmatter.pubDate).getTime())
-  .slice(0, 6);
+const sorted = allPosts.sort(
+  (a, b) => new Date(b.frontmatter.pubDate).getTime() - new Date(a.frontmatter.pubDate).getTime()
+);
 
-const categories = [
-  { slug: 'lifestyle', label: '라이프스타일', emoji: '✨', desc: '더 나은 삶을 위한 습관과 팁' },
-  { slug: 'finance', label: '금융', emoji: '💰', desc: '재테크와 자산 관리' },
-  { slug: 'health', label: '건강', emoji: '💪', desc: '운동과 영양 관리' },
-  { slug: 'education', label: '교육', emoji: '📚', desc: '자기계발과 학습법' },
-  { slug: 'travel', label: '여행', emoji: '✈️', desc: '국내외 여행 정보' },
-];
+const slugOf = (p) => p.file.replace(/\\/g, '/').split('/').pop().replace('.md', '');
+const fmtDate = (d) =>
+  new Date(d).toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const featured = sorted[0];
+const picks = sorted.slice(1, 6);
+const latest = sorted.slice(6, 15);
+
+const catMeta = {
+  finance:   { ko: '금융',        en: 'Finance' },
+  health:    { ko: '건강',        en: 'Health' },
+  education: { ko: '교육',        en: 'Education' },
+  travel:    { ko: '여행',        en: 'Travel' },
+  lifestyle: { ko: '라이프스타일', en: 'Lifestyle' },
+};
+const catKey = (c) => (c || '').toLowerCase();
+const meta = (c) => catMeta[catKey(c)] || { ko: c, en: c };
+
+const counts = {};
+allPosts.forEach((p) => {
+  const k = catKey(p.frontmatter.category);
+  counts[k] = (counts[k] || 0) + 1;
+});
+const topics = ['finance', 'health', 'education', 'travel', 'lifestyle'].map((slug) => ({
+  slug,
+  ...catMeta[slug],
+  count: counts[slug] || 0,
+}));
+
+const fCat = meta(featured.frontmatter.category);
 ---
 
 <BaseLayout
   title="LifeFlow - 더 나은 삶을 위한 인사이트"
   description="라이프스타일, 금융, 건강, 교육, 여행 최신 정보를 제공하는 블로그"
 >
-  <!-- JSON-LD ItemList for SEO -->
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "itemListElement": sortedPosts.map((post, i) => {
-      const slug = post.file.replace(/\\/g, '/').split('/').pop().replace('.md', '');
-      return {
-        "@type": "ListItem",
-        "position": i + 1,
-        "url": `https://life-revenue-blog.vercel.app/blog/${slug}/`
-      };
-    })
+    "itemListElement": sorted.slice(0, 10).map((post, i) => ({
+      "@type": "ListItem",
+      "position": i + 1,
+      "url": `https://life-revenue-blog.vercel.app/blog/${slugOf(post)}/`
+    }))
   })} />
 
-  <div class="home-hero" aria-label="사이트 소개">
-    <h1 class="hero-title">LifeFlow</h1>
-    <p class="hero-subtitle">더 나은 삶을 위한 인사이트</p>
-    <p class="hero-desc">금융, 건강, 교육, 여행, 라이프스타일 최신 정보</p>
-  </div>
+  <!-- ══ Cover story + Curated contents ══ -->
+  <section class="cover" aria-label="이번 주 커버스토리">
+    <article class="lead">
+      <div class="lead-eyebrow">
+        <span class="cat-tag" style={`--cat: var(--cat-${catKey(featured.frontmatter.category)})`}>
+          {fCat.en} · {fCat.ko}
+        </span>
+        <span class="kicker">이번 주 커버스토리</span>
+      </div>
+      <h1><a href={`/blog/${slugOf(featured)}/`}>{featured.frontmatter.title}</a></h1>
+      <p class="deck">{featured.frontmatter.description}</p>
+      <div class="lead-meta">
+        <a href={`/blog/${slugOf(featured)}/`} class="read-cta">전문 읽기 <span class="arw">→</span></a>
+        <span class="dotdiv"></span>
+        <time class="num">{fmtDate(featured.frontmatter.pubDate)}</time>
+      </div>
+    </article>
 
-  <section class="category-quick-links" aria-label="카테고리 둘러보기">
-    <div class="category-chips">
-      {categories.map(cat => (
-        <a href={`/blog/${cat.slug}/`} class="category-chip">
-          <span>{cat.emoji}</span> {cat.label}
+    <aside class="contents" aria-label="이번 주 큐레이션">
+      <h2><span>이번 주 큐레이션</span><span class="num">{String(picks.length).padStart(2, '0')}</span></h2>
+      {picks.map((post, i) => {
+        const m = meta(post.frontmatter.category);
+        return (
+          <a href={`/blog/${slugOf(post)}/`} class="pick">
+            <span class="idx num">{String(i + 1).padStart(2, '0')}</span>
+            <span>
+              <span class="pick-cat" style={`--cat: var(--cat-${catKey(post.frontmatter.category)})`}>{m.en}</span>
+              <span class="pick-title">{post.frontmatter.title}</span>
+            </span>
+          </a>
+        );
+      })}
+    </aside>
+  </section>
+
+  <!-- ══ Browse by topic ══ -->
+  <section aria-label="토픽">
+    <div class="sec-head">
+      <div>
+        <span class="kicker">Browse by topic</span>
+        <h3>토픽으로 둘러보기</h3>
+      </div>
+      <span class="sec-label">5 sections · {allPosts.length} articles</span>
+    </div>
+    <div class="topics">
+      {topics.map((t) => (
+        <a href={`/blog/${t.slug}/`} class="topic" style={`--cat: var(--cat-${t.slug})`}>
+          <div><span class="t-en">{t.en}</span><div class="t-ko">{t.ko}</div></div>
+          <div class="t-count"><b class="num">{t.count}</b> 편</div>
         </a>
       ))}
     </div>
   </section>
 
-  <section class="latest-posts" aria-label="최신 글 목록">
-    <h2 class="section-title">최신 글</h2>
+  <!-- ══ Latest ══ -->
+  <section aria-label="최신 글">
+    <div class="sec-head">
+      <div>
+        <span class="kicker">Fresh off the press</span>
+        <h3>최신 글</h3>
+      </div>
+      <a href="/blog/" class="read-cta">전체 아카이브 <span class="arw">→</span></a>
+    </div>
     <div class="posts-grid">
-      {sortedPosts.map(post => {
-        const slug = post.file.replace(/\\/g, '/').split('/').pop().replace('.md', '');
-        return (
+      {latest.map((post) => (
         <PostCard
           title={post.frontmatter.title}
           description={post.frontmatter.description}
           pubDate={post.frontmatter.pubDate}
           category={post.frontmatter.category}
-          slug={slug}
+          slug={slugOf(post)}
           image={post.frontmatter.heroImage ? { url: post.frontmatter.heroImage, alt: post.frontmatter.title } : undefined}
           tags={post.frontmatter.tags}
         />
-        );})}
-    </div>
-    <div class="view-all">
-      <a href="/blog/" class="btn-primary">전체 글 보기 →</a>
+      ))}
     </div>
   </section>
 </BaseLayout>
 
 <style>
-.home-hero {
-  text-align: center;
-  padding: 4rem 1rem;
-  background: linear-gradient(135deg, #fce7f3 0%, #e0f2fe 100%);
-  border-radius: 16px;
-  margin-bottom: 3rem;
-}
-
-:root.dark .home-hero {
-  background: linear-gradient(135deg, #831843 0%, #164e63 100%);
-}
-
-.hero-title {
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 0.5rem;
-  background: linear-gradient(135deg, #ec4899 0%, #3b82f6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.hero-subtitle {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--color-text);
-  margin-bottom: 0.5rem;
-}
-
-.hero-desc {
-  font-size: 1.125rem;
-  color: var(--color-text-secondary);
-}
-
-.section-title {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: var(--color-text);
-}
-
-.category-quick-links {
-  margin-bottom: 2rem;
-}
-
-.category-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
-}
-
-.category-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  padding: 0.5rem 1rem;
-  background: var(--color-bg-secondary);
-  border: 1px solid var(--color-border);
-  border-radius: 999px;
-  text-decoration: none;
-  color: var(--color-text);
-  font-size: 0.9rem;
-  font-weight: 600;
-  white-space: nowrap;
-  transition: all 0.2s;
-}
-
-.category-chip:hover {
-  background: var(--color-primary);
-  color: white;
-  border-color: var(--color-primary);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
-.latest-posts {
-  margin-bottom: 3rem;
-}
-
-.posts-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.view-all {
-  text-align: center;
-}
-
-.btn-primary {
-  display: inline-block;
-  padding: 0.75rem 2rem;
-  background: var(--color-primary);
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: all 0.2s;
-}
-
-.btn-primary:hover {
-  background: var(--color-primary-dark);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2rem;
+  .kicker {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 0.98rem;
+    color: var(--color-text-secondary);
+    display: block;
   }
-  .hero-subtitle {
-    font-size: 1.25rem;
+
+  /* ── Cover ── */
+  .cover {
+    display: grid;
+    grid-template-columns: 1.55fr 1fr;
+    border-top: 1.5px solid var(--color-text);
+    border-bottom: 1.5px solid var(--color-text);
+    margin-bottom: 0.5rem;
   }
-  .category-chips {
-    gap: 0.4rem;
+  .lead {
+    padding: 3rem 2.75rem 3.25rem 0;
+    border-right: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
   }
+  .lead-eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 1.25rem; }
+  .cat-tag {
+    display: inline-flex; align-items: center;
+    font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;
+    color: #fff; background: var(--cat, var(--color-primary));
+    padding: 5px 11px; border-radius: 4px; white-space: nowrap;
+  }
+  .lead h1 {
+    font-size: clamp(2.2rem, 4.8vw, 3.9rem);
+    font-weight: 850; line-height: 1.06; letter-spacing: -0.035em;
+    margin-bottom: 1.25rem;
+  }
+  .lead h1 a { color: var(--color-text); text-decoration: none; transition: color 0.15s; }
+  .lead h1 a:hover { color: var(--color-primary); }
+  .lead .deck {
+    font-family: var(--font-serif);
+    font-size: 1.2rem; line-height: 1.6; color: var(--color-text-secondary);
+    max-width: 34ch; margin-bottom: 1.75rem;
+  }
+  .lead-meta { display: flex; align-items: center; gap: 16px; font-size: 0.85rem; color: var(--color-text-secondary); }
+  .read-cta {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-weight: 700; color: var(--color-text); text-decoration: none;
+    border-bottom: 2px solid var(--color-primary); padding-bottom: 3px; transition: gap 0.18s;
+  }
+  .read-cta:hover { gap: 14px; }
+  .read-cta .arw { color: var(--color-primary); }
+  .dotdiv { width: 4px; height: 4px; border-radius: 50%; background: var(--color-border-strong); }
+
+  .contents {
+    padding: 2.75rem 0 2.75rem 2.5rem;
+    animation: rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) 0.08s both;
+  }
+  .contents h2 {
+    font-size: 0.76rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--color-text-muted); font-weight: 700;
+    padding-bottom: 14px; margin-bottom: 4px; border-bottom: 1px solid var(--color-border);
+    display: flex; justify-content: space-between;
+  }
+  .pick {
+    display: grid; grid-template-columns: auto 1fr; gap: 15px; align-items: start;
+    padding: 14px 0; border-bottom: 1px solid var(--color-border);
+    text-decoration: none; color: inherit; transition: transform 0.18s;
+  }
+  .pick:hover { transform: translateX(4px); }
+  .pick:hover .pick-title { color: var(--color-primary); }
+  .pick .idx { font-family: var(--font-serif); font-size: 1.45rem; line-height: 1; color: var(--color-text-muted); padding-top: 2px; }
+  .pick-cat { display: block; font-size: 0.64rem; font-weight: 800; letter-spacing: 0.13em; text-transform: uppercase; color: var(--cat, var(--color-primary)); margin-bottom: 5px; }
+  .pick-title { display: block; font-size: 1rem; font-weight: 650; line-height: 1.35; letter-spacing: -0.01em; transition: color 0.15s; }
+
+  /* ── Section head ── */
+  .sec-head {
+    display: flex; align-items: flex-end; justify-content: space-between; gap: 24px;
+    padding: 3rem 0 1.4rem;
+  }
+  .sec-head h3 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 820; letter-spacing: -0.03em; }
+  .sec-head .kicker { margin-bottom: 4px; }
+  .sec-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-text-muted); font-variant-numeric: tabular-nums; }
+
+  /* ── Topics ── */
+  .topics { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+  .topic {
+    position: relative; border: 1px solid var(--color-border); border-radius: 14px;
+    background: var(--color-bg); padding: 20px 18px; overflow: hidden;
+    text-decoration: none; color: inherit; min-height: 158px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  }
+  .topic::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--cat); }
+  .topic:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--cat); }
+  .topic .t-en { font-family: var(--font-serif); font-style: italic; font-size: 0.9rem; color: var(--cat); }
+  .topic .t-ko { font-size: 1.28rem; font-weight: 800; letter-spacing: -0.02em; margin-top: 2px; }
+  .topic .t-count { font-size: 0.82rem; color: var(--color-text-secondary); display: flex; align-items: center; gap: 6px; }
+  .topic .t-count b { color: var(--cat); font-size: 1.45rem; font-weight: 820; }
+
+  /* ── Latest grid ── */
   .posts-grid {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 1rem;
   }
-}
+
+  @keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (prefers-reduced-motion: reduce) { .lead, .contents { animation: none; } }
+
+  @media (max-width: 960px) {
+    .cover { grid-template-columns: 1fr; }
+    .lead { border-right: none; border-bottom: 1px solid var(--color-border); padding: 2.25rem 0 2.25rem; }
+    .contents { padding: 2rem 0 0.5rem; }
+    .topics { grid-template-columns: repeat(2, 1fr); }
+    .posts-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 560px) {
+    .topics { grid-template-columns: 1fr 1fr; }
+    .posts-grid { grid-template-columns: 1fr; }
+    .lead h1 { font-size: 2.15rem; }
+  }
 </style>

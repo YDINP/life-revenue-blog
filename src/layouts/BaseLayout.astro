@@ -51,7 +51,7 @@ const websiteSchema = {
     <meta name="robots" content="index, follow" />
     <meta name="google-site-verification" content="uShjQZTfZFAauTdbCg7ZN0cvDV_ErVoVmdCScJ75TIQ" />
     <meta name="naver-site-verification" content="eded3a7e2f81aa8f856f0d2d303bd871b657fbee" />
-    <meta name="theme-color" content="#ec4899" />
+    <meta name="theme-color" content="#1e6b5c" />
     <link rel="canonical" href={canonical} />
 
     <!-- Open Graph -->
@@ -106,8 +106,14 @@ const websiteSchema = {
     <div class="reading-progress" id="reading-progress"></div>
 
     <header class="site-header">
+      <div class="masthead-strip">
+        <div class="masthead-strip-inner">
+          <span>더 나은 삶을 위한 인사이트</span>
+          <span class="issue">2026 · 매일 업데이트</span>
+        </div>
+      </div>
       <nav class="nav-container">
-        <a href="/" class="site-logo">LifeFlow</a>
+        <a href="/" class="site-logo" aria-label="LifeFlow 홈">Life<span class="flow">Flow</span></a>
         <div class="nav-right">
           <div class="nav-links" id="nav-menu">
             <a href="/blog/" class={currentPath === '/blog/' ? 'active' : ''}>Blog</a>
@@ -126,7 +132,7 @@ const websiteSchema = {
       </nav>
     </header>
 
-    <main>
+    <main class={currentPath === '/' ? 'is-home' : ''}>
       <PaperdocBanner />
       <slot />
     </main>
