@@ -3199,3 +3199,77 @@ section > h2::after {
   .comment-reply { margin-left: 1rem; }
   .reply-form { margin-left: 1rem; }
 }
+
+/* ═══════════════ Motion System (생동감) ═══════════════ */
+@media (prefers-reduced-motion: no-preference) {
+  /* 스크롤 리빌 — 뷰포트 진입 시 .in 부여(JS). JS 없으면 숨기지 않음(.js 게이트) */
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity .6s ease, transform .7s cubic-bezier(.2,.7,.2,1);
+    transition-delay: calc(var(--i, 0) * 55ms);
+  }
+  .js .reveal[data-reveal="scale"] { transform: translateY(18px) scale(.955); }
+  .js .reveal[data-reveal="left"]  { transform: translateX(-28px); }
+  .js .reveal[data-reveal="right"] { transform: translateX(28px); }
+  .js .reveal.in { opacity: 1; transform: none; }
+
+  /* 히어로 워드마크/제목 그라디언트 흐름 */
+  .deck-title .grad, .lead h1 .flow-anim {
+    background-size: 200% auto;
+    animation: grad-flow 6s linear infinite;
+  }
+
+  /* 네비 언더라인 슬라이드 */
+  .nav-links a:not(.active) { position: relative; }
+  .nav-links a:not(.active)::after {
+    content: ''; position: absolute; left: .7rem; right: .7rem; bottom: 3px;
+    height: 2px; background: currentColor; opacity: .55;
+    transform: scaleX(0); transform-origin: left;
+    transition: transform .28s cubic-bezier(.2,.7,.2,1);
+  }
+  .nav-links a:not(.active):hover::after { transform: scaleX(1); }
+
+  /* 다크모드 토글 아이콘 회전 */
+  .theme-toggle #theme-icon { display: inline-block; transition: transform .45s cubic-bezier(.2,.9,.3,1.2); }
+  .theme-toggle:hover #theme-icon { transform: rotate(40deg) scale(1.18); }
+
+  /* 맨위로 버튼 등장 바운스 */
+  .back-to-top.show { animation: btt-pop .5s cubic-bezier(.2,1.5,.4,1) both; }
+
+  /* 태그·버튼 호버 스프링 */
+  .tag, .btn-primary, .btn-secondary, .read-cta, .section-link {
+    transition: transform .2s cubic-bezier(.2,1.4,.4,1), color .2s, background .2s, box-shadow .2s;
+  }
+  .tag:hover { transform: translateY(-2px) scale(1.04); }
+
+  /* 콜아웃 진입 팝 */
+  .post-content .callout-tip.in, .post-content .callout-warning.in, .post-content .callout-info.in {
+    animation: callout-pop .5s cubic-bezier(.2,1.3,.4,1) both;
+  }
+
+  /* 포스트 소제목 하단 라인 드로우 (JS 있을 때만; 없으면 원래 border 유지) */
+  .js .post-content h2 {
+    border-bottom: none;
+    background-image: linear-gradient(var(--color-text), var(--color-text));
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 0% 1.5px;
+    padding-bottom: .5rem;
+    transition: background-size .7s cubic-bezier(.2,.7,.2,1) .1s;
+  }
+  .js .post-content h2.in { background-size: 100% 1.5px; }
+
+  /* 히어로/푸터 앰비언트 오로라 드리프트 */
+  .deck::after, .cover::before { will-change: transform; }
+}
+
+/* 리빌 미지원/reduced-motion: 항상 보이게(안전) */
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal { opacity: 1 !important; transform: none !important; }
+  .js .post-content h2 { background-size: 100% 1.5px; border-bottom: none; }
+}
+
+@keyframes grad-flow { to { background-position: 200% center; } }
+@keyframes btt-pop { from { opacity: 0; transform: translateY(14px) scale(.7); } to { opacity: 1; transform: none; } }
+@keyframes callout-pop { from { opacity: 0; transform: scale(.96) translateY(8px); } to { opacity: 1; transform: none; } }

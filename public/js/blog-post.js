@@ -583,3 +583,17 @@
   var t;
   window.addEventListener('resize', function() { clearTimeout(t); t = setTimeout(initCrumbMarquee, 200); });
 })();
+
+// ===== 본문 스크롤 리빌 (생동감) =====
+(function() {
+  function initReveal() {
+    var content = document.getElementById('post-content');
+    if (!content) return;
+    var nodes = content.querySelectorAll(':scope > h2, :scope > h3, :scope > p, :scope > ul, :scope > ol, :scope > table, :scope > blockquote, :scope > img, :scope > div');
+    nodes.forEach(function(el){ el.classList.add('reveal'); });
+    if (window.__reveal) { window.__reveal(nodes); }
+    else { nodes.forEach(function(el){ el.classList.add('in'); }); }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initReveal);
+  else initReveal();
+})();

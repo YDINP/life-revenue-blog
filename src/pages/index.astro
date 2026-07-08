@@ -76,7 +76,7 @@ const fCat = meta(featured.frontmatter.category);
       {picks.map((post, i) => {
         const m = meta(post.frontmatter.category);
         return (
-          <a href={`/blog/${slugOf(post)}/`} class="pick">
+          <a href={`/blog/${slugOf(post)}/`} class="pick reveal" data-reveal="left" style={`--i:${i}`}>
             <span class="idx num">{String(i + 1).padStart(2, '0')}</span>
             <span>
               <span class="pick-cat" style={`--cat: var(--cat-${catKey(post.frontmatter.category)})`}>{m.en}</span>
@@ -103,7 +103,7 @@ const fCat = meta(featured.frontmatter.category);
         const m = meta(post.frontmatter.category);
         const img = post.frontmatter.heroImage;
         return (
-          <a class={`lb-item ${i === 0 ? 'lb-feature' : ''}`} href={`/blog/${slugOf(post)}/`} style={`--cat: var(--cat-${catKey(post.frontmatter.category)})`}>
+          <a class={`lb-item reveal ${i === 0 ? 'lb-feature' : ''}`} data-reveal="scale" href={`/blog/${slugOf(post)}/`} style={`--cat: var(--cat-${catKey(post.frontmatter.category)}); --i:${i}`}>
             {img && <img class="lb-img" src={img} alt={post.frontmatter.title} loading="lazy" />}
             <span class="lb-scrim" aria-hidden="true"></span>
             <span class="lb-body">
@@ -127,10 +127,10 @@ const fCat = meta(featured.frontmatter.category);
       <span class="sec-label">5 sections · {allPosts.length} articles</span>
     </div>
     <div class="topics">
-      {topics.map((t) => (
-        <a href={`/blog/${t.slug}/`} class="topic" style={`--cat: var(--cat-${t.slug})`}>
+      {topics.map((t, idx) => (
+        <a href={`/blog/${t.slug}/`} class="topic reveal" data-reveal="scale" style={`--cat: var(--cat-${t.slug}); --i:${idx}`}>
           <div><span class="t-en">{t.en}</span><div class="t-ko">{t.ko}</div></div>
-          <div class="t-count"><b class="num">{t.count}</b> 편</div>
+          <div class="t-count"><b class="num" data-countup={t.count}>0</b> 편</div>
         </a>
       ))}
     </div>

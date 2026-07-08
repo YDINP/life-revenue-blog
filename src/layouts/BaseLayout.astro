@@ -96,6 +96,8 @@ const websiteSchema = {
     <!-- Dark Mode Init (FOUC 방지) -->
     <script is:inline>
       (function() {
+        // JS 사용 가능 표시 → .reveal 숨김 애니는 JS 있을 때만(미로드 시 콘텐츠 항상 보임)
+        document.documentElement.classList.add('js');
         const t = localStorage.getItem('theme');
         if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
           document.documentElement.classList.add('dark');
@@ -224,6 +226,47 @@ const websiteSchema = {
       const navToggle = document.getElementById('nav-toggle');
       const navMenu = document.getElementById('nav-menu');
       navToggle?.addEventListener('click', () => navMenu?.classList.toggle('open'));
+    </script>
+
+    <script>
+      // ── Scroll reveal + count-up (생동감) ── 전역 함수로 노출해 포스트에서도 재사용
+      (function() {
+        const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        function countUp(el) {
+          const target = parseFloat(el.getAttribute('data-countup')) || 0;
+          const suffix = el.getAttribute('data-suffix') || '';
+          const dur = 1100; let start = null;
+          function step(ts) {
+            if (!start) start = ts;
+            const p = Math.min((ts - start) / dur, 1);
+            const val = Math.round(target * (1 - Math.pow(1 - p, 3)));
+            el.textContent = val + suffix;
+            if (p < 1) requestAnimationFrame(step);
+          }
+          requestAnimationFrame(step);
+        }
+        let io = null;
+        if (!reduce && 'IntersectionObserver' in window) {
+          io = new IntersectionObserver((entries) => {
+            entries.forEach((en) => {
+              if (en.isIntersecting) {
+                en.target.classList.add('in');
+                if (en.target.hasAttribute('data-countup')) countUp(en.target);
+                io.unobserve(en.target);
+              }
+            });
+          }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+        }
+        // 전역: 요소(NodeList/배열)를 리빌 관찰 대상으로 등록
+        window.__reveal = function(nodes) {
+          if (!nodes) return;
+          nodes.forEach((el) => {
+            if (reduce || !io) { el.classList.add('in'); if (el.hasAttribute('data-countup')) el.textContent = (el.getAttribute('data-countup')) + (el.getAttribute('data-suffix') || ''); return; }
+            io.observe(el);
+          });
+        };
+        window.__reveal(document.querySelectorAll('.reveal, [data-countup]'));
+      })();
     </script>
 
     <script>
