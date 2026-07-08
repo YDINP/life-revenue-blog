@@ -1,8 +1,9 @@
 ---
-// 페이퍼닥 프로모션 (홈 + 모든 포스팅 상단 고정) — 이미지 연출(브리드/샤인/호버)
+// 페이퍼닥 프로모션. 모바일/태블릿 = 상단 가로 배너, 웹(데스크톱) = 우측 세로 사이드 배너.
 // ⚠️ 파일명/클래스에 "banner"·"ad" 금지: 광고 차단기가 /banner.* 를 네트워크 차단해
 //    이미지가 안 뜨고 링크 alt 텍스트만 노출됨. → pd-promo 네이밍 사용.
 ---
+<!-- 상단 가로 배너 (웹에서는 숨김, 모바일/태블릿 노출) -->
 <a class="pd-promo-link" href="https://paperdoc-web.vercel.app/" target="_blank" rel="noopener sponsored" aria-label="페이퍼닥 - 계약서 AI 분석 플랫폼 바로가기">
   <span class="pd-promo-frame">
     <picture>
@@ -12,6 +13,11 @@
     <span class="pd-promo-shine" aria-hidden="true"></span>
     <span class="pd-promo-cta">무료로 검토받기 <span class="pd-promo-arrow" aria-hidden="true">→</span></span>
   </span>
+</a>
+
+<!-- 우측 세로 사이드 배너 (웹 전용, 모바일/태블릿에서는 숨김) -->
+<a class="pd-promo-side" href="https://paperdoc-web.vercel.app/" target="_blank" rel="noopener sponsored" aria-label="페이퍼닥 - 계약서 AI 분석 플랫폼 바로가기">
+  <img src="/pd-promo-v.webp" alt="페이퍼닥 - 계약서 AI 분석 플랫폼" width="440" height="880" loading="lazy" decoding="async" />
 </a>
 
 <style>
@@ -96,6 +102,9 @@
     transform: scale(1.05);
   }
 
+  /* ── 세로 사이드 배너 (기본 숨김, 웹에서만 표시) ── */
+  .pd-promo-side { display: none; }
+
   @keyframes pd-promo-cta-pulse {
     0%, 100% { transform: scale(1); }
     50%      { transform: scale(1.04); }
@@ -126,6 +135,30 @@
       /* 모바일 배너 너비에 비례(3% of banner width) → 배너 크기에 동적 비례 */
       font-size: 3cqw;
       padding: 0.45em 0.95em;
+    }
+  }
+
+  /* 웹(넓은 데스크톱, ≥1440px): 상단 가로 배너 숨기고 우측 세로 사이드 배너 노출.
+     콘텐츠 최대폭(1240px)과 겹치지 않도록 넓은 화면에서만, 우측 끝에 좁게 배치. */
+  @media (min-width: 1440px) {
+    .pd-promo-link { display: none; }
+    .pd-promo-side {
+      display: block;
+      position: fixed;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: clamp(104px, 7.5vw, 132px);
+      z-index: 40;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 12px 34px -10px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .pd-promo-side img { display: block; width: 100%; height: auto; }
+    .pd-promo-side:hover {
+      transform: translateY(-50%) scale(1.03);
+      box-shadow: 0 18px 44px -10px rgba(109, 92, 240, 0.55);
     }
   }
 
