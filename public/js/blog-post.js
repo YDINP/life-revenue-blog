@@ -559,3 +559,27 @@
     list.innerHTML = '<p class="popular-posts-empty">인기글을 불러올 수 없습니다.</p>';
   });
 })();
+
+// ===== Breadcrumb 제목 오버플로우 시 티커(마퀴) =====
+(function() {
+  function initCrumbMarquee() {
+    var li = document.getElementById('crumb-current');
+    if (!li) return;
+    var title = li.querySelector('.crumb-title');
+    if (!title) return;
+    // 리셋 후 측정
+    li.classList.remove('is-marquee');
+    var overflow = title.scrollWidth - li.clientWidth;
+    if (overflow > 6) {
+      li.style.setProperty('--crumb-shift', (overflow + 8) + 'px');
+      li.classList.add('is-marquee');
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCrumbMarquee);
+  } else {
+    initCrumbMarquee();
+  }
+  var t;
+  window.addEventListener('resize', function() { clearTimeout(t); t = setTimeout(initCrumbMarquee, 200); });
+})();

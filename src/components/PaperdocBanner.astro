@@ -140,17 +140,19 @@
     }
   }
 
-  /* 웹(넓은 데스크톱, ≥1440px): 상단 가로 배너 숨기고 우측 세로 사이드 배너 노출.
-     콘텐츠 최대폭(1240px)과 겹치지 않도록 넓은 화면에서만, 우측 끝에 좁게 배치. */
-  @media (min-width: 1440px) {
+  /* 웹(넓은 데스크톱, ≥1600px): 상단 가로 배너 숨기고 우측 세로 사이드 배너 노출.
+     콘텐츠 최대폭(1240px) 우측에서 정확히 40px 간격을 두고 배치(메인·포스트 공통).
+     left = 화면중앙(50%) + 콘텐츠 절반(620px) + 40px gap = 50% + 660px.
+     폭은 남은 우측 공간에 맞춰 가변(최소 120·최대 170px). */
+  @media (min-width: 1600px) {
     .pd-promo-link { display: none; }
     .pd-promo-side {
       display: block;
       position: fixed;
-      right: 8px;
+      left: calc(50% + 660px);
       top: 50%;
       transform: translateY(-50%);
-      width: clamp(104px, 7.5vw, 132px);
+      width: clamp(120px, calc(50vw - 668px), 170px);
       z-index: 40;
       text-decoration: none;
       transition: transform 0.2s ease;

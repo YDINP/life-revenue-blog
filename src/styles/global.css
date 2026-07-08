@@ -609,10 +609,29 @@ section > h2::after {
 
 .breadcrumb li[aria-current="page"] {
   color: var(--color-text-secondary);
-  max-width: 300px;
+  max-width: min(360px, 52vw);
   overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
+  position: relative;
+}
+.breadcrumb .crumb-title {
+  display: inline-block;
+  white-space: nowrap;
+}
+/* 제목이 길어 넘칠 때만 JS가 .is-marquee 부여 → 뉴스 티커처럼 좌우 왕복 스크롤 */
+.breadcrumb li[aria-current="page"].is-marquee .crumb-title {
+  animation: crumb-marquee 9s ease-in-out infinite alternate;
+}
+.breadcrumb li[aria-current="page"].is-marquee:hover .crumb-title {
+  animation-play-state: paused;
+}
+@keyframes crumb-marquee {
+  0%, 16%   { transform: translateX(0); }
+  84%, 100% { transform: translateX(calc(-1 * var(--crumb-shift, 0px))); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .breadcrumb li[aria-current="page"].is-marquee .crumb-title { animation: none; }
+  .breadcrumb li[aria-current="page"] { text-overflow: ellipsis; }
 }
 
 .post-back {
@@ -841,9 +860,9 @@ section > h2::after {
   }
 }
 
-/* 세로 사이드배너(≥1440px)와 우측 여백을 두고 겹치므로, 그 폭에서는
+/* 세로 사이드배너(≥1600px)와 우측 여백을 두고 겹치므로, 그 폭에서는
    floating 목차 사이드바를 숨긴다. 본문 상단 인라인 #toc 는 그대로 유지됨. */
-@media (min-width: 1440px) {
+@media (min-width: 1600px) {
   .toc-sidebar { display: none; }
 }
 

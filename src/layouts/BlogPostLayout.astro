@@ -183,7 +183,7 @@ const seriesTotal = seriesPosts.length;
         <li><a href="/">홈</a></li>
         <li><a href="/blog/">블로그</a></li>
         <li><a href={`/blog/${category.toLowerCase()}/`}>{catLabel}</a></li>
-        <li aria-current="page">{title}</li>
+        <li aria-current="page" id="crumb-current"><span class="crumb-title">{title}</span></li>
       </ol>
     </nav>
 
