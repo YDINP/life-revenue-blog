@@ -24,6 +24,8 @@
     display: block;
     border-radius: 12px;
     overflow: hidden;
+    /* 배너 너비 기준 컨테이너 → CTA가 배너 축소에 비례해 작아짐 */
+    container-type: inline-size;
     animation: paperdoc-breathe 3.2s ease-in-out infinite;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
@@ -63,7 +65,8 @@
     align-items: center;
     gap: 0.35em;
     padding: 0.42em 0.95em;
-    font-size: clamp(0.62rem, 1.3vw, 0.82rem);
+    /* 배너 너비(cqw)에 비례 — 배너가 줄면 CTA도 같은 비율로 축소. 극소형 화면 가독 하한만 clamp */
+    font-size: clamp(0.55rem, 1.7cqw, 0.9rem);
     font-weight: 700;
     color: #1e293b;
     background: #ffd400;
