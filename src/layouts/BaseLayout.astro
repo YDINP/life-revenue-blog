@@ -221,35 +221,30 @@ const websiteSchema = {
       // Pageview tracking
       (function() {
         const ANALYTICS_URL = 'https://xyprbsmagtlzebxyxsvj.supabase.co/functions/v1/analytics-ingest';
-        // 집계 제외 대상: 소유자 공인 IP (동적 IP면 갱신 필요)
-        const EXCLUDED_IPS = ['175.197.4.71'];
+        const NOTRACK_KEY = '__notrack';
+        // 관리자 opt-out: ?admin=1 로 1회 접속하면 이 브라우저는 이후 집계 제외 (?admin=0 로 해제)
+        try {
+          const q = new URLSearchParams(window.location.search).get('admin');
+          if (q === '1') localStorage.setItem(NOTRACK_KEY, '1');
+          else if (q === '0') localStorage.removeItem(NOTRACK_KEY);
+        } catch (e) {}
         // 1) localhost / 사설망(dev·미리보기)은 집계하지 않음
         const host = window.location.hostname;
         const isLocal = host === 'localhost' || host === '127.0.0.1' || host === '::1' || host === '0.0.0.0'
           || /^192\.168\./.test(host) || /^10\./.test(host) || /^172\.(1[6-9]|2\d|3[01])\./.test(host);
         if (isLocal) return;
+        // 2) 관리자 플래그가 있으면 집계하지 않음
+        try { if (localStorage.getItem(NOTRACK_KEY) === '1') return; } catch (e) {}
         const slug = window.location.pathname.replace(/^\/blog\//, '').replace(/\/$/, '');
-        function send() {
-          fetch(ANALYTICS_URL, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              event_type: 'pageview',
-              source: 'lifeflow',
-              metadata: { slug, title: document.title, path: window.location.pathname, referrer: document.referrer || 'direct', user_agent: navigator.userAgent }
-            })
-          }).catch(() => {});
-        }
-        // 2) 방문자 공인 IP가 소유자 IP면 집계하지 않음 (세션당 1회만 조회)
-        if (!EXCLUDED_IPS.length) { send(); return; }
-        var cached = null;
-        try { cached = sessionStorage.getItem('__vip'); } catch (e) {}
-        if (cached !== null) { if (EXCLUDED_IPS.indexOf(cached) === -1) send(); return; }
-        fetch('https://api.ipify.org?format=json').then(function(r){ return r.json(); }).then(function(d){
-          var ip = (d && d.ip) ? d.ip : '';
-          try { sessionStorage.setItem('__vip', ip); } catch (e) {}
-          if (EXCLUDED_IPS.indexOf(ip) === -1) send();
-        }).catch(function(){ send(); });
+        fetch(ANALYTICS_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            event_type: 'pageview',
+            source: 'lifeflow',
+            metadata: { slug, title: document.title, path: window.location.pathname, referrer: document.referrer || 'direct', user_agent: navigator.userAgent }
+          })
+        }).catch(() => {});
       })();
     </script>
   </body>
