@@ -841,6 +841,12 @@ section > h2::after {
   }
 }
 
+/* 세로 사이드배너(≥1440px)와 우측 여백을 두고 겹치므로, 그 폭에서는
+   floating 목차 사이드바를 숨긴다. 본문 상단 인라인 #toc 는 그대로 유지됨. */
+@media (min-width: 1440px) {
+  .toc-sidebar { display: none; }
+}
+
 /* ===== Post Content ===== */
 /* ===== 본문 타이포그래피 (가독성 우선) ===== */
 .post-content {
