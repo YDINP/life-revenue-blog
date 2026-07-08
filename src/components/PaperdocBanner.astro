@@ -5,6 +5,10 @@
   <span class="paperdoc-banner-frame">
     <img class="paperdoc-banner" src="/banner.webp" alt="페이퍼닥 - 계약서 AI 분석 플랫폼 배너" width="1200" height="400" loading="eager" />
     <span class="paperdoc-shine" aria-hidden="true"></span>
+    <span class="paperdoc-cta" aria-hidden="true">
+      무료로 검토받기
+      <span class="paperdoc-cta-arrow">→</span>
+    </span>
   </span>
 </a>
 
@@ -50,10 +54,46 @@
     animation: paperdoc-shine 4.5s ease-in-out infinite;
   }
 
+  .paperdoc-cta {
+    position: absolute;
+    left: 50%;
+    bottom: 7%;
+    transform: translateX(-50%);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0.5em 1.1em;
+    font-size: clamp(0.7rem, 1.5vw, 0.95rem);
+    font-weight: 700;
+    color: #1e293b;
+    background: #ffd400;
+    border-radius: 999px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+    animation: paperdoc-cta-pulse 1.6s ease-in-out infinite;
+  }
+  .paperdoc-cta-arrow {
+    display: inline-block;
+    animation: paperdoc-arrow 1.1s ease-in-out infinite;
+  }
+
   .paperdoc-banner-link:hover .paperdoc-banner-frame {
     transform: translateY(-3px);
     box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35);
     animation-play-state: paused;
+  }
+  .paperdoc-banner-link:hover .paperdoc-cta {
+    background: #ffe14d;
+    transform: translateX(-50%) scale(1.05);
+  }
+
+  @keyframes paperdoc-cta-pulse {
+    0%, 100% { transform: translateX(-50%) scale(1); }
+    50%      { transform: translateX(-50%) scale(1.05); }
+  }
+  @keyframes paperdoc-arrow {
+    0%, 100% { transform: translateX(0); }
+    50%      { transform: translateX(4px); }
   }
 
   @keyframes paperdoc-breathe {
@@ -69,7 +109,9 @@
 
   @media (prefers-reduced-motion: reduce) {
     .paperdoc-banner-frame,
-    .paperdoc-shine {
+    .paperdoc-shine,
+    .paperdoc-cta,
+    .paperdoc-cta-arrow {
       animation: none;
     }
   }
