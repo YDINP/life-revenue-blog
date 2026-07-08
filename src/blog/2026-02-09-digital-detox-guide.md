@@ -22,7 +22,7 @@ coupangLinks:
 
 ### 숫자로 보는 우리의 스크린 타임
 
-<div class="chart-donut" data-title="하루 24시간 활동 분배" data-labels="수면,스마트폰,직장/이동,식사,대화,운동,독서" data-values="29,30,28,6,3,2,1" data-colors="#3b82f6,#ef4444,#94a3b8,#22c55e,#ec4899,#f59e0b,#a855f7" data-unit="%"></div>
+<div class="chart-donut" data-title="하루 24시간 활동 분배" data-labels="수면,스마트폰,직장/이동,식사,대화,운동,독서" data-values="30,30,28,6,3,2,1" data-colors="#3b82f6,#ef4444,#94a3b8,#22c55e,#ec4899,#f59e0b,#a855f7" data-unit="%"></div>
 
 놀라운 사실은 스마트폰 사용 시간이 수면 시간과 거의 같다는 것입니다. 이 시간의 **60% 이상**이 무의식적 스크롤링(SNS, 숏폼 영상)에 소비됩니다.
 

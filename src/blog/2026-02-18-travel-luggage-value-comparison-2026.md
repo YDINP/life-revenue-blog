@@ -56,7 +56,12 @@ faq:
 
 ## 가성비 비교: 5개 모델 종합 분석
 
-<div class="chart-versus" data-title="예산별 추천 캐리어" data-name-a="저가형" data-name-b="프리미엄형" data-color-a="#3b82f6" data-color-b="#f59e0b" data-items='[{"label":"가격","a":35000,"b":149000},{"label":"무게(kg)","a":2.8,"b":3.4},{"label":"내구성(10년만)","a":60,"b":95},{"label":"보증(개월)","a":12,"b":120}]'></div>
+| 항목 | 저가형 | 프리미엄형 |
+|------|--------|-----------|
+| 가격 | 약 35,000원 | 약 149,000원 |
+| 무게 | 2.8kg | 3.4kg |
+| 내구성 (10년 기준) | 60점 | 95점 |
+| 보증 | 12개월 | 120개월 (10년) |
 
 ### 1. 저예산층 최적의 선택: 삼성 COWAY (38,900원)
 
@@ -137,7 +142,7 @@ faq:
 
 ## 용도별 캐리어 추천 가이드
 
-<div class="chart-bar" data-title="여행 기간별 추천 캐리어 용량" data-labels="3박 4일","1주일","2주일","1개월" data-values="24,40,55,70" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444" data-unit="L"></div>
+<div class="chart-bar" data-title="여행 기간별 추천 캐리어 용량" data-labels="3박 4일,1주일,2주일,1개월" data-values="24,40,55,70" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444" data-unit="L"></div>
 
 ### 국내 3박 4일 여행
 **추천:** 삼성 COWAY (38,900원) 또는 인카세 판테스지 (32,000원)

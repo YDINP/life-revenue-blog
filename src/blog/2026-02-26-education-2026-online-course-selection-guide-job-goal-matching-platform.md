@@ -159,7 +159,7 @@ faq:
 
 ## 직무별 구체적 강의 선택 예시
 
-<div class="chart-bar" data-title="직무별 평균 학습 시간 및 난이도" data-labels="개발자","데이터분석","마케터","디자이너","PM" data-values="150,120,80,100,90" data-colors="#3b82f6,#10b981,#f59e0b,#ef4444,#8b5cf6" data-unit="시간"></div>
+<div class="chart-bar" data-title="직무별 평균 학습 시간 및 난이도" data-labels="개발자,데이터분석,마케터,디자이너,PM" data-values="150,120,80,100,90" data-colors="#3b82f6,#10b981,#f59e0b,#ef4444,#8b5cf6" data-unit="시간"></div>
 
 ### 개발자 커리어 전환을 원한다면
 최소 150~200시간 이상의 심화 프로젝트 과정을 선택하세요. 언어별로:

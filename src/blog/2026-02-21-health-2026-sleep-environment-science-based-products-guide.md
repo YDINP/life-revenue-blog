@@ -135,7 +135,7 @@ faq:
 
 ## 사용 효과 검증: 실제 데이터
 
-<div class="chart-progress" data-title="용품별 수면 질 개선도" data-labels="온도조절패드","광선치료","향기디퓨저","백색소음" data-values="85","78","72","68" data-colors="#10b981","#3b82f6","#f59e0b","#ef4444" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="용품별 수면 질 개선도" data-labels="온도조절패드,광선치료,향기디퓨저,백색소음" data-values="85,78,72,68" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444" data-max="100" data-unit="점"></div>
 
 *출처: 2025년 한국수면의학회 사용자 만족도 조사 (n=2,847명)*
 

@@ -127,7 +127,7 @@ Airbnb 예약 전 반드시 확인사항:
 
 ## 교통 전략: 유레일패스 vs 저비용 항공사
 
-<div class="chart-donut" data-title="배낭여행객의 유럽 교통 수단 선택(2026년)" data-labels="저비용항공사(라이언에어,유로스타)" data-values="35" data-labels="기차(유레일패스,현지표)" data-values="35" data-labels="버스(플릭스버스)" data-values="25" data-colors="#3b82f6,#10b981,#f59e0b"></div>
+<div class="chart-donut" data-title="배낭여행객의 유럽 교통 수단 선택(2026년)" data-labels="저비용항공사(라이언에어·유로스타),기차(유레일패스·현지표),버스(플릭스버스)" data-values="35,35,30" data-colors="#3b82f6,#10b981,#f59e0b" data-unit="%"></div>
 
 **유레일패스 선택 기준:**
 - 4주 이상 여행: 글로벌 패스 (€400-600) 추천
