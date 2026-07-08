@@ -64,8 +64,9 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
-/* 한글 가독성: 단어 중간 줄바꿈 방지 + 헤딩 줄 균형 */
-:lang(ko), body { word-break: keep-all; overflow-wrap: anywhere; }
+/* 한글 가독성: 어절 단위 줄바꿈(keep-all). overflow-wrap:anywhere 는
+   "220,000원" 같은 숫자를 콤마에서 끊으므로 사용하지 않음 */
+:lang(ko), body { word-break: keep-all; }
 h1, h2, h3, h4 { text-wrap: balance; }
 
 body {
@@ -1285,6 +1286,7 @@ section > h2::after {
   border-bottom: 1px solid var(--color-border);
   padding: 0.7rem 0.9rem;
   text-align: left;
+  white-space: nowrap;  /* 가격·범위 숫자가 셀 안에서 끊기지 않게 (표는 overflow-x로 스크롤) */
 }
 
 .post-content thead th {
@@ -1306,15 +1308,16 @@ section > h2::after {
 .chart-versus,
 .chart-progress {
   margin: 2rem 0;
-  padding: 1.75rem;
-  background: linear-gradient(135deg, var(--color-bg-secondary) 0%, var(--color-bg) 100%);
+  padding: 1.6rem 1.5rem 1.7rem;
+  background: var(--color-bg);
   border: 1px solid var(--color-border);
   border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  box-shadow: 0 1px 3px rgba(26,23,18,0.04);
   position: relative;
   overflow: hidden;
 }
 
+/* 모던: 상단 무지개바 대신 얇은 브랜드 라인 */
 .chart-bar::before,
 .chart-radar::before,
 .chart-donut::before,
@@ -1325,9 +1328,8 @@ section > h2::after {
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #f59e0b);
-  border-radius: 16px 16px 0 0;
+  height: 3px;
+  background: var(--color-primary);
 }
 
 :root.dark .chart-bar,
@@ -1335,8 +1337,8 @@ section > h2::after {
 :root.dark .chart-donut,
 :root.dark .chart-versus,
 :root.dark .chart-progress {
-  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  background: var(--color-bg);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
 }
 
 .chart-title {
@@ -1373,27 +1375,22 @@ section > h2::after {
 
 .chart-track {
   flex: 1;
-  height: 32px;
+  height: 26px;
   background: var(--color-border);
-  border-radius: 8px;
+  border-radius: 999px;
   overflow: hidden;
   position: relative;
 }
 
 :root.dark .chart-track {
-  background: #334155;
+  background: var(--color-border);
 }
 
 .chart-fill {
   height: 100%;
-  border-radius: 8px;
-  min-width: 4px;
+  border-radius: 999px;
+  min-width: 6px;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .chart-fill.animated {
@@ -1443,8 +1440,8 @@ section > h2::after {
 }
 
 :root.dark .radar-item {
-  background: #1e293b;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  background: var(--color-bg);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
 }
 
 .radar-item-accent {
@@ -1500,21 +1497,20 @@ section > h2::after {
 
 .radar-score-track {
   flex: 1;
-  height: 20px;
+  height: 18px;
   background: var(--color-border);
-  border-radius: 6px;
+  border-radius: 999px;
   overflow: hidden;
   position: relative;
 }
 
 :root.dark .radar-score-track {
-  background: #334155;
+  background: var(--color-border);
 }
 
 .radar-score-fill {
   height: 100%;
-  border-radius: 6px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  border-radius: 999px;
   position: relative;
 }
 
@@ -1570,26 +1566,27 @@ section > h2::after {
   flex-wrap: wrap;
 }
 .donut-ring {
-  width: 180px;
-  height: 180px;
+  width: 184px;
+  height: 184px;
   border-radius: 50%;
   position: relative;
   flex-shrink: 0;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  box-shadow: none;
   transition: transform 0.3s;
 }
-.donut-ring:hover { transform: scale(1.03); }
+.donut-ring:hover { transform: scale(1.02); }
+/* 모던: 얇은 링 (hole 확대) + 배경은 카드색과 일치해 심리스 */
 .donut-hole {
   position: absolute;
-  inset: 22%;
+  inset: 31%;
   border-radius: 50%;
-  background: var(--color-bg-secondary);
+  background: var(--color-bg);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-:root.dark .donut-hole { background: #1e293b; }
+:root.dark .donut-hole { background: var(--color-bg); }
 .donut-total {
   font-size: 1.4rem;
   font-weight: 800;
@@ -1655,7 +1652,7 @@ section > h2::after {
   background: var(--color-border);
   letter-spacing: 0.05em;
 }
-:root.dark .versus-vs { background: #334155; }
+:root.dark .versus-vs { background: var(--color-border); }
 .versus-rows {
   display: flex;
   flex-direction: column;
@@ -1680,22 +1677,21 @@ section > h2::after {
 }
 .versus-track {
   flex: 1;
-  height: 28px;
+  height: 24px;
   background: var(--color-border);
-  border-radius: 6px;
+  border-radius: 999px;
   overflow: hidden;
   position: relative;
 }
-:root.dark .versus-track { background: #334155; }
+:root.dark .versus-track { background: var(--color-border); }
 .versus-track-left {
   display: flex;
   justify-content: flex-end;
 }
 .versus-fill {
   height: 100%;
-  border-radius: 6px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
-  min-width: 4px;
+  border-radius: 999px;
+  min-width: 6px;
 }
 .versus-fill.animated {
   animation: chartGrow 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
@@ -1710,7 +1706,7 @@ section > h2::after {
   background: var(--color-bg-secondary);
   border-radius: 6px;
 }
-:root.dark .versus-label { background: #1e293b; }
+:root.dark .versus-label { background: var(--color-bg-secondary); }
 .versus-val {
   font-size: 0.8rem;
   font-weight: 800;
@@ -1751,12 +1747,12 @@ section > h2::after {
 .progress-bg {
   fill: none;
   stroke: var(--color-border);
-  stroke-width: 8;
+  stroke-width: 6;
 }
-:root.dark .progress-bg { stroke: #334155; }
+:root.dark .progress-bg { stroke: var(--color-border); }
 .progress-ring {
   fill: none;
-  stroke-width: 8;
+  stroke-width: 6;
   stroke-linecap: round;
   transition: stroke-dashoffset 1.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1765,8 +1761,10 @@ section > h2::after {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 800;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
 }
 .progress-label {
   font-size: 0.82rem;
@@ -2171,6 +2169,15 @@ section > h2::after {
   }
 
   .post-header h1 { font-size: 1.5rem; }
+  .post-description { font-size: 1.05rem; line-height: 1.55; }
+
+  /* 모바일 본문: 폰트/헤딩 축소 + keep-all 로 줄바꿈 명확 */
+  .post-content { font-size: 1rem; line-height: 1.8; }
+  .post-content h2 { font-size: 1.3rem; margin: 2rem 0 0.8rem; }
+  .post-content h3 { font-size: 1.12rem; margin: 1.6rem 0 0.6rem; }
+  .post-content p { margin-bottom: 1.15rem; }
+  .post-content blockquote { padding: 0.75rem 1rem; margin: 1.4rem 0; }
+  .post-content ul, .post-content ol { padding-left: 1.25rem; }
 
   .post-grid {
     grid-template-columns: 1fr;

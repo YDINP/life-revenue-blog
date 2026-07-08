@@ -118,9 +118,7 @@
       html += `<div class="chart-row">
         <span class="chart-label">${label.trim()}</span>
         <div class="chart-track">
-          <div class="chart-fill" style="width:${pct}%;background:${grad}">
-            ${pct > 25 ? `<span class="chart-fill-inner-val">${values[i]}${unit}</span>` : ''}
-          </div>
+          <div class="chart-fill" style="width:${pct}%;background:${grad}"></div>
         </div>
         <span class="chart-value">${values[i]}${unit}</span>
       </div>`;
