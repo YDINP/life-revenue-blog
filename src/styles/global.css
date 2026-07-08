@@ -20,7 +20,7 @@
   --cat-lifestyle: #7a5aa6;
   --font-serif: Georgia, 'Times New Roman', serif;
   --font-serif-ko: 'Nanum Myeongjo', Georgia, 'Batang', serif;
-  --max-width: 800px;              /* reading width (posts) */
+  --max-width: 880px;              /* reading width (posts) */
   --max-width-wide: 1240px;        /* magazine width (home, header, footer) */
   --header-height: 60px;
   --shadow-sm: 0 1px 2px rgba(26,23,18,0.05);
@@ -678,15 +678,14 @@ section > h2::after {
   gap: 0.25rem;
 }
 
-/* 리드 문단(deck) — 읽기 편한 요약 */
+/* 리드 문단(deck) — 읽기 편한 요약 (제목과 동일한 본문 폭 사용) */
 .post-description {
   color: var(--color-text-secondary);
   font-size: 1.15rem;
-  line-height: 1.6;
+  line-height: 1.65;
   margin-top: 0.85rem;
   padding-bottom: 1.25rem;
   border-bottom: 1px solid var(--color-border);
-  max-width: 46ch;
 }
 
 .post-tags {
@@ -761,7 +760,7 @@ section > h2::after {
     display: block;
     position: fixed;
     top: 100px;
-    right: max(16px, calc((100vw - 800px) / 2 - 280px));
+    right: max(16px, calc((100vw - 880px) / 2 - 280px));
     width: 240px;
     max-height: calc(100vh - 140px);
     overflow-y: auto;
