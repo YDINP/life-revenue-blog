@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import PostCard from '../components/PostCard.astro';
 
 const allPosts = await Astro.glob('../blog/**/*.md');
 const sorted = allPosts.sort(
@@ -14,6 +13,9 @@ const fmtDate = (d) =>
 const featured = sorted[0];
 const picks = sorted.slice(1, 6);
 const latest = sorted.slice(6, 15);
+const lead = latest[0];
+const sideStories = latest.slice(1, 5);
+const colStories = latest.slice(5, 9);
 
 const catMeta = {
   finance:   { ko: '금융',        en: 'Finance' },
@@ -88,6 +90,53 @@ const fCat = meta(featured.frontmatter.category);
     </aside>
   </section>
 
+  <!-- ══ Latest — 신문 프론트페이지 ══ -->
+  <section class="news" aria-label="최신 글">
+    <div class="sec-head">
+      <div>
+        <span class="kicker">Fresh off the press</span>
+        <h3>최신 글</h3>
+      </div>
+      <a href="/blog/" class="read-cta">전체 아카이브 <span class="arw">→</span></a>
+    </div>
+
+    <div class="news-top">
+      <a class="lead-story" href={`/blog/${slugOf(lead)}/`}>
+        {lead.frontmatter.heroImage && (
+          <div class="lead-media">
+            <img src={lead.frontmatter.heroImage} alt={lead.frontmatter.title} loading="lazy" />
+          </div>
+        )}
+        <div class="lead-text">
+          <span class="news-cat" style={`--cat: var(--cat-${catKey(lead.frontmatter.category)})`}>{meta(lead.frontmatter.category).en} · {meta(lead.frontmatter.category).ko}</span>
+          <h4 class="lead-hl">{lead.frontmatter.title}</h4>
+          <p class="lead-deck">{lead.frontmatter.description}</p>
+          <span class="news-meta num">{fmtDate(lead.frontmatter.pubDate)}</span>
+        </div>
+      </a>
+
+      <div class="news-side">
+        {sideStories.map((post) => (
+          <a class="side-story" href={`/blog/${slugOf(post)}/`}>
+            <span class="news-cat" style={`--cat: var(--cat-${catKey(post.frontmatter.category)})`}>{meta(post.frontmatter.category).en}</span>
+            <h5 class="side-hl">{post.frontmatter.title}</h5>
+            <span class="news-meta num">{fmtDate(post.frontmatter.pubDate)}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <div class="news-cols">
+      {colStories.map((post) => (
+        <a class="col-story" href={`/blog/${slugOf(post)}/`}>
+          <span class="news-cat" style={`--cat: var(--cat-${catKey(post.frontmatter.category)})`}>{meta(post.frontmatter.category).en}</span>
+          <h5 class="col-hl">{post.frontmatter.title}</h5>
+          <p class="col-desc">{post.frontmatter.description}</p>
+          <span class="news-meta num">{fmtDate(post.frontmatter.pubDate)}</span>
+        </a>
+      ))}
+    </div>
+  </section>
   <!-- ══ Browse by topic ══ -->
   <section aria-label="토픽">
     <div class="sec-head">
@@ -107,29 +156,6 @@ const fCat = meta(featured.frontmatter.category);
     </div>
   </section>
 
-  <!-- ══ Latest ══ -->
-  <section aria-label="최신 글">
-    <div class="sec-head">
-      <div>
-        <span class="kicker">Fresh off the press</span>
-        <h3>최신 글</h3>
-      </div>
-      <a href="/blog/" class="read-cta">전체 아카이브 <span class="arw">→</span></a>
-    </div>
-    <div class="posts-grid">
-      {latest.map((post) => (
-        <PostCard
-          title={post.frontmatter.title}
-          description={post.frontmatter.description}
-          pubDate={post.frontmatter.pubDate}
-          category={post.frontmatter.category}
-          slug={slugOf(post)}
-          image={post.frontmatter.heroImage ? { url: post.frontmatter.heroImage, alt: post.frontmatter.title } : undefined}
-          tags={post.frontmatter.tags}
-        />
-      ))}
-    </div>
-  </section>
 </BaseLayout>
 
 <style>
@@ -232,12 +258,113 @@ const fCat = meta(featured.frontmatter.category);
   .topic .t-count { font-size: 0.82rem; color: var(--color-text-secondary); display: flex; align-items: center; gap: 6px; }
   .topic .t-count b { color: var(--cat); font-size: 1.45rem; font-weight: 820; }
 
-  /* ── Latest grid ── */
-  .posts-grid {
+  /* ── Latest — 신문 프론트페이지 ── */
+  .news-top {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
-    margin-bottom: 1rem;
+    grid-template-columns: 1.7fr 1fr;
+    gap: 0;
+    border-top: 2px solid var(--color-text);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .lead-story {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 1.75rem 2rem 1.75rem 0;
+    border-right: 1px solid var(--color-border);
+  }
+  .lead-media {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 6px;
+    margin-bottom: 1.1rem;
+    background: var(--color-bg-secondary);
+  }
+  .lead-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+  .lead-story:hover .lead-media img { transform: scale(1.04); }
+  .news-cat {
+    display: block;
+    font-size: 0.66rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--cat, var(--color-primary));
+    margin-bottom: 0.55rem;
+  }
+  .lead-hl {
+    font-family: var(--font-serif-ko);
+    font-size: clamp(1.6rem, 3vw, 2.3rem);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.7rem;
+    transition: color 0.15s;
+  }
+  .lead-story:hover .lead-hl { color: var(--color-primary); }
+  .lead-deck {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.9rem;
+    max-width: 48ch;
+  }
+  .news-meta { font-size: 0.76rem; color: var(--color-text-muted); font-variant-numeric: tabular-nums; }
+
+  .news-side {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+  }
+  .side-story {
+    text-decoration: none;
+    color: inherit;
+    padding: 1.15rem 0;
+    border-bottom: 1px solid var(--color-border);
+    transition: transform 0.15s;
+  }
+  .news-side .side-story:last-child { border-bottom: none; }
+  .side-story:hover { transform: translateX(3px); }
+  .side-story:hover .side-hl { color: var(--color-primary); }
+  .side-hl {
+    font-family: var(--font-serif-ko);
+    font-size: 1.12rem;
+    font-weight: 700;
+    line-height: 1.32;
+    margin: 0.15rem 0 0.4rem;
+    transition: color 0.15s;
+  }
+
+  .news-cols {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 0 1rem;
+  }
+  .col-story {
+    text-decoration: none;
+    color: inherit;
+    padding: 1.5rem 1.4rem 1.5rem 0;
+    border-right: 1px solid var(--color-border);
+    transition: transform 0.15s;
+  }
+  .news-cols .col-story:last-child { border-right: none; padding-right: 0; }
+  .col-story:hover .col-hl { color: var(--color-primary); }
+  .col-hl {
+    font-family: var(--font-serif-ko);
+    font-size: 1.08rem;
+    font-weight: 700;
+    line-height: 1.32;
+    margin: 0.2rem 0 0.5rem;
+    transition: color 0.15s;
+  }
+  .col-desc {
+    font-size: 0.86rem;
+    line-height: 1.55;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.6rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   @keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
@@ -248,11 +375,18 @@ const fCat = meta(featured.frontmatter.category);
     .lead { border-right: none; border-bottom: 1px solid var(--color-border); padding: 2.25rem 0 2.25rem; }
     .contents { padding: 2rem 0 0.5rem; }
     .topics { grid-template-columns: repeat(2, 1fr); }
-    .posts-grid { grid-template-columns: repeat(2, 1fr); }
+    .news-top { grid-template-columns: 1fr; }
+    .lead-story { border-right: none; border-bottom: 1px solid var(--color-border); padding: 1.5rem 0; }
+    .news-side { padding-left: 0; padding-top: 0.5rem; }
+    .news-cols { grid-template-columns: repeat(2, 1fr); }
+    .news-cols .col-story:nth-child(2) { border-right: none; padding-right: 0; }
+    .news-cols .col-story:nth-child(1), .news-cols .col-story:nth-child(2) { border-bottom: 1px solid var(--color-border); padding-bottom: 1.4rem; }
+    .news-cols .col-story { padding-right: 1.4rem; }
   }
   @media (max-width: 560px) {
     .topics { grid-template-columns: 1fr 1fr; }
-    .posts-grid { grid-template-columns: 1fr; }
+    .news-cols { grid-template-columns: 1fr; }
+    .news-cols .col-story { border-right: none; border-bottom: 1px solid var(--color-border); padding: 1.2rem 0; }
     .lead h1 { font-size: 2.15rem; }
   }
 </style>
