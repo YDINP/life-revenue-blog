@@ -130,6 +130,8 @@
   /* 모바일(≤767px): 전용 배너 이미지(pd-promo-m)는 레이아웃이 달라
      CTA 위치를 하단 URL 오른쪽 빈 공간으로 재배치(+가독 위해 vw 기준 크기) */
   @media (max-width: 767px) {
+    /* 모바일: 상단 배너를 헤더에서 5px 정도 내려 여백 확보 */
+    .pd-promo-link { margin-top: calc(-0.5rem + 5px); }
     .pd-promo-cta {
       left: auto;
       right: 4%;
