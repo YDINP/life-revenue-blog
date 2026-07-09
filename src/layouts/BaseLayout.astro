@@ -130,6 +130,15 @@ const websiteSchema = {
             <a href="/blog/tags/" class={currentPath.includes('/blog/tags') ? 'active' : ''}>태그</a>
             <a href="https://ai-revenue-blog.vercel.app/" target="_blank" rel="noopener" class="nav-external">TechFlow ↗</a>
           </div>
+          <details class="nav-search" id="nav-search">
+            <summary class="nav-search-toggle" aria-label="검색">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="5.5" stroke="currentColor" stroke-width="1.7"/><path d="M13.5 13.5 17.5 17.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </summary>
+            <form class="nav-search-pop" action="/blog/" method="get" role="search">
+              <input type="search" name="q" class="nav-search-input" placeholder="글 검색…" aria-label="사이트 검색" autocomplete="off" />
+              <button type="submit" class="nav-search-go" aria-label="검색 실행">→</button>
+            </form>
+          </details>
           <button class="theme-toggle" id="theme-toggle" aria-label="다크 모드 토글">
             <span id="theme-icon">🌙</span>
           </button>
@@ -230,6 +239,16 @@ const websiteSchema = {
       const navToggle = document.getElementById('nav-toggle');
       const navMenu = document.getElementById('nav-menu');
       navToggle?.addEventListener('click', () => navMenu?.classList.toggle('open'));
+
+      // 네비 검색: 열면 인풋 포커스, Escape·바깥 클릭 시 닫기
+      (function() {
+        const ns = document.getElementById('nav-search');
+        if (!ns) return;
+        const input = ns.querySelector('.nav-search-input');
+        ns.addEventListener('toggle', () => { if (ns.open && input) input.focus(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') ns.open = false; });
+        document.addEventListener('click', (e) => { if (ns.open && !ns.contains(e.target)) ns.open = false; });
+      })();
     </script>
 
     <script>
