@@ -3288,3 +3288,21 @@ section > h2::after {
 @keyframes grad-flow { to { background-position: 200% center; } }
 @keyframes btt-pop { from { opacity: 0; transform: translateY(14px) scale(.7); } to { opacity: 1; transform: none; } }
 @keyframes callout-pop { from { opacity: 0; transform: scale(.96) translateY(8px); } to { opacity: 1; transform: none; } }
+
+/* ==========================================================================
+   MOBILE PERF — 터치/저사양 GPU 렉 완화 (데스크톱 pointer:fine 비주얼은 유지)
+   ========================================================================== */
+@media (pointer: coarse) {
+  /* sticky 헤더 backdrop-filter는 스크롤마다 재합성 → 불투명 배경으로 대체 */
+  .site-header {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: color-mix(in srgb, var(--color-ground) 97%, transparent);
+  }
+  /* 상시 흐르는 그라디언트 애니메이션 정지(매 프레임 repaint) */
+  .deck-title .grad,
+  .lead h1 .flow-anim {
+    animation: none !important;
+    background-size: 100% 100% !important;
+  }
+}
