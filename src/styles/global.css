@@ -56,7 +56,7 @@
 }
 
 html {
-  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   color: var(--color-text);
   background-color: var(--color-ground);
   line-height: 1.7;
@@ -929,7 +929,7 @@ section > h2::after {
 /* ===== Post Content ===== */
 /* ===== 본문 타이포그래피 (가독성 우선) ===== */
 .post-content {
-  font-family: 'Pretendard', -apple-system, sans-serif;
+  font-family: 'Pretendard Variable', 'Pretendard', -apple-system, sans-serif;
   font-size: 1.12rem;
   line-height: 1.9;
   color: var(--color-text);
@@ -1360,7 +1360,7 @@ section > h2::after {
 }
 
 .post-content table {
-  font-family: 'Pretendard', sans-serif;
+  font-family: 'Pretendard Variable', 'Pretendard', sans-serif;
   font-size: 0.96rem;
   font-variant-numeric: tabular-nums;
 }
