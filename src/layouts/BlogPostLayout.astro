@@ -5,6 +5,7 @@ import AdSlot from '../components/AdSlot.astro';
 import RelatedPosts from '../components/RelatedPosts.astro';
 import NewsletterCTA from '../components/NewsletterCTA.astro';
 import CommentSection from '../components/CommentSection.astro';
+import { pexelsSrcset, pexelsUrl } from '../utils/img.js';
 
 interface FaqItem {
   q: string;
@@ -60,6 +61,8 @@ const catLabel = category ? categoryLabel[category.toLowerCase()] || category : 
 // JSON-LD structured data for SEO
 const canonicalUrl = Astro.url.href;
 const imageObj = heroImage ? { url: heroImage, alt: title } : undefined;
+const heroSrcset = imageObj ? pexelsSrcset(imageObj.url, [600, 900, 1200]) : undefined;
+const heroSizes = '(max-width: 900px) 100vw, 880px';
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
@@ -173,6 +176,7 @@ const seriesTotal = seriesPosts.length;
 <BaseLayout title={title} description={description} image={imageObj?.url} ogType="article">
   <!-- 포스트 전용 OG article 메타 (head) -->
   <Fragment slot="head">
+    {imageObj && <link rel="preload" as="image" href={pexelsUrl(imageObj.url, 900)} imagesrcset={heroSrcset} imagesizes={heroSizes} fetchpriority="high" />}
     <meta property="article:published_time" content={pubDateObj.toISOString()} />
     {updatedDate && <meta property="article:modified_time" content={new Date(updatedDate).toISOString()} />}
     <meta property="article:section" content={category} />
@@ -285,7 +289,7 @@ const seriesTotal = seriesPosts.length;
       </div>
     </header>
 
-    {imageObj && <img src={imageObj.url} alt={imageObj.alt} class="post-hero-image" />}
+    {imageObj && <img src={imageObj.url} srcset={heroSrcset} sizes={heroSizes} width="1200" height="675" alt={imageObj.alt} class="post-hero-image" fetchpriority="high" decoding="async" />}
 
     <!-- 목차 (ToC) - JS로 자동 생성 -->
     <nav class="toc" id="toc"></nav>

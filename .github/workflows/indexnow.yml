@@ -1,0 +1,47 @@
+name: IndexNow ping
+
+# 블로그 글이 추가/수정될 때만 IndexNow(빙·야후·얀덱스 등)에 즉시 색인 요청.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/blog/**'
+
+concurrency:
+  group: indexnow-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Collect changed post URLs and submit to IndexNow
+        run: |
+          set -euo pipefail
+          KEY=c9d3f7a2e8b104569abc7d8e9f0a1b2c
+          HOST=life-revenue-blog.vercel.app
+
+          # 이번 푸시에서 추가/수정된 포스트(.md) → 공개 URL
+          mapfile -t urls < <(git diff --name-only --diff-filter=ACM HEAD~1 HEAD -- 'src/blog/*.md' \
+            | sed -E "s#src/blog/(.*)\.md#https://${HOST}/blog/\1/#")
+          # 홈·블로그 목록도 함께 갱신 알림
+          urls+=("https://${HOST}/" "https://${HOST}/blog/")
+
+          if [ ${#urls[@]} -eq 0 ]; then echo "변경된 URL 없음"; exit 0; fi
+
+          # JSON urlList 구성
+          list=$(printf '%s\n' "${urls[@]}" | sed '/^$/d' | sort -u \
+            | awk 'BEGIN{ORS=""} {printf "%s\"%s\"", (NR>1?",":""), $0}')
+          payload=$(printf '{"host":"%s","key":"%s","keyLocation":"https://%s/%s.txt","urlList":[%s]}' \
+            "$HOST" "$KEY" "$HOST" "$KEY" "$list")
+          echo "Payload: $payload"
+
+          # Vercel 배포가 라이브가 되도록 잠시 대기 후 제출
+          sleep 90
+          curl -sS -X POST 'https://api.indexnow.org/indexnow' \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            -d "$payload" -w '\nHTTP %{http_code}\n'

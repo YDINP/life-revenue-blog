@@ -1,4 +1,6 @@
 ---
+import { pexelsSrcset } from '../utils/img.js';
+
 interface Props {
   title: string;
   description: string;
@@ -16,6 +18,7 @@ const formattedDate = dateObj.toLocaleDateString('ko-KR', {
   month: 'short',
   day: 'numeric',
 });
+const cardSrcset = image ? pexelsSrcset(image.url, [400, 600, 800]) : undefined;
 ---
 
 <div class="post-card" data-tags={tags?.join(' ')}>
@@ -24,9 +27,14 @@ const formattedDate = dateObj.toLocaleDateString('ko-KR', {
       {image ? (
         <img
           src={image.url}
+          srcset={cardSrcset}
+          sizes="(max-width: 900px) 100vw, 400px"
+          width="400"
+          height="225"
           alt={image.alt}
           class="post-card-image"
           loading="lazy"
+          decoding="async"
         />
       ) : (
         <div class="post-card-image-placeholder">
