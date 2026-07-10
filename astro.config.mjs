@@ -4,7 +4,18 @@ import remarkGfm from 'remark-gfm';
 
 export default defineConfig({
   site: 'https://life-revenue-blog.vercel.app',
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      filter: (page) => !page.includes('/dashboard'),
+      changefreq: 'weekly',
+      priority: 0.7,
+      serialize(item) {
+        if (item.url.endsWith('.vercel.app/')) { item.priority = 1.0; item.changefreq = 'daily'; }
+        else if (item.url.includes('/blog/') && !/\/blog\/(tags|[a-z]+)\/$/.test(item.url)) { item.priority = 0.8; }
+        return item;
+      },
+    }),
+  ],
   output: 'static',
   build: {
     format: 'directory',
