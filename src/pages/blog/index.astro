@@ -6,6 +6,27 @@ const allPosts = await Astro.glob('../../blog/**/*.md');
 const sortedPosts = allPosts.sort(
   (a, b) => new Date(b.frontmatter.pubDate).getTime() - new Date(a.frontmatter.pubDate).getTime()
 );
+
+const catKo = { finance: '금융', health: '건강', education: '교육', travel: '여행', lifestyle: '라이프스타일' };
+const slugOf = (p) => p.file.replace(/\\/g, '/').split('/').pop().replace('.md', '');
+const fmtDate = (d) => new Date(d).toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const posts = sortedPosts.map((p) => {
+  const fm = p.frontmatter;
+  const cat = (fm.category || '').toLowerCase();
+  return {
+    slug: slugOf(p),
+    title: fm.title,
+    description: fm.description,
+    category: cat,
+    catKo: catKo[cat] || fm.category,
+    pubDate: fm.pubDate,
+    date: fmtDate(fm.pubDate),
+    image: fm.heroImage || '',
+    tags: fm.tags || [],
+    search: `${fm.title} ${fm.description} ${cat} ${(fm.tags || []).join(' ')}`.toLowerCase(),
+  };
+});
 ---
 
 <BaseLayout
@@ -15,9 +36,7 @@ const sortedPosts = allPosts.sort(
   <div class="blog-header">
     <div>
       <h1>Blog</h1>
-      <p style="color: var(--color-text-secondary);">
-        총 {sortedPosts.length}개의 글
-      </p>
+      <p style="color: var(--color-text-secondary);">총 {sortedPosts.length}개의 글</p>
     </div>
     <div class="view-toggle" id="view-toggle">
       <button class="view-btn active" data-view="grid" aria-label="그리드 보기" title="그리드 보기">
@@ -26,98 +45,312 @@ const sortedPosts = allPosts.sort(
       <button class="view-btn" data-view="list" aria-label="리스트 보기" title="리스트 보기">
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="1" y="2" width="16" height="3" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="1" y="7.5" width="16" height="3" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="1" y="13" width="16" height="3" rx="1" stroke="currentColor" stroke-width="1.5"/></svg>
       </button>
+      <button class="view-btn" data-view="deck" aria-label="덱(한 장씩) 보기" title="덱 보기">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="3" y="2.5" width="9" height="12" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M6 5.5h6M6 8h6M6 10.5h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" transform="translate(-.5 0)"/><path d="M14.5 4.5v9a1.5 1.5 0 0 1-1.5 1.5H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity=".5"/></svg>
+      </button>
     </div>
   </div>
 
-  <!-- Search Bar -->
   <div class="search-bar">
     <svg class="search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
       <circle cx="9" cy="9" r="5.5" stroke="currentColor" stroke-width="1.5"/>
       <path d="M13 13L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
     </svg>
-    <input
-      type="text"
-      id="search-input"
-      class="search-input"
-      placeholder="제목, 설명, 태그로 검색..."
-      aria-label="블로그 글 검색"
-    />
+    <input type="text" id="search-input" class="search-input" placeholder="제목, 설명, 태그로 검색..." aria-label="블로그 글 검색" />
     <span class="search-count" id="search-count"></span>
   </div>
 
+  <!-- 그리드/리스트 뷰 -->
   <div class="post-grid" id="post-container">
-    {
-      sortedPosts.map((post) => {
-        const slug = post.file.replace(/\\/g, '/').split('/').pop().replace('.md', '');
-        return (
-        <PostCard
-          title={post.frontmatter.title}
-          description={post.frontmatter.description}
-          pubDate={post.frontmatter.pubDate}
-          category={post.frontmatter.category}
-          slug={slug}
-          image={post.frontmatter.heroImage ? { url: post.frontmatter.heroImage, alt: post.frontmatter.title } : undefined}
-          tags={post.frontmatter.tags}
-        />
-        );})
-    }
+    {posts.map((post) => (
+      <PostCard
+        title={post.title}
+        description={post.description}
+        pubDate={post.pubDate}
+        category={post.category}
+        slug={post.slug}
+        image={post.image ? { url: post.image, alt: post.title } : undefined}
+        tags={post.tags}
+      />
+    ))}
+  </div>
+
+  <!-- 덱 뷰: 좌측 한 장씩 넘기는 카드 + 우측 전체 리스트 -->
+  <div class="deck-view" id="deck-view" hidden>
+    <div class="deck-stage">
+      <div class="deck-cards" id="deck-cards">
+        {posts.map((post, i) => (
+          <article class="deck-card" data-idx={i} data-cat={post.category} data-search={post.search}>
+            {post.image && (
+              <a class="dc-media" href={`/blog/${post.slug}/`}>
+                <img src={post.image} alt={post.title} loading="lazy" />
+              </a>
+            )}
+            <div class="dc-body">
+              <span class="dc-cat" style={`--cat: var(--cat-${post.category})`}>{post.catKo}</span>
+              <h3 class="dc-title"><a href={`/blog/${post.slug}/`}>{post.title}</a></h3>
+              <p class="dc-desc">{post.description}</p>
+              <div class="dc-foot">
+                <time>{post.date}</time>
+                <a class="dc-read" href={`/blog/${post.slug}/`}>자세히 읽기 →</a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+      <div class="deck-controls">
+        <button class="deck-nav" id="deck-prev" aria-label="이전 글">←</button>
+        <span class="deck-counter" id="deck-counter">1 / {posts.length}</span>
+        <button class="deck-nav" id="deck-next" aria-label="다음 글">→</button>
+      </div>
+      <p class="deck-hint">← → 키보드 · 좌우 스와이프 · 우측 목록 클릭으로 이동</p>
+    </div>
+
+    <aside class="deck-list" id="deck-list" aria-label="전체 글 목록">
+      <div class="deck-list-head">전체 글 <span id="deck-list-count">{posts.length}</span></div>
+      <ol class="deck-list-scroll" id="deck-list-scroll">
+        {posts.map((post, i) => (
+          <li>
+            <button class="deck-list-item" data-idx={i} data-cat={post.category} data-search={post.search}>
+              <span class="dli-num">{String(i + 1).padStart(2, '0')}</span>
+              <span class="dli-main">
+                <span class="dli-cat" style={`--cat: var(--cat-${post.category})`}>{post.catKo}</span>
+                <span class="dli-title">{post.title}</span>
+              </span>
+            </button>
+          </li>
+        ))}
+      </ol>
+    </aside>
   </div>
 
   <script>
     (function() {
       const container = document.getElementById('post-container');
+      const deckView = document.getElementById('deck-view');
       const buttons = document.querySelectorAll('.view-btn');
-      const saved = localStorage.getItem('blog-view') || 'grid';
-
-      function setView(view) {
-        if (!container) return;
-        container.className = view === 'list' ? 'post-list' : 'post-grid';
-        buttons.forEach(b => b.classList.toggle('active', b.dataset.view === view));
-        localStorage.setItem('blog-view', view);
-      }
-
-      setView(saved);
-      buttons.forEach(b => b.addEventListener('click', () => setView(b.dataset.view)));
-
-      // Search functionality
       const searchInput = document.getElementById('search-input');
       const searchCount = document.getElementById('search-count');
-      const allCards = Array.from(document.querySelectorAll('.post-card'));
+      const saved = localStorage.getItem('blog-view') || 'deck';
 
+      const gridCards = Array.from(document.querySelectorAll('#post-container .post-card'));
+      const deckCards = Array.from(document.querySelectorAll('#deck-cards .deck-card'));
+      const listItems = Array.from(document.querySelectorAll('#deck-list .deck-list-item'));
+      const counter = document.getElementById('deck-counter');
+      const listScroll = document.getElementById('deck-list-scroll');
+
+      let currentView = 'grid';
+      let order = deckCards.map((_, i) => i);  // 현재 검색으로 보이는 인덱스들
+      let pos = 0;                              // order 내 현재 위치
+
+      // ── 덱 렌더 ──
+      function renderDeck() {
+        deckCards.forEach((card, idx) => {
+          const rank = order.indexOf(idx);      // 이 카드가 order에서 몇 번째인지 (-1=검색 제외)
+          card.classList.remove('current','peek1','peek2','gone','hidden','out');
+          if (rank === -1) { card.classList.add('out'); return; }
+          const rel = rank - pos;
+          if (rel < 0) card.classList.add('gone');
+          else if (rel === 0) card.classList.add('current');
+          else if (rel === 1) card.classList.add('peek1');
+          else if (rel === 2) card.classList.add('peek2');
+          else card.classList.add('hidden');
+        });
+        const total = order.length;
+        if (counter) counter.textContent = (total ? (pos + 1) : 0) + ' / ' + total;
+        // 리스트 하이라이트 + 스크롤
+        const currentIdx = order[pos];
+        listItems.forEach((it) => {
+          const active = Number(it.dataset.idx) === currentIdx;
+          it.classList.toggle('active', active);
+          if (active && listScroll) {
+            const r = it.getBoundingClientRect(), pr = listScroll.getBoundingClientRect();
+            if (r.top < pr.top || r.bottom > pr.bottom) it.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+          }
+        });
+      }
+      function go(delta) { if (!order.length) return; pos = Math.max(0, Math.min(order.length - 1, pos + delta)); renderDeck(); }
+      function jumpToIdx(idx) { const r = order.indexOf(idx); if (r >= 0) { pos = r; renderDeck(); } }
+
+      // ── 뷰 전환 ──
+      function setView(view) {
+        currentView = view;
+        buttons.forEach(b => b.classList.toggle('active', b.dataset.view === view));
+        if (view === 'deck') {
+          container.style.display = 'none';
+          deckView.hidden = false;
+          renderDeck();
+        } else {
+          deckView.hidden = true;
+          container.style.display = '';
+          container.className = view === 'list' ? 'post-list' : 'post-grid';
+        }
+        localStorage.setItem('blog-view', view);
+      }
+      buttons.forEach(b => b.addEventListener('click', () => setView(b.dataset.view)));
+
+      // ── 검색: 그리드+덱+리스트 동시 필터 ──
       function performSearch() {
         const query = searchInput.value.toLowerCase().trim();
-
-        if (!query) {
-          allCards.forEach(card => card.style.display = '');
-          searchCount.textContent = '';
-          return;
-        }
-
-        let visibleCount = 0;
-        allCards.forEach(card => {
-          const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
-          const description = card.querySelector('p')?.textContent.toLowerCase() || '';
-          const category = card.querySelector('.post-category')?.textContent.toLowerCase() || '';
-          const tags = card.dataset.tags?.toLowerCase() || '';
-
-          const searchText = `${title} ${description} ${category} ${tags}`;
-          const isMatch = searchText.includes(query);
-
-          card.style.display = isMatch ? '' : 'none';
-          if (isMatch) visibleCount++;
+        // 그리드
+        let visible = 0;
+        gridCards.forEach(card => {
+          const match = !query || (card.dataset.tags || '').toLowerCase().includes(query)
+            || (card.querySelector('h3')?.textContent || '').toLowerCase().includes(query)
+            || (card.querySelector('p')?.textContent || '').toLowerCase().includes(query)
+            || (card.querySelector('.post-category')?.textContent || '').toLowerCase().includes(query);
+          card.style.display = match ? '' : 'none';
+          if (match) visible++;
         });
-
-        searchCount.textContent = `${visibleCount}개의 검색 결과`;
+        searchCount.textContent = query ? (visible + '개의 검색 결과') : '';
+        // 덱 order 재계산
+        order = deckCards.map((c, i) => ({ i, ok: !query || (c.dataset.search || '').includes(query) }))
+                         .filter(x => x.ok).map(x => x.i);
+        pos = 0;
+        // 리스트 아이템 표시/숨김
+        listItems.forEach(it => { it.parentElement.style.display = (!query || (it.dataset.search || '').includes(query)) ? '' : 'none'; });
+        if (currentView === 'deck') renderDeck();
       }
 
       if (searchInput) {
         searchInput.addEventListener('input', performSearch);
-        // URL ?q= 파라미터로 진입 시 자동 검색 (상단 네비 검색·검색엔진 SearchAction 대응)
-        try {
-          const q = new URLSearchParams(window.location.search).get('q');
-          if (q) { searchInput.value = q; performSearch(); searchInput.focus(); }
-        } catch (e) {}
+        try { const q = new URLSearchParams(window.location.search).get('q'); if (q) { searchInput.value = q; performSearch(); } } catch (e) {}
       }
+
+      // 리스트 클릭 → 해당 카드로
+      listItems.forEach(it => it.addEventListener('click', () => jumpToIdx(Number(it.dataset.idx))));
+      // prev/next
+      document.getElementById('deck-prev')?.addEventListener('click', () => go(-1));
+      document.getElementById('deck-next')?.addEventListener('click', () => go(1));
+      // 키보드 (덱 활성 시)
+      document.addEventListener('keydown', (e) => {
+        if (currentView !== 'deck') return;
+        if (e.target && /^(INPUT|TEXTAREA)$/.test(e.target.tagName)) return;
+        if (e.key === 'ArrowRight') { e.preventDefault(); go(1); }
+        else if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
+      });
+      // 스와이프
+      const stage = document.getElementById('deck-cards');
+      let sx = 0, sy = 0;
+      stage?.addEventListener('touchstart', (e) => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
+      stage?.addEventListener('touchend', (e) => {
+        const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+        if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) go(dx < 0 ? 1 : -1);
+      }, { passive: true });
+
+      setView(saved);
     })();
   </script>
 </BaseLayout>
+
+<style>
+  /* ═══ 덱(문서 넘기기) 뷰 ═══ */
+  .deck-view {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 2rem;
+    align-items: start;
+    margin-bottom: 2rem;
+  }
+  .deck-stage { position: relative; perspective: 1900px; }
+  .deck-cards {
+    position: relative;
+    height: clamp(440px, 62vh, 580px);
+  }
+  .deck-card {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    transform-origin: left center;
+    transition: transform .55s cubic-bezier(.2,.7,.2,1), opacity .45s ease;
+    backface-visibility: hidden;
+  }
+  .deck-card .dc-media { display: block; height: 46%; overflow: hidden; background: var(--color-bg-secondary); }
+  .deck-card .dc-media img { width: 100%; height: 100%; object-fit: cover; }
+  .dc-body { flex: 1; display: flex; flex-direction: column; padding: 1.5rem 1.75rem 1.75rem; min-height: 0; }
+  .dc-cat {
+    align-self: flex-start;
+    font-size: .68rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase;
+    color: #fff; background: var(--cat, var(--color-primary)); padding: 4px 10px; border-radius: 5px;
+    margin-bottom: .85rem;
+  }
+  .dc-title {
+    font-family: var(--font-serif-ko);
+    font-size: clamp(1.35rem, 2.4vw, 1.9rem); font-weight: 800; line-height: 1.25; letter-spacing: -.01em;
+    margin-bottom: .7rem;
+  }
+  .dc-title a { color: var(--color-text); text-decoration: none; }
+  .dc-title a:hover { color: var(--color-primary); }
+  .dc-desc {
+    color: var(--color-text-secondary); font-size: .98rem; line-height: 1.65; flex: 1;
+    display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  .dc-foot {
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--color-border);
+    font-size: .82rem; color: var(--color-text-muted); font-variant-numeric: tabular-nums;
+  }
+  .dc-read { color: var(--color-primary); font-weight: 700; text-decoration: none; white-space: nowrap; }
+  .dc-read:hover { text-decoration: underline; }
+
+  /* 스택 위치별 상태 */
+  .deck-card.current { transform: none; opacity: 1; z-index: 5; }
+  .deck-card.peek1 { transform: translateY(16px) scale(.955); opacity: 1; z-index: 4; }
+  .deck-card.peek2 { transform: translateY(30px) scale(.912); opacity: .9; z-index: 3; }
+  .deck-card.hidden { transform: translateY(40px) scale(.88); opacity: 0; z-index: 2; pointer-events: none; }
+  .deck-card.gone { transform: rotateY(-118deg); opacity: 0; z-index: 6; pointer-events: none; }
+  .deck-card.out { display: none; }
+
+  .deck-controls {
+    display: flex; align-items: center; justify-content: center; gap: 1.25rem;
+    margin-top: 1.25rem;
+  }
+  .deck-nav {
+    width: 46px; height: 46px; border-radius: 50%;
+    border: 1.5px solid var(--color-border-strong); background: var(--color-bg); color: var(--color-text);
+    font-size: 1.2rem; cursor: pointer; display: inline-flex; align-items: center; justify-content: center;
+    transition: transform .15s, background .15s, color .15s, border-color .15s;
+  }
+  .deck-nav:hover { background: var(--color-primary); color: #fff; border-color: var(--color-primary); transform: scale(1.08); }
+  .deck-counter { font-variant-numeric: tabular-nums; font-weight: 700; color: var(--color-text-secondary); min-width: 72px; text-align: center; }
+  .deck-hint { text-align: center; font-size: .78rem; color: var(--color-text-muted); margin-top: .8rem; }
+
+  /* 우측 전체 리스트 */
+  .deck-list {
+    border: 1px solid var(--color-border); border-radius: 14px; background: var(--color-bg);
+    position: sticky; top: 84px; overflow: hidden;
+  }
+  .deck-list-head {
+    padding: .9rem 1.1rem; border-bottom: 1.5px solid var(--color-text);
+    font-weight: 800; font-size: .82rem; letter-spacing: .04em; text-transform: uppercase;
+  }
+  .deck-list-scroll { list-style: none; margin: 0; padding: .4rem; max-height: clamp(460px, 66vh, 620px); overflow-y: auto; }
+  .deck-list-item {
+    width: 100%; display: grid; grid-template-columns: auto 1fr; gap: .7rem; align-items: start;
+    background: none; border: none; text-align: left; cursor: pointer;
+    padding: .6rem .65rem; border-radius: 9px; color: inherit;
+    transition: background .15s;
+  }
+  .deck-list-item:hover { background: var(--color-bg-secondary); }
+  .deck-list-item.active { background: color-mix(in srgb, var(--color-primary) 12%, transparent); }
+  .deck-list-item.active .dli-title { color: var(--color-primary); }
+  .dli-num { font-family: var(--font-serif); font-size: .82rem; color: var(--color-text-muted); font-variant-numeric: tabular-nums; padding-top: .12rem; }
+  .dli-cat { display: block; font-size: .6rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--cat, var(--color-primary)); margin-bottom: .2rem; }
+  .dli-title { font-size: .86rem; font-weight: 600; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+  @media (max-width: 900px) {
+    .deck-view { grid-template-columns: 1fr; }
+    .deck-list { position: static; }
+    .deck-list-scroll { max-height: 320px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .deck-card { transition: opacity .25s ease; }
+    .deck-card.gone { transform: none; }
+  }
+</style>
