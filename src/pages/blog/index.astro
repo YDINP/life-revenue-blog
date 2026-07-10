@@ -81,6 +81,7 @@ const posts = sortedPosts.map((p) => {
       <div class="deck-cards" id="deck-cards">
         {posts.map((post, i) => (
           <article class="deck-card" data-idx={i} data-cat={post.category} data-search={post.search}>
+            <span class="dc-shade" aria-hidden="true"></span>
             {post.image && (
               <a class="dc-media" href={`/blog/${post.slug}/`}>
                 <img src={post.image} alt={post.title} loading="lazy" />
@@ -170,7 +171,24 @@ const posts = sortedPosts.map((p) => {
         });
       }
       function go(delta) { if (!order.length) return; pos = Math.max(0, Math.min(order.length - 1, pos + delta)); renderDeck(); }
-      function jumpToIdx(idx) { const r = order.indexOf(idx); if (r >= 0) { pos = r; renderDeck(); } }
+      let riffleTimer = null;
+      function riffleTo(idx) {
+        const target = order.indexOf(idx);
+        if (target < 0 || target === pos) { if (target === pos) renderDeck(); return; }
+        const cards = document.getElementById('deck-cards');
+        const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const dist = Math.abs(target - pos);
+        if (dist <= 1 || reduce) { pos = target; renderDeck(); return; }
+        const dir = target > pos ? 1 : -1;
+        const interval = dist > 25 ? 24 : dist > 10 ? 40 : 62;
+        cards.classList.add('riffling');
+        clearTimeout(riffleTimer);
+        (function step() {
+          if (pos === target) { cards.classList.remove('riffling'); renderDeck(); return; }
+          pos += dir; renderDeck();
+          riffleTimer = setTimeout(step, interval);
+        })();
+      }
 
       // ── 뷰 전환 ──
       function setView(view) {
@@ -217,8 +235,8 @@ const posts = sortedPosts.map((p) => {
         try { const q = new URLSearchParams(window.location.search).get('q'); if (q) { searchInput.value = q; performSearch(); } } catch (e) {}
       }
 
-      // 리스트 클릭 → 해당 카드로
-      listItems.forEach(it => it.addEventListener('click', () => jumpToIdx(Number(it.dataset.idx))));
+      // 리스트 클릭 → 해당 카드까지 촤라락 넘기기
+      listItems.forEach(it => it.addEventListener('click', () => riffleTo(Number(it.dataset.idx))));
       // prev/next
       document.getElementById('deck-prev')?.addEventListener('click', () => go(-1));
       document.getElementById('deck-next')?.addEventListener('click', () => go(1));
@@ -268,8 +286,15 @@ const posts = sortedPosts.map((p) => {
     box-shadow: var(--shadow-lg);
     overflow: hidden;
     transform-origin: left center;
-    transition: transform .55s cubic-bezier(.2,.7,.2,1), opacity .45s ease;
+    transition: transform .66s cubic-bezier(.36,.01,.18,1), opacity .5s ease, box-shadow .5s ease;
     backface-visibility: hidden;
+  }
+  /* 페이지 넘어갈 때 결을 주는 그림자 오버레이 */
+  .dc-shade {
+    position: absolute; inset: 0; z-index: 8; pointer-events: none;
+    border-radius: 16px;
+    background: linear-gradient(100deg, rgba(20,15,10,.42) 0%, rgba(20,15,10,.12) 30%, rgba(20,15,10,0) 55%);
+    opacity: 0; transition: opacity .5s ease;
   }
   .deck-card .dc-media { display: block; height: 46%; overflow: hidden; background: var(--color-bg-secondary); }
   .deck-card .dc-media img { width: 100%; height: 100%; object-fit: cover; }
@@ -304,8 +329,15 @@ const posts = sortedPosts.map((p) => {
   .deck-card.peek1 { transform: translateY(16px) scale(.955); opacity: 1; z-index: 4; }
   .deck-card.peek2 { transform: translateY(30px) scale(.912); opacity: .9; z-index: 3; }
   .deck-card.hidden { transform: translateY(40px) scale(.88); opacity: 0; z-index: 2; pointer-events: none; }
-  .deck-card.gone { transform: rotateY(-118deg); opacity: 0; z-index: 6; pointer-events: none; }
+  .deck-card.gone { transform: rotateY(-156deg); opacity: 0; z-index: 6; pointer-events: none; box-shadow: -18px 12px 40px -12px rgba(20,15,10,.5); }
+  .deck-card.gone .dc-shade { opacity: 1; }
   .deck-card.out { display: none; }
+
+  /* 리스트 점프 시 여러 장 촤라락 넘기기(riffle): 전환을 짧고 빠르게 */
+  .deck-cards.riffling .deck-card {
+    transition: transform .3s cubic-bezier(.36,.01,.18,1), opacity .22s ease;
+  }
+  .deck-cards.riffling .deck-card.gone { transform: rotateY(-162deg); }
 
   .deck-controls {
     display: flex; align-items: center; justify-content: center; gap: 1.25rem;
