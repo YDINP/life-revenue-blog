@@ -8,11 +8,11 @@ tags: [냉감가전, 휴대용선풍기, 제습기, 여름가전, 폭염]
 heroImage: "https://images.pexels.com/photos/5825576/pexels-photo-5825576.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "휴대용 목걸이 선풍기"
-    url: "https://www.coupang.com/np/search?component=&q=%EB%AA%A9%EA%B1%B8%EC%9D%B4+%EC%84%A0%ED%92%8D%EA%B8%B0&channel=user"
+    url: "https://link.coupang.com/a/fiHErmYA32"
   - title: "인버터 제습기 (10L급)"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%9D%B8%EB%B2%84%ED%84%B0+%EC%A0%9C%EC%8A%B5%EA%B8%B0&channel=user"
+    url: "https://link.coupang.com/a/fiHEtsegQC"
   - title: "저소음 서큘레이터"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%A0%80%EC%86%8C%EC%9D%8C+%EC%84%9C%ED%81%98%EB%A0%88%EC%9D%B4%ED%84%B0&channel=user"
+    url: "https://link.coupang.com/a/fiHEoSrtjo"
 faq:
   - q: "휴대용 선풍기는 배터리 용량이 몇 mAh면 충분한가요?"
     a: "하루 외출용이라면 4,000mAh 이상을 권장합니다. 약풍 기준 8~10시간, 강풍 기준 3~4시간 정도 작동해 출퇴근과 야외 활동을 커버합니다. 5,000mAh 이상은 무게가 늘지만 종일 사용이나 캠핑에 적합합니다. 반대로 2,000mAh대 초경량 모델은 가볍지만 강풍으로 틀면 2시간 내에 방전되니 짧은 이동용으로만 권합니다. 배터리는 KC 인증과 과충전 보호 회로 여부를 반드시 확인하세요."
@@ -78,7 +78,7 @@ faq:
 
 <div class="callout-warning">⚠️ 주의: 리튬배터리 내장 선풍기는 KC 인증과 과충전 보호 회로 여부를 반드시 확인하세요. 폭염 속 차량·직사광선에 방치하면 배터리 팽창·발화 위험이 있습니다.</div>
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=4%2C000mAh+%EC%9D%B4%EC%83%81+BLDC+%EC%A0%80%EC%86%8C%EC%9D%8C+%ED%9C%B4%EB%8C%80%EC%9A%A9+%EC%84%A0%ED%92%8D%EA%B8%B0&traceId=mrgdd71f&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://link.coupang.com/a/fiHEtwXgsu" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -101,7 +101,7 @@ faq:
 
 인버터 제습기는 정속형보다 전기료가 20~30% 저렴해 매일 켠다면 초기 가격 차이를 회수합니다. 물통 용량이 크거나 연속배수 호스를 지원하면 비울 번거로움이 줄어듭니다.
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%9D%B8%EB%B2%84%ED%84%B0+%EC%A0%9C%EC%8A%B5%EA%B8%B0&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://link.coupang.com/a/fiHEtsegQC" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">💧</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -133,7 +133,7 @@ faq:
 - 에어컨 없는 집: 서큘레이터 + 탁상용 선풍기 — 공기 순환으로 체감온도 최대한 하강
 - 사무실·재택: 저소음 탁상용 선풍기(40dB 이하) — 집중 방해 없이 국소 냉감
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%A0%80%EC%86%8C%EC%9D%8C+%EC%84%9C%ED%81%98%EB%A0%88%EC%9D%B4%ED%84%B0&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://link.coupang.com/a/fiHEoSrtjo" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🌀</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
