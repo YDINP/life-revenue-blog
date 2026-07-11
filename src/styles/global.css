@@ -1015,6 +1015,16 @@ section > h2::after {
 :root.dark .callout-warning { background: rgba(245, 158, 11, 0.12); }
 :root.dark .callout-info { background: rgba(59, 130, 246, 0.12); }
 
+/* 콜아웃 내부 링크(다른 글 인용) — 링크임을 명확히 */
+.post-content .callout-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1.5px;
+  font-weight: 700;
+}
+.post-content .callout-link:hover { opacity: 0.75; }
+
 .post-content .callout-tip strong,
 .post-content .callout-warning strong,
 .post-content .callout-info strong {

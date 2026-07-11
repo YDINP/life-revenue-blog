@@ -102,7 +102,7 @@ faq:
 - 총액 비교: 수하물·좌석 옵션까지 포함한 최종 결제액으로 최저가 판단
 - 메타서치 활용: 스카이스캐너·카약으로 노선별 최저가 흐름 확인
 
-<div class="callout-tip">💡 팁: 국내 여행과 비용을 저울질 중이라면 [지갑 얇아진 올여름, 가성비 국내 여행 예산별 가이드](/blog/2026-07-07-travel-budget-domestic-summer-vacation-guide/)와 예산을 나란히 비교해보세요. 현지 물가가 낮은 베트남은 항공권만 싸게 잡으면 국내 성수기 여행보다 총비용이 낮아지는 경우도 많습니다.</div>
+<div class="callout-tip">💡 팁: 국내 여행과 비용을 저울질 중이라면 <a href="/blog/2026-07-07-travel-budget-domestic-summer-vacation-guide/" class="callout-link">지갑 얇아진 올여름, 가성비 국내 여행 예산별 가이드</a>와 예산을 나란히 비교해보세요. 현지 물가가 낮은 베트남은 항공권만 싸게 잡으면 국내 성수기 여행보다 총비용이 낮아지는 경우도 많습니다.</div>
 
 국내 여행지도 함께 고민 중이라면 [2026 여름휴가 국내 여행지 추천 TOP 7](/blog/2026-07-08-travel-summer-domestic-destinations-2026-top7/)을 참고하세요.
 

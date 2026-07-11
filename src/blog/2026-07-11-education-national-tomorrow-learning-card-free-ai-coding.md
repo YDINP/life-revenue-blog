@@ -92,7 +92,7 @@ KDC에서 배울 수 있는 대표 분야는 다음과 같습니다.
 - 진도율 관리: 환급 조건인 80% 진도율을 놓치지 않도록 학습 일정을 미리 잡으세요.
 - 자기계발과 연결: 배운 AI 도구를 실제 업무에 적용하면 학습 효과가 배가됩니다.
 
-<div class="callout-tip">💡 팁: 퇴근 후 30분만 투자해도 3개월이면 자격증 하나가 가능합니다. AI 도구로 실제 업무 시간을 단축하는 방법은 [퇴근 후 30분, AI로 업무 생산성 2배 높이는 법](/blog/2026-07-06-education-ai-productivity-after-work/)에서 확인하세요.</div>
+<div class="callout-tip">💡 팁: 퇴근 후 30분만 투자해도 3개월이면 자격증 하나가 가능합니다. AI 도구로 실제 업무 시간을 단축하는 방법은 <a href="/blog/2026-07-06-education-ai-productivity-after-work/" class="callout-link">퇴근 후 30분, AI로 업무 생산성 2배 높이는 법</a>에서 확인하세요.</div>
 
 ---
 

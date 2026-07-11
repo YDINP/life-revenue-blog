@@ -121,7 +121,7 @@ faq:
 - 지사제 주의: 독소 배출을 막아 권장되지 않음
 - 병원 신호: 39도 이상 고열, 혈변, 심한 복통, 하루 6회 이상 구토·설사, 소변 감소
 
-<div class="callout-warning">⚠️ 주의: 어린이·고령자·임산부·만성질환자는 증상이 가벼워도 빠르게 악화될 수 있으니 조기에 진료받으세요. 여름철 온열질환과 겹치면 탈수가 더 심해집니다. [2026 역대급 폭염 대비 건강관리 가이드](/blog/2026-07-08-health-heatwave-health-management-guide/)도 함께 확인하세요.</div>
+<div class="callout-warning">⚠️ 주의: 어린이·고령자·임산부·만성질환자는 증상이 가벼워도 빠르게 악화될 수 있으니 조기에 진료받으세요. 여름철 온열질환과 겹치면 탈수가 더 심해집니다. <a href="/blog/2026-07-08-health-heatwave-health-management-guide/" class="callout-link">2026 역대급 폭염 대비 건강관리 가이드</a>도 함께 확인하세요.</div>
 
 ---
 

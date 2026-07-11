@@ -99,7 +99,7 @@ faq:
 
 <div class="chart-progress" data-title="냉방비 절감 방법별 효과 체감도" data-labels="혼합 냉방,설정온도 1도↑,필터 청소,차광 커튼" data-values="85,80,66,58" data-colors="#2563eb,#10b981,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
 
-<div class="callout-tip">💡 팁: 어떤 냉감가전을 조합할지 고민된다면 [2026 여름 휴대용 선풍기·제습기 추천 TOP](/blog/2026-07-11-lifestyle-cooling-appliances-fan-dehumidifier-2026/)에서 공간별 조합을 확인하세요. 장마철엔 제습기만으로도 끈적임이 줄어 에어컨 가동을 줄일 수 있습니다.</div>
+<div class="callout-tip">💡 팁: 어떤 냉감가전을 조합할지 고민된다면 <a href="/blog/2026-07-11-lifestyle-cooling-appliances-fan-dehumidifier-2026/" class="callout-link">2026 여름 휴대용 선풍기·제습기 추천 TOP</a>에서 공간별 조합을 확인하세요. 장마철엔 제습기만으로도 끈적임이 줄어 에어컨 가동을 줄일 수 있습니다.</div>
 
 ---
 
