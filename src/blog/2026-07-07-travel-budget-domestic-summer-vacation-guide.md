@@ -8,9 +8,9 @@ tags: [가성비여행, 국내여행, 여행예산, 여름휴가, 절약팁]
 heroImage: "https://images.pexels.com/photos/3990359/pexels-photo-3990359.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "여행용 보조배터리"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89%EC%9A%A9+%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%97%AC%ED%96%89%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&src=1139000&spec=10799999&addtag=200&ctag=%EC%97%AC%ED%96%89%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%97%AC%ED%96%89%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC"
   - title: "여행 파우치"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89+%ED%8C%8C%EC%9A%B0%EC%B9%98&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%97%AC%ED%96%89%20%ED%8C%8C%EC%9A%B0%EC%B9%98&src=1139000&spec=10799999&addtag=200&ctag=%EC%97%AC%ED%96%89%20%ED%8C%8C%EC%9A%B0%EC%B9%98&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%97%AC%ED%96%89%20%ED%8C%8C%EC%9A%B0%EC%B9%98"
 faq:
   - q: "10만원으로 정말 1박 2일 여행이 가능한가요?"
     a: "네, 가능합니다. 1인 기준 무궁화호·시외버스 왕복(2만~3만원), 게스트하우스 도미토리(2만~3만원), 편의점·현지 분식 식사(2만원), 무료 관광지 위주 코스로 구성하면 9만~10만원 안에서 알찬 1박 2일이 됩니다. 핵심은 KTX 대신 무궁화호를 타고, 숙박은 도미토리나 찜질방을 활용하는 것입니다. 유료 입장료가 큰 관광지는 피하는 게 좋습니다."
@@ -41,7 +41,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89%EC%9A%A9+%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%97%AC%ED%96%89%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&src=1139000&spec=10799999&addtag=200&ctag=%EC%97%AC%ED%96%89%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%97%AC%ED%96%89%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -149,7 +149,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89+%ED%8C%8C%EC%9A%B0%EC%B9%98&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%97%AC%ED%96%89%20%ED%8C%8C%EC%9A%B0%EC%B9%98&src=1139000&spec=10799999&addtag=200&ctag=%EC%97%AC%ED%96%89%20%ED%8C%8C%EC%9A%B0%EC%B9%98&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%97%AC%ED%96%89%20%ED%8C%8C%EC%9A%B0%EC%B9%98" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>

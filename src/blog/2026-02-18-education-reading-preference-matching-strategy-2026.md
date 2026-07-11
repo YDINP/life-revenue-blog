@@ -13,9 +13,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/5852307/pexels-photo-5852307.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "독서등 LED"
-    url: "https://www.coupang.com/np/search?component=&q=%EB%8F%85%EC%84%9C%EB%93%B1+LED&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EB%8F%85%EC%84%9C%EB%93%B1%20LED&src=1139000&spec=10799999&addtag=200&ctag=%EB%8F%85%EC%84%9C%EB%93%B1%20LED&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%8F%85%EC%84%9C%EB%93%B1%20LED"
   - title: "아이패드 에어 M2"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C+%EC%97%90%EC%96%B4+M2&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2&src=1139000&spec=10799999&addtag=200&ctag=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2"
 faq:
   - q: "내가 어떤 독서 유형인지 어떻게 알 수 있나요?"
     a: "지난 1년간 읽은 책 3~5권을 생각해보세요. 그 책들의 공통점(장르, 주제, 형식)이 당신의 선호도입니다. 분석형은 데이터가 풍부한 책, 감정형은 스토리 기반 책, 행동형은 실무 가이드, 탐험형은 다양한 주제의 책을 반복해서 선택했을 확률이 높습니다."
@@ -34,7 +34,7 @@ faq:
 본 포스트에서는 자신의 독서 성향을 파악하고, 그에 맞는 책을 선택하는 방법을 소개합니다.
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EB%8F%85%EC%84%9C%EB%93%B1+LED&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EB%8F%85%EC%84%9C%EB%93%B1%20LED&src=1139000&spec=10799999&addtag=200&ctag=%EB%8F%85%EC%84%9C%EB%93%B1%20LED&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%8F%85%EC%84%9C%EB%93%B1%20LED" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -192,7 +192,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C+%EC%97%90%EC%96%B4+M2&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2&src=1139000&spec=10799999&addtag=200&ctag=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -205,6 +205,6 @@ faq:
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [독서등 LED](https://www.coupang.com/np/search?component=&q=%EB%8F%85%EC%84%9C%EB%93%B1+LED&channel=user)
-- [아이패드 에어 M2](https://www.coupang.com/np/search?component=&q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C+%EC%97%90%EC%96%B4+M2&channel=user)
+- [독서등 LED](https://www.coupang.com/np/search?q=%EB%8F%85%EC%84%9C%EB%93%B1%20LED&src=1139000&spec=10799999&addtag=200&ctag=%EB%8F%85%EC%84%9C%EB%93%B1%20LED&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%8F%85%EC%84%9C%EB%93%B1%20LED)
+- [아이패드 에어 M2](https://www.coupang.com/np/search?q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2&src=1139000&spec=10799999&addtag=200&ctag=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2)
 

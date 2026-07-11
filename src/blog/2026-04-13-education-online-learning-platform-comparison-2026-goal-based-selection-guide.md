@@ -14,9 +14,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/17485350/pexels-photo-17485350.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "자기계발 도서 모음"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C+%EB%8F%84%EC%84%9C+%EB%AA%A8%EC%9D%8C&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C%20%EB%8F%84%EC%84%9C%20%EB%AA%A8%EC%9D%8C&src=1139000&spec=10799999&addtag=200&ctag=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C%20%EB%8F%84%EC%84%9C%20%EB%AA%A8%EC%9D%8C&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C%20%EB%8F%84%EC%84%9C%20%EB%AA%A8%EC%9D%8C"
   - title: "아이패드 에어 M2"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C+%EC%97%90%EC%96%B4+M2&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2&src=1139000&spec=10799999&addtag=200&ctag=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2"
 faq:
   - q: "온라인 강의를 완료할 가능성을 높이려면 어떤 플랫폼을 선택해야 할까요?"
     a: "월 정액제(클래스101, 코드잇)는 심리적으로 \"더 많이 보자\"는 동기를 주고, 개별 구매제(인프런)는 \"이미 샀으니 완료하자\"는 손실회피심을 자극합니다. 당신의 성향에 맞춰 선택하세요. 라이브 강의가 포함된 패스트캠퍼스는 정해진 일정 때문에 강제성이 높습니다."
@@ -33,7 +33,7 @@ faq:
 기존 포스트에서 유명한 3개 플랫폼을 비교했다면, 이번에는 최신 가격 데이터, 실제 사용자 후기, 커리큘럼 심화 비교를 통해 더 구체적인 선택 기준을 제시합니다. 특히 "이 플랫폼이 최고"라는 단순한 결론 대신, 당신의 학습 목표에 정확히 맞는 플랫폼을 찾는 실전 방법을 알려드리겠습니다.
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C+%EB%8F%84%EC%84%9C+%EB%AA%A8%EC%9D%8C&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C%20%EB%8F%84%EC%84%9C%20%EB%AA%A8%EC%9D%8C&src=1139000&spec=10799999&addtag=200&ctag=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C%20%EB%8F%84%EC%84%9C%20%EB%AA%A8%EC%9D%8C&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C%20%EB%8F%84%EC%84%9C%20%EB%AA%A8%EC%9D%8C" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -229,7 +229,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C+%EC%97%90%EC%96%B4+M2&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2&src=1139000&spec=10799999&addtag=200&ctag=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -242,6 +242,6 @@ faq:
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [자기계발 도서 모음](https://www.coupang.com/np/search?component=&q=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C+%EB%8F%84%EC%84%9C+%EB%AA%A8%EC%9D%8C&channel=user)
-- [아이패드 에어 M2](https://www.coupang.com/np/search?component=&q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C+%EC%97%90%EC%96%B4+M2&channel=user)
+- [자기계발 도서 모음](https://www.coupang.com/np/search?q=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C%20%EB%8F%84%EC%84%9C%20%EB%AA%A8%EC%9D%8C&src=1139000&spec=10799999&addtag=200&ctag=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C%20%EB%8F%84%EC%84%9C%20%EB%AA%A8%EC%9D%8C&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C%20%EB%8F%84%EC%84%9C%20%EB%AA%A8%EC%9D%8C)
+- [아이패드 에어 M2](https://www.coupang.com/np/search?q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2&src=1139000&spec=10799999&addtag=200&ctag=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2)
 

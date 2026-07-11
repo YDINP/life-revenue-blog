@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/32832431/pexels-photo-32832431.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "종이 다이어리"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%A2%85%EC%9D%B4+%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%A2%85%EC%9D%B4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&src=1139000&spec=10799999&addtag=200&ctag=%EC%A2%85%EC%9D%B4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%A2%85%EC%9D%B4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC"
   - title: "디지털 미니멀리즘 도서"
-    url: "https://www.coupang.com/np/search?component=&q=%EB%94%94%EC%A7%80%ED%84%B8+%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98+%EB%8F%84%EC%84%9C&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EB%94%94%EC%A7%80%ED%84%B8%20%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EB%94%94%EC%A7%80%ED%84%B8%20%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%94%94%EC%A7%80%ED%84%B8%20%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98%20%EB%8F%84%EC%84%9C"
 faq:
   - q: "모닝 루틴은 몇 분부터 시작해야 효과가 있나요?"
     a: "연구에 따르면 최소 20~30분 이상의 일관된 루틴이 측정 가능한 효과를 보입니다. 다만 5분이라도 매일 실천하는 것이 주 1회 30분보다 훨씬 효과적입니다. 처음에는 15분 미니 루틴으로 시작하여 점진적으로 확장하는 것을 추천합니다."
@@ -32,7 +32,7 @@ faq:
 아침은 하루의 품질을 결정하는 가장 중요한 시간입니다. 많은 사람들이 "모닝 루틴을 만들어야 한다"는 것을 알지만, 실제로 어떻게 구성해야 효과적인지에 대해서는 혼란스러워합니다. 이 글에서는 수면 과학, 신경생물학, 행동심리학을 기반으로 한 검증된 모닝 루틴 설계법을 소개합니다.
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%A2%85%EC%9D%B4+%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%A2%85%EC%9D%B4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&src=1139000&spec=10799999&addtag=200&ctag=%EC%A2%85%EC%9D%B4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%A2%85%EC%9D%B4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -237,7 +237,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EB%94%94%EC%A7%80%ED%84%B8+%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98+%EB%8F%84%EC%84%9C&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EB%94%94%EC%A7%80%ED%84%B8%20%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EB%94%94%EC%A7%80%ED%84%B8%20%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%94%94%EC%A7%80%ED%84%B8%20%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98%20%EB%8F%84%EC%84%9C" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -250,6 +250,6 @@ faq:
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [종이 다이어리](https://www.coupang.com/np/search?component=&q=%EC%A2%85%EC%9D%B4+%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&channel=user)
-- [디지털 미니멀리즘 도서](https://www.coupang.com/np/search?component=&q=%EB%94%94%EC%A7%80%ED%84%B8+%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98+%EB%8F%84%EC%84%9C&channel=user)
+- [종이 다이어리](https://www.coupang.com/np/search?q=%EC%A2%85%EC%9D%B4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&src=1139000&spec=10799999&addtag=200&ctag=%EC%A2%85%EC%9D%B4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%A2%85%EC%9D%B4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC)
+- [디지털 미니멀리즘 도서](https://www.coupang.com/np/search?q=%EB%94%94%EC%A7%80%ED%84%B8%20%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EB%94%94%EC%A7%80%ED%84%B8%20%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%94%94%EC%A7%80%ED%84%B8%20%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98%20%EB%8F%84%EC%84%9C)
 

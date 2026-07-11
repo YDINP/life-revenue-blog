@@ -8,9 +8,9 @@ tags: ["온라인강의", "자기계발", "교육", "플랫폼비교"]
 heroImage: "https://images.pexels.com/photos/4145153/pexels-photo-4145153.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "온라인 학습용 태블릿"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%98%A8%EB%9D%BC%EC%9D%B8+%ED%95%99%EC%8A%B5%EC%9A%A9+%ED%83%9C%EB%B8%94%EB%A6%BF&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%98%A8%EB%9D%BC%EC%9D%B8%20%ED%95%99%EC%8A%B5%EC%9A%A9%20%ED%83%9C%EB%B8%94%EB%A6%BF&src=1139000&spec=10799999&addtag=200&ctag=%EC%98%A8%EB%9D%BC%EC%9D%B8%20%ED%95%99%EC%8A%B5%EC%9A%A9%20%ED%83%9C%EB%B8%94%EB%A6%BF&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%98%A8%EB%9D%BC%EC%9D%B8%20%ED%95%99%EC%8A%B5%EC%9A%A9%20%ED%83%9C%EB%B8%94%EB%A6%BF"
   - title: "무선 이어폰"
-    url: "https://www.coupang.com/np/search?component=&q=%EB%AC%B4%EC%84%A0+%EC%9D%B4%EC%96%B4%ED%8F%B0&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EB%AC%B4%EC%84%A0%20%EC%9D%B4%EC%96%B4%ED%8F%B0&src=1139000&spec=10799999&addtag=200&ctag=%EB%AC%B4%EC%84%A0%20%EC%9D%B4%EC%96%B4%ED%8F%B0&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%AC%B4%EC%84%A0%20%EC%9D%B4%EC%96%B4%ED%8F%B0"
 ---
 # 온라인 강의 플랫폼 비교: 2026년 완벽 가이드
 
@@ -39,7 +39,7 @@ coupangLinks:
 타겟: 다양한 분야 학습자
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%98%A8%EB%9D%BC%EC%9D%B8+%ED%95%99%EC%8A%B5%EC%9A%A9+%ED%83%9C%EB%B8%94%EB%A6%BF&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%98%A8%EB%9D%BC%EC%9D%B8%20%ED%95%99%EC%8A%B5%EC%9A%A9%20%ED%83%9C%EB%B8%94%EB%A6%BF&src=1139000&spec=10799999&addtag=200&ctag=%EC%98%A8%EB%9D%BC%EC%9D%B8%20%ED%95%99%EC%8A%B5%EC%9A%A9%20%ED%83%9C%EB%B8%94%EB%A6%BF&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%98%A8%EB%9D%BC%EC%9D%B8%20%ED%95%99%EC%8A%B5%EC%9A%A9%20%ED%83%9C%EB%B8%94%EB%A6%BF" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -272,7 +272,7 @@ coupangLinks:
 가장 중요한 것은 완강입니다. 비싼 강의를 사고 듣지 않는 것보다, 저렴한 강의라도 끝까지 듣고 실습하는 것이 백배 낫습니다. 지금 바로 관심 분야 강의를 찾아보고, 첫 수강 신청을 해보세요!
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EB%AC%B4%EC%84%A0+%EC%9D%B4%EC%96%B4%ED%8F%B0&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EB%AC%B4%EC%84%A0%20%EC%9D%B4%EC%96%B4%ED%8F%B0&src=1139000&spec=10799999&addtag=200&ctag=%EB%AC%B4%EC%84%A0%20%EC%9D%B4%EC%96%B4%ED%8F%B0&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%AC%B4%EC%84%A0%20%EC%9D%B4%EC%96%B4%ED%8F%B0" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>

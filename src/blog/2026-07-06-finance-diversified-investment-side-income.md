@@ -8,9 +8,9 @@ tags: [통장쪼개기, N잡, 분산투자, 부업, 가계관리]
 heroImage: "https://images.pexels.com/photos/3943716/pexels-photo-3943716.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "뱅크샐러드 프리미엄 가계부 이용권"
-    url: "https://www.coupang.com/np/search?component=&q=%EB%B1%85%ED%81%AC%EC%83%90%EB%9F%AC%EB%93%9C+%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84+%EA%B0%80%EA%B3%84%EB%B6%80+%EC%9D%B4%EC%9A%A9%EA%B6%8C&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EB%B1%85%ED%81%AC%EC%83%90%EB%9F%AC%EB%93%9C%20%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84%20%EA%B0%80%EA%B3%84%EB%B6%80%20%EC%9D%B4%EC%9A%A9%EA%B6%8C&src=1139000&spec=10799999&addtag=200&ctag=%EB%B1%85%ED%81%AC%EC%83%90%EB%9F%AC%EB%93%9C%20%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84%20%EA%B0%80%EA%B3%84%EB%B6%80%20%EC%9D%B4%EC%9A%A9%EA%B6%8C&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%B1%85%ED%81%AC%EC%83%90%EB%9F%AC%EB%93%9C%20%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84%20%EA%B0%80%EA%B3%84%EB%B6%80%20%EC%9D%B4%EC%9A%A9%EA%B6%8C"
   - title: "2026 위클리 머니 다이어리"
-    url: "https://www.coupang.com/np/search?component=&q=2026+%EC%9C%84%ED%81%B4%EB%A6%AC+%EB%A8%B8%EB%8B%88+%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&channel=user"
+    url: "https://www.coupang.com/np/search?q=2026%20%EC%9C%84%ED%81%B4%EB%A6%AC%20%EB%A8%B8%EB%8B%88%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&src=1139000&spec=10799999&addtag=200&ctag=2026%20%EC%9C%84%ED%81%B4%EB%A6%AC%20%EB%A8%B8%EB%8B%88%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&lptag=AF7838146&pageType=SEARCH&pageValue=2026%20%EC%9C%84%ED%81%B4%EB%A6%AC%20%EB%A8%B8%EB%8B%88%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC"
 faq:
   - q: "통장은 정확히 몇 개로 나누는 게 좋나요?"
     a: "정답은 없지만 초보자에게는 4개 시스템을 권합니다. 급여가 들어오는 월급 통장, 급전에 대비하는 비상금 통장, 자산을 불리는 투자 통장, 실제로 쓰는 소비 통장입니다. 처음부터 너무 잘게 쪼개면 관리가 번거로워 지속하기 어렵습니다. 4개로 습관을 들인 뒤 목표별로 하나씩 늘려가는 방식이 현실적입니다."
@@ -41,7 +41,7 @@ faq:
 <div class="callout-info">📌 <strong>참고:</strong> 통장 쪼개기의 핵심은 '개수'가 아니라 '자동화'입니다. 급여일 다음 날 자동이체를 걸어두면 의지력에 기대지 않고도 배분이 유지됩니다.</div>
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EB%B1%85%ED%81%AC%EC%83%90%EB%9F%AC%EB%93%9C+%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84+%EA%B0%80%EA%B3%84%EB%B6%80+%EC%9D%B4%EC%9A%A9%EA%B6%8C&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EB%B1%85%ED%81%AC%EC%83%90%EB%9F%AC%EB%93%9C%20%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84%20%EA%B0%80%EA%B3%84%EB%B6%80%20%EC%9D%B4%EC%9A%A9%EA%B6%8C&src=1139000&spec=10799999&addtag=200&ctag=%EB%B1%85%ED%81%AC%EC%83%90%EB%9F%AC%EB%93%9C%20%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84%20%EA%B0%80%EA%B3%84%EB%B6%80%20%EC%9D%B4%EC%9A%A9%EA%B6%8C&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%B1%85%ED%81%AC%EC%83%90%EB%9F%AC%EB%93%9C%20%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84%20%EA%B0%80%EA%B3%84%EB%B6%80%20%EC%9D%B4%EC%9A%A9%EA%B6%8C" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -96,7 +96,7 @@ faq:
 - 비상금 투자화: 비상금을 수익 목적 상품에 넣으면 정작 필요할 때 손실 구간일 수 있습니다.
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=2026+%EC%9C%84%ED%81%B4%EB%A6%AC+%EB%A8%B8%EB%8B%88+%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=2026%20%EC%9C%84%ED%81%B4%EB%A6%AC%20%EB%A8%B8%EB%8B%88%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&src=1139000&spec=10799999&addtag=200&ctag=2026%20%EC%9C%84%ED%81%B4%EB%A6%AC%20%EB%A8%B8%EB%8B%88%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&lptag=AF7838146&pageType=SEARCH&pageValue=2026%20%EC%9C%84%ED%81%B4%EB%A6%AC%20%EB%A8%B8%EB%8B%88%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>

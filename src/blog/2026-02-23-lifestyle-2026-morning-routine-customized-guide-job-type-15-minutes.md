@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/32832431/pexels-photo-32832431.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "종이 다이어리"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%A2%85%EC%9D%B4+%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%A2%85%EC%9D%B4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&src=1139000&spec=10799999&addtag=200&ctag=%EC%A2%85%EC%9D%B4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%A2%85%EC%9D%B4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC"
   - title: "아날로그 알람시계"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8+%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&src=1139000&spec=10799999&addtag=200&ctag=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84"
 faq:
   - q: "모닝 루틴을 몇 주 후 포기했어요. 다시 시작하려면?"
     a: "포기한 것은 당연합니다. 처음부터 완벽하게 할 수 없습니다. 이번엔 15분 중 3가지(물 마시기, 세안, 아침 식사)만 하는 것부터 시작하세요. 충분히 익숙해진 후 2주마다 하나씩 추가하는 '점진적 방식'이 훨씬 효과적입니다."
@@ -34,7 +34,7 @@ faq:
 2026년에는 자신의 라이프스타일에 맞는 맞춤형 모닝 루틴이 필수입니다. 이 글에서는 생활 형태별로 최적화된 15분 모닝 루틴과 실제 체크리스트를 제시합니다.
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%A2%85%EC%9D%B4+%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%A2%85%EC%9D%B4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&src=1139000&spec=10799999&addtag=200&ctag=%EC%A2%85%EC%9D%B4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%A2%85%EC%9D%B4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -208,7 +208,7 @@ YouTube 운동 영상(5~10분) 또는 주변 산책으로 신체를 깨웁니다
 ---
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8+%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&src=1139000&spec=10799999&addtag=200&ctag=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -221,6 +221,6 @@ YouTube 운동 영상(5~10분) 또는 주변 산책으로 신체를 깨웁니다
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [종이 다이어리](https://www.coupang.com/np/search?component=&q=%EC%A2%85%EC%9D%B4+%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&channel=user)
-- [아날로그 알람시계](https://www.coupang.com/np/search?component=&q=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8+%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&channel=user)
+- [종이 다이어리](https://www.coupang.com/np/search?q=%EC%A2%85%EC%9D%B4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&src=1139000&spec=10799999&addtag=200&ctag=%EC%A2%85%EC%9D%B4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%A2%85%EC%9D%B4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC)
+- [아날로그 알람시계](https://www.coupang.com/np/search?q=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&src=1139000&spec=10799999&addtag=200&ctag=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84)
 

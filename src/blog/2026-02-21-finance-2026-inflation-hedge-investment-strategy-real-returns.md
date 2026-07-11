@@ -14,9 +14,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/32417524/pexels-photo-32417524.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "ETF 투자 가이드북"
-    url: "https://www.coupang.com/np/search?component=&q=ETF+%ED%88%AC%EC%9E%90+%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81&channel=user"
+    url: "https://www.coupang.com/np/search?q=ETF%20%ED%88%AC%EC%9E%90%20%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81&src=1139000&spec=10799999&addtag=200&ctag=ETF%20%ED%88%AC%EC%9E%90%20%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81&lptag=AF7838146&pageType=SEARCH&pageValue=ETF%20%ED%88%AC%EC%9E%90%20%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81"
   - title: "주식투자 무작정 따라하기"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90+%EB%AC%B4%EC%9E%91%EC%A0%95+%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%20%EB%AC%B4%EC%9E%91%EC%A0%95%20%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0&src=1139000&spec=10799999&addtag=200&ctag=%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%20%EB%AC%B4%EC%9E%91%EC%A0%95%20%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%20%EB%AC%B4%EC%9E%91%EC%A0%95%20%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0"
 faq:
   - q: "2026년에는 정말 인플레이션이 계속될까요?"
     a: "한국은행의 2026년 물가전망은 2~3% 수준으로 예상되고 있습니다. 글로벌적으로도 선진국 중앙은행들이 인플레이션 관리에 주력하고 있어, 급격한 상승은 제한적일 것으로 보입니다. 다만 원유, 곡물 등 글로벌 상품가 변동성에 주의해야 합니다."
@@ -33,7 +33,7 @@ faq:
 예를 들어 연 2% 이자율의 보통예금에 1,000만 원을 예치해도, 물가가 3% 상승하면 실질 수익률은 -1%가 됩니다. 이는 자산이 오히려 감소하는 것과 같습니다. 따라서 2026년의 현명한 재테크는 인플레이션을 초과하는 수익을 제공하는 자산을 선별하는 데 있습니다.
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=ETF+%ED%88%AC%EC%9E%90+%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=ETF%20%ED%88%AC%EC%9E%90%20%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81&src=1139000&spec=10799999&addtag=200&ctag=ETF%20%ED%88%AC%EC%9E%90%20%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81&lptag=AF7838146&pageType=SEARCH&pageValue=ETF%20%ED%88%AC%EC%9E%90%20%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -166,7 +166,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90+%EB%AC%B4%EC%9E%91%EC%A0%95+%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%20%EB%AC%B4%EC%9E%91%EC%A0%95%20%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0&src=1139000&spec=10799999&addtag=200&ctag=%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%20%EB%AC%B4%EC%9E%91%EC%A0%95%20%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%20%EB%AC%B4%EC%9E%91%EC%A0%95%20%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -179,6 +179,6 @@ faq:
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [ETF 투자 가이드북](https://www.coupang.com/np/search?component=&q=ETF+%ED%88%AC%EC%9E%90+%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81&channel=user)
-- [주식투자 무작정 따라하기](https://www.coupang.com/np/search?component=&q=%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90+%EB%AC%B4%EC%9E%91%EC%A0%95+%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0&channel=user)
+- [ETF 투자 가이드북](https://www.coupang.com/np/search?q=ETF%20%ED%88%AC%EC%9E%90%20%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81&src=1139000&spec=10799999&addtag=200&ctag=ETF%20%ED%88%AC%EC%9E%90%20%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81&lptag=AF7838146&pageType=SEARCH&pageValue=ETF%20%ED%88%AC%EC%9E%90%20%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81)
+- [주식투자 무작정 따라하기](https://www.coupang.com/np/search?q=%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%20%EB%AC%B4%EC%9E%91%EC%A0%95%20%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0&src=1139000&spec=10799999&addtag=200&ctag=%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%20%EB%AC%B4%EC%9E%91%EC%A0%95%20%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%20%EB%AC%B4%EC%9E%91%EC%A0%95%20%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0)
 

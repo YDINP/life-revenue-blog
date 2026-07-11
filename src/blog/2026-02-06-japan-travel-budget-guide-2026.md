@@ -8,9 +8,9 @@ tags: ["일본여행", "여행예산", "해외여행", "여행팁"]
 heroImage: "https://images.pexels.com/photos/402028/pexels-photo-402028.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "여행용 캐리어"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89%EC%9A%A9+%EC%BA%90%EB%A6%AC%EC%96%B4&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%97%AC%ED%96%89%EC%9A%A9%20%EC%BA%90%EB%A6%AC%EC%96%B4&src=1139000&spec=10799999&addtag=200&ctag=%EC%97%AC%ED%96%89%EC%9A%A9%20%EC%BA%90%EB%A6%AC%EC%96%B4&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%97%AC%ED%96%89%EC%9A%A9%20%EC%BA%90%EB%A6%AC%EC%96%B4"
   - title: "휴대용 보조배터리"
-    url: "https://www.coupang.com/np/search?component=&q=%ED%9C%B4%EB%8C%80%EC%9A%A9+%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&channel=user"
+    url: "https://www.coupang.com/np/search?q=%ED%9C%B4%EB%8C%80%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&src=1139000&spec=10799999&addtag=200&ctag=%ED%9C%B4%EB%8C%80%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%ED%9C%B4%EB%8C%80%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC"
 ---
 # 일본 여행 예산 가이드: 2026년 완벽 플랜
 
@@ -27,7 +27,7 @@ coupangLinks:
 여유 (프리미엄): 200만원+
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89%EC%9A%A9+%EC%BA%90%EB%A6%AC%EC%96%B4&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%97%AC%ED%96%89%EC%9A%A9%20%EC%BA%90%EB%A6%AC%EC%96%B4&src=1139000&spec=10799999&addtag=200&ctag=%EC%97%AC%ED%96%89%EC%9A%A9%20%EC%BA%90%EB%A6%AC%EC%96%B4&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%97%AC%ED%96%89%EC%9A%A9%20%EC%BA%90%EB%A6%AC%EC%96%B4" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -249,7 +249,7 @@ USJ (오사카): 1만엔
 가장 중요한 것은 예산에 맞춰 계획을 세우는 것입니다. 항공권과 숙소만 잘 잡아도 절반은 성공입니다. 지금 바로 항공권 가격을 검색하고, 첫 일본 여행을 떠나보세요!
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%ED%9C%B4%EB%8C%80%EC%9A%A9+%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%ED%9C%B4%EB%8C%80%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&src=1139000&spec=10799999&addtag=200&ctag=%ED%9C%B4%EB%8C%80%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%ED%9C%B4%EB%8C%80%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>

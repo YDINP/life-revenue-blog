@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/247819/pexels-photo-247819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "아이패드 에어 M2"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C+%EC%97%90%EC%96%B4+M2&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2&src=1139000&spec=10799999&addtag=200&ctag=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2"
   - title: "자기계발 도서 모음"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C+%EB%8F%84%EC%84%9C+%EB%AA%A8%EC%9D%8C&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C%20%EB%8F%84%EC%84%9C%20%EB%AA%A8%EC%9D%8C&src=1139000&spec=10799999&addtag=200&ctag=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C%20%EB%8F%84%EC%84%9C%20%EB%AA%A8%EC%9D%8C&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C%20%EB%8F%84%EC%84%9C%20%EB%AA%A8%EC%9D%8C"
 ---
 # 외국어 학습 전략: 효율적인 방법 5가지로 3개월 내 실력 UP하기
 
@@ -34,7 +34,7 @@ coupangLinks:
 위 차트에서 보듯이 복합 학습 전략을 사용한 학습자들이 가장 빠른 실력 향상을 보였습니다.
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C+%EC%97%90%EC%96%B4+M2&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2&src=1139000&spec=10799999&addtag=200&ctag=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -143,11 +143,11 @@ Anki, Quizlet 같은 앱을 사용하면 자동으로 복습 일정을 관리할
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [아이패드 에어 M2](https://www.coupang.com/np/search?component=&q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C+%EC%97%90%EC%96%B4+M2&channel=user)
-- [자기계발 도서 모음](https://www.coupang.com/np/search?component=&q=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C+%EB%8F%84%EC%84%9C+%EB%AA%A8%EC%9D%8C&channel=user)
+- [아이패드 에어 M2](https://www.coupang.com/np/search?q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2&src=1139000&spec=10799999&addtag=200&ctag=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2)
+- [자기계발 도서 모음](https://www.coupang.com/np/search?q=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C%20%EB%8F%84%EC%84%9C%20%EB%AA%A8%EC%9D%8C&src=1139000&spec=10799999&addtag=200&ctag=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C%20%EB%8F%84%EC%84%9C%20%EB%AA%A8%EC%9D%8C&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C%20%EB%8F%84%EC%84%9C%20%EB%AA%A8%EC%9D%8C)
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C+%EB%8F%84%EC%84%9C+%EB%AA%A8%EC%9D%8C&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C%20%EB%8F%84%EC%84%9C%20%EB%AA%A8%EC%9D%8C&src=1139000&spec=10799999&addtag=200&ctag=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C%20%EB%8F%84%EC%84%9C%20%EB%AA%A8%EC%9D%8C&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C%20%EB%8F%84%EC%84%9C%20%EB%AA%A8%EC%9D%8C" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>

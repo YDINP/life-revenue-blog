@@ -8,9 +8,9 @@ tags: [SQLD, ADsP, 데이터자격증, 비전공자, 자격증준비]
 heroImage: "https://images.pexels.com/photos/6533345/pexels-photo-6533345.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "SQLD 국가공인 자격 대비 교재"
-    url: "https://www.coupang.com/np/search?component=&q=SQLD+%EA%B5%AD%EA%B0%80%EA%B3%B5%EC%9D%B8+%EC%9E%90%EA%B2%A9+%EB%8C%80%EB%B9%84+%EA%B5%90%EC%9E%AC&channel=user"
+    url: "https://www.coupang.com/np/search?q=SQLD%20%EA%B5%AD%EA%B0%80%EA%B3%B5%EC%9D%B8%20%EC%9E%90%EA%B2%A9%20%EB%8C%80%EB%B9%84%20%EA%B5%90%EC%9E%AC&src=1139000&spec=10799999&addtag=200&ctag=SQLD%20%EA%B5%AD%EA%B0%80%EA%B3%B5%EC%9D%B8%20%EC%9E%90%EA%B2%A9%20%EB%8C%80%EB%B9%84%20%EA%B5%90%EC%9E%AC&lptag=AF7838146&pageType=SEARCH&pageValue=SQLD%20%EA%B5%AD%EA%B0%80%EA%B3%B5%EC%9D%B8%20%EC%9E%90%EA%B2%A9%20%EB%8C%80%EB%B9%84%20%EA%B5%90%EC%9E%AC"
   - title: "ADsP 데이터분석 준전문가 문제집"
-    url: "https://www.coupang.com/np/search?component=&q=ADsP+%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D+%EC%A4%80%EC%A0%84%EB%AC%B8%EA%B0%80+%EB%AC%B8%EC%A0%9C%EC%A7%91&channel=user"
+    url: "https://www.coupang.com/np/search?q=ADsP%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D%20%EC%A4%80%EC%A0%84%EB%AC%B8%EA%B0%80%20%EB%AC%B8%EC%A0%9C%EC%A7%91&src=1139000&spec=10799999&addtag=200&ctag=ADsP%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D%20%EC%A4%80%EC%A0%84%EB%AC%B8%EA%B0%80%20%EB%AC%B8%EC%A0%9C%EC%A7%91&lptag=AF7838146&pageType=SEARCH&pageValue=ADsP%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D%20%EC%A4%80%EC%A0%84%EB%AC%B8%EA%B0%80%20%EB%AC%B8%EC%A0%9C%EC%A7%91"
 faq:
   - q: "비전공자가 SQLD와 ADsP 중 무엇을 먼저 따는 게 좋을까요?"
     a: "데이터 분야가 완전히 처음이라면 ADsP를 먼저 권합니다. 코딩 없이 이론 위주라 부담이 적고, 데이터의 큰 그림을 잡는 데 도움이 됩니다. 이후 실무에서 SQL을 다뤄야 한다면 SQLD로 넘어가면 자연스럽게 연결됩니다. 다만 개발·데이터 직무 취업이 목표라면 SQLD가 실무 활용도가 높아 SQLD부터 준비해도 무방합니다."
@@ -39,7 +39,7 @@ faq:
 <div class="callout-info">📌 정보: 두 자격증 상위에는 각각 SQLP(전문가), ADP(전문가)가 있습니다. 입문자는 하위 등급인 SQLD·ADsP부터 시작하는 것이 정석입니다.</div>
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=SQLD+%EA%B5%AD%EA%B0%80%EA%B3%B5%EC%9D%B8+%EC%9E%90%EA%B2%A9+%EB%8C%80%EB%B9%84+%EA%B5%90%EC%9E%AC&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=SQLD%20%EA%B5%AD%EA%B0%80%EA%B3%B5%EC%9D%B8%20%EC%9E%90%EA%B2%A9%20%EB%8C%80%EB%B9%84%20%EA%B5%90%EC%9E%AC&src=1139000&spec=10799999&addtag=200&ctag=SQLD%20%EA%B5%AD%EA%B0%80%EA%B3%B5%EC%9D%B8%20%EC%9E%90%EA%B2%A9%20%EB%8C%80%EB%B9%84%20%EA%B5%90%EC%9E%AC&lptag=AF7838146&pageType=SEARCH&pageValue=SQLD%20%EA%B5%AD%EA%B0%80%EA%B3%B5%EC%9D%B8%20%EC%9E%90%EA%B2%A9%20%EB%8C%80%EB%B9%84%20%EA%B5%90%EC%9E%AC" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -133,7 +133,7 @@ SQLD와 ADsP는 연간 각각 3~4회 정기 시행됩니다. 정확한 일정은
 혼자 이론서만 봐서 이해가 안 되는 부분은 무료 강의나 유튜브 요약 영상으로 보충하면 학습 효율이 크게 올라갑니다.
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=ADsP+%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D+%EC%A4%80%EC%A0%84%EB%AC%B8%EA%B0%80+%EB%AC%B8%EC%A0%9C%EC%A7%91&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=ADsP%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D%20%EC%A4%80%EC%A0%84%EB%AC%B8%EA%B0%80%20%EB%AC%B8%EC%A0%9C%EC%A7%91&src=1139000&spec=10799999&addtag=200&ctag=ADsP%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D%20%EC%A4%80%EC%A0%84%EB%AC%B8%EA%B0%80%20%EB%AC%B8%EC%A0%9C%EC%A7%91&lptag=AF7838146&pageType=SEARCH&pageValue=ADsP%20%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B6%84%EC%84%9D%20%EC%A4%80%EC%A0%84%EB%AC%B8%EA%B0%80%20%EB%AC%B8%EC%A0%9C%EC%A7%91" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>

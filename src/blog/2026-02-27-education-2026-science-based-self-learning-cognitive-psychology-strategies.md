@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/6700551/pexels-photo-6700551.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "독서등 LED"
-    url: "https://www.coupang.com/np/search?component=&q=%EB%8F%85%EC%84%9C%EB%93%B1+LED&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EB%8F%85%EC%84%9C%EB%93%B1%20LED&src=1139000&spec=10799999&addtag=200&ctag=%EB%8F%85%EC%84%9C%EB%93%B1%20LED&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%8F%85%EC%84%9C%EB%93%B1%20LED"
   - title: "아이패드 에어 M2"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C+%EC%97%90%EC%96%B4+M2&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2&src=1139000&spec=10799999&addtag=200&ctag=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2"
 faq:
   - q: "스페이싱 효과와 반복 학습의 차이점은 무엇인가요?"
     a: "반복 학습은 같은 내용을 연속으로 여러 번 푸는 것으로 단기적 성과는 좋지만 장기 기억 전환이 약합니다. 스페이싱은 시간 간격을 두고 반복하는 것으로 장기 기억에는 훨씬 효과적입니다. 연구에 따르면 같은 공부 시간으로도 스페이싱이 30~50% 더 효율적입니다."
@@ -36,7 +36,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EB%8F%85%EC%84%9C%EB%93%B1+LED&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EB%8F%85%EC%84%9C%EB%93%B1%20LED&src=1139000&spec=10799999&addtag=200&ctag=%EB%8F%85%EC%84%9C%EB%93%B1%20LED&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%8F%85%EC%84%9C%EB%93%B1%20LED" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -254,7 +254,7 @@ Anki, Quizlet 같은 스페이싱 알고리즘 기반 앱을 사용하면 자동
 ---
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C+%EC%97%90%EC%96%B4+M2&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2&src=1139000&spec=10799999&addtag=200&ctag=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -267,6 +267,6 @@ Anki, Quizlet 같은 스페이싱 알고리즘 기반 앱을 사용하면 자동
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [독서등 LED](https://www.coupang.com/np/search?component=&q=%EB%8F%85%EC%84%9C%EB%93%B1+LED&channel=user)
-- [아이패드 에어 M2](https://www.coupang.com/np/search?component=&q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C+%EC%97%90%EC%96%B4+M2&channel=user)
+- [독서등 LED](https://www.coupang.com/np/search?q=%EB%8F%85%EC%84%9C%EB%93%B1%20LED&src=1139000&spec=10799999&addtag=200&ctag=%EB%8F%85%EC%84%9C%EB%93%B1%20LED&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%8F%85%EC%84%9C%EB%93%B1%20LED)
+- [아이패드 에어 M2](https://www.coupang.com/np/search?q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2&src=1139000&spec=10799999&addtag=200&ctag=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2)
 

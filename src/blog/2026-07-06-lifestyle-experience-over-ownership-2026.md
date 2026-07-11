@@ -8,9 +8,9 @@ tags: [소비트렌드, 경험소비, 취향소비, 웰니스, 2026키워드]
 heroImage: "https://images.pexels.com/photos/3771074/pexels-photo-3771074.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "원데이클래스 취미 이용권"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%9B%90%EB%8D%B0%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4+%EC%B7%A8%EB%AF%B8+%EC%9D%B4%EC%9A%A9%EA%B6%8C&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%9B%90%EB%8D%B0%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%B7%A8%EB%AF%B8%20%EC%9D%B4%EC%9A%A9%EA%B6%8C&src=1139000&spec=10799999&addtag=200&ctag=%EC%9B%90%EB%8D%B0%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%B7%A8%EB%AF%B8%20%EC%9D%B4%EC%9A%A9%EA%B6%8C&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%9B%90%EB%8D%B0%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%B7%A8%EB%AF%B8%20%EC%9D%B4%EC%9A%A9%EA%B6%8C"
   - title: "홈 클래스 취미 키트"
-    url: "https://www.coupang.com/np/search?component=&q=%ED%99%88+%ED%81%B4%EB%9E%98%EC%8A%A4+%EC%B7%A8%EB%AF%B8+%ED%82%A4%ED%8A%B8&channel=user"
+    url: "https://www.coupang.com/np/search?q=%ED%99%88%20%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%B7%A8%EB%AF%B8%20%ED%82%A4%ED%8A%B8&src=1139000&spec=10799999&addtag=200&ctag=%ED%99%88%20%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%B7%A8%EB%AF%B8%20%ED%82%A4%ED%8A%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%ED%99%88%20%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%B7%A8%EB%AF%B8%20%ED%82%A4%ED%8A%B8"
 faq:
   - q: "'소유보다 경험'이 왜 2026년 핵심 키워드인가요?"
     a: "물건은 사는 순간의 만족이 빠르게 사라지지만, 경험은 기억과 이야기로 오래 남기 때문입니다. 고물가로 지출 하나하나가 신중해지면서 '남는 것'에 돈을 쓰려는 심리가 강해졌습니다. 또 SNS에서 공유할 콘텐츠로서도 경험이 물건보다 가치가 높게 여겨집니다. 소비가 소유의 축적에서 경험의 수집으로 이동하는 흐름입니다."
@@ -39,7 +39,7 @@ faq:
 물건은 소유한 뒤 관리와 처분의 부담이 남지만, 경험은 부담 없이 기억만 남습니다. 이 차이가 소비의 방향을 바꾸고 있습니다.
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%9B%90%EB%8D%B0%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4+%EC%B7%A8%EB%AF%B8+%EC%9D%B4%EC%9A%A9%EA%B6%8C&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%9B%90%EB%8D%B0%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%B7%A8%EB%AF%B8%20%EC%9D%B4%EC%9A%A9%EA%B6%8C&src=1139000&spec=10799999&addtag=200&ctag=%EC%9B%90%EB%8D%B0%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%B7%A8%EB%AF%B8%20%EC%9D%B4%EC%9A%A9%EA%B6%8C&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%9B%90%EB%8D%B0%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%B7%A8%EB%AF%B8%20%EC%9D%B4%EC%9A%A9%EA%B6%8C" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -104,7 +104,7 @@ faq:
 - 디지털 디톡스 데이: 주 1회 화면을 끄고 온전히 나에게 집중하는 시간을 만듭니다.
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%ED%99%88+%ED%81%B4%EB%9E%98%EC%8A%A4+%EC%B7%A8%EB%AF%B8+%ED%82%A4%ED%8A%B8&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%ED%99%88%20%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%B7%A8%EB%AF%B8%20%ED%82%A4%ED%8A%B8&src=1139000&spec=10799999&addtag=200&ctag=%ED%99%88%20%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%B7%A8%EB%AF%B8%20%ED%82%A4%ED%8A%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%ED%99%88%20%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%B7%A8%EB%AF%B8%20%ED%82%A4%ED%8A%B8" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>

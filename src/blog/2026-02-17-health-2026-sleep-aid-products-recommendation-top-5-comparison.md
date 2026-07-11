@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/5020267/pexels-photo-5020267.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "스마트 체중계"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%8A%A4%EB%A7%88%ED%8A%B8+%EC%B2%B4%EC%A4%91%EA%B3%84&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84&src=1139000&spec=10799999&addtag=200&ctag=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84"
   - title: "홈트레이닝 요가매트"
-    url: "https://www.coupang.com/np/search?component=&q=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D+%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&channel=user"
+    url: "https://www.coupang.com/np/search?q=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&src=1139000&spec=10799999&addtag=200&ctag=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8"
 faq:
   - q: "멜라토닌을 매일 복용해도 안전한가요?"
     a: "단기(3~6개월)에는 안전하지만, 장기 복용 시 신체 적응으로 효과가 감소합니다. 의료진 지도 하에 주 3~4회 선택적 복용을 추천합니다. 임신 중이거나 기존 약물 복용 중이면 반드시 상담이 필요합니다."
@@ -36,7 +36,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%8A%A4%EB%A7%88%ED%8A%B8+%EC%B2%B4%EC%A4%91%EA%B3%84&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84&src=1139000&spec=10799999&addtag=200&ctag=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -260,7 +260,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D+%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&src=1139000&spec=10799999&addtag=200&ctag=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -273,6 +273,6 @@ faq:
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [스마트 체중계](https://www.coupang.com/np/search?component=&q=%EC%8A%A4%EB%A7%88%ED%8A%B8+%EC%B2%B4%EC%A4%91%EA%B3%84&channel=user)
-- [홈트레이닝 요가매트](https://www.coupang.com/np/search?component=&q=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D+%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&channel=user)
+- [스마트 체중계](https://www.coupang.com/np/search?q=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84&src=1139000&spec=10799999&addtag=200&ctag=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84)
+- [홈트레이닝 요가매트](https://www.coupang.com/np/search?q=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&src=1139000&spec=10799999&addtag=200&ctag=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8)
 

@@ -8,11 +8,11 @@ tags: [식중독, 여름건강, 음식보관, 식품안전, 살모넬라]
 heroImage: "https://images.pexels.com/photos/1358900/pexels-photo-1358900.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "밀폐용기 세트"
-    url: "https://www.coupang.com/np/search?component=&q=%EB%B0%80%ED%8F%90%EC%9A%A9%EA%B8%B0+%EC%84%B8%ED%8A%B8&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EB%B0%80%ED%8F%90%EC%9A%A9%EA%B8%B0%20%EC%84%B8%ED%8A%B8&src=1139000&spec=10799999&addtag=200&ctag=%EB%B0%80%ED%8F%90%EC%9A%A9%EA%B8%B0%20%EC%84%B8%ED%8A%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%B0%80%ED%8F%90%EC%9A%A9%EA%B8%B0%20%EC%84%B8%ED%8A%B8"
   - title: "항균 도마·조리도구"
-    url: "https://www.coupang.com/np/search?component=&q=%ED%95%AD%EA%B7%A0+%EB%8F%84%EB%A7%88+%EC%A1%B0%EB%A6%AC%EB%8F%84%EA%B5%AC&channel=user"
+    url: "https://www.coupang.com/np/search?q=%ED%95%AD%EA%B7%A0%20%EB%8F%84%EB%A7%88%20%EC%A1%B0%EB%A6%AC%EB%8F%84%EA%B5%AC&src=1139000&spec=10799999&addtag=200&ctag=%ED%95%AD%EA%B7%A0%20%EB%8F%84%EB%A7%88%20%EC%A1%B0%EB%A6%AC%EB%8F%84%EA%B5%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%ED%95%AD%EA%B7%A0%20%EB%8F%84%EB%A7%88%20%EC%A1%B0%EB%A6%AC%EB%8F%84%EA%B5%AC"
   - title: "냉장고 온도계"
-    url: "https://www.coupang.com/np/search?component=&q=%EB%83%89%EC%9E%A5%EA%B3%A0+%EC%98%A8%EB%8F%84%EA%B3%84&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EB%83%89%EC%9E%A5%EA%B3%A0%20%EC%98%A8%EB%8F%84%EA%B3%84&src=1139000&spec=10799999&addtag=200&ctag=%EB%83%89%EC%9E%A5%EA%B3%A0%20%EC%98%A8%EB%8F%84%EA%B3%84&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%83%89%EC%9E%A5%EA%B3%A0%20%EC%98%A8%EB%8F%84%EA%B3%84"
 faq:
   - q: "여름철 냉장고 온도는 몇 도로 맞춰야 하나요?"
     a: "냉장실은 0~5도, 냉동실은 영하 18도 이하를 유지해야 합니다. 여름에는 문을 자주 여닫아 온도가 오르기 쉬우므로 냉장고 온도계로 실제 온도를 확인하는 것이 안전합니다. 세균은 5~57도(위험 온도대)에서 급격히 번식하므로, 조리한 음식은 상온에 2시간(기온 32도 이상이면 1시간) 이상 두지 말고 즉시 냉장 보관하세요. 냉장고를 70% 이하로만 채워야 찬 공기가 고루 순환합니다."
@@ -69,7 +69,7 @@ faq:
 
 <div class="callout-info">💡 정보: 냉장고 문을 자주 여닫는 여름엔 실제 내부 온도가 설정값보다 높을 수 있습니다. 냉장고 온도계로 주기적으로 확인하면 안심입니다.</div>
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%97%AC%EB%A6%84%EC%B2%A0+%EB%B0%80%ED%8F%90+%EB%B3%B4%EA%B4%80%EC%9A%A9%EA%B8%B0+%EB%83%89%EC%9E%A5%EA%B3%A0+%EC%98%A8%EB%8F%84%EA%B3%84+%EB%B3%B4%EA%B8%B0&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%97%AC%EB%A6%84%EC%B2%A0%20%EB%B0%80%ED%8F%90%20%EB%B3%B4%EA%B4%80%EC%9A%A9%EA%B8%B0%20%EB%83%89%EC%9E%A5%EA%B3%A0%20%EC%98%A8%EB%8F%84%EA%B3%84%20%EB%B3%B4%EA%B8%B0&src=1139000&spec=10799999&addtag=200&ctag=%EC%97%AC%EB%A6%84%EC%B2%A0%20%EB%B0%80%ED%8F%90%20%EB%B3%B4%EA%B4%80%EC%9A%A9%EA%B8%B0%20%EB%83%89%EC%9E%A5%EA%B3%A0%20%EC%98%A8%EB%8F%84%EA%B3%84%20%EB%B3%B4%EA%B8%B0&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%97%AC%EB%A6%84%EC%B2%A0%20%EB%B0%80%ED%8F%90%20%EB%B3%B4%EA%B4%80%EC%9A%A9%EA%B8%B0%20%EB%83%89%EC%9E%A5%EA%B3%A0%20%EC%98%A8%EB%8F%84%EA%B3%84%20%EB%B3%B4%EA%B8%B0" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🧊</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -102,7 +102,7 @@ faq:
 - 재가열: 다시 먹을 땐 74도 이상으로 완전히
 - 의심되면 폐기: 냄새·겉보기 멀쩡해도 오래 방치됐다면 버리기
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EB%8F%84%EC%8B%9C%EB%9D%BD+%EB%B3%B4%EB%83%89%EB%B0%B1+%EC%95%84%EC%9D%B4%EC%8A%A4%ED%8C%A9+%EC%84%B8%ED%8A%B8+%EB%B3%B4%EA%B8%B0&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EB%8F%84%EC%8B%9C%EB%9D%BD%20%EB%B3%B4%EB%83%89%EB%B0%B1%20%EC%95%84%EC%9D%B4%EC%8A%A4%ED%8C%A9%20%EC%84%B8%ED%8A%B8%20%EB%B3%B4%EA%B8%B0&src=1139000&spec=10799999&addtag=200&ctag=%EB%8F%84%EC%8B%9C%EB%9D%BD%20%EB%B3%B4%EB%83%89%EB%B0%B1%20%EC%95%84%EC%9D%B4%EC%8A%A4%ED%8C%A9%20%EC%84%B8%ED%8A%B8%20%EB%B3%B4%EA%B8%B0&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%8F%84%EC%8B%9C%EB%9D%BD%20%EB%B3%B4%EB%83%89%EB%B0%B1%20%EC%95%84%EC%9D%B4%EC%8A%A4%ED%8C%A9%20%EC%84%B8%ED%8A%B8%20%EB%B3%B4%EA%B8%B0" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🧺</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>

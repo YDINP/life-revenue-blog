@@ -8,9 +8,9 @@ tags: ["홈트레이닝", "운동", "건강", "다이어트"]
 heroImage: "https://images.pexels.com/photos/4162491/pexels-photo-4162491.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "요가매트"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&src=1139000&spec=10799999&addtag=200&ctag=%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8"
   - title: "홈트레이닝 밴드"
-    url: "https://www.coupang.com/np/search?component=&q=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D+%EB%B0%B4%EB%93%9C&channel=user"
+    url: "https://www.coupang.com/np/search?q=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EB%B0%B4%EB%93%9C&src=1139000&spec=10799999&addtag=200&ctag=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EB%B0%B4%EB%93%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EB%B0%B4%EB%93%9C"
 ---
 # 홈 트레이닝 완벽 가이드
 
@@ -37,7 +37,7 @@ coupangLinks:
 <div class="chart-progress" data-title="홈트레이닝 장점 비교 (100점 만점)" data-labels="시간절약,비용절약,편의성,지속성,효과성" data-values="95,100,90,85,80" data-colors="#10b981,#3b82f6,#8b5cf6,#f59e0b,#ec4899" data-max="100" data-unit="점"></div>
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&src=1139000&spec=10799999&addtag=200&ctag=%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -263,7 +263,7 @@ SMART 원칙:
 가장 중요한 것은 꾸준함입니다. 완벽한 운동을 가끔 하는 것보다, 간단한 운동을 매일 하는 것이 훨씬 효과적입니다. 지금 바로 요가매트를 펴고 첫 운동을 시작해보세요!
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D+%EB%B0%B4%EB%93%9C&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EB%B0%B4%EB%93%9C&src=1139000&spec=10799999&addtag=200&ctag=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EB%B0%B4%EB%93%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EB%B0%B4%EB%93%9C" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>

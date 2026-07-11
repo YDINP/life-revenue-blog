@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/48770/business-time-clock-clocks-48770.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "아날로그 알람시계"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8+%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&src=1139000&spec=10799999&addtag=200&ctag=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84"
   - title: "종이 다이어리"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%A2%85%EC%9D%B4+%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%A2%85%EC%9D%B4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&src=1139000&spec=10799999&addtag=200&ctag=%EC%A2%85%EC%9D%B4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%A2%85%EC%9D%B4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC"
 faq:
   - q: "하루 8시간 회사에서 일하는데 실제로 5시간을 절약할 수 있나요?"
     a: "네, 가능합니다. 주요 변화는 컨텍스트 스위칭 감소입니다. 현재 평균 직장인은 하루 12-15회 전환으로 약 1시간 10분 낭비합니다. 이를 3-4회로 줄이면 주 5시간 절약이 현실입니다. 단, 업무량 자체가 아니라 '효율'이 개선되는 것입니다."
@@ -36,7 +36,7 @@ faq:
 실제로 미국 경영진 200명을 대상으로 한 조사에 따르면, 번아웃을 경험한 관리자의 71%는 '일이 너무 많아서'가 아니라 '우선순위가 불명확해서' 스트레스를 받고 있었습니다. 시간이 모자라는 것이 아니라, 시간을 어디에 써야 하는지 모르는 상황이 더 큰 문제라는 뜻입니다.
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8+%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&src=1139000&spec=10799999&addtag=200&ctag=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -224,7 +224,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%A2%85%EC%9D%B4+%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%A2%85%EC%9D%B4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&src=1139000&spec=10799999&addtag=200&ctag=%EC%A2%85%EC%9D%B4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%A2%85%EC%9D%B4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -237,6 +237,6 @@ faq:
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [아날로그 알람시계](https://www.coupang.com/np/search?component=&q=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8+%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&channel=user)
-- [종이 다이어리](https://www.coupang.com/np/search?component=&q=%EC%A2%85%EC%9D%B4+%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&channel=user)
+- [아날로그 알람시계](https://www.coupang.com/np/search?q=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&src=1139000&spec=10799999&addtag=200&ctag=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84)
+- [종이 다이어리](https://www.coupang.com/np/search?q=%EC%A2%85%EC%9D%B4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&src=1139000&spec=10799999&addtag=200&ctag=%EC%A2%85%EC%9D%B4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%A2%85%EC%9D%B4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC)
 

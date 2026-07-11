@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/31034387/pexels-photo-31034387.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "캐리어 28인치"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%BA%90%EB%A6%AC%EC%96%B4+28%EC%9D%B8%EC%B9%98&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%BA%90%EB%A6%AC%EC%96%B4%2028%EC%9D%B8%EC%B9%98&src=1139000&spec=10799999&addtag=200&ctag=%EC%BA%90%EB%A6%AC%EC%96%B4%2028%EC%9D%B8%EC%B9%98&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%BA%90%EB%A6%AC%EC%96%B4%2028%EC%9D%B8%EC%B9%98"
   - title: "여행용 보조배터리"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89%EC%9A%A9+%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%97%AC%ED%96%89%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&src=1139000&spec=10799999&addtag=200&ctag=%EC%97%AC%ED%96%89%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%97%AC%ED%96%89%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC"
 faq:
   - q: "한 달 살기 예산이 부족하면 어떻게 해야 하나요?"
     a: "치앙마이나 다낭 같은 저가 도시로 목적지를 변경하거나, 게스트하우스 도미토리 타입으로 숙소를 바꾸면 월 60만 원대로도 충분합니다. 또한 현지 시장에서 식재료를 구입해 직접 요리하면 외식 대비 1/3 수준의 비용으로 줄일 수 있습니다."
@@ -42,7 +42,7 @@ faq:
 한 달 살기는 단순한 관광을 넘어 현지 생활의 리듬을 경험하는 것이 핵심입니다. 제주도 한 달 살기와 달리 동남아는 낮은 비용으로 훨씬 더 다양한 경험을 얻을 수 있습니다. 관련하여 [제주도 한 달 살기 완벽 가이드](/blog/2026-02-11-jeju-one-month-living-guide/)도 참고해보세요.
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%BA%90%EB%A6%AC%EC%96%B4+28%EC%9D%B8%EC%B9%98&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%BA%90%EB%A6%AC%EC%96%B4%2028%EC%9D%B8%EC%B9%98&src=1139000&spec=10799999&addtag=200&ctag=%EC%BA%90%EB%A6%AC%EC%96%B4%2028%EC%9D%B8%EC%B9%98&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%BA%90%EB%A6%AC%EC%96%B4%2028%EC%9D%B8%EC%B9%98" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -184,7 +184,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89%EC%9A%A9+%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%97%AC%ED%96%89%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&src=1139000&spec=10799999&addtag=200&ctag=%EC%97%AC%ED%96%89%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%97%AC%ED%96%89%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -197,6 +197,6 @@ faq:
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [캐리어 28인치](https://www.coupang.com/np/search?component=&q=%EC%BA%90%EB%A6%AC%EC%96%B4+28%EC%9D%B8%EC%B9%98&channel=user)
-- [여행용 보조배터리](https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89%EC%9A%A9+%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&channel=user)
+- [캐리어 28인치](https://www.coupang.com/np/search?q=%EC%BA%90%EB%A6%AC%EC%96%B4%2028%EC%9D%B8%EC%B9%98&src=1139000&spec=10799999&addtag=200&ctag=%EC%BA%90%EB%A6%AC%EC%96%B4%2028%EC%9D%B8%EC%B9%98&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%BA%90%EB%A6%AC%EC%96%B4%2028%EC%9D%B8%EC%B9%98)
+- [여행용 보조배터리](https://www.coupang.com/np/search?q=%EC%97%AC%ED%96%89%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&src=1139000&spec=10799999&addtag=200&ctag=%EC%97%AC%ED%96%89%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%97%AC%ED%96%89%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC)
 

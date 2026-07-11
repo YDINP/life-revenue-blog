@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/4940612/pexels-photo-4940612.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "건강한 식단 도서"
-    url: "https://www.coupang.com/np/search?component=&q=%EA%B1%B4%EA%B0%95%ED%95%9C+%EC%8B%9D%EB%8B%A8+%EB%8F%84%EC%84%9C&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C"
   - title: "홈트레이닝 요가매트"
-    url: "https://www.coupang.com/np/search?component=&q=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D+%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&channel=user"
+    url: "https://www.coupang.com/np/search?q=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&src=1139000&spec=10799999&addtag=200&ctag=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8"
 faq:
   - q: "주말에 늦게 자도 괜찮나요?"
     a: "주말에 평일보다 1시간 이상 늦게 자는 것을 '사회적 시차'(Social Jetlag)라고 부르며, 이는 서카디안 리듬을 교란합니다. 주말에도 평일과 최대 1시간 범위 내에서 일관된 시간을 유지하는 것이 이상적입니다."
@@ -36,7 +36,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EA%B1%B4%EA%B0%95%ED%95%9C+%EC%8B%9D%EB%8B%A8+%EB%8F%84%EC%84%9C&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -226,7 +226,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D+%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&src=1139000&spec=10799999&addtag=200&ctag=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -239,6 +239,6 @@ faq:
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [건강한 식단 도서](https://www.coupang.com/np/search?component=&q=%EA%B1%B4%EA%B0%95%ED%95%9C+%EC%8B%9D%EB%8B%A8+%EB%8F%84%EC%84%9C&channel=user)
-- [홈트레이닝 요가매트](https://www.coupang.com/np/search?component=&q=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D+%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&channel=user)
+- [건강한 식단 도서](https://www.coupang.com/np/search?q=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C)
+- [홈트레이닝 요가매트](https://www.coupang.com/np/search?q=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&src=1139000&spec=10799999&addtag=200&ctag=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8)
 

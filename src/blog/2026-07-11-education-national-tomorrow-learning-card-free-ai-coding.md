@@ -8,9 +8,9 @@ tags: [국민내일배움카드, 국비지원, 자기계발, AI자격증, 직장
 heroImage: "https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "IT·데이터 자격증 수험서"
-    url: "https://www.coupang.com/np/search?component=&q=IT+%EB%8D%B0%EC%9D%B4%ED%84%B0+%EC%9E%90%EA%B2%A9%EC%A6%9D+%EC%88%98%ED%97%98%EC%84%9C&channel=user"
+    url: "https://www.coupang.com/np/search?q=IT%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%9E%90%EA%B2%A9%EC%A6%9D%20%EC%88%98%ED%97%98%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=IT%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%9E%90%EA%B2%A9%EC%A6%9D%20%EC%88%98%ED%97%98%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=IT%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%9E%90%EA%B2%A9%EC%A6%9D%20%EC%88%98%ED%97%98%EC%84%9C"
   - title: "재택 학습용 노트북"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%9E%AC%ED%83%9D+%ED%95%99%EC%8A%B5%EC%9A%A9+%EB%85%B8%ED%8A%B8%EB%B6%81&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%9E%AC%ED%83%9D%20%ED%95%99%EC%8A%B5%EC%9A%A9%20%EB%85%B8%ED%8A%B8%EB%B6%81&src=1139000&spec=10799999&addtag=200&ctag=%EC%9E%AC%ED%83%9D%20%ED%95%99%EC%8A%B5%EC%9A%A9%20%EB%85%B8%ED%8A%B8%EB%B6%81&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%9E%AC%ED%83%9D%20%ED%95%99%EC%8A%B5%EC%9A%A9%20%EB%85%B8%ED%8A%B8%EB%B6%81"
 faq:
   - q: "국민내일배움카드는 직장인도 발급받을 수 있나요?"
     a: "네, 재직 중인 직장인도 발급 가능합니다. 과거에는 실업자·구직자 중심이었지만 현재는 재직자, 자영업자, 특수형태근로종사자까지 대부분 신청할 수 있습니다. 다만 공무원, 사립학교 교직원, 만 75세 이상, 월 임금 300만원 이상 대규모기업 재직자(45세 미만) 등 일부 제외 대상이 있습니다. 온라인 과정도 지원되며 수강 내역이 회사에 통보되지 않아 부담 없이 이용할 수 있습니다."
@@ -70,7 +70,7 @@ KDC에서 배울 수 있는 대표 분야는 다음과 같습니다.
 - AI 프롬프트 엔지니어링: 업무 자동화·생산성 향상
 - 데이터 시각화(BI): 엑셀을 넘어선 리포트 역량
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=IT+%EB%8D%B0%EC%9D%B4%ED%84%B0+%EC%9E%90%EA%B2%A9%EC%A6%9D+%EB%B2%A0%EC%8A%A4%ED%8A%B8%EC%85%80%EB%9F%AC+%EC%88%98%ED%97%98%EC%84%9C+%EB%B3%B4%EA%B8%B0&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=IT%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%9E%90%EA%B2%A9%EC%A6%9D%20%EB%B2%A0%EC%8A%A4%ED%8A%B8%EC%85%80%EB%9F%AC%20%EC%88%98%ED%97%98%EC%84%9C%20%EB%B3%B4%EA%B8%B0&src=1139000&spec=10799999&addtag=200&ctag=IT%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%9E%90%EA%B2%A9%EC%A6%9D%20%EB%B2%A0%EC%8A%A4%ED%8A%B8%EC%85%80%EB%9F%AC%20%EC%88%98%ED%97%98%EC%84%9C%20%EB%B3%B4%EA%B8%B0&lptag=AF7838146&pageType=SEARCH&pageValue=IT%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EC%9E%90%EA%B2%A9%EC%A6%9D%20%EB%B2%A0%EC%8A%A4%ED%8A%B8%EC%85%80%EB%9F%AC%20%EC%88%98%ED%97%98%EC%84%9C%20%EB%B3%B4%EA%B8%B0" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">📘</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>

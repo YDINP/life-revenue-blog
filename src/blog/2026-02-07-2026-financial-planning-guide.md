@@ -8,9 +8,9 @@ tags: ["재테크", "자산관리", "투자입문", "금융"]
 heroImage: "https://images.pexels.com/photos/3943716/pexels-photo-3943716.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "부의 추월차선 도서"
-    url: "https://www.coupang.com/np/search?component=&q=%EB%B6%80%EC%9D%98+%EC%B6%94%EC%9B%94%EC%B0%A8%EC%84%A0+%EB%8F%84%EC%84%9C&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EB%B6%80%EC%9D%98%20%EC%B6%94%EC%9B%94%EC%B0%A8%EC%84%A0%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EB%B6%80%EC%9D%98%20%EC%B6%94%EC%9B%94%EC%B0%A8%EC%84%A0%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%B6%80%EC%9D%98%20%EC%B6%94%EC%9B%94%EC%B0%A8%EC%84%A0%20%EB%8F%84%EC%84%9C"
   - title: "재테크 다이어리"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%9E%AC%ED%85%8C%ED%81%AC+%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%9E%AC%ED%85%8C%ED%81%AC%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&src=1139000&spec=10799999&addtag=200&ctag=%EC%9E%AC%ED%85%8C%ED%81%AC%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%9E%AC%ED%85%8C%ED%81%AC%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC"
 ---
 # 2026년 재테크 완벽 가이드
 
@@ -33,7 +33,7 @@ coupangLinks:
 단기 시세 차익보다는 장기적인 관점에서 접근하는 것이 안전합니다. 복리의 마법은 시간이 지날수록 더 큰 효과를 발휘합니다.
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EB%B6%80%EC%9D%98+%EC%B6%94%EC%9B%94%EC%B0%A8%EC%84%A0+%EB%8F%84%EC%84%9C&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EB%B6%80%EC%9D%98%20%EC%B6%94%EC%9B%94%EC%B0%A8%EC%84%A0%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EB%B6%80%EC%9D%98%20%EC%B6%94%EC%9B%94%EC%B0%A8%EC%84%A0%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%B6%80%EC%9D%98%20%EC%B6%94%EC%9B%94%EC%B0%A8%EC%84%A0%20%EB%8F%84%EC%84%9C" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -135,7 +135,7 @@ coupangLinks:
 재테크는 결코 어렵지 않습니다. 비상금 마련, 부채 상환, 연금저축, 분산 투자의 순서를 지키면 누구나 성공할 수 있습니다. 지금 바로 시작하세요!
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%9E%AC%ED%85%8C%ED%81%AC+%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%9E%AC%ED%85%8C%ED%81%AC%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&src=1139000&spec=10799999&addtag=200&ctag=%EC%9E%AC%ED%85%8C%ED%81%AC%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%9E%AC%ED%85%8C%ED%81%AC%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>

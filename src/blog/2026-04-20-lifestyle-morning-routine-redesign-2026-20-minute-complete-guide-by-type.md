@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/10680816/pexels-photo-10680816.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "디지털 미니멀리즘 도서"
-    url: "https://www.coupang.com/np/search?component=&q=%EB%94%94%EC%A7%80%ED%84%B8+%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98+%EB%8F%84%EC%84%9C&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EB%94%94%EC%A7%80%ED%84%B8%20%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EB%94%94%EC%A7%80%ED%84%B8%20%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%94%94%EC%A7%80%ED%84%B8%20%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98%20%EB%8F%84%EC%84%9C"
   - title: "아날로그 알람시계"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8+%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&src=1139000&spec=10799999&addtag=200&ctag=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84"
 faq:
   - q: "모닝 루틴을 정말 20분 안에 완성할 수 있나요?"
     a: "직장인의 경우 20분 완성이 가능하며, 프리랜서는 27-30분, 학생은 25분이 현실적입니다. 시간은 목표이지 강박이 아니므로, 처음 1주일은 30분 여유를 두고 시작한 후 자동화되면서 시간이 단축됩니다."
@@ -44,7 +44,7 @@ faq:
 각 집단의 특성을 반영하지 않으면 아무리 좋은 루틴도 3주 안에 포기하게 됩니다.
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EB%94%94%EC%A7%80%ED%84%B8+%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98+%EB%8F%84%EC%84%9C&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EB%94%94%EC%A7%80%ED%84%B8%20%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EB%94%94%EC%A7%80%ED%84%B8%20%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%94%94%EC%A7%80%ED%84%B8%20%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98%20%EB%8F%84%EC%84%9C" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -217,7 +217,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8+%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&src=1139000&spec=10799999&addtag=200&ctag=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -230,6 +230,6 @@ faq:
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [디지털 미니멀리즘 도서](https://www.coupang.com/np/search?component=&q=%EB%94%94%EC%A7%80%ED%84%B8+%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98+%EB%8F%84%EC%84%9C&channel=user)
-- [아날로그 알람시계](https://www.coupang.com/np/search?component=&q=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8+%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&channel=user)
+- [디지털 미니멀리즘 도서](https://www.coupang.com/np/search?q=%EB%94%94%EC%A7%80%ED%84%B8%20%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EB%94%94%EC%A7%80%ED%84%B8%20%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%94%94%EC%A7%80%ED%84%B8%20%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98%20%EB%8F%84%EC%84%9C)
+- [아날로그 알람시계](https://www.coupang.com/np/search?q=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&src=1139000&spec=10799999&addtag=200&ctag=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84)
 

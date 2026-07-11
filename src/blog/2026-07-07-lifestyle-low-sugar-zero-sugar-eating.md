@@ -8,9 +8,9 @@ tags: [저당식단, 제로슈거, 당줄이기, 건강식습관, 혈당관리]
 heroImage: "https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "제로슈거 음료 세트"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%A0%9C%EB%A1%9C%EC%8A%88%EA%B1%B0+%EC%9D%8C%EB%A3%8C+%EC%84%B8%ED%8A%B8&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%A0%9C%EB%A1%9C%EC%8A%88%EA%B1%B0%20%EC%9D%8C%EB%A3%8C%20%EC%84%B8%ED%8A%B8&src=1139000&spec=10799999&addtag=200&ctag=%EC%A0%9C%EB%A1%9C%EC%8A%88%EA%B1%B0%20%EC%9D%8C%EB%A3%8C%20%EC%84%B8%ED%8A%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%A0%9C%EB%A1%9C%EC%8A%88%EA%B1%B0%20%EC%9D%8C%EB%A3%8C%20%EC%84%B8%ED%8A%B8"
   - title: "저당 알룰로스 시럽"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%A0%80%EB%8B%B9+%EC%95%8C%EB%A3%B0%EB%A1%9C%EC%8A%A4+%EC%8B%9C%EB%9F%BD&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%A0%80%EB%8B%B9%20%EC%95%8C%EB%A3%B0%EB%A1%9C%EC%8A%A4%20%EC%8B%9C%EB%9F%BD&src=1139000&spec=10799999&addtag=200&ctag=%EC%A0%80%EB%8B%B9%20%EC%95%8C%EB%A3%B0%EB%A1%9C%EC%8A%A4%20%EC%8B%9C%EB%9F%BD&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%A0%80%EB%8B%B9%20%EC%95%8C%EB%A3%B0%EB%A1%9C%EC%8A%A4%20%EC%8B%9C%EB%9F%BD"
 faq:
   - q: "저당식과 제로슈거는 어떻게 다른가요?"
     a: "저당식은 첨가당 섭취를 크게 줄이되 완전히 배제하지는 않는 방식이고, 제로슈거는 설탕을 사실상 0에 가깝게 맞추는 방식입니다. 제로슈거 제품은 설탕 대신 알룰로스·에리스리톨 같은 대체 감미료를 사용합니다. 초보자는 무리한 제로슈거보다 저당식으로 시작해 미각을 서서히 적응시키는 편이 지속에 유리합니다. 목표는 완전한 금지가 아니라 당에 대한 의존을 낮추는 것입니다."
@@ -37,7 +37,7 @@ faq:
 <div class="callout-info">📊 알아두기: WHO는 하루 첨가당 섭취를 총열량의 10% 이하, 가능하면 5% 이하로 권고합니다. 성인 기준 하루 약 25g(각설탕 6개)이 이상적인 상한선입니다.</div>
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%A0%9C%EB%A1%9C%EC%8A%88%EA%B1%B0+%EC%9D%8C%EB%A3%8C+%EC%84%B8%ED%8A%B8&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%A0%9C%EB%A1%9C%EC%8A%88%EA%B1%B0%20%EC%9D%8C%EB%A3%8C%20%EC%84%B8%ED%8A%B8&src=1139000&spec=10799999&addtag=200&ctag=%EC%A0%9C%EB%A1%9C%EC%8A%88%EA%B1%B0%20%EC%9D%8C%EB%A3%8C%20%EC%84%B8%ED%8A%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%A0%9C%EB%A1%9C%EC%8A%88%EA%B1%B0%20%EC%9D%8C%EB%A3%8C%20%EC%84%B8%ED%8A%B8" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -105,7 +105,7 @@ faq:
 > 미각은 놀랍도록 빠르게 적응합니다. 2~3주만 지나면 예전에 즐기던 음료가 지나치게 달게 느껴지는 순간이 옵니다. 그때가 바로 몸이 저당에 적응했다는 신호입니다.
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%A0%80%EB%8B%B9+%EC%95%8C%EB%A3%B0%EB%A1%9C%EC%8A%A4+%EC%8B%9C%EB%9F%BD&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%A0%80%EB%8B%B9%20%EC%95%8C%EB%A3%B0%EB%A1%9C%EC%8A%A4%20%EC%8B%9C%EB%9F%BD&src=1139000&spec=10799999&addtag=200&ctag=%EC%A0%80%EB%8B%B9%20%EC%95%8C%EB%A3%B0%EB%A1%9C%EC%8A%A4%20%EC%8B%9C%EB%9F%BD&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%A0%80%EB%8B%B9%20%EC%95%8C%EB%A3%B0%EB%A1%9C%EC%8A%A4%20%EC%8B%9C%EB%9F%BD" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>

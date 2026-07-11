@@ -8,9 +8,9 @@ tags: [재테크트렌드, AI투자, 금리인하, 절세계좌, 투자사기]
 heroImage: "https://images.pexels.com/photos/7788009/pexels-photo-7788009.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "2026 경제 대전망 트렌드 도서"
-    url: "https://www.coupang.com/np/search?component=&q=2026+%EA%B2%BD%EC%A0%9C+%EB%8C%80%EC%A0%84%EB%A7%9D+%ED%8A%B8%EB%A0%8C%EB%93%9C+%EB%8F%84%EC%84%9C&channel=user"
+    url: "https://www.coupang.com/np/search?q=2026%20%EA%B2%BD%EC%A0%9C%20%EB%8C%80%EC%A0%84%EB%A7%9D%20%ED%8A%B8%EB%A0%8C%EB%93%9C%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=2026%20%EA%B2%BD%EC%A0%9C%20%EB%8C%80%EC%A0%84%EB%A7%9D%20%ED%8A%B8%EB%A0%8C%EB%93%9C%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=2026%20%EA%B2%BD%EC%A0%9C%20%EB%8C%80%EC%A0%84%EB%A7%9D%20%ED%8A%B8%EB%A0%8C%EB%93%9C%20%EB%8F%84%EC%84%9C"
   - title: "갤럭시탭 재테크용 태블릿"
-    url: "https://www.coupang.com/np/search?component=&q=%EA%B0%A4%EB%9F%AD%EC%8B%9C%ED%83%AD+%EC%9E%AC%ED%85%8C%ED%81%AC%EC%9A%A9+%ED%83%9C%EB%B8%94%EB%A6%BF&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EA%B0%A4%EB%9F%AD%EC%8B%9C%ED%83%AD%20%EC%9E%AC%ED%85%8C%ED%81%AC%EC%9A%A9%20%ED%83%9C%EB%B8%94%EB%A6%BF&src=1139000&spec=10799999&addtag=200&ctag=%EA%B0%A4%EB%9F%AD%EC%8B%9C%ED%83%AD%20%EC%9E%AC%ED%85%8C%ED%81%AC%EC%9A%A9%20%ED%83%9C%EB%B8%94%EB%A6%BF&lptag=AF7838146&pageType=SEARCH&pageValue=%EA%B0%A4%EB%9F%AD%EC%8B%9C%ED%83%AD%20%EC%9E%AC%ED%85%8C%ED%81%AC%EC%9A%A9%20%ED%83%9C%EB%B8%94%EB%A6%BF"
 faq:
   - q: "AI·반도체 테마에 지금 들어가도 늦지 않았나요?"
     a: "특정 종목의 단기 고점 여부는 아무도 확언할 수 없습니다. 다만 AI·반도체는 단기 유행이 아니라 산업 구조를 바꾸는 장기 흐름이라, 개별 종목 몰빵보다 관련 지수 ETF로 넓게 나눠 담고 길게 보는 접근이 안전합니다. 급등에 흥분해 한 번에 큰돈을 넣기보다, 분할 매수로 진입 시점을 분산하는 것이 위험을 줄이는 방법입니다."
@@ -37,7 +37,7 @@ faq:
 다섯 트렌드는 따로 노는 것이 아니라 서로 맞물립니다. 금리가 내리면 위험자산이 힘을 받고, 그 자금이 ETF로 흘러가며, 이 과정에서 절세계좌와 사기 경계가 함께 중요해집니다.
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=2026+%EA%B2%BD%EC%A0%9C+%EB%8C%80%EC%A0%84%EB%A7%9D+%ED%8A%B8%EB%A0%8C%EB%93%9C+%EB%8F%84%EC%84%9C&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=2026%20%EA%B2%BD%EC%A0%9C%20%EB%8C%80%EC%A0%84%EB%A7%9D%20%ED%8A%B8%EB%A0%8C%EB%93%9C%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=2026%20%EA%B2%BD%EC%A0%9C%20%EB%8C%80%EC%A0%84%EB%A7%9D%20%ED%8A%B8%EB%A0%8C%EB%93%9C%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=2026%20%EA%B2%BD%EC%A0%9C%20%EB%8C%80%EC%A0%84%EB%A7%9D%20%ED%8A%B8%EB%A0%8C%EB%93%9C%20%EB%8F%84%EC%84%9C" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -99,7 +99,7 @@ AI 열풍은 단순 유행이 아니라 산업 전반의 구조를 바꾸는 장
 - 유행보다 자신의 목표·기간·위험 성향을 우선합니다.
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EA%B0%A4%EB%9F%AD%EC%8B%9C%ED%83%AD+%EC%9E%AC%ED%85%8C%ED%81%AC%EC%9A%A9+%ED%83%9C%EB%B8%94%EB%A6%BF&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EA%B0%A4%EB%9F%AD%EC%8B%9C%ED%83%AD%20%EC%9E%AC%ED%85%8C%ED%81%AC%EC%9A%A9%20%ED%83%9C%EB%B8%94%EB%A6%BF&src=1139000&spec=10799999&addtag=200&ctag=%EA%B0%A4%EB%9F%AD%EC%8B%9C%ED%83%AD%20%EC%9E%AC%ED%85%8C%ED%81%AC%EC%9A%A9%20%ED%83%9C%EB%B8%94%EB%A6%BF&lptag=AF7838146&pageType=SEARCH&pageValue=%EA%B0%A4%EB%9F%AD%EC%8B%9C%ED%83%AD%20%EC%9E%AC%ED%85%8C%ED%81%AC%EC%9A%A9%20%ED%83%9C%EB%B8%94%EB%A6%BF" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>

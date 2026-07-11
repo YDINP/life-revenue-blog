@@ -8,9 +8,9 @@ tags: ["자기계발", "학습법", "생산성", "교육"]
 heroImage: "https://images.pexels.com/photos/6533345/pexels-photo-6533345.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "공부법 도서"
-    url: "https://www.coupang.com/np/search?component=&q=%EA%B3%B5%EB%B6%80%EB%B2%95+%EB%8F%84%EC%84%9C&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EA%B3%B5%EB%B6%80%EB%B2%95%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EA%B3%B5%EB%B6%80%EB%B2%95%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EA%B3%B5%EB%B6%80%EB%B2%95%20%EB%8F%84%EC%84%9C"
   - title: "학습 플래너"
-    url: "https://www.coupang.com/np/search?component=&q=%ED%95%99%EC%8A%B5+%ED%94%8C%EB%9E%98%EB%84%88&channel=user"
+    url: "https://www.coupang.com/np/search?q=%ED%95%99%EC%8A%B5%20%ED%94%8C%EB%9E%98%EB%84%88&src=1139000&spec=10799999&addtag=200&ctag=%ED%95%99%EC%8A%B5%20%ED%94%8C%EB%9E%98%EB%84%88&lptag=AF7838146&pageType=SEARCH&pageValue=%ED%95%99%EC%8A%B5%20%ED%94%8C%EB%9E%98%EB%84%88"
 ---
 # 효과적인 자기 학습법: 2026년 전략 TOP 5
 
@@ -32,7 +32,7 @@ coupangLinks:
 핵심: 남에게 가르칠 수 있을 때 진정으로 이해한 것입니다.
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EA%B3%B5%EB%B6%80%EB%B2%95+%EB%8F%84%EC%84%9C&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EA%B3%B5%EB%B6%80%EB%B2%95%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EA%B3%B5%EB%B6%80%EB%B2%95%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EA%B3%B5%EB%B6%80%EB%B2%95%20%EB%8F%84%EC%84%9C" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -182,7 +182,7 @@ AI 튜터로 활용. 개념 설명, 퀴즈 생성, 피드백.
 오늘 소개한 다섯 가지 전략 중 하나만이라도 시작해보세요. 페인만 기법으로 개념을 정리하거나, 포모도로로 집중력을 높이거나, 간격 반복으로 기억력을 강화하세요. 작은 변화가 평생 학습 습관을 만듭니다!
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%ED%95%99%EC%8A%B5+%ED%94%8C%EB%9E%98%EB%84%88&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%ED%95%99%EC%8A%B5%20%ED%94%8C%EB%9E%98%EB%84%88&src=1139000&spec=10799999&addtag=200&ctag=%ED%95%99%EC%8A%B5%20%ED%94%8C%EB%9E%98%EB%84%88&lptag=AF7838146&pageType=SEARCH&pageValue=%ED%95%99%EC%8A%B5%20%ED%94%8C%EB%9E%98%EB%84%88" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>

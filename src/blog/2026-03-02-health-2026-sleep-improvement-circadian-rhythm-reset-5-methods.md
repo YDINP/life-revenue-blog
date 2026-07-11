@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/4940612/pexels-photo-4940612.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "홈트레이닝 요가매트"
-    url: "https://www.coupang.com/np/search?component=&q=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D+%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&channel=user"
+    url: "https://www.coupang.com/np/search?q=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&src=1139000&spec=10799999&addtag=200&ctag=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8"
   - title: "스마트 체중계"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%8A%A4%EB%A7%88%ED%8A%B8+%EC%B2%B4%EC%A4%91%EA%B3%84&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84&src=1139000&spec=10799999&addtag=200&ctag=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84"
 faq:
   - q: "이 5가지를 모두 실행해야 효과가 있나요?"
     a: "이상적으로는 모두 적용하는 것이 가장 빠르고 효과적입니다. 다만 한 두 가지부터 시작해도 괜찮습니다. 우선순위는 시간 고정 > 아침 빛 노출 > 저녁 블루라이트 차단 > 카페인 시간 > 운동 타이밍 순입니다."
@@ -34,7 +34,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D+%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&src=1139000&spec=10799999&addtag=200&ctag=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -206,7 +206,7 @@ A: 교대근무인 경우, 절대 시간보다 "수면-깨움 간격의 일관�
 ---
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%8A%A4%EB%A7%88%ED%8A%B8+%EC%B2%B4%EC%A4%91%EA%B3%84&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84&src=1139000&spec=10799999&addtag=200&ctag=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -219,6 +219,6 @@ A: 교대근무인 경우, 절대 시간보다 "수면-깨움 간격의 일관�
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [홈트레이닝 요가매트](https://www.coupang.com/np/search?component=&q=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D+%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&channel=user)
-- [스마트 체중계](https://www.coupang.com/np/search?component=&q=%EC%8A%A4%EB%A7%88%ED%8A%B8+%EC%B2%B4%EC%A4%91%EA%B3%84&channel=user)
+- [홈트레이닝 요가매트](https://www.coupang.com/np/search?q=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&src=1139000&spec=10799999&addtag=200&ctag=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8)
+- [스마트 체중계](https://www.coupang.com/np/search?q=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84&src=1139000&spec=10799999&addtag=200&ctag=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84)
 

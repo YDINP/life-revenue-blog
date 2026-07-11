@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/5020267/pexels-photo-5020267.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "스마트 체중계"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%8A%A4%EB%A7%88%ED%8A%B8+%EC%B2%B4%EC%A4%91%EA%B3%84&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84&src=1139000&spec=10799999&addtag=200&ctag=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84"
   - title: "건강한 식단 도서"
-    url: "https://www.coupang.com/np/search?component=&q=%EA%B1%B4%EA%B0%95%ED%95%9C+%EC%8B%9D%EB%8B%A8+%EB%8F%84%EC%84%9C&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C"
 faq:
   - q: "수면 부족이 있다면 어떤 용품부터 시작하는 게 좋을까요?"
     a: "먼저 광선 치료 스탠드와 백색소음 머신으로 수면 환경을 개선하세요. 이 두 가지는 가격이 저렴하면서도 2주 내 효과를 볼 수 있습니다. 2주 후 효과가 미흡하면 온도 조절 패드나 수소 침구류 같은 고가 제품 도입을 고려하세요."
@@ -36,7 +36,7 @@ faq:
 단순한 수면시간 증가만으로는 해결되지 않습니다. 수면 환경 개선이 수면 질을 직접적으로 영향을 미친다는 연구 결과들이 속속 발표되고 있습니다. 침구류, 조명, 온습도 조절 제품 등 과학 기반의 숙면 용품들이 얼마나 효과적인지 살펴보겠습니다.
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%8A%A4%EB%A7%88%ED%8A%B8+%EC%B2%B4%EC%A4%91%EA%B3%84&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84&src=1139000&spec=10799999&addtag=200&ctag=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -223,7 +223,7 @@ A: 최신 제품들의 정확도는 의료용 뇌파 센서와 87~92% 수준의 
 ---
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EA%B1%B4%EA%B0%95%ED%95%9C+%EC%8B%9D%EB%8B%A8+%EB%8F%84%EC%84%9C&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -236,6 +236,6 @@ A: 최신 제품들의 정확도는 의료용 뇌파 센서와 87~92% 수준의 
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [스마트 체중계](https://www.coupang.com/np/search?component=&q=%EC%8A%A4%EB%A7%88%ED%8A%B8+%EC%B2%B4%EC%A4%91%EA%B3%84&channel=user)
-- [건강한 식단 도서](https://www.coupang.com/np/search?component=&q=%EA%B1%B4%EA%B0%95%ED%95%9C+%EC%8B%9D%EB%8B%A8+%EB%8F%84%EC%84%9C&channel=user)
+- [스마트 체중계](https://www.coupang.com/np/search?q=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84&src=1139000&spec=10799999&addtag=200&ctag=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84)
+- [건강한 식단 도서](https://www.coupang.com/np/search?q=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C)
 

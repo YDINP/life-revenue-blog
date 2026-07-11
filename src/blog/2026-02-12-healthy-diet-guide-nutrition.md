@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/30635719/pexels-photo-30635719.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "건강한 식단 도서"
-    url: "https://www.coupang.com/np/search?component=&q=%EA%B1%B4%EA%B0%95%ED%95%9C+%EC%8B%9D%EB%8B%A8+%EB%8F%84%EC%84%9C&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C"
   - title: "스마트 체중계"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%8A%A4%EB%A7%88%ED%8A%B8+%EC%B2%B4%EC%A4%91%EA%B3%84&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84&src=1139000&spec=10799999&addtag=200&ctag=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84"
 ---
 # 건강한 식단 완벽 가이드: 영양학자가 추천하는 식단 구성법
 
@@ -48,7 +48,7 @@ coupangLinks:
 음식을 천천히 씹어 먹으면 소화가 잘 되고 포만감이 빨리 느껴집니다. 최소 20분 이상 걸려 식사하는 것이 이상적입니다.
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EA%B1%B4%EA%B0%95%ED%95%9C+%EC%8B%9D%EB%8B%A8+%EB%8F%84%EC%84%9C&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -167,11 +167,11 @@ A: 계절 식품을 선택하고, 대량 구매하며, 간단한 조리법을 �
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [건강한 식단 도서](https://www.coupang.com/np/search?component=&q=%EA%B1%B4%EA%B0%95%ED%95%9C+%EC%8B%9D%EB%8B%A8+%EB%8F%84%EC%84%9C&channel=user)
-- [스마트 체중계](https://www.coupang.com/np/search?component=&q=%EC%8A%A4%EB%A7%88%ED%8A%B8+%EC%B2%B4%EC%A4%91%EA%B3%84&channel=user)
+- [건강한 식단 도서](https://www.coupang.com/np/search?q=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C)
+- [스마트 체중계](https://www.coupang.com/np/search?q=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84&src=1139000&spec=10799999&addtag=200&ctag=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84)
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%8A%A4%EB%A7%88%ED%8A%B8+%EC%B2%B4%EC%A4%91%EA%B3%84&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84&src=1139000&spec=10799999&addtag=200&ctag=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>

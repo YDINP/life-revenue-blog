@@ -8,9 +8,9 @@ tags: ["자산배분", "투자", "부동산", "주식", "암호화폐"]
 heroImage: "https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "자산배분 투자 도서"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84+%ED%88%AC%EC%9E%90+%EB%8F%84%EC%84%9C&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84%20%ED%88%AC%EC%9E%90%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84%20%ED%88%AC%EC%9E%90%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84%20%ED%88%AC%EC%9E%90%20%EB%8F%84%EC%84%9C"
   - title: "재테크 다이어리"
-    url: "https://www.coupang.com/np/search?component=&q=%EC%9E%AC%ED%85%8C%ED%81%AC+%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%9E%AC%ED%85%8C%ED%81%AC%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&src=1139000&spec=10799999&addtag=200&ctag=%EC%9E%AC%ED%85%8C%ED%81%AC%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%9E%AC%ED%85%8C%ED%81%AC%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC"
 ---
 # 2026 자산 배분 전략: 어디에 투자해야 할까?
 
@@ -21,7 +21,7 @@ coupangLinks:
 <div class="chart-radar" data-title="투자 자산 종합 비교 (10점 만점)" data-items='[{"name":"부동산","scores":[{"label":"수익률","value":6,"color":"#10b981"},{"label":"안정성","value":8,"color":"#3b82f6"},{"label":"유동성","value":3,"color":"#f59e0b"},{"label":"진입장벽","value":2,"color":"#ef4444"},{"label":"성장성","value":5,"color":"#8b5cf6"}]},{"name":"주식(ETF)","scores":[{"label":"수익률","value":7,"color":"#10b981"},{"label":"안정성","value":6,"color":"#3b82f6"},{"label":"유동성","value":9,"color":"#f59e0b"},{"label":"진입장벽","value":9,"color":"#ef4444"},{"label":"성장성","value":7,"color":"#8b5cf6"}]},{"name":"암호화폐","scores":[{"label":"수익률","value":9,"color":"#10b981"},{"label":"안정성","value":3,"color":"#3b82f6"},{"label":"유동성","value":8,"color":"#f59e0b"},{"label":"진입장벽","value":8,"color":"#ef4444"},{"label":"성장성","value":9,"color":"#8b5cf6"}]}]'></div>
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84+%ED%88%AC%EC%9E%90+%EB%8F%84%EC%84%9C&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84%20%ED%88%AC%EC%9E%90%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84%20%ED%88%AC%EC%9E%90%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84%20%ED%88%AC%EC%9E%90%20%EB%8F%84%EC%84%9C" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -125,7 +125,7 @@ AI 산업 성장세가 이어지며 기술주 강세. 한국 코스피는 2,800~
 완벽한 투자 전략은 없습니다. 하지만 분산은 실패를 줄여주고, 꾸준함은 복리를 만들어줍니다. 오늘 당장 자신의 자산 현황을 점검하고, 이 글의 포트폴리오를 참고해 첫 걸음을 내딛어보세요.
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%9E%AC%ED%85%8C%ED%81%AC+%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%9E%AC%ED%85%8C%ED%81%AC%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&src=1139000&spec=10799999&addtag=200&ctag=%EC%9E%AC%ED%85%8C%ED%81%AC%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%9E%AC%ED%85%8C%ED%81%AC%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>

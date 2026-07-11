@@ -8,9 +8,9 @@ tags: ["영양", "식단", "건강", "직장인"]
 heroImage: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "도시락 용기 세트"
-    url: "https://www.coupang.com/np/search?component=&q=%EB%8F%84%EC%8B%9C%EB%9D%BD+%EC%9A%A9%EA%B8%B0+%EC%84%B8%ED%8A%B8&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EB%8F%84%EC%8B%9C%EB%9D%BD%20%EC%9A%A9%EA%B8%B0%20%EC%84%B8%ED%8A%B8&src=1139000&spec=10799999&addtag=200&ctag=%EB%8F%84%EC%8B%9C%EB%9D%BD%20%EC%9A%A9%EA%B8%B0%20%EC%84%B8%ED%8A%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%8F%84%EC%8B%9C%EB%9D%BD%20%EC%9A%A9%EA%B8%B0%20%EC%84%B8%ED%8A%B8"
   - title: "건강 식단 레시피북"
-    url: "https://www.coupang.com/np/search?component=&q=%EA%B1%B4%EA%B0%95+%EC%8B%9D%EB%8B%A8+%EB%A0%88%EC%8B%9C%ED%94%BC%EB%B6%81&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EA%B1%B4%EA%B0%95%20%EC%8B%9D%EB%8B%A8%20%EB%A0%88%EC%8B%9C%ED%94%BC%EB%B6%81&src=1139000&spec=10799999&addtag=200&ctag=%EA%B1%B4%EA%B0%95%20%EC%8B%9D%EB%8B%A8%20%EB%A0%88%EC%8B%9C%ED%94%BC%EB%B6%81&lptag=AF7838146&pageType=SEARCH&pageValue=%EA%B1%B4%EA%B0%95%20%EC%8B%9D%EB%8B%A8%20%EB%A0%88%EC%8B%9C%ED%94%BC%EB%B6%81"
 ---
 # 건강한 식단 가이드: 바쁜 직장인을 위한 영양 관리
 
@@ -37,7 +37,7 @@ coupangLinks:
 라면, 냉동식품, 패스트푸드는 최소화하고 자연 식품 위주로 섭취하세요.
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EB%8F%84%EC%8B%9C%EB%9D%BD+%EC%9A%A9%EA%B8%B0+%EC%84%B8%ED%8A%B8&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EB%8F%84%EC%8B%9C%EB%9D%BD%20%EC%9A%A9%EA%B8%B0%20%EC%84%B8%ED%8A%B8&src=1139000&spec=10799999&addtag=200&ctag=%EB%8F%84%EC%8B%9C%EB%9D%BD%20%EC%9A%A9%EA%B8%B0%20%EC%84%B8%ED%8A%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%8F%84%EC%8B%9C%EB%9D%BD%20%EC%9A%A9%EA%B8%B0%20%EC%84%B8%ED%8A%B8" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -192,7 +192,7 @@ MyFitnessPal: 칼로리 및 영양소 추적
 오늘부터 한 가지씩 실천해보세요. 아침에 물 한 잔 마시기, 간식을 과자 대신 과일로 바꾸기, 저녁 식사 시간 앞당기기. 작은 변화가 모여 큰 건강을 만듭니다!
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EA%B1%B4%EA%B0%95+%EC%8B%9D%EB%8B%A8+%EB%A0%88%EC%8B%9C%ED%94%BC%EB%B6%81&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EA%B1%B4%EA%B0%95%20%EC%8B%9D%EB%8B%A8%20%EB%A0%88%EC%8B%9C%ED%94%BC%EB%B6%81&src=1139000&spec=10799999&addtag=200&ctag=%EA%B1%B4%EA%B0%95%20%EC%8B%9D%EB%8B%A8%20%EB%A0%88%EC%8B%9C%ED%94%BC%EB%B6%81&lptag=AF7838146&pageType=SEARCH&pageValue=%EA%B1%B4%EA%B0%95%20%EC%8B%9D%EB%8B%A8%20%EB%A0%88%EC%8B%9C%ED%94%BC%EB%B6%81" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>

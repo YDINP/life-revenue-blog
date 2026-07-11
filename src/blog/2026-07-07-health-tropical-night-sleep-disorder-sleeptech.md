@@ -8,9 +8,9 @@ tags: [열대야, 수면장애, 슬립테크, 숙면팁, 여름수면]
 heroImage: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "냉감 인견 여름 이불"
-    url: "https://www.coupang.com/np/search?component=&q=%EB%83%89%EA%B0%90+%EC%9D%B8%EA%B2%AC+%EC%97%AC%EB%A6%84+%EC%9D%B4%EB%B6%88&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EB%83%89%EA%B0%90%20%EC%9D%B8%EA%B2%AC%20%EC%97%AC%EB%A6%84%20%EC%9D%B4%EB%B6%88&src=1139000&spec=10799999&addtag=200&ctag=%EB%83%89%EA%B0%90%20%EC%9D%B8%EA%B2%AC%20%EC%97%AC%EB%A6%84%20%EC%9D%B4%EB%B6%88&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%83%89%EA%B0%90%20%EC%9D%B8%EA%B2%AC%20%EC%97%AC%EB%A6%84%20%EC%9D%B4%EB%B6%88"
   - title: "3D 입체 수면안대"
-    url: "https://www.coupang.com/np/search?component=&q=3D+%EC%9E%85%EC%B2%B4+%EC%88%98%EB%A9%B4%EC%95%88%EB%8C%80&channel=user"
+    url: "https://www.coupang.com/np/search?q=3D%20%EC%9E%85%EC%B2%B4%20%EC%88%98%EB%A9%B4%EC%95%88%EB%8C%80&src=1139000&spec=10799999&addtag=200&ctag=3D%20%EC%9E%85%EC%B2%B4%20%EC%88%98%EB%A9%B4%EC%95%88%EB%8C%80&lptag=AF7838146&pageType=SEARCH&pageValue=3D%20%EC%9E%85%EC%B2%B4%20%EC%88%98%EB%A9%B4%EC%95%88%EB%8C%80"
 faq:
   - q: "열대야에 에어컨을 켜고 자도 괜찮을까요?"
     a: "적정 온도로 관리한다면 문제없습니다. 다만 밤새 강하게 틀기보다 취침 전 실내를 충분히 식힌 뒤 26~28도로 예약 타이머를 설정하는 것이 좋습니다. 찬 바람이 몸에 직접 닿지 않도록 풍향을 위로 향하게 하고, 얇은 이불을 덮어 냉방병을 예방하세요. 제습 기능을 병행하면 더 쾌적합니다."
@@ -38,7 +38,7 @@ faq:
 위 데이터에서 볼 수 있듯 열대야 기간의 수면 만족도는 18%까지 떨어져 사계절 중 가장 낮습니다. 그만큼 여름밤 수면 관리가 중요하다는 의미입니다.
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EB%83%89%EA%B0%90+%EC%9D%B8%EA%B2%AC+%EC%97%AC%EB%A6%84+%EC%9D%B4%EB%B6%88&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EB%83%89%EA%B0%90%20%EC%9D%B8%EA%B2%AC%20%EC%97%AC%EB%A6%84%20%EC%9D%B4%EB%B6%88&src=1139000&spec=10799999&addtag=200&ctag=%EB%83%89%EA%B0%90%20%EC%9D%B8%EA%B2%AC%20%EC%97%AC%EB%A6%84%20%EC%9D%B4%EB%B6%88&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%83%89%EA%B0%90%20%EC%9D%B8%EA%B2%AC%20%EC%97%AC%EB%A6%84%20%EC%9D%B4%EB%B6%88" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -129,7 +129,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=3D+%EC%9E%85%EC%B2%B4+%EC%88%98%EB%A9%B4%EC%95%88%EB%8C%80&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=3D%20%EC%9E%85%EC%B2%B4%20%EC%88%98%EB%A9%B4%EC%95%88%EB%8C%80&src=1139000&spec=10799999&addtag=200&ctag=3D%20%EC%9E%85%EC%B2%B4%20%EC%88%98%EB%A9%B4%EC%95%88%EB%8C%80&lptag=AF7838146&pageType=SEARCH&pageValue=3D%20%EC%9E%85%EC%B2%B4%20%EC%88%98%EB%A9%B4%EC%95%88%EB%8C%80" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -142,5 +142,5 @@ faq:
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [냉감 인견 여름 이불](https://www.coupang.com/np/search?component=&q=%EB%83%89%EA%B0%90+%EC%9D%B8%EA%B2%AC+%EC%97%AC%EB%A6%84+%EC%9D%B4%EB%B6%88&channel=user)
-- [3D 입체 수면안대](https://www.coupang.com/np/search?component=&q=3D+%EC%9E%85%EC%B2%B4+%EC%88%98%EB%A9%B4%EC%95%88%EB%8C%80&channel=user)
+- [냉감 인견 여름 이불](https://www.coupang.com/np/search?q=%EB%83%89%EA%B0%90%20%EC%9D%B8%EA%B2%AC%20%EC%97%AC%EB%A6%84%20%EC%9D%B4%EB%B6%88&src=1139000&spec=10799999&addtag=200&ctag=%EB%83%89%EA%B0%90%20%EC%9D%B8%EA%B2%AC%20%EC%97%AC%EB%A6%84%20%EC%9D%B4%EB%B6%88&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%83%89%EA%B0%90%20%EC%9D%B8%EA%B2%AC%20%EC%97%AC%EB%A6%84%20%EC%9D%B4%EB%B6%88)
+- [3D 입체 수면안대](https://www.coupang.com/np/search?q=3D%20%EC%9E%85%EC%B2%B4%20%EC%88%98%EB%A9%B4%EC%95%88%EB%8C%80&src=1139000&spec=10799999&addtag=200&ctag=3D%20%EC%9E%85%EC%B2%B4%20%EC%88%98%EB%A9%B4%EC%95%88%EB%8C%80&lptag=AF7838146&pageType=SEARCH&pageValue=3D%20%EC%9E%85%EC%B2%B4%20%EC%88%98%EB%A9%B4%EC%95%88%EB%8C%80)
