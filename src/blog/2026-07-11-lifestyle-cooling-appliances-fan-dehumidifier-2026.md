@@ -78,6 +78,15 @@ faq:
 
 <div class="callout-warning">⚠️ 주의: 리튬배터리 내장 선풍기는 KC 인증과 과충전 보호 회로 여부를 반드시 확인하세요. 폭염 속 차량·직사광선에 방치하면 배터리 팽창·발화 위험이 있습니다.</div>
 
+<a class="coupang-inline" href="https://link.coupang.com/a/dJhOT3" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">4,000mAh 이상 BLDC 저소음 휴대용 선풍기 인기순 보기</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
+
 ---
 
 ## 제습기, 평수와 제습량으로 정한다
@@ -91,6 +100,15 @@ faq:
 | 전체·30평 이상 | 18L 이상 | 35만~45만원 | 대용량 물통·연속배수 |
 
 인버터 제습기는 정속형보다 전기료가 20~30% 저렴해 매일 켠다면 초기 가격 차이를 회수합니다. 물통 용량이 크거나 연속배수 호스를 지원하면 비울 번거로움이 줄어듭니다.
+
+<a class="coupang-inline" href="https://link.coupang.com/a/dJhOT3" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">💧</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">우리 집 평수에 맞는 인버터 제습기(10~16L) 보기</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ---
 
@@ -114,6 +132,15 @@ faq:
 - 에어컨 있는 집: 서큘레이터 + 제습기 — 에어컨 설정온도를 높여도 시원, 전기료 절감
 - 에어컨 없는 집: 서큘레이터 + 탁상용 선풍기 — 공기 순환으로 체감온도 최대한 하강
 - 사무실·재택: 저소음 탁상용 선풍기(40dB 이하) — 집중 방해 없이 국소 냉감
+
+<a class="coupang-inline" href="https://link.coupang.com/a/dJhOT3" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🌀</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">에어컨 전기료 잡는 저소음 서큘레이터 인기 상품</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 <div class="callout-tip">💡 팁: 에어컨을 26~27도로 설정하고 서큘레이터로 찬 공기를 순환시키면 24도 단독 냉방과 비슷한 체감을 훨씬 적은 전력으로 얻습니다. 냉방비 절감의 핵심은 '온도 낮추기'가 아니라 '공기 순환'입니다.</div>
 
