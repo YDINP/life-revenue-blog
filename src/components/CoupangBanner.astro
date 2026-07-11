@@ -62,24 +62,7 @@ const { links } = Astro.props;
   </p>
 </aside>
 
-<script>
-  document.querySelectorAll('.coupang-link-item').forEach(link => {
-    link.addEventListener('click', () => {
-      const product = link.getAttribute('data-product') || '';
-      const url = link.getAttribute('href') || '';
-      const slug = window.location.pathname.replace(/^\/blog\//, '').replace(/\/$/, '');
-      fetch('https://xyprbsmagtlzebxyxsvj.supabase.co/functions/v1/analytics-ingest', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          event_type: 'coupang_click',
-          source: 'blog',
-          metadata: { product, url, slug, path: window.location.pathname }
-        })
-      }).catch(() => {});
-    });
-  });
-</script>
+<!-- 클릭 추적은 BaseLayout 전역 coupang_click 핸들러가 담당 (data-product 사용) -->
 
 <style>
   .coupang-banner {

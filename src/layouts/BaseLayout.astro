@@ -330,17 +330,20 @@ const websiteSchema = {
           })
         }).catch(() => {});
 
-        // 제휴(쿠팡) 클릭 추적 — 어떤 상품/글이 실제 전환되는지 데이터화
+        // 제휴(쿠팡) 클릭 추적 — 어떤 글에서 어떤 상품 링크를 눌렀는지 데이터화
+        // 배너/인라인 공통 단일 경로: coupang_click 하나로 통일 (CoupangBanner 자체 스크립트 제거됨)
         document.addEventListener('click', function (e) {
           const t = e.target;
-          const a = t && t.closest && t.closest('a.coupang-inline, a.coupang-link, a[href*="coupang.com"]');
+          const a = t && t.closest && t.closest('a.coupang-inline, a.coupang-link, a.coupang-link-item, a[href*="coupang.com"]');
           if (!a) return;
           const ci = a.querySelector && a.querySelector('.ci-title');
-          const label = (ci && ci.textContent.trim()) || (a.textContent || '').trim().slice(0, 80);
+          const product = (a.getAttribute('data-product') || '').trim()
+            || (ci && ci.textContent.trim())
+            || (a.textContent || '').trim().slice(0, 80);
           const payload = JSON.stringify({
-            event_type: 'affiliate_click',
+            event_type: 'coupang_click',
             source: 'lifeflow',
-            metadata: { target: 'coupang', label: label, href: a.href, slug: slug, path: window.location.pathname }
+            metadata: { product: product, url: a.href, slug: slug, path: window.location.pathname, title: document.title }
           });
           try { navigator.sendBeacon(ANALYTICS_URL, new Blob([payload], { type: 'application/json' })); }
           catch (e2) { fetch(ANALYTICS_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: payload, keepalive: true }).catch(function () {}); }
