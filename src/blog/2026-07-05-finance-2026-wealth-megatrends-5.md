@@ -8,9 +8,9 @@ tags: [재테크트렌드, AI투자, 금리인하, 절세계좌, 투자사기]
 heroImage: "https://images.pexels.com/photos/7788009/pexels-photo-7788009.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "2026 경제 대전망 트렌드 도서"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcbWSycK"
   - title: "갤럭시탭 재테크용 태블릿"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcdYyMh2"
 faq:
   - q: "AI·반도체 테마에 지금 들어가도 늦지 않았나요?"
     a: "특정 종목의 단기 고점 여부는 아무도 확언할 수 없습니다. 다만 AI·반도체는 단기 유행이 아니라 산업 구조를 바꾸는 장기 흐름이라, 개별 종목 몰빵보다 관련 지수 ETF로 넓게 나눠 담고 길게 보는 접근이 안전합니다. 급등에 흥분해 한 번에 큰돈을 넣기보다, 분할 매수로 진입 시점을 분산하는 것이 위험을 줄이는 방법입니다."
@@ -35,6 +35,16 @@ faq:
 <div class="chart-bar" data-title="2026 재테크 트렌드 관심도 (100 기준)" data-labels="AI·반도체,금리인하,ETF대중화,절세계좌,사기경계" data-values="92,80,85,78,70" data-colors="#2563eb,#10b981,#f59e0b,#8b5cf6,#ef4444" data-unit="점"></div>
 
 다섯 트렌드는 따로 노는 것이 아니라 서로 맞물립니다. 금리가 내리면 위험자산이 힘을 받고, 그 자금이 ETF로 흘러가며, 이 과정에서 절세계좌와 사기 경계가 함께 중요해집니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbWSycK" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">2026 경제 대전망 트렌드 도서</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 트렌드 1: AI·반도체가 이끄는 성장 축
 
@@ -87,6 +97,16 @@ AI 열풍은 단순 유행이 아니라 산업 전반의 구조를 바꾸는 장
 - 핵심 자산은 흔들림 없이 꾸준히 유지합니다.
 - 트렌드는 연 1~2회 리밸런싱 때 비중을 미세 조정하는 데 활용합니다.
 - 유행보다 자신의 목표·기간·위험 성향을 우선합니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcdYyMh2" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">갤럭시탭 재테크용 태블릿</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 마치며
 

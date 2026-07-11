@@ -8,9 +8,9 @@ tags: ["영양", "식단", "건강", "직장인"]
 heroImage: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "도시락 용기 세트"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb6zQZ5M"
   - title: "건강 식단 레시피북"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb6DrBbo"
 ---
 # 건강한 식단 가이드: 바쁜 직장인을 위한 영양 관리
 
@@ -35,6 +35,16 @@ coupangLinks:
 ### 가공식품 최소화
 
 라면, 냉동식품, 패스트푸드는 최소화하고 자연 식품 위주로 섭취하세요.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb6zQZ5M" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">도시락 용기 세트</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 2. 직장인을 위한 실전 식단
 
@@ -180,6 +190,16 @@ MyFitnessPal: 칼로리 및 영양소 추적
 건강한 식단은 어렵지 않습니다. 복잡한 레시피나 비싼 재료가 필요한 것도 아닙니다. 간단한 원칙을 지키고, 가공식품을 줄이고, 자연 식품을 늘리는 것만으로도 충분합니다.
 
 오늘부터 한 가지씩 실천해보세요. 아침에 물 한 잔 마시기, 간식을 과자 대신 과일로 바꾸기, 저녁 식사 시간 앞당기기. 작은 변화가 모여 큰 건강을 만듭니다!
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb6DrBbo" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">건강 식단 레시피북</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 참고 자료
 

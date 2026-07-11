@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/7680483/pexels-photo-7680483.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "부자 아빠 가난한 아빠"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9gWx6y"
   - title: "주식투자 무작정 따라하기"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9knfq0"
 faq:
   - q: "72시간 규칙을 지키기 힘들 때는 어떻게 해야 하나요?"
     a: "온라인 쇼핑물 비밀번호를 자주 변경하거나, 다른 사람에게 임시로 맡기는 방법이 있습니다. 처음 1주일이 가장 힘들지만, 10회 반복 후에는 의식적 노력이 크게 줄어듭니다."
@@ -36,6 +36,16 @@ faq:
 이 가이드는 단순 "절약하세요"라는 조언을 넘어, 심리학 기반 소비 패턴 분석과 뇌과학으로 검증된 습관 개선 전략을 제시합니다.
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9gWx6y" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">부자 아빠 가난한 아빠</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 당신의 소비 유형은? 4가지 심리 패턴 진단
 
@@ -190,6 +200,16 @@ faq:
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9knfq0" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">주식투자 무작정 따라하기</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/5020267/pexels-photo-5020267.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "스마트 체중계"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcbrScuq"
   - title: "홈트레이닝 요가매트"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcbKoctU"
 faq:
   - q: "멜라토닌을 매일 복용해도 안전한가요?"
     a: "단기(3~6개월)에는 안전하지만, 장기 복용 시 신체 적응으로 효과가 감소합니다. 의료진 지도 하에 주 3~4회 선택적 복용을 추천합니다. 임신 중이거나 기존 약물 복용 중이면 반드시 상담이 필요합니다."
@@ -34,6 +34,16 @@ faq:
 이 글에서는 2026년 시장에서 검증된 수면 보조 제품을 과학적 근거와 함께 비교 분석합니다. 멜라토닌부터 스마트 수면 디바이스까지, 당신의 수면 유형에 맞는 최적의 제품을 찾을 수 있습니다.
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbrScuq" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">스마트 체중계</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 수면의 중요성: 왜 지금 수면 개선이 필수인가
 
@@ -248,6 +258,16 @@ faq:
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbKoctU" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">홈트레이닝 요가매트</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

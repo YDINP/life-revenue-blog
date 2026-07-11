@@ -14,9 +14,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/7174396/pexels-photo-7174396.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "홈트레이닝 요가매트"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcbKoctU"
   - title: "스마트 체중계"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcbrScuq"
 faq:
   - q: "홈트 처음 시작하는데 어떤 장비부터 사야 하나요?"
     a: "요가 매트와 저항 밴드부터 시작하는 것을 추천합니다. 두 제품 모두 전신 운동이 가능하고, 총 40,000원대로 시작할 수 있으며, 초보자가 안전하게 배울 수 있기 때문입니다."
@@ -33,6 +33,16 @@ faq:
 이 글에서는 초보자부터 중급자까지 실제로 효과를 볼 수 있으면서도 예산 부담이 적은 홈트 장비 8가지를 정리했습니다.
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbKoctU" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">홈트레이닝 요가매트</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 예산대별 홈트 장비 현황
 
@@ -235,6 +245,16 @@ faq:
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbrScuq" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">스마트 체중계</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

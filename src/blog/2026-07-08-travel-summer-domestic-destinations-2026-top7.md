@@ -8,9 +8,9 @@ tags: [여름휴가, 국내여행, 강원도, 제주도, 여행추천]
 heroImage: "https://images.pexels.com/photos/402028/pexels-photo-402028.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "여행용 캐리어"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb3FBIuO"
   - title: "휴대용 선풍기"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIclMJMmy"
 faq:
   - q: "2026년 여름 국내 여행지 중 가성비가 가장 좋은 곳은 어디인가요?"
     a: "접근성과 물가를 함께 고려하면 삼척과 순천이 가장 가성비가 좋습니다. 삼척은 동해안 해수욕장이 강릉보다 20~30% 저렴한 숙박비를 유지하고, 순천은 만 습지와 정원을 무료 또는 저렴하게 즐길 수 있습니다. 2인 2박 3일 기준 40만~55만원이면 충분히 알찬 일정이 가능합니다. 반면 제주는 항공료가 추가되어 예산이 20% 이상 올라갑니다."
@@ -47,6 +47,16 @@ faq:
 <div class="callout-info">💡 정보: 예산은 항공/유류비를 제외한 숙박·식비·입장료 합산 기준이며, 제주는 왕복 항공료(1인 8만~15만원)를 별도로 계산해야 합니다.</div>
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb3FBIuO" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">여행용 캐리어</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 지역별 예상 예산 비교
 
@@ -122,6 +132,16 @@ faq:
 <div class="callout-warning">⚠️ 주의: 여름철 해변은 오후 2~4시 자외선이 가장 강하고 이안류 사고 위험도 높습니다. 물놀이는 오전이나 늦은 오후로 잡고, 안전요원이 배치된 지정 구역에서만 입수하세요.</div>
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIclMJMmy" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">휴대용 선풍기</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 마치며
 

@@ -8,9 +8,9 @@ tags: [제주여행, 서귀포, 올레길, 트레킹, 슬로우여행]
 heroImage: "https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "트레킹화"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcd9HcTR"
   - title: "경량 백팩"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcecs7Fc"
 faq:
   - q: "서귀포 해안 트레킹 초보자도 완주할 수 있나요?"
     a: "네, 서귀포 올레길 대부분은 초보자도 무리 없이 걸을 수 있는 평탄한 해안 코스입니다. 하루 10~15km, 3~5시간 정도로 나눠 걸으면 체력 부담이 크지 않습니다. 다만 여름철에는 오전 일찍 출발해 한낮 더위를 피하고, 중간중간 카페나 그늘에서 충분히 쉬는 슬로우 페이스가 중요합니다. 트레킹화와 물, 자외선 차단제만 잘 챙기면 초보자도 충분히 즐길 수 있습니다."
@@ -42,6 +42,16 @@ faq:
 - 접근성: 공항에서 차량 1시간, 올레길 버스 연결
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcd9HcTR" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">트레킹화</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 일자별 상세 코스
 
@@ -119,6 +129,16 @@ faq:
 <div class="callout-warning">⚠️ 주의: 여름 제주 해안 코스는 그늘이 거의 없어 한낮(오후 12~3시) 트레킹은 온열질환 위험이 높습니다. 이 시간대는 반드시 실내 미술관·카페 일정으로 배치하고, 걷기는 아침과 저녁으로 나누세요.</div>
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcecs7Fc" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">경량 백팩</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 마치며
 

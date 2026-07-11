@@ -13,9 +13,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/5852307/pexels-photo-5852307.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "독서등 LED"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcbHG3Wu"
   - title: "아이패드 에어 M2"
-    url: "https://link.coupang.com/a/dJjUUj"
+    url: "https://link.coupang.com/a/fiIcbvsNz2"
 faq:
   - q: "내가 어떤 독서 유형인지 어떻게 알 수 있나요?"
     a: "지난 1년간 읽은 책 3~5권을 생각해보세요. 그 책들의 공통점(장르, 주제, 형식)이 당신의 선호도입니다. 분석형은 데이터가 풍부한 책, 감정형은 스토리 기반 책, 행동형은 실무 가이드, 탐험형은 다양한 주제의 책을 반복해서 선택했을 확률이 높습니다."
@@ -32,6 +32,16 @@ faq:
 2026년 한국출판문화재단 조사에 따르면, 독서 중단 경험자의 62%가 "책의 내용이 지루했다"고 응답했습니다. 이는 단순히 책이 재미없다는 뜻이 아니라, 자신의 독서 스타일을 모르고 무작정 다른 사람의 추천책을 읽었다는 의미입니다.
 
 본 포스트에서는 자신의 독서 성향을 파악하고, 그에 맞는 책을 선택하는 방법을 소개합니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbHG3Wu" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">독서등 LED</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 당신의 독서 유형은? 4가지 카테고리 진단
 
@@ -180,6 +190,16 @@ faq:
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbvsNz2" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">아이패드 에어 M2</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/7615452/pexels-photo-7615452.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "건강한 식단 도서"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9nzvHg"
   - title: "스마트 체중계"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcbrScuq"
 faq:
   - q: "건강식품을 언제부터 섭취하면 효과가 나타나나요?"
     a: "대부분의 건강식품은 최소 4주에서 8주 사이에 초기 변화를 체감할 수 있지만, 의미 있는 생화학적 효과는 12주 이상의 꾸준한 섭취가 필요합니다. 특히 피부, 소화, 피로감은 비교적 빠르게 개선되는 반면, 혈중 수치 개선이나 질병 예방 효과는 장기 섭취를 통해 확인됩니다."
@@ -34,6 +34,16 @@ faq:
 질병관리청 통계에 따르면 2026년 현재 성인의 71%가 건강식품을 정기적으로 섭취하고 있으며, 특히 직장인 세대(30~50대)의 섭취율이 가장 높습니다. 이들은 단순 효능보다 과학적 근거와 임상 데이터를 중시하며, 구성 성분과 일일 섭취량(함유량)을 꼼꼼히 확인하고 구매하는 추세입니다.
 
 이 가이드에서는 2026년 가장 많이 찾는 건강식품 5가지를 성분, 효과, 가격, 섭취 방법 등 모든 각도에서 비교분석하여 당신의 건강 목표에 맞는 제품을 선택하는 방법을 제시합니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9nzvHg" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">건강한 식단 도서</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## TOP 5 건강식품 종합 비교
 
@@ -250,6 +260,16 @@ EPA/DHA 제품의 경우 최소 8주 이상 꾸준히 섭취해야 효과를 체
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbrScuq" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">스마트 체중계</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

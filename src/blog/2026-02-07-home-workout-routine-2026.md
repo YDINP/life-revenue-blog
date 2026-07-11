@@ -8,9 +8,9 @@ tags: ["홈트레이닝", "운동", "건강", "다이어트"]
 heroImage: "https://images.pexels.com/photos/4162491/pexels-photo-4162491.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "요가매트"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb36h0IS"
   - title: "홈트레이닝 밴드"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb381Oqi"
 ---
 # 홈 트레이닝 완벽 가이드
 
@@ -35,6 +35,16 @@ coupangLinks:
 남의 시선을 의식하지 않고 편하게 운동할 수 있습니다.
 
 <div class="chart-progress" data-title="홈트레이닝 장점 비교 (100점 만점)" data-labels="시간절약,비용절약,편의성,지속성,효과성" data-values="95,100,90,85,80" data-colors="#10b981,#3b82f6,#8b5cf6,#f59e0b,#ec4899" data-max="100" data-unit="점"></div>
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb36h0IS" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">요가매트</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 2. 필수 준비물
 
@@ -251,6 +261,16 @@ SMART 원칙:
 홈 트레이닝은 시간과 장소에 구애받지 않는 최고의 운동 방법입니다. 오늘 소개한 루틴을 따라 하루 30분만 투자하면, 3개월 후 놀라운 변화를 경험할 수 있습니다.
 
 가장 중요한 것은 꾸준함입니다. 완벽한 운동을 가끔 하는 것보다, 간단한 운동을 매일 하는 것이 훨씬 효과적입니다. 지금 바로 요가매트를 펴고 첫 운동을 시작해보세요!
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb381Oqi" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">홈트레이닝 밴드</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 참고 자료
 

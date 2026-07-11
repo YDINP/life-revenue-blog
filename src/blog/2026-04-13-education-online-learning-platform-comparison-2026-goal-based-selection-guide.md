@@ -14,9 +14,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/17485350/pexels-photo-17485350.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "자기계발 도서 모음"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcbyBTMq"
   - title: "아이패드 에어 M2"
-    url: "https://link.coupang.com/a/dJjUUj"
+    url: "https://link.coupang.com/a/fiIcbvsNz2"
 faq:
   - q: "온라인 강의를 완료할 가능성을 높이려면 어떤 플랫폼을 선택해야 할까요?"
     a: "월 정액제(클래스101, 코드잇)는 심리적으로 \"더 많이 보자\"는 동기를 주고, 개별 구매제(인프런)는 \"이미 샀으니 완료하자\"는 손실회피심을 자극합니다. 당신의 성향에 맞춰 선택하세요. 라이브 강의가 포함된 패스트캠퍼스는 정해진 일정 때문에 강제성이 높습니다."
@@ -31,6 +31,16 @@ faq:
 2026년 현재 온라인 강의 시장은 폭발적으로 성장했습니다. 국내외 플랫폼만 해도 20개 이상이 운영 중이며, 매달 새로운 강좌가 수천 개씩 추가되고 있습니다. 문제는 선택지가 많을수록 결정이 어렵다는 것입니다.
 
 기존 포스트에서 유명한 3개 플랫폼을 비교했다면, 이번에는 최신 가격 데이터, 실제 사용자 후기, 커리큘럼 심화 비교를 통해 더 구체적인 선택 기준을 제시합니다. 특히 "이 플랫폼이 최고"라는 단순한 결론 대신, 당신의 학습 목표에 정확히 맞는 플랫폼을 찾는 실전 방법을 알려드리겠습니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbyBTMq" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">자기계발 도서 모음</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 2026년 주요 온라인 강의 플랫폼 5개 최신 분석
 
@@ -217,6 +227,16 @@ faq:
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbvsNz2" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">아이패드 에어 M2</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

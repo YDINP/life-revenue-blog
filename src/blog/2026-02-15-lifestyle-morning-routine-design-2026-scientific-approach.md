@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/32832431/pexels-photo-32832431.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "종이 다이어리"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb85kvxA"
   - title: "디지털 미니멀리즘 도서"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb8WTdtc"
 faq:
   - q: "모닝 루틴은 몇 분부터 시작해야 효과가 있나요?"
     a: "연구에 따르면 최소 20~30분 이상의 일관된 루틴이 측정 가능한 효과를 보입니다. 다만 5분이라도 매일 실천하는 것이 주 1회 30분보다 훨씬 효과적입니다. 처음에는 15분 미니 루틴으로 시작하여 점진적으로 확장하는 것을 추천합니다."
@@ -30,6 +30,16 @@ faq:
 ## 2026년 모닝 루틴 설계법: 과학 기반 아침 루틴으로 하루를 시작하는 5단계
 
 아침은 하루의 품질을 결정하는 가장 중요한 시간입니다. 많은 사람들이 "모닝 루틴을 만들어야 한다"는 것을 알지만, 실제로 어떻게 구성해야 효과적인지에 대해서는 혼란스러워합니다. 이 글에서는 수면 과학, 신경생물학, 행동심리학을 기반으로 한 검증된 모닝 루틴 설계법을 소개합니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb85kvxA" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">종이 다이어리</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 왜 모닝 루틴이 중요한가?
 
@@ -225,6 +235,16 @@ faq:
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb8WTdtc" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">디지털 미니멀리즘 도서</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/16055842/pexels-photo-16055842.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "부자 아빠 가난한 아빠"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9gWx6y"
   - title: "주식투자 무작정 따라하기"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9knfq0"
 faq:
   - q: "자산 배분은 얼마나 자주 조정해야 하나요?"
     a: "일반적으로 연 1회 또는 분기별로 정기적으로 리밸런싱하는 것이 권장됩니다. 또는 목표 배분에서 ±5% 이상 벗어났을 때만 조정하는 방법도 있습니다. 과도하게 자주 조정하면 거래비용이 늘고 세금 부담도 증가합니다."
@@ -42,6 +42,16 @@ faq:
 - 60대: 본격적인 은퇴 준비 단계로 현금화 가능성을 높여야 함
 
 한국금융투자협회가 2025년 발표한 자료에 따르면, 생애주기별 적절한 자산 배분을 실천한 투자자들의 평균 수익률이 그렇지 않은 투자자보다 연 3-4% 높았습니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9gWx6y" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">부자 아빠 가난한 아빠</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 연령대별 최적 자산 배분 비율
 
@@ -231,6 +241,16 @@ faq:
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9knfq0" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">주식투자 무작정 따라하기</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

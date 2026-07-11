@@ -8,11 +8,11 @@ tags: ["디지털디톡스", "스크린타임", "라이프스타일", "습관", 
 heroImage: "https://images.pexels.com/photos/3771074/pexels-photo-3771074.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "디지털 미니멀리즘 도서"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb8WTdtc"
   - title: "아날로그 알람시계"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb82bplc"
   - title: "종이 다이어리"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb85kvxA"
 ---
 # 디지털 디톡스: 스마트폰에서 벗어나는 법
 
@@ -25,6 +25,16 @@ coupangLinks:
 <div class="chart-donut" data-title="하루 24시간 활동 분배" data-labels="수면,스마트폰,직장/이동,식사,대화,운동,독서" data-values="30,30,28,6,3,2,1" data-colors="#3b82f6,#ef4444,#94a3b8,#22c55e,#ec4899,#f59e0b,#a855f7" data-unit="%"></div>
 
 놀라운 사실은 스마트폰 사용 시간이 수면 시간과 거의 같다는 것입니다. 이 시간의 60% 이상이 무의식적 스크롤링(SNS, 숏폼 영상)에 소비됩니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb8WTdtc" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">디지털 미니멀리즘 도서</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 디지털 디톡스가 필요한 신호 5가지
 
@@ -101,6 +111,16 @@ coupangLinks:
 3. 오늘 밤 침실에 폰을 두지 마세요
 
 작은 변화가 큰 차이를 만듭니다. 스마트폰이 당신의 시간을 지배하게 두지 마세요.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb82bplc" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">아날로그 알람시계</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 참고 자료
 

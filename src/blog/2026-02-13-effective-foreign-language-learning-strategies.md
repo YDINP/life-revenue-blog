@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/247819/pexels-photo-247819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "아이패드 에어 M2"
-    url: "https://link.coupang.com/a/dJjUUj"
+    url: "https://link.coupang.com/a/fiIcbvsNz2"
   - title: "자기계발 도서 모음"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcbyBTMq"
 ---
 # 외국어 학습 전략: 효율적인 방법 5가지로 3개월 내 실력 UP하기
 
@@ -32,6 +32,16 @@ coupangLinks:
 <div class="chart-bar" data-title="학습 방법별 3개월 실력 향상도" data-labels="전통 문법 중심,몰입식 학습,상황별 회화 연습,복합 전략" data-values="35,62,58,88" data-colors="#ef4444,#f59e0b,#3b82f6,#10b981" data-unit="점"></div>
 
 위 차트에서 보듯이 복합 학습 전략을 사용한 학습자들이 가장 빠른 실력 향상을 보였습니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbvsNz2" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">아이패드 에어 M2</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 1단계: 명확한 목표 설정 - "언어 학습 전략"의 시작점
 
@@ -135,6 +145,16 @@ Anki, Quizlet 같은 앱을 사용하면 자동으로 복습 일정을 관리할
 
 - [아이패드 에어 M2](https://link.coupang.com/a/dJjUUj)
 - [자기계발 도서 모음](https://link.coupang.com/a/dJhOT3)
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbyBTMq" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">자기계발 도서 모음</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 참고 자료
 

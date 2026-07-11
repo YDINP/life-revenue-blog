@@ -8,9 +8,9 @@ tags: ["자기계발", "학습법", "생산성", "교육"]
 heroImage: "https://images.pexels.com/photos/6533345/pexels-photo-6533345.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "공부법 도서"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb6gb0hM"
   - title: "학습 플래너"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb6jsk5k"
 ---
 # 효과적인 자기 학습법: 2026년 전략 TOP 5
 
@@ -30,6 +30,16 @@ coupangLinks:
 <div class="chart-progress" data-title="학습 방법별 기억 지속률" data-labels="읽기,듣기,보기,토론,가르치기" data-values="10,20,30,50,90" data-colors="#ef4444,#f59e0b,#eab308,#10b981,#3b82f6" data-max="100" data-unit="%"></div>
 
 핵심: 남에게 가르칠 수 있을 때 진정으로 이해한 것입니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb6gb0hM" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">공부법 도서</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 2. 포모도로 기법 (Pomodoro Technique)
 
@@ -170,6 +180,16 @@ AI 튜터로 활용. 개념 설명, 퀴즈 생성, 피드백.
 효과적인 학습은 시간이 아니라 방법입니다. 하루 10시간 공부해도 방법이 잘못되면 소용없고, 하루 1시간이라도 제대로 하면 큰 성과를 냅니다.
 
 오늘 소개한 다섯 가지 전략 중 하나만이라도 시작해보세요. 페인만 기법으로 개념을 정리하거나, 포모도로로 집중력을 높이거나, 간격 반복으로 기억력을 강화하세요. 작은 변화가 평생 학습 습관을 만듭니다!
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb6jsk5k" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">학습 플래너</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 참고 자료
 

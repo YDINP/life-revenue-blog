@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/247819/pexels-photo-247819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "아이패드 에어 M2"
-    url: "https://link.coupang.com/a/dJjUUj"
+    url: "https://link.coupang.com/a/fiIcbvsNz2"
   - title: "자기계발 도서 모음"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcbyBTMq"
 faq:
   - q: "정말 3개월에 회화 실력이 2배 높아질 수 있나요?"
     a: "개인차가 있지만, 4단계 방법을 일주일에 3-4시간씩 꾸준히 실행한 학습자들의 경우 12주 후 회화 자신감이 현저히 향상됩니다. 다만 이는 기존에 기본 문법과 1000-2000 단어 수준의 어휘를 갖춘 상태에서의 결과입니다."
@@ -34,6 +34,16 @@ faq:
 이 글에서는 기존의 일반적인 외국어 학습법과는 달리, 말하기에 특화된 4가지 과학적 방법을 통해 3개월 내 실질적인 회화 능력 향상을 이루는 방법을 소개합니다.
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbvsNz2" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">아이패드 에어 M2</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 1단계: 음성 출력 중심 학습으로 뇌 회로 재구성
 
@@ -177,6 +187,16 @@ faq:
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbyBTMq" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">자기계발 도서 모음</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

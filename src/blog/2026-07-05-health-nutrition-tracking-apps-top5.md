@@ -8,9 +8,9 @@ tags: [영양분석앱, AI건강앱, 식단관리, 칼로리계산, 매크로추
 heroImage: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "블루투스 스마트 체중계"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcd1izZs"
   - title: "칸막이 식단 도시락통"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcd4rGbQ"
 faq:
   - q: "식사 사진 분석은 얼마나 정확한가요?"
     a: "2026년 기준 상위권 앱들은 AI 이미지 인식 정확도가 80~90%에 이릅니다. 일반적인 한식, 양식 단품은 상당히 정확하게 인식하지만, 여러 재료가 섞인 복합 요리나 소스가 많은 음식은 오차가 커질 수 있습니다. 분석 결과를 참고하되 필요하면 직접 수정하는 것이 정확한 기록의 요령입니다."
@@ -36,6 +36,16 @@ AI 사진 분석 기술은 이 문제를 근본적으로 해결했습니다. 카
 <div class="chart-bar" data-title="식단 기록 방식별 3개월 지속률" data-labels="수기입력,바코드스캔,AI사진분석" data-values="24,41,68" data-colors="#ef4444,#f59e0b,#10b981" data-unit="%"></div>
 
 위 데이터처럼 AI 사진 분석 방식은 수기 입력보다 지속률이 세 배 가까이 높습니다. 편리함이 곧 지속성으로 이어진다는 것을 보여줍니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcd1izZs" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">블루투스 스마트 체중계</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 건강 앱 TOP 5 종합 비교
 
@@ -94,6 +104,16 @@ AI 사진 분석 기술은 이 문제를 근본적으로 해결했습니다. 카
 AI 영양 분석 앱은 식단 관리의 진입 장벽을 크게 낮췄습니다. 이제 사진 한 장이면 내가 무엇을 얼마나 먹는지 손쉽게 파악할 수 있습니다. 하지만 아무리 좋은 앱도 꾸준히 써야 의미가 있습니다. 오늘 소개한 5종 중 마음에 드는 앱을 하나 골라 무료로 시작해 보세요. 여기에 스마트 체중계를 연동하고 균형 잡힌 도시락을 준비한다면, 데이터 기반의 똑똑한 건강 관리가 완성됩니다. 기록이 쌓일수록 나를 더 잘 이해하게 될 것입니다.
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcd4rGbQ" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">칸막이 식단 도시락통</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

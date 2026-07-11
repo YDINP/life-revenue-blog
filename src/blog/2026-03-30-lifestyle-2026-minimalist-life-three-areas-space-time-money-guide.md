@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/8313206/pexels-photo-8313206.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "디지털 미니멀리즘 도서"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb8WTdtc"
   - title: "아날로그 알람시계"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb82bplc"
 faq:
   - q: "미니멀 라이프를 시작하면 얼마나 비용을 절감할 수 있나요?"
     a: "개인의 소비 패턴에 따라 다르지만, 구독 서비스 정리와 충동 구매 방지만으로도 월 15-25만 원의 절감이 가능합니다. 이는 연간 180-300만 원에 해당합니다."
@@ -54,6 +54,16 @@ faq:
 | 거실 | 시각적 정보 50% 줄이기 | 심리적 안정감 ↑ |
 | 주방 | 자주 쓰는 도구 3가지만 눈에 띄는 곳 배치 | 요리 시간 20% 단축 |
 | 서재 | 읽은 책은 기증, 미완독 책 10권 이하 | 독서 동기 부여 |
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb8WTdtc" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">디지털 미니멀리즘 도서</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 시간 최소화: 미니멀한 일정 관리
 
@@ -175,6 +185,16 @@ faq:
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb82bplc" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">아날로그 알람시계</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

@@ -8,9 +8,9 @@ tags: [가성비여행, 국내여행, 여행예산, 여름휴가, 절약팁]
 heroImage: "https://images.pexels.com/photos/3990359/pexels-photo-3990359.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "여행용 보조배터리"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9e7CkC"
   - title: "여행 파우치"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIci8a6KG"
 faq:
   - q: "10만원으로 정말 1박 2일 여행이 가능한가요?"
     a: "네, 가능합니다. 1인 기준 무궁화호·시외버스 왕복(2만~3만원), 게스트하우스 도미토리(2만~3만원), 편의점·현지 분식 식사(2만원), 무료 관광지 위주 코스로 구성하면 9만~10만원 안에서 알찬 1박 2일이 됩니다. 핵심은 KTX 대신 무궁화호를 타고, 숙박은 도미토리나 찜질방을 활용하는 것입니다. 유료 입장료가 큰 관광지는 피하는 게 좋습니다."
@@ -39,6 +39,16 @@ faq:
 보시다시피 숙박과 교통이 전체의 60%를 차지합니다. 이 두 항목에서 절약하면 전체 예산이 극적으로 줄어듭니다. 반대로 활동비(15%)를 아끼는 것은 여행의 재미만 깎을 뿐 효과가 작습니다.
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9e7CkC" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">여행용 보조배터리</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 예산 구간별 실전 코스
 
@@ -137,6 +147,16 @@ faq:
 <div class="callout-warning">⚠️ 주의: 성수기 해변 파라솔·튜브 대여, 유료 주차비, 리조트 부대시설 이용료는 예산 계획에서 자주 누락됩니다. 최소 예산의 10%를 이런 '숨은 비용'용으로 잡아 두세요.</div>
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIci8a6KG" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">여행 파우치</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 마치며
 

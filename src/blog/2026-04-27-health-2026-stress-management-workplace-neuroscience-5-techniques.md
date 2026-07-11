@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/8406976/pexels-photo-8406976.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "스마트 체중계"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcbrScuq"
   - title: "건강한 식단 도서"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9nzvHg"
 faq:
   - q: "업무 중 갑자기 불안감이 느껴질 때 가장 빠른 해소법은?"
     a: "박스 호흡법(4-4-4-4)이 가장 빠릅니다. 자리에서 2분 내 실행 가능하고, 신경과학 연구에서 30초 내 코르티솔 감소가 입증되었습니다. 이후 5-4-3-2-1 감각 기법으로 마무리하면 효과가 배가됩니다."
@@ -134,6 +134,16 @@ faq:
 
 ---
 
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbrScuq" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">스마트 체중계</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
+
 ## 참고 자료
 
 - [미국 국립보건원(NIH) - 스트레스와 신경계 연구](https://www.ncbi.nlm.nih.gov/)
@@ -160,6 +170,16 @@ faq:
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9nzvHg" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">건강한 식단 도서</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

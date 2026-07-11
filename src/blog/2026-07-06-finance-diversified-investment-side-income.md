@@ -8,9 +8,9 @@ tags: [통장쪼개기, N잡, 분산투자, 부업, 가계관리]
 heroImage: "https://images.pexels.com/photos/3943716/pexels-photo-3943716.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "뱅크샐러드 프리미엄 가계부 이용권"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcelau5Y"
   - title: "2026 위클리 머니 다이어리"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcen10ai"
 faq:
   - q: "통장은 정확히 몇 개로 나누는 게 좋나요?"
     a: "정답은 없지만 초보자에게는 4개 시스템을 권합니다. 급여가 들어오는 월급 통장, 급전에 대비하는 비상금 통장, 자산을 불리는 투자 통장, 실제로 쓰는 소비 통장입니다. 처음부터 너무 잘게 쪼개면 관리가 번거로워 지속하기 어렵습니다. 4개로 습관을 들인 뒤 목표별로 하나씩 늘려가는 방식이 현실적입니다."
@@ -39,6 +39,16 @@ faq:
 - 급전이 필요할 때 투자금을 헐지 않고 비상금으로 대응할 수 있습니다.
 
 <div class="callout-info">📌 <strong>참고:</strong> 통장 쪼개기의 핵심은 '개수'가 아니라 '자동화'입니다. 급여일 다음 날 자동이체를 걸어두면 의지력에 기대지 않고도 배분이 유지됩니다.</div>
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcelau5Y" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">뱅크샐러드 프리미엄 가계부 이용권</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 4계좌 시스템: 월급·비상금·투자·소비
 
@@ -84,6 +94,16 @@ faq:
 - 수동 이체 고집: 매달 손으로 옮기면 결국 거릅니다. 자동이체가 답입니다.
 - 소비 통장 방치: 배분만 하고 소비 통장 안 지출을 점검하지 않으면 효과가 반감됩니다.
 - 비상금 투자화: 비상금을 수익 목적 상품에 넣으면 정작 필요할 때 손실 구간일 수 있습니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcen10ai" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">2026 위클리 머니 다이어리</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 마치며
 

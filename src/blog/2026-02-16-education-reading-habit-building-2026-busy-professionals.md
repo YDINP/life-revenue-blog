@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/5852307/pexels-photo-5852307.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "독서등 LED"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcbHG3Wu"
   - title: "아이패드 에어 M2"
-    url: "https://link.coupang.com/a/dJjUUj"
+    url: "https://link.coupang.com/a/fiIcbvsNz2"
 faq:
   - q: "독서 습관을 만드는 데 정말 66일이 필요한가요?"
     a: "개인차가 크지만, 런던대학교 연구에서는 평균 66일이라고 했습니다. 단순 반복 행동(예: 물 마시기)은 18일, 복잡한 행동(예: 운동)은 254일까지 걸릴 수 있으므로, 독서는 중간 수준으로 보면 됩니다. 따라서 꾸준히 하면 3개월 안에 습관화될 가능성이 높습니다."
@@ -32,6 +32,16 @@ faq:
 미국 Pew Research Center의 2024년 조사에 따르면, 정기적으로 독서하는 사람들의 인지 능력은 그렇지 않은 사람보다 23% 높다고 나타났습니다. 특히 직장인의 경우, 월 1권 이상 읽는 사람이 읽지 않는 사람보다 업무 만족도에서 31% 더 높은 점수를 기록했습니다.
 
 2026년 현재, 한국 직장인들의 연간 독서량은 평균 7.8권으로, 여전히 OECD 평균 12.1권에 미치지 못하고 있습니다. 하지만 습관 형성의 시간은 생각보다 짧습니다. 런던대학교 연구에 따르면 새로운 습관이 자동화되는 데 평균 66일이 필요하다고 했으므로, 지금부터 시작하면 3월 말쯤이면 독서가 자연스러운 일상이 될 수 있습니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbHG3Wu" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">독서등 LED</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 독서 습관 형성의 심리학: 왜 실패하는가?
 
@@ -165,6 +175,16 @@ faq:
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbvsNz2" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">아이패드 에어 M2</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

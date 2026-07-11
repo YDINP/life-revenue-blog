@@ -14,15 +14,25 @@ tags:
 heroImage: "https://images.pexels.com/photos/7680483/pexels-photo-7680483.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "부자 아빠 가난한 아빠"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9gWx6y"
   - title: "주식투자 무작정 따라하기"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9knfq0"
 ---
 ## 2026년 절약 습관의 변화: 기존과 뭐가 다른가?
 
 최근 몇 년간 한국의 소비 문화와 금융 환경이 급격히 변했습니다. 2026년 현재, 절약 습관도 과거의 단순한 '지출 줄이기'에서 벗어나 데이터 기반의 똑똑한 자산 관리로 진화했습니다. 특히 MZ세대를 중심으로 AI 기반 가계부 앱, 자동화된 저축 시스템, 그리고 ESG 기반의 윤리적 소비가 대세입니다.
 
 금융감독원의 2025년 보고서에 따르면, 모바일 금융 앱을 통한 자동 저축 이용자가 전년 대비 43% 증가했습니다. 이는 절약 습관이 더 이상 의지의 문제가 아니라 시스템의 문제임을 보여줍니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9gWx6y" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">부자 아빠 가난한 아빠</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 2026년 인기 있는 절약 방법: 앱 기반 자동화
 
@@ -189,6 +199,16 @@ TikTok, Instagram, YouTube Shorts의 광고와 콘텐츠가 계획되지 않은 
 
 - [부자 아빠 가난한 아빠](https://link.coupang.com/a/dJhOT3)
 - [주식투자 무작정 따라하기](https://link.coupang.com/a/dJhOT3)
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9knfq0" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">주식투자 무작정 따라하기</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 참고 자료
 

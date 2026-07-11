@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/10680816/pexels-photo-10680816.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "디지털 미니멀리즘 도서"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb8WTdtc"
   - title: "아날로그 알람시계"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb82bplc"
 faq:
   - q: "모닝 루틴을 정말 20분 안에 완성할 수 있나요?"
     a: "직장인의 경우 20분 완성이 가능하며, 프리랜서는 27-30분, 학생은 25분이 현실적입니다. 시간은 목표이지 강박이 아니므로, 처음 1주일은 30분 여유를 두고 시작한 후 자동화되면서 시간이 단축됩니다."
@@ -42,6 +42,16 @@ faq:
 - 학생: 평균 기상 시간 7:00, 인지 기능 최적화까지 30분 필요
 
 각 집단의 특성을 반영하지 않으면 아무리 좋은 루틴도 3주 안에 포기하게 됩니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb8WTdtc" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">디지털 미니멀리즘 도서</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 직장인형 모닝 루틴: 20분 최적화 프로토콜
 
@@ -205,6 +215,16 @@ faq:
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb82bplc" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">아날로그 알람시계</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

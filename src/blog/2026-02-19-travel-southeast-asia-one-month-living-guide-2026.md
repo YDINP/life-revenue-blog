@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/31034387/pexels-photo-31034387.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "캐리어 28인치"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb88auQe"
   - title: "여행용 보조배터리"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9e7CkC"
 faq:
   - q: "한 달 살기 예산이 부족하면 어떻게 해야 하나요?"
     a: "치앙마이나 다낭 같은 저가 도시로 목적지를 변경하거나, 게스트하우스 도미토리 타입으로 숙소를 바꾸면 월 60만 원대로도 충분합니다. 또한 현지 시장에서 식재료를 구입해 직접 요리하면 외식 대비 1/3 수준의 비용으로 줄일 수 있습니다."
@@ -40,6 +40,16 @@ faq:
 동남아 한 달 살기가 인기인 이유는 명확합니다. 첫째, 압도적으로 낮은 생활비입니다. 월 100만 원 이하로도 충분히 여유로운 생활이 가능합니다. 둘째, 유연한 비자 정책으로 장기 체류가 용이합니다. 셋째, 발달된 디지털 노마드 인프라로 숙소와 일상이 편리합니다. 특히 코로나 이후 동남아 도시들의 카페 문화와 공동 작업 공간이 크게 확대되었습니다.
 
 한 달 살기는 단순한 관광을 넘어 현지 생활의 리듬을 경험하는 것이 핵심입니다. 제주도 한 달 살기와 달리 동남아는 낮은 비용으로 훨씬 더 다양한 경험을 얻을 수 있습니다. 관련하여 [제주도 한 달 살기 완벽 가이드](/blog/2026-02-11-jeju-one-month-living-guide/)도 참고해보세요.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb88auQe" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">캐리어 28인치</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 2026년 도시별 생활비 상세 비교
 
@@ -172,6 +182,16 @@ faq:
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9e7CkC" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">여행용 보조배터리</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

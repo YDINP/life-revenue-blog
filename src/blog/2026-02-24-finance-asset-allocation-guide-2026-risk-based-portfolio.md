@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/16055842/pexels-photo-16055842.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "부자 아빠 가난한 아빠"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9gWx6y"
   - title: "주식투자 무작정 따라하기"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9knfq0"
 faq:
   - q: "자산 배분 비율이 정해지면 절대 바꿀 수 없나요?"
     a: "아닙니다. 정기적 리밸런싱이 필수입니다. 최소 연 1회 이상, 각 자산의 비율이 당초 계획에서 5% 이상 벗어나면 조정해야 합니다. 인생의 큰 변화(결혼, 자녀 출생, 질병)나 경제 상황 급변도 재평가 신호입니다."
@@ -50,6 +50,16 @@ faq:
 
 4. 개인 맞춤화
 동일한 배분은 존재하지 않습니다. 연령, 소득, 성향, 투자 경험 모두 다르므로 자신의 상황에 맞는 배분을 설계해야 합니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9gWx6y" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">부자 아빠 가난한 아빠</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 위험도별 포트폴리오 구성
 
@@ -270,6 +280,16 @@ faq:
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9knfq0" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">주식투자 무작정 따라하기</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

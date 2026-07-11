@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/8212224/pexels-photo-8212224.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "여행 가이드북"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcbMAUY8"
   - title: "여행용 보조배터리"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9e7CkC"
 faq:
   - q: "여행 필수 준비물을 꼭 다 챙겨야 하나요?"
     a: "아닙니다. 본문에서 제시한 63가지는 '전체 목록'이며, 개인의 여행 스타일·기간·지역에 따라 선택하면 됩니다. 필수(6가지 서류) + 추천(의류, 화장품) + 선택(편의용품)으로 구분했으니 참고하세요. 가장 중요한 건 여권, 항공권, 신용카드, 현금입니다."
@@ -40,6 +40,16 @@ faq:
 이 가이드에서는 카테고리별 63가지 여행 필수 준비물을 필수·추천·선택으로 분류해 제시합니다. 여행 기간과 지역에 따라 취사선택하면, 짐은 줄이면서도 여행 만족도는 높일 수 있습니다.
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbMAUY8" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">여행 가이드북</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 여행 필수 준비물, 카테고리별 분류
 
@@ -344,6 +354,16 @@ faq:
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9e7CkC" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">여행용 보조배터리</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

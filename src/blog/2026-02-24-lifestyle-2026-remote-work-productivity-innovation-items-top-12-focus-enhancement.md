@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/12470765/pexels-photo-12470765.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "디지털 미니멀리즘 도서"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb8WTdtc"
   - title: "아날로그 알람시계"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb82bplc"
 faq:
   - q: "홈오피스 필수템에 가장 우선순위를 두어야 할 아이템은?"
     a: "자세 교정(의자/쿠션)과 소음 차단을 최우선으로 추천합니다. 이 두 가지는 집중력 저하의 40%를 차지하면서도 투자 대비 효과가 가장 크기 때문입니다. 예산이 제한적이면 요추 쿠션(3~8만원)부터 시작하세요."
@@ -34,6 +34,16 @@ faq:
 이 글에서는 단순한 책상 용품을 넘어 과학 기반 집중력 향상 아이템을 소개합니다. 심리학, 인체공학, 뇌 과학을 바탕으로 선정한 12가지 필수템으로 당신의 홈오피스를 집중력 요새로 변모시킬 수 있습니다.
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb8WTdtc" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">디지털 미니멀리즘 도서</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 소음 차단 카테고리: 집중력 방해의 40% 제거하기
 
@@ -221,6 +231,16 @@ Step 3: 4주 측정 → 오류율, 업무 완성도, 피로도 변화 기록
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb82bplc" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">아날로그 알람시계</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

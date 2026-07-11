@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/4940612/pexels-photo-4940612.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "건강한 식단 도서"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9nzvHg"
   - title: "홈트레이닝 요가매트"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcbKoctU"
 faq:
   - q: "주말에 늦게 자도 괜찮나요?"
     a: "주말에 평일보다 1시간 이상 늦게 자는 것을 '사회적 시차'(Social Jetlag)라고 부르며, 이는 서카디안 리듬을 교란합니다. 주말에도 평일과 최대 1시간 범위 내에서 일관된 시간을 유지하는 것이 이상적입니다."
@@ -34,6 +34,16 @@ faq:
 이 가이드에서는 과학 연구에 기반한 실용적인 수면 개선 전략을 단계별로 소개합니다. 약물에 의존하지 않고 생활 습관 개선만으로 수면 시간을 평균 1시간 늘릴 수 있다는 연구 결과도 함께 살펴보겠습니다.
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9nzvHg" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">건강한 식단 도서</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 수면 부족의 과학적 원인 파악하기
 
@@ -214,6 +224,16 @@ faq:
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbKoctU" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">홈트레이닝 요가매트</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

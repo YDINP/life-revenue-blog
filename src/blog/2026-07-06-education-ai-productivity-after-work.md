@@ -8,9 +8,9 @@ tags: [AI활용, 생산성, ChatGPT, 노션AI, 업무자동화]
 heroImage: "https://images.pexels.com/photos/247819/pexels-photo-247819.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "노션 활용 생산성 템플릿 가이드"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcefuwuG"
   - title: "일 잘하는 사람의 생산성 도서"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIceh4qqW"
 faq:
   - q: "AI 도구를 처음 쓰는데 무엇부터 시작해야 하나요?"
     a: "가장 활용도가 높은 대화형 AI인 ChatGPT나 Claude부터 시작하는 것을 권합니다. 이메일 초안 작성, 문서 요약, 아이디어 정리 같은 일상 업무에 바로 적용할 수 있어 효과를 즉시 체감할 수 있습니다. 처음에는 완벽한 프롬프트를 만들려 하지 말고, 평소 동료에게 부탁하듯 자연스럽게 요청한 뒤 결과를 보며 조금씩 조건을 추가해 나가면 됩니다."
@@ -35,6 +35,16 @@ faq:
 핵심은 거창한 자동화가 아니라, 매일 반복하는 작은 업무들을 AI에 위임하는 것입니다.
 
 <div class="callout-info">📌 정보: AI 생산성의 90%는 세 가지 반복 업무에서 나옵니다. 문서 초안 작성, 자료 요약, 데이터 정리입니다. 이 세 가지만 자동화해도 하루 1시간 이상을 아낄 수 있습니다.</div>
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcefuwuG" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">노션 활용 생산성 템플릿 가이드</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 업무 유형별 AI 시간 절약 효과
 
@@ -106,6 +116,16 @@ faq:
 
 - 엑셀 수식·정리를 AI에 위임
 - 나만의 프롬프트 템플릿 완성
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIceh4qqW" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">일 잘하는 사람의 생산성 도서</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 마치며
 

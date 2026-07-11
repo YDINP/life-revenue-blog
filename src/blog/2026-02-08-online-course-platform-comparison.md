@@ -8,9 +8,9 @@ tags: ["온라인강의", "자기계발", "교육", "플랫폼비교"]
 heroImage: "https://images.pexels.com/photos/4145153/pexels-photo-4145153.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "온라인 학습용 태블릿"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb6GAHnM"
   - title: "무선 이어폰"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb6J8Djo"
 ---
 # 온라인 강의 플랫폼 비교: 2026년 완벽 가이드
 
@@ -37,6 +37,16 @@ coupangLinks:
 컨셉: 글로벌 최대 플랫폼
 강점: 압도적인 강의 수, 저렴한 가격
 타겟: 다양한 분야 학습자
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb6GAHnM" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">온라인 학습용 태블릿</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 2. 상세 비교
 
@@ -260,6 +270,16 @@ coupangLinks:
 플랫폼 선택은 목적에 달렸습니다. 취미를 시작하고 싶다면 클래스101, 개발 공부는 인프런, 다양한 분야를 저렴하게 배우고 싶다면 유데미가 정답입니다.
 
 가장 중요한 것은 완강입니다. 비싼 강의를 사고 듣지 않는 것보다, 저렴한 강의라도 끝까지 듣고 실습하는 것이 백배 낫습니다. 지금 바로 관심 분야 강의를 찾아보고, 첫 수강 신청을 해보세요!
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb6J8Djo" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">무선 이어폰</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 참고 자료
 

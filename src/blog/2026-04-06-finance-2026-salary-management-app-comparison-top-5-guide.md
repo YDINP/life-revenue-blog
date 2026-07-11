@@ -13,9 +13,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/6694543/pexels-photo-6694543.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "부자 아빠 가난한 아빠"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9gWx6y"
   - title: "주식투자 무작정 따라하기"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9knfq0"
 faq:
   - q: "월급 관리 앱을 시작하려는데 어떤 앱을 먼저 깔아야 하나요?"
     a: "초보자라면 토스나 알리처럼 UI가 직관적인 앱부터 시작하는 것을 추천합니다. 두 앱 모두 완전 무료이고, 자동 지출 분류 기능이 뛰어나서 며칠 내에 지출 패턴을 파악할 수 있습니다."
@@ -34,6 +34,16 @@ faq:
 이 글에서는 실제 사용 경험, 기능성, 비용, 보안을 기준으로 2026년 가장 실용적인 월급 관리 앱 5가지를 상세히 비교하겠습니다.
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9gWx6y" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">부자 아빠 가난한 아빠</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 월급 관리 앱 선택 기준: 무엇을 봐야 할까?
 
@@ -256,6 +266,16 @@ faq:
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9knfq0" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">주식투자 무작정 따라하기</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

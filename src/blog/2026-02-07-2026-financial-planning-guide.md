@@ -8,9 +8,9 @@ tags: ["재테크", "자산관리", "투자입문", "금융"]
 heroImage: "https://images.pexels.com/photos/3943716/pexels-photo-3943716.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "부의 추월차선 도서"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb3T5f76"
   - title: "재테크 다이어리"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb3XFRdI"
 ---
 # 2026년 재테크 완벽 가이드
 
@@ -31,6 +31,16 @@ coupangLinks:
 ### 장기 투자
 
 단기 시세 차익보다는 장기적인 관점에서 접근하는 것이 안전합니다. 복리의 마법은 시간이 지날수록 더 큰 효과를 발휘합니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb3T5f76" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">부의 추월차선 도서</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 2. 재테크 단계별 로드맵
 
@@ -123,6 +133,16 @@ coupangLinks:
 재테크는 마라톤과 같습니다. 빠른 성과보다는 꾸준함이 중요합니다. 오늘 소개한 원칙들을 하나씩 실천해보세요. 작은 시작이 10년 후 큰 차이를 만듭니다.
 
 재테크는 결코 어렵지 않습니다. 비상금 마련, 부채 상환, 연금저축, 분산 투자의 순서를 지키면 누구나 성공할 수 있습니다. 지금 바로 시작하세요!
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb3XFRdI" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">재테크 다이어리</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 참고 자료
 

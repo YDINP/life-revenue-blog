@@ -13,9 +13,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/34134977/pexels-photo-34134977.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "캐리어 28인치"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb88auQe"
   - title: "여행용 보조배터리"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9e7CkC"
 faq:
   - q: "캐리어는 몇 년마다 바꿔야 하나요?"
     a: "사용 빈도에 따라 다릅니다. 월 1회 이상 여행하면 3~5년, 월 2~3회 여행하면 2~3년, 연 1~2회만 여행하면 5~7년 사용 가능합니다. 휠이 고장 나거나 손잡이가 부러지면 수리 가능 여부를 먼저 확인하세요."
@@ -39,6 +39,16 @@ faq:
 - 수용력: 짐을 여러 개로 나누면 이동 시 불편함
 
 [제주도 한 달 살기](/blog/2026-02-09-jeju-island-one-month-living-guide/)나 [유럽 배낭여행](/blog/2026-02-14-travel-europe-backpacking-tips-2026/)처럼 장기 여행을 계획 중이라면, 캐리어 선택은 더욱 중요합니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb88auQe" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">캐리어 28인치</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 2026년 주요 캐리어 모델 가격 현황
 
@@ -219,6 +229,16 @@ faq:
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9e7CkC" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">여행용 보조배터리</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

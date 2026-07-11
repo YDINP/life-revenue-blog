@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/5426883/pexels-photo-5426883.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "독서등 LED"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcbHG3Wu"
   - title: "아이패드 에어 M2"
-    url: "https://link.coupang.com/a/dJjUUj"
+    url: "https://link.coupang.com/a/fiIcbvsNz2"
 faq:
   - q: "자기계발 도서는 정말 인생을 바꿀까요?"
     a: "도서만으로는 변화가 일어나지 않습니다. 책에서 배운 내용을 실제로 실행할 때 비로소 변화가 시작됩니다. 읽기보다 실행이 중요하며, 3-4주 이상 지속할 때 효과를 볼 수 있습니다."
@@ -32,6 +32,16 @@ faq:
 자기계발 도서는 단순한 읽을거리가 아닙니다. 올바른 책 선택은 인생의 방향을 바꾸는 투자이며, 특히 2026년은 개인의 성장을 추구하는 사람들이 증가하면서 출판 시장에도 많은 신작들이 출시되고 있습니다. 하지만 수천 권의 도서 중 어떤 책이 정말 효과 있는지 판단하기는 어렵습니다.
 
 이 글에서는 실제 독자 평가, 판매량, 변화 사례를 바탕으로 2026년 필독 자기계발 도서 12권을 카테고리별로 엄선했습니다. 당신의 목표와 상황에 맞는 책을 찾아보세요.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbHG3Wu" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">독서등 LED</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 카테고리별 최고의 자기계발 도서 선택 기준
 
@@ -212,6 +222,16 @@ faq:
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbvsNz2" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">아이패드 에어 M2</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/6517077/pexels-photo-6517077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "아이패드 에어 M2"
-    url: "https://link.coupang.com/a/dJjUUj"
+    url: "https://link.coupang.com/a/fiIcbvsNz2"
   - title: "자기계발 도서 모음"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcbyBTMq"
 faq:
   - q: "온라인 강의로 실제 취업이 가능할까요?"
     a: "가능합니다. 다만 강의 수료만으로는 부족하고, 강의에서 배운 기술로 실제 프로젝트 포트폴리오를 만들어야 합니다. 특히 개발, 데이터 분석, 디자인 분야는 포트폴리오가 학위보다 중요합니다. 강의 선택 시 실무 프로젝트가 충분히 포함되어 있는지 확인하세요."
@@ -32,6 +32,16 @@ faq:
 온라인 강의 시장이 매년 성장하면서 선택지도 폭발적으로 늘어났습니다. 2026년 기준으로 국내 온라인 교육 시장은 약 3조 원 규모로 추정되며, 직장인과 학생 모두 자기 계발을 위해 온라인 강의를 활용하고 있습니다. 하지만 플랫폼마다 강점이 다르고, 같은 주제도 강사·난이도·학습 방식이 천차만별이어서 처음 선택할 때 혼란스러울 수 있습니다.
 
 이 글에서는 직무 유형별, 학습 목표별로 최적의 온라인 강의를 고르는 구체적인 방법과 2026년 주목할 만한 추천 과정들을 소개합니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbvsNz2" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">아이패드 에어 M2</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 온라인 강의 선택 시 확인해야 할 6가지 핵심 기준
 
@@ -230,6 +240,16 @@ SQL, 파이썬, 시각화 도구 3가지를 모두 커버하는 120시간 이상
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbyBTMq" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">자기계발 도서 모음</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

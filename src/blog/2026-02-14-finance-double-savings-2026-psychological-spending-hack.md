@@ -14,15 +14,25 @@ tags:
 heroImage: "https://images.pexels.com/photos/7680483/pexels-photo-7680483.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "ETF 투자 가이드북"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcbBwyUC"
   - title: "주식투자 무작정 따라하기"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9knfq0"
 ---
 ## 2026년 절약의 새로운 패러다임: 의지력이 아닌 시스템 구축
 
 지난 5년간 한국인의 평균 저축률은 꾸준히 하락 중입니다. 2026년 초반 통계청 자료에 따르면, MZ세대 76%가 "절약하고 싶지만 실패한다"고 답했습니다. 문제는 의지력이 아닙니다. 당신의 뇌를 속이는 시스템이 부족한 것입니다.
 
 이 글에서는 단순한 "용돈봉투법" 같은 구식 팁이 아닌, 2026년 금융 기술과 행동경제학이 결합된 실제 작동하는 절약 시스템을 소개합니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbBwyUC" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">ETF 투자 가이드북</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 당신의 저축이 실패하는 심리적 이유
 
@@ -164,6 +174,16 @@ coupangLinks:
 
 - [ETF 투자 가이드북](https://link.coupang.com/a/dJhOT3)
 - [주식투자 무작정 따라하기](https://link.coupang.com/a/dJhOT3)
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9knfq0" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">주식투자 무작정 따라하기</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 참고 자료
 

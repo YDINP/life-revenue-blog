@@ -13,9 +13,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/7734672/pexels-photo-7734672.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "여행 가이드북"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcbMAUY8"
   - title: "여행용 보조배터리"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9e7CkC"
 faq:
   - q: "여행자 보험 없이 해외여행을 가도 괜찮을까요?"
     a: "절대 권장하지 않습니다. 해외 의료비는 국내의 5~10배 수준이며, 응급 상황에서 건강보험이 적용되지 않습니다. 특히 선진국(미국, 유럽) 여행 시 응급실 방문만 해도 수백만 원의 비용이 발생합니다. 저렴한 보험료로 큰 위험을 대비하는 것이 현명합니다."
@@ -34,6 +34,16 @@ faq:
 통계에 따르면, 해외여행 중 의료 사고로 인한 평균 치료비는 300만 원을 넘는 경우가 빈번합니다. 특히 응급실 방문이 필요한 상황에서는 1,000만 원 이상의 비용이 발생할 수 있습니다. 국내 건강보험은 해외에서 사용이 제한되거나 보장률이 매우 낮습니다.
 
 또한 항공편 지연, 수하물 분실, 여행 중단 등 금전적 손실도 발생할 수 있습니다. 여행자 보험은 이러한 예상 밖의 상황에서 당신을 보호하는 안전망입니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbMAUY8" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">여행 가이드북</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 2026년 주요 여행자 보험 상품 비교
 
@@ -184,6 +194,16 @@ faq:
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9e7CkC" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">여행용 보조배터리</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

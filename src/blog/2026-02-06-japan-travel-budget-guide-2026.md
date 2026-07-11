@@ -8,9 +8,9 @@ tags: ["일본여행", "여행예산", "해외여행", "여행팁"]
 heroImage: "https://images.pexels.com/photos/402028/pexels-photo-402028.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "여행용 캐리어"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb3FBIuO"
   - title: "휴대용 보조배터리"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb3KTUmO"
 ---
 # 일본 여행 예산 가이드: 2026년 완벽 플랜
 
@@ -25,6 +25,16 @@ coupangLinks:
 최소 (백패커): 70만원
 일반 (중급): 120만원
 여유 (프리미엄): 200만원+
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb3FBIuO" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">여행용 캐리어</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 2. 항공권 (왕복 20~60만원)
 
@@ -237,6 +247,16 @@ USJ (오사카): 1만엔
 일본 여행은 생각보다 저렴하게도, 비싸게도 즐길 수 있습니다. 백패커처럼 70만원으로도 가능하고, 프리미엄으로 200만원 이상 쓸 수도 있습니다.
 
 가장 중요한 것은 예산에 맞춰 계획을 세우는 것입니다. 항공권과 숙소만 잘 잡아도 절반은 성공입니다. 지금 바로 항공권 가격을 검색하고, 첫 일본 여행을 떠나보세요!
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb3KTUmO" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">휴대용 보조배터리</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 참고 자료
 

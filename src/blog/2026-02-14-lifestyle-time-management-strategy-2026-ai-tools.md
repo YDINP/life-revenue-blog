@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/6892902/pexels-photo-6892902.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "디지털 미니멀리즘 도서"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb8WTdtc"
   - title: "아날로그 알람시계"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb82bplc"
 ---
 # 2026년 시간 관리 전략: AI 도구와 과학적 방법으로 생산성 2배 높이기
 
@@ -28,6 +28,16 @@ coupangLinks:
 최근 한국의 직장인을 대상으로 한 설문 조사(2026년 2월)에 따르면, 78%가 현재의 시간 관리 방식에 만족하지 못하고 있으며, 특히 디지털 피로와 집중력 저하를 주요 원인으로 꼽았습니다. 이 글에서는 2026년에 실제로 효과를 보이는 과학 기반의 시간 관리 전략을 소개합니다.
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb8WTdtc" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">디지털 미니멀리즘 도서</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 시간 관리 도구 현황: 2026년 최신 트렌드
 
@@ -252,6 +262,16 @@ AI 도구는 단순한 보조 수단일 뿐, 가장 중요한 것은:
 
 - [디지털 미니멀리즘 도서](https://link.coupang.com/a/dJhOT3)
 - [아날로그 알람시계](https://link.coupang.com/a/dJhOT3)
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb82bplc" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">아날로그 알람시계</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 참고 자료
 

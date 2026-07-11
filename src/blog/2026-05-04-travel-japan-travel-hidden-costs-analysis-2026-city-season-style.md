@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/29518253/pexels-photo-29518253.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "여행 가이드북"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcbMAUY8"
   - title: "여행용 보조배터리"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9e7CkC"
 faq:
   - q: "일본 여행 5박 6일에 최소 얼마가 필요한가요?"
     a: "항공료 제외 현지 비용으로 최소 800,000~1,000,000원이 필요합니다. 이는 게스트하우스 숙박, 편의점·현지 식당 식사, 교통패스 활용을 가정한 예산입니다. 항공료는 성수기 500,000원 이상 추가되므로 총 1,500,000원 이상 준비하면 안심입니다."
@@ -36,6 +36,16 @@ faq:
 일본 여행을 계획할 때 가장 먼저 마주치는 질문이 바로 '예산이 얼마나 필요한가'입니다. 기존 일반 가이드는 도시별 차이를 무시하고 평균 비용만 제시하는데, 실제로는 도쿄와 교토의 생활비는 30~40% 차이가 납니다. 이 글은 2026년 최신 실제 지출 데이터를 바탕으로 도시별, 계절별, 여행 스타일별 맞춤형 예산 전략을 제공합니다.
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbMAUY8" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">여행 가이드북</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 2026년 일본 4대 도시 숙박비 실제 비교
 
@@ -277,6 +287,16 @@ faq:
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9e7CkC" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">여행용 보조배터리</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

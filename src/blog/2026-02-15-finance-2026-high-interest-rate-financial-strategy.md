@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/32417524/pexels-photo-32417524.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "부자 아빠 가난한 아빠"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9gWx6y"
   - title: "주식투자 무작정 따라하기"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9knfq0"
 faq:
   - q: "2026년에 정기예금에 전액을 투자해도 될까요?"
     a: "정기예금만으로는 연 3.8~4% 수익이 최대이지만, 인플레이션(2~2.5%)을 감안하면 실질 수익은 1.5% 미만입니다. 20년간 투자하면 물가상승으로 인한 실질 손실이 발생할 수 있으므로, 최소 30~40%는 주식이나 채권에 투자할 것을 권합니다."
@@ -32,6 +32,16 @@ faq:
 2026년 금융시장은 금리 정책의 분기점에 서 있습니다. 한국은행의 기준금리가 2025년 말 기준 3.0~3.25% 수준에서 결정된 가운데, 2026년 상반기에는 점진적인 금리 인하가 예상되고 있습니다. 이는 고금리 시대의 마지막 기회이면서 동시에 자산배분 전략의 변화가 필수적인 시점입니다.
 
 기존의 "안정성만 추구하는 저금리 예금" 전략으로는 인플레이션을 따라잡기 어려워졌습니다. 따라서 현금 자산과 변액 자산의 균형잡힌 포트폴리오가 중요해졌습니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9gWx6y" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">부자 아빠 가난한 아빠</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 2026년 주요 금융상품 비교 분석
 
@@ -184,6 +194,16 @@ faq:
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9knfq0" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">주식투자 무작정 따라하기</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

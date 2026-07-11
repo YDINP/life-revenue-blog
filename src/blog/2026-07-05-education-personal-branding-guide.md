@@ -8,9 +8,9 @@ tags: [퍼스널브랜딩, 링크드인, 블로그, 직장인, 자기계발]
 heroImage: "https://images.pexels.com/photos/6533345/pexels-photo-6533345.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "퍼스널 브랜딩 실전 도서"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcbPTUWG"
   - title: "콘텐츠 제작용 USB 콘덴서 마이크"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcbTCdpc"
 faq:
   - q: "퍼스널 브랜딩은 어떤 채널부터 시작하는 게 좋나요?"
     a: "직무 전문성을 알리고 이직·협업 기회를 노린다면 링크드인, 깊이 있는 콘텐츠를 축적하고 검색 유입을 만들고 싶다면 블로그가 좋습니다. 처음에는 한 채널에 집중해 3개월간 꾸준히 쌓은 뒤, 자리가 잡히면 다른 채널로 콘텐츠를 재활용하며 확장하는 방식이 지치지 않고 오래 갈 수 있는 전략입니다."
@@ -37,6 +37,16 @@ faq:
 - 같은 관심사를 가진 사람들과의 네트워크
 
 <div class="callout-info">📌 정보: 퍼스널 브랜딩의 본질은 자기 자랑이 아니라 '내가 가진 지식을 공유해 다른 사람에게 도움을 주는 것'입니다. 이 관점을 가지면 콘텐츠 소재가 무궁무진해집니다.</div>
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbPTUWG" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">퍼스널 브랜딩 실전 도서</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 채널별 특성 비교
 
@@ -116,6 +126,16 @@ faq:
 - 3개월 성과 점검 후 다음 분기 주제 계획
 
 <div class="callout-info">📌 정보: 초반 3개월은 반응이 거의 없는 것이 정상입니다. 이 시기를 견디는 사람만이 6개월 뒤 기회를 얻습니다. 통제할 수 없는 조회수 대신, 스스로 지킬 수 있는 발행 약속에 집중하세요.</div>
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbTCdpc" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">콘텐츠 제작용 USB 콘덴서 마이크</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 마치며
 

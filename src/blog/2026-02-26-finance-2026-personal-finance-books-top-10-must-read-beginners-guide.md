@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/4865737/pexels-photo-4865737.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "ETF 투자 가이드북"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcbBwyUC"
   - title: "주식투자 무작정 따라하기"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9knfq0"
 faq:
   - q: "재테크 초보자라면 어떤 책부터 읽어야 할까요?"
     a: "《부자의 습관》 또는 《돈의 흐름을 읽는 법》으로 시작하세요. 이 두 책은 이해하기 쉬우면서도 즉시 실행 가능한 조언이 가득합니다. 읽은 지 1주일 내에 저축 계획을 수정할 수 있을 정도로 실용적입니다."
@@ -32,6 +32,16 @@ faq:
 재테크는 단순히 '돈을 버는 방법'이 아닙니다. 금융 시스템을 이해하고, 돈의 흐름을 통제하며, 심리적 함정에 빠지지 않는 정보 기반의 의사결정이 핵심입니다. 2026년, 많은 직장인과 MZ세대가 "어떤 책부터 읽어야 할까?"라는 고민을 합니다. 이 가이드는 그 질문에 명확한 답을 제시합니다.
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbBwyUC" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">ETF 투자 가이드북</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 재테크 도서를 선택해야 하는 이유
 
@@ -221,6 +231,16 @@ faq:
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9knfq0" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">주식투자 무작정 따라하기</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

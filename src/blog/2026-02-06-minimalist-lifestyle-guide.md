@@ -8,9 +8,9 @@ tags: ["미니멀라이프", "라이프스타일", "정리정돈", "삶의질"]
 heroImage: "https://images.pexels.com/photos/1907642/pexels-photo-1907642.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "정리의 힘 도서"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb3N20zc"
   - title: "수납 정리함"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb3RAWuO"
 ---
 # 미니멀 라이프 시작하기
 
@@ -37,6 +37,16 @@ Intentional Living: 의도적인 삶.
 - 공간과 시간의 여유 ✓
 
 <div class="chart-progress" data-title="미니멀 라이프 효과 (만족도)" data-labels="스트레스감소,시간절약,돈절약,정신건강,삶의질" data-values="90,85,80,95,92" data-colors="#10b981,#3b82f6,#f59e0b,#8b5cf6,#ec4899" data-max="100" data-unit="%"></div>
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb3N20zc" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">정리의 힘 도서</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 2. 미니멀 라이프의 장점
 
@@ -258,6 +268,16 @@ Discard: 중복된 것, 특수 용도 기구.
 미니멀 라이프는 불편한 게 아니라 자유입니다. 물건이 적을수록 관리할 것이 적고, 시간과 공간의 여유가 생깁니다.
 
 완벽을 추구하지 마세요. 오늘 서랍 하나, 옷장 한 칸부터 시작하세요. 작은 변화가 모여 삶 전체를 바꿉니다. 지금 바로 버릴 물건 3가지를 찾아보세요!
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb3RAWuO" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">수납 정리함</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 참고 자료
 

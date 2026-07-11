@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/5852307/pexels-photo-5852307.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "자기계발 도서 모음"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcbyBTMq"
   - title: "아이패드 에어 M2"
-    url: "https://link.coupang.com/a/dJjUUj"
+    url: "https://link.coupang.com/a/fiIcbvsNz2"
 faq:
   - q: "독서 습관을 형성하는 데 정말 8주가 필요한가요?"
     a: "개인차가 있지만, 뇌의 신경가소성 연구에 따르면 새로운 습관 고착에는 최소 66일(약 9~10주)이 필요합니다. 8주는 습관의 초기 단계인 '자동 행동 전환'이 일어나는 시점이며, 완전한 고착은 3~4개월 지속해야 합니다."
@@ -36,6 +36,16 @@ faq:
 우리가 독서 습관을 못 들이는 이유는 의지력 부족이 아니라, 뇌가 즉시적 보상(SNS, 동영상)에 최적화되어 있기 때문입니다. 이 글에서는 그 메커니즘을 이해하고, 과학 기반의 4가지 신경생물학적 전략으로 독서를 하는 뇌를 만드는 방법을 소개합니다.
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbyBTMq" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">자기계발 도서 모음</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 전략 1: 도파민 경로 재설정 — '즉각적 보상' 구조 변경하기
 
@@ -217,6 +227,16 @@ Nature Neuroscience 2023년 논문에 따르면, 수면 직후 학습은 수면 
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbvsNz2" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">아이패드 에어 M2</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

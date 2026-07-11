@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/4907190/pexels-photo-4907190.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "여행 가이드북"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcbMAUY8"
   - title: "여행용 보조배터리"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9e7CkC"
 faq:
   - q: "도쿄와 오사카 중 어느 지역이 더 저렴한가요?"
     a: "5일 기준 오사카가 도쿄보다 약 124,500원 저렴합니다(도쿄 695,000원 vs 오사카 570,500원). 특히 숙박비(20% 저렴), 식사비(20% 저렴), 교통비(27% 저렴)에서 우위입니다."
@@ -63,6 +63,16 @@ faq:
 - 저예산 숙소 풍부 (게스트하우스 30,000원~)
 - 전통 문화 체험에 최적
 - 오사카와 인접해 두 도시 조합 여행 가능
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbMAUY8" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">여행 가이드북</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 식사비: 지역마다 이렇게 다릅니다
 
@@ -199,6 +209,16 @@ faq:
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9e7CkC" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">여행용 보조배터리</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

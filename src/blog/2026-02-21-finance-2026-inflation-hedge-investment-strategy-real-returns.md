@@ -14,9 +14,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/32417524/pexels-photo-32417524.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "ETF 투자 가이드북"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcbBwyUC"
   - title: "주식투자 무작정 따라하기"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9knfq0"
 faq:
   - q: "2026년에는 정말 인플레이션이 계속될까요?"
     a: "한국은행의 2026년 물가전망은 2~3% 수준으로 예상되고 있습니다. 글로벌적으로도 선진국 중앙은행들이 인플레이션 관리에 주력하고 있어, 급격한 상승은 제한적일 것으로 보입니다. 다만 원유, 곡물 등 글로벌 상품가 변동성에 주의해야 합니다."
@@ -31,6 +31,16 @@ faq:
 2026년 글로벌 경제는 여전히 불확실한 금리 환경 속에 있습니다. 한국은행이 발표한 최근 물가지수에 따르면, 소비자물가는 연 2~3% 상승률을 유지하고 있습니다. 문제는 명목 수익률이 인플레이션을 따라가지 못하면 실제 자산은 매해 가치가 하락한다는 점입니다.
 
 예를 들어 연 2% 이자율의 보통예금에 1,000만 원을 예치해도, 물가가 3% 상승하면 실질 수익률은 -1%가 됩니다. 이는 자산이 오히려 감소하는 것과 같습니다. 따라서 2026년의 현명한 재테크는 인플레이션을 초과하는 수익을 제공하는 자산을 선별하는 데 있습니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbBwyUC" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">ETF 투자 가이드북</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 2026년 인플레이션 헤징 자산 3가지 비교
 
@@ -154,6 +164,16 @@ faq:
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9knfq0" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">주식투자 무작정 따라하기</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

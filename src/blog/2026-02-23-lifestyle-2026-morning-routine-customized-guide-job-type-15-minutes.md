@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/32832431/pexels-photo-32832431.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "종이 다이어리"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb85kvxA"
   - title: "아날로그 알람시계"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb82bplc"
 faq:
   - q: "모닝 루틴을 몇 주 후 포기했어요. 다시 시작하려면?"
     a: "포기한 것은 당연합니다. 처음부터 완벽하게 할 수 없습니다. 이번엔 15분 중 3가지(물 마시기, 세안, 아침 식사)만 하는 것부터 시작하세요. 충분히 익숙해진 후 2주마다 하나씩 추가하는 '점진적 방식'이 훨씬 효과적입니다."
@@ -32,6 +32,16 @@ faq:
 아침 시간을 어떻게 사용하느냐에 따라 하루 전체가 결정된다는 것은 이미 입증된 사실입니다. 하지만 기존의 모닝 루틴 가이드들은 모두에게 동일한 루틴을 강요해왔습니다. 직장인과 프리랜서, 학생의 아침 환경과 목표는 완전히 다른데도 말입니다.
 
 2026년에는 자신의 라이프스타일에 맞는 맞춤형 모닝 루틴이 필수입니다. 이 글에서는 생활 형태별로 최적화된 15분 모닝 루틴과 실제 체크리스트를 제시합니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb85kvxA" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">종이 다이어리</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 1. 직장인을 위한 "에너지 충전형" 모닝 루틴 (7시~7시 15분)
 
@@ -196,6 +206,16 @@ YouTube 운동 영상(5~10분) 또는 주변 산책으로 신체를 깨웁니다
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb82bplc" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">아날로그 알람시계</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

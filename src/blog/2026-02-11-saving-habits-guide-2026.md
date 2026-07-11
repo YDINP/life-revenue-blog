@@ -14,9 +14,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/7680483/pexels-photo-7680483.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "부자 아빠 가난한 아빠"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9gWx6y"
   - title: "주식투자 무작정 따라하기"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9knfq0"
 ---
 # 절약 습관으로 경제 자유를 향해 가는 첫 걸음
 
@@ -35,6 +35,16 @@ coupangLinks:
 - 재정적 자유도에 한 발 더 가까워집니다
 
 <div class="chart-progress" data-title="절약 성공률" data-labels="예산 관리,지출 추적,자동 저축,소비 습관 개선" data-values="82,78,85,72" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444" data-max="100" data-unit="%"></div>
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9gWx6y" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">부자 아빠 가난한 아빠</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 절약 습관 5단계 실행 계획
 
@@ -176,6 +186,16 @@ coupangLinks:
 
 - [부자 아빠 가난한 아빠](https://link.coupang.com/a/dJhOT3)
 - [주식투자 무작정 따라하기](https://link.coupang.com/a/dJhOT3)
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9knfq0" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">주식투자 무작정 따라하기</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 참고 자료
 

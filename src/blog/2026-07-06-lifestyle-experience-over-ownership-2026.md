@@ -8,9 +8,9 @@ tags: [소비트렌드, 경험소비, 취향소비, 웰니스, 2026키워드]
 heroImage: "https://images.pexels.com/photos/3771074/pexels-photo-3771074.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "원데이클래스 취미 이용권"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcgyigGO"
   - title: "홈 클래스 취미 키트"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcgBcVO0"
 faq:
   - q: "'소유보다 경험'이 왜 2026년 핵심 키워드인가요?"
     a: "물건은 사는 순간의 만족이 빠르게 사라지지만, 경험은 기억과 이야기로 오래 남기 때문입니다. 고물가로 지출 하나하나가 신중해지면서 '남는 것'에 돈을 쓰려는 심리가 강해졌습니다. 또 SNS에서 공유할 콘텐츠로서도 경험이 물건보다 가치가 높게 여겨집니다. 소비가 소유의 축적에서 경험의 수집으로 이동하는 흐름입니다."
@@ -37,6 +37,16 @@ faq:
 <div class="chart-bar" data-title="소비 유형별 만족 지속 기간 체감" data-labels="충동 물건 구매,계획 물건 구매,일상 소소한 경험,여행·배움 경험" data-values="5,30,90,180" data-colors="#ef4444,#f59e0b,#10b981,#2563eb" data-unit="일"></div>
 
 물건은 소유한 뒤 관리와 처분의 부담이 남지만, 경험은 부담 없이 기억만 남습니다. 이 차이가 소비의 방향을 바꾸고 있습니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcgyigGO" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">원데이클래스 취미 이용권</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 2026 키워드 읽기: FULLMOON, 픽셀라이프
 
@@ -92,6 +102,16 @@ faq:
 - 홈 취미 키트: 집에서 시작하는 그림·뜨개·가드닝으로 일상에 몰입의 순간을 더합니다.
 - 가까운 자연: 멀리 가지 않아도 근교 산책과 캠핑으로 회복을 경험합니다.
 - 디지털 디톡스 데이: 주 1회 화면을 끄고 온전히 나에게 집중하는 시간을 만듭니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcgBcVO0" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">홈 클래스 취미 키트</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 마치며
 

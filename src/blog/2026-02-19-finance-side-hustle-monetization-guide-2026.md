@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/9258909/pexels-photo-9258909.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "주식투자 무작정 따라하기"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9knfq0"
   - title: "부자 아빠 가난한 아빠"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9gWx6y"
 faq:
   - q: "부업 수익이 250만원을 넘으면 꼭 세금을 내야 하나요?"
     a: "네, 연 250만원을 초과하는 사업소득은 종합소득세 신고 의무가 발생합니다. 다만 기타소득(프리랜싱, 광고료)은 원천징수되며, 330만원 이상일 때 추가 신고가 필요합니다. 세무사와 상담하여 정확히 확인하세요."
@@ -36,6 +36,16 @@ faq:
 하지만 대부분의 직장인은 어떤 부업을 택해야 하고, 언제 수익화할 수 있을지 불명확해합니다. 이 가이드에서는 실제 데이터 기반으로 단계별 수익화 전략을 제시합니다.
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9knfq0" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">주식투자 무작정 따라하기</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 직장인이 할 수 있는 부업 5가지: 초기 투자 vs 예상 수익
 
@@ -265,6 +275,16 @@ AI 도구 보급: ChatGPT, 이미지 생성 AI 등이 콘텐츠 제작 속도를
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9gWx6y" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">부자 아빠 가난한 아빠</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/48770/business-time-clock-clocks-48770.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "아날로그 알람시계"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb82bplc"
   - title: "종이 다이어리"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb85kvxA"
 faq:
   - q: "하루 8시간 회사에서 일하는데 실제로 5시간을 절약할 수 있나요?"
     a: "네, 가능합니다. 주요 변화는 컨텍스트 스위칭 감소입니다. 현재 평균 직장인은 하루 12-15회 전환으로 약 1시간 10분 낭비합니다. 이를 3-4회로 줄이면 주 5시간 절약이 현실입니다. 단, 업무량 자체가 아니라 '효율'이 개선되는 것입니다."
@@ -34,6 +34,16 @@ faq:
 대부분의 직장인이 범하는 실수가 있습니다. '더 많은 일을 더 빨리 끝내는 것'에 집중한다는 점입니다. 하지만 2026년 시간 관리의 핵심은 다릅니다. 불필요한 것을 과감히 버리고, 정말 중요한 것에만 집중하는 선택과 집중의 기술입니다.
 
 실제로 미국 경영진 200명을 대상으로 한 조사에 따르면, 번아웃을 경험한 관리자의 71%는 '일이 너무 많아서'가 아니라 '우선순위가 불명확해서' 스트레스를 받고 있었습니다. 시간이 모자라는 것이 아니라, 시간을 어디에 써야 하는지 모르는 상황이 더 큰 문제라는 뜻입니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb82bplc" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">아날로그 알람시계</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 번아웃 없는 시간 관리의 4가지 핵심 원칙
 
@@ -212,6 +222,16 @@ faq:
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb85kvxA" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">종이 다이어리</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

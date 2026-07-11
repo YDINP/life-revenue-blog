@@ -8,9 +8,9 @@ tags: [열대야, 수면장애, 슬립테크, 숙면팁, 여름수면]
 heroImage: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "냉감 인견 여름 이불"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcgVD3bE"
   - title: "3D 입체 수면안대"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIciZQynA"
 faq:
   - q: "열대야에 에어컨을 켜고 자도 괜찮을까요?"
     a: "적정 온도로 관리한다면 문제없습니다. 다만 밤새 강하게 틀기보다 취침 전 실내를 충분히 식힌 뒤 26~28도로 예약 타이머를 설정하는 것이 좋습니다. 찬 바람이 몸에 직접 닿지 않도록 풍향을 위로 향하게 하고, 얇은 이불을 덮어 냉방병을 예방하세요. 제습 기능을 병행하면 더 쾌적합니다."
@@ -36,6 +36,16 @@ faq:
 <div class="chart-bar" data-title="계절별 한국 성인 수면 만족도" data-labels="봄,여름(평시),열대야기간,가을,겨울" data-values="34,29,18,36,31" data-colors="#10b981,#f59e0b,#ef4444,#3b82f6,#8b5cf6" data-unit="%"></div>
 
 위 데이터에서 볼 수 있듯 열대야 기간의 수면 만족도는 18%까지 떨어져 사계절 중 가장 낮습니다. 그만큼 여름밤 수면 관리가 중요하다는 의미입니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcgVD3bE" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">냉감 인견 여름 이불</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 침실 온도와 습도 관리
 
@@ -117,6 +127,16 @@ faq:
 열대야 수면장애는 단순히 참고 견뎌야 하는 여름철 불편이 아닙니다. 수면 부족이 누적되면 낮 시간 집중력 저하는 물론 면역력 약화, 온열질환 위험 증가로 이어집니다. 오늘 소개한 7가지 방법과 슬립테크 기기를 활용해 침실 환경을 개선하고, 나만의 수면 루틴을 만들어 보세요. 작은 변화만으로도 여름밤의 잠이 한결 깊고 편안해질 것입니다. 올여름은 뜨거운 밤에도 개운한 아침을 맞이하시길 바랍니다.
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIciZQynA" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">3D 입체 수면안대</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

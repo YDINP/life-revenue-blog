@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/5020267/pexels-photo-5020267.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "스마트 체중계"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcbrScuq"
   - title: "건강한 식단 도서"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9nzvHg"
 faq:
   - q: "수면 부족이 있다면 어떤 용품부터 시작하는 게 좋을까요?"
     a: "먼저 광선 치료 스탠드와 백색소음 머신으로 수면 환경을 개선하세요. 이 두 가지는 가격이 저렴하면서도 2주 내 효과를 볼 수 있습니다. 2주 후 효과가 미흡하면 온도 조절 패드나 수소 침구류 같은 고가 제품 도입을 고려하세요."
@@ -34,6 +34,16 @@ faq:
 2025년 한국건강증진개발원의 조사에 따르면 한국인의 평균 수면시간은 6시간 34분으로, OECD 평균 7시간 11분보다 37분 짧습니다. 더욱 심각한 것은 수면의 질입니다. 직장인 10명 중 6명이 '수면 불만족'을 호소하고 있으며, 야간 스크린 노출과 스트레스가 주요 원인으로 지목되고 있습니다.
 
 단순한 수면시간 증가만으로는 해결되지 않습니다. 수면 환경 개선이 수면 질을 직접적으로 영향을 미친다는 연구 결과들이 속속 발표되고 있습니다. 침구류, 조명, 온습도 조절 제품 등 과학 기반의 숙면 용품들이 얼마나 효과적인지 살펴보겠습니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbrScuq" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">스마트 체중계</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 수면 질 개선에 필수적인 6가지 용품
 
@@ -211,6 +221,16 @@ A: 최신 제품들의 정확도는 의료용 뇌파 센서와 87~92% 수준의 
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9nzvHg" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">건강한 식단 도서</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

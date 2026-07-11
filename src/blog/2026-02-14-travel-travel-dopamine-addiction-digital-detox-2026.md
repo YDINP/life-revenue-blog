@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/7230391/pexels-photo-7230391.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "캐리어 28인치"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb88auQe"
   - title: "여행용 보조배터리"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9e7CkC"
 ---
 ## 여행에서 도파민 중독이 문제인 이유
 
@@ -33,6 +33,16 @@ coupangLinks:
 - 경험의 질 저하: 경험 자체보다 기록과 공유에 집중
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb88auQe" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">캐리어 28인치</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 2026년 여행객을 위한 도파민 디톡스 전략
 
@@ -154,6 +164,16 @@ coupangLinks:
 
 - [캐리어 28인치](https://link.coupang.com/a/dJhOT3)
 - [여행용 보조배터리](https://link.coupang.com/a/dJhOT3)
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9e7CkC" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">여행용 보조배터리</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 참고 자료
 

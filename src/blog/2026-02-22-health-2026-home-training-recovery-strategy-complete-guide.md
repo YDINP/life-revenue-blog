@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/6453430/pexels-photo-6453430.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "건강한 식단 도서"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9nzvHg"
   - title: "홈트레이닝 요가매트"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcbKoctU"
 faq:
   - q: "홈 트레이닝 후 매일 운동해도 되나요?"
     a: "같은 근육군을 매일 운동하면 안 됩니다. 48~72시간 회복이 필요합니다. 다만 다른 근육군을 운동하거나 액티브 회복(가벼운 산책, 스트레칭)은 가능합니다. 상체/하체/코어를 번갈아 운동하면 매일 운동하면서도 회복 시간을 확보할 수 있습니다."
@@ -36,6 +36,16 @@ faq:
 헬스장 회원들과 달리, 홈 트레이닝을 하는 사람들은 자동으로 회복 신호를 받지 못합니다. 헬스장에서는 트레이너의 지도, 다른 사람들의 경험담, 구조화된 환경이 회복의 중요성을 상기시키지만, 집에서는 모두 스스로 관리해야 합니다.
 
 또한 홈 트레이닝은 장비 제약으로 인해 고강도 훈련이 많아져 회복 부담이 더 큽니다. 지난 기사 "[2026년 홈 트레이닝 시간표: 직장인도 주 3회 20분으로 근력 키우는 과학적 루틴](/blog/2026-02-15-health-home-training-schedule-2026-busy-professionals/)"에서 다룬 20분 고강도 훈련이 효과적인 이유도 바로 회복을 고려한 설계이기 때문입니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9nzvHg" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">건강한 식단 도서</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 1단계: 휴식 일정 설계 — 근육군별 회복 주기
 
@@ -164,6 +174,16 @@ faq:
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbKoctU" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">홈트레이닝 요가매트</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

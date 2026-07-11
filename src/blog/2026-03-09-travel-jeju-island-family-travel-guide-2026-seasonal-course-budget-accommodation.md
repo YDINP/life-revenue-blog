@@ -13,9 +13,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/34350261/pexels-photo-34350261.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "캐리어 28인치"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb88auQe"
   - title: "여행용 보조배터리"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9e7CkC"
 faq:
   - q: "제주도 가족 여행으로 가장 좋은 시기는 언제인가요?"
     a: "9월 중순~11월 초(가을)가 최적입니다. 날씨가 쾌적하고 혼잡도가 낮으며 숙박비도 합리적입니다. 단, 8월 말~9월 초는 태풍 영향을 받을 수 있으니 피하세요. 만약 여름 성수기에 가야 한다면 조식 포함 패키지를 선택해 시간을 절약하면 좋습니다."
@@ -30,6 +30,16 @@ faq:
 제주도는 한국 가족 여행의 가장 인기 있는 목적지입니다. 2026년 현재, 제주도의 관광 인프라는 더욱 완비되어 아이부터 어르신까지 함께 즐길 수 있는 다양한 코스가 마련되어 있습니다. 이 가이드는 실제 방문 데이터를 기반으로 계절별 최적 여행 시기, 아이 연령대별 추천 코스, 그리고 합리적인 예산 전략을 제시합니다.
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb88auQe" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">캐리어 28인치</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 2026년 제주도 방문객 현황과 계절별 최적 시기
 
@@ -203,6 +213,16 @@ faq:
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9e7CkC" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">여행용 보조배터리</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

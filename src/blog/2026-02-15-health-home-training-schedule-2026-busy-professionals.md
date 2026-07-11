@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/6453430/pexels-photo-6453430.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "건강한 식단 도서"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9nzvHg"
   - title: "스마트 체중계"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcbrScuq"
 faq:
   - q: "홈 트레이닝만으로도 근육이 생길 수 있나요?"
     a: "네, 가능합니다. 특히 운동을 시작한 지 3개월 이내의 초보자라면 홈 트레이닝만으로도 충분한 근력 증가와 근육 발달을 경험할 수 있습니다. 중요한 것은 일관성 있는 운동과 단백질 섭취입니다."
@@ -36,6 +36,16 @@ faq:
 하지만 많은 직장인들이 "홈 트레이닝을 해야 하는데, 언제 어떻게 시작해야 할지 몰라" "장비가 없으면 효과가 없을 것 같다"는 걱정을 합니다. 실제로는 체계적인 시간표와 과학적 루틴만으로도 충분한 효과를 볼 수 있습니다.
 
 이미 발행한 [홈 트레이닝 완벽 가이드: 장비 없이 시작하는 효과적인 운동 루틴](/blog/2026-02-07-home-workout-routine-2026/)에서 기본 운동법을 다뤘다면, 이번 포스트에서는 실제로 실행 가능한 주간 시간표와 각 요일별 맞춤 루틴을 구체적으로 소개합니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9nzvHg" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">건강한 식단 도서</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 직장인 홈 트레이닝의 현실: 시간 부족과 해결 방법
 
@@ -232,6 +242,16 @@ faq:
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbrScuq" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">스마트 체중계</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

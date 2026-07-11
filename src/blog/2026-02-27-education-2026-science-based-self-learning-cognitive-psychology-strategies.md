@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/6700551/pexels-photo-6700551.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "독서등 LED"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcbHG3Wu"
   - title: "아이패드 에어 M2"
-    url: "https://link.coupang.com/a/dJjUUj"
+    url: "https://link.coupang.com/a/fiIcbvsNz2"
 faq:
   - q: "스페이싱 효과와 반복 학습의 차이점은 무엇인가요?"
     a: "반복 학습은 같은 내용을 연속으로 여러 번 푸는 것으로 단기적 성과는 좋지만 장기 기억 전환이 약합니다. 스페이싱은 시간 간격을 두고 반복하는 것으로 장기 기억에는 훨씬 효과적입니다. 연구에 따르면 같은 공부 시간으로도 스페이싱이 30~50% 더 효율적입니다."
@@ -34,6 +34,16 @@ faq:
 이 글에서는 신경과학과 교육심리학 연구에 기반한 7가지 검증된 자기 학습 전략을 실제 적용 방법과 함께 소개합니다.
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbHG3Wu" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">독서등 LED</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 1. 스페이싱 효과(Spacing Effect): 반복 학습의 과학
 
@@ -242,6 +252,16 @@ Anki, Quizlet 같은 스페이싱 알고리즘 기반 앱을 사용하면 자동
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbvsNz2" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">아이패드 에어 M2</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

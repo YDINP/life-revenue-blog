@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/30635719/pexels-photo-30635719.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "홈트레이닝 요가매트"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcbKoctU"
   - title: "건강한 식단 도서"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIb9nzvHg"
 faq:
   - q: "혈당지수가 낮은 음식만 먹으면 되나요?"
     a: "아닙니다. GI값이 모든 것을 결정하지는 않습니다. 중간~높은 GI 음식도 적절한 양, 적절한 시점, 다른 음식과의 조합에 따라 충분히 건강식에 포함될 수 있습니다. 포도당 부하(GL)와 영양 가치도 함께 고려해야 합니다."
@@ -36,6 +36,16 @@ faq:
 혈당이 급격히 올라갔다 내려가는 현상을 반복하면 피로, 간식 욕구 증가, 장기적으로는 대사 질환까지 초래할 수 있습니다. 반면 혈당지수가 낮은 음식을 중심으로 식단을 구성하면 하루 종일 안정적인 에너지를 유지하고 불필요한 간식 욕구를 줄일 수 있습니다.
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbKoctU" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">홈트레이닝 요가매트</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 혈당지수(GI)란 무엇인가?
 
@@ -204,6 +214,16 @@ GI값은 중요하지만, 혈당부하(GL, Glycemic Load)도 함께 고려해야
 
 
 ---
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9nzvHg" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">건강한 식단 도서</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 추천 상품
 

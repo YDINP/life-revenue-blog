@@ -8,9 +8,9 @@ tags: [SQLD, ADsP, 데이터자격증, 비전공자, 자격증준비]
 heroImage: "https://images.pexels.com/photos/6533345/pexels-photo-6533345.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "SQLD 국가공인 자격 대비 교재"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcjbd1lR"
   - title: "ADsP 데이터분석 준전문가 문제집"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://link.coupang.com/a/fiIcjecK1k"
 faq:
   - q: "비전공자가 SQLD와 ADsP 중 무엇을 먼저 따는 게 좋을까요?"
     a: "데이터 분야가 완전히 처음이라면 ADsP를 먼저 권합니다. 코딩 없이 이론 위주라 부담이 적고, 데이터의 큰 그림을 잡는 데 도움이 됩니다. 이후 실무에서 SQL을 다뤄야 한다면 SQLD로 넘어가면 자연스럽게 연결됩니다. 다만 개발·데이터 직무 취업이 목표라면 SQLD가 실무 활용도가 높아 SQLD부터 준비해도 무방합니다."
@@ -37,6 +37,16 @@ faq:
 'ADsP(데이터분석 준전문가)'는 데이터 분석의 기획, 방법론, 통계 기초 등 이론 전반을 다룹니다. 코딩 없이 개념 위주로 출제되어 입문자에게 문턱이 낮습니다.
 
 <div class="callout-info">📌 정보: 두 자격증 상위에는 각각 SQLP(전문가), ADP(전문가)가 있습니다. 입문자는 하위 등급인 SQLD·ADsP부터 시작하는 것이 정석입니다.</div>
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcjbd1lR" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">SQLD 국가공인 자격 대비 교재</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 난이도와 합격률 비교
 
@@ -121,6 +131,16 @@ SQLD와 ADsP는 연간 각각 3~4회 정기 시행됩니다. 정확한 일정은
 - 통계·SQL이 유독 어렵다면 해당 파트만 인강으로 보완
 
 혼자 이론서만 봐서 이해가 안 되는 부분은 무료 강의나 유튜브 요약 영상으로 보충하면 학습 효율이 크게 올라갑니다.
+
+
+<a class="coupang-inline" href="https://link.coupang.com/a/fiIcjecK1k" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">✅</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">ADsP 데이터분석 준전문가 문제집</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 마치며
 
