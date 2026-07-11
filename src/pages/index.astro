@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PaperdocPopup from '../components/PaperdocPopup.astro';
 
 const allPosts = await Astro.glob('../blog/**/*.md');
 const sorted = allPosts.sort(
@@ -43,6 +44,7 @@ const fCat = meta(featured.frontmatter.category);
   title="LifeFlow - 더 나은 삶을 위한 인사이트"
   description="라이프스타일, 금융, 건강, 교육, 여행 최신 정보를 제공하는 블로그"
 >
+  <PaperdocPopup />
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "ItemList",
