@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import PaperdocBanner from '../components/PaperdocBanner.astro';
+import AdSlot from '../components/AdSlot.astro';
 
 interface Props {
   title: string;
@@ -202,6 +203,9 @@ const websiteSchema = {
     <!-- Back to Top -->
     <button class="back-to-top" id="back-to-top" aria-label="맨 위로">↑</button>
 
+    <!-- 모바일 하단 고정 광고 (슬롯 ID 입력 시 활성) -->
+    <AdSlot position="anchor" />
+
     <!-- Service Worker 등록 -->
     <script is:inline>
       if ('serviceWorker' in navigator) {
@@ -330,6 +334,22 @@ const websiteSchema = {
             metadata: { slug, title: document.title, path: window.location.pathname, referrer: document.referrer || 'direct', user_agent: navigator.userAgent }
           })
         }).catch(() => {});
+
+        // 제휴(쿠팡) 클릭 추적 — 어떤 상품/글이 실제 전환되는지 데이터화
+        document.addEventListener('click', function (e) {
+          const t = e.target;
+          const a = t && t.closest && t.closest('a.coupang-inline, a.coupang-link, a[href*="coupang.com"]');
+          if (!a) return;
+          const ci = a.querySelector && a.querySelector('.ci-title');
+          const label = (ci && ci.textContent.trim()) || (a.textContent || '').trim().slice(0, 80);
+          const payload = JSON.stringify({
+            event_type: 'affiliate_click',
+            source: 'lifeflow',
+            metadata: { target: 'coupang', label: label, href: a.href, slug: slug, path: window.location.pathname }
+          });
+          try { navigator.sendBeacon(ANALYTICS_URL, new Blob([payload], { type: 'application/json' })); }
+          catch (e2) { fetch(ANALYTICS_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: payload, keepalive: true }).catch(function () {}); }
+        }, { capture: true });
       })();
     </script>
   </body>
