@@ -8,11 +8,11 @@ tags: [베트남여행, 다낭, 나트랑, 푸꾸옥, 여름휴가]
 heroImage: "https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "여행용 캐리어 (기내·수하물)"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89%EC%9A%A9+%EC%BA%90%EB%A6%AC%EC%96%B4&channel=user"
   - title: "베트남 멀티 여행 어댑터"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89%EC%9A%A9+%EB%A9%80%ED%8B%B0+%EC%96%B4%EB%8C%91%ED%84%B0&channel=user"
   - title: "방수 파우치·워터백"
-    url: "https://link.coupang.com/a/dJhOT3"
+    url: "https://www.coupang.com/np/search?component=&q=%EB%B0%A9%EC%88%98+%ED%8C%8C%EC%9A%B0%EC%B9%98&channel=user"
 faq:
   - q: "다낭·나트랑·푸꾸옥 중 여름 여행지로 어디가 가장 좋나요?"
     a: "여행 목적에 따라 다릅니다. 관광·먹거리·가족 여행을 두루 원하면 바나힐·호이안이 가까운 다낭이 무난합니다. 리조트에서 온전히 쉬는 호캉스가 목적이면 조용하고 청정한 푸꾸옥이 최적입니다. 액티비티와 테마파크를 즐기려면 나트랑이 좋지만, 여름은 우기 초입이라 날씨 변동을 감안해야 합니다. 첫 베트남 여행이라면 인프라가 가장 잘 갖춰진 다낭을 추천합니다."
@@ -69,6 +69,15 @@ faq:
 ### 3. 푸꾸옥 — 조용한 청정 호캉스
 베트남 최대의 섬으로, 개발이 비교적 최근이라 바다가 맑고 한적합니다. 세계 최장급 해상케이블카와 프리미엄 리조트가 몰려 있어 온전히 쉬는 호캉스에 최적입니다. 30일 무비자 특례가 적용돼 입국도 간편합니다. 관광보다 휴식이 목적인 커플·가족에게 잘 맞습니다.
 
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89%EC%9A%A9+%EC%BA%90%EB%A6%AC%EC%96%B4&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🧳</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">장기 여행에 강한 수하물 캐리어 인기순 보기</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
+
 ---
 
 ## 여행 스타일별 강점 비교
@@ -106,6 +115,15 @@ faq:
 - 우비·방수 파우치(우기 대비)와 자외선 차단제
 - 멀티 어댑터(베트남은 220V, 대부분 호환)
 - 소액 달러·현지 통화(동) 환전, 그랩(Grab) 앱 설치
+
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89%EC%9A%A9+%EB%A9%80%ED%8B%B0+%EC%96%B4%EB%8C%91%ED%84%B0&channel=user" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🔌</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">베트남 멀티 여행 어댑터·방수 파우치 보기</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 <div class="callout-warning">⚠️ 주의: 나트랑·푸꾸옥은 여름 우기에 해당해 오후 스콜과 파도가 강해질 수 있습니다. 물놀이는 리조트·지정 해변의 안전 구역에서 하고, 기상 악화 시 해상 투어는 무리하지 마세요.</div>
 
