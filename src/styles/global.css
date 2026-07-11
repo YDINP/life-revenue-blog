@@ -1025,6 +1025,21 @@ section > h2::after {
 }
 .post-content .callout-link:hover { opacity: 0.75; }
 
+/* 본문 중간 관련글 블록 (자동 삽입 · 내부링크 강화) */
+.post-content .mid-related {
+  margin: 2rem 0;
+  padding: 1rem 1.25rem;
+  border: 1px solid rgba(127, 127, 127, 0.18);
+  border-left: 4px solid #1e6b5c;
+  border-radius: 10px;
+  background: rgba(30, 107, 92, 0.05);
+}
+.post-content .mid-related-label { display: block; font-weight: 800; font-size: 0.92rem; margin-bottom: 0.5rem; }
+.post-content .mid-related ul { margin: 0; padding-left: 1.1rem; }
+.post-content .mid-related li { margin: 0.35rem 0; }
+.post-content .mid-related a { font-weight: 600; text-decoration: none; }
+.post-content .mid-related a:hover { text-decoration: underline; }
+
 .post-content .callout-tip strong,
 .post-content .callout-warning strong,
 .post-content .callout-info strong {

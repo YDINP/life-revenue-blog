@@ -1,16 +1,18 @@
 ---
-// 페이퍼닥 홈 팝업 — 메인 접속 시마다 표시.
-// X = 이번만 닫기(다음 방문 시 재노출) / "24시간 동안 보지 않기" = 24h 억제.
+// 페이퍼닥 홈 팝업 — 스크롤해도 고정 위치. 전체 오버레이 없음(다른 클릭요소 방해 X).
+// 팝업 카드 뒤에만 블러 헤일로. X=이번만 닫기(다음 방문 재노출) / "24시간 동안 보지 않기"=24h 억제.
 // ⚠️ 파일명/클래스에 banner·ad 금지(광고차단 회피). pd-* 네이밍 사용.
 ---
 <div class="pd-pop" id="pd-pop" hidden>
-  <div class="pd-pop-backdrop" id="pd-pop-backdrop"></div>
-  <div class="pd-pop-card" role="dialog" aria-modal="true" aria-label="페이퍼닥 프로모션">
-    <button class="pd-pop-x" id="pd-pop-x" type="button" aria-label="닫기">&times;</button>
-    <a class="pd-pop-link" href="https://paperdoc-web.vercel.app/" target="_blank" rel="noopener sponsored" aria-label="페이퍼닥 - 계약서 AI 분석 플랫폼 바로가기">
-      <img src="/pd-popup.webp" alt="페이퍼닥 - 계약서 AI 분석 플랫폼" width="887" height="1774" decoding="async" />
-    </a>
-    <button class="pd-pop-dismiss" id="pd-pop-dismiss" type="button">24시간 동안 보지 않기</button>
+  <div class="pd-pop-wrap">
+    <div class="pd-pop-blur" aria-hidden="true"></div>
+    <div class="pd-pop-card" role="dialog" aria-label="페이퍼닥 프로모션">
+      <button class="pd-pop-x" id="pd-pop-x" type="button" aria-label="닫기">&times;</button>
+      <a class="pd-pop-link" href="https://paperdoc-web.vercel.app/" target="_blank" rel="noopener sponsored" aria-label="페이퍼닥 - 계약서 AI 분석 플랫폼 바로가기">
+        <img src="/pd-popup.webp" alt="페이퍼닥 - 계약서 AI 분석 플랫폼" width="887" height="1774" decoding="async" />
+      </a>
+      <button class="pd-pop-dismiss" id="pd-pop-dismiss" type="button">24시간 동안 보지 않기</button>
+    </div>
   </div>
 </div>
 
@@ -24,12 +26,17 @@
     align-items: center;
     justify-content: center;
     padding: 20px;
+    pointer-events: none; /* 페이지의 다른 클릭요소를 방해하지 않음 */
   }
-  .pd-pop-backdrop {
+  .pd-pop-wrap { position: relative; pointer-events: none; }
+  .pd-pop-blur {
     position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.62);
-    backdrop-filter: blur(2px);
+    inset: -20px;
+    border-radius: 28px;
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    background: rgba(120, 120, 130, 0.14);
+    pointer-events: none; /* 블러 영역도 클릭 통과 */
   }
   .pd-pop-card {
     position: relative;
@@ -38,6 +45,7 @@
     flex-direction: column;
     align-items: center;
     gap: 12px;
+    pointer-events: auto; /* 카드(이미지·버튼)만 상호작용 */
     animation: pdpop-in 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.2);
   }
   .pd-pop-link {
@@ -45,7 +53,7 @@
     line-height: 0;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 24px 60px -18px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 24px 60px -18px rgba(0, 0, 0, 0.55);
     transition: transform 0.2s ease;
   }
   .pd-pop-link:hover { transform: translateY(-3px); }
@@ -53,8 +61,8 @@
     display: block;
     width: auto;
     height: auto;
-    max-height: min(78vh, 640px);
-    max-width: 88vw;
+    max-height: min(72vh, 600px);
+    max-width: 86vw;
     border-radius: 16px;
   }
   .pd-pop-x {
@@ -75,16 +83,16 @@
   }
   .pd-pop-x:hover { background: #333; }
   .pd-pop-dismiss {
-    background: rgba(255, 255, 255, 0.14);
+    background: rgba(20, 20, 28, 0.72);
     color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.35);
     padding: 7px 16px;
     border-radius: 999px;
     font-size: 0.82rem;
     cursor: pointer;
     backdrop-filter: blur(4px);
   }
-  .pd-pop-dismiss:hover { background: rgba(255, 255, 255, 0.24); }
+  .pd-pop-dismiss:hover { background: rgba(20, 20, 28, 0.9); }
   @keyframes pdpop-in {
     from { opacity: 0; transform: translateY(16px) scale(0.96); }
     to { opacity: 1; transform: none; }
@@ -101,15 +109,13 @@
     var pop = document.getElementById('pd-pop');
     if (!pop) return;
     try { if (Date.now() < parseInt(localStorage.getItem(KEY) || '0', 10)) return; } catch (e) {}
-    function show() { pop.hidden = false; document.body.style.overflow = 'hidden'; }
+    function show() { pop.hidden = false; }
     function hide(persist) {
       pop.hidden = true;
-      document.body.style.overflow = '';
       if (persist) { try { localStorage.setItem(KEY, String(Date.now() + 86400000)); } catch (e) {} }
     }
     setTimeout(show, 1000);
     document.getElementById('pd-pop-x').addEventListener('click', function () { hide(false); });
-    document.getElementById('pd-pop-backdrop').addEventListener('click', function () { hide(false); });
     document.getElementById('pd-pop-dismiss').addEventListener('click', function () { hide(true); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !pop.hidden) hide(false); });
   })();
