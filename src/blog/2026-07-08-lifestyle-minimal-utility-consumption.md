@@ -8,9 +8,9 @@ tags: [미니멀소비, 효용소비, 절약, 고물가, 라이프스타일]
 heroImage: "https://images.pexels.com/photos/1907642/pexels-photo-1907642.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "다용도 수납 정리함 세트"
-    url: "https://link.coupang.com/a/fiIclGUWZ2"
+    url: "https://www.coupang.com/np/search?component=&q=%EB%8B%A4%EC%9A%A9%EB%8F%84+%EC%88%98%EB%82%A9+%EC%A0%95%EB%A6%AC%ED%95%A8+%EC%84%B8%ED%8A%B8&channel=user"
   - title: "미니멀 라이프 실천 도서"
-    url: "https://link.coupang.com/a/fiIclI1tT2"
+    url: "https://www.coupang.com/np/search?component=&q=%EB%AF%B8%EB%8B%88%EB%A9%80+%EB%9D%BC%EC%9D%B4%ED%94%84+%EC%8B%A4%EC%B2%9C+%EB%8F%84%EC%84%9C&channel=user"
 faq:
   - q: "효용 중심 소비가 정확히 무슨 뜻인가요?"
     a: "가격이나 유행이 아니라 '내가 이 물건을 얼마나 자주, 얼마나 만족스럽게 쓰는가'를 기준으로 소비하는 방식입니다. 한 번 쓰고 방치되는 물건 대신 매일 손이 가는 물건에 예산을 집중합니다. 소유량은 줄지만 만족도는 오히려 올라가는 것이 핵심입니다. 브랜드나 할인율이 아니라 사용 빈도가 구매의 기준이 됩니다."
@@ -37,7 +37,7 @@ faq:
 <div class="callout-info">📊 핵심 개념: 효용 중심 소비는 '얼마를 아꼈나'가 아니라 '얼마나 후회 없이 썼나'로 소비를 평가합니다. 절약과 만족을 동시에 잡는 접근입니다.</div>
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIclGUWZ2" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EB%8B%A4%EC%9A%A9%EB%8F%84+%EC%88%98%EB%82%A9+%EC%A0%95%EB%A6%AC%ED%95%A8+%EC%84%B8%ED%8A%B8&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -126,7 +126,7 @@ faq:
 가볍게 산다는 것은 궁핍이 아니라 '내가 고른 것들로만 채운 삶'입니다. 적게 소유하되 매일 만족하는 방향, 그것이 고물가 시대를 견디는 가장 현명한 소비 전략입니다.
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIclI1tT2" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EB%AF%B8%EB%8B%88%EB%A9%80+%EB%9D%BC%EC%9D%B4%ED%94%84+%EC%8B%A4%EC%B2%9C+%EB%8F%84%EC%84%9C&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>

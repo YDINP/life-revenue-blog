@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/247819/pexels-photo-247819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "아이패드 에어 M2"
-    url: "https://link.coupang.com/a/fiIcbvsNz2"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C+%EC%97%90%EC%96%B4+M2&channel=user"
   - title: "자기계발 도서 모음"
-    url: "https://link.coupang.com/a/fiIcbyBTMq"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C+%EB%8F%84%EC%84%9C+%EB%AA%A8%EC%9D%8C&channel=user"
 faq:
   - q: "발음 교정은 정말 2-3주 만에 가능한가요?"
     a: "기초 음소(자음, 모음) 개선은 2-3주로 가능합니다만, 자연스러운 리듬과 강세까지 포함하면 6-8주가 필요합니다. 개인차가 크므로 AI 도구로 주 1회 진전을 확인하는 것이 좋습니다."
@@ -36,7 +36,7 @@ faq:
 이 글에서는 기초 외국어 학습을 넘어 네이티브 수준의 발음, 자연스러운 표현, 문화적 이해를 갖추는 심화 학습 전략을 소개합니다. 단순히 "말하기"를 넘어 "문화인으로서의 언어 사용"까지 도달하는 방법입니다.
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbvsNz2" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C+%EC%97%90%EC%96%B4+M2&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -203,7 +203,7 @@ A: 2026년 AI 도구는 충분히 정확합니다. 다만 원어민 피드백이
 ---
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbyBTMq" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C+%EB%8F%84%EC%84%9C+%EB%AA%A8%EC%9D%8C&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -216,6 +216,6 @@ A: 2026년 AI 도구는 충분히 정확합니다. 다만 원어민 피드백이
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [아이패드 에어 M2](https://link.coupang.com/a/dJjUUj)
-- [자기계발 도서 모음](https://link.coupang.com/a/dJhOT3)
+- [아이패드 에어 M2](https://www.coupang.com/np/search?component=&q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C+%EC%97%90%EC%96%B4+M2&channel=user)
+- [자기계발 도서 모음](https://www.coupang.com/np/search?component=&q=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C+%EB%8F%84%EC%84%9C+%EB%AA%A8%EC%9D%8C&channel=user)
 

@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/7680682/pexels-photo-7680682.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "종이 다이어리"
-    url: "https://link.coupang.com/a/fiIb85kvxA"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%A2%85%EC%9D%B4+%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&channel=user"
   - title: "디지털 미니멀리즘 도서"
-    url: "https://link.coupang.com/a/fiIb8WTdtc"
+    url: "https://www.coupang.com/np/search?component=&q=%EB%94%94%EC%A7%80%ED%84%B8+%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98+%EB%8F%84%EC%84%9C&channel=user"
 faq:
   - q: "1인 가구가 정말 월 50만 원에 생활할 수 있나요?"
     a: "주거비를 제외한 식비·생활비 기준으로는 가능합니다. 이 글의 20가지 아이템 활용 시 기존 대비 40~50만 원 절약이 현실적입니다. 다만 개인의 생활 패턴, 지역, 건강 상태에 따라 차이가 있으므로 자신의 지출 내역을 먼저 분석하는 것이 중요합니다."
@@ -42,7 +42,7 @@ faq:
 식비 22%, 주거비 28%가 가장 큰 비중을 차지하고 있습니다. 이 두 영역만 적절히 관리해도 월 10~20만 원을 절약할 수 있다는 의미입니다. 하지만 많은 1인 가구가 편의점 이용, 외식, 불필요한 소비용품 구매로 인해 실제로는 월 40~50만 원을 초과 지출하고 있는 상황입니다.
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIb85kvxA" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%A2%85%EC%9D%B4+%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -232,7 +232,7 @@ Glass 용기보다 가볍고 휴대 가능하며, 전자레인지·냉동실 모
 ---
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIb8WTdtc" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EB%94%94%EC%A7%80%ED%84%B8+%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98+%EB%8F%84%EC%84%9C&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -245,6 +245,6 @@ Glass 용기보다 가볍고 휴대 가능하며, 전자레인지·냉동실 모
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [종이 다이어리](https://link.coupang.com/a/dJhOT3)
-- [디지털 미니멀리즘 도서](https://link.coupang.com/a/dJhOT3)
+- [종이 다이어리](https://www.coupang.com/np/search?component=&q=%EC%A2%85%EC%9D%B4+%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&channel=user)
+- [디지털 미니멀리즘 도서](https://www.coupang.com/np/search?component=&q=%EB%94%94%EC%A7%80%ED%84%B8+%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98+%EB%8F%84%EC%84%9C&channel=user)
 

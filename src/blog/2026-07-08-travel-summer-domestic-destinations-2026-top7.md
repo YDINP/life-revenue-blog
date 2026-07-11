@@ -8,9 +8,9 @@ tags: [여름휴가, 국내여행, 강원도, 제주도, 여행추천]
 heroImage: "https://images.pexels.com/photos/402028/pexels-photo-402028.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "여행용 캐리어"
-    url: "https://link.coupang.com/a/fiIb3FBIuO"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89%EC%9A%A9+%EC%BA%90%EB%A6%AC%EC%96%B4&channel=user"
   - title: "휴대용 선풍기"
-    url: "https://link.coupang.com/a/fiIclMJMmy"
+    url: "https://www.coupang.com/np/search?component=&q=%ED%9C%B4%EB%8C%80%EC%9A%A9+%EC%84%A0%ED%92%8D%EA%B8%B0&channel=user"
 faq:
   - q: "2026년 여름 국내 여행지 중 가성비가 가장 좋은 곳은 어디인가요?"
     a: "접근성과 물가를 함께 고려하면 삼척과 순천이 가장 가성비가 좋습니다. 삼척은 동해안 해수욕장이 강릉보다 20~30% 저렴한 숙박비를 유지하고, 순천은 만 습지와 정원을 무료 또는 저렴하게 즐길 수 있습니다. 2인 2박 3일 기준 40만~55만원이면 충분히 알찬 일정이 가능합니다. 반면 제주는 항공료가 추가되어 예산이 20% 이상 올라갑니다."
@@ -49,7 +49,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIb3FBIuO" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89%EC%9A%A9+%EC%BA%90%EB%A6%AC%EC%96%B4&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -134,7 +134,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIclMJMmy" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%ED%9C%B4%EB%8C%80%EC%9A%A9+%EC%84%A0%ED%92%8D%EA%B8%B0&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>

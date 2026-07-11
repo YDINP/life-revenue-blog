@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/9258909/pexels-photo-9258909.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "주식투자 무작정 따라하기"
-    url: "https://link.coupang.com/a/fiIb9knfq0"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90+%EB%AC%B4%EC%9E%91%EC%A0%95+%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0&channel=user"
   - title: "부자 아빠 가난한 아빠"
-    url: "https://link.coupang.com/a/fiIb9gWx6y"
+    url: "https://www.coupang.com/np/search?component=&q=%EB%B6%80%EC%9E%90+%EC%95%84%EB%B9%A0+%EA%B0%80%EB%82%9C%ED%95%9C+%EC%95%84%EB%B9%A0&channel=user"
 faq:
   - q: "부업 수익이 250만원을 넘으면 꼭 세금을 내야 하나요?"
     a: "네, 연 250만원을 초과하는 사업소득은 종합소득세 신고 의무가 발생합니다. 다만 기타소득(프리랜싱, 광고료)은 원천징수되며, 330만원 이상일 때 추가 신고가 필요합니다. 세무사와 상담하여 정확히 확인하세요."
@@ -38,7 +38,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9knfq0" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90+%EB%AC%B4%EC%9E%91%EC%A0%95+%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -277,7 +277,7 @@ AI 도구 보급: ChatGPT, 이미지 생성 AI 등이 콘텐츠 제작 속도를
 ---
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9gWx6y" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EB%B6%80%EC%9E%90+%EC%95%84%EB%B9%A0+%EA%B0%80%EB%82%9C%ED%95%9C+%EC%95%84%EB%B9%A0&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -290,6 +290,6 @@ AI 도구 보급: ChatGPT, 이미지 생성 AI 등이 콘텐츠 제작 속도를
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [주식투자 무작정 따라하기](https://link.coupang.com/a/dJhOT3)
-- [부자 아빠 가난한 아빠](https://link.coupang.com/a/dJhOT3)
+- [주식투자 무작정 따라하기](https://www.coupang.com/np/search?component=&q=%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90+%EB%AC%B4%EC%9E%91%EC%A0%95+%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0&channel=user)
+- [부자 아빠 가난한 아빠](https://www.coupang.com/np/search?component=&q=%EB%B6%80%EC%9E%90+%EC%95%84%EB%B9%A0+%EA%B0%80%EB%82%9C%ED%95%9C+%EC%95%84%EB%B9%A0&channel=user)
 

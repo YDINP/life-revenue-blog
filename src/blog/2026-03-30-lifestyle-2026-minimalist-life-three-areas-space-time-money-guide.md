@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/8313206/pexels-photo-8313206.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "디지털 미니멀리즘 도서"
-    url: "https://link.coupang.com/a/fiIb8WTdtc"
+    url: "https://www.coupang.com/np/search?component=&q=%EB%94%94%EC%A7%80%ED%84%B8+%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98+%EB%8F%84%EC%84%9C&channel=user"
   - title: "아날로그 알람시계"
-    url: "https://link.coupang.com/a/fiIb82bplc"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8+%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&channel=user"
 faq:
   - q: "미니멀 라이프를 시작하면 얼마나 비용을 절감할 수 있나요?"
     a: "개인의 소비 패턴에 따라 다르지만, 구독 서비스 정리와 충동 구매 방지만으로도 월 15-25만 원의 절감이 가능합니다. 이는 연간 180-300만 원에 해당합니다."
@@ -56,7 +56,7 @@ faq:
 | 서재 | 읽은 책은 기증, 미완독 책 10권 이하 | 독서 동기 부여 |
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIb8WTdtc" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EB%94%94%EC%A7%80%ED%84%B8+%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98+%EB%8F%84%EC%84%9C&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -187,7 +187,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIb82bplc" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8+%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -200,6 +200,6 @@ faq:
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [디지털 미니멀리즘 도서](https://link.coupang.com/a/dJhOT3)
-- [아날로그 알람시계](https://link.coupang.com/a/dJhOT3)
+- [디지털 미니멀리즘 도서](https://www.coupang.com/np/search?component=&q=%EB%94%94%EC%A7%80%ED%84%B8+%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98+%EB%8F%84%EC%84%9C&channel=user)
+- [아날로그 알람시계](https://www.coupang.com/np/search?component=&q=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8+%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&channel=user)
 

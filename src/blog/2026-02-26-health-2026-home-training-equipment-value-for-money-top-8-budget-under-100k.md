@@ -14,9 +14,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/7174396/pexels-photo-7174396.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "홈트레이닝 요가매트"
-    url: "https://link.coupang.com/a/fiIcbKoctU"
+    url: "https://www.coupang.com/np/search?component=&q=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D+%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&channel=user"
   - title: "스마트 체중계"
-    url: "https://link.coupang.com/a/fiIcbrScuq"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%8A%A4%EB%A7%88%ED%8A%B8+%EC%B2%B4%EC%A4%91%EA%B3%84&channel=user"
 faq:
   - q: "홈트 처음 시작하는데 어떤 장비부터 사야 하나요?"
     a: "요가 매트와 저항 밴드부터 시작하는 것을 추천합니다. 두 제품 모두 전신 운동이 가능하고, 총 40,000원대로 시작할 수 있으며, 초보자가 안전하게 배울 수 있기 때문입니다."
@@ -35,7 +35,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbKoctU" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D+%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -247,7 +247,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbrScuq" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%8A%A4%EB%A7%88%ED%8A%B8+%EC%B2%B4%EC%A4%91%EA%B3%84&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -260,6 +260,6 @@ faq:
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [홈트레이닝 요가매트](https://link.coupang.com/a/dJhOT3)
-- [스마트 체중계](https://link.coupang.com/a/dJhOT3)
+- [홈트레이닝 요가매트](https://www.coupang.com/np/search?component=&q=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D+%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&channel=user)
+- [스마트 체중계](https://www.coupang.com/np/search?component=&q=%EC%8A%A4%EB%A7%88%ED%8A%B8+%EC%B2%B4%EC%A4%91%EA%B3%84&channel=user)
 

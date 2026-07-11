@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/16055842/pexels-photo-16055842.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "부자 아빠 가난한 아빠"
-    url: "https://link.coupang.com/a/fiIb9gWx6y"
+    url: "https://www.coupang.com/np/search?component=&q=%EB%B6%80%EC%9E%90+%EC%95%84%EB%B9%A0+%EA%B0%80%EB%82%9C%ED%95%9C+%EC%95%84%EB%B9%A0&channel=user"
   - title: "주식투자 무작정 따라하기"
-    url: "https://link.coupang.com/a/fiIb9knfq0"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90+%EB%AC%B4%EC%9E%91%EC%A0%95+%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0&channel=user"
 faq:
   - q: "자산 배분 비율이 정해지면 절대 바꿀 수 없나요?"
     a: "아닙니다. 정기적 리밸런싱이 필수입니다. 최소 연 1회 이상, 각 자산의 비율이 당초 계획에서 5% 이상 벗어나면 조정해야 합니다. 인생의 큰 변화(결혼, 자녀 출생, 질병)나 경제 상황 급변도 재평가 신호입니다."
@@ -52,7 +52,7 @@ faq:
 동일한 배분은 존재하지 않습니다. 연령, 소득, 성향, 투자 경험 모두 다르므로 자신의 상황에 맞는 배분을 설계해야 합니다.
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9gWx6y" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EB%B6%80%EC%9E%90+%EC%95%84%EB%B9%A0+%EA%B0%80%EB%82%9C%ED%95%9C+%EC%95%84%EB%B9%A0&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -282,7 +282,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9knfq0" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90+%EB%AC%B4%EC%9E%91%EC%A0%95+%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -295,6 +295,6 @@ faq:
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [부자 아빠 가난한 아빠](https://link.coupang.com/a/dJhOT3)
-- [주식투자 무작정 따라하기](https://link.coupang.com/a/dJhOT3)
+- [부자 아빠 가난한 아빠](https://www.coupang.com/np/search?component=&q=%EB%B6%80%EC%9E%90+%EC%95%84%EB%B9%A0+%EA%B0%80%EB%82%9C%ED%95%9C+%EC%95%84%EB%B9%A0&channel=user)
+- [주식투자 무작정 따라하기](https://www.coupang.com/np/search?component=&q=%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90+%EB%AC%B4%EC%9E%91%EC%A0%95+%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0&channel=user)
 

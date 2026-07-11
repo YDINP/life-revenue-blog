@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/12470765/pexels-photo-12470765.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "디지털 미니멀리즘 도서"
-    url: "https://link.coupang.com/a/fiIb8WTdtc"
+    url: "https://www.coupang.com/np/search?component=&q=%EB%94%94%EC%A7%80%ED%84%B8+%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98+%EB%8F%84%EC%84%9C&channel=user"
   - title: "아날로그 알람시계"
-    url: "https://link.coupang.com/a/fiIb82bplc"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8+%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&channel=user"
 faq:
   - q: "홈오피스 필수템에 가장 우선순위를 두어야 할 아이템은?"
     a: "자세 교정(의자/쿠션)과 소음 차단을 최우선으로 추천합니다. 이 두 가지는 집중력 저하의 40%를 차지하면서도 투자 대비 효과가 가장 크기 때문입니다. 예산이 제한적이면 요추 쿠션(3~8만원)부터 시작하세요."
@@ -36,7 +36,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIb8WTdtc" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EB%94%94%EC%A7%80%ED%84%B8+%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98+%EB%8F%84%EC%84%9C&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -233,7 +233,7 @@ Step 3: 4주 측정 → 오류율, 업무 완성도, 피로도 변화 기록
 ---
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIb82bplc" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8+%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -246,6 +246,6 @@ Step 3: 4주 측정 → 오류율, 업무 완성도, 피로도 변화 기록
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [디지털 미니멀리즘 도서](https://link.coupang.com/a/dJhOT3)
-- [아날로그 알람시계](https://link.coupang.com/a/dJhOT3)
+- [디지털 미니멀리즘 도서](https://www.coupang.com/np/search?component=&q=%EB%94%94%EC%A7%80%ED%84%B8+%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98+%EB%8F%84%EC%84%9C&channel=user)
+- [아날로그 알람시계](https://www.coupang.com/np/search?component=&q=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8+%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&channel=user)
 

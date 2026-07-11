@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/247819/pexels-photo-247819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "아이패드 에어 M2"
-    url: "https://link.coupang.com/a/fiIcbvsNz2"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C+%EC%97%90%EC%96%B4+M2&channel=user"
   - title: "자기계발 도서 모음"
-    url: "https://link.coupang.com/a/fiIcbyBTMq"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C+%EB%8F%84%EC%84%9C+%EB%AA%A8%EC%9D%8C&channel=user"
 faq:
   - q: "정말 3개월에 회화 실력이 2배 높아질 수 있나요?"
     a: "개인차가 있지만, 4단계 방법을 일주일에 3-4시간씩 꾸준히 실행한 학습자들의 경우 12주 후 회화 자신감이 현저히 향상됩니다. 다만 이는 기존에 기본 문법과 1000-2000 단어 수준의 어휘를 갖춘 상태에서의 결과입니다."
@@ -36,7 +36,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbvsNz2" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C+%EC%97%90%EC%96%B4+M2&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -189,7 +189,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbyBTMq" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C+%EB%8F%84%EC%84%9C+%EB%AA%A8%EC%9D%8C&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -202,6 +202,6 @@ faq:
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [아이패드 에어 M2](https://link.coupang.com/a/dJjUUj)
-- [자기계발 도서 모음](https://link.coupang.com/a/dJhOT3)
+- [아이패드 에어 M2](https://www.coupang.com/np/search?component=&q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C+%EC%97%90%EC%96%B4+M2&channel=user)
+- [자기계발 도서 모음](https://www.coupang.com/np/search?component=&q=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C+%EB%8F%84%EC%84%9C+%EB%AA%A8%EC%9D%8C&channel=user)
 

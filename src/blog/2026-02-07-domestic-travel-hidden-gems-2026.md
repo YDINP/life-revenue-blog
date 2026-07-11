@@ -8,9 +8,9 @@ tags: ["국내여행", "숨은명소", "여행추천", "주말여행"]
 heroImage: "https://images.pexels.com/photos/3990359/pexels-photo-3990359.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "차박 용품"
-    url: "https://link.coupang.com/a/fiIb306yya"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%B0%A8%EB%B0%95+%EC%9A%A9%ED%92%88&channel=user"
   - title: "여행용 카메라"
-    url: "https://link.coupang.com/a/fiIb33NG5A"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89%EC%9A%A9+%EC%B9%B4%EB%A9%94%EB%9D%BC&channel=user"
 ---
 # 국내 여행 숨은 명소 TOP 10
 
@@ -42,7 +42,7 @@ coupangLinks:
 - 숙박: 펜션 10~15만원
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIb306yya" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%B0%A8%EB%B0%95+%EC%9A%A9%ED%92%88&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -330,7 +330,7 @@ coupangLinks:
 이번 주말, 차를 몰고 숨은 명소로 떠나보세요. 사람들로 붐비지 않는 조용한 풍경 속에서 진정한 휴식을 느낄 수 있을 것입니다!
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIb33NG5A" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89%EC%9A%A9+%EC%B9%B4%EB%A9%94%EB%9D%BC&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>

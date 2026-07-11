@@ -8,9 +8,9 @@ tags: [영양분석앱, AI건강앱, 식단관리, 칼로리계산, 매크로추
 heroImage: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "블루투스 스마트 체중계"
-    url: "https://link.coupang.com/a/fiIcd1izZs"
+    url: "https://www.coupang.com/np/search?component=&q=%EB%B8%94%EB%A3%A8%ED%88%AC%EC%8A%A4+%EC%8A%A4%EB%A7%88%ED%8A%B8+%EC%B2%B4%EC%A4%91%EA%B3%84&channel=user"
   - title: "칸막이 식단 도시락통"
-    url: "https://link.coupang.com/a/fiIcd4rGbQ"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%B9%B8%EB%A7%89%EC%9D%B4+%EC%8B%9D%EB%8B%A8+%EB%8F%84%EC%8B%9C%EB%9D%BD%ED%86%B5&channel=user"
 faq:
   - q: "식사 사진 분석은 얼마나 정확한가요?"
     a: "2026년 기준 상위권 앱들은 AI 이미지 인식 정확도가 80~90%에 이릅니다. 일반적인 한식, 양식 단품은 상당히 정확하게 인식하지만, 여러 재료가 섞인 복합 요리나 소스가 많은 음식은 오차가 커질 수 있습니다. 분석 결과를 참고하되 필요하면 직접 수정하는 것이 정확한 기록의 요령입니다."
@@ -38,7 +38,7 @@ AI 사진 분석 기술은 이 문제를 근본적으로 해결했습니다. 카
 위 데이터처럼 AI 사진 분석 방식은 수기 입력보다 지속률이 세 배 가까이 높습니다. 편리함이 곧 지속성으로 이어진다는 것을 보여줍니다.
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIcd1izZs" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EB%B8%94%EB%A3%A8%ED%88%AC%EC%8A%A4+%EC%8A%A4%EB%A7%88%ED%8A%B8+%EC%B2%B4%EC%A4%91%EA%B3%84&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -106,7 +106,7 @@ AI 영양 분석 앱은 식단 관리의 진입 장벽을 크게 낮췄습니다
 ---
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIcd4rGbQ" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%B9%B8%EB%A7%89%EC%9D%B4+%EC%8B%9D%EB%8B%A8+%EB%8F%84%EC%8B%9C%EB%9D%BD%ED%86%B5&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -119,5 +119,5 @@ AI 영양 분석 앱은 식단 관리의 진입 장벽을 크게 낮췄습니다
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [블루투스 스마트 체중계](https://link.coupang.com/a/dJhOT3)
-- [칸막이 식단 도시락통](https://link.coupang.com/a/dJhOT3)
+- [블루투스 스마트 체중계](https://www.coupang.com/np/search?component=&q=%EB%B8%94%EB%A3%A8%ED%88%AC%EC%8A%A4+%EC%8A%A4%EB%A7%88%ED%8A%B8+%EC%B2%B4%EC%A4%91%EA%B3%84&channel=user)
+- [칸막이 식단 도시락통](https://www.coupang.com/np/search?component=&q=%EC%B9%B8%EB%A7%89%EC%9D%B4+%EC%8B%9D%EB%8B%A8+%EB%8F%84%EC%8B%9C%EB%9D%BD%ED%86%B5&channel=user)

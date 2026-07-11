@@ -14,9 +14,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/8828587/pexels-photo-8828587.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "캐리어 28인치"
-    url: "https://link.coupang.com/a/fiIb88auQe"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%BA%90%EB%A6%AC%EC%96%B4+28%EC%9D%B8%EC%B9%98&channel=user"
   - title: "여행용 보조배터리"
-    url: "https://link.coupang.com/a/fiIb9e7CkC"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89%EC%9A%A9+%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&channel=user"
 ---
 # 2026년 유럽 배낭여행 필수 팁: 최신 트렌드와 실용적 가이드
 
@@ -45,7 +45,7 @@ coupangLinks:
 2026년 2월 기준, 한국 국민은 계속 90일 무비자 여행이 가능합니다(申根협약). 다만 2025년 11월부터 도입된 ETIAS(European Travel Information and Authorization System) 사전 등록이 권장되고 있으며, 2026년 중 의무화될 가능성이 높습니다. ETIAS 등록은 온라인으로 5분 내 완료되고, 비용은 €7입니다.
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIb88auQe" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%BA%90%EB%A6%AC%EC%96%B4+28%EC%9D%B8%EC%B9%98&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -201,11 +201,11 @@ Wise는 환율과 수수료에서 압도적이지만, 국내 신용카드도 해
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [캐리어 28인치](https://link.coupang.com/a/dJhOT3)
-- [여행용 보조배터리](https://link.coupang.com/a/dJhOT3)
+- [캐리어 28인치](https://www.coupang.com/np/search?component=&q=%EC%BA%90%EB%A6%AC%EC%96%B4+28%EC%9D%B8%EC%B9%98&channel=user)
+- [여행용 보조배터리](https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89%EC%9A%A9+%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&channel=user)
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9e7CkC" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89%EC%9A%A9+%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>

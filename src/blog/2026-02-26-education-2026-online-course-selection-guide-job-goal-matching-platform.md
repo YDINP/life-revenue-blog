@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/6517077/pexels-photo-6517077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "아이패드 에어 M2"
-    url: "https://link.coupang.com/a/fiIcbvsNz2"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C+%EC%97%90%EC%96%B4+M2&channel=user"
   - title: "자기계발 도서 모음"
-    url: "https://link.coupang.com/a/fiIcbyBTMq"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C+%EB%8F%84%EC%84%9C+%EB%AA%A8%EC%9D%8C&channel=user"
 faq:
   - q: "온라인 강의로 실제 취업이 가능할까요?"
     a: "가능합니다. 다만 강의 수료만으로는 부족하고, 강의에서 배운 기술로 실제 프로젝트 포트폴리오를 만들어야 합니다. 특히 개발, 데이터 분석, 디자인 분야는 포트폴리오가 학위보다 중요합니다. 강의 선택 시 실무 프로젝트가 충분히 포함되어 있는지 확인하세요."
@@ -34,7 +34,7 @@ faq:
 이 글에서는 직무 유형별, 학습 목표별로 최적의 온라인 강의를 고르는 구체적인 방법과 2026년 주목할 만한 추천 과정들을 소개합니다.
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbvsNz2" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C+%EC%97%90%EC%96%B4+M2&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -242,7 +242,7 @@ SQL, 파이썬, 시각화 도구 3가지를 모두 커버하는 120시간 이상
 ---
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbyBTMq" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C+%EB%8F%84%EC%84%9C+%EB%AA%A8%EC%9D%8C&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -255,6 +255,6 @@ SQL, 파이썬, 시각화 도구 3가지를 모두 커버하는 120시간 이상
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [아이패드 에어 M2](https://link.coupang.com/a/dJjUUj)
-- [자기계발 도서 모음](https://link.coupang.com/a/dJhOT3)
+- [아이패드 에어 M2](https://www.coupang.com/np/search?component=&q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C+%EC%97%90%EC%96%B4+M2&channel=user)
+- [자기계발 도서 모음](https://www.coupang.com/np/search?component=&q=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C+%EB%8F%84%EC%84%9C+%EB%AA%A8%EC%9D%8C&channel=user)
 

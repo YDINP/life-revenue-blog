@@ -8,11 +8,11 @@ tags: [냉방병, 냉방비, 전기요금, 여름건강, 에어컨]
 heroImage: "https://images.pexels.com/photos/3964704/pexels-photo-3964704.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "저소음 서큘레이터"
-    url: "https://link.coupang.com/a/fiHEoSrtjo"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%A0%80%EC%86%8C%EC%9D%8C+%EC%84%9C%ED%81%98%EB%A0%88%EC%9D%B4%ED%84%B0&channel=user"
   - title: "에어컨 교체용 필터"
-    url: "https://link.coupang.com/a/fiHEoVoNBA"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%97%90%EC%96%B4%EC%BB%A8+%EA%B5%90%EC%B2%B4%EC%9A%A9+%ED%95%84%ED%84%B0&channel=user"
   - title: "얇은 여름 가디건·무릎담요"
-    url: "https://link.coupang.com/a/fiHEoY6536"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%96%87%EC%9D%80+%EC%97%AC%EB%A6%84+%EA%B0%80%EB%94%94%EA%B1%B4+%EB%AC%B4%EB%A6%8E%EB%8B%B4%EC%9A%94&channel=user"
 faq:
   - q: "냉방병은 정확히 왜 생기나요?"
     a: "냉방병은 급격한 실내외 온도차와 장시간 냉방 노출로 자율신경이 교란되며 생깁니다. 더운 바깥과 차가운 실내를 오가면 체온 조절 기능에 부담이 쌓여 두통, 피로, 근육통, 소화불량, 콧물 같은 감기 유사 증상이 나타납니다. 여기에 밀폐된 냉방 공간의 건조함과 환기 부족이 더해지면 증상이 악화됩니다. 온도차를 5도 이내로 줄이고 주기적으로 환기하는 것이 핵심 예방책입니다."
@@ -54,7 +54,7 @@ faq:
 
 24도 단독 냉방을 26~27도 + 서큘레이터 조합으로 바꾸면 체감온도는 비슷하면서 전력은 30% 안팎 줄일 수 있습니다. 냉방비 절감의 핵심은 '온도를 더 낮추는 것'이 아니라 '찬 공기를 잘 퍼뜨리는 것'입니다.
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiHEoSrtjo" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EB%83%89%EB%B0%A9%EB%B9%84+%EC%9E%A1%EB%8A%94+%EC%A0%80%EC%86%8C%EC%9D%8C+%EC%84%9C%ED%81%98%EB%A0%88%EC%9D%B4%ED%84%B0+%EB%B3%B4%EA%B8%B0&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🌀</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -88,7 +88,7 @@ faq:
 - 취침 모드 활용: 새벽 과냉방 방지로 전기료·냉방병 동시 예방
 - 커튼·블라인드: 한낮 직사광선 차단으로 실내 온도 상승 억제
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiHEoVoNBA" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%97%90%EC%96%B4%EC%BB%A8+%EA%B5%90%EC%B2%B4+%ED%95%84%ED%84%B0+%EC%B0%A8%EA%B4%91+%EC%BB%A4%ED%8A%BC+%EC%9D%B8%EA%B8%B0+%EC%83%81%ED%92%88+%EB%B3%B4%EA%B8%B0&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🪟</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>

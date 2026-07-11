@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/5426883/pexels-photo-5426883.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "독서등 LED"
-    url: "https://link.coupang.com/a/fiIcbHG3Wu"
+    url: "https://www.coupang.com/np/search?component=&q=%EB%8F%85%EC%84%9C%EB%93%B1+LED&channel=user"
   - title: "아이패드 에어 M2"
-    url: "https://link.coupang.com/a/fiIcbvsNz2"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C+%EC%97%90%EC%96%B4+M2&channel=user"
 faq:
   - q: "자기계발 도서는 정말 인생을 바꿀까요?"
     a: "도서만으로는 변화가 일어나지 않습니다. 책에서 배운 내용을 실제로 실행할 때 비로소 변화가 시작됩니다. 읽기보다 실행이 중요하며, 3-4주 이상 지속할 때 효과를 볼 수 있습니다."
@@ -34,7 +34,7 @@ faq:
 이 글에서는 실제 독자 평가, 판매량, 변화 사례를 바탕으로 2026년 필독 자기계발 도서 12권을 카테고리별로 엄선했습니다. 당신의 목표와 상황에 맞는 책을 찾아보세요.
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbHG3Wu" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EB%8F%85%EC%84%9C%EB%93%B1+LED&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -224,7 +224,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbvsNz2" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C+%EC%97%90%EC%96%B4+M2&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -237,6 +237,6 @@ faq:
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [독서등 LED](https://link.coupang.com/a/dJhOT3)
-- [아이패드 에어 M2](https://link.coupang.com/a/dJjUUj)
+- [독서등 LED](https://www.coupang.com/np/search?component=&q=%EB%8F%85%EC%84%9C%EB%93%B1+LED&channel=user)
+- [아이패드 에어 M2](https://www.coupang.com/np/search?component=&q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C+%EC%97%90%EC%96%B4+M2&channel=user)
 

@@ -13,9 +13,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/34350261/pexels-photo-34350261.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "캐리어 28인치"
-    url: "https://link.coupang.com/a/fiIb88auQe"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%BA%90%EB%A6%AC%EC%96%B4+28%EC%9D%B8%EC%B9%98&channel=user"
   - title: "여행용 보조배터리"
-    url: "https://link.coupang.com/a/fiIb9e7CkC"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89%EC%9A%A9+%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&channel=user"
 faq:
   - q: "제주도 가족 여행으로 가장 좋은 시기는 언제인가요?"
     a: "9월 중순~11월 초(가을)가 최적입니다. 날씨가 쾌적하고 혼잡도가 낮으며 숙박비도 합리적입니다. 단, 8월 말~9월 초는 태풍 영향을 받을 수 있으니 피하세요. 만약 여름 성수기에 가야 한다면 조식 포함 패키지를 선택해 시간을 절약하면 좋습니다."
@@ -32,7 +32,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIb88auQe" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%BA%90%EB%A6%AC%EC%96%B4+28%EC%9D%B8%EC%B9%98&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -215,7 +215,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9e7CkC" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89%EC%9A%A9+%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -228,6 +228,6 @@ faq:
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [캐리어 28인치](https://link.coupang.com/a/dJhOT3)
-- [여행용 보조배터리](https://link.coupang.com/a/dJhOT3)
+- [캐리어 28인치](https://www.coupang.com/np/search?component=&q=%EC%BA%90%EB%A6%AC%EC%96%B4+28%EC%9D%B8%EC%B9%98&channel=user)
+- [여행용 보조배터리](https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89%EC%9A%A9+%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&channel=user)
 

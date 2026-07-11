@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/8212224/pexels-photo-8212224.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "여행 가이드북"
-    url: "https://link.coupang.com/a/fiIcbMAUY8"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89+%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81&channel=user"
   - title: "여행용 보조배터리"
-    url: "https://link.coupang.com/a/fiIb9e7CkC"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89%EC%9A%A9+%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&channel=user"
 faq:
   - q: "여행 필수 준비물을 꼭 다 챙겨야 하나요?"
     a: "아닙니다. 본문에서 제시한 63가지는 '전체 목록'이며, 개인의 여행 스타일·기간·지역에 따라 선택하면 됩니다. 필수(6가지 서류) + 추천(의류, 화장품) + 선택(편의용품)으로 구분했으니 참고하세요. 가장 중요한 건 여권, 항공권, 신용카드, 현금입니다."
@@ -42,7 +42,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbMAUY8" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89+%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -356,7 +356,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9e7CkC" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89%EC%9A%A9+%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -369,6 +369,6 @@ faq:
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [여행 가이드북](https://link.coupang.com/a/dJhOT3)
-- [여행용 보조배터리](https://link.coupang.com/a/dJhOT3)
+- [여행 가이드북](https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89+%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81&channel=user)
+- [여행용 보조배터리](https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89%EC%9A%A9+%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&channel=user)
 

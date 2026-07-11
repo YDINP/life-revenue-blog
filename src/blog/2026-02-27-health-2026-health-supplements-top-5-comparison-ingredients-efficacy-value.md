@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/7615452/pexels-photo-7615452.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "건강한 식단 도서"
-    url: "https://link.coupang.com/a/fiIb9nzvHg"
+    url: "https://www.coupang.com/np/search?component=&q=%EA%B1%B4%EA%B0%95%ED%95%9C+%EC%8B%9D%EB%8B%A8+%EB%8F%84%EC%84%9C&channel=user"
   - title: "스마트 체중계"
-    url: "https://link.coupang.com/a/fiIcbrScuq"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%8A%A4%EB%A7%88%ED%8A%B8+%EC%B2%B4%EC%A4%91%EA%B3%84&channel=user"
 faq:
   - q: "건강식품을 언제부터 섭취하면 효과가 나타나나요?"
     a: "대부분의 건강식품은 최소 4주에서 8주 사이에 초기 변화를 체감할 수 있지만, 의미 있는 생화학적 효과는 12주 이상의 꾸준한 섭취가 필요합니다. 특히 피부, 소화, 피로감은 비교적 빠르게 개선되는 반면, 혈중 수치 개선이나 질병 예방 효과는 장기 섭취를 통해 확인됩니다."
@@ -36,7 +36,7 @@ faq:
 이 가이드에서는 2026년 가장 많이 찾는 건강식품 5가지를 성분, 효과, 가격, 섭취 방법 등 모든 각도에서 비교분석하여 당신의 건강 목표에 맞는 제품을 선택하는 방법을 제시합니다.
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9nzvHg" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EA%B1%B4%EA%B0%95%ED%95%9C+%EC%8B%9D%EB%8B%A8+%EB%8F%84%EC%84%9C&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -262,7 +262,7 @@ EPA/DHA 제품의 경우 최소 8주 이상 꾸준히 섭취해야 효과를 체
 ---
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbrScuq" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%8A%A4%EB%A7%88%ED%8A%B8+%EC%B2%B4%EC%A4%91%EA%B3%84&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -275,6 +275,6 @@ EPA/DHA 제품의 경우 최소 8주 이상 꾸준히 섭취해야 효과를 체
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [건강한 식단 도서](https://link.coupang.com/a/dJhOT3)
-- [스마트 체중계](https://link.coupang.com/a/dJhOT3)
+- [건강한 식단 도서](https://www.coupang.com/np/search?component=&q=%EA%B1%B4%EA%B0%95%ED%95%9C+%EC%8B%9D%EB%8B%A8+%EB%8F%84%EC%84%9C&channel=user)
+- [스마트 체중계](https://www.coupang.com/np/search?component=&q=%EC%8A%A4%EB%A7%88%ED%8A%B8+%EC%B2%B4%EC%A4%91%EA%B3%84&channel=user)
 

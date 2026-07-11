@@ -8,9 +8,9 @@ tags: ["모닝루틴", "생산성", "습관", "라이프스타일"]
 heroImage: "https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "모닝루틴 도서"
-    url: "https://link.coupang.com/a/fiIb6rxXum"
+    url: "https://www.coupang.com/np/search?component=&q=%EB%AA%A8%EB%8B%9D%EB%A3%A8%ED%8B%B4+%EB%8F%84%EC%84%9C&channel=user"
   - title: "알람시계"
-    url: "https://link.coupang.com/a/fiIb6u5TpY"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&channel=user"
 ---
 # 모닝 루틴의 힘: 하루를 바꾸는 아침 습관
 
@@ -33,7 +33,7 @@ coupangLinks:
 <div class="chart-progress" data-title="모닝 루틴 실천 효과 (100점 만점)" data-labels="생산성,기분,건강,목표달성,스트레스관리" data-values="90,85,88,92,87" data-colors="#3b82f6,#10b981,#ec4899,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIb6rxXum" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EB%AA%A8%EB%8B%9D%EB%A3%A8%ED%8B%B4+%EB%8F%84%EC%84%9C&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -326,7 +326,7 @@ coupangLinks:
 완벽한 루틴을 만들려고 하지 마세요. 오늘 당장 실천할 수 있는 하나만 고르세요. 내일 아침, 평소보다 30분 일찍 일어나 물을 마시고, 침대를 정리해보세요. 그 작은 시작이 인생을 바꿉니다!
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIb6u5TpY" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>

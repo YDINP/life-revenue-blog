@@ -8,9 +8,9 @@ tags: [자격증, 취업준비, 이직, 노후대비, 자기계발]
 heroImage: "https://images.pexels.com/photos/4145153/pexels-photo-4145153.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "자격증 대비 교재 종합 세트"
-    url: "https://link.coupang.com/a/fiIcgKVmMu"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%9E%90%EA%B2%A9%EC%A6%9D+%EB%8C%80%EB%B9%84+%EA%B5%90%EC%9E%AC+%EC%A2%85%ED%95%A9+%EC%84%B8%ED%8A%B8&channel=user"
   - title: "온라인 자격증 인강 수강권"
-    url: "https://link.coupang.com/a/fiIcgNpGpM"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%98%A8%EB%9D%BC%EC%9D%B8+%EC%9E%90%EA%B2%A9%EC%A6%9D+%EC%9D%B8%EA%B0%95+%EC%88%98%EA%B0%95%EA%B6%8C&channel=user"
 faq:
   - q: "직장인이 퇴근 후에 딸 수 있는 현실적인 자격증은 무엇인가요?"
     a: "SQLD, ADsP, 한국사능력검정시험은 하루 1~2시간씩 3~4주만 투자해도 합격 가능한 대표적인 직장인 친화 자격증입니다. 시험이 지필 위주라 별도의 실기 준비가 없고, 기출문제 반복만으로 합격률이 높습니다. 반면 전기기사나 산업안전기사는 실기가 포함돼 최소 3~6개월을 잡아야 하므로 여유 있게 계획하는 것이 좋습니다."
@@ -39,7 +39,7 @@ faq:
 <div class="callout-info">📌 정보: 자격증은 '따는 것'보다 '활용하는 것'이 핵심입니다. 취득 후 이력서·포트폴리오에 어떻게 연결할지까지 미리 그려두면 실패 확률이 줄어듭니다.</div>
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIcgKVmMu" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%9E%90%EA%B2%A9%EC%A6%9D+%EB%8C%80%EB%B9%84+%EA%B5%90%EC%9E%AC+%EC%A2%85%ED%95%A9+%EC%84%B8%ED%8A%B8&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -136,7 +136,7 @@ faq:
 - 이론은 빠르게, 문제 풀이에 60% 이상 시간 배분
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIcgNpGpM" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%98%A8%EB%9D%BC%EC%9D%B8+%EC%9E%90%EA%B2%A9%EC%A6%9D+%EC%9D%B8%EA%B0%95+%EC%88%98%EA%B0%95%EA%B6%8C&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>

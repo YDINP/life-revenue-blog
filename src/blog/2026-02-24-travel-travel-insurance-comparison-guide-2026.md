@@ -13,9 +13,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/7734672/pexels-photo-7734672.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "여행 가이드북"
-    url: "https://link.coupang.com/a/fiIcbMAUY8"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89+%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81&channel=user"
   - title: "여행용 보조배터리"
-    url: "https://link.coupang.com/a/fiIb9e7CkC"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89%EC%9A%A9+%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&channel=user"
 faq:
   - q: "여행자 보험 없이 해외여행을 가도 괜찮을까요?"
     a: "절대 권장하지 않습니다. 해외 의료비는 국내의 5~10배 수준이며, 응급 상황에서 건강보험이 적용되지 않습니다. 특히 선진국(미국, 유럽) 여행 시 응급실 방문만 해도 수백만 원의 비용이 발생합니다. 저렴한 보험료로 큰 위험을 대비하는 것이 현명합니다."
@@ -36,7 +36,7 @@ faq:
 또한 항공편 지연, 수하물 분실, 여행 중단 등 금전적 손실도 발생할 수 있습니다. 여행자 보험은 이러한 예상 밖의 상황에서 당신을 보호하는 안전망입니다.
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbMAUY8" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89+%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -196,7 +196,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9e7CkC" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89%EC%9A%A9+%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -209,6 +209,6 @@ faq:
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [여행 가이드북](https://link.coupang.com/a/dJhOT3)
-- [여행용 보조배터리](https://link.coupang.com/a/dJhOT3)
+- [여행 가이드북](https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89+%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81&channel=user)
+- [여행용 보조배터리](https://www.coupang.com/np/search?component=&q=%EC%97%AC%ED%96%89%EC%9A%A9+%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&channel=user)
 

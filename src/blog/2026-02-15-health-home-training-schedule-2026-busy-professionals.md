@@ -15,9 +15,9 @@ tags:
 heroImage: "https://images.pexels.com/photos/6453430/pexels-photo-6453430.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "건강한 식단 도서"
-    url: "https://link.coupang.com/a/fiIb9nzvHg"
+    url: "https://www.coupang.com/np/search?component=&q=%EA%B1%B4%EA%B0%95%ED%95%9C+%EC%8B%9D%EB%8B%A8+%EB%8F%84%EC%84%9C&channel=user"
   - title: "스마트 체중계"
-    url: "https://link.coupang.com/a/fiIcbrScuq"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%8A%A4%EB%A7%88%ED%8A%B8+%EC%B2%B4%EC%A4%91%EA%B3%84&channel=user"
 faq:
   - q: "홈 트레이닝만으로도 근육이 생길 수 있나요?"
     a: "네, 가능합니다. 특히 운동을 시작한 지 3개월 이내의 초보자라면 홈 트레이닝만으로도 충분한 근력 증가와 근육 발달을 경험할 수 있습니다. 중요한 것은 일관성 있는 운동과 단백질 섭취입니다."
@@ -38,7 +38,7 @@ faq:
 이미 발행한 [홈 트레이닝 완벽 가이드: 장비 없이 시작하는 효과적인 운동 루틴](/blog/2026-02-07-home-workout-routine-2026/)에서 기본 운동법을 다뤘다면, 이번 포스트에서는 실제로 실행 가능한 주간 시간표와 각 요일별 맞춤 루틴을 구체적으로 소개합니다.
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIb9nzvHg" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EA%B1%B4%EA%B0%95%ED%95%9C+%EC%8B%9D%EB%8B%A8+%EB%8F%84%EC%84%9C&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -244,7 +244,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIcbrScuq" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%8A%A4%EB%A7%88%ED%8A%B8+%EC%B2%B4%EC%A4%91%EA%B3%84&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -257,6 +257,6 @@ faq:
 
 > 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
 
-- [건강한 식단 도서](https://link.coupang.com/a/dJhOT3)
-- [스마트 체중계](https://link.coupang.com/a/dJhOT3)
+- [건강한 식단 도서](https://www.coupang.com/np/search?component=&q=%EA%B1%B4%EA%B0%95%ED%95%9C+%EC%8B%9D%EB%8B%A8+%EB%8F%84%EC%84%9C&channel=user)
+- [스마트 체중계](https://www.coupang.com/np/search?component=&q=%EC%8A%A4%EB%A7%88%ED%8A%B8+%EC%B2%B4%EC%A4%91%EA%B3%84&channel=user)
 

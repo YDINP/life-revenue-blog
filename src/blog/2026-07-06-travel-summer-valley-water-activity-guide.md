@@ -8,9 +8,9 @@ tags: [계곡여행, 물놀이, 여름휴가, 안전수칙, 준비물]
 heroImage: "https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "아쿠아슈즈"
-    url: "https://link.coupang.com/a/fiIcgEvVMy"
+    url: "https://www.coupang.com/np/search?component=&q=%EC%95%84%EC%BF%A0%EC%95%84%EC%8A%88%EC%A6%88&channel=user"
   - title: "방수백"
-    url: "https://link.coupang.com/a/fiIcgHWC60"
+    url: "https://www.coupang.com/np/search?component=&q=%EB%B0%A9%EC%88%98%EB%B0%B1&channel=user"
 faq:
   - q: "여름 계곡 물놀이에 가장 좋은 시간대는 언제인가요?"
     a: "오전 10시부터 오후 2시 사이가 가장 안전하고 쾌적합니다. 이 시간대는 수온이 어느 정도 올라 저체온 위험이 낮고, 시야가 밝아 물속 바위나 웅덩이를 확인하기 쉽습니다. 오후 3시 이후에는 소나기와 급류가 잦아지고, 특히 여름철 산간 지역은 갑작스러운 계곡물 불어남 사고가 빈번합니다. 물놀이는 해가 있는 낮 시간에 마치고 저녁엔 안전한 곳에서 휴식하세요."
@@ -48,7 +48,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIcgEvVMy" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EC%95%84%EC%BF%A0%EC%95%84%EC%8A%88%EC%A6%88&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
@@ -125,7 +125,7 @@ faq:
 ---
 
 
-<a class="coupang-inline" href="https://link.coupang.com/a/fiIcgHWC60" target="_blank" rel="noopener noreferrer nofollow">
+<a class="coupang-inline" href="https://www.coupang.com/np/search?component=&q=%EB%B0%A9%EC%88%98%EB%B0%B1&channel=user" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">✅</span>
   <span class="ci-body">
     <span class="ci-label">쿠팡 추천</span>
