@@ -3,7 +3,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import PostCard from '../../../components/PostCard.astro';
 
 export async function getStaticPaths() {
-  const allPostModules = await import.meta.glob('../../../blog/**/*.md', { eager: true });
+  const allPostModules = Object.fromEntries(Object.entries(await import.meta.glob('../../../blog/**/*.md', { eager: true })).filter(([, p]) => !p.frontmatter?.draft));   // draft = 숨김
   const posts = Object.entries(allPostModules).map(([path, post]) => {
     const filename = path.split('/').pop().replace('.md', '');
     return {

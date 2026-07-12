@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostCard from '../../components/PostCard.astro';
 
-const allPosts = await Astro.glob('../../blog/**/*.md');
+const allPosts = (await Astro.glob('../../blog/**/*.md')).filter(p => !p.frontmatter.draft);   // draft = 숨김(봇 /draft)
 const sortedPosts = allPosts.sort(
   (a, b) => new Date(b.frontmatter.pubDate).getTime() - new Date(a.frontmatter.pubDate).getTime()
 );
