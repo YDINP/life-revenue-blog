@@ -317,7 +317,11 @@ const websiteSchema = {
         const isLocal = host === 'localhost' || host === '127.0.0.1' || host === '::1' || host === '0.0.0.0'
           || /^192\.168\./.test(host) || /^10\./.test(host) || /^172\.(1[6-9]|2\d|3[01])\./.test(host);
         if (isLocal) return;
-        // 2) 관리자 플래그가 있으면 집계하지 않음
+        // 2) 봇/헤드리스(포스팅 후 자동 검증, 크롤러 등)는 집계하지 않음
+        //    — Claude 세션의 playwright/webread 검증 접속이 방문자로 잡히던 문제
+        const ua = navigator.userAgent || '';
+        if (navigator.webdriver || /bot|crawl|spider|headless|lighthouse|playwright|puppeteer|slurp|petalbot|bytespider/i.test(ua)) return;
+        // 3) 관리자 플래그가 있으면 집계하지 않음
         try { if (localStorage.getItem(NOTRACK_KEY) === '1') return; } catch (e) {}
         const slug = window.location.pathname.replace(/^\/blog\//, '').replace(/\/$/, '');
         fetch(ANALYTICS_URL, {
