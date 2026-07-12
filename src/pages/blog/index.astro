@@ -270,10 +270,13 @@ const posts = sortedPosts.map((p) => {
     align-items: start;
     margin-bottom: 2rem;
   }
-  .deck-stage { position: relative; perspective: 1900px; }
+  .deck-stage { position: relative; }
+  /* perspective 는 회전하는 .deck-card 의 '직계 부모'에 있어야 3D 넘김이 적용된다 */
   .deck-cards {
     position: relative;
     height: clamp(440px, 62vh, 580px);
+    perspective: 1900px;
+    perspective-origin: 35% 50%;
   }
   .deck-card {
     position: absolute;
@@ -286,7 +289,7 @@ const posts = sortedPosts.map((p) => {
     box-shadow: var(--shadow-lg);
     overflow: hidden;
     transform-origin: left center;
-    transition: transform .66s cubic-bezier(.36,.01,.18,1), opacity .5s ease, box-shadow .5s ease;
+    transition: transform .66s cubic-bezier(.36,.01,.18,1), opacity .22s ease, box-shadow .5s ease;
     backface-visibility: hidden;
   }
   /* 페이지 넘어갈 때 결을 주는 그림자 오버레이 */
@@ -329,15 +332,26 @@ const posts = sortedPosts.map((p) => {
   .deck-card.peek1 { transform: translateY(16px) scale(.955); opacity: 1; z-index: 4; }
   .deck-card.peek2 { transform: translateY(30px) scale(.912); opacity: .9; z-index: 3; }
   .deck-card.hidden { transform: translateY(40px) scale(.88); opacity: 0; z-index: 2; pointer-events: none; }
-  .deck-card.gone { transform: rotateY(-156deg); opacity: 0; z-index: 6; pointer-events: none; box-shadow: -18px 12px 40px -12px rgba(20,15,10,.5); }
+  /* 넘어가는 장은 회전 내내 불투명하게 유지한다. 회전이 90°를 넘어가면 backface-visibility 로
+     저절로 가려지므로, 목표 각도를 90°보다 조금만 크게 잡아야(=-98deg) '책장이 닫히는 순간'이
+     전환이 끝나는 시점과 맞는다. 각도가 크면(-156deg) 회전 초반에 이미 90°를 지나 다음 장이
+     먼저 드러난다. opacity 는 카드가 거의 옆면이 된 뒤에야(0.5s) 떨어뜨린다. */
+  .deck-card.gone {
+    transform: rotateY(-98deg); opacity: 0; z-index: 6; pointer-events: none;
+    box-shadow: -18px 12px 40px -12px rgba(20,15,10,.5);
+    transition: transform .66s cubic-bezier(.36,.01,.18,1), opacity .14s ease .5s, box-shadow .5s ease;
+  }
   .deck-card.gone .dc-shade { opacity: 1; }
   .deck-card.out { display: none; }
 
   /* 리스트 점프 시 여러 장 촤라락 넘기기(riffle): 전환을 짧고 빠르게 */
   .deck-cards.riffling .deck-card {
-    transition: transform .3s cubic-bezier(.36,.01,.18,1), opacity .22s ease;
+    transition: transform .3s cubic-bezier(.36,.01,.18,1), opacity .16s ease;
   }
-  .deck-cards.riffling .deck-card.gone { transform: rotateY(-162deg); }
+  .deck-cards.riffling .deck-card.gone {
+    transform: rotateY(-104deg);
+    transition: transform .3s cubic-bezier(.36,.01,.18,1), opacity .08s ease .22s;
+  }
 
   .deck-controls {
     display: flex; align-items: center; justify-content: center; gap: 1.25rem;
@@ -382,7 +396,11 @@ const posts = sortedPosts.map((p) => {
     .deck-list-scroll { max-height: 320px; }
   }
   @media (prefers-reduced-motion: reduce) {
-    .deck-card { transition: opacity .25s ease; }
-    .deck-card.gone { transform: none; }
+    .deck-card,
+    .deck-card.gone,
+    .deck-cards.riffling .deck-card,
+    .deck-cards.riffling .deck-card.gone { transition: opacity .25s ease; }
+    .deck-card.gone,
+    .deck-cards.riffling .deck-card.gone { transform: none; }
   }
 </style>
