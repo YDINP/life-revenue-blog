@@ -82,7 +82,7 @@ faq:
   <span class="ci-cta">최저가 →</span>
 </a>
 
-<div class="callout-tip">💡 팁: 냉방가전 조합이 고민된다면 [2026 여름 휴대용 선풍기·제습기 추천 TOP](/blog/2026-07-11-lifestyle-cooling-appliances-fan-dehumidifier-2026/)을 참고하세요. 차박에는 저소음·저전력 휴대용 선풍기가 파워뱅크 소모를 줄여 유리합니다.</div>
+<div class="callout-tip">💡 팁: 냉방가전 조합이 고민된다면 <a href="/blog/2026-07-11-lifestyle-cooling-appliances-fan-dehumidifier-2026/">2026 여름 휴대용 선풍기·제습기 추천 TOP</a>을 참고하세요. 차박에는 저소음·저전력 휴대용 선풍기가 파워뱅크 소모를 줄여 유리합니다.</div>
 
 ---
 

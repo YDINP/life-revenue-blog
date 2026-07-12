@@ -87,7 +87,7 @@ faq:
 
 즉시 꺼낼 대기자금은 파킹통장·CMA, 당분간 안 쓸 목돈은 정기예금으로 분리하세요.
 
-<div class="callout-tip">💡 팁: 비상금 위에 쌓이는 여윳돈은 절세계좌로 굴리면 효율이 큽니다. [절세계좌 3대장 ISA·연금저축·IRP 완벽 비교](/blog/2026-07-08-finance-tax-saving-accounts-isa-pension-irp/)와 [초보 ETF 투자 입문](/blog/2026-07-07-finance-etf-investment-beginners-leverage/)을 함께 참고하세요.</div>
+<div class="callout-tip">💡 팁: 비상금 위에 쌓이는 여윳돈은 절세계좌로 굴리면 효율이 큽니다. <a href="/blog/2026-07-08-finance-tax-saving-accounts-isa-pension-irp/">절세계좌 3대장 ISA·연금저축·IRP 완벽 비교</a>와 <a href="/blog/2026-07-07-finance-etf-investment-beginners-leverage/">초보 ETF 투자 입문</a>을 함께 참고하세요.</div>
 
 ---
 
