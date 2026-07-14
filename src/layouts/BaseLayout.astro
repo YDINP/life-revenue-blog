@@ -352,6 +352,22 @@ const websiteSchema = {
           try { navigator.sendBeacon(ANALYTICS_URL, new Blob([payload], { type: 'application/json' })); }
           catch (e2) { fetch(ANALYTICS_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: payload, keepalive: true }).catch(function () {}); }
         }, { capture: true });
+
+        // 페이퍼닥 프로모(팝업·배너·사이드) 클릭 추적 — 어느 블로그/위치에서 눌렀는지 데이터화
+        document.addEventListener('click', function (e) {
+          const t = e.target;
+          const a = t && t.closest && t.closest('a[href*="paperdoc-web.vercel.app"]');
+          if (!a) return;
+          const cls = String(a.className || '');
+          const placement = /pd-pop/.test(cls) ? 'popup' : /pd-side/.test(cls) ? 'side' : /pd-promo/.test(cls) ? 'banner' : 'other';
+          const payload = JSON.stringify({
+            event_type: 'paperdoc_click',
+            source: 'lifeflow',
+            metadata: { placement: placement, url: a.href, slug: slug, path: window.location.pathname, title: document.title }
+          });
+          try { navigator.sendBeacon(ANALYTICS_URL, new Blob([payload], { type: 'application/json' })); }
+          catch (e2) { fetch(ANALYTICS_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: payload, keepalive: true }).catch(function () {}); }
+        }, { capture: true });
       })();
     </script>
   </body>
