@@ -1,0 +1,147 @@
+---
+// 페이퍼닥 프로모 배너 (포스트 하단 인-콘텐츠) — 연출: 브리드 글로우 / 샤인 스윕 / 호버 리프트
+// ⚠️ 파일명/클래스에 "banner"·"ad" 금지: 광고 차단기가 /banner.* 를 네트워크 차단해
+//    이미지가 안 뜨고 alt 텍스트만 노출됨. → pd-promo / pd-post 네이밍 사용.
+// 추적: 앵커 클래스에 pd-promo 포함 → BaseLayout 클릭 리스너가 placement='banner' + slug 로 집계.
+---
+<a
+  class="pd-promo-link pd-post-link"
+  href="https://paperdoc-web.vercel.app/"
+  target="_blank"
+  rel="noopener sponsored"
+  aria-label="페이퍼닥 - 계약서 AI 분석 플랫폼 바로가기"
+>
+  <span class="pd-post-frame">
+    <span class="pd-post-tag" aria-hidden="true">제휴</span>
+    <img
+      class="pd-post-img"
+      src="/pd-post.webp"
+      alt="페이퍼닥 - 계약서 AI 분석 플랫폼"
+      width="1916"
+      height="679"
+      loading="lazy"
+      decoding="async"
+    />
+    <span class="pd-post-shine" aria-hidden="true"></span>
+    <span class="pd-post-cta" aria-hidden="true">
+      바로가기 <span class="pd-post-arrow">→</span>
+    </span>
+  </span>
+</a>
+
+<style>
+  .pd-post-link {
+    display: block;
+    margin: 2rem 0;
+    text-decoration: none;
+  }
+  .pd-post-frame {
+    position: relative;
+    display: block;
+    border-radius: 16px;
+    overflow: hidden;
+    /* 숨쉬기 글로우 — 시선 유도 */
+    animation: pd-post-breathe 3.4s ease-in-out infinite;
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+  }
+  .pd-post-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+  }
+  /* 제휴 표기 칩 (좌상단, 반투명) */
+  .pd-post-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 3;
+    padding: 0.2em 0.6em;
+    border-radius: 999px;
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: #fff;
+    background: rgba(11, 16, 32, 0.55);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+  }
+  /* 주기적 광택 스윕 */
+  .pd-post-shine {
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 45%;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(
+      100deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.05) 35%,
+      rgba(255, 255, 255, 0.42) 50%,
+      rgba(255, 255, 255, 0.05) 65%,
+      transparent 100%
+    );
+    transform: skewX(-18deg);
+    animation: pd-post-shine 4.8s ease-in-out infinite;
+  }
+  /* 오버레이 CTA (우하단) — 호버 시 강조 */
+  .pd-post-cta {
+    position: absolute;
+    right: 3.2%;
+    bottom: 12%;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    padding: 0.5em 1em;
+    border-radius: 999px;
+    font-size: clamp(0.7rem, 2.4cqw, 0.95rem);
+    font-weight: 800;
+    color: #0b1020;
+    background: #ffd400;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+    animation: pd-post-cta-pulse 1.9s ease-in-out infinite;
+  }
+  .pd-post-frame { container-type: inline-size; }
+  .pd-post-arrow {
+    display: inline-block;
+    animation: pd-post-arrow 1.1s ease-in-out infinite;
+  }
+  /* 호버: 살짝 떠오르고 연출 일시정지, CTA 강조 */
+  .pd-post-link:hover .pd-post-frame {
+    transform: translateY(-3px) scale(1.006);
+    box-shadow: 0 16px 36px -10px rgba(109, 92, 240, 0.5);
+    animation-play-state: paused;
+  }
+  .pd-post-link:hover .pd-post-cta {
+    background: #ffe14d;
+    transform: scale(1.06);
+  }
+
+  @keyframes pd-post-breathe {
+    0%, 100% { box-shadow: 0 0 0 rgba(109, 92, 240, 0); }
+    50%      { box-shadow: 0 8px 30px -6px rgba(109, 92, 240, 0.38); }
+  }
+  @keyframes pd-post-shine {
+    0%   { left: -60%; }
+    45%  { left: 120%; }
+    100% { left: 120%; }
+  }
+  @keyframes pd-post-cta-pulse {
+    0%, 100% { transform: scale(1); }
+    50%      { transform: scale(1.04); }
+  }
+  @keyframes pd-post-arrow {
+    0%, 100% { transform: translateX(0); }
+    50%      { transform: translateX(4px); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .pd-post-frame,
+    .pd-post-shine,
+    .pd-post-cta,
+    .pd-post-arrow { animation: none; }
+    .pd-post-link:hover .pd-post-frame { transform: none; }
+  }
+</style>

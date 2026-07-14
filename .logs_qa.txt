@@ -1,0 +1,39 @@
+[2m01:10:06[22m [34m[types][39m Generated [2m1ms[22m
+[2m01:10:06[22m [34m[content][39m Syncing content
+[2m01:10:06[22m [34m[content][39m Synced content
+[2m01:10:06[22m [34m[vite][39m Re-optimizing dependencies because vite config has changed
+[2m01:10:06[22m [34m[vite][39m Port 8025 is in use, trying another one...
+[2m01:10:06[22m [34m[vite][39m Port 8026 is in use, trying another one...
+[2m01:10:06[22m [34m[vite][39m Port 8027 is in use, trying another one...
+[2m01:10:06[22m [34m[vite][39m Port 8028 is in use, trying another one...
+
+[42m[1m astro [22m[49m [32mv5.17.1[39m [2mready in[22m 284 [2mms[22m
+
+[2m┃[22m Local    [36mhttp://localhost:8029/[39m
+[2m┃[22m Network  [2muse --host to expose[22m
+
+[2m01:10:06[22m [32mwatching for file changes...[39m
+The collection "blog" does not exist or is empty. Please check your content config file for errors.
+[2m01:10:37[22m [34m[200][39m /blog/2026-07-13-finance-property-tax-july-2026-card-payment-guide/ [2m33ms[22m
+Astro.glob is deprecated and will be removed in a future major version of Astro.
+Use import.meta.glob instead: https://vitejs.dev/guide/features.html#glob-import
+[2m01:10:38[22m [34m[200][39m /blog/ [2m27ms[22m
+Astro.glob is deprecated and will be removed in a future major version of Astro.
+Use import.meta.glob instead: https://vitejs.dev/guide/features.html#glob-import
+[2m01:10:38[22m [34m[200][39m / [2m13ms[22m
+The collection "blog" does not exist or is empty. Please check your content config file for errors.
+[2m01:10:39[22m [34m[200][39m /blog/2026-07-13-health-heatwave-major-warning-2026-guide/ [2m12ms[22m
+The collection "blog" does not exist or is empty. Please check your content config file for errors.
+[2m01:10:41[22m [34m[200][39m /blog/2026-07-13-travel-gangneung-sokcho-1night2days-2026/ [2m10ms[22m
+Astro.glob is deprecated and will be removed in a future major version of Astro.
+Use import.meta.glob instead: https://vitejs.dev/guide/features.html#glob-import
+[2m01:11:28[22m [34m[200][39m /blog/ [2m26ms[22m
+[2m01:11:28[22m [34m[200][39m /blog/finance/ [2m12ms[22m
+[2m01:11:28[22m [34m[200][39m /blog/health/ [2m11ms[22m
+[2m01:11:28[22m [34m[200][39m /blog/travel/ [2m10ms[22m
+Astro.glob is deprecated and will be removed in a future major version of Astro.
+Use import.meta.glob instead: https://vitejs.dev/guide/features.html#glob-import
+[2m01:11:28[22m [34m[200][39m / [2m13ms[22m
+[2m01:11:28[22m [34m[200][39m /rss.xml [2m7ms[22m
+[2m01:11:34[22m [34m[200][39m /rss.xml [2m4ms[22m
+[2m01:11:34[22m [33m[404][39m /sitemap-0.xml [2m1ms[22m
