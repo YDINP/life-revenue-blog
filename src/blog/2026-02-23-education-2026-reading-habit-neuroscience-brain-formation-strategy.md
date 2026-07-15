@@ -12,7 +12,7 @@ tags:
   - "학습과학"
   - "독서전략"
   - "습관형성"
-heroImage: "https://images.pexels.com/photos/5852307/pexels-photo-5852307.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+heroImage: "https://images.pexels.com/photos/4218979/pexels-photo-4218979.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "자기계발 도서 모음"
     url: "https://www.coupang.com/np/search?q=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C%20%EB%8F%84%EC%84%9C%20%EB%AA%A8%EC%9D%8C&src=1139000&spec=10799999&addtag=200&ctag=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C%20%EB%8F%84%EC%84%9C%20%EB%AA%A8%EC%9D%8C&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C%20%EB%8F%84%EC%84%9C%20%EB%AA%A8%EC%9D%8C"

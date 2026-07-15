@@ -10,7 +10,7 @@ tags:
   - "2026년여행"
   - "제주도숙소"
   - "여행경비"
-heroImage: "https://images.pexels.com/photos/34350261/pexels-photo-34350261.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+heroImage: "https://images.pexels.com/photos/16677692/pexels-photo-16677692.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "캐리어 28인치"
     url: "https://www.coupang.com/np/search?q=%EC%BA%90%EB%A6%AC%EC%96%B4%2028%EC%9D%B8%EC%B9%98&src=1139000&spec=10799999&addtag=200&ctag=%EC%BA%90%EB%A6%AC%EC%96%B4%2028%EC%9D%B8%EC%B9%98&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%BA%90%EB%A6%AC%EC%96%B4%2028%EC%9D%B8%EC%B9%98"

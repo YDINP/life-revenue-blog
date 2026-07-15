@@ -12,7 +12,7 @@ tags:
   - "운동습관"
   - "시간효율"
   - "운동팁"
-heroImage: "https://images.pexels.com/photos/19238352/pexels-photo-19238352.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+heroImage: "https://images.pexels.com/photos/9479816/pexels-photo-9479816.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "스마트 체중계"
     url: "https://www.coupang.com/np/search?q=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84&src=1139000&spec=10799999&addtag=200&ctag=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84"

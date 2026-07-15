@@ -11,7 +11,7 @@ tags:
   - "2026재테크"
   - "금리전략"
   - "자산관리"
-heroImage: "https://images.pexels.com/photos/32417524/pexels-photo-32417524.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+heroImage: "https://images.pexels.com/photos/31078522/pexels-photo-31078522.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "ETF 투자 가이드북"
     url: "https://www.coupang.com/np/search?q=ETF%20%ED%88%AC%EC%9E%90%20%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81&src=1139000&spec=10799999&addtag=200&ctag=ETF%20%ED%88%AC%EC%9E%90%20%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81&lptag=AF7838146&pageType=SEARCH&pageValue=ETF%20%ED%88%AC%EC%9E%90%20%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81"

@@ -12,7 +12,7 @@ tags:
   - "시간 관리"
   - "라이프스타일"
   - "2026년 트렌드"
-heroImage: "https://images.pexels.com/photos/32832431/pexels-photo-32832431.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+heroImage: "https://images.pexels.com/photos/7365509/pexels-photo-7365509.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "종이 다이어리"
     url: "https://www.coupang.com/np/search?q=%EC%A2%85%EC%9D%B4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&src=1139000&spec=10799999&addtag=200&ctag=%EC%A2%85%EC%9D%B4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%A2%85%EC%9D%B4%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC"

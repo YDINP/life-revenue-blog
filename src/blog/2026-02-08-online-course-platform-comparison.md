@@ -5,7 +5,7 @@ pubDate: "2026-02-08"
 author: "LifeFlow"
 category: "education"
 tags: ["온라인강의", "자기계발", "교육", "플랫폼비교"]
-heroImage: "https://images.pexels.com/photos/4145153/pexels-photo-4145153.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/6326370/pexels-photo-6326370.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "온라인 학습용 태블릿"
     url: "https://www.coupang.com/np/search?q=%EC%98%A8%EB%9D%BC%EC%9D%B8%20%ED%95%99%EC%8A%B5%EC%9A%A9%20%ED%83%9C%EB%B8%94%EB%A6%BF&src=1139000&spec=10799999&addtag=200&ctag=%EC%98%A8%EB%9D%BC%EC%9D%B8%20%ED%95%99%EC%8A%B5%EC%9A%A9%20%ED%83%9C%EB%B8%94%EB%A6%BF&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%98%A8%EB%9D%BC%EC%9D%B8%20%ED%95%99%EC%8A%B5%EC%9A%A9%20%ED%83%9C%EB%B8%94%EB%A6%BF"

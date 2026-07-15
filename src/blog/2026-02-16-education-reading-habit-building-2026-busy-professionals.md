@@ -12,7 +12,7 @@ tags:
   - "시간관리"
   - "2026트렌드"
   - "교육"
-heroImage: "https://images.pexels.com/photos/5852307/pexels-photo-5852307.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+heroImage: "https://images.pexels.com/photos/15776496/pexels-photo-15776496.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "독서등 LED"
     url: "https://www.coupang.com/np/search?q=%EB%8F%85%EC%84%9C%EB%93%B1%20LED&src=1139000&spec=10799999&addtag=200&ctag=%EB%8F%85%EC%84%9C%EB%93%B1%20LED&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%8F%85%EC%84%9C%EB%93%B1%20LED"

@@ -12,7 +12,7 @@ tags:
   - "금융전략"
   - "자산운용"
   - "2026년"
-heroImage: "https://images.pexels.com/photos/32417524/pexels-photo-32417524.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+heroImage: "https://images.pexels.com/photos/6120252/pexels-photo-6120252.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "부자 아빠 가난한 아빠"
     url: "https://www.coupang.com/np/search?q=%EB%B6%80%EC%9E%90%20%EC%95%84%EB%B9%A0%20%EA%B0%80%EB%82%9C%ED%95%9C%20%EC%95%84%EB%B9%A0&src=1139000&spec=10799999&addtag=200&ctag=%EB%B6%80%EC%9E%90%20%EC%95%84%EB%B9%A0%20%EA%B0%80%EB%82%9C%ED%95%9C%20%EC%95%84%EB%B9%A0&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%B6%80%EC%9E%90%20%EC%95%84%EB%B9%A0%20%EA%B0%80%EB%82%9C%ED%95%9C%20%EC%95%84%EB%B9%A0"

@@ -5,7 +5,7 @@ pubDate: "2026-02-08"
 author: "LifeFlow"
 category: "lifestyle"
 tags: ["모닝루틴", "생산성", "습관", "라이프스타일"]
-heroImage: "https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/907810/pexels-photo-907810.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "모닝루틴 도서"
     url: "https://www.coupang.com/np/search?q=%EB%AA%A8%EB%8B%9D%EB%A3%A8%ED%8B%B4%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EB%AA%A8%EB%8B%9D%EB%A3%A8%ED%8B%B4%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%AA%A8%EB%8B%9D%EB%A3%A8%ED%8B%B4%20%EB%8F%84%EC%84%9C"

@@ -12,7 +12,7 @@ tags:
   - "월급증대"
   - "재테크"
   - "2026년"
-heroImage: "https://images.pexels.com/photos/9258909/pexels-photo-9258909.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+heroImage: "https://images.pexels.com/photos/5899215/pexels-photo-5899215.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "주식투자 무작정 따라하기"
     url: "https://www.coupang.com/np/search?q=%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%20%EB%AC%B4%EC%9E%91%EC%A0%95%20%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0&src=1139000&spec=10799999&addtag=200&ctag=%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%20%EB%AC%B4%EC%9E%91%EC%A0%95%20%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%20%EB%AC%B4%EC%9E%91%EC%A0%95%20%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0"

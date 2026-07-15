@@ -12,7 +12,7 @@ tags:
   - "생활습관"
   - "직장인건강"
   - "웰니스"
-heroImage: "https://images.pexels.com/photos/5020267/pexels-photo-5020267.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+heroImage: "https://images.pexels.com/photos/3807626/pexels-photo-3807626.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "스마트 체중계"
     url: "https://www.coupang.com/np/search?q=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84&src=1139000&spec=10799999&addtag=200&ctag=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84"

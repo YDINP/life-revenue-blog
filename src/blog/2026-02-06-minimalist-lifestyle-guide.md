@@ -5,7 +5,7 @@ pubDate: "2026-02-06"
 author: "LifeFlow"
 category: "lifestyle"
 tags: ["미니멀라이프", "라이프스타일", "정리정돈", "삶의질"]
-heroImage: "https://images.pexels.com/photos/1907642/pexels-photo-1907642.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/12277013/pexels-photo-12277013.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "정리의 힘 도서"
     url: "https://www.coupang.com/np/search?q=%EC%A0%95%EB%A6%AC%EC%9D%98%20%ED%9E%98%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EC%A0%95%EB%A6%AC%EC%9D%98%20%ED%9E%98%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%A0%95%EB%A6%AC%EC%9D%98%20%ED%9E%98%20%EB%8F%84%EC%84%9C"

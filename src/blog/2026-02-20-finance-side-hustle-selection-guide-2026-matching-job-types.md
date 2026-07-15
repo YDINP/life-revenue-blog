@@ -12,7 +12,7 @@ tags:
   - "사이드허슬"
   - "재테크"
   - "2026년"
-heroImage: "https://images.pexels.com/photos/9258909/pexels-photo-9258909.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+heroImage: "https://images.pexels.com/photos/8484031/pexels-photo-8484031.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "ETF 투자 가이드북"
     url: "https://www.coupang.com/np/search?q=ETF%20%ED%88%AC%EC%9E%90%20%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81&src=1139000&spec=10799999&addtag=200&ctag=ETF%20%ED%88%AC%EC%9E%90%20%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81&lptag=AF7838146&pageType=SEARCH&pageValue=ETF%20%ED%88%AC%EC%9E%90%20%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81"

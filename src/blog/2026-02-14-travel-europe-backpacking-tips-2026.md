@@ -11,7 +11,7 @@ tags:
   - "2026"
   - "유럽 버짓여행"
   - "여행 필수정보"
-heroImage: "https://images.pexels.com/photos/8828587/pexels-photo-8828587.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+heroImage: "https://images.pexels.com/photos/5937256/pexels-photo-5937256.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "캐리어 28인치"
     url: "https://www.coupang.com/np/search?q=%EC%BA%90%EB%A6%AC%EC%96%B4%2028%EC%9D%B8%EC%B9%98&src=1139000&spec=10799999&addtag=200&ctag=%EC%BA%90%EB%A6%AC%EC%96%B4%2028%EC%9D%B8%EC%B9%98&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%BA%90%EB%A6%AC%EC%96%B4%2028%EC%9D%B8%EC%B9%98"

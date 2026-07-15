@@ -12,7 +12,7 @@ tags:
   - "라이프스타일"
   - "업무 효율"
   - "스트레스 관리"
-heroImage: "https://images.pexels.com/photos/48770/business-time-clock-clocks-48770.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+heroImage: "https://images.pexels.com/photos/8386516/pexels-photo-8386516.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "아날로그 알람시계"
     url: "https://www.coupang.com/np/search?q=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&src=1139000&spec=10799999&addtag=200&ctag=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84"

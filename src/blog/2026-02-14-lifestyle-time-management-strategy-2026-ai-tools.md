@@ -12,7 +12,7 @@ tags:
   - "자기관리"
   - "업무효율"
   - "라이프스타일"
-heroImage: "https://images.pexels.com/photos/6892902/pexels-photo-6892902.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+heroImage: "https://images.pexels.com/photos/6598712/pexels-photo-6598712.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "디지털 미니멀리즘 도서"
     url: "https://www.coupang.com/np/search?q=%EB%94%94%EC%A7%80%ED%84%B8%20%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EB%94%94%EC%A7%80%ED%84%B8%20%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%94%94%EC%A7%80%ED%84%B8%20%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98%20%EB%8F%84%EC%84%9C"

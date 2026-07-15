@@ -5,7 +5,7 @@ pubDate: "2026-02-07"
 author: "LifeFlow"
 category: "health"
 tags: ["홈트레이닝", "운동", "건강", "다이어트"]
-heroImage: "https://images.pexels.com/photos/4162491/pexels-photo-4162491.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/8899520/pexels-photo-8899520.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "요가매트"
     url: "https://www.coupang.com/np/search?q=%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&src=1139000&spec=10799999&addtag=200&ctag=%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8"

@@ -5,7 +5,7 @@ pubDate: "2026-02-07"
 author: "LifeFlow"
 category: "education"
 tags: ["자기계발", "학습법", "생산성", "교육"]
-heroImage: "https://images.pexels.com/photos/6533345/pexels-photo-6533345.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/18500636/pexels-photo-18500636.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "공부법 도서"
     url: "https://www.coupang.com/np/search?q=%EA%B3%B5%EB%B6%80%EB%B2%95%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EA%B3%B5%EB%B6%80%EB%B2%95%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EA%B3%B5%EB%B6%80%EB%B2%95%20%EB%8F%84%EC%84%9C"

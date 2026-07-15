@@ -12,7 +12,7 @@ tags:
   - "2026여행"
   - "배낭여행가이드"
   - "유럽여행비용"
-heroImage: "https://images.pexels.com/photos/8828587/pexels-photo-8828587.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+heroImage: "https://images.pexels.com/photos/842276/pexels-photo-842276.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "여행 가이드북"
     url: "https://www.coupang.com/np/search?q=%EC%97%AC%ED%96%89%20%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81&src=1139000&spec=10799999&addtag=200&ctag=%EC%97%AC%ED%96%89%20%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%97%AC%ED%96%89%20%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81"

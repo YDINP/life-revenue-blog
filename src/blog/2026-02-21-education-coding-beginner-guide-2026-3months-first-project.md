@@ -12,7 +12,7 @@ tags:
   - "프로젝트 기반 학습"
   - "2026년 학습법"
   - "비전공자 코딩"
-heroImage: "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+heroImage: "https://images.pexels.com/photos/4955393/pexels-photo-4955393.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "자기계발 도서 모음"
     url: "https://www.coupang.com/np/search?q=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C%20%EB%8F%84%EC%84%9C%20%EB%AA%A8%EC%9D%8C&src=1139000&spec=10799999&addtag=200&ctag=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C%20%EB%8F%84%EC%84%9C%20%EB%AA%A8%EC%9D%8C&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C%20%EB%8F%84%EC%84%9C%20%EB%AA%A8%EC%9D%8C"

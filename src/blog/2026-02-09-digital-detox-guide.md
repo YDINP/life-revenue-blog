@@ -5,7 +5,7 @@ pubDate: "2026-02-09"
 author: "LifeFlow"
 category: "lifestyle"
 tags: ["디지털디톡스", "스크린타임", "라이프스타일", "습관", "웰빙"]
-heroImage: "https://images.pexels.com/photos/3771074/pexels-photo-3771074.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/18500701/pexels-photo-18500701.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "디지털 미니멀리즘 도서"
     url: "https://www.coupang.com/np/search?q=%EB%94%94%EC%A7%80%ED%84%B8%20%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EB%94%94%EC%A7%80%ED%84%B8%20%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%94%94%EC%A7%80%ED%84%B8%20%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98%20%EB%8F%84%EC%84%9C"

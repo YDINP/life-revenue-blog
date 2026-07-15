@@ -12,7 +12,7 @@ tags:
   - "영양가이드"
   - "식습관개선"
   - "웰빙"
-heroImage: "https://images.pexels.com/photos/30635719/pexels-photo-30635719.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+heroImage: "https://images.pexels.com/photos/31144011/pexels-photo-31144011.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "건강한 식단 도서"
     url: "https://www.coupang.com/np/search?q=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C"

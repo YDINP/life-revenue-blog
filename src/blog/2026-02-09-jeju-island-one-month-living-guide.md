@@ -5,7 +5,7 @@ pubDate: "2026-02-09"
 author: "LifeFlow"
 category: "travel"
 tags: ["제주도", "한달살기", "워케이션", "여행", "디지털노마드"]
-heroImage: "https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/16663092/pexels-photo-16663092.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "캐리어 28인치"
     url: "https://www.coupang.com/np/search?q=%EC%BA%90%EB%A6%AC%EC%96%B4%2028%EC%9D%B8%EC%B9%98&src=1139000&spec=10799999&addtag=200&ctag=%EC%BA%90%EB%A6%AC%EC%96%B4%2028%EC%9D%B8%EC%B9%98&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%BA%90%EB%A6%AC%EC%96%B4%2028%EC%9D%B8%EC%B9%98"

@@ -12,7 +12,7 @@ tags:
   - "자산관리"
   - "위험관리"
   - "2026재테크"
-heroImage: "https://images.pexels.com/photos/16055842/pexels-photo-16055842.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+heroImage: "https://images.pexels.com/photos/8369648/pexels-photo-8369648.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "부자 아빠 가난한 아빠"
     url: "https://www.coupang.com/np/search?q=%EB%B6%80%EC%9E%90%20%EC%95%84%EB%B9%A0%20%EA%B0%80%EB%82%9C%ED%95%9C%20%EC%95%84%EB%B9%A0&src=1139000&spec=10799999&addtag=200&ctag=%EB%B6%80%EC%9E%90%20%EC%95%84%EB%B9%A0%20%EA%B0%80%EB%82%9C%ED%95%9C%20%EC%95%84%EB%B9%A0&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%B6%80%EC%9E%90%20%EC%95%84%EB%B9%A0%20%EA%B0%80%EB%82%9C%ED%95%9C%20%EC%95%84%EB%B9%A0"

@@ -5,7 +5,7 @@ pubDate: "2026-02-07"
 author: "LifeFlow"
 category: "finance"
 tags: ["재테크", "자산관리", "투자입문", "금융"]
-heroImage: "https://images.pexels.com/photos/3943716/pexels-photo-3943716.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/732444/pexels-photo-732444.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "부의 추월차선 도서"
     url: "https://www.coupang.com/np/search?q=%EB%B6%80%EC%9D%98%20%EC%B6%94%EC%9B%94%EC%B0%A8%EC%84%A0%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EB%B6%80%EC%9D%98%20%EC%B6%94%EC%9B%94%EC%B0%A8%EC%84%A0%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%B6%80%EC%9D%98%20%EC%B6%94%EC%9B%94%EC%B0%A8%EC%84%A0%20%EB%8F%84%EC%84%9C"

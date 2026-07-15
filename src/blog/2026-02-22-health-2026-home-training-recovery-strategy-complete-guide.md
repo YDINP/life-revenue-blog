@@ -12,7 +12,7 @@ tags:
   - "근력운동"
   - "휴식전략"
   - "2026운동"
-heroImage: "https://images.pexels.com/photos/6453430/pexels-photo-6453430.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+heroImage: "https://images.pexels.com/photos/4379318/pexels-photo-4379318.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "건강한 식단 도서"
     url: "https://www.coupang.com/np/search?q=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EA%B1%B4%EA%B0%95%ED%95%9C%20%EC%8B%9D%EB%8B%A8%20%EB%8F%84%EC%84%9C"

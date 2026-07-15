@@ -5,7 +5,7 @@ pubDate: "2026-02-08"
 author: "LifeFlow"
 category: "health"
 tags: ["영양", "식단", "건강", "직장인"]
-heroImage: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/1591226/pexels-photo-1591226.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "도시락 용기 세트"
     url: "https://www.coupang.com/np/search?q=%EB%8F%84%EC%8B%9C%EB%9D%BD%20%EC%9A%A9%EA%B8%B0%20%EC%84%B8%ED%8A%B8&src=1139000&spec=10799999&addtag=200&ctag=%EB%8F%84%EC%8B%9C%EB%9D%BD%20%EC%9A%A9%EA%B8%B0%20%EC%84%B8%ED%8A%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%8F%84%EC%8B%9C%EB%9D%BD%20%EC%9A%A9%EA%B8%B0%20%EC%84%B8%ED%8A%B8"

@@ -5,7 +5,7 @@ pubDate: "2026-02-09"
 author: "LifeFlow"
 category: "finance"
 tags: ["자산배분", "투자", "부동산", "주식", "암호화폐"]
-heroImage: "https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/18524062/pexels-photo-18524062.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "자산배분 투자 도서"
     url: "https://www.coupang.com/np/search?q=%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84%20%ED%88%AC%EC%9E%90%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84%20%ED%88%AC%EC%9E%90%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84%20%ED%88%AC%EC%9E%90%20%EB%8F%84%EC%84%9C"

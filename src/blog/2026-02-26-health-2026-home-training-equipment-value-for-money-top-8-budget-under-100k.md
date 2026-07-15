@@ -11,7 +11,7 @@ tags:
   - "운동장비"
   - "저예산운동"
   - "피트니스"
-heroImage: "https://images.pexels.com/photos/7174396/pexels-photo-7174396.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+heroImage: "https://images.pexels.com/photos/11513151/pexels-photo-11513151.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "홈트레이닝 요가매트"
     url: "https://www.coupang.com/np/search?q=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&src=1139000&spec=10799999&addtag=200&ctag=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8"

@@ -5,7 +5,7 @@ pubDate: "2026-02-08"
 author: "LifeFlow"
 category: "finance"
 tags: ["ETF", "투자", "주식", "금융"]
-heroImage: "https://images.pexels.com/photos/7788009/pexels-photo-7788009.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/30917896/pexels-photo-30917896.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "ETF 투자 입문서"
     url: "https://www.coupang.com/np/search?q=ETF%20%ED%88%AC%EC%9E%90%20%EC%9E%85%EB%AC%B8%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=ETF%20%ED%88%AC%EC%9E%90%20%EC%9E%85%EB%AC%B8%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=ETF%20%ED%88%AC%EC%9E%90%20%EC%9E%85%EB%AC%B8%EC%84%9C"
