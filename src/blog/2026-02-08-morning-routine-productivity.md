@@ -11,6 +11,7 @@ coupangLinks:
     url: "https://www.coupang.com/np/search?q=%EB%AA%A8%EB%8B%9D%EB%A3%A8%ED%8B%B4%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EB%AA%A8%EB%8B%9D%EB%A3%A8%ED%8B%B4%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%AA%A8%EB%8B%9D%EB%A3%A8%ED%8B%B4%20%EB%8F%84%EC%84%9C"
   - title: "알람시계"
     url: "https://www.coupang.com/np/search?q=%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&src=1139000&spec=10799999&addtag=200&ctag=%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84"
+noindex: true
 ---
 # 모닝 루틴의 힘: 하루를 바꾸는 아침 습관
 

@@ -18,6 +18,7 @@ coupangLinks:
     url: "https://www.coupang.com/np/search?q=%EB%94%94%EC%A7%80%ED%84%B8%20%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EB%94%94%EC%A7%80%ED%84%B8%20%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%94%94%EC%A7%80%ED%84%B8%20%EB%AF%B8%EB%8B%88%EB%A9%80%EB%A6%AC%EC%A6%98%20%EB%8F%84%EC%84%9C"
   - title: "아날로그 알람시계"
     url: "https://www.coupang.com/np/search?q=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&src=1139000&spec=10799999&addtag=200&ctag=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%95%84%EB%82%A0%EB%A1%9C%EA%B7%B8%20%EC%95%8C%EB%9E%8C%EC%8B%9C%EA%B3%84"
+noindex: true
 ---
 # 2026년 시간 관리 전략: AI 도구와 과학적 방법으로 생산성 2배 높이기
 

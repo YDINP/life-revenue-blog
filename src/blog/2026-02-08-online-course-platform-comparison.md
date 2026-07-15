@@ -11,6 +11,7 @@ coupangLinks:
     url: "https://www.coupang.com/np/search?q=%EC%98%A8%EB%9D%BC%EC%9D%B8%20%ED%95%99%EC%8A%B5%EC%9A%A9%20%ED%83%9C%EB%B8%94%EB%A6%BF&src=1139000&spec=10799999&addtag=200&ctag=%EC%98%A8%EB%9D%BC%EC%9D%B8%20%ED%95%99%EC%8A%B5%EC%9A%A9%20%ED%83%9C%EB%B8%94%EB%A6%BF&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%98%A8%EB%9D%BC%EC%9D%B8%20%ED%95%99%EC%8A%B5%EC%9A%A9%20%ED%83%9C%EB%B8%94%EB%A6%BF"
   - title: "무선 이어폰"
     url: "https://www.coupang.com/np/search?q=%EB%AC%B4%EC%84%A0%20%EC%9D%B4%EC%96%B4%ED%8F%B0&src=1139000&spec=10799999&addtag=200&ctag=%EB%AC%B4%EC%84%A0%20%EC%9D%B4%EC%96%B4%ED%8F%B0&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%AC%B4%EC%84%A0%20%EC%9D%B4%EC%96%B4%ED%8F%B0"
+noindex: true
 ---
 # 온라인 강의 플랫폼 비교: 2026년 완벽 가이드
 

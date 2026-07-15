@@ -17,6 +17,7 @@ coupangLinks:
     url: "https://www.coupang.com/np/search?q=ETF%20%ED%88%AC%EC%9E%90%20%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81&src=1139000&spec=10799999&addtag=200&ctag=ETF%20%ED%88%AC%EC%9E%90%20%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81&lptag=AF7838146&pageType=SEARCH&pageValue=ETF%20%ED%88%AC%EC%9E%90%20%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81"
   - title: "주식투자 무작정 따라하기"
     url: "https://www.coupang.com/np/search?q=%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%20%EB%AC%B4%EC%9E%91%EC%A0%95%20%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0&src=1139000&spec=10799999&addtag=200&ctag=%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%20%EB%AC%B4%EC%9E%91%EC%A0%95%20%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%20%EB%AC%B4%EC%9E%91%EC%A0%95%20%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0"
+noindex: true
 ---
 ## 2026년 절약의 새로운 패러다임: 의지력이 아닌 시스템 구축
 

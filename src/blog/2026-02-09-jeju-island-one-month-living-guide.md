@@ -13,6 +13,7 @@ coupangLinks:
     url: "https://www.coupang.com/np/search?q=%EB%85%B8%EC%9D%B4%EC%A6%88%EC%BA%94%EC%8A%AC%EB%A7%81%20%EC%9D%B4%EC%96%B4%ED%8F%B0&src=1139000&spec=10799999&addtag=200&ctag=%EB%85%B8%EC%9D%B4%EC%A6%88%EC%BA%94%EC%8A%AC%EB%A7%81%20%EC%9D%B4%EC%96%B4%ED%8F%B0&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%85%B8%EC%9D%B4%EC%A6%88%EC%BA%94%EC%8A%AC%EB%A7%81%20%EC%9D%B4%EC%96%B4%ED%8F%B0"
   - title: "여행용 보조배터리"
     url: "https://www.coupang.com/np/search?q=%EC%97%AC%ED%96%89%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&src=1139000&spec=10799999&addtag=200&ctag=%EC%97%AC%ED%96%89%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%97%AC%ED%96%89%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC"
+noindex: true
 ---
 # 제주도 한 달 살기: 현실적인 가이드
 

@@ -17,6 +17,7 @@ coupangLinks:
     url: "https://www.coupang.com/np/search?q=%EB%B6%80%EC%9E%90%20%EC%95%84%EB%B9%A0%20%EA%B0%80%EB%82%9C%ED%95%9C%20%EC%95%84%EB%B9%A0&src=1139000&spec=10799999&addtag=200&ctag=%EB%B6%80%EC%9E%90%20%EC%95%84%EB%B9%A0%20%EA%B0%80%EB%82%9C%ED%95%9C%20%EC%95%84%EB%B9%A0&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%B6%80%EC%9E%90%20%EC%95%84%EB%B9%A0%20%EA%B0%80%EB%82%9C%ED%95%9C%20%EC%95%84%EB%B9%A0"
   - title: "주식투자 무작정 따라하기"
     url: "https://www.coupang.com/np/search?q=%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%20%EB%AC%B4%EC%9E%91%EC%A0%95%20%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0&src=1139000&spec=10799999&addtag=200&ctag=%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%20%EB%AC%B4%EC%9E%91%EC%A0%95%20%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%A3%BC%EC%8B%9D%ED%88%AC%EC%9E%90%20%EB%AC%B4%EC%9E%91%EC%A0%95%20%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0"
+noindex: true
 ---
 ## 2026년 절약 습관의 변화: 기존과 뭐가 다른가?
 

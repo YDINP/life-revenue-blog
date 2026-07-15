@@ -11,6 +11,7 @@ coupangLinks:
     url: "https://www.coupang.com/np/search?q=%EB%B6%80%EC%9D%98%20%EC%B6%94%EC%9B%94%EC%B0%A8%EC%84%A0%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EB%B6%80%EC%9D%98%20%EC%B6%94%EC%9B%94%EC%B0%A8%EC%84%A0%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%B6%80%EC%9D%98%20%EC%B6%94%EC%9B%94%EC%B0%A8%EC%84%A0%20%EB%8F%84%EC%84%9C"
   - title: "재테크 다이어리"
     url: "https://www.coupang.com/np/search?q=%EC%9E%AC%ED%85%8C%ED%81%AC%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&src=1139000&spec=10799999&addtag=200&ctag=%EC%9E%AC%ED%85%8C%ED%81%AC%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%9E%AC%ED%85%8C%ED%81%AC%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC"
+noindex: true
 ---
 # 2026년 재테크 완벽 가이드
 

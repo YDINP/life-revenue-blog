@@ -11,6 +11,7 @@ coupangLinks:
     url: "https://www.coupang.com/np/search?q=%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84%20%ED%88%AC%EC%9E%90%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84%20%ED%88%AC%EC%9E%90%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84%20%ED%88%AC%EC%9E%90%20%EB%8F%84%EC%84%9C"
   - title: "재테크 다이어리"
     url: "https://www.coupang.com/np/search?q=%EC%9E%AC%ED%85%8C%ED%81%AC%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&src=1139000&spec=10799999&addtag=200&ctag=%EC%9E%AC%ED%85%8C%ED%81%AC%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%9E%AC%ED%85%8C%ED%81%AC%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC"
+noindex: true
 ---
 # 2026 자산 배분 전략: 어디에 투자해야 할까?
 

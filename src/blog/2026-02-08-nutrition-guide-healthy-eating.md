@@ -11,6 +11,7 @@ coupangLinks:
     url: "https://www.coupang.com/np/search?q=%EB%8F%84%EC%8B%9C%EB%9D%BD%20%EC%9A%A9%EA%B8%B0%20%EC%84%B8%ED%8A%B8&src=1139000&spec=10799999&addtag=200&ctag=%EB%8F%84%EC%8B%9C%EB%9D%BD%20%EC%9A%A9%EA%B8%B0%20%EC%84%B8%ED%8A%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%8F%84%EC%8B%9C%EB%9D%BD%20%EC%9A%A9%EA%B8%B0%20%EC%84%B8%ED%8A%B8"
   - title: "건강 식단 레시피북"
     url: "https://www.coupang.com/np/search?q=%EA%B1%B4%EA%B0%95%20%EC%8B%9D%EB%8B%A8%20%EB%A0%88%EC%8B%9C%ED%94%BC%EB%B6%81&src=1139000&spec=10799999&addtag=200&ctag=%EA%B1%B4%EA%B0%95%20%EC%8B%9D%EB%8B%A8%20%EB%A0%88%EC%8B%9C%ED%94%BC%EB%B6%81&lptag=AF7838146&pageType=SEARCH&pageValue=%EA%B1%B4%EA%B0%95%20%EC%8B%9D%EB%8B%A8%20%EB%A0%88%EC%8B%9C%ED%94%BC%EB%B6%81"
+noindex: true
 ---
 # 건강한 식단 가이드: 바쁜 직장인을 위한 영양 관리
 

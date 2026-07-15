@@ -11,6 +11,7 @@ coupangLinks:
     url: "https://www.coupang.com/np/search?q=%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&src=1139000&spec=10799999&addtag=200&ctag=%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8"
   - title: "홈트레이닝 밴드"
     url: "https://www.coupang.com/np/search?q=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EB%B0%B4%EB%93%9C&src=1139000&spec=10799999&addtag=200&ctag=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EB%B0%B4%EB%93%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%ED%99%88%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%8B%9D%20%EB%B0%B4%EB%93%9C"
+noindex: true
 ---
 # 홈 트레이닝 완벽 가이드
 

@@ -11,6 +11,7 @@ coupangLinks:
     url: "https://www.coupang.com/np/search?q=%EC%A0%95%EB%A6%AC%EC%9D%98%20%ED%9E%98%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EC%A0%95%EB%A6%AC%EC%9D%98%20%ED%9E%98%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%A0%95%EB%A6%AC%EC%9D%98%20%ED%9E%98%20%EB%8F%84%EC%84%9C"
   - title: "수납 정리함"
     url: "https://www.coupang.com/np/search?q=%EC%88%98%EB%82%A9%20%EC%A0%95%EB%A6%AC%ED%95%A8&src=1139000&spec=10799999&addtag=200&ctag=%EC%88%98%EB%82%A9%20%EC%A0%95%EB%A6%AC%ED%95%A8&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%88%98%EB%82%A9%20%EC%A0%95%EB%A6%AC%ED%95%A8"
+noindex: true
 ---
 # 미니멀 라이프 시작하기
 

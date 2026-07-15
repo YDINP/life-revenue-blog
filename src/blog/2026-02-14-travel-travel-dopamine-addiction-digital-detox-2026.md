@@ -18,6 +18,7 @@ coupangLinks:
     url: "https://www.coupang.com/np/search?q=%EC%BA%90%EB%A6%AC%EC%96%B4%2028%EC%9D%B8%EC%B9%98&src=1139000&spec=10799999&addtag=200&ctag=%EC%BA%90%EB%A6%AC%EC%96%B4%2028%EC%9D%B8%EC%B9%98&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%BA%90%EB%A6%AC%EC%96%B4%2028%EC%9D%B8%EC%B9%98"
   - title: "여행용 보조배터리"
     url: "https://www.coupang.com/np/search?q=%EC%97%AC%ED%96%89%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&src=1139000&spec=10799999&addtag=200&ctag=%EC%97%AC%ED%96%89%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%97%AC%ED%96%89%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC"
+noindex: true
 ---
 ## 여행에서 도파민 중독이 문제인 이유
 

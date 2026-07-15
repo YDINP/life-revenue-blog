@@ -11,6 +11,7 @@ coupangLinks:
     url: "https://www.coupang.com/np/search?q=ETF%20%ED%88%AC%EC%9E%90%20%EC%9E%85%EB%AC%B8%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=ETF%20%ED%88%AC%EC%9E%90%20%EC%9E%85%EB%AC%B8%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=ETF%20%ED%88%AC%EC%9E%90%20%EC%9E%85%EB%AC%B8%EC%84%9C"
   - title: "투자 공부 노트"
     url: "https://www.coupang.com/np/search?q=%ED%88%AC%EC%9E%90%20%EA%B3%B5%EB%B6%80%20%EB%85%B8%ED%8A%B8&src=1139000&spec=10799999&addtag=200&ctag=%ED%88%AC%EC%9E%90%20%EA%B3%B5%EB%B6%80%20%EB%85%B8%ED%8A%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%ED%88%AC%EC%9E%90%20%EA%B3%B5%EB%B6%80%20%EB%85%B8%ED%8A%B8"
+noindex: true
 ---
 # ETF 투자 입문: 2026년 완벽 가이드
 

@@ -18,6 +18,7 @@ coupangLinks:
     url: "https://www.coupang.com/np/search?q=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2&src=1139000&spec=10799999&addtag=200&ctag=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%95%84%EC%9D%B4%ED%8C%A8%EB%93%9C%20%EC%97%90%EC%96%B4%20M2"
   - title: "자기계발 도서 모음"
     url: "https://www.coupang.com/np/search?q=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C%20%EB%8F%84%EC%84%9C%20%EB%AA%A8%EC%9D%8C&src=1139000&spec=10799999&addtag=200&ctag=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C%20%EB%8F%84%EC%84%9C%20%EB%AA%A8%EC%9D%8C&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C%20%EB%8F%84%EC%84%9C%20%EB%AA%A8%EC%9D%8C"
+noindex: true
 ---
 # 외국어 학습 전략: 효율적인 방법 5가지로 3개월 내 실력 UP하기
 

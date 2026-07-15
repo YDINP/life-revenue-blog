@@ -11,6 +11,7 @@ coupangLinks:
     url: "https://www.coupang.com/np/search?q=%EA%B3%B5%EB%B6%80%EB%B2%95%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EA%B3%B5%EB%B6%80%EB%B2%95%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EA%B3%B5%EB%B6%80%EB%B2%95%20%EB%8F%84%EC%84%9C"
   - title: "학습 플래너"
     url: "https://www.coupang.com/np/search?q=%ED%95%99%EC%8A%B5%20%ED%94%8C%EB%9E%98%EB%84%88&src=1139000&spec=10799999&addtag=200&ctag=%ED%95%99%EC%8A%B5%20%ED%94%8C%EB%9E%98%EB%84%88&lptag=AF7838146&pageType=SEARCH&pageValue=%ED%95%99%EC%8A%B5%20%ED%94%8C%EB%9E%98%EB%84%88"
+noindex: true
 ---
 # 효과적인 자기 학습법: 2026년 전략 TOP 5
 
