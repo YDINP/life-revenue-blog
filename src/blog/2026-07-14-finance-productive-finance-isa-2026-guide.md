@@ -5,7 +5,7 @@ pubDate: "2026-07-14"
 author: "LifeFlow"
 category: "finance"
 tags: [생산적금융ISA, ISA, 국민성장ISA, 청년형ISA, 절세]
-heroImage: "https://images.pexels.com/photos/3943716/pexels-photo-3943716.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/7680483/pexels-photo-7680483.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 faq:
   - q: "생산적 금융 ISA가 기존 ISA와 가장 크게 다른 점은 무엇인가요?"
     a: "투자 대상이 국내 자산으로 한정된다는 점입니다. 기존 ISA(중개형)는 국내 상장 해외 ETF까지 담을 수 있지만, 생산적 금융 ISA는 국내 주식·펀드와 국민성장펀드, 기업성장집합투자기구(BDC)로 투자 대상이 한정되는 것으로 발표됐습니다. 국내 산업에 자금을 유도하는 대신 확대된 세제혜택을 주는 구조입니다."

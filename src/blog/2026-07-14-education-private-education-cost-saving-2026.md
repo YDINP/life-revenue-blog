@@ -5,7 +5,7 @@ pubDate: "2026-07-14"
 author: "LifeFlow"
 category: "education"
 tags: [사교육비, 인강, 자기주도학습, 교육비절감, EBS]
-heroImage: "https://images.pexels.com/photos/4145153/pexels-photo-4145153.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/5852307/pexels-photo-5852307.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "자기주도학습 문제집"
     url: "https://www.coupang.com/np/search?q=%EC%9E%90%EA%B8%B0%EC%A3%BC%EB%8F%84%ED%95%99%EC%8A%B5%20%EB%AC%B8%EC%A0%9C%EC%A7%91&src=1139000&spec=10799999&addtag=200&ctag=%EC%9E%90%EA%B8%B0%EC%A3%BC%EB%8F%84%ED%95%99%EC%8A%B5%20%EB%AC%B8%EC%A0%9C%EC%A7%91&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%9E%90%EA%B8%B0%EC%A3%BC%EB%8F%84%ED%95%99%EC%8A%B5%20%EB%AC%B8%EC%A0%9C%EC%A7%91"

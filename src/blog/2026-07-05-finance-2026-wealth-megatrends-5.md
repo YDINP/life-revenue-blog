@@ -5,7 +5,7 @@ pubDate: "2026-07-05"
 author: "LifeFlow"
 category: "finance"
 tags: [재테크트렌드, AI투자, 금리인하, 절세계좌, 투자사기]
-heroImage: "https://images.pexels.com/photos/7788009/pexels-photo-7788009.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/34134977/pexels-photo-34134977.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "2026 경제 대전망 트렌드 도서"
     url: "https://www.coupang.com/np/search?q=2026%20%EA%B2%BD%EC%A0%9C%20%EB%8C%80%EC%A0%84%EB%A7%9D%20%ED%8A%B8%EB%A0%8C%EB%93%9C%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=2026%20%EA%B2%BD%EC%A0%9C%20%EB%8C%80%EC%A0%84%EB%A7%9D%20%ED%8A%B8%EB%A0%8C%EB%93%9C%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=2026%20%EA%B2%BD%EC%A0%9C%20%EB%8C%80%EC%A0%84%EB%A7%9D%20%ED%8A%B8%EB%A0%8C%EB%93%9C%20%EB%8F%84%EC%84%9C"

@@ -5,7 +5,7 @@ pubDate: "2026-07-05"
 author: "LifeFlow"
 category: "travel"
 tags: [제주여행, 서귀포, 올레길, 트레킹, 슬로우여행]
-heroImage: "https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/31034387/pexels-photo-31034387.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "트레킹화"
     url: "https://www.coupang.com/np/search?q=%ED%8A%B8%EB%A0%88%ED%82%B9%ED%99%94&src=1139000&spec=10799999&addtag=200&ctag=%ED%8A%B8%EB%A0%88%ED%82%B9%ED%99%94&lptag=AF7838146&pageType=SEARCH&pageValue=%ED%8A%B8%EB%A0%88%ED%82%B9%ED%99%94"

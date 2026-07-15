@@ -5,7 +5,7 @@ pubDate: 2026-07-06
 author: "LifeFlow"
 category: "health"
 tags: [헬시플레저, 다이어트, 저마찰웰니스, 건강습관, 식단관리]
-heroImage: "https://images.pexels.com/photos/4162491/pexels-photo-4162491.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/5020267/pexels-photo-5020267.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "저당 프로틴 그래놀라 간식"
     url: "https://www.coupang.com/np/search?q=%EC%A0%80%EB%8B%B9%20%ED%94%84%EB%A1%9C%ED%8B%B4%20%EA%B7%B8%EB%9E%98%EB%86%80%EB%9D%BC%20%EA%B0%84%EC%8B%9D&src=1139000&spec=10799999&addtag=200&ctag=%EC%A0%80%EB%8B%B9%20%ED%94%84%EB%A1%9C%ED%8B%B4%20%EA%B7%B8%EB%9E%98%EB%86%80%EB%9D%BC%20%EA%B0%84%EC%8B%9D&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%A0%80%EB%8B%B9%20%ED%94%84%EB%A1%9C%ED%8B%B4%20%EA%B7%B8%EB%9E%98%EB%86%80%EB%9D%BC%20%EA%B0%84%EC%8B%9D"

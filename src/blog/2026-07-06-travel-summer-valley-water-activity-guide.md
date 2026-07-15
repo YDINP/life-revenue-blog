@@ -5,7 +5,7 @@ pubDate: "2026-07-06"
 author: "LifeFlow"
 category: "travel"
 tags: [계곡여행, 물놀이, 여름휴가, 안전수칙, 준비물]
-heroImage: "https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/4907190/pexels-photo-4907190.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "아쿠아슈즈"
     url: "https://www.coupang.com/np/search?q=%EC%95%84%EC%BF%A0%EC%95%84%EC%8A%88%EC%A6%88&src=1139000&spec=10799999&addtag=200&ctag=%EC%95%84%EC%BF%A0%EC%95%84%EC%8A%88%EC%A6%88&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%95%84%EC%BF%A0%EC%95%84%EC%8A%88%EC%A6%88"

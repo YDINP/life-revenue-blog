@@ -5,7 +5,7 @@ pubDate: "2026-07-07"
 author: "LifeFlow"
 category: "education"
 tags: [자격증, 취업준비, 이직, 노후대비, 자기계발]
-heroImage: "https://images.pexels.com/photos/4145153/pexels-photo-4145153.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/6517077/pexels-photo-6517077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "자격증 대비 교재 종합 세트"
     url: "https://www.coupang.com/np/search?q=%EC%9E%90%EA%B2%A9%EC%A6%9D%20%EB%8C%80%EB%B9%84%20%EA%B5%90%EC%9E%AC%20%EC%A2%85%ED%95%A9%20%EC%84%B8%ED%8A%B8&src=1139000&spec=10799999&addtag=200&ctag=%EC%9E%90%EA%B2%A9%EC%A6%9D%20%EB%8C%80%EB%B9%84%20%EA%B5%90%EC%9E%AC%20%EC%A2%85%ED%95%A9%20%EC%84%B8%ED%8A%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%9E%90%EA%B2%A9%EC%A6%9D%20%EB%8C%80%EB%B9%84%20%EA%B5%90%EC%9E%AC%20%EC%A2%85%ED%95%A9%20%EC%84%B8%ED%8A%B8"

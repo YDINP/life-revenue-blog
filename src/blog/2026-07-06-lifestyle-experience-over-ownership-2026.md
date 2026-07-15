@@ -5,7 +5,7 @@ pubDate: "2026-07-06"
 author: "LifeFlow"
 category: "lifestyle"
 tags: [소비트렌드, 경험소비, 취향소비, 웰니스, 2026키워드]
-heroImage: "https://images.pexels.com/photos/3771074/pexels-photo-3771074.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/12470765/pexels-photo-12470765.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "원데이클래스 취미 이용권"
     url: "https://www.coupang.com/np/search?q=%EC%9B%90%EB%8D%B0%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%B7%A8%EB%AF%B8%20%EC%9D%B4%EC%9A%A9%EA%B6%8C&src=1139000&spec=10799999&addtag=200&ctag=%EC%9B%90%EB%8D%B0%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%B7%A8%EB%AF%B8%20%EC%9D%B4%EC%9A%A9%EA%B6%8C&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%9B%90%EB%8D%B0%EC%9D%B4%ED%81%B4%EB%9E%98%EC%8A%A4%20%EC%B7%A8%EB%AF%B8%20%EC%9D%B4%EC%9A%A9%EA%B6%8C"

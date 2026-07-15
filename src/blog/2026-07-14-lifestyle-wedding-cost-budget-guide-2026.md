@@ -5,7 +5,7 @@ pubDate: "2026-07-14"
 author: "LifeFlow"
 category: "lifestyle"
 tags: [결혼준비, 결혼비용, 스드메, 예산관리, 신혼부부]
-heroImage: "https://images.pexels.com/photos/7788009/pexels-photo-7788009.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "결혼 준비 가이드북"
     url: "https://www.coupang.com/np/search?q=%EA%B2%B0%ED%98%BC%20%EC%A4%80%EB%B9%84%20%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81&src=1139000&spec=10799999&addtag=200&ctag=%EA%B2%B0%ED%98%BC%20%EC%A4%80%EB%B9%84%20%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81&lptag=AF7838146&pageType=SEARCH&pageValue=%EA%B2%B0%ED%98%BC%20%EC%A4%80%EB%B9%84%20%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81"

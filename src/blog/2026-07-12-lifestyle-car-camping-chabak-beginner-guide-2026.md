@@ -5,7 +5,7 @@ pubDate: "2026-07-12"
 author: "LifeFlow"
 category: "lifestyle"
 tags: [차박, 캠핑, 차박장비, 오토캠핑, 여름캠핑]
-heroImage: "https://images.pexels.com/photos/6271625/pexels-photo-6271625.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/3771074/pexels-photo-3771074.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "차박 에어매트·차량용 매트"
     url: "https://www.coupang.com/np/search?q=%EC%B0%A8%EB%B0%95%20%EC%97%90%EC%96%B4%EB%A7%A4%ED%8A%B8%20%EC%B0%A8%EB%9F%89%EC%9A%A9%20%EB%A7%A4%ED%8A%B8&src=1139000&spec=10799999&addtag=200&ctag=%EC%B0%A8%EB%B0%95%20%EC%97%90%EC%96%B4%EB%A7%A4%ED%8A%B8%20%EC%B0%A8%EB%9F%89%EC%9A%A9%20%EB%A7%A4%ED%8A%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%B0%A8%EB%B0%95%20%EC%97%90%EC%96%B4%EB%A7%A4%ED%8A%B8%20%EC%B0%A8%EB%9F%89%EC%9A%A9%20%EB%A7%A4%ED%8A%B8"

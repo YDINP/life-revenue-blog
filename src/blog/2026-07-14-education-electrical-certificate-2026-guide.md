@@ -5,7 +5,7 @@ pubDate: "2026-07-14"
 author: "LifeFlow"
 category: "education"
 tags: [전기기사, 전기자격증, 전기산업기사, 전기안전관리자, 자격증]
-heroImage: "https://images.pexels.com/photos/4145153/pexels-photo-4145153.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/247819/pexels-photo-247819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "전기기사 필기 수험서"
     url: "https://www.coupang.com/np/search?q=%EC%A0%84%EA%B8%B0%EA%B8%B0%EC%82%AC%20%ED%95%84%EA%B8%B0%20%EC%88%98%ED%97%98%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EC%A0%84%EA%B8%B0%EA%B8%B0%EC%82%AC%20%ED%95%84%EA%B8%B0%20%EC%88%98%ED%97%98%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%A0%84%EA%B8%B0%EA%B8%B0%EC%82%AC%20%ED%95%84%EA%B8%B0%20%EC%88%98%ED%97%98%EC%84%9C"

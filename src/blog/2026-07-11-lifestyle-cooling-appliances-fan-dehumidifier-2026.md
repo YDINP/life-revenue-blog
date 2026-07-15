@@ -5,7 +5,7 @@ pubDate: "2026-07-11"
 author: "LifeFlow"
 category: "lifestyle"
 tags: [냉감가전, 휴대용선풍기, 제습기, 여름가전, 폭염]
-heroImage: "https://images.pexels.com/photos/5825576/pexels-photo-5825576.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/6892902/pexels-photo-6892902.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "휴대용 목걸이 선풍기"
     url: "https://www.coupang.com/np/search?q=%ED%9C%B4%EB%8C%80%EC%9A%A9%20%EB%AA%A9%EA%B1%B8%EC%9D%B4%20%EC%84%A0%ED%92%8D%EA%B8%B0&src=1139000&spec=10799999&addtag=200&ctag=%ED%9C%B4%EB%8C%80%EC%9A%A9%20%EB%AA%A9%EA%B1%B8%EC%9D%B4%20%EC%84%A0%ED%92%8D%EA%B8%B0&lptag=AF7838146&pageType=SEARCH&pageValue=%ED%9C%B4%EB%8C%80%EC%9A%A9%20%EB%AA%A9%EA%B1%B8%EC%9D%B4%20%EC%84%A0%ED%92%8D%EA%B8%B0"

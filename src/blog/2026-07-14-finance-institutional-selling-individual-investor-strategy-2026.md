@@ -5,7 +5,7 @@ pubDate: "2026-07-14"
 author: "LifeFlow"
 category: "finance"
 tags: [기관매도, ETF, 적립식투자, 리밸런싱, 개인투자자]
-heroImage: "https://images.pexels.com/photos/16055842/pexels-photo-16055842.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/7788009/pexels-photo-7788009.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "ETF 투자 입문서"
     url: "https://www.coupang.com/np/search?q=ETF%20%ED%88%AC%EC%9E%90%20%EC%9E%85%EB%AC%B8%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=ETF%20%ED%88%AC%EC%9E%90%20%EC%9E%85%EB%AC%B8%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=ETF%20%ED%88%AC%EC%9E%90%20%EC%9E%85%EB%AC%B8%EC%84%9C"

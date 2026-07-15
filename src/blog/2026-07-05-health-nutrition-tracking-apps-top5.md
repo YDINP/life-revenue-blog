@@ -5,7 +5,7 @@ pubDate: 2026-07-05
 author: "LifeFlow"
 category: "health"
 tags: [영양분석앱, AI건강앱, 식단관리, 칼로리계산, 매크로추적]
-heroImage: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/19238352/pexels-photo-19238352.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "블루투스 스마트 체중계"
     url: "https://www.coupang.com/np/search?q=%EB%B8%94%EB%A3%A8%ED%88%AC%EC%8A%A4%20%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84&src=1139000&spec=10799999&addtag=200&ctag=%EB%B8%94%EB%A3%A8%ED%88%AC%EC%8A%A4%20%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%B8%94%EB%A3%A8%ED%88%AC%EC%8A%A4%20%EC%8A%A4%EB%A7%88%ED%8A%B8%20%EC%B2%B4%EC%A4%91%EA%B3%84"

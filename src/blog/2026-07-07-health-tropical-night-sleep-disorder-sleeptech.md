@@ -5,7 +5,7 @@ pubDate: 2026-07-07
 author: "LifeFlow"
 category: "health"
 tags: [열대야, 수면장애, 슬립테크, 숙면팁, 여름수면]
-heroImage: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/6453430/pexels-photo-6453430.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "냉감 인견 여름 이불"
     url: "https://www.coupang.com/np/search?q=%EB%83%89%EA%B0%90%20%EC%9D%B8%EA%B2%AC%20%EC%97%AC%EB%A6%84%20%EC%9D%B4%EB%B6%88&src=1139000&spec=10799999&addtag=200&ctag=%EB%83%89%EA%B0%90%20%EC%9D%B8%EA%B2%AC%20%EC%97%AC%EB%A6%84%20%EC%9D%B4%EB%B6%88&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%83%89%EA%B0%90%20%EC%9D%B8%EA%B2%AC%20%EC%97%AC%EB%A6%84%20%EC%9D%B4%EB%B6%88"

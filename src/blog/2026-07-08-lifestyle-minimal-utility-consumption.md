@@ -5,7 +5,7 @@ pubDate: "2026-07-08"
 author: "LifeFlow"
 category: "lifestyle"
 tags: [미니멀소비, 효용소비, 절약, 고물가, 라이프스타일]
-heroImage: "https://images.pexels.com/photos/1907642/pexels-photo-1907642.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/32832431/pexels-photo-32832431.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "다용도 수납 정리함 세트"
     url: "https://www.coupang.com/np/search?q=%EB%8B%A4%EC%9A%A9%EB%8F%84%20%EC%88%98%EB%82%A9%20%EC%A0%95%EB%A6%AC%ED%95%A8%20%EC%84%B8%ED%8A%B8&src=1139000&spec=10799999&addtag=200&ctag=%EB%8B%A4%EC%9A%A9%EB%8F%84%20%EC%88%98%EB%82%A9%20%EC%A0%95%EB%A6%AC%ED%95%A8%20%EC%84%B8%ED%8A%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%8B%A4%EC%9A%A9%EB%8F%84%20%EC%88%98%EB%82%A9%20%EC%A0%95%EB%A6%AC%ED%95%A8%20%EC%84%B8%ED%8A%B8"

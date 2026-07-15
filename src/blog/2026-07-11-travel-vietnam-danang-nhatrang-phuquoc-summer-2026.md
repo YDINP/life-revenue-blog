@@ -5,7 +5,7 @@ pubDate: "2026-07-11"
 author: "LifeFlow"
 category: "travel"
 tags: [베트남여행, 다낭, 나트랑, 푸꾸옥, 여름휴가]
-heroImage: "https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/3990359/pexels-photo-3990359.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "여행용 캐리어 (기내·수하물)"
     url: "https://www.coupang.com/np/search?q=%EC%97%AC%ED%96%89%EC%9A%A9%20%EC%BA%90%EB%A6%AC%EC%96%B4&src=1139000&spec=10799999&addtag=200&ctag=%EC%97%AC%ED%96%89%EC%9A%A9%20%EC%BA%90%EB%A6%AC%EC%96%B4&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%97%AC%ED%96%89%EC%9A%A9%20%EC%BA%90%EB%A6%AC%EC%96%B4"

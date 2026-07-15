@@ -5,7 +5,7 @@ pubDate: "2026-07-11"
 author: "LifeFlow"
 category: "health"
 tags: [냉방병, 냉방비, 전기요금, 여름건강, 에어컨]
-heroImage: "https://images.pexels.com/photos/3964704/pexels-photo-3964704.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "저소음 서큘레이터"
     url: "https://www.coupang.com/np/search?q=%EC%A0%80%EC%86%8C%EC%9D%8C%20%EC%84%9C%ED%81%98%EB%A0%88%EC%9D%B4%ED%84%B0&src=1139000&spec=10799999&addtag=200&ctag=%EC%A0%80%EC%86%8C%EC%9D%8C%20%EC%84%9C%ED%81%98%EB%A0%88%EC%9D%B4%ED%84%B0&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%A0%80%EC%86%8C%EC%9D%8C%20%EC%84%9C%ED%81%98%EB%A0%88%EC%9D%B4%ED%84%B0"

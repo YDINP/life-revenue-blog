@@ -5,7 +5,7 @@ pubDate: "2026-07-05"
 author: "LifeFlow"
 category: "education"
 tags: [퍼스널브랜딩, 링크드인, 블로그, 직장인, 자기계발]
-heroImage: "https://images.pexels.com/photos/6533345/pexels-photo-6533345.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/5426883/pexels-photo-5426883.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "퍼스널 브랜딩 실전 도서"
     url: "https://www.coupang.com/np/search?q=%ED%8D%BC%EC%8A%A4%EB%84%90%20%EB%B8%8C%EB%9E%9C%EB%94%A9%20%EC%8B%A4%EC%A0%84%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%ED%8D%BC%EC%8A%A4%EB%84%90%20%EB%B8%8C%EB%9E%9C%EB%94%A9%20%EC%8B%A4%EC%A0%84%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%ED%8D%BC%EC%8A%A4%EB%84%90%20%EB%B8%8C%EB%9E%9C%EB%94%A9%20%EC%8B%A4%EC%A0%84%20%EB%8F%84%EC%84%9C"

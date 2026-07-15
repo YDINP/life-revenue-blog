@@ -5,7 +5,7 @@ pubDate: "2026-07-12"
 author: "LifeFlow"
 category: "finance"
 tags: [청년도약계좌, 청년미래적금, 청년적금, 정부기여금, 목돈마련]
-heroImage: "https://images.pexels.com/photos/3943716/pexels-photo-3943716.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/9258909/pexels-photo-9258909.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "청년 재테크·목돈마련 도서"
     url: "https://www.coupang.com/np/search?q=%EC%B2%AD%EB%85%84%20%EC%9E%AC%ED%85%8C%ED%81%AC%20%EB%AA%A9%EB%8F%88%EB%A7%88%EB%A0%A8%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EC%B2%AD%EB%85%84%20%EC%9E%AC%ED%85%8C%ED%81%AC%20%EB%AA%A9%EB%8F%88%EB%A7%88%EB%A0%A8%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%B2%AD%EB%85%84%20%EC%9E%AC%ED%85%8C%ED%81%AC%20%EB%AA%A9%EB%8F%88%EB%A7%88%EB%A0%A8%20%EB%8F%84%EC%84%9C"

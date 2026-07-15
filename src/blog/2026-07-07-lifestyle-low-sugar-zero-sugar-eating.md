@@ -5,7 +5,7 @@ pubDate: "2026-07-07"
 author: "LifeFlow"
 category: "lifestyle"
 tags: [저당식단, 제로슈거, 당줄이기, 건강식습관, 혈당관리]
-heroImage: "https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/48770/business-time-clock-clocks-48770.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "제로슈거 음료 세트"
     url: "https://www.coupang.com/np/search?q=%EC%A0%9C%EB%A1%9C%EC%8A%88%EA%B1%B0%20%EC%9D%8C%EB%A3%8C%20%EC%84%B8%ED%8A%B8&src=1139000&spec=10799999&addtag=200&ctag=%EC%A0%9C%EB%A1%9C%EC%8A%88%EA%B1%B0%20%EC%9D%8C%EB%A3%8C%20%EC%84%B8%ED%8A%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%A0%9C%EB%A1%9C%EC%8A%88%EA%B1%B0%20%EC%9D%8C%EB%A3%8C%20%EC%84%B8%ED%8A%B8"

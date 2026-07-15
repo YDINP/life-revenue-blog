@@ -5,7 +5,7 @@ pubDate: "2026-07-07"
 author: "LifeFlow"
 category: "travel"
 tags: [가성비여행, 국내여행, 여행예산, 여름휴가, 절약팁]
-heroImage: "https://images.pexels.com/photos/3990359/pexels-photo-3990359.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/8828587/pexels-photo-8828587.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "여행용 보조배터리"
     url: "https://www.coupang.com/np/search?q=%EC%97%AC%ED%96%89%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&src=1139000&spec=10799999&addtag=200&ctag=%EC%97%AC%ED%96%89%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%97%AC%ED%96%89%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC"

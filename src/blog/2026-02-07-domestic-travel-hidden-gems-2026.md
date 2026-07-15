@@ -5,7 +5,7 @@ pubDate: "2026-02-07"
 author: "LifeFlow"
 category: "travel"
 tags: ["국내여행", "숨은명소", "여행추천", "주말여행"]
-heroImage: "https://images.pexels.com/photos/3990359/pexels-photo-3990359.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/7734672/pexels-photo-7734672.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "차박 용품"
     url: "https://www.coupang.com/np/search?q=%EC%B0%A8%EB%B0%95%20%EC%9A%A9%ED%92%88&src=1139000&spec=10799999&addtag=200&ctag=%EC%B0%A8%EB%B0%95%20%EC%9A%A9%ED%92%88&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%B0%A8%EB%B0%95%20%EC%9A%A9%ED%92%88"

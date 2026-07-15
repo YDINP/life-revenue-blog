@@ -5,7 +5,7 @@ pubDate: "2026-02-06"
 author: "LifeFlow"
 category: "travel"
 tags: ["일본여행", "여행예산", "해외여행", "여행팁"]
-heroImage: "https://images.pexels.com/photos/402028/pexels-photo-402028.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/34350261/pexels-photo-34350261.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "여행용 캐리어"
     url: "https://www.coupang.com/np/search?q=%EC%97%AC%ED%96%89%EC%9A%A9%20%EC%BA%90%EB%A6%AC%EC%96%B4&src=1139000&spec=10799999&addtag=200&ctag=%EC%97%AC%ED%96%89%EC%9A%A9%20%EC%BA%90%EB%A6%AC%EC%96%B4&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%97%AC%ED%96%89%EC%9A%A9%20%EC%BA%90%EB%A6%AC%EC%96%B4"

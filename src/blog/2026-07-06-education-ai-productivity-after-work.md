@@ -5,7 +5,7 @@ pubDate: "2026-07-06"
 author: "LifeFlow"
 category: "education"
 tags: [AI활용, 생산성, ChatGPT, 노션AI, 업무자동화]
-heroImage: "https://images.pexels.com/photos/247819/pexels-photo-247819.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/6700551/pexels-photo-6700551.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "노션 활용 생산성 템플릿 가이드"
     url: "https://www.coupang.com/np/search?q=%EB%85%B8%EC%85%98%20%ED%99%9C%EC%9A%A9%20%EC%83%9D%EC%82%B0%EC%84%B1%20%ED%85%9C%ED%94%8C%EB%A6%BF%20%EA%B0%80%EC%9D%B4%EB%93%9C&src=1139000&spec=10799999&addtag=200&ctag=%EB%85%B8%EC%85%98%20%ED%99%9C%EC%9A%A9%20%EC%83%9D%EC%82%B0%EC%84%B1%20%ED%85%9C%ED%94%8C%EB%A6%BF%20%EA%B0%80%EC%9D%B4%EB%93%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%85%B8%EC%85%98%20%ED%99%9C%EC%9A%A9%20%EC%83%9D%EC%82%B0%EC%84%B1%20%ED%85%9C%ED%94%8C%EB%A6%BF%20%EA%B0%80%EC%9D%B4%EB%93%9C"

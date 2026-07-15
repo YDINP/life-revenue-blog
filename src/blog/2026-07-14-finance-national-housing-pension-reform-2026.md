@@ -5,7 +5,7 @@ pubDate: "2026-07-14"
 author: "LifeFlow"
 category: "finance"
 tags: [국민연금, 주택연금, 연금개편, 노후준비, 소득대체율]
-heroImage: "https://images.pexels.com/photos/16055842/pexels-photo-16055842.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "노후 준비·연금 재테크 도서"
     url: "https://www.coupang.com/np/search?q=%EB%85%B8%ED%9B%84%EC%A4%80%EB%B9%84%20%EC%97%B0%EA%B8%88%20%EC%9E%AC%ED%85%8C%ED%81%AC%20%EC%B1%85&src=1139000&spec=10799999&addtag=200&ctag=%EB%85%B8%ED%9B%84%EC%A4%80%EB%B9%84%20%EC%97%B0%EA%B8%88%20%EC%9E%AC%ED%85%8C%ED%81%AC%20%EC%B1%85&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%85%B8%ED%9B%84%EC%A4%80%EB%B9%84%20%EC%97%B0%EA%B8%88%20%EC%9E%AC%ED%85%8C%ED%81%AC%20%EC%B1%85"

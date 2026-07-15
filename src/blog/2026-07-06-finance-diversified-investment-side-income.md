@@ -5,7 +5,7 @@ pubDate: "2026-07-06"
 author: "LifeFlow"
 category: "finance"
 tags: [통장쪼개기, N잡, 분산투자, 부업, 가계관리]
-heroImage: "https://images.pexels.com/photos/3943716/pexels-photo-3943716.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/7230391/pexels-photo-7230391.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "뱅크샐러드 프리미엄 가계부 이용권"
     url: "https://www.coupang.com/np/search?q=%EB%B1%85%ED%81%AC%EC%83%90%EB%9F%AC%EB%93%9C%20%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84%20%EA%B0%80%EA%B3%84%EB%B6%80%20%EC%9D%B4%EC%9A%A9%EA%B6%8C&src=1139000&spec=10799999&addtag=200&ctag=%EB%B1%85%ED%81%AC%EC%83%90%EB%9F%AC%EB%93%9C%20%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84%20%EA%B0%80%EA%B3%84%EB%B6%80%20%EC%9D%B4%EC%9A%A9%EA%B6%8C&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%B1%85%ED%81%AC%EC%83%90%EB%9F%AC%EB%93%9C%20%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84%20%EA%B0%80%EA%B3%84%EB%B6%80%20%EC%9D%B4%EC%9A%A9%EA%B6%8C"

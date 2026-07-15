@@ -5,7 +5,7 @@ pubDate: "2026-07-08"
 author: "LifeFlow"
 category: "education"
 tags: [SQLD, ADsP, 데이터자격증, 비전공자, 자격증준비]
-heroImage: "https://images.pexels.com/photos/6533345/pexels-photo-6533345.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "SQLD 국가공인 자격 대비 교재"
     url: "https://www.coupang.com/np/search?q=SQLD%20%EA%B5%AD%EA%B0%80%EA%B3%B5%EC%9D%B8%20%EC%9E%90%EA%B2%A9%20%EB%8C%80%EB%B9%84%20%EA%B5%90%EC%9E%AC&src=1139000&spec=10799999&addtag=200&ctag=SQLD%20%EA%B5%AD%EA%B0%80%EA%B3%B5%EC%9D%B8%20%EC%9E%90%EA%B2%A9%20%EB%8C%80%EB%B9%84%20%EA%B5%90%EC%9E%AC&lptag=AF7838146&pageType=SEARCH&pageValue=SQLD%20%EA%B5%AD%EA%B0%80%EA%B3%B5%EC%9D%B8%20%EC%9E%90%EA%B2%A9%20%EB%8C%80%EB%B9%84%20%EA%B5%90%EC%9E%AC"

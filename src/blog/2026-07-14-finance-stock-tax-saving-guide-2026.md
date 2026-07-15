@@ -5,7 +5,7 @@ pubDate: "2026-07-14"
 author: "LifeFlow"
 category: "finance"
 tags: [주식세금, 절세, 배당소득세, 금융투자소득세, ISA]
-heroImage: "https://images.pexels.com/photos/7788009/pexels-photo-7788009.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/32417524/pexels-photo-32417524.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "주식 세금·절세 재테크 도서"
     url: "https://www.coupang.com/np/search?q=%EC%A3%BC%EC%8B%9D%20%EC%A0%88%EC%84%B8&src=1139000&spec=10799999&addtag=200&ctag=%EC%A3%BC%EC%8B%9D%20%EC%A0%88%EC%84%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%A3%BC%EC%8B%9D%20%EC%A0%88%EC%84%B8"

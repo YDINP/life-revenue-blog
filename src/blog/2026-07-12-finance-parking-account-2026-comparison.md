@@ -5,7 +5,7 @@ pubDate: "2026-07-12"
 author: "LifeFlow"
 category: "finance"
 tags: [파킹통장, 비상금, 재테크, 금리, 예금]
-heroImage: "https://images.pexels.com/photos/6693661/pexels-photo-6693661.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/16055842/pexels-photo-16055842.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "돈 관리·재테크 입문 도서"
     url: "https://www.coupang.com/np/search?q=%EB%8F%88%20%EA%B4%80%EB%A6%AC%20%EC%9E%AC%ED%85%8C%ED%81%AC%20%EC%9E%85%EB%AC%B8%20%EB%8F%84%EC%84%9C&src=1139000&spec=10799999&addtag=200&ctag=%EB%8F%88%20%EA%B4%80%EB%A6%AC%20%EC%9E%AC%ED%85%8C%ED%81%AC%20%EC%9E%85%EB%AC%B8%20%EB%8F%84%EC%84%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%8F%88%20%EA%B4%80%EB%A6%AC%20%EC%9E%AC%ED%85%8C%ED%81%AC%20%EC%9E%85%EB%AC%B8%20%EB%8F%84%EC%84%9C"

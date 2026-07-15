@@ -5,7 +5,7 @@ pubDate: "2026-07-07"
 author: "LifeFlow"
 category: "finance"
 tags: [ETF, 초보투자, 레버리지, 인덱스투자, 포트폴리오]
-heroImage: "https://images.pexels.com/photos/7788009/pexels-photo-7788009.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/6694543/pexels-photo-6694543.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "매일경제 신문 구독"
     url: "https://www.coupang.com/np/search?q=%EB%A7%A4%EC%9D%BC%EA%B2%BD%EC%A0%9C%20%EC%8B%A0%EB%AC%B8%20%EA%B5%AC%EB%8F%85&src=1139000&spec=10799999&addtag=200&ctag=%EB%A7%A4%EC%9D%BC%EA%B2%BD%EC%A0%9C%20%EC%8B%A0%EB%AC%B8%20%EA%B5%AC%EB%8F%85&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%A7%A4%EC%9D%BC%EA%B2%BD%EC%A0%9C%20%EC%8B%A0%EB%AC%B8%20%EA%B5%AC%EB%8F%85"

@@ -5,7 +5,7 @@ pubDate: "2026-07-08"
 author: "LifeFlow"
 category: "finance"
 tags: [절세계좌, ISA, 연금저축, IRP, 연말정산]
-heroImage: "https://images.pexels.com/photos/3943716/pexels-photo-3943716.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "https://images.pexels.com/photos/4865737/pexels-photo-4865737.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
 coupangLinks:
   - title: "돈의 속성 - 재테크 베스트셀러"
     url: "https://www.coupang.com/np/search?q=%EB%8F%88%EC%9D%98%20%EC%86%8D%EC%84%B1%20-%20%EC%9E%AC%ED%85%8C%ED%81%AC%20%EB%B2%A0%EC%8A%A4%ED%8A%B8%EC%85%80%EB%9F%AC&src=1139000&spec=10799999&addtag=200&ctag=%EB%8F%88%EC%9D%98%20%EC%86%8D%EC%84%B1%20-%20%EC%9E%AC%ED%85%8C%ED%81%AC%20%EB%B2%A0%EC%8A%A4%ED%8A%B8%EC%85%80%EB%9F%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%8F%88%EC%9D%98%20%EC%86%8D%EC%84%B1%20-%20%EC%9E%AC%ED%85%8C%ED%81%AC%20%EB%B2%A0%EC%8A%A4%ED%8A%B8%EC%85%80%EB%9F%AC"
