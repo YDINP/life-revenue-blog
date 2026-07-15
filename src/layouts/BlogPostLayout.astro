@@ -40,6 +40,7 @@ const {
   heroImage,
   coupangLinks,
   faq,
+  noindex,
 } = frontmatter;
 
 const pubDateObj = new Date(pubDate);
@@ -174,7 +175,7 @@ const seriesIndex = seriesPosts.findIndex(p => p.slug === currentSlug);
 const seriesTotal = seriesPosts.length;
 ---
 
-<BaseLayout title={title} description={description} image={imageObj?.url} ogType="article">
+<BaseLayout title={title} description={description} image={imageObj?.url} ogType="article" noindex={noindex}>
   <!-- 포스트 전용 OG article 메타 (head) -->
   <Fragment slot="head">
     {imageObj && <link rel="preload" as="image" href={pexelsUrl(imageObj.url, 900)} imagesrcset={heroSrcset} imagesizes={heroSizes} fetchpriority="high" />}
