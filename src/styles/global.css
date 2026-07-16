@@ -1440,13 +1440,19 @@ section > h2::after {
   margin: 1.5rem 0;
 }
 
+/* 표: wrapper(.table-scroll)가 가로 스크롤을 담당하고 table 은 display:table 로
+   컨테이너 폭을 채운다. table 에 직접 display:block 을 주면 좁은 표가 내용폭으로
+   줄어 왼쪽에 몰리므로 스크롤은 wrapper 로 분리. (rehypeWrapTables) */
+.post-content .table-scroll {
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 .post-content table {
   width: 100%;
   border-collapse: collapse;
-  margin: 1.5rem 0;
-  display: block;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+  display: table;
 }
 
 .post-content table {
