@@ -109,11 +109,14 @@ H1 바로 다음, 3문장으로:
 </a>
 ```
 
-**차트** (⚠️ data-labels 안에 천단위 쉼표 금지 → 라벨 쪼개짐 버그)
+**차트** (⚠️ 속성은 **복수형** `data-labels`/`data-values`. 한 div = 여러 막대 = 차트 하나. `data-label`/`data-value` 단수 쓰면 값이 안 읽혀 **전부 0으로 렌더**됨. ⚠️ data-labels 안에 천단위 쉼표 금지 → 라벨 쪼개짐)
 ```html
-<div class="chart-bar" data-labels="예금,적금,파킹" data-values="3.1,3.4,2.8"></div>
-<div class="chart-progress" data-label="비상금 모으기" data-value="60"></div>
+<!-- 비교·랭킹·구간 (수평 막대) -->
+<div class="chart-bar" data-labels="예금,적금,파킹" data-values="3.1,3.4,2.8" data-unit="%"></div>
+<!-- 단계·구성·달성률 (진행 막대, data-max 기준 %) -->
+<div class="chart-progress" data-title="표시 이자 100 중 남는 비율" data-labels="세전,세후,실질" data-values="100,84.6,18" data-max="100" data-unit="%"></div>
 ```
+공통 옵션: `data-title`, `data-colors`(쉼표 병렬), `data-max`, `data-unit`. ⚠️ **단계별 계산·공식은 차트가 아니라 번호 목록/표로** — 진행바는 '값의 크기 비교'용이지 '순서 나열'용이 아니다.
 
 ---
 
