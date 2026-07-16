@@ -28,6 +28,10 @@ faq:
 
 이제 회사 이름이 아니라 '내 이름'이 커리어를 만드는 시대입니다. 퍼스널 브랜딩은 인플루언서만의 일이 아니라, 이직과 협업, 부업 기회를 넓히려는 모든 직장인의 무기입니다. 이 글에서는 블로그, 링크드인, 브런치 세 채널의 전략과 지치지 않는 콘텐츠 루틴, 그리고 3개월 실전 로드맵을 정리했습니다.
 
+
+<!-- seo-inlink -->
+<div class="seo-inlink">🔗 <strong>함께 보면 좋은 글:</strong> <a href="/blog/2026-07-11-education-national-tomorrow-learning-card-free-ai-coding/">2026 국민내일배움카드 완벽 가이드</a> · <a href="/blog/2026-07-07-education-top-certificates-2026-career/">2026 유망 자격증 TOP 7</a> · <a href="/blog/2026-07-15-education-certificates-2026-h2/">자격증 추천 2026 하반기</a></div>
+
 ## 퍼스널 브랜딩, 왜 지금 필요한가
 
 평생직장이 사라진 시대에 개인의 전문성을 외부에 드러내는 일은 선택이 아닌 생존 전략이 되었습니다. 잘 쌓인 개인 브랜드는 다음과 같은 기회로 돌아옵니다.

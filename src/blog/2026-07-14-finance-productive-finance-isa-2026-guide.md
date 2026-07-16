@@ -29,6 +29,10 @@ faq:
 
 <div class="callout-warning">⚠️ 주의: 이 글은 2026년 1월 발표된 정부 경제성장전략과 이후 보도를 바탕으로 합니다. 생산적 금융 ISA의 비과세 한도·납입 한도·분리과세 세율 등 핵심 수치는 2026년 7월 현재 <strong>확정 전</strong>입니다. 최종 조건은 세제개편안·국회 입법·금융위원회 시행 방안으로 확정되므로, 실제 가입 전 공식 발표를 반드시 확인하세요.</div>
 
+
+<!-- seo-inlink -->
+<div class="seo-inlink">🔗 <strong>함께 보면 좋은 글:</strong> <a href="/blog/2026-07-16-finance-deposit-interest-after-tax-real-return-2026/">예금 금리 3%인데 손에 쥐는 건 왜 2%일까</a> · <a href="/blog/2026-07-14-finance-stock-tax-saving-guide-2026/">코스피 7천 목전, 주식 세금 아끼는 법 2026</a> · <a href="/blog/2026-07-13-finance-property-tax-july-2026-card-payment-guide/">2026 재산세 카드납부 완벽 가이드</a></div>
+
 ## 생산적 금융 ISA란 무엇인가
 
 '생산적 금융 ISA'는 특정 상품 하나의 이름이 아니라, 2026년 신설되는 **청년형 ISA**와 **국민성장 ISA** 두 유형을 함께 부르는 정책 브랜드입니다. 재정경제부는 2026년 1월 경제성장전략을 통해 이 두 상품의 신설을 발표했습니다.

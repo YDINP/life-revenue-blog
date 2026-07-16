@@ -32,6 +32,10 @@ faq:
 
 ---
 
+
+<!-- seo-inlink -->
+<div class="seo-inlink">🔗 <strong>함께 보면 좋은 글:</strong> <a href="/blog/2026-07-15-health-summer-air-conditioning-sickness-2026/">냉방병 증상 완벽 가이드</a> · <a href="/blog/2026-07-15-health-summer-diet-low-calorie-2026/">여름 다이어트 식단 완벽 가이드</a> · <a href="/blog/2026-07-11-health-air-conditioning-sickness-electricity-bill/">여름 냉방병 예방 &amp; 전기요금 절감 완벽 가이드</a></div>
+
 ## 왜 여름에 식중독이 급증할까
 
 식중독균은 5~57도의 '위험 온도대'에서 폭발적으로 늘어납니다. 여름은 실내외 기온이 이 구간에 오래 머물러, 음식을 조금만 방치해도 세균 수가 위험 수준에 도달합니다. 특히 기온 32도 이상에서는 상온 방치 허용 시간이 2시간에서 1시간으로 줄어듭니다.

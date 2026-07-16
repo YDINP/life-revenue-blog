@@ -16,6 +16,10 @@ coupangLinks:
 
 일본은 한국인이 가장 많이 가는 해외여행지입니다. 가깝고, 안전하고, 맛있고, 볼거리가 많기 때문이죠. 하지만 최근 엔화 약세가 끝나며 물가가 올랐습니다. 2026년 일본 여행, 얼마나 준비해야 할까요?
 
+
+<!-- seo-inlink -->
+<div class="seo-inlink">🔗 <strong>함께 보면 좋은 글:</strong> <a href="/blog/2026-07-07-travel-budget-domestic-summer-vacation-guide/">지갑 얇아진 올여름, 가성비 국내 여행 예산별 완벽…</a> · <a href="/blog/2026-07-16-travel-chuseok-2026-domestic-travel-traffic/">2026 추석 연휴 국내여행·귀성길 교통 완벽 가이드</a> · <a href="/blog/2026-07-15-travel-august-domestic-vacation-2026/">8월 국내 여행 추천 TOP</a></div>
+
 ## 1. 일본 여행 예산 개요
 
 <div class="chart-donut" data-title="일본 여행 4박 5일 예산 비율" data-labels="항공권,숙박,식비,교통,쇼핑/관광" data-values="40,25,15,10,10" data-colors="#3b82f6,#10b981,#f59e0b,#8b5cf6,#ec4899" data-unit="%"></div>

@@ -32,6 +32,10 @@ faq:
 
 ---
 
+
+<!-- seo-inlink -->
+<div class="seo-inlink">🔗 <strong>함께 보면 좋은 글:</strong> <a href="/blog/2026-07-15-finance-government-subsidy-2026-h2/">정부지원금 2026 하반기 총정리</a> · <a href="/blog/2026-07-16-finance-chuseok-bonus-money-management-2026/">추석 상여금 재테크 2026</a> · <a href="/blog/2026-07-16-finance-deposit-interest-after-tax-real-return-2026/">예금 금리 3%인데 손에 쥐는 건 왜 2%일까</a></div>
+
 ## 지금 남은 일정
 
 | 항목 | 일정 | 상태 |

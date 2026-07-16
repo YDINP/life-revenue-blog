@@ -30,6 +30,10 @@ faq:
 
 ---
 
+
+<!-- seo-inlink -->
+<div class="seo-inlink">🔗 <strong>함께 보면 좋은 글:</strong> <a href="/blog/2026-07-15-travel-august-domestic-vacation-2026/">8월 국내 여행 추천 TOP</a> · <a href="/blog/2026-07-07-travel-budget-domestic-summer-vacation-guide/">지갑 얇아진 올여름, 가성비 국내 여행 예산별 완벽…</a> · <a href="/blog/2026-02-07-domestic-travel-hidden-gems-2026/">국내 여행 숨은 명소 TOP 10</a></div>
+
 ## 한눈에 보는 2026 여름 국내 여행지 TOP 7
 
 먼저 7개 후보지를 핵심 지표로 정리했습니다. 자신의 우선순위(예산·접근성·풍경)에 맞춰 후보를 좁혀 보세요.

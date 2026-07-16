@@ -30,6 +30,10 @@ faq:
 
 ---
 
+
+<!-- seo-inlink -->
+<div class="seo-inlink">🔗 <strong>함께 보면 좋은 글:</strong> <a href="/blog/2026-07-12-travel-korea-waterpark-2026-top-comparison/">2026 전국 워터파크 TOP 10 비교</a> · <a href="/blog/2026-07-15-travel-august-domestic-vacation-2026/">8월 국내 여행 추천 TOP</a> · <a href="/blog/2026-07-15-travel-summer-budget-overseas-2026/">여름 해외여행 추천 가성비 TOP</a></div>
+
 ## 2026 여름 추천 계곡 명소 6선
 
 수질·접근성·인파를 고려한 대표 계곡을 정리했습니다. 조용한 청정 계곡부터 가족 친화 물놀이장까지 취향대로 고르세요.

@@ -32,6 +32,10 @@ faq:
 
 ---
 
+
+<!-- seo-inlink -->
+<div class="seo-inlink">🔗 <strong>함께 보면 좋은 글:</strong> <a href="/blog/2026-07-15-lifestyle-rainy-season-dehumidify-mold-2026/">장마철 제습·곰팡이 제거 완벽 가이드</a> · <a href="/blog/2026-07-15-lifestyle-single-household-summer-electricity-saving-2026/">1인가구 여름 전기세 절약법</a> · <a href="/blog/2026-07-14-lifestyle-home-cafe-starter-guide-2026/">홈카페 시작 가이드 2026</a></div>
+
 ## 남은 일정 (한국시간 기준)
 
 | 경기 | 현지 날짜 | 한국시간 |

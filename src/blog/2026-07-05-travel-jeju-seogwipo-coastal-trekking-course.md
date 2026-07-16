@@ -30,6 +30,10 @@ faq:
 
 ---
 
+
+<!-- seo-inlink -->
+<div class="seo-inlink">🔗 <strong>함께 보면 좋은 글:</strong> <a href="/blog/2026-07-16-travel-chuseok-2026-domestic-travel-traffic/">2026 추석 연휴 국내여행·귀성길 교통 완벽 가이드</a> · <a href="/blog/2026-07-15-travel-august-domestic-vacation-2026/">8월 국내 여행 추천 TOP</a> · <a href="/blog/2026-07-15-travel-summer-budget-overseas-2026/">여름 해외여행 추천 가성비 TOP</a></div>
+
 ## 왜 서귀포 해안 트레킹인가
 
 서귀포는 제주에서 가장 온화하고 바다 풍경이 극적인 지역입니다. 올레길이 촘촘히 연결돼 있어 하루 한 코스씩 걸으며 자연·문화·미식을 균형 있게 즐길 수 있습니다.

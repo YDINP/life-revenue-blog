@@ -28,6 +28,10 @@ faq:
 
 야근은 늘고 성과는 제자리인 느낌, 익숙하시죠. 문제는 노력의 양이 아니라 도구입니다. 이 글에서는 퇴근 후 하루 30분 투자로 ChatGPT와 Claude, 노션 AI, 엑셀 자동화를 익혀 업무 시간을 절반으로 줄이는 실전 방법을 소개합니다. 지금 바로 복사해 쓸 수 있는 프롬프트 예시도 함께 담았습니다.
 
+
+<!-- seo-inlink -->
+<div class="seo-inlink">🔗 <strong>함께 보면 좋은 글:</strong> <a href="/blog/2026-07-15-education-certificates-2026-h2/">자격증 추천 2026 하반기</a> · <a href="/blog/2026-07-15-education-professional-self-development-routine-2026/">직장인 자기계발 루틴 만들기</a> · <a href="/blog/2026-07-14-education-accounting-finance-certificates-top5-2026/">직장인 재무·회계 자격증 추천 TOP 5</a></div>
+
 ## 왜 지금 AI 생산성인가
 
 2026년 현재 AI 도구는 실험 단계를 지나 실무 표준이 되었습니다. 같은 일을 하더라도 AI를 능숙하게 쓰는 사람과 그렇지 않은 사람의 처리 속도 차이가 극명하게 벌어지고 있습니다.

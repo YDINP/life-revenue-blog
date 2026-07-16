@@ -30,6 +30,10 @@ faq:
 
 ---
 
+
+<!-- seo-inlink -->
+<div class="seo-inlink">🔗 <strong>함께 보면 좋은 글:</strong> <a href="/blog/2026-07-08-travel-summer-domestic-destinations-2026-top7/">2026 여름휴가 국내 여행지 추천 TOP 7</a> · <a href="/blog/2026-07-15-travel-august-domestic-vacation-2026/">8월 국내 여행 추천 TOP</a> · <a href="/blog/2026-07-15-travel-summer-budget-overseas-2026/">여름 해외여행 추천 가성비 TOP</a></div>
+
 ## 예산은 어디에 쓰이나: 항목별 배분 이해하기
 
 절약의 첫걸음은 '내 돈이 어디로 새는지' 아는 것입니다. 일반적인 국내 2박 3일 여행의 평균 예산 배분은 다음과 같습니다.

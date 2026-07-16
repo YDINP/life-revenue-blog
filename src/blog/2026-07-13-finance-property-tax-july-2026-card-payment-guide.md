@@ -32,6 +32,10 @@ faq:
 
 ---
 
+
+<!-- seo-inlink -->
+<div class="seo-inlink">🔗 <strong>함께 보면 좋은 글:</strong> <a href="/blog/2026-07-16-finance-deposit-interest-after-tax-real-return-2026/">예금 금리 3%인데 손에 쥐는 건 왜 2%일까</a> · <a href="/blog/2026-07-14-finance-productive-finance-isa-2026-guide/">2026 생산적 금융 ISA 완벽 가이드</a> · <a href="/blog/2026-07-14-finance-stock-tax-saving-guide-2026/">코스피 7천 목전, 주식 세금 아끼는 법 2026</a></div>
+
 ## 언제, 무엇이 부과되나
 
 | 구분 | 납부 기간 | 부과 대상 |

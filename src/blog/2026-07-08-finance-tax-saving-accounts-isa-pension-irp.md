@@ -30,6 +30,10 @@ faq:
 
 2026년 현재 직장인이 반드시 알아야 할 절세계좌는 ISA, 연금저축, IRP 세 가지입니다. 이 글에서는 세 계좌의 차이를 한눈에 비교하고, 어떤 순서로 채워야 가장 이득인지 직장인 맞춤 전략을 정리합니다.
 
+
+<!-- seo-inlink -->
+<div class="seo-inlink">🔗 <strong>함께 보면 좋은 글:</strong> <a href="/blog/2026-07-14-finance-year-end-tax-early-preparation-2026/">연말정산 미리 준비 2026</a> · <a href="/blog/2026-07-16-finance-deposit-interest-after-tax-real-return-2026/">예금 금리 3%인데 손에 쥐는 건 왜 2%일까</a> · <a href="/blog/2026-07-14-finance-productive-finance-isa-2026-guide/">2026 생산적 금융 ISA 완벽 가이드</a></div>
+
 ## 절세계좌가 왜 '3대장'인가
 
 일반 증권계좌나 예금은 이자·배당·매매차익에 세금이 그대로 붙습니다. 반면 ISA·연금저축·IRP는 각각 다른 방식으로 세금을 깎아줍니다.

@@ -30,6 +30,10 @@ faq:
 
 해법은 의외로 단순합니다. 돈을 목적별로 나눠 담는 통장 쪼개기입니다. 이 글에서는 월급과 부업 수입을 4개의 계좌로 나누는 분산형 재테크 시스템을 정리합니다.
 
+
+<!-- seo-inlink -->
+<div class="seo-inlink">🔗 <strong>함께 보면 좋은 글:</strong> <a href="/blog/2026-07-14-finance-financial-literacy-first-salary-beginner-guide/">사회초년생 금융문맹 탈출 로드맵 2026</a> · <a href="/blog/2026-07-16-finance-chuseok-bonus-money-management-2026/">추석 상여금 재테크 2026</a> · <a href="/blog/2026-07-16-finance-deposit-interest-after-tax-real-return-2026/">예금 금리 3%인데 손에 쥐는 건 왜 2%일까</a></div>
+
 ## 왜 통장을 쪼개야 하는가
 
 한 통장에서 급여를 받고, 카드값을 내고, 저축까지 하면 '얼마가 내 여윳돈인지' 알 수 없습니다. 통장을 나누는 이유는 딱 하나, 쓸 돈과 모을 돈을 물리적으로 분리하기 위해서입니다.

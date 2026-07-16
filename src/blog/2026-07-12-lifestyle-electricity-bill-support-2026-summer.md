@@ -32,6 +32,10 @@ faq:
 
 ---
 
+
+<!-- seo-inlink -->
+<div class="seo-inlink">🔗 <strong>함께 보면 좋은 글:</strong> <a href="/blog/2026-07-11-health-air-conditioning-sickness-electricity-bill/">여름 냉방병 예방 &amp; 전기요금 절감 완벽 가이드</a> · <a href="/blog/2026-07-15-lifestyle-single-household-summer-electricity-saving-2026/">1인가구 여름 전기세 절약법</a> · <a href="/blog/2026-07-15-lifestyle-rainy-season-dehumidify-mold-2026/">장마철 제습·곰팡이 제거 완벽 가이드</a></div>
+
 ## 먼저, 2026년 여름 요금 상황
 
 - **3분기(7~9월) 동결**: 한전은 연료비조정단가를 기존과 같은 +5원/kWh로 유지하기로 결정했습니다. 주택용 기준 13분기 연속 동결입니다.

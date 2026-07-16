@@ -18,6 +18,10 @@ coupangLinks:
 
 <div class="chart-progress" data-title="숨은 명소 매력도" data-labels="경치,조용함,접근성,가성비,인스타감성" data-values="95,90,75,85,90" data-colors="#10b981,#3b82f6,#8b5cf6,#f59e0b,#ec4899" data-max="100" data-unit="점"></div>
 
+
+<!-- seo-inlink -->
+<div class="seo-inlink">🔗 <strong>함께 보면 좋은 글:</strong> <a href="/blog/2026-07-08-travel-summer-domestic-destinations-2026-top7/">2026 여름휴가 국내 여행지 추천 TOP 7</a> · <a href="/blog/2026-07-15-travel-august-domestic-vacation-2026/">8월 국내 여행 추천 TOP</a> · <a href="/blog/2026-07-07-travel-budget-domestic-summer-vacation-guide/">지갑 얇아진 올여름, 가성비 국내 여행 예산별 완벽…</a></div>
+
 ## 1. 전남 담양 메타세쿼이아 길
 
 위치: 전라남도 담양군

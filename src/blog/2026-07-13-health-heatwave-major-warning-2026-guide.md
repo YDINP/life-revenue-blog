@@ -32,6 +32,10 @@ faq:
 
 ---
 
+
+<!-- seo-inlink -->
+<div class="seo-inlink">🔗 <strong>함께 보면 좋은 글:</strong> <a href="/blog/2026-07-08-health-heatwave-health-management-guide/">2026 역대급 폭염 대비 건강관리 완벽 가이드</a> · <a href="/blog/2026-07-11-lifestyle-cooling-appliances-fan-dehumidifier-2026/">2026 여름 휴대용 선풍기·제습기 추천 TOP</a> · <a href="/blog/2026-07-16-health-autumn-allergy-rhinitis-prevention-2026/">가을 알레르기 비염 완벽 대비</a></div>
+
 ## 이제 폭염특보는 3단계
 
 | 단계 | 발령 기준 | 지속 조건 |

@@ -32,6 +32,10 @@ faq:
 
 ---
 
+
+<!-- seo-inlink -->
+<div class="seo-inlink">🔗 <strong>함께 보면 좋은 글:</strong> <a href="/blog/2026-07-15-travel-august-domestic-vacation-2026/">8월 국내 여행 추천 TOP</a> · <a href="/blog/2026-07-15-travel-summer-budget-overseas-2026/">여름 해외여행 추천 가성비 TOP</a> · <a href="/blog/2026-07-12-travel-korea-waterpark-2026-top-comparison/">2026 전국 워터파크 TOP 10 비교</a></div>
+
 ## 먼저 교통 — 여기서 대부분 실수합니다
 
 | 구간 | 수단 | 소요시간 | 요금(편도) |

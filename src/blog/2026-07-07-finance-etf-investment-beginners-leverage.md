@@ -30,6 +30,10 @@ faq:
 
 그런데 초보자들이 자주 눈독 들이는 것이 '레버리지 ETF'입니다. 수익이 2배라는 말에 혹하기 쉽지만, 그만큼 위험도 배로 커집니다. 이 글에서는 ETF의 기본기부터 레버리지·인버스의 함정까지 2026년 기준으로 정리합니다.
 
+
+<!-- seo-inlink -->
+<div class="seo-inlink">🔗 <strong>함께 보면 좋은 글:</strong> <a href="/blog/2026-07-14-finance-institutional-selling-individual-investor-strategy-2026/">기관이 파는 장, 개인은 어떻게</a> · <a href="/blog/2026-07-16-finance-chuseok-bonus-money-management-2026/">추석 상여금 재테크 2026</a> · <a href="/blog/2026-07-16-finance-deposit-interest-after-tax-real-return-2026/">예금 금리 3%인데 손에 쥐는 건 왜 2%일까</a></div>
+
 ## ETF란 무엇인가: 주식처럼 사는 펀드
 
 ETF(상장지수펀드)는 특정 지수나 자산의 움직임을 따라가도록 만든 펀드를, 주식처럼 증권시장에서 실시간으로 사고팔 수 있게 만든 상품입니다.

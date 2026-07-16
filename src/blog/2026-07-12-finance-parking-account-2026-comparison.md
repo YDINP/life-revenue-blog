@@ -30,6 +30,10 @@ faq:
 
 ---
 
+
+<!-- seo-inlink -->
+<div class="seo-inlink">🔗 <strong>함께 보면 좋은 글:</strong> <a href="/blog/2026-07-16-finance-chuseok-bonus-money-management-2026/">추석 상여금 재테크 2026</a> · <a href="/blog/2026-07-16-finance-deposit-interest-after-tax-real-return-2026/">예금 금리 3%인데 손에 쥐는 건 왜 2%일까</a> · <a href="/blog/2026-07-15-finance-savings-deposit-rates-2026-h2/">2026 하반기 예금 금리 비교</a></div>
+
 ## 파킹통장이란?
 
 '주차(parking)'처럼 돈을 잠깐 넣어둬도 이자가 붙는 수시입출금 통장입니다. 일반 통장은 이자가 거의 없지만, 파킹통장은 연 2~3% 안팎을 하루 단위로 계산해 줍니다. 예금처럼 묶이지 않아 언제든 넣고 뺄 수 있는 것이 최대 장점입니다.

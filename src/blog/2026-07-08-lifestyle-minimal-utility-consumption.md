@@ -28,6 +28,10 @@ faq:
 
 물가는 계속 오르는데 통장 잔고는 그대로인 시대입니다. 이럴 때 필요한 건 무조건 참는 절약이 아니라, 쓰는 만큼 만족을 주는 '효용 중심 소비'입니다. 유행을 좇는 대신 정말 자주 쓰는 것에 예산을 집중하고 나머지는 과감히 덜어내는, 2026년형 가벼운 소비법을 정리했습니다.
 
+
+<!-- seo-inlink -->
+<div class="seo-inlink">🔗 <strong>함께 보면 좋은 글:</strong> <a href="/blog/2026-07-15-lifestyle-rainy-season-dehumidify-mold-2026/">장마철 제습·곰팡이 제거 완벽 가이드</a> · <a href="/blog/2026-07-15-lifestyle-single-household-summer-electricity-saving-2026/">1인가구 여름 전기세 절약법</a> · <a href="/blog/2026-07-14-lifestyle-home-cafe-starter-guide-2026/">홈카페 시작 가이드 2026</a></div>
+
 ## 왜 지금 '효용 중심 소비'인가
 
 2026년 소비자들은 더 이상 '싸니까' 혹은 '남들이 사니까' 물건을 사지 않습니다. 고물가가 장기화되면서 한 번의 지출도 '이게 내 삶에 얼마나 쓸모 있는가'를 따지는 흐름이 뚜렷해졌습니다.

@@ -32,6 +32,10 @@ faq:
 
 <div class="callout-warning">⚠️ 주의: 세법 수치와 시행 상태는 개정·유예·재논의로 수시로 바뀝니다. 이 글은 2026년 7월 기준 검색으로 확인한 내용이며, 실제 투자·신고 전에는 국세청 홈택스와 증권사 세무 안내로 최신 상태를 반드시 재확인하세요.</div>
 
+
+<!-- seo-inlink -->
+<div class="seo-inlink">🔗 <strong>함께 보면 좋은 글:</strong> <a href="/blog/2026-07-16-finance-deposit-interest-after-tax-real-return-2026/">예금 금리 3%인데 손에 쥐는 건 왜 2%일까</a> · <a href="/blog/2026-07-14-finance-productive-finance-isa-2026-guide/">2026 생산적 금융 ISA 완벽 가이드</a> · <a href="/blog/2026-07-13-finance-property-tax-july-2026-card-payment-guide/">2026 재산세 카드납부 완벽 가이드</a></div>
+
 ## 먼저 짚을 것: 금투세는 폐지됐다 (2026년 미시행)
 
 가장 큰 오해부터 정리합니다. 한때 "주식 수익 5,000만 원 넘으면 20% 세금"으로 논란이 됐던 **금융투자소득세(금투세)는 폐지됐습니다.** 2024년 12월 소득세법 개정안이 국회를 통과하며 2025년 1월 1일부로 폐지가 확정됐고, 2026년에도 시행되지 않습니다.

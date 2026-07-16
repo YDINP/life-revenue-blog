@@ -30,6 +30,10 @@ faq:
 
 2026년 재테크 지형을 바꿀 다섯 가지 흐름을 정리했습니다. AI·반도체, 금리 인하, ETF 대중화, 절세계좌, 그리고 갈수록 교묘해지는 투자사기까지, 올해 반드시 챙겨야 할 트렌드입니다.
 
+
+<!-- seo-inlink -->
+<div class="seo-inlink">🔗 <strong>함께 보면 좋은 글:</strong> <a href="/blog/2026-07-08-finance-tax-saving-accounts-isa-pension-irp/">절세계좌 3대장 ISA·연금저축·IRP 완벽 비교</a> · <a href="/blog/2026-07-16-finance-chuseok-bonus-money-management-2026/">추석 상여금 재테크 2026</a> · <a href="/blog/2026-07-16-finance-deposit-interest-after-tax-real-return-2026/">예금 금리 3%인데 손에 쥐는 건 왜 2%일까</a></div>
+
 ## 트렌드 한눈에 보기
 
 <div class="chart-bar" data-title="2026 재테크 트렌드 관심도 (100 기준)" data-labels="AI·반도체,금리인하,ETF대중화,절세계좌,사기경계" data-values="92,80,85,78,70" data-colors="#2563eb,#10b981,#f59e0b,#8b5cf6,#ef4444" data-unit="점"></div>

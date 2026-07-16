@@ -30,6 +30,10 @@ faq:
 
 ---
 
+
+<!-- seo-inlink -->
+<div class="seo-inlink">🔗 <strong>함께 보면 좋은 글:</strong> <a href="/blog/2026-07-15-health-summer-air-conditioning-sickness-2026/">냉방병 증상 완벽 가이드</a> · <a href="/blog/2026-07-15-health-summer-diet-low-calorie-2026/">여름 다이어트 식단 완벽 가이드</a> · <a href="/blog/2026-07-14-health-supplement-by-purpose-guide-2026/">2026 영양제 목적별 완벽 가이드</a></div>
+
 ## 왜 가을에 알레르기 비염이 심해질까
 
 알레르기 비염은 코 점막이 특정 물질(항원)에 과민 반응하면서 재채기, 맑은 콧물, 코막힘, 가려움이 나타나는 질환입니다. 봄에는 나무 꽃가루(참나무·소나무 등)가, 가을에는 잡초류 꽃가루가 주범입니다. 가을이 유독 괴로운 이유는 세 가지 요인이 동시에 겹치기 때문입니다.

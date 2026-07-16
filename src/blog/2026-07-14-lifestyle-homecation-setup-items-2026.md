@@ -32,6 +32,10 @@ faq:
 
 ---
 
+
+<!-- seo-inlink -->
+<div class="seo-inlink">🔗 <strong>함께 보면 좋은 글:</strong> <a href="/blog/2026-07-15-lifestyle-rainy-season-dehumidify-mold-2026/">장마철 제습·곰팡이 제거 완벽 가이드</a> · <a href="/blog/2026-07-15-lifestyle-single-household-summer-electricity-saving-2026/">1인가구 여름 전기세 절약법</a> · <a href="/blog/2026-07-14-lifestyle-home-cafe-starter-guide-2026/">홈카페 시작 가이드 2026</a></div>
+
 ## 왜 2026 여름은 '집에서 쉬는' 쪽으로 기울었나
 
 올해 여름휴가 트렌드의 핵심은 **'멀리 가는 여행'에서 '충분히 쉬는 시간'으로의 이동**입니다. 여행 관련 조사에서도 긴 일정과 여러 관광지를 도는 대신, 심리적 회복과 휴식을 우선하는 소비가 두드러진다는 점이 지적됐습니다. 숙박·교통비 상승으로 얼리버드 예약, 주중 여행, 근거리·가성비 소비 같은 '합리적 휴가 전략'이 자리 잡은 것도 같은 맥락입니다.
