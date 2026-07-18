@@ -111,13 +111,20 @@
     // 세로 비교 막대는 0 기준 유지(축 왜곡 금지). 값이 가까워 높이차가 작을 땐
     // 2개 비교에 한해 델타(%) 배지로 차이를 명시한다.
     const vMax = Math.max(...values);
+    // data-highlight: 특정 막대만 강조(나머지 회색). "max"/"min"/인덱스(0부터) 지원.
+    const hl = el.dataset.highlight;
+    let hlIdx = -1;
+    if (hl === 'max') hlIdx = values.indexOf(Math.max(...values));
+    else if (hl === 'min') hlIdx = values.indexOf(Math.min(...values));
+    else if (hl != null && hl !== '') hlIdx = parseInt(hl, 10);
+    const ACCENT = el.dataset.accent || '#3b82f6', MUTE = '#94a3b8';
 
     let html = '';
     if (title) html += `<div class="chart-title">${title}</div>`;
     html += vertical ? '<div class="chart-columns">' : '<div class="chart-bars">';
     labels.forEach((label, i) => {
       const pct = max > 0 ? (values[i] / max) * 100 : 0;
-      const color = colors[i % colors.length].trim();
+      const color = hlIdx >= 0 ? (i === hlIdx ? ACCENT : MUTE) : colors[i % colors.length].trim();
       if (vertical) {
         const gradV = `linear-gradient(0deg, ${color}, ${hexToRgba(color, 0.7)})`;
         const d = vMax > 0 ? Math.round(((values[i] - vMax) / vMax) * 100) : 0;
