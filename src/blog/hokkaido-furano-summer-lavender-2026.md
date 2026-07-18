@@ -51,7 +51,7 @@ faq:
 
 신치토세공항에 도착하면 공항버스나 JR로 먼저 삿포로 시내로 들어간 뒤, JR선을 갈아타고 후라노로 이동하는 경로가 기본입니다. 환승이 번거롭게 느껴진다면 삿포로 시내에서 출발하는 당일 버스투어를 예약해 이동 스트레스를 줄이는 방법도 많이 선택됩니다. 3박 4일 기준이라면 삿포로에서 2박을 잡고 하루를 비에이·후라노 당일치기로 채우는 구성이 무난합니다.
 
-<div class="chart-bar" data-title="후라노·비에이 명소 추천도 (에디터 주관 정리)" data-labels="팜 도미타,라벤더 이스트,패치워크로드,청의 호수" data-values="9,7,8,8" data-colors="#6366f1,#f59e0b,#10b981,#3b82f6" data-unit="점"></div>
+<div class="chart-bar" data-orient="vertical" data-title="후라노·비에이 명소 추천도 (에디터 주관 정리)" data-labels="팜 도미타,라벤더 이스트,패치워크로드,청의 호수" data-values="9,7,8,8" data-colors="#6366f1,#f59e0b,#10b981,#3b82f6" data-unit="점"></div>
 
 ## 여름 후라노 여행 준비 팁
 

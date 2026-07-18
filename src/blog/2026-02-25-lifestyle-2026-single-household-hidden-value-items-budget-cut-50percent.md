@@ -81,7 +81,7 @@ Glass 용기보다 가볍고 휴대 가능하며, 전자레인지·냉동실 모
 
 ## 식비 절약의 현실적 전략
 
-<div class="chart-bar" data-title="구매처별 동일 제품 가격 비교 (2025년 기준)" data-labels="편의점,대형마트,온라인쇼핑,재래시장" data-values="100,72,65,58" data-colors="#ef4444,#f59e0b,#10b981,#3b82f6" data-unit="상대가격"></div>
+<div class="chart-bar" data-orient="vertical" data-title="구매처별 동일 제품 가격 비교 (2025년 기준)" data-labels="편의점,대형마트,온라인쇼핑,재래시장" data-values="100,72,65,58" data-colors="#ef4444,#f59e0b,#10b981,#3b82f6" data-unit="상대가격"></div>
 
 동일한 계란 30개 기준:
 - 편의점: 약 13,000원

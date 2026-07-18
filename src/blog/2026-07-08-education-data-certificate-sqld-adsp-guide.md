@@ -64,7 +64,7 @@ faq:
 
 비전공자 기준 권장 학습 기간은 아래와 같습니다. 직장인이라면 평일 저녁과 주말을 활용해 충분히 소화할 수 있는 분량입니다.
 
-<div class="chart-bar" data-title="비전공자 권장 총 학습 시간" data-labels="ADsP,SQLD,두 개 동시" data-values="35,50,75" data-colors="#2563eb,#10b981,#f59e0b" data-unit="시간"></div>
+<div class="chart-bar" data-orient="vertical" data-title="비전공자 권장 총 학습 시간" data-labels="ADsP,SQLD,두 개 동시" data-values="35,50,75" data-colors="#2563eb,#10b981,#f59e0b" data-unit="시간"></div>
 
 합격자 대부분이 공통으로 강조하는 것은 '기출문제 반복'입니다. 이론에 시간을 오래 쓰기보다 문제를 풀며 개념을 체득하는 방식이 훨씬 효율적입니다.
 

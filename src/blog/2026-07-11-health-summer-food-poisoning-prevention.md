@@ -40,7 +40,7 @@ faq:
 
 식중독균은 5~57도의 '위험 온도대'에서 폭발적으로 늘어납니다. 여름은 실내외 기온이 이 구간에 오래 머물러, 음식을 조금만 방치해도 세균 수가 위험 수준에 도달합니다. 특히 기온 32도 이상에서는 상온 방치 허용 시간이 2시간에서 1시간으로 줄어듭니다.
 
-<div class="chart-bar" data-title="월별 식중독 환자 발생 추이(상대치)" data-labels="5월,6월,7월,8월,9월" data-values="45,70,92,100,74" data-colors="#10b981,#f59e0b,#f97316,#ef4444,#f59e0b" data-unit="%"></div>
+<div class="chart-bar" data-orient="vertical" data-title="월별 식중독 환자 발생 추이(상대치)" data-labels="5월,6월,7월,8월,9월" data-values="45,70,92,100,74" data-colors="#10b981,#f59e0b,#f97316,#ef4444,#f59e0b" data-unit="%"></div>
 
 - 7~8월 정점: 고온다습으로 세균 번식 최적 조건
 - 9월까지 지속: 늦더위와 잔여 습기로 방심 금물

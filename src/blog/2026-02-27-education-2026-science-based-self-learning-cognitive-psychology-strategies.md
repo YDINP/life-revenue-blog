@@ -186,7 +186,7 @@ Anki, Quizlet 같은 스페이싱 알고리즘 기반 앱을 사용하면 자동
 
 ### 수면이 학습에 미치는 영향
 
-<div class="chart-bar" data-title="수면 시간별 학습 효율 변화" data-labels="수면 4시간,수면 6시간,수면 8시간" data-values="45,72,95" data-colors="#ef4444,#f59e0b,#10b981" data-unit="점"></div>
+<div class="chart-bar" data-orient="vertical" data-title="수면 시간별 학습 효율 변화" data-labels="수면 4시간,수면 6시간,수면 8시간" data-values="45,72,95" data-colors="#ef4444,#f59e0b,#10b981" data-unit="점"></div>
 
 ### 최적의 수면-학습 루틴
 

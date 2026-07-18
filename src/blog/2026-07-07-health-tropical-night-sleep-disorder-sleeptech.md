@@ -37,7 +37,7 @@ faq:
 
 특히 여름철 열대야 기간에는 이 수치가 더욱 악화됩니다. 높은 밤 기온과 습도가 깊은 수면을 방해하고, 잦은 각성을 유발하기 때문입니다.
 
-<div class="chart-bar" data-title="계절별 한국 성인 수면 만족도" data-labels="봄,여름(평시),열대야기간,가을,겨울" data-values="34,29,18,36,31" data-colors="#10b981,#f59e0b,#ef4444,#3b82f6,#8b5cf6" data-unit="%"></div>
+<div class="chart-bar" data-orient="vertical" data-title="계절별 한국 성인 수면 만족도" data-labels="봄,여름(평시),열대야기간,가을,겨울" data-values="34,29,18,36,31" data-colors="#10b981,#f59e0b,#ef4444,#3b82f6,#8b5cf6" data-unit="%"></div>
 
 위 데이터에서 볼 수 있듯 열대야 기간의 수면 만족도는 18%까지 떨어져 사계절 중 가장 낮습니다. 그만큼 여름밤 수면 관리가 중요하다는 의미입니다.
 

@@ -107,7 +107,7 @@ noindex: true
 
 ## 2026년 제주도 가족 여행 실제 예산 분석
 
-<div class="chart-bar" data-title="4인 가족 3박 4일 여행 예산 비교" data-labels="예산절감형,표준형,프리미엄형" data-values="850000,1450000,2100000" data-colors="#10b981,#3b82f6,#f59e0b" data-unit="원"></div>
+<div class="chart-bar" data-orient="vertical" data-title="4인 가족 3박 4일 여행 예산 비교" data-labels="예산절감형,표준형,프리미엄형" data-values="850000,1450000,2100000" data-colors="#10b981,#3b82f6,#f59e0b" data-unit="원"></div>
 
 ### 예산절감형 (약 850,000원/3박 4일)
 

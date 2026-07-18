@@ -52,7 +52,7 @@ noindex: true
 
 2026년 현재 직장인에게 가장 현실적인 부업들을 분석해봤습니다. 각 부업의 초기 투자 비용, 난이도, 월 예상 수익을 비교하면 다음과 같습니다.
 
-<div class="chart-bar" data-title="부업 유형별 월 평균 수익" data-labels="온라인 강의,프리랜싱,블로그/유튜브,전자상거래,컨설팅" data-values="180,220,150,280,320" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444,#8b5cf6" data-unit="만원"></div>
+<div class="chart-bar" data-orient="vertical" data-title="부업 유형별 월 평균 수익" data-labels="온라인 강의,프리랜싱,블로그/유튜브,전자상거래,컨설팅" data-values="180,220,150,280,320" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444,#8b5cf6" data-unit="만원"></div>
 
 ### 1. 온라인 강의 (초기 난이도: ★★☆)
 

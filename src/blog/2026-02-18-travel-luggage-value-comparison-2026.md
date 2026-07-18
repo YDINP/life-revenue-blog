@@ -153,7 +153,7 @@ noindex: true
 
 ## 용도별 캐리어 추천 가이드
 
-<div class="chart-bar" data-title="여행 기간별 추천 캐리어 용량" data-labels="3박 4일,1주일,2주일,1개월" data-values="24,40,55,70" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444" data-unit="L"></div>
+<div class="chart-bar" data-orient="vertical" data-title="여행 기간별 추천 캐리어 용량" data-labels="3박 4일,1주일,2주일,1개월" data-values="24,40,55,70" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444" data-unit="L"></div>
 
 ### 국내 3박 4일 여행
 추천: 삼성 COWAY (38,900원) 또는 인카세 판테스지 (32,000원)

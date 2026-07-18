@@ -52,7 +52,7 @@ faq:
 
 검색량 증가율을 보면 소비자들이 어디에 관심을 쏟는지 드러납니다. 이동성이 좋고 가격 부담이 적은 개인용 가전이 상승세를 주도했습니다.
 
-<div class="chart-bar" data-title="2026 여름 냉감가전 검색량 증가율" data-labels="탁상용 선풍기,휴대용 선풍기,제습기,서큘레이터,냉풍기" data-values="794,245,180,120,95" data-colors="#7a5aa6,#2563eb,#10b981,#f59e0b,#06b6d4" data-unit="%"></div>
+<div class="chart-bar" data-orient="vertical" data-title="2026 여름 냉감가전 검색량 증가율" data-labels="탁상용 선풍기,휴대용 선풍기,제습기,서큘레이터,냉풍기" data-values="794,245,180,120,95" data-colors="#7a5aa6,#2563eb,#10b981,#f59e0b,#06b6d4" data-unit="%"></div>
 
 - 폭발적 상승: 탁상용·휴대용 선풍기 — 저렴하고 즉시 시원함
 - 꾸준한 상승: 제습기 — 장마 대비 필수템으로 자리 잡음

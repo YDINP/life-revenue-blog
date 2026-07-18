@@ -54,7 +54,7 @@ faq:
 
 실제 직장인들이 자주 하는 업무에 AI를 적용했을 때의 시간 절약 효과를 정리했습니다. 반복성이 높은 업무일수록 효과가 큽니다.
 
-<div class="chart-bar" data-title="업무별 AI 활용 시 시간 절약 (하루 기준)" data-labels="이메일·문서작성,자료 요약,데이터 정리,아이디어 발상,번역·검수" data-values="40,35,50,25,30" data-colors="#2563eb,#10b981,#f59e0b,#8b5cf6,#ef4444" data-unit="분"></div>
+<div class="chart-bar" data-orient="vertical" data-title="업무별 AI 활용 시 시간 절약 (하루 기준)" data-labels="이메일·문서작성,자료 요약,데이터 정리,아이디어 발상,번역·검수" data-values="40,35,50,25,30" data-colors="#2563eb,#10b981,#f59e0b,#8b5cf6,#ef4444" data-unit="분"></div>
 
 ## 도구 1: ChatGPT와 Claude - 만능 초안 조수
 

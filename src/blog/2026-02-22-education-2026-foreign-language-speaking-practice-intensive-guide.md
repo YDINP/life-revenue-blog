@@ -114,7 +114,7 @@ noindex: true
 
 ## 학습 로드맵: 3개월 회화 능력 2배 만들기
 
-<div class="chart-bar" data-title="3개월 회화 능력 발전 예상 곡선" data-labels="1주차,4주차,8주차,12주차" data-values="30,45,70,95" data-colors="#3b82f6,#10b981,#f59e0b,#ef4444" data-unit="점"></div>
+<div class="chart-bar" data-orient="vertical" data-title="3개월 회화 능력 발전 예상 곡선" data-labels="1주차,4주차,8주차,12주차" data-values="30,45,70,95" data-colors="#3b82f6,#10b981,#f59e0b,#ef4444" data-unit="점"></div>
 
 위 차트는 위의 4단계를 모두 실행했을 때 예상되는 회화 능력 발전을 나타냅니다. 실제로 이 방법들을 꾸준히 실행한 학습자들의 경우:
 

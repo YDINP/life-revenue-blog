@@ -66,7 +66,7 @@ faq:
 
 많은 여행자가 일본 식당 이용을 비싼 것으로 착각하지만, 편의점과 현지식당 활용으로 50% 절감 가능합니다.
 
-<div class="chart-bar" data-title="일본 도시별 1인 1식 평균 비용" data-labels="도쿄,오사카,교토,나고야" data-values="12500,10800,11200,10000" data-colors="#3b82f6,#10b981,#f59e0b,#ef4444" data-unit="원"></div>
+<div class="chart-bar" data-orient="vertical" data-title="일본 도시별 1인 1식 평균 비용" data-labels="도쿄,오사카,교토,나고야" data-values="12500,10800,11200,10000" data-colors="#3b82f6,#10b981,#f59e0b,#ef4444" data-unit="원"></div>
 
 식사 유형별 가격 가이드:
 - 편의점 도시락: 3,500~5,000원 (아침/점심 최적)

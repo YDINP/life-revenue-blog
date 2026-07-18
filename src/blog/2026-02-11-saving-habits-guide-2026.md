@@ -127,7 +127,7 @@ noindex: true
 
 절약 습관이 정착되면 다음과 같은 변화가 나타납니다:
 
-<div class="chart-bar" data-title="절약 습관 형성 후 3개월 평균 개선 효과" data-labels="저축액 증가,스트레스 감소,재정 만족도,소비 만족도,미래 준비도" data-values="78,72,85,68,81" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444,#8b5cf6" data-unit="%"></div>
+<div class="chart-bar" data-orient="vertical" data-title="절약 습관 형성 후 3개월 평균 개선 효과" data-labels="저축액 증가,스트레스 감소,재정 만족도,소비 만족도,미래 준비도" data-values="78,72,85,68,81" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444,#8b5cf6" data-unit="%"></div>
 
 ## 절약 습관 만들 때 주의사항
 

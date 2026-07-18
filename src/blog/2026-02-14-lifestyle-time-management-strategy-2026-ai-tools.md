@@ -154,7 +154,7 @@ Cal Newport의 "Deep Work" 이론을 2026년 현실에 맞게 재해석하면:
 
 ### 2026년 생산성 저해 요소 TOP 5
 
-<div class="chart-bar" data-title="시간 낭비의 주요 원인 (직장인 기준)" data-labels="문맥 전환,불필요한 회의,이메일/메신저,소셜미디어,계획 부족" data-values="32,28,18,15,7" data-colors="#ef4444,#f59e0b,#3b82f6,#8b5cf6,#10b981" data-unit="%"></div>
+<div class="chart-bar" data-orient="vertical" data-title="시간 낭비의 주요 원인 (직장인 기준)" data-labels="문맥 전환,불필요한 회의,이메일/메신저,소셜미디어,계획 부족" data-values="32,28,18,15,7" data-colors="#ef4444,#f59e0b,#3b82f6,#8b5cf6,#10b981" data-unit="%"></div>
 
 문맥 전환(Context Switching) 해결책
 - 하루를 "모드"로 나누기: 창의 모드, 분석 모드, 협업 모드

@@ -168,7 +168,7 @@ faq:
 
 ## 2026년 자기계발 트렌드
 
-<div class="chart-bar" data-title="2026년 자기계발 분야별 관심도" data-labels="재정관리,시간관리,건강습관,대인관계,자기인식" data-values="82,78,75,68,72" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444,#8b5cf6" data-unit="%"></div>
+<div class="chart-bar" data-orient="vertical" data-title="2026년 자기계발 분야별 관심도" data-labels="재정관리,시간관리,건강습관,대인관계,자기인식" data-values="82,78,75,68,72" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444,#8b5cf6" data-unit="%"></div>
 
 2026년 자기계발 분야의 관심도 조사 결과, 재정 관리에 대한 관심이 가장 높습니다(82%). 이는 경제 불확실성이 커지면서 개인 재정 관리의 중요성이 높아졌기 때문입니다. 그 다음으로 시간 관리(78%), 건강 습관(75%) 순서입니다.
 

@@ -47,7 +47,7 @@ noindex: true
 
 ## 예산대별 홈트 장비 현황
 
-<div class="chart-bar" data-title="가격대별 홈트 장비 판매량 추이 (2026년)" data-labels="5만원이하,5~10만원,10~20만원,20만원이상" data-values="42,35,18,5" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444" data-unit="%"></div>
+<div class="chart-bar" data-orient="vertical" data-title="가격대별 홈트 장비 판매량 추이 (2026년)" data-labels="5만원이하,5~10만원,10~20만원,20만원이상" data-values="42,35,18,5" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444" data-unit="%"></div>
 
 2026년 홈트 장비 구매 트렌드에서 10만 원 이하 제품이 전체 판매의 77%를 차지합니다. 이는 초보자들이 먼저 저가 제품으로 시작한 후 필요에 따라 확장하는 전략을 선호한다는 의미입니다.
 

@@ -36,7 +36,7 @@ noindex: true
 
 숙박비는 여행 경비의 30~40%를 차지합니다. 같은 등급의 호텔이라도 도시마다 가격이 상이합니다.
 
-<div class="chart-bar" data-title="2026년 지역별 1박 평균 숙박비 (중급 호텔 기준)" data-labels="도쿄,오사카,교토" data-values="85000,72000,68000" data-colors="#ef4444,#f59e0b,#10b981" data-unit="원"></div>
+<div class="chart-bar" data-orient="vertical" data-title="2026년 지역별 1박 평균 숙박비 (중급 호텔 기준)" data-labels="도쿄,오사카,교토" data-values="85000,72000,68000" data-colors="#ef4444,#f59e0b,#10b981" data-unit="원"></div>
 
 ### 도쿄 (1박 평균 85,000원)
 

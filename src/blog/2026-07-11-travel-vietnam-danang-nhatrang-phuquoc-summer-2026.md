@@ -50,7 +50,7 @@ faq:
 
 같은 4박이라도 항공·숙박 등급에 따라 예산이 달라집니다. 중급(4성) 기준 1인 총예산을 비교했습니다.
 
-<div class="chart-bar" data-title="베트남 3대 도시 4박 총예산 비교(1인)" data-labels="나트랑,다낭,푸꾸옥" data-values="82,88,94" data-colors="#10b981,#2563eb,#f59e0b" data-unit="만원"></div>
+<div class="chart-bar" data-orient="vertical" data-title="베트남 3대 도시 4박 총예산 비교(1인)" data-labels="나트랑,다낭,푸꾸옥" data-values="82,88,94" data-colors="#10b981,#2563eb,#f59e0b" data-unit="만원"></div>
 
 - 최저가 그룹: 나트랑 — 현지 물가가 저렴하고 테마파크 패키지 활용도 높음
 - 중간: 다낭 — 관광 인프라가 좋아 균형 잡힌 예산

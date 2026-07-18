@@ -37,7 +37,7 @@ faq:
 
 AI 사진 분석 기술은 이 문제를 근본적으로 해결했습니다. 카메라로 음식을 찍으면 몇 초 만에 종류를 인식하고 예상 칼로리와 탄단지 비율을 계산합니다. 기록에 드는 시간이 획기적으로 줄면서 꾸준한 식단 관리가 가능해졌습니다.
 
-<div class="chart-bar" data-title="식단 기록 방식별 3개월 지속률" data-labels="수기입력,바코드스캔,AI사진분석" data-values="24,41,68" data-colors="#ef4444,#f59e0b,#10b981" data-unit="%"></div>
+<div class="chart-bar" data-orient="vertical" data-title="식단 기록 방식별 3개월 지속률" data-labels="수기입력,바코드스캔,AI사진분석" data-values="24,41,68" data-colors="#ef4444,#f59e0b,#10b981" data-unit="%"></div>
 
 위 데이터처럼 AI 사진 분석 방식은 수기 입력보다 지속률이 세 배 가까이 높습니다. 편리함이 곧 지속성으로 이어진다는 것을 보여줍니다.
 

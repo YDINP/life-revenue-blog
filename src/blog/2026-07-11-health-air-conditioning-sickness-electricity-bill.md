@@ -50,7 +50,7 @@ faq:
 
 에어컨 전기료는 설정온도에 민감하게 반응합니다. 1도만 높여도 소비전력이 눈에 띄게 줄어듭니다.
 
-<div class="chart-bar" data-title="에어컨 설정온도별 상대 소비전력" data-labels="24도,25도,26도,27도,28도" data-values="100,86,73,61,51" data-colors="#ef4444,#f97316,#f59e0b,#10b981,#06b6d4" data-unit="%"></div>
+<div class="chart-bar" data-orient="vertical" data-title="에어컨 설정온도별 상대 소비전력" data-labels="24도,25도,26도,27도,28도" data-values="100,86,73,61,51" data-colors="#ef4444,#f97316,#f59e0b,#10b981,#06b6d4" data-unit="%"></div>
 
 24도 단독 냉방을 26~27도 + 서큘레이터 조합으로 바꾸면 체감온도는 비슷하면서 전력은 30% 안팎 줄일 수 있습니다. 냉방비 절감의 핵심은 '온도를 더 낮추는 것'이 아니라 '찬 공기를 잘 퍼뜨리는 것'입니다.
 

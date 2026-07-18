@@ -84,7 +84,7 @@ noindex: true
 - 의료비는 낮지만 질병 위험이 높을 수 있음
 - 3,000만 원 이상 + 감염병 특약 추천
 
-<div class="chart-bar" data-title="지역별 평균 의료비 (응급실 기준)" data-labels="미국,캐나다,영국,일본,태국,필리핀" data-values="850,720,450,350,120,90" data-colors="#ef4444,#f97316,#f59e0b,#eab308,#10b981,#06b6d4" data-unit="만원"></div>
+<div class="chart-bar" data-orient="vertical" data-title="지역별 평균 의료비 (응급실 기준)" data-labels="미국,캐나다,영국,일본,태국,필리핀" data-values="850,720,450,350,120,90" data-colors="#ef4444,#f97316,#f59e0b,#eab308,#10b981,#06b6d4" data-unit="만원"></div>
 
 ### 3단계: 특약 선택하기
 

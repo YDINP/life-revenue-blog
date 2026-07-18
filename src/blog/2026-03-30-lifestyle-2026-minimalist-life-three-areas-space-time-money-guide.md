@@ -74,7 +74,7 @@ noindex: true
 
 시간 낭비 상위 5가지:
 
-<div class="chart-bar" data-title="직장인 일일 시간 낭비 현황" data-labels="SNS 중독,불필요한 회의,이메일 확인,멀티태스킹,의사결정 지연" data-values="156,87,65,82,45" data-colors="#ef4444,#f59e0b,#3b82f6,#8b5cf6,#10b981" data-unit="분"></div>
+<div class="chart-bar" data-orient="vertical" data-title="직장인 일일 시간 낭비 현황" data-labels="SNS 중독,불필요한 회의,이메일 확인,멀티태스킹,의사결정 지연" data-values="156,87,65,82,45" data-colors="#ef4444,#f59e0b,#3b82f6,#8b5cf6,#10b981" data-unit="분"></div>
 
 시간 미니멀화 전략:
 

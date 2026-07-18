@@ -50,7 +50,7 @@ faq:
 
 같은 국비지원이라도 과정 유형에 따라 실제 내 지갑에서 나가는 돈이 크게 다릅니다. 디지털 분야일수록 지원율이 높습니다.
 
-<div class="chart-bar" data-title="훈련 과정별 본인 자부담 비율" data-labels="KDT 부트캠프,KDC 기초역량,국가기간·전략,일반 직업훈련" data-values="0,10,20,45" data-colors="#10b981,#2563eb,#f59e0b,#ef4444" data-unit="%"></div>
+<div class="chart-bar" data-orient="vertical" data-title="훈련 과정별 본인 자부담 비율" data-labels="KDT 부트캠프,KDC 기초역량,국가기간·전략,일반 직업훈련" data-values="0,10,20,45" data-colors="#10b981,#2563eb,#f59e0b,#ef4444" data-unit="%"></div>
 
 - KDT(K-디지털 트레이닝): 전액 국비 과정이 많은 실무 부트캠프
 - KDC(K-디지털 기초역량): 90% 지원 + 자부담 10%도 수료 시 환급 → 사실상 0원

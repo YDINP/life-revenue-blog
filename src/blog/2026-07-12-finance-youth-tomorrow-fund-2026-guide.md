@@ -50,7 +50,7 @@ faq:
 
 중소기업(제조·건설) 신규 취업 청년을 위한 제도입니다. 본인이 넣은 돈에 기업과 정부가 얹어줍니다.
 
-<div class="chart-bar" data-title="청년내일채움공제 2년 적립 구성(만원)" data-labels="본인 적립,기업 적립,정부 적립,만기 수령" data-values="400,400,400,1200" data-colors="#2563eb,#10b981,#f59e0b,#ef4444" data-unit="만원"></div>
+<div class="chart-bar" data-orient="vertical" data-title="청년내일채움공제 2년 적립 구성(만원)" data-labels="본인 적립,기업 적립,정부 적립,만기 수령" data-values="400,400,400,1200" data-colors="#2563eb,#10b981,#f59e0b,#ef4444" data-unit="만원"></div>
 
 - 본인 부담: 월 약 16만 7천원(2년 400만원)
 - 만기 수령: 총 1,200만원(본인의 3배)

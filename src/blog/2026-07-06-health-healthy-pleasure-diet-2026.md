@@ -37,7 +37,7 @@ faq:
 
 핵심은 '참지 않는다'는 데 있습니다. 극단적인 절식은 스트레스를 유발하고 결국 폭식과 요요로 이어집니다. 반면 헬시플레저는 만족감을 유지하면서 건강한 선택을 반복하게 만들어 지속 가능성을 높입니다.
 
-<div class="chart-bar" data-title="다이어트 방식별 1년 후 유지율" data-labels="극단절식,원푸드,간헐적단식,헬시플레저" data-values="18,22,45,71" data-colors="#ef4444,#f97316,#f59e0b,#10b981" data-unit="%"></div>
+<div class="chart-bar" data-orient="vertical" data-title="다이어트 방식별 1년 후 유지율" data-labels="극단절식,원푸드,간헐적단식,헬시플레저" data-values="18,22,45,71" data-colors="#ef4444,#f97316,#f59e0b,#10b981" data-unit="%"></div>
 
 위 데이터에서 볼 수 있듯 헬시플레저 방식은 1년 후에도 71%가 습관을 유지해 다른 방식을 크게 앞섭니다. 지속 가능성이야말로 다이어트 성공의 진짜 관건입니다.
 

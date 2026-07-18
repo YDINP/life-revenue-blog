@@ -54,7 +54,7 @@ faq:
 
 소득이 낮을수록 정부가 더 많이 얹어주는 구조였습니다.
 
-<div class="chart-bar" data-title="개인소득 구간별 정부기여금 매칭 비율" data-labels="2400만↓,3600만↓,4800만↓,6000만↓,7500만↓" data-values="6.0,4.6,3.7,3.0,0" data-colors="#10b981,#22c55e,#f59e0b,#f97316,#94a3b8" data-unit="%"></div>
+<div class="chart-bar" data-orient="vertical" data-title="개인소득 구간별 정부기여금 매칭 비율" data-labels="2400만↓,3600만↓,4800만↓,6000만↓,7500만↓" data-values="6.0,4.6,3.7,3.0,0" data-colors="#10b981,#22c55e,#f59e0b,#f97316,#94a3b8" data-unit="%"></div>
 
 - 저소득 구간(2,400만↓): 매칭 6.0%로 최고
 - 6,000만~7,500만원: 기여금 없이 비과세 혜택만

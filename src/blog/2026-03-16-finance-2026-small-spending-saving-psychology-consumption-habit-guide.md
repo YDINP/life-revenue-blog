@@ -72,7 +72,7 @@ noindex: true
 월평균 낭비액: 30~50만 원  
 핵심 문제: 사회적 지위 표현을 위한 소비
 
-<div class="chart-bar" data-title="소비 유형별 월평균 낭비액" data-labels="감정형,습관형,충동형,과시형" data-values="20,27,32,40" data-colors="#ef4444,#f59e0b,#3b82f6,#8b5cf6" data-unit="만원"></div>
+<div class="chart-bar" data-orient="vertical" data-title="소비 유형별 월평균 낭비액" data-labels="감정형,습관형,충동형,과시형" data-values="20,27,32,40" data-colors="#ef4444,#f59e0b,#3b82f6,#8b5cf6" data-unit="만원"></div>
 
 ---
 

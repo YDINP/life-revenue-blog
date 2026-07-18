@@ -53,7 +53,7 @@ faq:
 
 하반기는 채용 공고가 다시 늘어나는 시즌이자, 연말 승진·평가를 앞두고 스펙을 보강하기 좋은 시기입니다. 특히 8월 필기시험을 목표로 지금부터 준비하면 10~11월 실기까지 마쳐 연말 이전에 자격증을 손에 쥘 수 있습니다.
 
-<div class="chart-bar" data-title="2026 하반기 자격증별 관심도 증가율" data-labels="SQLD,컴활1급,전산회계1급,정보처리기사,유통관리사2급" data-values="145,120,98,88,65" data-colors="#7a5aa6,#2563eb,#10b981,#f59e0b,#06b6d4" data-unit="%"></div>
+<div class="chart-bar" data-orient="vertical" data-title="2026 하반기 자격증별 관심도 증가율" data-labels="SQLD,컴활1급,전산회계1급,정보처리기사,유통관리사2급" data-values="145,120,98,88,65" data-colors="#7a5aa6,#2563eb,#10b981,#f59e0b,#06b6d4" data-unit="%"></div>
 
 - 급상승: SQLD — 데이터 직무 채용 확대와 맞물려 인기
 - 꾸준한 상승: 컴퓨터활용능력 — 전 직군 공통 스펙으로 자리매김

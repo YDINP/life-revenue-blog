@@ -30,7 +30,7 @@ faq:
 
 금융문맹 탈출의 핵심은 화려한 투자 기법이 아니라 **순서**입니다.
 
-<div class="chart-bar" data-title="돈 관리 우선순위 (먼저 할수록 왼쪽)" data-labels="비상금 확보,고금리 빚 상환,세제혜택 저축,투자" data-values="10,9,7,5" data-colors="#16a34a,#3b82f6,#f59e0b,#8b5cf6" data-unit="순위"></div>
+<div class="chart-bar" data-orient="vertical" data-title="돈 관리 우선순위 (먼저 할수록 왼쪽)" data-labels="비상금 확보,고금리 빚 상환,세제혜택 저축,투자" data-values="10,9,7,5" data-colors="#16a34a,#3b82f6,#f59e0b,#8b5cf6" data-unit="순위"></div>
 
 <div class="callout-info">💡 핵심: 비상금과 고금리 빚 정리 없이 투자부터 하면, 급전이 필요할 때 손해 보고 자산을 팝니다. <b>방어(비상금·빚) → 공격(투자)</b> 순서를 지키세요.</div>
 

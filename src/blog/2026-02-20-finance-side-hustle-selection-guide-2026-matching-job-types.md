@@ -197,7 +197,7 @@ noindex: true
 
 ## 부업 유형별 월 수익 비교
 
-<div class="chart-bar" data-title="부업 유형별 평균 월 수익 범위" data-labels="온라인 콘텐츠,프리랜싱,온라인 강의,전자상거래,중개 수수료" data-values="250,200,280,600,115" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444,#8b5cf6" data-unit="만원"></div>
+<div class="chart-bar" data-orient="vertical" data-title="부업 유형별 평균 월 수익 범위" data-labels="온라인 콘텐츠,프리랜싱,온라인 강의,전자상거래,중개 수수료" data-values="250,200,280,600,115" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444,#8b5cf6" data-unit="만원"></div>
 
 ## 부업 선택 체크리스트
 

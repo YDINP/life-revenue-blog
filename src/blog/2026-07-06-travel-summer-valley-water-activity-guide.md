@@ -117,7 +117,7 @@ faq:
 
 계곡은 한여름에도 수온이 낮습니다. 월별 평균 수온과 방문 적합도를 참고하세요.
 
-<div class="chart-bar" data-title="월별 계곡 평균 수온" data-labels="6월,7월,8월,9월" data-values="18,21,23,19" data-colors="#2563eb,#10b981,#f59e0b,#8b5cf6" data-unit="℃"></div>
+<div class="chart-bar" data-orient="vertical" data-title="월별 계곡 평균 수온" data-labels="6월,7월,8월,9월" data-values="18,21,23,19" data-colors="#2563eb,#10b981,#f59e0b,#8b5cf6" data-unit="℃"></div>
 
 - 6월: 수온이 낮아 오래 놀기엔 부담, 한적함은 최고
 - 7월 말~8월 초: 수온 적정하나 인파 최다

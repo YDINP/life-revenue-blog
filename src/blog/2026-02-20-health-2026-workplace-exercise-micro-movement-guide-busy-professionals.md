@@ -145,7 +145,7 @@ noindex: true
 
 ## 운동 강도별 효과 비교
 
-<div class="chart-bar" data-title="운동 강도별 주간 효과" data-labels="저강도운동,중강도운동,고강도운동" data-values="42,76,88" data-colors="#f59e0b,#3b82f6,#ef4444" data-unit="점"></div>
+<div class="chart-bar" data-orient="vertical" data-title="운동 강도별 주간 효과" data-labels="저강도운동,중강도운동,고강도운동" data-values="42,76,88" data-colors="#f59e0b,#3b82f6,#ef4444" data-unit="점"></div>
 
 고강도 운동(20분)이 저강도 운동(40분)보다 근력증강에 2배 효과적임을 보여줍니다. 따라서 시간이 부족한 직장인은 고강도 운동에 집중하되, 일상 속 마이크로 운동으로 활동량을 보충하는 전략이 최적입니다.
 

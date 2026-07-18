@@ -108,7 +108,7 @@ faq:
 
 교통은 예산의 25%를 차지하지만 선택지가 가장 많은 항목입니다.
 
-<div class="chart-bar" data-title="서울-강릉 편도 교통수단별 요금" data-labels="KTX,시외버스,무궁화호,카풀" data-values="27000,15000,17000,12000" data-colors="#2563eb,#10b981,#f59e0b,#8b5cf6" data-unit="원"></div>
+<div class="chart-bar" data-orient="vertical" data-title="서울-강릉 편도 교통수단별 요금" data-labels="KTX,시외버스,무궁화호,카풀" data-values="27000,15000,17000,12000" data-colors="#2563eb,#10b981,#f59e0b,#8b5cf6" data-unit="원"></div>
 
 - 무궁화호·시외버스: KTX 대비 40~60% 저렴, 시간 여유가 있다면 최선
 - 얼리버드 예약: 고속버스·기차 사전 예약 시 10~30% 할인

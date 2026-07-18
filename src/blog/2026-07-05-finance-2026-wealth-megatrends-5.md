@@ -36,7 +36,7 @@ faq:
 
 ## 트렌드 한눈에 보기
 
-<div class="chart-bar" data-title="2026 재테크 트렌드 관심도 (100 기준)" data-labels="AI·반도체,금리인하,ETF대중화,절세계좌,사기경계" data-values="92,80,85,78,70" data-colors="#2563eb,#10b981,#f59e0b,#8b5cf6,#ef4444" data-unit="점"></div>
+<div class="chart-bar" data-orient="vertical" data-title="2026 재테크 트렌드 관심도 (100 기준)" data-labels="AI·반도체,금리인하,ETF대중화,절세계좌,사기경계" data-values="92,80,85,78,70" data-colors="#2563eb,#10b981,#f59e0b,#8b5cf6,#ef4444" data-unit="점"></div>
 
 다섯 트렌드는 따로 노는 것이 아니라 서로 맞물립니다. 금리가 내리면 위험자산이 힘을 받고, 그 자금이 ETF로 흘러가며, 이 과정에서 절세계좌와 사기 경계가 함께 중요해집니다.
 

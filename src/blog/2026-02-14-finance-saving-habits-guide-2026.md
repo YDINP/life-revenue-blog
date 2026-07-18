@@ -47,7 +47,7 @@ noindex: true
 
 이들 앱의 공통점은 "사용자가 입력하지 않아도 지출이 자동 추적된다"는 것입니다. 이를 통해 실제 소비 행동과 자신의 인식 간 차이를 발견할 수 있습니다.
 
-<div class="chart-bar" data-title="2026년 금융앱 사용률 증가" data-labels="자동가계부,전통가계부,엑셀관리,수기관리" data-values="78,45,28,12" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444" data-unit="%"></div>
+<div class="chart-bar" data-orient="vertical" data-title="2026년 금융앱 사용률 증가" data-labels="자동가계부,전통가계부,엑셀관리,수기관리" data-values="78,45,28,12" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444" data-unit="%"></div>
 
 ### 2. "페이 문화"와 자동 저축의 결합
 

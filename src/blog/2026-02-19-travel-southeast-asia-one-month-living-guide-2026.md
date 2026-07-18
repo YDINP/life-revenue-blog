@@ -56,7 +56,7 @@ noindex: true
 
 동남아 물가는 2026년 들어 소폭 상승했지만, 여전히 한국의 1/3~1/4 수준입니다. 도시마다 생활 패턴에 따라 지출이 크게 달라지므로 정확한 데이터 분석이 중요합니다.
 
-<div class="chart-bar" data-title="2026년 동남아 도시별 월간 생활비 (1인 기준, 숙소 제외)" data-labels="방콕,치앙마이,호치민,다낭,마닐라,세부" data-values="85,45,65,50,75,60" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444,#8b5cf6,#06b6d4" data-unit="만원"></div>
+<div class="chart-bar" data-orient="vertical" data-title="2026년 동남아 도시별 월간 생활비 (1인 기준, 숙소 제외)" data-labels="방콕,치앙마이,호치민,다낭,마닐라,세부" data-values="85,45,65,50,75,60" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444,#8b5cf6,#06b6d4" data-unit="만원"></div>
 
 ### 태국
 

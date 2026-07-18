@@ -56,7 +56,7 @@ noindex: true
 
 ## 연령대별 최적 자산 배분 비율
 
-<div class="chart-bar" data-title="연령대별 주식 비중 추천" data-labels="20대,30대,40대,50대,60대" data-values="80,70,60,45,30" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444,#8b5cf6" data-unit="%"></div>
+<div class="chart-bar" data-orient="vertical" data-title="연령대별 주식 비중 추천" data-labels="20대,30대,40대,50대,60대" data-values="80,70,60,45,30" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444,#8b5cf6" data-unit="%"></div>
 
 위 차트는 보수적 투자자 기준 주식 비중입니다. 적극적 투자자라면 각 연령대에서 10-15% 추가로 높일 수 있습니다.
 
