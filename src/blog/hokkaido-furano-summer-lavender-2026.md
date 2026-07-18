@@ -8,11 +8,11 @@ tags: [홋카이도, 후라노, 라벤더, 여름여행, 일본여행, 팜도미
 heroImage: "https://images.pexels.com/photos/4242690/pexels-photo-4242690.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
   - title: "여행용 캐리어"
-    url: "https://www.coupang.com/np/search?q=%EC%97%AC%ED%96%89%EC%9A%A9%20%EC%BA%90%EB%A6%AC%EC%96%B4&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%97%AC%ED%96%89%EC%9A%A9%20%EC%BA%90%EB%A6%AC%EC%96%B4&src=1139000&spec=10799999&addtag=200&ctag=%EC%97%AC%ED%96%89%EC%9A%A9%20%EC%BA%90%EB%A6%AC%EC%96%B4&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%97%AC%ED%96%89%EC%9A%A9%20%EC%BA%90%EB%A6%AC%EC%96%B4"
   - title: "휴대용 선풍기"
-    url: "https://www.coupang.com/np/search?q=%ED%9C%B4%EB%8C%80%EC%9A%A9%20%EC%84%A0%ED%92%8D%EA%B8%B0&channel=user"
+    url: "https://www.coupang.com/np/search?q=%ED%9C%B4%EB%8C%80%EC%9A%A9%20%EC%84%A0%ED%92%8D%EA%B8%B0&src=1139000&spec=10799999&addtag=200&ctag=%ED%9C%B4%EB%8C%80%EC%9A%A9%20%EC%84%A0%ED%92%8D%EA%B8%B0&lptag=AF7838146&pageType=SEARCH&pageValue=%ED%9C%B4%EB%8C%80%EC%9A%A9%20%EC%84%A0%ED%92%8D%EA%B8%B0"
   - title: "여행 파우치 세트"
-    url: "https://www.coupang.com/np/search?q=%EC%97%AC%ED%96%89%20%ED%8C%8C%EC%9A%B0%EC%B9%98&channel=user"
+    url: "https://www.coupang.com/np/search?q=%EC%97%AC%ED%96%89%20%ED%8C%8C%EC%9A%B0%EC%B9%98&src=1139000&spec=10799999&addtag=200&ctag=%EC%97%AC%ED%96%89%20%ED%8C%8C%EC%9A%B0%EC%B9%98&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%97%AC%ED%96%89%20%ED%8C%8C%EC%9A%B0%EC%B9%98"
 faq:
   - q: "후라노 라벤더는 지금(7월 중순) 봐도 되나요?"
     a: "네, 좋은 타이밍입니다. 팜 도미타 공식 팜 일지 기준으로 7월 중순 현재 라벤더가 비 온 뒤 진한 향을 내며 절정에 가까운 상태로 확인됩니다. 다만 개화는 그해 기온·강수량에 따라 며칠씩 앞뒤로 움직이므로, 출발 직전 공식 사이트의 최신 개화 정보를 다시 확인하는 것이 안전합니다."
