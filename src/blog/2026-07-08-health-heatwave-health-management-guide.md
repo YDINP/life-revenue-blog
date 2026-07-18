@@ -37,7 +37,7 @@ faq:
 
 특히 2026년처럼 밤에도 기온이 25도 아래로 떨어지지 않는 열대야가 이어지면, 몸이 회복할 시간을 얻지 못해 누적 피로가 심해집니다. 이는 낮 시간대 온열질환 위험을 한층 높이는 악순환으로 이어집니다.
 
-<div class="chart-bar" data-orient="vertical" data-title="온열질환 응급실 내원 환자 발생 시간대 (비율)" data-labels="오전,정오,오후2시,오후4시,저녁" data-values="11,27,33,20,9" data-colors="#60a5fa,#f59e0b,#ef4444,#f97316,#8b5cf6" data-unit="%"></div>
+<div class="chart-bar" data-orient="vertical" data-title="온열질환 응급실 내원 환자 발생 시간대 (비율)" data-labels="오전,정오,오후2시,오후4시,저녁" data-values="11,27,33,20,9" data-colors="#60a5fa,#f59e0b,#d55e00,#f97316,#8b5cf6" data-unit="%"></div>
 
 위 데이터에서 볼 수 있듯 온열질환 환자의 절반 이상이 정오부터 오후 4시 사이에 집중적으로 발생합니다. 이 시간대의 야외 활동을 줄이는 것만으로도 위험을 크게 낮출 수 있습니다.
 
@@ -94,7 +94,7 @@ faq:
 
 고령자, 영유아, 만성질환자, 야외 노동자는 폭염에 특히 취약합니다. 고령자는 갈증을 잘 느끼지 못하고 체온 조절 능력이 떨어져 위험이 큽니다. 혼자 지내는 어르신은 하루 두 번 이상 안부를 확인하는 것이 좋습니다.
 
-<div class="chart-progress" data-title="폭염 취약 계층별 온열질환 위험도" data-labels="고령자,야외노동자,만성질환자,영유아,일반성인" data-values="90,85,78,70,40" data-colors="#ef4444,#f97316,#f59e0b,#eab308,#10b981" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="폭염 취약 계층별 온열질환 위험도" data-labels="고령자,야외노동자,만성질환자,영유아,일반성인" data-values="90,85,78,70,40" data-colors="#d55e00,#f97316,#f59e0b,#eab308,#009e73" data-max="100" data-unit="점"></div>
 
 ## 실내 온도와 환경 관리
 

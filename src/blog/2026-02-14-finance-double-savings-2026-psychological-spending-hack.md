@@ -62,7 +62,7 @@ noindex: true
 - 급여 입금일 당일 오전 중 자동이체 설정 (300만 원 → 100만 원)
 - 중요: 저축 통장에는 체크카드 미발급
 
-<div class="chart-donut" data-title="월 300만 원 급여의 최적 분배 비율 (2026년 기준)" data-labels="저축,필수지출,여유자금" data-values="33,54,13" data-colors="#10b981,#3b82f6,#f59e0b" data-unit="%"></div>
+<div class="chart-donut" data-title="월 300만 원 급여의 최적 분배 비율 (2026년 기준)" data-labels="저축,필수지출,여유자금" data-values="33,54,13" data-colors="#009e73,#3b82f6,#f59e0b" data-unit="%"></div>
 
 실제 사례: 서울 강남구 직장인 박씨(32세)는 이 방법만으로 월 98만 원 → 월 145만 원 저축에 성공했습니다 (2025년 12월 기준).
 
@@ -94,7 +94,7 @@ noindex: true
 3. 결제 알림을 "카톡 또는 문자"가 아닌 "이메일"로 
    - 즉각적인 반응을 지연시켜 충동 구매 방지 (심리학 연구 입증)
 
-<div class="chart-bar" data-title="충동 구매 차단 기법별 효과도" data-labels="신용카드 제한,결제 알림 지연,하루 24시간 대기,구독료 정기 점검" data-values="72,68,85,54" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444" data-unit="%"></div>
+<div class="chart-bar" data-title="충동 구매 차단 기법별 효과도" data-labels="신용카드 제한,결제 알림 지연,하루 24시간 대기,구독료 정기 점검" data-values="72,68,85,54" data-colors="#009e73,#3b82f6,#f59e0b,#d55e00" data-unit="%"></div>
 
 ---
 

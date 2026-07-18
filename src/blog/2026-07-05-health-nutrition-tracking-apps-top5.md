@@ -37,7 +37,7 @@ faq:
 
 AI 사진 분석 기술은 이 문제를 근본적으로 해결했습니다. 카메라로 음식을 찍으면 몇 초 만에 종류를 인식하고 예상 칼로리와 탄단지 비율을 계산합니다. 기록에 드는 시간이 획기적으로 줄면서 꾸준한 식단 관리가 가능해졌습니다.
 
-<div class="chart-bar" data-orient="vertical" data-title="식단 기록 방식별 3개월 지속률" data-labels="수기입력,바코드스캔,AI사진분석" data-values="24,41,68" data-colors="#ef4444,#f59e0b,#10b981" data-unit="%"></div>
+<div class="chart-bar" data-orient="vertical" data-title="식단 기록 방식별 3개월 지속률" data-labels="수기입력,바코드스캔,AI사진분석" data-values="24,41,68" data-colors="#d55e00,#f59e0b,#009e73" data-unit="%"></div>
 
 위 데이터처럼 AI 사진 분석 방식은 수기 입력보다 지속률이 세 배 가까이 높습니다. 편리함이 곧 지속성으로 이어진다는 것을 보여줍니다.
 
@@ -87,7 +87,7 @@ AI 사진 분석 기술은 이 문제를 근본적으로 해결했습니다. 카
 
 같은 500kcal라도 그 구성이 탄수화물 위주냐 단백질 위주냐에 따라 몸에 미치는 영향은 완전히 다릅니다. 그래서 단순 칼로리보다 매크로 비율 관리가 중요합니다.
 
-<div class="chart-progress" data-title="목표별 권장 단백질 섭취 달성 지표" data-labels="체중감량,근육증가,건강유지,체중유지" data-values="75,90,65,60" data-colors="#3b82f6,#10b981,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="목표별 권장 단백질 섭취 달성 지표" data-labels="체중감량,근육증가,건강유지,체중유지" data-values="75,90,65,60" data-colors="#3b82f6,#009e73,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
 
 위 차트는 목표에 따른 단백질 섭취 중요도를 나타냅니다. 근육 증가를 목표로 한다면 단백질 관리가 특히 중요하며, 좋은 앱은 이런 매크로 목표를 자동으로 설정하고 추적해 줍니다.
 

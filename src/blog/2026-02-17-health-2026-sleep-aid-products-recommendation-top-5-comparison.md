@@ -61,7 +61,7 @@ noindex: true
 
 ## 2026년 주목할 수면 보조 제품 TOP 5
 
-<div class="chart-progress" data-title="수면 보조 제품별 종합 평가 점수" data-labels="멜라토닌 서플먼트,수면 베개,스마트 수면밴드,백색소음 머신,알람 가능 스마트워치" data-values="82,78,88,72,85" data-colors="#3b82f6,#10b981,#f59e0b,#ef4444,#8b5cf6" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="수면 보조 제품별 종합 평가 점수" data-labels="멜라토닌 서플먼트,수면 베개,스마트 수면밴드,백색소음 머신,알람 가능 스마트워치" data-values="82,78,88,72,85" data-colors="#3b82f6,#009e73,#f59e0b,#d55e00,#8b5cf6" data-max="100" data-unit="점"></div>
 
 ### 1. 멜라토닌 서플먼트 (수면 유도 호르몬)
 

@@ -37,7 +37,7 @@ faq:
 
 핵심은 '참지 않는다'는 데 있습니다. 극단적인 절식은 스트레스를 유발하고 결국 폭식과 요요로 이어집니다. 반면 헬시플레저는 만족감을 유지하면서 건강한 선택을 반복하게 만들어 지속 가능성을 높입니다.
 
-<div class="chart-bar" data-orient="vertical" data-title="다이어트 방식별 1년 후 유지율" data-labels="극단절식,원푸드,간헐적단식,헬시플레저" data-values="18,22,45,71" data-colors="#ef4444,#f97316,#f59e0b,#10b981" data-unit="%"></div>
+<div class="chart-bar" data-orient="vertical" data-title="다이어트 방식별 1년 후 유지율" data-labels="극단절식,원푸드,간헐적단식,헬시플레저" data-values="18,22,45,71" data-colors="#d55e00,#f97316,#f59e0b,#009e73" data-unit="%"></div>
 
 위 데이터에서 볼 수 있듯 헬시플레저 방식은 1년 후에도 71%가 습관을 유지해 다른 방식을 크게 앞섭니다. 지속 가능성이야말로 다이어트 성공의 진짜 관건입니다.
 
@@ -73,7 +73,7 @@ faq:
 
 헬시플레저 다이어트의 꽃은 역시 식단입니다. 만족감을 유지하면서 열량과 영양을 관리하는 균형 잡힌 구성이 중요합니다.
 
-<div class="chart-donut" data-title="헬시플레저 한 끼 식단 구성 비율" data-labels="채소·식이섬유,단백질,통곡물,건강한지방" data-values="40,30,20,10" data-colors="#10b981,#3b82f6,#f59e0b,#8b5cf6" data-unit="%"></div>
+<div class="chart-donut" data-title="헬시플레저 한 끼 식단 구성 비율" data-labels="채소·식이섬유,단백질,통곡물,건강한지방" data-values="40,30,20,10" data-colors="#009e73,#3b82f6,#f59e0b,#8b5cf6" data-unit="%"></div>
 
 위 도넛 차트처럼 한 끼를 구성하면 포만감은 높이고 혈당 급등은 막을 수 있습니다. 채소와 식이섬유를 절반 가까이 채우는 것이 핵심입니다.
 
@@ -104,7 +104,7 @@ faq:
 
 하루 이틀 계획을 어겼다고 자책하지 마세요. 죄책감은 폭식의 지름길입니다. 다음 끼니부터 다시 시작하면 됩니다.
 
-<div class="chart-progress" data-title="헬시플레저 습관별 지속 용이성" data-labels="즐거운운동,저당간식대체,환경설계,작은목표설정" data-values="85,80,88,90" data-colors="#3b82f6,#10b981,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="헬시플레저 습관별 지속 용이성" data-labels="즐거운운동,저당간식대체,환경설계,작은목표설정" data-values="85,80,88,90" data-colors="#3b82f6,#009e73,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
 
 <div class="callout-info">ℹ️ 참고: 헬시플레저는 유행하는 다이어트 상품을 사라는 뜻이 아닙니다. 핵심은 나에게 맞는 즐거운 방식을 찾는 것입니다. 남들이 좋다는 방법이 아니라 내가 꾸준히 할 수 있는 방법이 가장 좋은 다이어트입니다.</div>
 

@@ -147,7 +147,7 @@ noindex: true
 
 플랫폼별 환불 조건:
 
-<div class="chart-progress" data-title="환불 기한 비교" data-labels="클래스101,인프런,유데미,코드잇,패스트캠퍼스" data-values="30,7,30,14,7" data-colors="#f59e0b,#3b82f6,#10b981,#ef4444,#8b5cf6" data-max="35" data-unit="일"></div>
+<div class="chart-progress" data-title="환불 기한 비교" data-labels="클래스101,인프런,유데미,코드잇,패스트캠퍼스" data-values="30,7,30,14,7" data-colors="#f59e0b,#3b82f6,#009e73,#d55e00,#8b5cf6" data-max="35" data-unit="일"></div>
 
 - 인프런과 패스트캠퍼스는 환불 기간이 매우 짧으므로 반드시 미리보기 강의 충분히 시청
 - 클래스101과 유데미는 여유 있으니 "이 강좌가 맞는지 1주일 더 생각해봐도 괜찮음"

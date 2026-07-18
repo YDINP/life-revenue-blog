@@ -35,7 +35,7 @@ noindex: true
 - 미래에 대한 불안감이 감소합니다
 - 재정적 자유도에 한 발 더 가까워집니다
 
-<div class="chart-progress" data-title="절약 성공률" data-labels="예산 관리,지출 추적,자동 저축,소비 습관 개선" data-values="82,78,85,72" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444" data-max="100" data-unit="%"></div>
+<div class="chart-progress" data-title="절약 성공률" data-labels="예산 관리,지출 추적,자동 저축,소비 습관 개선" data-values="82,78,85,72" data-colors="#009e73,#3b82f6,#f59e0b,#d55e00" data-max="100" data-unit="%"></div>
 
 
 <a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EB%B6%80%EC%9E%90%20%EC%95%84%EB%B9%A0%20%EA%B0%80%EB%82%9C%ED%95%9C%20%EC%95%84%EB%B9%A0&src=1139000&spec=10799999&addtag=200&ctag=%EB%B6%80%EC%9E%90%20%EC%95%84%EB%B9%A0%20%EA%B0%80%EB%82%9C%ED%95%9C%20%EC%95%84%EB%B9%A0&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%B6%80%EC%9E%90%20%EC%95%84%EB%B9%A0%20%EA%B0%80%EB%82%9C%ED%95%9C%20%EC%95%84%EB%B9%A0" target="_blank" rel="noopener noreferrer nofollow">
@@ -70,7 +70,7 @@ noindex: true
 | 저축 | 15% | 45만원 |
 | 투자 | 5% | 15만원 |
 
-<div class="chart-donut" data-title="이상적인 월 지출 구성" data-labels="필수 지출,선택 지출,저축,투자" data-values="50,30,15,5" data-colors="#3b82f6,#f59e0b,#10b981,#8b5cf6" data-unit="%"></div>
+<div class="chart-donut" data-title="이상적인 월 지출 구성" data-labels="필수 지출,선택 지출,저축,투자" data-values="50,30,15,5" data-colors="#3b82f6,#f59e0b,#009e73,#8b5cf6" data-unit="%"></div>
 
 ### 3단계: 자동 이체로 저축 강제화하기
 
@@ -127,7 +127,7 @@ noindex: true
 
 절약 습관이 정착되면 다음과 같은 변화가 나타납니다:
 
-<div class="chart-bar" data-orient="vertical" data-title="절약 습관 형성 후 3개월 평균 개선 효과" data-labels="저축액 증가,스트레스 감소,재정 만족도,소비 만족도,미래 준비도" data-values="78,72,85,68,81" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444,#8b5cf6" data-unit="%"></div>
+<div class="chart-bar" data-orient="vertical" data-title="절약 습관 형성 후 3개월 평균 개선 효과" data-labels="저축액 증가,스트레스 감소,재정 만족도,소비 만족도,미래 준비도" data-values="78,72,85,68,81" data-colors="#009e73,#3b82f6,#f59e0b,#d55e00,#8b5cf6" data-unit="%"></div>
 
 ## 절약 습관 만들 때 주의사항
 

@@ -30,7 +30,7 @@ noindex: true
 
 다음의 차트를 보면 학습 방법에 따른 효율성 차이를 알 수 있습니다:
 
-<div class="chart-bar" data-title="학습 방법별 3개월 실력 향상도" data-labels="전통 문법 중심,몰입식 학습,상황별 회화 연습,복합 전략" data-values="35,62,58,88" data-colors="#ef4444,#f59e0b,#3b82f6,#10b981" data-unit="점"></div>
+<div class="chart-bar" data-title="학습 방법별 3개월 실력 향상도" data-labels="전통 문법 중심,몰입식 학습,상황별 회화 연습,복합 전략" data-values="35,62,58,88" data-colors="#d55e00,#f59e0b,#3b82f6,#009e73" data-unit="점"></div>
 
 위 차트에서 보듯이 복합 학습 전략을 사용한 학습자들이 가장 빠른 실력 향상을 보였습니다.
 
@@ -105,7 +105,7 @@ Anki, Quizlet 같은 앱을 사용하면 자동으로 복습 일정을 관리할
 
 ### 실용적 회화 학습 방법
 
-<div class="chart-progress" data-title="학습 유형별 실제 회화 능력 달성도" data-labels="문법 중심,청취 중심,회화 중심,통합학습" data-values="42,65,78,92" data-colors="#ef4444,#f59e0b,#3b82f6,#10b981" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="학습 유형별 실제 회화 능력 달성도" data-labels="문법 중심,청취 중심,회화 중심,통합학습" data-values="42,65,78,92" data-colors="#d55e00,#f59e0b,#3b82f6,#009e73" data-max="100" data-unit="점"></div>
 
 - 언어 교환 파트너 찾기: Tandem, HelloTalk 앱 활용
 - 온라인 튜터 고용: 저렴하고 효율적 (주 2-3회)

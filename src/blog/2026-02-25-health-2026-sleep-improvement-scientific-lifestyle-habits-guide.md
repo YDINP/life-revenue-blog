@@ -67,7 +67,7 @@ faq:
 
 ## 수면의 질을 결정하는 3가지 요소
 
-<div class="chart-progress" data-title="수면 개선 영향도" data-labels="수면 환경,생활 습관,스트레스 관리" data-values="35,40,25" data-colors="#10b981,#3b82f6,#f59e0b" data-max="100" data-unit="%"></div>
+<div class="chart-progress" data-title="수면 개선 영향도" data-labels="수면 환경,생활 습관,스트레스 관리" data-values="35,40,25" data-colors="#009e73,#3b82f6,#f59e0b" data-max="100" data-unit="%"></div>
 
 수면 과학 연구에 따르면 수면의 질은 크게 세 가지 요소가 결정합니다. 생활 습관이 40%로 가장 큰 비중을 차지하며, 이어 수면 환경(35%), 스트레스 관리(25%)가 영향을 미칩니다.
 
@@ -161,7 +161,7 @@ faq:
 
 ## 수면 개선 효과 비교표
 
-<div class="chart-bar" data-title="생활 습관별 수면 개선 효과" data-labels="고정 시간,카페인 제한,블루라이트 차단,규칙 운동,온도 조절,야식 금지,스트레스 관리" data-values="35,28,30,32,22,25,28" data-colors="#3b82f6,#10b981,#f59e0b,#ef4444,#8b5cf6,#06b6d4,#ec4899" data-unit="%"></div>
+<div class="chart-bar" data-title="생활 습관별 수면 개선 효과" data-labels="고정 시간,카페인 제한,블루라이트 차단,규칙 운동,온도 조절,야식 금지,스트레스 관리" data-values="35,28,30,32,22,25,28" data-colors="#3b82f6,#009e73,#f59e0b,#d55e00,#8b5cf6,#06b6d4,#ec4899" data-unit="%"></div>
 
 위 차트는 각 생활 습관이 수면 개선에 미치는 평균 효과를 나타냅니다. 고정된 수면 시간과 블루라이트 차단이 가장 높은 효과를 보이며, 온도 조절도 생각보다 중요한 역할을 합니다.
 

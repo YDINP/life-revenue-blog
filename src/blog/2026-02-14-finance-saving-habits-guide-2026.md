@@ -47,7 +47,7 @@ noindex: true
 
 이들 앱의 공통점은 "사용자가 입력하지 않아도 지출이 자동 추적된다"는 것입니다. 이를 통해 실제 소비 행동과 자신의 인식 간 차이를 발견할 수 있습니다.
 
-<div class="chart-bar" data-orient="vertical" data-title="2026년 금융앱 사용률 증가" data-labels="자동가계부,전통가계부,엑셀관리,수기관리" data-values="78,45,28,12" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444" data-unit="%"></div>
+<div class="chart-bar" data-orient="vertical" data-title="2026년 금융앱 사용률 증가" data-labels="자동가계부,전통가계부,엑셀관리,수기관리" data-values="78,45,28,12" data-colors="#009e73,#3b82f6,#f59e0b,#d55e00" data-unit="%"></div>
 
 ### 2. "페이 문화"와 자동 저축의 결합
 
@@ -123,7 +123,7 @@ noindex: true
 
 ## 2026년 세대별 절약 트렌드
 
-<div class="chart-donut" data-title="절약 목표별 비율 (MZ세대 기준)" data-labels="투자/부동산,빚상환,결혼/출산,해외여행,긴급자금" data-values="35,25,20,12,8" data-colors="#3b82f6,#10b981,#f59e0b,#ef4444,#8b5cf6" data-unit="%"></div>
+<div class="chart-donut" data-title="절약 목표별 비율 (MZ세대 기준)" data-labels="투자/부동산,빚상환,결혼/출산,해외여행,긴급자금" data-values="35,25,20,12,8" data-colors="#3b82f6,#009e73,#f59e0b,#d55e00,#8b5cf6" data-unit="%"></div>
 
 밀레니얼 세대 (1980~1994년생)
 - 자녀 교육비 절약
@@ -171,7 +171,7 @@ TikTok, Instagram, YouTube Shorts의 광고와 콘텐츠가 계획되지 않은 
 
 ## 2026년 절약과 투자의 균형
 
-<div class="chart-progress" data-title="최적의 자금 배분 목표" data-labels="생활비,긴급자금,투자,자유비용" data-values="50,20,20,10" data-colors="#10b981,#3b82f6,#f59e0b,#8b5cf6" data-max="100" data-unit="%"></div>
+<div class="chart-progress" data-title="최적의 자금 배분 목표" data-labels="생활비,긴급자금,투자,자유비용" data-values="50,20,20,10" data-colors="#009e73,#3b82f6,#f59e0b,#8b5cf6" data-max="100" data-unit="%"></div>
 
 절약의 최종 목적은 "돈을 안 쓰는 것"이 아니라 "현명하게 쓰는 것"입니다. 2026년 금융 전문가들은 "순수 절약"에서 "절약을 통한 투자"로의 전환을 강조합니다.
 

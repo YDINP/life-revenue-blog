@@ -188,7 +188,7 @@ noindex: true
 
 ## 홈오피스 필수템 선택의 핵심 원칙
 
-<div class="chart-radar" data-title="홈오피스 필수템 평가 항목" data-items='[{"name":"의자","scores":[{"label":"신체건강","value":10,"color":"#10b981"},{"label":"생산성","value":9,"color":"#3b82f6"},{"label":"투자효율","value":8,"color":"#f59e0b"}]},{"name":"책상","scores":[{"label":"신체건강","value":9,"color":"#ef4444"},{"label":"생산성","value":8,"color":"#8b5cf6"},{"label":"투자효율","value":7,"color":"#06b6d4"}]},{"name":"조명","scores":[{"label":"신체건강","value":8,"color":"#ec4899"},{"label":"생산성","value":9,"color":"#d97706"},{"label":"투자효율","value":9,"color":"#6366f1"}]}]'></div>
+<div class="chart-radar" data-title="홈오피스 필수템 평가 항목" data-items='[{"name":"의자","scores":[{"label":"신체건강","value":10,"color":"#009e73"},{"label":"생산성","value":9,"color":"#3b82f6"},{"label":"투자효율","value":8,"color":"#f59e0b"}]},{"name":"책상","scores":[{"label":"신체건강","value":9,"color":"#d55e00"},{"label":"생산성","value":8,"color":"#8b5cf6"},{"label":"투자효율","value":7,"color":"#06b6d4"}]},{"name":"조명","scores":[{"label":"신체건강","value":8,"color":"#ec4899"},{"label":"생산성","value":9,"color":"#d97706"},{"label":"투자효율","value":9,"color":"#6366f1"}]}]'></div>
 
 ### 우선순위 결정 방식
 
@@ -198,7 +198,7 @@ noindex: true
 
 ### 예산별 추천 구성안
 
-<div class="chart-donut" data-title="예산대별 홈오피스 투자 가중치" data-labels="의자와 책상,모니터 및 주변기기,조명과 악세서리" data-values="50,35,15" data-colors="#3b82f6,#10b981,#f59e0b" data-unit="%"></div>
+<div class="chart-donut" data-title="예산대별 홈오피스 투자 가중치" data-labels="의자와 책상,모니터 및 주변기기,조명과 악세서리" data-values="50,35,15" data-colors="#3b82f6,#009e73,#f59e0b" data-unit="%"></div>
 
 500만원 예산 (완벽 구성):
 - 의자 150만원

@@ -35,7 +35,7 @@ noindex: true
 
 남의 시선을 의식하지 않고 편하게 운동할 수 있습니다.
 
-<div class="chart-progress" data-title="홈트레이닝 장점 비교 (100점 만점)" data-labels="시간절약,비용절약,편의성,지속성,효과성" data-values="95,100,90,85,80" data-colors="#10b981,#3b82f6,#8b5cf6,#f59e0b,#ec4899" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="홈트레이닝 장점 비교 (100점 만점)" data-labels="시간절약,비용절약,편의성,지속성,효과성" data-values="95,100,90,85,80" data-colors="#009e73,#3b82f6,#8b5cf6,#f59e0b,#ec4899" data-max="100" data-unit="점"></div>
 
 
 <a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&src=1139000&spec=10799999&addtag=200&ctag=%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8" target="_blank" rel="noopener noreferrer nofollow">
@@ -99,7 +99,7 @@ noindex: true
 3. 누워서 무릎 당기기: 30초
 4. 심호흡: 1분
 
-<div class="chart-radar" data-title="운동 부위별 효과" data-items='[{"name":"초급 루틴","scores":[{"label":"가슴","value":60,"color":"#10b981"},{"label":"등","value":50,"color":"#10b981"},{"label":"하체","value":85,"color":"#10b981"},{"label":"코어","value":80,"color":"#10b981"},{"label":"유산소","value":40,"color":"#10b981"}]},{"name":"중급 루틴","scores":[{"label":"가슴","value":80,"color":"#3b82f6"},{"label":"등","value":75,"color":"#3b82f6"},{"label":"하체","value":90,"color":"#3b82f6"},{"label":"코어","value":90,"color":"#3b82f6"},{"label":"유산소","value":60,"color":"#3b82f6"}]},{"name":"고급 루틴","scores":[{"label":"가슴","value":90,"color":"#8b5cf6"},{"label":"등","value":85,"color":"#8b5cf6"},{"label":"하체","value":95,"color":"#8b5cf6"},{"label":"코어","value":95,"color":"#8b5cf6"},{"label":"유산소","value":80,"color":"#8b5cf6"}]}]'></div>
+<div class="chart-radar" data-title="운동 부위별 효과" data-items='[{"name":"초급 루틴","scores":[{"label":"가슴","value":60,"color":"#009e73"},{"label":"등","value":50,"color":"#009e73"},{"label":"하체","value":85,"color":"#009e73"},{"label":"코어","value":80,"color":"#009e73"},{"label":"유산소","value":40,"color":"#009e73"}]},{"name":"중급 루틴","scores":[{"label":"가슴","value":80,"color":"#3b82f6"},{"label":"등","value":75,"color":"#3b82f6"},{"label":"하체","value":90,"color":"#3b82f6"},{"label":"코어","value":90,"color":"#3b82f6"},{"label":"유산소","value":60,"color":"#3b82f6"}]},{"name":"고급 루틴","scores":[{"label":"가슴","value":90,"color":"#8b5cf6"},{"label":"등","value":85,"color":"#8b5cf6"},{"label":"하체","value":95,"color":"#8b5cf6"},{"label":"코어","value":95,"color":"#8b5cf6"},{"label":"유산소","value":80,"color":"#8b5cf6"}]}]'></div>
 
 ### 중급 루틴 (주 4회, 45분)
 

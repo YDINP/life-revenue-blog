@@ -38,7 +38,7 @@ noindex: true
 
 먼저 1인 가구의 일반적인 월평균 생활비 구조를 살펴보겠습니다.
 
-<div class="chart-donut" data-title="1인 가구 월평균 지출 구성 (통계청 2025년 기준)" data-labels="식비,주거비,교통비,통신료,의류·신발,의료비,교육,기타" data-values="22,28,12,8,6,5,4,15" data-colors="#f59e0b,#3b82f6,#10b981,#ef4444,#8b5cf6,#ec4899,#06b6d4,#6b7280" data-unit="%"></div>
+<div class="chart-donut" data-title="1인 가구 월평균 지출 구성 (통계청 2025년 기준)" data-labels="식비,주거비,교통비,통신료,의류·신발,의료비,교육,기타" data-values="22,28,12,8,6,5,4,15" data-colors="#f59e0b,#3b82f6,#009e73,#d55e00,#8b5cf6,#ec4899,#06b6d4,#6b7280" data-unit="%"></div>
 
 식비 22%, 주거비 28%가 가장 큰 비중을 차지하고 있습니다. 이 두 영역만 적절히 관리해도 월 10~20만 원을 절약할 수 있다는 의미입니다. 하지만 많은 1인 가구가 편의점 이용, 외식, 불필요한 소비용품 구매로 인해 실제로는 월 40~50만 원을 초과 지출하고 있는 상황입니다.
 
@@ -81,7 +81,7 @@ Glass 용기보다 가볍고 휴대 가능하며, 전자레인지·냉동실 모
 
 ## 식비 절약의 현실적 전략
 
-<div class="chart-bar" data-orient="vertical" data-title="구매처별 동일 제품 가격 비교 (2025년 기준)" data-labels="편의점,대형마트,온라인쇼핑,재래시장" data-values="100,72,65,58" data-colors="#ef4444,#f59e0b,#10b981,#3b82f6" data-unit="상대가격"></div>
+<div class="chart-bar" data-orient="vertical" data-title="구매처별 동일 제품 가격 비교 (2025년 기준)" data-labels="편의점,대형마트,온라인쇼핑,재래시장" data-values="100,72,65,58" data-colors="#d55e00,#f59e0b,#009e73,#3b82f6" data-unit="상대가격"></div>
 
 동일한 계란 30개 기준:
 - 편의점: 약 13,000원

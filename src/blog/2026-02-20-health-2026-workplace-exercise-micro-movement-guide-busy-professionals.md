@@ -89,7 +89,7 @@ noindex: true
 
 ## 직장인 운동 효율 비교: 시간대별 효과 분석
 
-<div class="chart-versus" data-title="운동 시간대별 효율성 비교" data-name-a="출퇴근운동" data-name-b="점심시간운동" data-color-a="#3b82f6" data-color-b="#10b981" data-items='[{"label":"지속성","a":88,"b":62},{"label":"근력증강","a":65,"b":78},{"label":"피로도","a":42,"b":75},{"label":"시간효율","a":92,"b":55}]'></div>
+<div class="chart-versus" data-title="운동 시간대별 효율성 비교" data-name-a="출퇴근운동" data-name-b="점심시간운동" data-color-a="#3b82f6" data-color-b="#009e73" data-items='[{"label":"지속성","a":88,"b":62},{"label":"근력증강","a":65,"b":78},{"label":"피로도","a":42,"b":75},{"label":"시간효율","a":92,"b":55}]'></div>
 
 차트에서 보듯이, 출퇴근 운동은 지속성과 시간효율이 우수하고, 점심시간 운동은 근력증강 효과가 높지만 피로도가 높아 오후 업무 집중력을 해칩니다.
 
@@ -145,7 +145,7 @@ noindex: true
 
 ## 운동 강도별 효과 비교
 
-<div class="chart-bar" data-orient="vertical" data-title="운동 강도별 주간 효과" data-labels="저강도운동,중강도운동,고강도운동" data-values="42,76,88" data-colors="#f59e0b,#3b82f6,#ef4444" data-unit="점"></div>
+<div class="chart-bar" data-orient="vertical" data-title="운동 강도별 주간 효과" data-labels="저강도운동,중강도운동,고강도운동" data-values="42,76,88" data-colors="#f59e0b,#3b82f6,#d55e00" data-unit="점"></div>
 
 고강도 운동(20분)이 저강도 운동(40분)보다 근력증강에 2배 효과적임을 보여줍니다. 따라서 시간이 부족한 직장인은 고강도 운동에 집중하되, 일상 속 마이크로 운동으로 활동량을 보충하는 전략이 최적입니다.
 

@@ -163,7 +163,7 @@ faq:
 
 아래는 여행 카테고리별 준비도 평가입니다. 해당 카테고리에서 얼마나 준비했는지 체크하세요.
 
-<div class="chart-progress" data-title="여행 준비물 카테고리별 준비도 평가" data-labels="서류·금융,의류·신발,화장품·위생,전자기기,짐싸기용품" data-values="100,85,70,90,60" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444,#8b5cf6" data-max="100" data-unit="%"></div>
+<div class="chart-progress" data-title="여행 준비물 카테고리별 준비도 평가" data-labels="서류·금융,의류·신발,화장품·위생,전자기기,짐싸기용품" data-values="100,85,70,90,60" data-colors="#009e73,#3b82f6,#f59e0b,#d55e00,#8b5cf6" data-max="100" data-unit="%"></div>
 
 ---
 
@@ -171,7 +171,7 @@ faq:
 
 여행 기간에 따라 준비물의 우선순위가 달라집니다.
 
-<div class="chart-versus" data-title="당일치기 vs 1주일 여행" data-name-a="당일치기" data-name-b="1주일" data-color-a="#3b82f6" data-color-b="#10b981" data-items='[{"label":"옷 개수","a":2,"b":7},{"label":"화장품 양","a":3,"b":15},{"label":"전자기기","a":3,"b":5},{"label":"짐싸기용품","a":0,"b":8},{"label":"총 무게(kg)","a":2,"b":15}]'></div>
+<div class="chart-versus" data-title="당일치기 vs 1주일 여행" data-name-a="당일치기" data-name-b="1주일" data-color-a="#3b82f6" data-color-b="#009e73" data-items='[{"label":"옷 개수","a":2,"b":7},{"label":"화장품 양","a":3,"b":15},{"label":"전자기기","a":3,"b":5},{"label":"짐싸기용품","a":0,"b":8},{"label":"총 무게(kg)","a":2,"b":15}]'></div>
 
 ---
 

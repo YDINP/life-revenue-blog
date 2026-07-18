@@ -63,7 +63,7 @@ faq:
 
 ## 주요 식품별 혈당지수 비교
 
-<div class="chart-bar" data-title="일반적인 식품의 혈당지수(GI) 비교" data-labels="흰쌀밥,통곡물,고구마,계란,브로콜리,통밀빵,오렌지" data-values="89,51,70,15,15,51,42" data-colors="#ef4444,#10b981,#f59e0b,#3b82f6,#10b981,#f59e0b,#8b5cf6" data-unit="GI값"></div>
+<div class="chart-bar" data-title="일반적인 식품의 혈당지수(GI) 비교" data-labels="흰쌀밥,통곡물,고구마,계란,브로콜리,통밀빵,오렌지" data-values="89,51,70,15,15,51,42" data-colors="#d55e00,#009e73,#f59e0b,#3b82f6,#009e73,#f59e0b,#8b5cf6" data-unit="GI값"></div>
 
 위 차트에서 보듯이, 단백질과 식이섬유가 풍부한 식품일수록 GI값이 낮습니다. 반면 정제 탄수화물(흰쌀밥, 흰 식빵)은 GI값이 매우 높습니다.
 

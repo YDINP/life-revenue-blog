@@ -121,7 +121,7 @@ noindex: true
 
 "I am happy"는 문법적으로 완벽하지만 원어민은 "I'm stoked", "I'm over the moon", "I'm pumped" 같은 표현을 더 자주 씁니다.
 
-<div class="chart-bar" data-title="원어민이 실제 사용하는 표현 빈도 (일상 대화 분석)" data-labels="I'm happy,I'm stoked,I'm over the moon,I'm pleased" data-values="15,42,28,12" data-colors="#3b82f6,#10b981,#f59e0b,#ef4444" data-unit="%"></div>
+<div class="chart-bar" data-title="원어민이 실제 사용하는 표현 빈도 (일상 대화 분석)" data-labels="I'm happy,I'm stoked,I'm over the moon,I'm pleased" data-values="15,42,28,12" data-colors="#3b82f6,#009e73,#f59e0b,#d55e00" data-unit="%"></div>
 
 ### 고급 표현 학습 방법
 
@@ -155,7 +155,7 @@ noindex: true
 
 ## 6. 2026년 최신 도구 비교
 
-<div class="chart-radar" data-title="외국어 심화 학습 도구 종합 평가" data-items='[{"name":"Speechling","scores":[{"label":"발음 교정","value":9,"color":"#10b981"},{"label":"비용","value":10,"color":"#3b82f6"},{"label":"사용성","value":8,"color":"#f59e0b"},{"label":"다국어","value":8,"color":"#ef4444"}]},{"name":"ELSA Speak","scores":[{"label":"발음 교정","value":9,"color":"#10b981"},{"label":"비용","value":6,"color":"#3b82f6"},{"label":"사용성","value":9,"color":"#f59e0b"},{"label":"다국어","value":7,"color":"#ef4444"}]},{"name":"Hellotalk","scores":[{"label":"발음 교정","value":6,"color":"#10b981"},{"label":"비용","value":8,"color":"#3b82f6"},{"label":"사용성","value":9,"color":"#f59e0b"},{"label":"다국어","value":10,"color":"#ef4444"}]}]'></div>
+<div class="chart-radar" data-title="외국어 심화 학습 도구 종합 평가" data-items='[{"name":"Speechling","scores":[{"label":"발음 교정","value":9,"color":"#009e73"},{"label":"비용","value":10,"color":"#3b82f6"},{"label":"사용성","value":8,"color":"#f59e0b"},{"label":"다국어","value":8,"color":"#d55e00"}]},{"name":"ELSA Speak","scores":[{"label":"발음 교정","value":9,"color":"#009e73"},{"label":"비용","value":6,"color":"#3b82f6"},{"label":"사용성","value":9,"color":"#f59e0b"},{"label":"다국어","value":7,"color":"#d55e00"}]},{"name":"Hellotalk","scores":[{"label":"발음 교정","value":6,"color":"#009e73"},{"label":"비용","value":8,"color":"#3b82f6"},{"label":"사용성","value":9,"color":"#f59e0b"},{"label":"다국어","value":10,"color":"#d55e00"}]}]'></div>
 
 ## 자주 묻는 질문 해결
 

@@ -128,7 +128,7 @@ faq:
 
 모기 퇴치는 한 가지 방법만으로는 부족합니다. **여러 수단을 조합**하는 것이 정답입니다.
 
-<div class="chart-progress" data-title="모기·벌레 차단, 층층이 쌓을수록 효과 (권장 조합)" data-labels="모기장 텐트,바닥 차단 매트,기피제(바디),모기향·패치,UV 포충기" data-values="5,4,4,3,3" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444,#8b5cf6" data-max="5" data-unit="점"></div>
+<div class="chart-progress" data-title="모기·벌레 차단, 층층이 쌓을수록 효과 (권장 조합)" data-labels="모기장 텐트,바닥 차단 매트,기피제(바디),모기향·패치,UV 포충기" data-values="5,4,4,3,3" data-colors="#009e73,#3b82f6,#f59e0b,#d55e00,#8b5cf6" data-max="5" data-unit="점"></div>
 
 1. **모기장(메시) 텐트** — 공간을 통째로 막는 가장 확실한 첫 차단
 2. **바닥 차단 매트** — 개미·지네 등 기어다니는 벌레 방어

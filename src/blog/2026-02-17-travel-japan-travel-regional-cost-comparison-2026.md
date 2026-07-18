@@ -36,7 +36,7 @@ noindex: true
 
 숙박비는 여행 경비의 30~40%를 차지합니다. 같은 등급의 호텔이라도 도시마다 가격이 상이합니다.
 
-<div class="chart-bar" data-orient="vertical" data-title="2026년 지역별 1박 평균 숙박비 (중급 호텔 기준)" data-labels="도쿄,오사카,교토" data-values="85000,72000,68000" data-colors="#ef4444,#f59e0b,#10b981" data-unit="원"></div>
+<div class="chart-bar" data-orient="vertical" data-title="2026년 지역별 1박 평균 숙박비 (중급 호텔 기준)" data-labels="도쿄,오사카,교토" data-values="85000,72000,68000" data-colors="#d55e00,#f59e0b,#009e73" data-unit="원"></div>
 
 ### 도쿄 (1박 평균 85,000원)
 
@@ -98,7 +98,7 @@ noindex: true
 
 ## 교통비 비교: 어느 지역이 가장 경제적?
 
-<div class="chart-donut" data-title="지역별 일일 교통비 구성 (중등도 관광 기준)" data-labels="도쿄 메트로,오사카 JR+메트로,교토 버스" data-values="15000,11000,9000" data-colors="#3b82f6,#f59e0b,#10b981" data-unit="원"></div>
+<div class="chart-donut" data-title="지역별 일일 교통비 구성 (중등도 관광 기준)" data-labels="도쿄 메트로,오사카 JR+메트로,교토 버스" data-values="15000,11000,9000" data-colors="#3b82f6,#f59e0b,#009e73" data-unit="원"></div>
 
 ### 도쿄: 체계적이지만 비쌈
 - PASMO/Suica 카드: 충전 후 사용 (최소 2,000엔)

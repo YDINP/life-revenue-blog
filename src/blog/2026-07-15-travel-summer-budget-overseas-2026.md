@@ -53,7 +53,7 @@ faq:
 
 여름 성수기는 유럽·미주 항공료가 국내선 왕복 못지않게 치솟는 시기입니다. 반면 동남아·일본 노선은 비행시간이 짧고 LCC 취항이 많아 상대적으로 저렴합니다. 여기에 현지 물가까지 한국의 3분의 1~2분의 1 수준이라, 같은 예산으로도 훨씬 여유로운 여행이 가능합니다.
 
-<div class="chart-bar" data-orient="vertical" data-title="여름 성수기 왕복 항공료 비교(1인, LCC 기준)" data-labels="다낭,세부,방콕,오사카,코타키나발루" data-values="38,42,45,32,48" data-colors="#2563eb,#10b981,#f59e0b,#8b5cf6,#ef4444" data-unit="만원"></div>
+<div class="chart-bar" data-orient="vertical" data-title="여름 성수기 왕복 항공료 비교(1인, LCC 기준)" data-labels="다낭,세부,방콕,오사카,코타키나발루" data-values="38,42,45,32,48" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6,#d55e00" data-unit="만원"></div>
 
 - 최저가 그룹: 오사카·다낭 — 짧은 비행시간, LCC 경쟁 치열
 - 중간 그룹: 세부·방콕 — 리조트·미식 콘텐츠가 풍부

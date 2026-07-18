@@ -49,7 +49,7 @@ faq:
 
 강세장에서 특정 자산이 크게 오르면 비중이 목표를 초과합니다. 이때 규칙적으로 되돌리면 **오른 걸 조금 팔고 덜 오른 걸 사는** 행동이 자동화됩니다.
 
-<div class="chart-bar" data-title="리밸런싱 기준 예시 (참고용)" data-labels="기간 기준(연 1~2회),비중 기준(±5~10%p),감정 기준" data-values="8,9,2" data-colors="#3b82f6,#10b981,#ef4444" data-unit="점"></div>
+<div class="chart-bar" data-title="리밸런싱 기준 예시 (참고용)" data-labels="기간 기준(연 1~2회),비중 기준(±5~10%p),감정 기준" data-values="8,9,2" data-colors="#3b82f6,#009e73,#d55e00" data-unit="점"></div>
 
 ![저축과 자산관리](https://images.pexels.com/photos/9258909/pexels-photo-9258909.jpeg?auto=compress&cs=tinysrgb&w=940)
 

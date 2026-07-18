@@ -148,7 +148,7 @@ noindex: true
 
 ## 홈 트레이닝 효과 비교: 시간별 기대 효과
 
-<div class="chart-progress" data-title="주 3회 20분 홈 트레이닝 기대 효과 (12주 기준)" data-labels="근력향상,체지방감소,지구력개선,근육량증가" data-values="78,65,72,68" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444" data-max="100" data-unit="%"></div>
+<div class="chart-progress" data-title="주 3회 20분 홈 트레이닝 기대 효과 (12주 기준)" data-labels="근력향상,체지방감소,지구력개선,근육량증가" data-values="78,65,72,68" data-colors="#009e73,#3b82f6,#f59e0b,#d55e00" data-max="100" data-unit="%"></div>
 
 위 차트는 일주일에 3회, 20분씩 꾸준히 운동한 직장인 100명을 12주간 추적 조사한 결과입니다. 근력 측정(악력, 스쿼트 무게), 체지방 측정(체지방률), 지구력(계단 오르기), 근육량(DXA 스캔)을 기준으로 했습니다.
 

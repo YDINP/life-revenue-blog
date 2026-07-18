@@ -64,7 +64,7 @@ faq:
 
 ## 카드사별 무이자 할부 (2026년 7월)
 
-<div class="chart-progress" data-title="카드사별 최대 무이자 할부 개월수(2026년 7월 기준)" data-labels="NH농협,BC·우리·하나,신한·삼성·현대·KB국민·롯데" data-values="6,5,3" data-colors="#2563eb,#10b981,#f59e0b" data-max="6" data-unit="개월"></div>
+<div class="chart-progress" data-title="카드사별 최대 무이자 할부 개월수(2026년 7월 기준)" data-labels="NH농협,BC·우리·하나,신한·삼성·현대·KB국민·롯데" data-values="6,5,3" data-colors="#2563eb,#009e73,#f59e0b" data-max="6" data-unit="개월"></div>
 
 | 카드사 | 무이자 할부 |
 |--------|-----------|

@@ -36,7 +36,7 @@ coupangLinks:
 
 ## 2026년 국내 숨은 명소 TOP 10 종합 비교
 
-<div class="chart-radar" data-title="명소별 종합 평가 (2026년)" data-items='[{"name":"경주 안압지","scores":[{"label":"경관","value":9,"color":"#10b981"},{"label":"접근성","value":7,"color":"#3b82f6"},{"label":"조용함","value":8,"color":"#f59e0b"},{"label":"푸드","value":7,"color":"#ef4444"}]},{"name":"남해 독일마을","scores":[{"label":"경관","value":8,"color":"#10b981"},{"label":"접근성","value":8,"color":"#3b82f6"},{"label":"조용함","value":6,"color":"#f59e0b"},{"label":"푸드","value":9,"color":"#ef4444"}]},{"name":"진안 마이산","scores":[{"label":"경관","value":9,"color":"#10b981"},{"label":"접근성","value":6,"color":"#3b82f6"},{"label":"조용함","value":9,"color":"#f59e0b"},{"label":"푸드","value":6,"color":"#ef4444"}]}]'></div>
+<div class="chart-radar" data-title="명소별 종합 평가 (2026년)" data-items='[{"name":"경주 안압지","scores":[{"label":"경관","value":9,"color":"#009e73"},{"label":"접근성","value":7,"color":"#3b82f6"},{"label":"조용함","value":8,"color":"#f59e0b"},{"label":"푸드","value":7,"color":"#d55e00"}]},{"name":"남해 독일마을","scores":[{"label":"경관","value":8,"color":"#009e73"},{"label":"접근성","value":8,"color":"#3b82f6"},{"label":"조용함","value":6,"color":"#f59e0b"},{"label":"푸드","value":9,"color":"#d55e00"}]},{"name":"진안 마이산","scores":[{"label":"경관","value":9,"color":"#009e73"},{"label":"접근성","value":6,"color":"#3b82f6"},{"label":"조용함","value":9,"color":"#f59e0b"},{"label":"푸드","value":6,"color":"#d55e00"}]}]'></div>
 
 ---
 

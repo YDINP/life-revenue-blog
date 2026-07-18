@@ -124,7 +124,7 @@ noindex: true
 
 ## 카테고리별 추천 아이템 종합 비교
 
-<div class="chart-radar" data-title="홈오피스 필수템 카테고리 평가" data-items='[{"name":"소음차단","scores":[{"label":"집중력 향상","value":9,"color":"#10b981"},{"label":"투자비용","value":7,"color":"#3b82f6"},{"label":"사용편의성","value":8,"color":"#f59e0b"}]},{"name":"자세교정","scores":[{"label":"집중력 향상","value":8,"color":"#10b981"},{"label":"투자비용","value":6,"color":"#3b82f6"},{"label":"사용편의성","value":9,"color":"#f59e0b"}]},{"name":"조명환경","scores":[{"label":"집중력 향상","value":7,"color":"#10b981"},{"label":"투자비용","value":8,"color":"#3b82f6"},{"label":"사용편의성","value":9,"color":"#f59e0b"}]},{"name":"시간관리","scores":[{"label":"집중력 향상","value":8,"color":"#10b981"},{"label":"투자비용","value":9,"color":"#3b82f6"},{"label":"사용편의성","value":7,"color":"#f59e0b"}]}]'></div>
+<div class="chart-radar" data-title="홈오피스 필수템 카테고리 평가" data-items='[{"name":"소음차단","scores":[{"label":"집중력 향상","value":9,"color":"#009e73"},{"label":"투자비용","value":7,"color":"#3b82f6"},{"label":"사용편의성","value":8,"color":"#f59e0b"}]},{"name":"자세교정","scores":[{"label":"집중력 향상","value":8,"color":"#009e73"},{"label":"투자비용","value":6,"color":"#3b82f6"},{"label":"사용편의성","value":9,"color":"#f59e0b"}]},{"name":"조명환경","scores":[{"label":"집중력 향상","value":7,"color":"#009e73"},{"label":"투자비용","value":8,"color":"#3b82f6"},{"label":"사용편의성","value":9,"color":"#f59e0b"}]},{"name":"시간관리","scores":[{"label":"집중력 향상","value":8,"color":"#009e73"},{"label":"투자비용","value":9,"color":"#3b82f6"},{"label":"사용편의성","value":7,"color":"#f59e0b"}]}]'></div>
 
 ---
 

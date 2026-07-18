@@ -47,7 +47,7 @@ faq:
 
 매월 최대 50만원을 3년간 납입하면, 정부 기여금과 비과세가 더해져 목돈이 됩니다.
 
-<div class="chart-bar" data-title="청년미래적금 만기 목돈 구성(예시, 만원)" data-labels="본인 납입,정부기여금+이자,만기 수령(최대)" data-values="1800,455,2255" data-colors="#2563eb,#10b981,#ef4444" data-unit="만원"></div>
+<div class="chart-bar" data-title="청년미래적금 만기 목돈 구성(예시, 만원)" data-labels="본인 납입,정부기여금+이자,만기 수령(최대)" data-values="1800,455,2255" data-colors="#2563eb,#009e73,#d55e00" data-unit="만원"></div>
 
 - 납입: 월 최대 50만원 자유납입(3년)
 - 정부 기여금: 일반형 납입액 6%, 우대형 12%

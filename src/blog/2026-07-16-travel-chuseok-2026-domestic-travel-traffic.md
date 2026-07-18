@@ -65,11 +65,11 @@ faq:
 
 아래는 예년 명절 데이터에서 반복적으로 나타난 시간대별 상대 혼잡도입니다(지역·연도별로 달라질 수 있는 참고용 지수).
 
-<div class="chart-bar" data-orient="vertical" data-title="귀성일 시간대별 고속도로 혼잡 지수(예년 기준)" data-labels="새벽,오전,점심,오후,저녁,심야" data-values="30,100,72,60,45,25" data-colors="#7a5aa6,#2563eb,#10b981,#f59e0b,#ef4444,#64748b" data-unit="지수"></div>
+<div class="chart-bar" data-orient="vertical" data-title="귀성일 시간대별 고속도로 혼잡 지수(예년 기준)" data-labels="새벽,오전,점심,오후,저녁,심야" data-values="30,100,72,60,45,25" data-colors="#7a5aa6,#2563eb,#009e73,#f59e0b,#d55e00,#64748b" data-unit="지수"></div>
 
 귀성일에는 오전 시간대가 압도적으로 붐비고, 새벽과 심야가 가장 한산합니다. 반대로 귀경일은 아래처럼 오후~저녁에 정체가 집중됩니다.
 
-<div class="chart-bar" data-orient="vertical" data-title="귀경일 시간대별 고속도로 혼잡 지수(예년 기준)" data-labels="새벽,오전,점심,오후,저녁,심야" data-values="28,55,70,95,100,40" data-colors="#7a5aa6,#2563eb,#10b981,#f59e0b,#ef4444,#64748b" data-unit="지수"></div>
+<div class="chart-bar" data-orient="vertical" data-title="귀경일 시간대별 고속도로 혼잡 지수(예년 기준)" data-labels="새벽,오전,점심,오후,저녁,심야" data-values="28,55,70,95,100,40" data-colors="#7a5aa6,#2563eb,#009e73,#f59e0b,#d55e00,#64748b" data-unit="지수"></div>
 
 <div class="callout-info">💡 정보: 위 지수는 특정 연도의 정확한 통행량이 아니라 예년에 반복된 경향을 단순화한 참고값입니다. 실제 예측 소요시간은 한국도로공사 로드플러스와 각 내비게이션 앱의 명절 특별교통 예측을 함께 확인하는 것이 가장 정확합니다.</div>
 

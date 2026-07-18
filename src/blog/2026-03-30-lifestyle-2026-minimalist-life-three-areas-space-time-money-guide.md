@@ -74,7 +74,7 @@ noindex: true
 
 시간 낭비 상위 5가지:
 
-<div class="chart-bar" data-orient="vertical" data-title="직장인 일일 시간 낭비 현황" data-labels="SNS 중독,불필요한 회의,이메일 확인,멀티태스킹,의사결정 지연" data-values="156,87,65,82,45" data-colors="#ef4444,#f59e0b,#3b82f6,#8b5cf6,#10b981" data-unit="분"></div>
+<div class="chart-bar" data-orient="vertical" data-title="직장인 일일 시간 낭비 현황" data-labels="SNS 중독,불필요한 회의,이메일 확인,멀티태스킹,의사결정 지연" data-values="156,87,65,82,45" data-colors="#d55e00,#f59e0b,#3b82f6,#8b5cf6,#009e73" data-unit="분"></div>
 
 시간 미니멀화 전략:
 
@@ -89,7 +89,7 @@ noindex: true
 
 미니멀 라이프에서 금전 영역은 구독 서비스 취소와 충동 구매 방지입니다.
 
-<div class="chart-donut" data-title="평균 직장인 월간 지출 구성" data-labels="주거비,식비,구독료,교통비,기타" data-values="45,20,12,15,8" data-colors="#3b82f6,#10b981,#ef4444,#f59e0b,#8b5cf6" data-unit="%"></div>
+<div class="chart-donut" data-title="평균 직장인 월간 지출 구성" data-labels="주거비,식비,구독료,교통비,기타" data-values="45,20,12,15,8" data-colors="#3b82f6,#009e73,#d55e00,#f59e0b,#8b5cf6" data-unit="%"></div>
 
 실제 개선 체크리스트:
 
@@ -147,7 +147,7 @@ noindex: true
 
 ## 미니멀 라이프 실천 후 기대 효과
 
-<div class="chart-progress" data-title="미니멀 라이프 3개월 후 변화" data-labels="스트레스 감소,의사결정 속도,저축률,수면 질" data-values="72,65,58,68" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="미니멀 라이프 3개월 후 변화" data-labels="스트레스 감소,의사결정 속도,저축률,수면 질" data-values="72,65,58,68" data-colors="#009e73,#3b82f6,#f59e0b,#d55e00" data-max="100" data-unit="점"></div>
 
 ## 자주 하는 실수와 해결책
 

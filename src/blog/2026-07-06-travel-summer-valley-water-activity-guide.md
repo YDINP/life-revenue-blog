@@ -65,7 +65,7 @@ faq:
 
 계곡마다 강점이 다릅니다. 대표 3곳을 접근성·수질·안전성·한적함으로 비교했습니다.
 
-<div class="chart-progress" data-title="계곡별 특성 평가(내린천·화양·왕피천)" data-labels="접근성,수질,안전성,한적함" data-values="75,92,80,85" data-colors="#2563eb,#10b981,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="계곡별 특성 평가(내린천·화양·왕피천)" data-labels="접근성,수질,안전성,한적함" data-values="75,92,80,85" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
 
 - 수질 최상: 왕피천·화양계곡 — 생태보전지역급 청정도
 - 안전성 우수: 화양계곡 — 완만한 물살과 넓은 반석
@@ -117,7 +117,7 @@ faq:
 
 계곡은 한여름에도 수온이 낮습니다. 월별 평균 수온과 방문 적합도를 참고하세요.
 
-<div class="chart-bar" data-orient="vertical" data-title="월별 계곡 평균 수온" data-labels="6월,7월,8월,9월" data-values="18,21,23,19" data-colors="#2563eb,#10b981,#f59e0b,#8b5cf6" data-unit="℃"></div>
+<div class="chart-bar" data-orient="vertical" data-title="월별 계곡 평균 수온" data-labels="6월,7월,8월,9월" data-values="18,21,23,19" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6" data-unit="℃"></div>
 
 - 6월: 수온이 낮아 오래 놀기엔 부담, 한적함은 최고
 - 7월 말~8월 초: 수온 적정하나 인파 최다

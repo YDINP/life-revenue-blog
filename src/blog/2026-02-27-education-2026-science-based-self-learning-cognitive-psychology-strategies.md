@@ -79,7 +79,7 @@ Anki, Quizlet 같은 스페이싱 알고리즘 기반 앱을 사용하면 자동
 
 ### 블록 학습 vs 인터리빙의 효과 비교
 
-<div class="chart-versus" data-title="학습 효과 비교: 블록 학습 vs 인터리빙" data-name-a="블록 학습" data-name-b="인터리빙" data-color-a="#3b82f6" data-color-b="#10b981" data-items='[{"label":"즉시 시험 성과","a":75,"b":65},{"label":"지연 시험 성과","a":35,"b":80},{"label":"문제 해결 전이율","a":40,"b":85}]'></div>
+<div class="chart-versus" data-title="학습 효과 비교: 블록 학습 vs 인터리빙" data-name-a="블록 학습" data-name-b="인터리빙" data-color-a="#3b82f6" data-color-b="#009e73" data-items='[{"label":"즉시 시험 성과","a":75,"b":65},{"label":"지연 시험 성과","a":35,"b":80},{"label":"문제 해결 전이율","a":40,"b":85}]'></div>
 
 ### 인터리빙 적용 예시
 
@@ -124,7 +124,7 @@ Anki, Quizlet 같은 스페이싱 알고리즘 기반 앱을 사용하면 자동
 
 ### 메타인지 점검 방법
 
-<div class="chart-progress" data-title="메타인지 자가 평가 항목" data-labels="개념 이해도,문제 해결력,설명 능력,변형 문제 대응" data-values="75,60,45,35" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="메타인지 자가 평가 항목" data-labels="개념 이해도,문제 해결력,설명 능력,변형 문제 대응" data-values="75,60,45,35" data-colors="#009e73,#3b82f6,#f59e0b,#d55e00" data-max="100" data-unit="점"></div>
 
 ### 효과적인 메타인지 전략
 
@@ -186,7 +186,7 @@ Anki, Quizlet 같은 스페이싱 알고리즘 기반 앱을 사용하면 자동
 
 ### 수면이 학습에 미치는 영향
 
-<div class="chart-bar" data-orient="vertical" data-title="수면 시간별 학습 효율 변화" data-labels="수면 4시간,수면 6시간,수면 8시간" data-values="45,72,95" data-colors="#ef4444,#f59e0b,#10b981" data-unit="점"></div>
+<div class="chart-bar" data-orient="vertical" data-title="수면 시간별 학습 효율 변화" data-labels="수면 4시간,수면 6시간,수면 8시간" data-values="45,72,95" data-colors="#d55e00,#f59e0b,#009e73" data-unit="점"></div>
 
 ### 최적의 수면-학습 루틴
 

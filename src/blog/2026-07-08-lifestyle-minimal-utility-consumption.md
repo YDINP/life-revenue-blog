@@ -54,7 +54,7 @@ faq:
 
 유행템은 사는 순간의 즐거움은 크지만 유통기한이 짧습니다. 반대로 실용템은 사는 순간의 설렘은 덜해도 만족이 오래 지속됩니다. 아래 데이터는 두 유형의 만족도 지속 기간 차이를 보여줍니다.
 
-<div class="chart-bar" data-title="구매 유형별 만족도 지속 기간" data-labels="유행 아이템,SNS 화제 상품,기본 실용템,다용도 제품" data-values="21,14,180,240" data-colors="#ef4444,#f59e0b,#10b981,#2563eb" data-unit="일"></div>
+<div class="chart-bar" data-title="구매 유형별 만족도 지속 기간" data-labels="유행 아이템,SNS 화제 상품,기본 실용템,다용도 제품" data-values="21,14,180,240" data-colors="#d55e00,#f59e0b,#009e73,#2563eb" data-unit="일"></div>
 
 실용 중심으로 구매 기준을 바꾸려면 다음 3가지 질문을 습관화하세요.
 
@@ -90,7 +90,7 @@ faq:
 
 절약은 '적게 쓰기'가 아니라 '새는 곳 막기'에서 출발합니다. 평균 가계의 지출 구성을 보면 무심코 빠져나가는 항목이 의외로 큽니다.
 
-<div class="chart-donut" data-title="미니멀 소비 전 월 지출 구성" data-labels="주거·고정비,식비,구독·멤버십,충동구매,기타" data-values="42,24,10,14,10" data-colors="#2563eb,#10b981,#f59e0b,#ef4444,#8b5cf6" data-unit="%"></div>
+<div class="chart-donut" data-title="미니멀 소비 전 월 지출 구성" data-labels="주거·고정비,식비,구독·멤버십,충동구매,기타" data-values="42,24,10,14,10" data-colors="#2563eb,#009e73,#f59e0b,#d55e00,#8b5cf6" data-unit="%"></div>
 
 특히 구독료와 충동구매가 합쳐 24%에 달합니다. 이 두 항목이 미니멀 소비의 최우선 정리 대상입니다.
 
@@ -119,7 +119,7 @@ faq:
 
 월 24만 원이면 연간 288만 원입니다. 이 돈을 비상금이나 여행 같은 진짜 원하는 곳에 쓸 수 있습니다.
 
-<div class="chart-progress" data-title="미니멀 소비 3개월 후 변화 체감도" data-labels="지출 후회 감소,공간 여유,저축 여력,소비 만족도" data-values="78,72,64,70" data-colors="#2563eb,#10b981,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="미니멀 소비 3개월 후 변화 체감도" data-labels="지출 후회 감소,공간 여유,저축 여력,소비 만족도" data-values="78,72,64,70" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
 
 ## 가볍게 사는 삶이 주는 진짜 이득
 

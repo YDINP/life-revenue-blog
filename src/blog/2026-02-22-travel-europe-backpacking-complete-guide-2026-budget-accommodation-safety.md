@@ -36,7 +36,7 @@ noindex: true
 
 2026년 기준 유럽 배낭여행의 일일 평균 비용은 국가와 도시에 따라 크게 달라집니다. 저비용 동유럽(폴란드, 헝가리, 체코)에서는 1일 €40-60(약 5.5-8만원)으로 생활 가능하지만, 서유럽(프랑스, 영국, 스위스)에서는 1일 €80-120(약 11-16만원)이 필요합니다.
 
-<div class="chart-bar" data-title="유럽 주요 도시 일일 평균 여행비용(2026년)" data-labels="부다페스트,프라하,리스본,로마,바르셀로나,파리,런던,취리히" data-values="45,50,58,72,78,95,110,130" data-colors="#10b981,#10b981,#3b82f6,#3b82f6,#f59e0b,#f59e0b,#ef4444,#ef4444" data-unit="€"></div>
+<div class="chart-bar" data-title="유럽 주요 도시 일일 평균 여행비용(2026년)" data-labels="부다페스트,프라하,리스본,로마,바르셀로나,파리,런던,취리히" data-values="45,50,58,72,78,95,110,130" data-colors="#009e73,#009e73,#3b82f6,#3b82f6,#f59e0b,#f59e0b,#d55e00,#d55e00" data-unit="€"></div>
 
 위 차트에서 보듯이 동유럽으로 갈수록, 서유럽으로 갈수록 비용이 증가합니다. 2주(14일) 배낭여행 기준, 동유럽만 다니면 €560-840, 서유럽만 다니면 €1,120-1,680이 필요합니다. 항공료와 장거리 교통비(유레일패스 등)는 별도입니다.
 
@@ -64,7 +64,7 @@ noindex: true
 
 유럽 배낭여행 경험자들이 가장 많이 선택하는 숙소 유형은 호스텔(Hostel), Airbnb, 게스트하우스 순입니다. 각 유형별 장단점을 비교해보겠습니다.
 
-<div class="chart-versus" data-title="호스텔 vs Airbnb 비교" data-name-a="호스텔" data-name-b="Airbnb" data-color-a="#3b82f6" data-color-b="#10b981" data-items='[{"label":"가격(1박)","a":20,"b":45},{"label":"사교성","a":95,"b":40},{"label":"프라이버시","a":30,"b":90},{"label":"위치 다양성","a":70,"b":85},{"label":"청결도","a":75,"b":85}]'></div>
+<div class="chart-versus" data-title="호스텔 vs Airbnb 비교" data-name-a="호스텔" data-name-b="Airbnb" data-color-a="#3b82f6" data-color-b="#009e73" data-items='[{"label":"가격(1박)","a":20,"b":45},{"label":"사교성","a":95,"b":40},{"label":"프라이버시","a":30,"b":90},{"label":"위치 다양성","a":70,"b":85},{"label":"청결도","a":75,"b":85}]'></div>
 
 호스텔의 장점:
 - 1박 €15-30으로 매우 저렴
@@ -138,7 +138,7 @@ Airbnb 예약 전 반드시 확인사항:
 
 ## 교통 전략: 유레일패스 vs 저비용 항공사
 
-<div class="chart-donut" data-title="배낭여행객의 유럽 교통 수단 선택(2026년)" data-labels="저비용항공사(라이언에어·유로스타),기차(유레일패스·현지표),버스(플릭스버스)" data-values="35,35,30" data-colors="#3b82f6,#10b981,#f59e0b" data-unit="%"></div>
+<div class="chart-donut" data-title="배낭여행객의 유럽 교통 수단 선택(2026년)" data-labels="저비용항공사(라이언에어·유로스타),기차(유레일패스·현지표),버스(플릭스버스)" data-values="35,35,30" data-colors="#3b82f6,#009e73,#f59e0b" data-unit="%"></div>
 
 유레일패스 선택 기준:
 - 4주 이상 여행: 글로벌 패스 (€400-600) 추천

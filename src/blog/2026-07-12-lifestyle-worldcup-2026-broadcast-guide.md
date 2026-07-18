@@ -53,7 +53,7 @@ faq:
 
 ## 어디서 보나 — 경로별 정리
 
-<div class="chart-progress" data-title="시청 경로별 접근성(2026 월드컵 국내)" data-labels="JTBC (TV·독점),KBS (TV·공동중계),치지직 (모바일·PC),쿠팡플레이·티빙·웨이브" data-values="100,95,85,0" data-colors="#2563eb,#10b981,#8b5cf6,#ef4444" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="시청 경로별 접근성(2026 월드컵 국내)" data-labels="JTBC (TV·독점),KBS (TV·공동중계),치지직 (모바일·PC),쿠팡플레이·티빙·웨이브" data-values="100,95,85,0" data-colors="#2563eb,#009e73,#8b5cf6,#d55e00" data-max="100" data-unit="점"></div>
 
 | 경로 | 시청 가능 여부 | 비고 |
 |------|--------------|------|

@@ -42,7 +42,7 @@ faq:
 
 2026년 3월부터 시행되는 변화입니다.
 
-<div class="chart-bar" data-title="주택연금 초기보증료 변화 (4억 주택 기준, 낮을수록 유리)" data-labels="개편 전(1.5%),개편 후(1.0%)" data-values="600,400" data-colors="#94a3b8,#10b981" data-unit="만원"></div>
+<div class="chart-bar" data-title="주택연금 초기보증료 변화 (4억 주택 기준, 낮을수록 유리)" data-labels="개편 전(1.5%),개편 후(1.0%)" data-values="600,400" data-colors="#94a3b8,#009e73" data-unit="만원"></div>
 
 - 월 수령액 **최대 +4만 원** 인상
 - 초기보증료 **1.5% → 1.0%**(4억 주택 기준 600만→400만 원)

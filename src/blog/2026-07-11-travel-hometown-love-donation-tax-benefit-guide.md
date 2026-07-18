@@ -50,7 +50,7 @@ faq:
 
 핵심은 간단합니다. 낸 돈은 세금으로 돌아오고, 답례품이 순수하게 남습니다.
 
-<div class="chart-bar" data-orient="vertical" data-title="10만원 기부 시 혜택 구성" data-labels="세액공제 환급,답례품 가치,실질 이득" data-values="10,3,3" data-colors="#2563eb,#10b981,#f59e0b" data-unit="만원"></div>
+<div class="chart-bar" data-orient="vertical" data-title="10만원 기부 시 혜택 구성" data-labels="세액공제 환급,답례품 가치,실질 이득" data-values="10,3,3" data-colors="#2563eb,#009e73,#f59e0b" data-unit="만원"></div>
 
 - 세액공제 10만원: 연말정산·종합소득세에서 전액 환급
 - 답례품 3만원: 지역상품권 등으로 수령(기부액 30%)

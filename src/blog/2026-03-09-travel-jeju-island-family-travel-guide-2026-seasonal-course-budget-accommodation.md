@@ -83,7 +83,7 @@ noindex: true
 
 ## 숙소 선택 전략: 예산과 편의성을 모두 잡는 방법
 
-<div class="chart-donut" data-title="제주도 가족 숙소 선택 비율(2026년 기준)" data-labels="펜션/풀빌라,호텔,게스트하우스,에어비앤비" data-values="42,28,18,12" data-colors="#3b82f6,#10b981,#f59e0b,#ef4444" data-unit="%"></div>
+<div class="chart-donut" data-title="제주도 가족 숙소 선택 비율(2026년 기준)" data-labels="펜션/풀빌라,호텔,게스트하우스,에어비앤비" data-values="42,28,18,12" data-colors="#3b82f6,#009e73,#f59e0b,#d55e00" data-unit="%"></div>
 
 ### 1. 펜션/풀빌라 (1박 기준 80,000~200,000원)
 
@@ -107,7 +107,7 @@ noindex: true
 
 ## 2026년 제주도 가족 여행 실제 예산 분석
 
-<div class="chart-bar" data-orient="vertical" data-title="4인 가족 3박 4일 여행 예산 비교" data-labels="예산절감형,표준형,프리미엄형" data-values="850000,1450000,2100000" data-colors="#10b981,#3b82f6,#f59e0b" data-unit="원"></div>
+<div class="chart-bar" data-orient="vertical" data-title="4인 가족 3박 4일 여행 예산 비교" data-labels="예산절감형,표준형,프리미엄형" data-values="850000,1450000,2100000" data-colors="#009e73,#3b82f6,#f59e0b" data-unit="원"></div>
 
 ### 예산절감형 (약 850,000원/3박 4일)
 
@@ -168,7 +168,7 @@ noindex: true
 
 제주도 내 여행이라도 예기치 않은 응급 상황에 대비해야 합니다. [2026년 여행자 보험 완벽 비교: 여행 스타일별 필수 보장 가이드](/blog/2026-02-24-travel-travel-insurance-comparison-guide-2026/)에서 확인하신 대로, 최소한 질병, 상해, 물품손해에 대한 보장이 포함된 여행 보험에 가입하세요.
 
-<div class="chart-progress" data-title="여행 준비도 체크" data-labels="여권/신분증,응급약,짐꾸리기,숙소확인" data-values="100,85,90,95" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444" data-max="100" data-unit="%"></div>
+<div class="chart-progress" data-title="여행 준비도 체크" data-labels="여권/신분증,응급약,짐꾸리기,숙소확인" data-values="100,85,90,95" data-colors="#009e73,#3b82f6,#f59e0b,#d55e00" data-max="100" data-unit="%"></div>
 
 ---
 

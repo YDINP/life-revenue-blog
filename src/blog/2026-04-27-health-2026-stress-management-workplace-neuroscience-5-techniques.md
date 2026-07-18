@@ -105,7 +105,7 @@ noindex: true
 
 ### 스트레스 해소법 효과 비교
 
-<div class="chart-bar" data-orient="vertical" data-title="즉각적 스트레스 해소법 효과 비교" data-labels="박스 호흡,감각접근,근육이완,시각화,산책" data-values="90,78,82,75,88" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444,#8b5cf6" data-unit="효과도"></div>
+<div class="chart-bar" data-orient="vertical" data-title="즉각적 스트레스 해소법 효과 비교" data-labels="박스 호흡,감각접근,근육이완,시각화,산책" data-values="90,78,82,75,88" data-colors="#009e73,#3b82f6,#f59e0b,#d55e00,#8b5cf6" data-unit="효과도"></div>
 
 ### 한 주간 실행 루틴 (실전 가이드)
 

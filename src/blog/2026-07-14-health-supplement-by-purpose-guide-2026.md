@@ -32,7 +32,7 @@ faq:
 
 시장이 종합비타민 같은 막연한 소비에서 **눈·관절 등 목적성 원료** 중심으로 재편되고 있습니다. 실제로 눈 건강·관절 건강 카테고리의 성장률이 두드러집니다.
 
-<div class="chart-bar" data-orient="vertical" data-title="목적별 건기식 관심 성장률 (2026, 참고용)" data-labels="눈 건강,관절 건강,프로바이오틱스,종합비타민" data-values="8.3,6.7,3,2" data-colors="#3b82f6,#10b981,#f59e0b,#94a3b8" data-unit="%"></div>
+<div class="chart-bar" data-orient="vertical" data-title="목적별 건기식 관심 성장률 (2026, 참고용)" data-labels="눈 건강,관절 건강,프로바이오틱스,종합비타민" data-values="8.3,6.7,3,2" data-colors="#3b82f6,#009e73,#f59e0b,#94a3b8" data-unit="%"></div>
 
 <div class="callout-info">💡 핵심: 다 먹으려 하지 말고, <b>내 생활에서 가장 아쉬운 한두 가지</b>부터. 스크린 많이 보면 눈, 소화·면역이면 장, 운동하면 회복, 무릎 신경 쓰이면 관절.</div>
 

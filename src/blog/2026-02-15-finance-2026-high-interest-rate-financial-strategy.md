@@ -115,7 +115,7 @@ noindex: true
 
 기대수익: 연 5.5~7% | 위험도: 높음
 
-<div class="chart-versus" data-title="정기예금 vs 채권 vs 주식" data-name-a="정기예금" data-name-b="채권" data-color-a="#3b82f6" data-color-b="#10b981" data-items='[{"label":"수익률","a":3.8,"b":3.5},{"label":"안정성","a":95,"b":75},{"label":"인플레이션 대응력","a":40,"b":60},{"label":"유동성","a":80,"b":50}]'></div>
+<div class="chart-versus" data-title="정기예금 vs 채권 vs 주식" data-name-a="정기예금" data-name-b="채권" data-color-a="#3b82f6" data-color-b="#009e73" data-items='[{"label":"수익률","a":3.8,"b":3.5},{"label":"안정성","a":95,"b":75},{"label":"인플레이션 대응력","a":40,"b":60},{"label":"유동성","a":80,"b":50}]'></div>
 
 ## 2026년 실전 투자 팁: 금리 변화에 대응하기
 
@@ -135,7 +135,7 @@ noindex: true
 
 분기마다(3개월마다) 포트폴리오를 점검하여 원래 목표 비중으로 돌아오도록 조정합니다. 예를 들어 주식이 50%에서 55%로 증가했다면, 일부를 매도해 채권을 늘리는 식입니다. 이는 "높을 때 팔고 낮을 때 산다"는 기본 원칙을 자동으로 실행하는 방법입니다.
 
-<div class="chart-donut" data-title="2026년 추천 자산배분 (표준형)" data-labels="정기예금,채권펀드,주식펀드" data-values="20,30,50" data-colors="#3b82f6,#10b981,#f59e0b" data-unit="%"></div>
+<div class="chart-donut" data-title="2026년 추천 자산배분 (표준형)" data-labels="정기예금,채권펀드,주식펀드" data-values="20,30,50" data-colors="#3b82f6,#009e73,#f59e0b" data-unit="%"></div>
 
 ## 2026년 주의해야 할 투자 함정
 

@@ -141,7 +141,7 @@ noindex: true
 
 아래 차트는 위 5가지 방법을 모두 적용했을 때 기대할 수 있는 1주일 단위 개선 효과입니다.
 
-<div class="chart-bar" data-title="수면 개선 효과 (8주 프로그램 전후 개선폭)" data-labels="수면 잠복기 단축(분),수면 효율 향상(%p),야간 각성 감소(회),숙면 시간 증가(분)" data-values="47,12,2,58" data-colors="#10b981,#3b82f6,#ef4444,#f59e0b" data-unit=""></div>
+<div class="chart-bar" data-title="수면 개선 효과 (8주 프로그램 전후 개선폭)" data-labels="수면 잠복기 단축(분),수면 효율 향상(%p),야간 각성 감소(회),숙면 시간 증가(분)" data-values="47,12,2,58" data-colors="#009e73,#3b82f6,#d55e00,#f59e0b" data-unit=""></div>
 
 이는 모든 5가지를 함께 적용한 경우의 평균값입니다. 하나씩 추가할 때마다 누적 효과가 발생하므로, 1~2주 내에 뚜렷한 변화를 경험할 수 있습니다.
 

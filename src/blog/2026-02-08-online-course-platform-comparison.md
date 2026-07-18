@@ -51,7 +51,7 @@ noindex: true
 
 ## 2. 상세 비교
 
-<div class="chart-progress" data-title="주요 지표 비교 (100점 만점)" data-labels="강의수,한국어지원,가격,커뮤니티,모바일앱" data-values="85,95,70,80,90" data-colors="#ec4899,#3b82f6,#10b981,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="주요 지표 비교 (100점 만점)" data-labels="강의수,한국어지원,가격,커뮤니티,모바일앱" data-values="85,95,70,80,90" data-colors="#ec4899,#3b82f6,#009e73,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
 
 ### 가격 비교
 

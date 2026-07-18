@@ -71,7 +71,7 @@ noindex: true
 
 투자 기간이 길수록 변동성이 큰 자산에 더 많이 배분할 수 있습니다. 충분한 시간이 있으면 단기 하락을 회복할 여유가 있기 때문입니다.
 
-<div class="chart-bar" data-orient="vertical" data-title="투자 기간별 권장 주식 비중" data-labels="1년 이하,1~3년,3~5년,5~10년,10년 이상" data-values="10,20,40,60,80" data-colors="#ef4444,#f59e0b,#3b82f6,#10b981,#06b6d4" data-unit="%"></div>
+<div class="chart-bar" data-orient="vertical" data-title="투자 기간별 권장 주식 비중" data-labels="1년 이하,1~3년,3~5년,5~10년,10년 이상" data-values="10,20,40,60,80" data-colors="#d55e00,#f59e0b,#3b82f6,#009e73,#06b6d4" data-unit="%"></div>
 
 다만 이는 통계적 기준일 뿐, 개인의 심리적 안정감도 중요합니다. 주식이 30% 떨어졌을 때 공황 매도를 하지 않을 수 있는 비중이 당신의 적정 비중입니다.
 

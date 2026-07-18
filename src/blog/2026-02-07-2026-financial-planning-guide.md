@@ -45,7 +45,7 @@ noindex: true
 
 ## 2. 재테크 단계별 로드맵
 
-<div class="chart-progress" data-title="재테크 단계별 우선순위" data-labels="비상금,부채상환,연금저축,투자,부동산" data-values="95,90,80,70,60" data-colors="#10b981,#3b82f6,#8b5cf6,#f59e0b,#ef4444" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="재테크 단계별 우선순위" data-labels="비상금,부채상환,연금저축,투자,부동산" data-values="95,90,80,70,60" data-colors="#009e73,#3b82f6,#8b5cf6,#f59e0b,#d55e00" data-max="100" data-unit="점"></div>
 
 ### 1단계: 비상금 마련
 
@@ -70,7 +70,7 @@ noindex: true
 
 ## 3. 2026년 추천 투자 전략
 
-<div class="chart-radar" data-title="투자 상품 비교 분석" data-items='[{"name":"ETF","scores":[{"label":"안정성","value":75,"color":"#3b82f6"},{"label":"수익성","value":70,"color":"#3b82f6"},{"label":"유동성","value":85,"color":"#3b82f6"},{"label":"세제혜택","value":60,"color":"#3b82f6"},{"label":"접근성","value":90,"color":"#3b82f6"}]},{"name":"예적금","scores":[{"label":"안정성","value":95,"color":"#10b981"},{"label":"수익성","value":40,"color":"#10b981"},{"label":"유동성","value":90,"color":"#10b981"},{"label":"세제혜택","value":50,"color":"#10b981"},{"label":"접근성","value":100,"color":"#10b981"}]},{"name":"연금저축","scores":[{"label":"안정성","value":80,"color":"#8b5cf6"},{"label":"수익성","value":65,"color":"#8b5cf6"},{"label":"유동성","value":50,"color":"#8b5cf6"},{"label":"세제혜택","value":95,"color":"#8b5cf6"},{"label":"접근성","value":85,"color":"#8b5cf6"}]}]'></div>
+<div class="chart-radar" data-title="투자 상품 비교 분석" data-items='[{"name":"ETF","scores":[{"label":"안정성","value":75,"color":"#3b82f6"},{"label":"수익성","value":70,"color":"#3b82f6"},{"label":"유동성","value":85,"color":"#3b82f6"},{"label":"세제혜택","value":60,"color":"#3b82f6"},{"label":"접근성","value":90,"color":"#3b82f6"}]},{"name":"예적금","scores":[{"label":"안정성","value":95,"color":"#009e73"},{"label":"수익성","value":40,"color":"#009e73"},{"label":"유동성","value":90,"color":"#009e73"},{"label":"세제혜택","value":50,"color":"#009e73"},{"label":"접근성","value":100,"color":"#009e73"}]},{"name":"연금저축","scores":[{"label":"안정성","value":80,"color":"#8b5cf6"},{"label":"수익성","value":65,"color":"#8b5cf6"},{"label":"유동성","value":50,"color":"#8b5cf6"},{"label":"세제혜택","value":95,"color":"#8b5cf6"},{"label":"접근성","value":85,"color":"#8b5cf6"}]}]'></div>
 
 ### ETF (상장지수펀드)
 

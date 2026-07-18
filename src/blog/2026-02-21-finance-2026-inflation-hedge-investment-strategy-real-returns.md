@@ -135,9 +135,9 @@ noindex: true
 
 [2026년 생애주기별 자산 배분 전략](https://blog.example.com/2026-02-16-finance-asset-allocation-by-age-2026-portfolio-strategy/)과 함께 자신의 연령대별 맞춤형 포트폴리오를 설계하면, 더욱 체계적인 인플레이션 대응이 가능합니다. 또한 [2026년 금리 역전 시대 재테크](https://blog.example.com/2026-02-15-finance-2026-high-interest-rate-financial-strategy/)를 참고하여 금리 변동 시나리오에 미리 대비하는 것도 좋은 전략입니다.
 
-<div class="chart-bar" data-title="자산군별 10년 누적 실질 수익률" data-labels="물가연동채권,고배당 주식 ETF,부동산 임대,글로벌 배당주" data-values="15,55,20,60" data-colors="#3b82f6,#10b981,#f59e0b,#ef4444" data-unit="%"></div>
+<div class="chart-bar" data-title="자산군별 10년 누적 실질 수익률" data-labels="물가연동채권,고배당 주식 ETF,부동산 임대,글로벌 배당주" data-values="15,55,20,60" data-colors="#3b82f6,#009e73,#f59e0b,#d55e00" data-unit="%"></div>
 
-<div class="chart-versus" data-title="명목 수익률 vs 실질 수익률" data-name-a="명목 수익률" data-name-b="실질 수익률" data-color-a="#3b82f6" data-color-b="#10b981" data-items='[{"label":"물가연동채권","a":45,"b":15},{"label":"고배당 주식","a":85,"b":55},{"label":"부동산 임대","a":50,"b":20}]'></div>
+<div class="chart-versus" data-title="명목 수익률 vs 실질 수익률" data-name-a="명목 수익률" data-name-b="실질 수익률" data-color-a="#3b82f6" data-color-b="#009e73" data-items='[{"label":"물가연동채권","a":45,"b":15},{"label":"고배당 주식","a":85,"b":55},{"label":"부동산 임대","a":50,"b":20}]'></div>
 
 ## 참고 자료
 

@@ -44,7 +44,7 @@ noindex: true
 
 ### 주요 AI 기반 시간 관리 앱의 기능 비교
 
-<div class="chart-radar" data-title="2026년 인기 시간 관리 앱 종합 평가" data-items='[{"name":"Google Calendar AI","scores":[{"label":"AI 자동화","value":9,"color":"#4f46e5"},{"label":"협업 기능","value":9,"color":"#10b981"},{"label":"사용성","value":8,"color":"#f59e0b"},{"label":"가격","value":9,"color":"#ef4444"}]},{"name":"Notion AI","scores":[{"label":"AI 자동화","value":8,"color":"#4f46e5"},{"label":"협업 기능","value":9,"color":"#10b981"},{"label":"사용성","value":7,"color":"#f59e0b"},{"label":"가격","value":7,"color":"#ef4444"}]},{"name":"TimeBloc(한국산)","scores":[{"label":"AI 자동화","value":8,"color":"#4f46e5"},{"label":"협업 기능","value":7,"color":"#10b981"},{"label":"사용성","value":9,"color":"#f59e0b"},{"label":"가격","value":8,"color":"#ef4444"}]}]'></div>
+<div class="chart-radar" data-title="2026년 인기 시간 관리 앱 종합 평가" data-items='[{"name":"Google Calendar AI","scores":[{"label":"AI 자동화","value":9,"color":"#4f46e5"},{"label":"협업 기능","value":9,"color":"#009e73"},{"label":"사용성","value":8,"color":"#f59e0b"},{"label":"가격","value":9,"color":"#d55e00"}]},{"name":"Notion AI","scores":[{"label":"AI 자동화","value":8,"color":"#4f46e5"},{"label":"협업 기능","value":9,"color":"#009e73"},{"label":"사용성","value":7,"color":"#f59e0b"},{"label":"가격","value":7,"color":"#d55e00"}]},{"name":"TimeBloc(한국산)","scores":[{"label":"AI 자동화","value":8,"color":"#4f46e5"},{"label":"협업 기능","value":7,"color":"#009e73"},{"label":"사용성","value":9,"color":"#f59e0b"},{"label":"가격","value":8,"color":"#d55e00"}]}]'></div>
 
 Google Calendar의 새로운 AI 기능 (2026년 2월 업데이트)
 - 자동 일정 조율 기능: 참석자들의 선호 시간대를 학습해 최적의 회의 시간 제안
@@ -100,7 +100,7 @@ Cal Newport의 "Deep Work" 이론을 2026년 현실에 맞게 재해석하면:
 
 ### 3. 피크 시간 가설(Peak Hours Theory) 활용
 
-<div class="chart-progress" data-title="2026년 직장인 일일 생산성 지수" data-labels="오전 9-10시,오전 11-12시,오후 2-3시,오후 4-5시,저녁 6-7시" data-values="78,85,68,72,45" data-colors="#4f46e5,#10b981,#f59e0b,#ef4444,#8b5cf6" data-max="100" data-unit="%"></div>
+<div class="chart-progress" data-title="2026년 직장인 일일 생산성 지수" data-labels="오전 9-10시,오전 11-12시,오후 2-3시,오후 4-5시,저녁 6-7시" data-values="78,85,68,72,45" data-colors="#4f46e5,#009e73,#f59e0b,#d55e00,#8b5cf6" data-max="100" data-unit="%"></div>
 
 위 데이터는 한국 직장인 5,000명을 추적한 결과입니다. 오전 11~12시가 최고의 집중력을 보이므로, 이 시간에 가장 어려운 작업을 배정해야 합니다.
 
@@ -154,7 +154,7 @@ Cal Newport의 "Deep Work" 이론을 2026년 현실에 맞게 재해석하면:
 
 ### 2026년 생산성 저해 요소 TOP 5
 
-<div class="chart-bar" data-orient="vertical" data-title="시간 낭비의 주요 원인 (직장인 기준)" data-labels="문맥 전환,불필요한 회의,이메일/메신저,소셜미디어,계획 부족" data-values="32,28,18,15,7" data-colors="#ef4444,#f59e0b,#3b82f6,#8b5cf6,#10b981" data-unit="%"></div>
+<div class="chart-bar" data-orient="vertical" data-title="시간 낭비의 주요 원인 (직장인 기준)" data-labels="문맥 전환,불필요한 회의,이메일/메신저,소셜미디어,계획 부족" data-values="32,28,18,15,7" data-colors="#d55e00,#f59e0b,#3b82f6,#8b5cf6,#009e73" data-unit="%"></div>
 
 문맥 전환(Context Switching) 해결책
 - 하루를 "모드"로 나누기: 창의 모드, 분석 모드, 협업 모드

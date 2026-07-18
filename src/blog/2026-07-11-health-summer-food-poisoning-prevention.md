@@ -40,7 +40,7 @@ faq:
 
 식중독균은 5~57도의 '위험 온도대'에서 폭발적으로 늘어납니다. 여름은 실내외 기온이 이 구간에 오래 머물러, 음식을 조금만 방치해도 세균 수가 위험 수준에 도달합니다. 특히 기온 32도 이상에서는 상온 방치 허용 시간이 2시간에서 1시간으로 줄어듭니다.
 
-<div class="chart-bar" data-orient="vertical" data-title="월별 식중독 환자 발생 추이(상대치)" data-labels="5월,6월,7월,8월,9월" data-values="45,70,92,100,74" data-colors="#10b981,#f59e0b,#f97316,#ef4444,#f59e0b" data-unit="%"></div>
+<div class="chart-bar" data-orient="vertical" data-title="월별 식중독 환자 발생 추이(상대치)" data-labels="5월,6월,7월,8월,9월" data-values="45,70,92,100,74" data-colors="#009e73,#f59e0b,#f97316,#d55e00,#f59e0b" data-unit="%"></div>
 
 - 7~8월 정점: 고온다습으로 세균 번식 최적 조건
 - 9월까지 지속: 늦더위와 잔여 습기로 방심 금물
@@ -93,7 +93,7 @@ faq:
 3. 구분하기: 날음식과 익힌 음식의 도마·칼 분리(교차오염 차단)
 4. 냉장하기: 조리 후 신속히 냉장, 재가열은 완전히
 
-<div class="chart-progress" data-title="위생수칙별 식중독 예방 기여도" data-labels="완전 가열,손 씻기,냉장 보관,도구 구분" data-values="88,82,80,72" data-colors="#ef4444,#2563eb,#10b981,#f59e0b" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="위생수칙별 식중독 예방 기여도" data-labels="완전 가열,손 씻기,냉장 보관,도구 구분" data-values="88,82,80,72" data-colors="#d55e00,#2563eb,#009e73,#f59e0b" data-max="100" data-unit="점"></div>
 
 ---
 

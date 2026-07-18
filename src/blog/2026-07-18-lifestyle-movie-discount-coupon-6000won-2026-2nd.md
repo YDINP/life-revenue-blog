@@ -25,7 +25,7 @@ faq:
 
 정부 영화 관람료 할인권 2차 물량 **205만 장**이 2026년 7월 8일 오전 10시부터 배포되기 시작했습니다. 1차 225만 장에 이어 이번 2차까지 합치면 **총 450만 장** 규모입니다.
 
-<div class="chart-bar" data-orient="vertical" data-title="영화 할인권 배포 물량 (1차 vs 2차)" data-labels="1차,2차" data-values="225,205" data-colors="#8b5cf6,#10b981" data-unit="만 장"></div>
+<div class="chart-bar" data-orient="vertical" data-title="영화 할인권 배포 물량 (1차 vs 2차)" data-labels="1차,2차" data-values="225,205" data-colors="#8b5cf6,#009e73" data-unit="만 장"></div>
 
 오늘(7월 18일)은 2차 배포가 시작된 지 열흘이 지난 시점입니다. 별도의 마감일이 공지되지 않아도, **선착순 예산 소진 방식**인 만큼 언제 끝날지 알 수 없습니다.
 

@@ -90,7 +90,7 @@ noindex: true
 
 ## 직업·목표별 최적 온라인 강의 선택 로드맵
 
-<div class="chart-versus" data-title="플랫폼별 추천 학습 목표" data-name-a="커리어 전환" data-name-b="취미·교양" data-color-a="#3b82f6" data-color-b="#10b981" data-items='[{"label":"심화도","a":90,"b":60},{"label":"실무성","a":95,"b":50},{"label":"자유도","a":75,"b":85},{"label":"가성비","a":70,"b":90}]'></div>
+<div class="chart-versus" data-title="플랫폼별 추천 학습 목표" data-name-a="커리어 전환" data-name-b="취미·교양" data-color-a="#3b82f6" data-color-b="#009e73" data-items='[{"label":"심화도","a":90,"b":60},{"label":"실무성","a":95,"b":50},{"label":"자유도","a":75,"b":85},{"label":"가성비","a":70,"b":90}]'></div>
 
 ### 커리어 전환을 목표로 할 때
 데이터 분석가, 개발자, 마케터 등 새로운 직무로의 전환을 원한다면, 단순한 지식 습득보다는 포트폴리오를 만들 수 있는 심화 과정을 선택해야 합니다.
@@ -170,7 +170,7 @@ noindex: true
 
 ## 직무별 구체적 강의 선택 예시
 
-<div class="chart-bar" data-orient="vertical" data-title="직무별 평균 학습 시간 및 난이도" data-labels="개발자,데이터분석,마케터,디자이너,PM" data-values="150,120,80,100,90" data-colors="#3b82f6,#10b981,#f59e0b,#ef4444,#8b5cf6" data-unit="시간"></div>
+<div class="chart-bar" data-orient="vertical" data-title="직무별 평균 학습 시간 및 난이도" data-labels="개발자,데이터분석,마케터,디자이너,PM" data-values="150,120,80,100,90" data-colors="#3b82f6,#009e73,#f59e0b,#d55e00,#8b5cf6" data-unit="시간"></div>
 
 ### 개발자 커리어 전환을 원한다면
 최소 150~200시간 이상의 심화 프로젝트 과정을 선택하세요. 언어별로:

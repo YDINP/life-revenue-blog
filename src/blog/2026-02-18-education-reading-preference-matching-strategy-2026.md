@@ -143,7 +143,7 @@ noindex: true
 
 아래 차트는 각 독서 유형이 실패하기 쉬운 책의 특징을 보여줍니다.
 
-<div class="chart-bar" data-title="독서 유형별 중단율 높은 책 특징" data-labels="과도한 이론,느린 전개,추상적 표현,실용성 부족,예측 가능한 전개" data-values="45,38,52,48,35" data-colors="#ef4444,#f97316,#f59e0b,#eab308,#84cc16" data-unit="%"></div>
+<div class="chart-bar" data-title="독서 유형별 중단율 높은 책 특징" data-labels="과도한 이론,느린 전개,추상적 표현,실용성 부족,예측 가능한 전개" data-values="45,38,52,48,35" data-colors="#d55e00,#f97316,#f59e0b,#eab308,#84cc16" data-unit="%"></div>
 
 당신의 성향이 분석형이라면, 추상적 표현(52%)이 높은 감성 에세이는 피하세요. 감정형이라면 과도한 이론(45%)이 있는 학술서는 처음부터 선택하지 말 것입니다.
 

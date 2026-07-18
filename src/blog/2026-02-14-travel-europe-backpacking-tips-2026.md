@@ -57,7 +57,7 @@ noindex: true
 
 ## 예산 최적화: 지역별 생활비 현황
 
-<div class="chart-bar" data-title="2026년 유럽 주요 도시 일일 평균 생활비 비교" data-labels="부쿠레슈티,소피아,바르샤바,브라티슬라바,프라하,부다페스트,리스본,로마,바르셀로나" data-values="35,38,42,45,48,52,58,65,72" data-colors="#10b981,#10b981,#10b981,#3b82f6,#3b82f6,#3b82f6,#f59e0b,#f59e0b,#ef4444" data-unit="€"></div>
+<div class="chart-bar" data-title="2026년 유럽 주요 도시 일일 평균 생활비 비교" data-labels="부쿠레슈티,소피아,바르샤바,브라티슬라바,프라하,부다페스트,리스본,로마,바르셀로나" data-values="35,38,42,45,48,52,58,65,72" data-colors="#009e73,#009e73,#009e73,#3b82f6,#3b82f6,#3b82f6,#f59e0b,#f59e0b,#d55e00" data-unit="€"></div>
 
 2026년 유럽의 인플레이션은 안정화되었지만, 지역별 물가 격차는 더욱 벌어지고 있습니다. 동유럽 국가들은 여전히 배낭여행객의 천국이며, 서유럽은 기존보다 10-15% 물가가 올랐습니다.
 
@@ -82,7 +82,7 @@ noindex: true
 - Couchsurfing: 무료 숙박, 현지 문화 체험 (신뢰도 높은 호스트 선택 필수)
 - 국가별 로컬 플랫폼: 스페인 Fotocasa, 이탈리아 Immobiliare.it 등 게스트하우스 직접 연락
 
-<div class="chart-progress" data-title="숙박 유형별 가성비 평가(1박 기준)" data-labels="5성 호텔,3성 호텔,에어비앤비,게스트하우스,호스텔" data-values="45,32,58,28,18" data-colors="#ef4444,#f59e0b,#f59e0b,#3b82f6,#10b981" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="숙박 유형별 가성비 평가(1박 기준)" data-labels="5성 호텔,3성 호텔,에어비앤비,게스트하우스,호스텔" data-values="45,32,58,28,18" data-colors="#d55e00,#f59e0b,#f59e0b,#3b82f6,#009e73" data-max="100" data-unit="점"></div>
 
 호스텔의 가성비가 여전히 최고이며, 2026년 들어 품질도 크게 개선되었습니다. 고급 호스텔들은 개인 화장실, 조용한 객실 옵션까지 제공합니다.
 
@@ -153,7 +153,7 @@ noindex: true
 - 국내 신용카드 + 해외 수수료 환급 상품 (삼성카드, 현대카드 등)
 - Google Pay, Apple Pay: 유럽의 95% 결제처 지원
 
-<div class="chart-versus" data-title="해외 송금/결제 수단 비교" data-name-a="Wise" data-name-b="국내 신용카드" data-color-a="#3b82f6" data-color-b="#10b981" data-items='[{"label":"환율","a":92,"b":78},{"label":"수수료","a":95,"b":75},{"label":"편의성","a":90,"b":85},{"label":"사용처","a":88,"b":92}]'></div>
+<div class="chart-versus" data-title="해외 송금/결제 수단 비교" data-name-a="Wise" data-name-b="국내 신용카드" data-color-a="#3b82f6" data-color-b="#009e73" data-items='[{"label":"환율","a":92,"b":78},{"label":"수수료","a":95,"b":75},{"label":"편의성","a":90,"b":85},{"label":"사용처","a":88,"b":92}]'></div>
 
 Wise는 환율과 수수료에서 압도적이지만, 국내 신용카드도 해외 수수료 환급 혜택이 있어 종합적으로는 비슷합니다.
 

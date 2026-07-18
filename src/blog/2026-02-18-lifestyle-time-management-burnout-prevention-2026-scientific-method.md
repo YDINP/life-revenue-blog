@@ -121,7 +121,7 @@ noindex: true
 
 ## 2026년 시간 관리 도구 추천: 효과성 비교
 
-<div class="chart-versus" data-title="시간 관리 도구 효과성 비교" data-name-a="전통 To-Do List" data-name-b="에너지 기반 스케줄링" data-color-a="#ef4444" data-color-b="#10b981" data-items='[{"label":"학습곡선","a":85,"b":60},{"label":"효과지속성","a":45,"b":88},{"label":"번아웃예방","a":35,"b":92},{"label":"실제 시간절약","a":30,"b":85}]'></div>
+<div class="chart-versus" data-title="시간 관리 도구 효과성 비교" data-name-a="전통 To-Do List" data-name-b="에너지 기반 스케줄링" data-color-a="#d55e00" data-color-b="#009e73" data-items='[{"label":"학습곡선","a":85,"b":60},{"label":"효과지속성","a":45,"b":88},{"label":"번아웃예방","a":35,"b":92},{"label":"실제 시간절약","a":30,"b":85}]'></div>
 
 ## 주별 시간 관리 체크리스트
 

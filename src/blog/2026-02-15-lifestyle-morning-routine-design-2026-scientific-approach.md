@@ -121,7 +121,7 @@ noindex: true
 
 ## 모닝 루틴 효과 비교 분석
 
-<div class="chart-radar" data-title="모닝 루틴 실천 여부에 따른 효과 비교" data-items='[{"name":"루틴 실천군 (일관되게 5단계 실천)","scores":[{"label":"집중력","value":8.5,"color":"#10b981"},{"label":"에너지","value":8.2,"color":"#3b82f6"},{"label":"스트레스","value":7.8,"color":"#f59e0b"},{"label":"생산성","value":8.7,"color":"#ef4444"}]},{"name":"루틴 미실천군","scores":[{"label":"집중력","value":5.2,"color":"#cbd5e1"},{"label":"에너지","value":4.8,"color":"#cbd5e1"},{"label":"스트레스","value":6.1,"color":"#cbd5e1"},{"label":"생산성","value":5.0,"color":"#cbd5e1"}]}]'></div>
+<div class="chart-radar" data-title="모닝 루틴 실천 여부에 따른 효과 비교" data-items='[{"name":"루틴 실천군 (일관되게 5단계 실천)","scores":[{"label":"집중력","value":8.5,"color":"#009e73"},{"label":"에너지","value":8.2,"color":"#3b82f6"},{"label":"스트레스","value":7.8,"color":"#f59e0b"},{"label":"생산성","value":8.7,"color":"#d55e00"}]},{"name":"루틴 미실천군","scores":[{"label":"집중력","value":5.2,"color":"#cbd5e1"},{"label":"에너지","value":4.8,"color":"#cbd5e1"},{"label":"스트레스","value":6.1,"color":"#cbd5e1"},{"label":"생산성","value":5.0,"color":"#cbd5e1"}]}]'></div>
 
 ## 나에게 맞는 모닝 루틴 맞춤형 설계
 

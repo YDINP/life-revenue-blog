@@ -121,7 +121,7 @@ noindex: true
 
 ## 3가지 타입별 모닝 루틴 비교 분석
 
-<div class="chart-versus" data-title="직장인 vs 프리랜서 vs 학생 모닝 루틴 효율성" data-name-a="직장인" data-name-b="프리랜서" data-color-a="#3b82f6" data-color-b="#10b981" data-items='[{"label":"시간 효율성","a":95,"b":70},{"label":"집중력 유지","a":80,"b":90},{"label":"스트레스 감소","a":75,"b":85},{"label":"실행 난이도","a":85,"b":65}]'></div>
+<div class="chart-versus" data-title="직장인 vs 프리랜서 vs 학생 모닝 루틴 효율성" data-name-a="직장인" data-name-b="프리랜서" data-color-a="#3b82f6" data-color-b="#009e73" data-items='[{"label":"시간 효율성","a":95,"b":70},{"label":"집중력 유지","a":80,"b":90},{"label":"스트레스 감소","a":75,"b":85},{"label":"실행 난이도","a":85,"b":65}]'></div>
 
 ## 모닝 루틴 성공의 5가지 과학적 법칙
 
@@ -170,7 +170,7 @@ noindex: true
 
 ## 모닝 루틴 실패 시 재설계 체크리스트
 
-<div class="chart-progress" data-title="모닝 루틴 성공 진단" data-labels="실행 난이도,지속성,효과 체감" data-values="70,60,80" data-colors="#3b82f6,#f59e0b,#10b981" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="모닝 루틴 성공 진단" data-labels="실행 난이도,지속성,효과 체감" data-values="70,60,80" data-colors="#3b82f6,#f59e0b,#009e73" data-max="100" data-unit="점"></div>
 
 아래 중 2개 이상 해당되면 루틴을 재설계하세요:
 

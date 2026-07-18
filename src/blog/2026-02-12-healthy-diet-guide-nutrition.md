@@ -72,13 +72,13 @@ noindex: true
 
 ## 건강한 식단의 영양 구성 비율
 
-<div class="chart-donut" data-title="하루 영양소 구성 비율" data-labels="탄수화물,단백질,지방" data-values="50,25,25" data-colors="#10b981,#3b82f6,#f59e0b" data-unit="%"></div>
+<div class="chart-donut" data-title="하루 영양소 구성 비율" data-labels="탄수화물,단백질,지방" data-values="50,25,25" data-colors="#009e73,#3b82f6,#f59e0b" data-unit="%"></div>
 
 건강한 식단은 위와 같은 비율로 구성되어야 합니다. 탄수화물은 전체 칼로리의 50%, 단백질은 25%, 지방은 25% 정도를 차지하는 것이 이상적입니다.
 
 ## 주요 영양소별 식품 점수 평가
 
-<div class="chart-progress" data-title="주요 식품의 영양 점수" data-labels="연어,브로콜리,계란,통곡물,베리류" data-values="95,92,90,88,85" data-colors="#f59e0b,#10b981,#3b82f6,#ef4444,#8b5cf6" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="주요 식품의 영양 점수" data-labels="연어,브로콜리,계란,통곡물,베리류" data-values="95,92,90,88,85" data-colors="#f59e0b,#009e73,#3b82f6,#d55e00,#8b5cf6" data-max="100" data-unit="점"></div>
 
 위 차트는 건강한 식단에 포함되어야 할 주요 식품들의 영양가 점수입니다. 이 식품들을 우선적으로 선택하면 더욱 건강한 식단을 구성할 수 있습니다.
 

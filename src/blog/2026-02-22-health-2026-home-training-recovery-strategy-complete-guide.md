@@ -92,7 +92,7 @@ noindex: true
 
 ### 홈 트레이닝 운동자를 위한 수면 최적화 체크리스트
 
-<div class="chart-progress" data-title="수면 질 최적화 항목" data-labels="운동 후 카페인 제한,침실 온도 18~20도,야간 조명 차단,일정한 취침시간,운동 후 3시간 후 수면" data-values="95,88,82,75,70" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444,#8b5cf6" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="수면 질 최적화 항목" data-labels="운동 후 카페인 제한,침실 온도 18~20도,야간 조명 차단,일정한 취침시간,운동 후 3시간 후 수면" data-values="95,88,82,75,70" data-colors="#009e73,#3b82f6,#f59e0b,#d55e00,#8b5cf6" data-max="100" data-unit="점"></div>
 
 실행 우선순위:
 
@@ -105,7 +105,7 @@ noindex: true
 
 ## 회복 전략 실행 예시: 주간 계획표
 
-<div class="chart-bar" data-title="주간 회복 우선순위 (운동 강도에 따른 회복 필요도)" data-labels="월 (가슴)" data-values="85" data-colors="#ef4444"></div>
+<div class="chart-bar" data-title="주간 회복 우선순위 (운동 강도에 따른 회복 필요도)" data-labels="월 (가슴)" data-values="85" data-colors="#d55e00"></div>
 
 더 직관적인 실행 방안:
 
@@ -126,7 +126,7 @@ noindex: true
 
 ## 회복 전략의 실제 효과 비교
 
-<div class="chart-versus" data-title="회복 전략 적용 전후" data-name-a="회복 무시" data-name-b="회복 최적화" data-color-a="#ef4444" data-color-b="#10b981" data-items='[{"label":"월 근력 증가","a":3,"b":8},{"label":"근육 통증 지속","a":4,"b":2},{"label":"운동 수행도","a":6,"b":9},{"label":"부상 위험","a":8,"b":2},{"label":"호르몬 균형","a":5,"b":9}]'></div>
+<div class="chart-versus" data-title="회복 전략 적용 전후" data-name-a="회복 무시" data-name-b="회복 최적화" data-color-a="#d55e00" data-color-b="#009e73" data-items='[{"label":"월 근력 증가","a":3,"b":8},{"label":"근육 통증 지속","a":4,"b":2},{"label":"운동 수행도","a":6,"b":9},{"label":"부상 위험","a":8,"b":2},{"label":"호르몬 균형","a":5,"b":9}]'></div>
 
 ## 흔한 실수 3가지 피하기
 

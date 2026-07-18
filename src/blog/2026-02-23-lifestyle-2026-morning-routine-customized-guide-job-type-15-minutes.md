@@ -123,7 +123,7 @@ YouTube 운동 영상(5~10분) 또는 주변 산책으로 신체를 깨웁니다
 
 ## 유형별 모닝 루틴 비교
 
-<div class="chart-radar" data-title="유형별 모닝 루틴 점수 비교" data-items='[{"name":"직장인형","scores":[{"label":"시간 효율성","value":9,"color":"#10b981"},{"label":"집중력 향상","value":8,"color":"#3b82f6"},{"label":"스트레스 완화","value":7,"color":"#f59e0b"},{"label":"신체 활동","value":6,"color":"#ef4444"}]},{"name":"학생형","scores":[{"label":"시간 효율성","value":8,"color":"#10b981"},{"label":"집중력 향상","value":9,"color":"#3b82f6"},{"label":"스트레스 완화","value":8,"color":"#f59e0b"},{"label":"신체 활동","value":7,"color":"#ef4444"}]},{"name":"프리랜서형","scores":[{"label":"시간 효율성","value":7,"color":"#10b981"},{"label":"집중력 향상","value":8,"color":"#3b82f6"},{"label":"스트레스 완화","value":9,"color":"#f59e0b"},{"label":"신체 활동","value":8,"color":"#ef4444"}]}]'></div>
+<div class="chart-radar" data-title="유형별 모닝 루틴 점수 비교" data-items='[{"name":"직장인형","scores":[{"label":"시간 효율성","value":9,"color":"#009e73"},{"label":"집중력 향상","value":8,"color":"#3b82f6"},{"label":"스트레스 완화","value":7,"color":"#f59e0b"},{"label":"신체 활동","value":6,"color":"#d55e00"}]},{"name":"학생형","scores":[{"label":"시간 효율성","value":8,"color":"#009e73"},{"label":"집중력 향상","value":9,"color":"#3b82f6"},{"label":"스트레스 완화","value":8,"color":"#f59e0b"},{"label":"신체 활동","value":7,"color":"#d55e00"}]},{"name":"프리랜서형","scores":[{"label":"시간 효율성","value":7,"color":"#009e73"},{"label":"집중력 향상","value":8,"color":"#3b82f6"},{"label":"스트레스 완화","value":9,"color":"#f59e0b"},{"label":"신체 활동","value":8,"color":"#d55e00"}]}]'></div>
 
 ## 2026년 모닝 루틴 성공을 위한 5가지 실전 팁
 
@@ -157,7 +157,7 @@ YouTube 운동 영상(5~10분) 또는 주변 산책으로 신체를 깨웁니다
 
 ## 모닝 루틴 추적 앱 비교 (2026년 기준)
 
-<div class="chart-bar" data-title="인기 습관 추적 앱 사용자 만족도" data-labels="Habit Tracker,Done,Loop Habit,Streaks,Productive" data-values="78,82,75,85,80" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444,#8b5cf6" data-unit="점"></div>
+<div class="chart-bar" data-title="인기 습관 추적 앱 사용자 만족도" data-labels="Habit Tracker,Done,Loop Habit,Streaks,Productive" data-values="78,82,75,85,80" data-colors="#009e73,#3b82f6,#f59e0b,#d55e00,#8b5cf6" data-unit="점"></div>
 
 2026년 추천 앱: Streaks (iOS, 유료)는 하루 한 번의 체크인만으로 충분하며, 비주얼 피드백이 강력합니다. 무료 대안으로는 Done 또는 Loop Habit을 추천합니다.
 

@@ -50,7 +50,7 @@ faq:
 
 같은 국비지원이라도 과정 유형에 따라 실제 내 지갑에서 나가는 돈이 크게 다릅니다. 디지털 분야일수록 지원율이 높습니다.
 
-<div class="chart-bar" data-orient="vertical" data-title="훈련 과정별 본인 자부담 비율" data-labels="KDT 부트캠프,KDC 기초역량,국가기간·전략,일반 직업훈련" data-values="0,10,20,45" data-colors="#10b981,#2563eb,#f59e0b,#ef4444" data-unit="%"></div>
+<div class="chart-bar" data-orient="vertical" data-title="훈련 과정별 본인 자부담 비율" data-labels="KDT 부트캠프,KDC 기초역량,국가기간·전략,일반 직업훈련" data-values="0,10,20,45" data-colors="#009e73,#2563eb,#f59e0b,#d55e00" data-unit="%"></div>
 
 - KDT(K-디지털 트레이닝): 전액 국비 과정이 많은 실무 부트캠프
 - KDC(K-디지털 기초역량): 90% 지원 + 자부담 10%도 수료 시 환급 → 사실상 0원
@@ -100,7 +100,7 @@ KDC에서 배울 수 있는 대표 분야는 다음과 같습니다.
 
 국비 과정을 실제 수강한 직장인들이 체감한 효과를 지표화했습니다. 비용 부담 감소가 가장 큰 만족 요인입니다.
 
-<div class="chart-progress" data-title="국비지원 수강 후 체감 만족도" data-labels="비용 부담 감소,실무 역량,자격증 취득,커리어 자신감" data-values="88,74,68,72" data-colors="#2563eb,#10b981,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="국비지원 수강 후 체감 만족도" data-labels="비용 부담 감소,실무 역량,자격증 취득,커리어 자신감" data-values="88,74,68,72" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
 
 - 최고 만족: 비용 부담 감소 — 사실상 0원 학습의 힘
 - 높은 만족: 실무 역량과 커리어 자신감 — 업무 적용으로 이어짐

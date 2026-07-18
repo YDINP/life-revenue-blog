@@ -129,11 +129,11 @@ noindex: true
 
 ## 독서 습관 달성률 체크리스트
 
-<div class="chart-progress" data-title="월 10권 독서 달성을 위한 진행도 점검" data-labels="아침 독서,이동 시 오디오북,책 기록 시스템,월 3권 이상" data-values="85,72,90,88" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="월 10권 독서 달성을 위한 진행도 점검" data-labels="아침 독서,이동 시 오디오북,책 기록 시스템,월 3권 이상" data-values="85,72,90,88" data-colors="#009e73,#3b82f6,#f59e0b,#d55e00" data-max="100" data-unit="점"></div>
 
 ## 직장인 독서 습관 성공 사례: 월 독서량 비교
 
-<div class="chart-bar" data-orient="vertical" data-title="독서 습관 도입 전후 월 독서량 변화" data-labels="습관 도입 전,1개월 후,2개월 후,3개월 후" data-values="2,4,7,10" data-colors="#ef4444,#f59e0b,#3b82f6,#10b981" data-unit="권"></div>
+<div class="chart-bar" data-orient="vertical" data-title="독서 습관 도입 전후 월 독서량 변화" data-labels="습관 도입 전,1개월 후,2개월 후,3개월 후" data-values="2,4,7,10" data-colors="#d55e00,#f59e0b,#3b82f6,#009e73" data-unit="권"></div>
 
 이 차트는 본 전략을 실제로 따른 직장인 그룹(n=50, 2025년 11월-2026년 2월 추적)의 평균 독서량 변화입니다. 특히 2개월차부터 급격한 증가가 보이는데, 이는 습관이 뇌에 자동화되기 시작하는 시점과 일치합니다.
 

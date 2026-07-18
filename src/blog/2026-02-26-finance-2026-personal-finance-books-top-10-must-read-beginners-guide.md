@@ -175,7 +175,7 @@ noindex: true
 
 ## 도서 읽고 행동으로 옮기기
 
-<div class="chart-progress" data-title="재테크 학습 진행도" data-labels="독서 완료,개념 이해,실행 계획,실제 투자" data-values="100,85,60,35" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444" data-max="100" data-unit="%"></div>
+<div class="chart-progress" data-title="재테크 학습 진행도" data-labels="독서 완료,개념 이해,실행 계획,실제 투자" data-values="100,85,60,35" data-colors="#009e73,#3b82f6,#f59e0b,#d55e00" data-max="100" data-unit="%"></div>
 
 책을 읽는 것만으로는 부족합니다. "읽은 후 3일 내에 행동해야" 효과가 두 배입니다.
 

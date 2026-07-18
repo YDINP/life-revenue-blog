@@ -56,7 +56,7 @@ noindex: true
 
 동남아 물가는 2026년 들어 소폭 상승했지만, 여전히 한국의 1/3~1/4 수준입니다. 도시마다 생활 패턴에 따라 지출이 크게 달라지므로 정확한 데이터 분석이 중요합니다.
 
-<div class="chart-bar" data-orient="vertical" data-title="2026년 동남아 도시별 월간 생활비 (1인 기준, 숙소 제외)" data-labels="방콕,치앙마이,호치민,다낭,마닐라,세부" data-values="85,45,65,50,75,60" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444,#8b5cf6,#06b6d4" data-unit="만원"></div>
+<div class="chart-bar" data-orient="vertical" data-title="2026년 동남아 도시별 월간 생활비 (1인 기준, 숙소 제외)" data-labels="방콕,치앙마이,호치민,다낭,마닐라,세부" data-values="85,45,65,50,75,60" data-colors="#009e73,#3b82f6,#f59e0b,#d55e00,#8b5cf6,#06b6d4" data-unit="만원"></div>
 
 ### 태국
 
@@ -147,7 +147,7 @@ noindex: true
 
 환율 변동: 한국 원화 대비 현지 화폐 환율은 자주 변동합니다. 실시간 환율 앱을 설치해 놓고 큰 금액은 환율이 좋을 때 환전하세요.
 
-<div class="chart-progress" data-title="동남아 한 달 살기 준비도" data-labels="서류준비,재정계획,숙소예약,건강관리,정보수집" data-values="95,85,90,75,80" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444,#8b5cf6" data-max="100" data-unit="%"></div>
+<div class="chart-progress" data-title="동남아 한 달 살기 준비도" data-labels="서류준비,재정계획,숙소예약,건강관리,정보수집" data-values="95,85,90,75,80" data-colors="#009e73,#3b82f6,#f59e0b,#d55e00,#8b5cf6" data-max="100" data-unit="%"></div>
 
 ## 참고 자료
 

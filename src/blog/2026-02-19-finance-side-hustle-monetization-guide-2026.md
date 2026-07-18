@@ -52,7 +52,7 @@ noindex: true
 
 2026년 현재 직장인에게 가장 현실적인 부업들을 분석해봤습니다. 각 부업의 초기 투자 비용, 난이도, 월 예상 수익을 비교하면 다음과 같습니다.
 
-<div class="chart-bar" data-orient="vertical" data-title="부업 유형별 월 평균 수익" data-labels="온라인 강의,프리랜싱,블로그/유튜브,전자상거래,컨설팅" data-values="180,220,150,280,320" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444,#8b5cf6" data-unit="만원"></div>
+<div class="chart-bar" data-orient="vertical" data-title="부업 유형별 월 평균 수익" data-labels="온라인 강의,프리랜싱,블로그/유튜브,전자상거래,컨설팅" data-values="180,220,150,280,320" data-colors="#009e73,#3b82f6,#f59e0b,#d55e00,#8b5cf6" data-unit="만원"></div>
 
 ### 1. 온라인 강의 (초기 난이도: ★★☆)
 
@@ -113,7 +113,7 @@ noindex: true
 
 ## 부업 선택 기준: 당신에게 맞는 부업은?
 
-<div class="chart-versus" data-title="빠른 수익화 vs 장기 수익" data-name-a="단기 수익형" data-name-b="장기 수익형" data-color-a="#ef4444" data-color-b="#10b981" data-items='[{"label":"초기 난이도","a":25,"b":45},{"label":"수익화 기간","a":85,"b":20},{"label":"월 평균 수익","a":65,"b":70},{"label":"지속성","a":30,"b":85},{"label":"시간 효율성","a":75,"b":55}]'></div>
+<div class="chart-versus" data-title="빠른 수익화 vs 장기 수익" data-name-a="단기 수익형" data-name-b="장기 수익형" data-color-a="#d55e00" data-color-b="#009e73" data-items='[{"label":"초기 난이도","a":25,"b":45},{"label":"수익화 기간","a":85,"b":20},{"label":"월 평균 수익","a":65,"b":70},{"label":"지속성","a":30,"b":85},{"label":"시간 효율성","a":75,"b":55}]'></div>
 
 ### 당신의 상황별 추천 부업
 
@@ -196,7 +196,7 @@ noindex: true
 
 ### 시간 배분 전략
 
-<div class="chart-donut" data-title="일과 부업 시간 배분 (주 40시간 기준)" data-labels="본업,부업,휴식/개인시간" data-values="40,8,112" data-colors="#3b82f6,#10b981,#f59e0b" data-unit="시간"></div>
+<div class="chart-donut" data-title="일과 부업 시간 배분 (주 40시간 기준)" data-labels="본업,부업,휴식/개인시간" data-values="40,8,112" data-colors="#3b82f6,#009e73,#f59e0b" data-unit="시간"></div>
 
 권장 시간 배분:
 - 본업: 월~금 8시간 (40시간/주)

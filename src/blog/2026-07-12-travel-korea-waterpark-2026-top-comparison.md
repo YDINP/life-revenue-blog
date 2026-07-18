@@ -53,7 +53,7 @@ faq:
 
 워터파크 만족도는 결국 '얼마나 덜 붐비느냐'가 좌우합니다. 시기별 혼잡도를 체감 지표로 정리했습니다.
 
-<div class="chart-bar" data-orient="vertical" data-title="시기별 워터파크 혼잡도(체감)" data-labels="개장 첫주 평일,7월중순 평일,7월말 주말,8월초 주말,8월말 평일" data-values="35,45,80,100,50" data-colors="#10b981,#22c55e,#f59e0b,#ef4444,#06b6d4" data-unit="%"></div>
+<div class="chart-bar" data-orient="vertical" data-title="시기별 워터파크 혼잡도(체감)" data-labels="개장 첫주 평일,7월중순 평일,7월말 주말,8월초 주말,8월말 평일" data-values="35,45,80,100,50" data-colors="#009e73,#22c55e,#f59e0b,#d55e00,#06b6d4" data-unit="%"></div>
 
 - 한산: 개장 첫 주 평일, 8월 말 평일
 - 보통: 7월 중순 평일

@@ -70,7 +70,7 @@ noindex: true
 
 #### 휴대폰 사용 시간 관리
 
-<div class="chart-progress" data-title="하루 휴대폰 사용 시간 권장안" data-labels="촬영,SNS확인,길찾기,기타" data-values="30,20,30,20" data-colors="#f59e0b,#ef4444,#10b981,#3b82f6" data-max="100" data-unit="분"></div>
+<div class="chart-progress" data-title="하루 휴대폰 사용 시간 권장안" data-labels="촬영,SNS확인,길찾기,기타" data-values="30,20,30,20" data-colors="#f59e0b,#d55e00,#009e73,#3b82f6" data-max="100" data-unit="분"></div>
 
 구체적인 시간 배분 전략
 
@@ -93,7 +93,7 @@ noindex: true
 
 ### 3단계: 여행 스타일별 맞춤 가이드
 
-<div class="chart-versus" data-title="SNS 중심 vs 경험 중심 여행" data-name-a="SNS 중심" data-name-b="경험 중심" data-color-a="#ef4444" data-color-b="#10b981" data-items='[{"label":"촬영 시간","a":120,"b":45},{"label":"현지인 상호작용","a":20,"b":90},{"label":"휴대폰 배터리 소비","a":85,"b":30},{"label":"여행 만족도","a":68,"b":91}]'></div>
+<div class="chart-versus" data-title="SNS 중심 vs 경험 중심 여행" data-name-a="SNS 중심" data-name-b="경험 중심" data-color-a="#d55e00" data-color-b="#009e73" data-items='[{"label":"촬영 시간","a":120,"b":45},{"label":"현지인 상호작용","a":20,"b":90},{"label":"휴대폰 배터리 소비","a":85,"b":30},{"label":"여행 만족도","a":68,"b":91}]'></div>
 
 경험 중심 여행 실천안
 

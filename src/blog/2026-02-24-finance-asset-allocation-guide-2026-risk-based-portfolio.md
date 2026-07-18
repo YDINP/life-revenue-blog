@@ -66,7 +66,7 @@ noindex: true
 
 투자자의 위험 성향에 따라 보수적, 중도적, 공격적 세 가지 모델을 제시합니다.
 
-<div class="chart-donut" data-title="2026년 보수적 포트폴리오 구성" data-labels="주식,채권,현금" data-values="30,50,20" data-colors="#3b82f6,#10b981,#f59e0b" data-unit="%"></div>
+<div class="chart-donut" data-title="2026년 보수적 포트폴리오 구성" data-labels="주식,채권,현금" data-values="30,50,20" data-colors="#3b82f6,#009e73,#f59e0b" data-unit="%"></div>
 
 ### 보수적 포트폴리오 (안정성 우선)
 
@@ -116,7 +116,7 @@ noindex: true
 
 ## 자산 클래스별 특징 이해하기
 
-<div class="chart-versus" data-title="주식 vs 채권 특징 비교" data-name-a="주식" data-name-b="채권" data-color-a="#3b82f6" data-color-b="#10b981" data-items='[{"label":"장기 수익률","a":95,"b":45},{"label":"변동성","a":85,"b":30},{"label":"유동성","a":90,"b":60},{"label":"인플레이션 대응","a":85,"b":35}]'></div>
+<div class="chart-versus" data-title="주식 vs 채권 특징 비교" data-name-a="주식" data-name-b="채권" data-color-a="#3b82f6" data-color-b="#009e73" data-items='[{"label":"장기 수익률","a":95,"b":45},{"label":"변동성","a":85,"b":30},{"label":"유동성","a":90,"b":60},{"label":"인플레이션 대응","a":85,"b":35}]'></div>
 
 ### 주식 (수익률 범위: 연 7~10% 역사 평균)
 

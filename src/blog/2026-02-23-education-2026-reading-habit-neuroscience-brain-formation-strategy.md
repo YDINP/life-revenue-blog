@@ -169,7 +169,7 @@ Nature Neuroscience 2023년 논문에 따르면, 수면 직후 학습은 수면 
 
 ### 2026년 한국의 활발한 독서 커뮤니티
 
-<div class="chart-bar" data-title="독서 커뮤니티 유형별 월 활동 참여도" data-labels="오프라인 독서모임,온라인 북클럽(알라딘),소설 읽기 그룹(네이버),유튜브 북튜브 구독" data-values="68,74,79,92" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444" data-unit="%"></div>
+<div class="chart-bar" data-title="독서 커뮤니티 유형별 월 활동 참여도" data-labels="오프라인 독서모임,온라인 북클럽(알라딘),소설 읽기 그룹(네이버),유튜브 북튜브 구독" data-values="68,74,79,92" data-colors="#009e73,#3b82f6,#f59e0b,#d55e00" data-unit="%"></div>
 
 데이터 출처: 한국출판문화산업진흥원 2025년 디지털 독서 행태 조사
 
@@ -191,7 +191,7 @@ Nature Neuroscience 2023년 논문에 따르면, 수면 직후 학습은 수면 
 
 ## 4가지 전략을 아우르는 8주 실행 로드맵
 
-<div class="chart-progress" data-title="8주 독서 습관 형성 진행률" data-labels="도파민 경로 재설정,작업기억력 최적화,수면 동기화,커뮤니티 참여" data-values="87,72,81,78" data-colors="#10b981,#3b82f6,#f59e0b,#ef4444" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="8주 독서 습관 형성 진행률" data-labels="도파민 경로 재설정,작업기억력 최적화,수면 동기화,커뮤니티 참여" data-values="87,72,81,78" data-colors="#009e73,#3b82f6,#f59e0b,#d55e00" data-max="100" data-unit="점"></div>
 
 | 주차 | 도파민 전략 | 기억력 전략 | 수면 전략 | 커뮤니티 전략 | 주간 목표 |
 |------|-----------|-----------|----------|-------------|----------|

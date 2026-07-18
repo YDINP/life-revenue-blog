@@ -64,7 +64,7 @@ ETF는 추종 방식에 따라 성격이 완전히 달라집니다. 초보자가
 | 레버리지 ETF | 지수 일간 등락을 2배 추종 | 높음 | 단기·숙련 투자자 |
 | 인버스 ETF | 지수와 반대로 움직임 | 높음 | 헤지·단기 |
 
-<div class="chart-bar" data-orient="vertical" data-title="ETF 유형별 위험도 체감 (100=최고 위험)" data-labels="지수ETF,인버스ETF,레버리지ETF" data-values="35,75,90" data-colors="#10b981,#f59e0b,#ef4444" data-unit="점"></div>
+<div class="chart-bar" data-orient="vertical" data-title="ETF 유형별 위험도 체감 (100=최고 위험)" data-labels="지수ETF,인버스ETF,레버리지ETF" data-values="35,75,90" data-colors="#009e73,#f59e0b,#d55e00" data-unit="점"></div>
 
 지수 ETF가 '순한 맛'이라면 레버리지·인버스는 '매운 맛'입니다. 문제는 초보자가 매운맛의 위험을 제대로 모른 채 뛰어드는 경우가 많다는 점입니다.
 
@@ -74,7 +74,7 @@ ETF는 추종 방식에 따라 성격이 완전히 달라집니다. 초보자가
 
 레버리지 ETF는 '일간 수익률의 2배'를 추종하도록 설계돼 있어, 오르내림이 반복되면 지수가 제자리로 돌아와도 손실이 남습니다. 이를 변동성 잠식(volatility decay)이라고 합니다.
 
-<div class="chart-bar" data-orient="vertical" data-title="같은 등락 10회 반복 후 (지수는 100 제자리, 레버리지는 손실)" data-labels="지수ETF,레버리지ETF" data-values="100,83" data-colors="#10b981,#ef4444" data-unit="원"></div>
+<div class="chart-bar" data-orient="vertical" data-title="같은 등락 10회 반복 후 (지수는 100 제자리, 레버리지는 손실)" data-labels="지수ETF,레버리지ETF" data-values="100,83" data-colors="#009e73,#d55e00" data-unit="원"></div>
 
 예를 들어 지수가 하루 +10%, 다음 날 -9.1%로 움직이면 지수는 원래 수준(100)으로 돌아옵니다. 하지만 2배 레버리지는 같은 기간 +20%, -18.2%를 겪어 한 번의 등락 사이클마다 약 1.8%씩 줄어듭니다. 이런 등락이 10번 반복되면 지수는 그대로 100인데 레버리지는 약 83까지 내려갑니다. 시장이 방향 없이 흔들릴수록 손실이 더 쌓입니다.
 
@@ -84,7 +84,7 @@ ETF는 추종 방식에 따라 성격이 완전히 달라집니다. 초보자가
 
 레버리지를 피했다면, 이제 안정적인 첫 포트폴리오를 짜볼 차례입니다. 핵심은 넓게 분산하고 길게 보유하는 것입니다.
 
-<div class="chart-donut" data-title="초보자 추천 ETF 포트폴리오 예시" data-labels="국내지수ETF,선진국지수ETF,채권ETF,현금성" data-values="35,35,20,10" data-colors="#2563eb,#10b981,#f59e0b,#8b5cf6" data-unit="%"></div>
+<div class="chart-donut" data-title="초보자 추천 ETF 포트폴리오 예시" data-labels="국내지수ETF,선진국지수ETF,채권ETF,현금성" data-values="35,35,20,10" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6" data-unit="%"></div>
 
 - 국내 지수 ETF (35%): 익숙한 시장으로 기본 뼈대를 만듭니다.
 - 선진국 지수 ETF (35%): 글로벌 성장에 함께 올라탑니다.

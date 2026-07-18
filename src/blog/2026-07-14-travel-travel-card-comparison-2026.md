@@ -50,7 +50,7 @@ faq:
 
 ![여행 경비를 계산하는 모습](https://images.pexels.com/photos/3943716/pexels-photo-3943716.jpeg?auto=compress&cs=tinysrgb&w=940)
 
-<div class="chart-bar" data-title="트래블카드 수수료 항목 (참고용, 낮을수록 유리)" data-labels="결제 수수료,환전 수수료(주요통화),ATM 출금(제휴),환급 수수료" data-values="0,0,0,3" data-colors="#10b981,#10b981,#3b82f6,#f59e0b" data-unit="점"></div>
+<div class="chart-bar" data-title="트래블카드 수수료 항목 (참고용, 낮을수록 유리)" data-labels="결제 수수료,환전 수수료(주요통화),ATM 출금(제휴),환급 수수료" data-values="0,0,0,3" data-colors="#009e73,#009e73,#3b82f6,#f59e0b" data-unit="점"></div>
 
 <div class="callout-tip">💡 팁: (1) 주요 통화는 <b>환전 무료</b> 범위에서만 충전, (2) 현금은 <b>제휴 ATM 한도</b> 안에서 출금, (3) 남길 것 같으면 <b>환급 수수료</b>를 미리 확인. 이 셋만 지켜도 수수료를 거의 0으로 만듭니다.</div>
 
