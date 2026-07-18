@@ -108,6 +108,12 @@
     const unit = el.dataset.unit || '';
     const max = Math.max(...values) * 1.15;
     const vertical = el.dataset.orient === 'vertical';
+    // 세로 막대: 값이 서로 가까우면(최솟값이 최댓값의 50% 초과) 바닥을 올려 대비를 살린다.
+    // 각 막대에 실제 수치가 찍혀 있어 수치 왜곡 없이 차이만 또렷해진다.
+    const vMin = Math.min(...values), vMax = Math.max(...values), vSpan = vMax - vMin;
+    const vClose = vertical && vSpan > 0 && vMin > 0 && vMin / vMax > 0.5;
+    const vBase = vClose ? Math.max(0, vMin - vSpan * 1.5) : 0;
+    const vTop = vClose ? vMax + vSpan * 0.4 : max;
 
     let html = '';
     if (title) html += `<div class="chart-title">${title}</div>`;
@@ -117,10 +123,11 @@
       const color = colors[i % colors.length].trim();
       if (vertical) {
         const gradV = `linear-gradient(0deg, ${color}, ${hexToRgba(color, 0.7)})`;
+        const vpct = vTop > vBase ? Math.max(6, ((values[i] - vBase) / (vTop - vBase)) * 100) : 0;
         html += `<div class="chart-col">
           <span class="chart-value">${values[i]}${unit}</span>
           <div class="chart-col-track">
-            <div class="chart-col-fill" style="height:${pct}%;background:${gradV}"></div>
+            <div class="chart-col-fill" style="height:${vpct}%;background:${gradV}"></div>
           </div>
           <span class="chart-col-label">${label.trim()}</span>
         </div>`;
