@@ -113,6 +113,8 @@ H1 바로 다음, 3문장으로:
 ```html
 <!-- 비교·랭킹·구간 (수평 막대) -->
 <div class="chart-bar" data-labels="예금,적금,파킹" data-values="3.1,3.4,2.8" data-unit="%"></div>
+<!-- 짧은 라벨(8자↓·2~6개) 비교는 세로 막대가 더 잘 보임 -->
+<div class="chart-bar" data-orient="vertical" data-labels="예금,적금,파킹" data-values="3.1,3.4,2.8" data-unit="%"></div>
 <!-- 단계·구성·달성률 (진행 막대, data-max 기준 %) -->
 <div class="chart-progress" data-title="표시 이자 100 중 남는 비율" data-labels="세전,세후,실질" data-values="100,84.6,18" data-max="100" data-unit="%"></div>
 ```
