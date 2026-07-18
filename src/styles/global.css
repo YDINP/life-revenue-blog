@@ -1656,6 +1656,19 @@ section > h2::after {
   overflow-wrap: anywhere;
 }
 
+/* 세로 비교 막대에서 최댓값 대비 차이(%) 배지 — 축을 자르지 않고 근접값 대비를 명시 */
+.chart-delta {
+  font-size: 0.72em;
+  font-weight: 700;
+  color: #d55e00;
+  background: rgba(213,94,0,0.10);
+  padding: 0.05em 0.4em;
+  border-radius: 999px;
+  margin-left: 0.2em;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
 @media (max-width: 640px) {
   .chart-columns { gap: 0.35rem; }
   .chart-col-track { height: 140px; }

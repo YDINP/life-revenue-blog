@@ -103,17 +103,14 @@
   document.querySelectorAll('.chart-bar').forEach(el => {
     const labels = (el.dataset.labels || '').split(',');
     const values = (el.dataset.values || '').split(',').map(Number);
-    const colors = (el.dataset.colors || '#3b82f6,#f59e0b,#10b981,#ef4444,#8b5cf6').split(',');
+    const colors = (el.dataset.colors || '#3b82f6,#f59e0b,#009e73,#d55e00,#8b5cf6').split(',');
     const title = el.dataset.title || '';
     const unit = el.dataset.unit || '';
     const max = Math.max(...values) * 1.15;
     const vertical = el.dataset.orient === 'vertical';
-    // 세로 막대: 값이 서로 가까우면(최솟값이 최댓값의 50% 초과) 바닥을 올려 대비를 살린다.
-    // 각 막대에 실제 수치가 찍혀 있어 수치 왜곡 없이 차이만 또렷해진다.
-    const vMin = Math.min(...values), vMax = Math.max(...values), vSpan = vMax - vMin;
-    const vClose = vertical && vSpan > 0 && vMin > 0 && vMin / vMax > 0.5;
-    const vBase = vClose ? Math.max(0, vMin - vSpan * 1.5) : 0;
-    const vTop = vClose ? vMax + vSpan * 0.4 : max;
+    // 세로 비교 막대는 0 기준 유지(축 왜곡 금지). 값이 가까워 높이차가 작을 땐
+    // 2개 비교에 한해 델타(%) 배지로 차이를 명시한다.
+    const vMax = Math.max(...values);
 
     let html = '';
     if (title) html += `<div class="chart-title">${title}</div>`;
@@ -123,11 +120,12 @@
       const color = colors[i % colors.length].trim();
       if (vertical) {
         const gradV = `linear-gradient(0deg, ${color}, ${hexToRgba(color, 0.7)})`;
-        const vpct = vTop > vBase ? Math.max(6, ((values[i] - vBase) / (vTop - vBase)) * 100) : 0;
+        const d = vMax > 0 ? Math.round(((values[i] - vMax) / vMax) * 100) : 0;
+        const delta = (values.length === 2 && values[i] !== vMax && d !== 0) ? ` <span class="chart-delta">${d}%</span>` : '';
         html += `<div class="chart-col">
-          <span class="chart-value">${values[i]}${unit}</span>
+          <span class="chart-value">${values[i]}${unit}${delta}</span>
           <div class="chart-col-track">
-            <div class="chart-col-fill" style="height:${vpct}%;background:${gradV}"></div>
+            <div class="chart-col-fill" style="height:${pct}%;background:${gradV}"></div>
           </div>
           <span class="chart-col-label">${label.trim()}</span>
         </div>`;
@@ -189,7 +187,7 @@
   document.querySelectorAll('.chart-donut').forEach(el => {
     const labels = (el.dataset.labels || '').split(',');
     const values = (el.dataset.values || '').split(',').map(Number);
-    const colors = (el.dataset.colors || '#3b82f6,#10b981,#f59e0b,#ef4444,#8b5cf6').split(',');
+    const colors = (el.dataset.colors || '#3b82f6,#009e73,#f59e0b,#d55e00,#8b5cf6').split(',');
     const title = el.dataset.title || '';
     const unit = el.dataset.unit || '';
     const total = values.reduce((a, v) => a + v, 0);
@@ -230,7 +228,7 @@
     const nameA = el.dataset.nameA || 'A';
     const nameB = el.dataset.nameB || 'B';
     const colorA = el.dataset.colorA || '#3b82f6';
-    const colorB = el.dataset.colorB || '#10b981';
+    const colorB = el.dataset.colorB || '#009e73';
     const maxVal = Math.max(...items.flatMap(i => [i.a, i.b])) * 1.1;
 
     let html = '';
@@ -269,7 +267,7 @@
   document.querySelectorAll('.chart-progress').forEach(el => {
     const labels = (el.dataset.labels || '').split(',');
     const values = (el.dataset.values || '').split(',').map(Number);
-    const colors = (el.dataset.colors || '#3b82f6,#10b981,#f59e0b,#ef4444,#8b5cf6').split(',');
+    const colors = (el.dataset.colors || '#3b82f6,#009e73,#f59e0b,#d55e00,#8b5cf6').split(',');
     const title = el.dataset.title || '';
     const max = Number(el.dataset.max || '100');
     const unit = el.dataset.unit || '';
