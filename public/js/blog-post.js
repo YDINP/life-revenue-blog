@@ -88,7 +88,7 @@
   const chartObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.querySelectorAll('.chart-fill, .radar-score-fill, .versus-fill').forEach(fill => {
+        entry.target.querySelectorAll('.chart-fill, .chart-col-fill, .radar-score-fill, .versus-fill').forEach(fill => {
           fill.classList.add('animated');
         });
         entry.target.querySelectorAll('.progress-ring').forEach(ring => {
@@ -107,13 +107,25 @@
     const title = el.dataset.title || '';
     const unit = el.dataset.unit || '';
     const max = Math.max(...values) * 1.15;
+    const vertical = el.dataset.orient === 'vertical';
 
     let html = '';
     if (title) html += `<div class="chart-title">${title}</div>`;
-    html += '<div class="chart-bars">';
+    html += vertical ? '<div class="chart-columns">' : '<div class="chart-bars">';
     labels.forEach((label, i) => {
       const pct = max > 0 ? (values[i] / max) * 100 : 0;
       const color = colors[i % colors.length].trim();
+      if (vertical) {
+        const gradV = `linear-gradient(0deg, ${color}, ${hexToRgba(color, 0.7)})`;
+        html += `<div class="chart-col">
+          <span class="chart-value">${values[i]}${unit}</span>
+          <div class="chart-col-track">
+            <div class="chart-col-fill" style="height:${pct}%;background:${gradV}"></div>
+          </div>
+          <span class="chart-col-label">${label.trim()}</span>
+        </div>`;
+        return;
+      }
       const grad = `linear-gradient(90deg, ${color}, ${hexToRgba(color, 0.7)})`;
       html += `<div class="chart-row">
         <span class="chart-label">${label.trim()}</span>
