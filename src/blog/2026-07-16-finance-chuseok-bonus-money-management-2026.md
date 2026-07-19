@@ -52,7 +52,7 @@ faq:
 
 상여금이 통장에 들어왔다면, 쓰기 전에 아래 순서대로 돈을 나누세요. 이 순서를 지키는 것만으로도 명절 후 통장 잔고가 완전히 달라집니다.
 
-<div class="chart-bar" data-orient="vertical" data-title="상여금 배분 우선순위" data-labels="명절 필수지출,고금리 부채상환,비상금 채우기,투자와 저축" data-values="1,2,3,4" data-unit="순위"></div>
+<div class="chart-bar" data-orient="vertical" data-title="우선순위는 명절지출→부채상환→비상금→투자 순" data-labels="명절 필수지출,고금리 부채상환,비상금 채우기,투자와 저축" data-values="1,2,3,4" data-unit="순위"></div>
 
 ### 1단계: 이번 명절에 반드시 나갈 돈부터 떼어낸다
 

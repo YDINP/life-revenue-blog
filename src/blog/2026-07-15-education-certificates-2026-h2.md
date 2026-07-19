@@ -53,7 +53,7 @@ faq:
 
 하반기는 채용 공고가 다시 늘어나는 시즌이자, 연말 승진·평가를 앞두고 스펙을 보강하기 좋은 시기입니다. 특히 8월 필기시험을 목표로 지금부터 준비하면 10~11월 실기까지 마쳐 연말 이전에 자격증을 손에 쥘 수 있습니다.
 
-<div class="chart-bar" data-orient="vertical" data-title="2026 하반기 자격증별 관심도 증가율" data-labels="SQLD,컴활1급,전산회계1급,정보처리기사,유통관리사2급" data-values="145,120,98,88,65" data-colors="#7a5aa6,#2563eb,#009e73,#f59e0b,#06b6d4" data-unit="%"></div>
+<div class="chart-bar" data-orient="vertical" data-title="SQLD 관심도 145%로 자격증 중 최고 증가율" data-highlight="max" data-labels="SQLD,컴활1급,전산회계1급,정보처리기사,유통관리사2급" data-values="145,120,98,88,65" data-colors="#7a5aa6,#2563eb,#009e73,#f59e0b,#06b6d4" data-unit="%"></div>
 
 - 급상승: SQLD — 데이터 직무 채용 확대와 맞물려 인기
 - 꾸준한 상승: 컴퓨터활용능력 — 전 직군 공통 스펙으로 자리매김
@@ -92,7 +92,7 @@ faq:
 
 목표 직무별 준비 부담을 한눈에 볼 수 있도록 체감 난이도를 지표화했습니다.
 
-<div class="chart-progress" data-title="자격증별 체감 난이도 (100점 만점)" data-labels="컴활2급,SQLD,전산회계1급,사회조사분석사2급,정보처리기사" data-values="30,50,55,58,72" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6,#d55e00" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="정보처리기사 난이도 72점 최고, 컴활2급 30점 최저 (100점 만점)" data-labels="컴활2급,SQLD,전산회계1급,사회조사분석사2급,정보처리기사" data-values="30,50,55,58,72" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6,#d55e00" data-max="100" data-unit="점"></div>
 
 - 입문(30~40점대): 컴퓨터활용능력 2급 — 사무 기초, 접근성 최고
 - 중급(50~60점대): SQLD·전산회계 1급·사회조사분석사 2급 — 3개월 내외 준비

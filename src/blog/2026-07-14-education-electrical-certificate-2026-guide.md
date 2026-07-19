@@ -86,7 +86,7 @@ faq:
 
 **전기기사 필기 합격률 추이**
 
-<div class="chart-progress" data-title="전기기사 필기 합격률 (%)" data-labels="2021,2022,2023,2024,2025" data-values="22.2,22.3,22.2,26.1,29.9" data-colors="#8b5cf6,#8b5cf6,#8b5cf6,#7c3aed,#6d28d9" data-max="100" data-unit="%"></div>
+<div class="chart-progress" data-title="전기기사 필기 합격률 2025년 29.9%로 최고" data-labels="2021,2022,2023,2024,2025" data-values="22.2,22.3,22.2,26.1,29.9" data-colors="#8b5cf6,#8b5cf6,#8b5cf6,#7c3aed,#6d28d9" data-max="100" data-unit="%"></div>
 
 필기 합격률은 CBT 전환과 맞물려 2021~2023년 22%대에서 2025년 약 30%로 완만히 올랐습니다. 반면 실기는 회차별 편차가 큽니다.
 

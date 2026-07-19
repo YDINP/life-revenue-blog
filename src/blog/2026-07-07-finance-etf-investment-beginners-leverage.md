@@ -64,7 +64,7 @@ ETF는 추종 방식에 따라 성격이 완전히 달라집니다. 초보자가
 | 레버리지 ETF | 지수 일간 등락을 2배 추종 | 높음 | 단기·숙련 투자자 |
 | 인버스 ETF | 지수와 반대로 움직임 | 높음 | 헤지·단기 |
 
-<div class="chart-bar" data-orient="vertical" data-title="ETF 유형별 위험도 체감 (100=최고 위험)" data-labels="지수ETF,인버스ETF,레버리지ETF" data-values="35,75,90" data-colors="#009e73,#f59e0b,#d55e00" data-unit="점"></div>
+<div class="chart-bar" data-orient="vertical" data-title="레버리지ETF 위험도 90점으로 가장 높음" data-labels="지수ETF,인버스ETF,레버리지ETF" data-values="35,75,90" data-colors="#009e73,#f59e0b,#d55e00" data-unit="점" data-highlight="max"></div>
 
 지수 ETF가 '순한 맛'이라면 레버리지·인버스는 '매운 맛'입니다. 문제는 초보자가 매운맛의 위험을 제대로 모른 채 뛰어드는 경우가 많다는 점입니다.
 
@@ -84,7 +84,7 @@ ETF는 추종 방식에 따라 성격이 완전히 달라집니다. 초보자가
 
 레버리지를 피했다면, 이제 안정적인 첫 포트폴리오를 짜볼 차례입니다. 핵심은 넓게 분산하고 길게 보유하는 것입니다.
 
-<div class="chart-donut" data-title="초보자 추천 ETF 포트폴리오 예시" data-labels="국내지수ETF,선진국지수ETF,채권ETF,현금성" data-values="35,35,20,10" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6" data-unit="%"></div>
+<div class="chart-donut" data-title="국내·선진국 지수ETF가 포트폴리오 70% 차지" data-labels="국내지수ETF,선진국지수ETF,채권ETF,현금성" data-values="35,35,20,10" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6" data-unit="%"></div>
 
 - 국내 지수 ETF (35%): 익숙한 시장으로 기본 뼈대를 만듭니다.
 - 선진국 지수 ETF (35%): 글로벌 성장에 함께 올라탑니다.

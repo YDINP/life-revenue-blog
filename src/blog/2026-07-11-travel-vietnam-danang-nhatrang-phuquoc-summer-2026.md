@@ -50,7 +50,7 @@ faq:
 
 같은 4박이라도 항공·숙박 등급에 따라 예산이 달라집니다. 중급(4성) 기준 1인 총예산을 비교했습니다.
 
-<div class="chart-bar" data-orient="vertical" data-title="베트남 3대 도시 4박 총예산 비교(1인)" data-labels="나트랑,다낭,푸꾸옥" data-values="82,88,94" data-colors="#009e73,#2563eb,#f59e0b" data-unit="만원"></div>
+<div class="chart-bar" data-orient="vertical" data-title="푸꾸옥 예산 94만원으로 3도시 중 최고" data-labels="나트랑,다낭,푸꾸옥" data-values="82,88,94" data-colors="#009e73,#2563eb,#f59e0b" data-unit="만원" data-highlight="max"></div>
 
 - 최저가 그룹: 나트랑 — 현지 물가가 저렴하고 테마파크 패키지 활용도 높음
 - 중간: 다낭 — 관광 인프라가 좋아 균형 잡힌 예산
@@ -84,7 +84,7 @@ faq:
 
 세 도시가 강한 영역이 다릅니다. 4개 지표로 비교했습니다.
 
-<div class="chart-progress" data-title="도시별 여행 스타일 적합도" data-labels="가성비,해변 청정도,가족 편의,관광 다양성" data-values="80,78,85,90" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="관광 다양성 90점으로 네 지표 중 최고" data-labels="가성비,해변 청정도,가족 편의,관광 다양성" data-values="80,78,85,90" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
 
 - 관광 다양성 최강: 다낭(바나힐·호이안·미케비치)
 - 해변 청정도 최강: 푸꾸옥(개발 초기 청정 바다)

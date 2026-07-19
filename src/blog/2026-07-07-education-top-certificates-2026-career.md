@@ -56,9 +56,9 @@ faq:
 
 먼저 7종의 난이도와 활용도를 시각적으로 비교해 봅니다. 난이도가 낮으면서 활용도가 높은 자격증이 가성비가 좋은 편입니다.
 
-<div class="chart-progress" data-title="자격증별 활용도 (100점 만점)" data-labels="한국사,SQLD,ADsP,전기기사,산업안전기사,재경관리사,컴활1급" data-values="60,80,65,90,85,70,55" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6,#d55e00,#06b6d4,#ec4899" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="전기기사 활용도 90점으로 7종 중 최고" data-labels="한국사,SQLD,ADsP,전기기사,산업안전기사,재경관리사,컴활1급" data-values="60,80,65,90,85,70,55" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6,#d55e00,#06b6d4,#ec4899" data-max="100" data-unit="점"></div>
 
-<div class="chart-bar" data-orient="vertical" data-title="자격증별 권장 공부 기간" data-labels="한국사,SQLD,ADsP,컴활1급,산업안전기사,전기기사" data-values="4,4,3,6,16,24" data-colors="#2563eb,#009e73,#f59e0b,#ec4899,#d55e00,#8b5cf6" data-unit="주"></div>
+<div class="chart-bar" data-orient="vertical" data-title="전기기사 준비기간 24주로 가장 길다" data-labels="한국사,SQLD,ADsP,컴활1급,산업안전기사,전기기사" data-values="4,4,3,6,16,24" data-colors="#2563eb,#009e73,#f59e0b,#ec4899,#d55e00,#8b5cf6" data-unit="주" data-highlight="max"></div>
 
 ## 1. 한국사능력검정시험 - 취업 기본기
 

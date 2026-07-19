@@ -54,7 +54,7 @@ faq:
 
 실제 직장인들이 자주 하는 업무에 AI를 적용했을 때의 시간 절약 효과를 정리했습니다. 반복성이 높은 업무일수록 효과가 큽니다.
 
-<div class="chart-bar" data-orient="vertical" data-title="업무별 AI 활용 시 시간 절약 (하루 기준)" data-labels="이메일·문서작성,자료 요약,데이터 정리,아이디어 발상,번역·검수" data-values="40,35,50,25,30" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6,#d55e00" data-unit="분"></div>
+<div class="chart-bar" data-orient="vertical" data-title="데이터 정리, AI로 하루 50분 절약 최다" data-labels="이메일·문서작성,자료 요약,데이터 정리,아이디어 발상,번역·검수" data-values="40,35,50,25,30" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6,#d55e00" data-unit="분"></div>
 
 ## 도구 1: ChatGPT와 Claude - 만능 초안 조수
 
@@ -92,7 +92,7 @@ faq:
 
 퇴근 후 30분을 어떻게 나눠 쓸지가 관건입니다. 아래 배분을 3주만 유지하면 도구가 손에 익습니다.
 
-<div class="chart-donut" data-title="하루 30분 AI 학습시간 배분" data-labels="새 프롬프트 실습,실무 적용,프롬프트 정리" data-values="40,40,20" data-colors="#2563eb,#009e73,#f59e0b" data-unit="%"></div>
+<div class="chart-donut" data-title="실습·적용에 학습시간의 80% 집중" data-labels="새 프롬프트 실습,실무 적용,프롬프트 정리" data-values="40,40,20" data-colors="#2563eb,#009e73,#f59e0b" data-unit="%"></div>
 
 ## 도구별 활용 비교표
 

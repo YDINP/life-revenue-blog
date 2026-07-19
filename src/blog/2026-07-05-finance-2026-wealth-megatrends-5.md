@@ -36,7 +36,7 @@ faq:
 
 ## 트렌드 한눈에 보기
 
-<div class="chart-bar" data-orient="vertical" data-title="2026 재테크 트렌드 관심도 (100 기준)" data-labels="AI·반도체,금리인하,ETF대중화,절세계좌,사기경계" data-values="92,80,85,78,70" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6,#d55e00" data-unit="점"></div>
+<div class="chart-bar" data-orient="vertical" data-title="AI·반도체 관심도 92점으로 트렌드 중 최고" data-labels="AI·반도체,금리인하,ETF대중화,절세계좌,사기경계" data-values="92,80,85,78,70" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6,#d55e00" data-unit="점"></div>
 
 다섯 트렌드는 따로 노는 것이 아니라 서로 맞물립니다. 금리가 내리면 위험자산이 힘을 받고, 그 자금이 ETF로 흘러가며, 이 과정에서 절세계좌와 사기 경계가 함께 중요해집니다.
 
@@ -82,7 +82,7 @@ AI 열풍은 단순 유행이 아니라 산업 전반의 구조를 바꾸는 장
 
 저성장·저금리 환경에서는 수익률 1~2%를 더 내는 것보다 세금 몇 퍼센트를 아끼는 것이 더 확실한 성과가 됩니다. 그래서 ISA·연금저축·IRP 같은 절세계좌의 전략적 가치가 커지고 있습니다.
 
-<div class="chart-progress" data-title="절세계좌 활용 우선순위 (직장인)" data-labels="연금저축,IRP,ISA" data-values="90,85,80" data-colors="#009e73,#f59e0b,#2563eb" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="연금저축, 절세계좌 우선순위 90점 최고" data-labels="연금저축,IRP,ISA" data-values="90,85,80" data-colors="#009e73,#f59e0b,#2563eb" data-max="100" data-unit="점"></div>
 
 같은 상품에 투자해도 어떤 계좌에 담느냐에 따라 손에 쥐는 실수익이 달라집니다. 2026년 재테크의 화두는 '얼마 버느냐'만큼이나 '얼마 지키느냐'입니다.
 

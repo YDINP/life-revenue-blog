@@ -37,7 +37,7 @@ faq:
 
 특히 여름철 열대야 기간에는 이 수치가 더욱 악화됩니다. 높은 밤 기온과 습도가 깊은 수면을 방해하고, 잦은 각성을 유발하기 때문입니다.
 
-<div class="chart-bar" data-orient="vertical" data-title="계절별 한국 성인 수면 만족도" data-labels="봄,여름(평시),열대야기간,가을,겨울" data-values="34,29,18,36,31" data-colors="#009e73,#f59e0b,#d55e00,#3b82f6,#8b5cf6" data-unit="%"></div>
+<div class="chart-bar" data-orient="vertical" data-title="열대야 기간 수면만족도 18%로 사계절 최저" data-labels="봄,여름(평시),열대야기간,가을,겨울" data-values="34,29,18,36,31" data-colors="#009e73,#f59e0b,#d55e00,#3b82f6,#8b5cf6" data-unit="%"></div>
 
 위 데이터에서 볼 수 있듯 열대야 기간의 수면 만족도는 18%까지 떨어져 사계절 중 가장 낮습니다. 그만큼 여름밤 수면 관리가 중요하다는 의미입니다.
 
@@ -104,7 +104,7 @@ faq:
 
 여름은 해가 일찍 떠 새벽에 깨기 쉽습니다. 수면 안대로 빛을 차단하면 아침까지 깊은 잠을 유지할 수 있습니다.
 
-<div class="chart-progress" data-title="방법별 수면 개선 체감 효과" data-labels="냉감침구,미지근샤워,블루라이트차단,수면안대,일정한시간" data-values="82,78,75,70,88" data-colors="#3b82f6,#009e73,#f59e0b,#8b5cf6,#d55e00" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="일정한 수면시간 지키기가 88점으로 최고 효과" data-labels="냉감침구,미지근샤워,블루라이트차단,수면안대,일정한시간" data-values="82,78,75,70,88" data-colors="#3b82f6,#009e73,#f59e0b,#8b5cf6,#d55e00" data-max="100" data-unit="점"></div>
 
 위 차트는 각 방법을 실천한 사람들이 느낀 수면 개선 효과를 점수화한 것입니다. 일정한 수면 시간 지키기와 냉감 침구 사용이 가장 높은 만족도를 보였습니다.
 

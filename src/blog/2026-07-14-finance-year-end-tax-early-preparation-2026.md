@@ -43,7 +43,7 @@ faq:
 | 공제율(종합소득 4,500만 이하) | **16.5%** |
 | 공제율(4,500만 초과) | 13.2% |
 
-<div class="chart-bar" data-title="연금저축+IRP 900만원 한도 채울 때 세액공제액 (참고용)" data-labels="16.5% 적용 시,13.2% 적용 시" data-values="148,119" data-colors="#009e73,#3b82f6" data-unit="만원"></div>
+<div class="chart-bar" data-title="16.5% 적용 시 148만원, 13.2%는 119만원 공제 (참고용)" data-highlight="max" data-labels="16.5% 적용 시,13.2% 적용 시" data-values="148,119" data-colors="#009e73,#3b82f6" data-unit="만원"></div>
 
 <div class="callout-warning">⚠️ 주의: 연금계좌는 장기 묶이는 돈입니다. <b>여유 자금 범위</b>에서 하반기에 한도를 채우세요. 세부 조건은 <a href="/blog/2026-07-08-finance-tax-saving-accounts-isa-pension-irp/">ISA·연금·IRP 절세계좌 가이드</a> 참고.</div>
 

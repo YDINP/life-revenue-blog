@@ -54,7 +54,7 @@ faq:
 
 소득이 낮을수록 정부가 더 많이 얹어주는 구조였습니다.
 
-<div class="chart-bar" data-orient="vertical" data-title="개인소득 구간별 정부기여금 매칭 비율" data-labels="2400만↓,3600만↓,4800만↓,6000만↓,7500만↓" data-values="6.0,4.6,3.7,3.0,0" data-colors="#009e73,#22c55e,#f59e0b,#f97316,#94a3b8" data-unit="%"></div>
+<div class="chart-bar" data-orient="vertical" data-title="소득 2400만원 이하는 매칭비율 최고 6%" data-labels="2400만↓,3600만↓,4800만↓,6000만↓,7500만↓" data-values="6.0,4.6,3.7,3.0,0" data-colors="#009e73,#22c55e,#f59e0b,#f97316,#94a3b8" data-unit="%"></div>
 
 - 저소득 구간(2,400만↓): 매칭 6.0%로 최고
 - 6,000만~7,500만원: 기여금 없이 비과세 혜택만
@@ -65,7 +65,7 @@ faq:
 
 월 70만원을 5년간 꾸준히 넣었을 때의 구성입니다.
 
-<div class="chart-bar" data-title="청년도약계좌 5년 만기 수령 구성(예시, 만원)" data-labels="본인 원금,정부기여금(최대),이자(연6% 가정),합계(약)" data-values="4200,198,640,5000" data-colors="#2563eb,#009e73,#8b5cf6,#d55e00" data-unit="만원"></div>
+<div class="chart-bar" data-title="5년 만기 수령 5000만원 중 원금 4200만원" data-labels="본인 원금,정부기여금(최대),이자(연6% 가정),합계(약)" data-values="4200,198,640,5000" data-colors="#2563eb,#009e73,#8b5cf6,#d55e00" data-unit="만원"></div>
 
 원금 4,200만원에 정부기여금·비과세 이자가 더해져 약 5천만원 규모가 됩니다.
 

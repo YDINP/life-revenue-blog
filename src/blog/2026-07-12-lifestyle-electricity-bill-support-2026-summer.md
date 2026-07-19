@@ -65,7 +65,7 @@ faq:
 
 ## 지원 3종 — 나는 어디에 해당하나
 
-<div class="chart-progress" data-title="지원제도별 우선 확인 순위(해당 시 혜택 크기 기준)" data-labels="에너지바우처(수급자+세대원 요건),전기요금 복지할인(상시),에너지캐시백(전 가구 가능)" data-values="95,80,60" data-colors="#2563eb,#009e73,#f59e0b" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="에너지바우처가 확인 우선순위 1위(95점)" data-labels="에너지바우처(수급자+세대원 요건),전기요금 복지할인(상시),에너지캐시백(전 가구 가능)" data-values="95,80,60" data-colors="#2563eb,#009e73,#f59e0b" data-max="100" data-unit="점"></div>
 
 ### 1. 에너지바우처 — 해당된다면 가장 크다
 

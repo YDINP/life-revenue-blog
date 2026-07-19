@@ -56,7 +56,7 @@ faq:
 
 세 채널은 성격이 다릅니다. 자신의 목표와 성향에 맞는 곳에서 시작하는 것이 오래 가는 비결입니다.
 
-<div class="chart-progress" data-title="채널별 특성 (100점 만점)" data-labels="검색 유입,전문성 어필,진입 쉬움,네트워킹" data-values="90,60,75,50" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="검색 유입 90점, 채널 특성 중 최고" data-labels="검색 유입,전문성 어필,진입 쉬움,네트워킹" data-values="90,60,75,50" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
 
 ### 블로그 - 검색으로 쌓이는 자산
 
@@ -105,7 +105,7 @@ faq:
 
 콘텐츠 제작 시간의 이상적 배분은 다음과 같습니다. 완벽주의로 편집에 시간을 쏟기보다 발행 자체에 집중하세요.
 
-<div class="chart-donut" data-title="콘텐츠 제작 시간 배분" data-labels="소재·기획,초안 작성,편집·발행" data-values="30,50,20" data-colors="#2563eb,#009e73,#f59e0b" data-unit="%"></div>
+<div class="chart-donut" data-title="초안 작성이 제작 시간의 50%로 최대" data-labels="소재·기획,초안 작성,편집·발행" data-values="30,50,20" data-colors="#2563eb,#009e73,#f59e0b" data-unit="%"></div>
 
 ## 3개월 실전 로드맵
 

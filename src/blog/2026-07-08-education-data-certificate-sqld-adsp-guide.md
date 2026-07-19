@@ -56,7 +56,7 @@ faq:
 
 체감 난이도는 응시자의 배경에 따라 갈립니다. SQL을 한 번도 안 써봤다면 SQLD가 조금 더 어렵게 느껴지고, 통계·수학에 거부감이 있다면 ADsP가 부담스러울 수 있습니다.
 
-<div class="chart-progress" data-title="비전공자 체감 난이도 (100점 만점)" data-labels="ADsP 이론,ADsP 통계,SQLD 문법,SQLD 응용" data-values="45,70,60,80" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="SQLD 응용 난이도 80점으로 체감 최고" data-labels="ADsP 이론,ADsP 통계,SQLD 문법,SQLD 응용" data-values="45,70,60,80" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
 
 두 자격증 모두 100점 만점에 60점 이상이면 합격하는 절대평가입니다. 과락 기준(과목별 40% 미만)만 피하면 되므로, 특정 과목을 버리는 전략은 위험합니다.
 
@@ -64,11 +64,11 @@ faq:
 
 비전공자 기준 권장 학습 기간은 아래와 같습니다. 직장인이라면 평일 저녁과 주말을 활용해 충분히 소화할 수 있는 분량입니다.
 
-<div class="chart-bar" data-orient="vertical" data-title="비전공자 권장 총 학습 시간" data-labels="ADsP,SQLD,두 개 동시" data-values="35,50,75" data-colors="#2563eb,#009e73,#f59e0b" data-unit="시간"></div>
+<div class="chart-bar" data-orient="vertical" data-title="두 자격증 동시 준비 시 총 75시간 소요" data-labels="ADsP,SQLD,두 개 동시" data-values="35,50,75" data-colors="#2563eb,#009e73,#f59e0b" data-unit="시간"></div>
 
 합격자 대부분이 공통으로 강조하는 것은 '기출문제 반복'입니다. 이론에 시간을 오래 쓰기보다 문제를 풀며 개념을 체득하는 방식이 훨씬 효율적입니다.
 
-<div class="chart-donut" data-title="합격을 부르는 학습시간 배분" data-labels="이론 정리,기출·문제풀이,오답 복습" data-values="30,50,20" data-colors="#2563eb,#009e73,#f59e0b" data-unit="%"></div>
+<div class="chart-donut" data-title="기출·문제풀이가 학습시간의 절반(50%) 차지" data-labels="이론 정리,기출·문제풀이,오답 복습" data-values="30,50,20" data-colors="#2563eb,#009e73,#f59e0b" data-unit="%"></div>
 
 ## 항목별 상세 비교표
 

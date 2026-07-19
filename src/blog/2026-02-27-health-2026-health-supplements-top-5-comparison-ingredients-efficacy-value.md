@@ -59,7 +59,7 @@ faq:
 | 오메가-3 지방산 | EPA, DHA | 심혈관 건강, 뇌 기능 개선 | 1000-2000mg | 2.5만~5만원 | ★★★★★ |
 | 비타민D 복합제 | 비타민D3, 칼슘, 마그네슘 | 뼈 건강, 면역력, 기분 개선 | 1000-2000 IU | 1.5만~3만원 | ★★★★☆ |
 
-<div class="chart-radar" data-title="2026년 건강식품 TOP 5 종합 평가" data-items='[{"name":"홍삼 추출액","scores":[{"label":"임상근거","value":9.5,"color":"#009e73"},{"label":"효과속도","value":8.5,"color":"#3b82f6"},{"label":"가격대","value":6.5,"color":"#f59e0b"},{"label":"섭취편의성","value":7.5,"color":"#d55e00"}]},{"name":"루테인","scores":[{"label":"임상근거","value":9.0,"color":"#009e73"},{"label":"효과속도","value":7.0,"color":"#3b82f6"},{"label":"가격대","value":8.0,"color":"#f59e0b"},{"label":"섭취편의성","value":9.0,"color":"#d55e00"}]},{"name":"프로바이오틱스","scores":[{"label":"임상근거","value":8.5,"color":"#009e73"},{"label":"효과속도","value":7.5,"color":"#3b82f6"},{"label":"가격대","value":8.5,"color":"#f59e0b"},{"label":"섭취편의성","value":8.5,"color":"#d55e00"}]},{"name":"오메가-3","scores":[{"label":"임상근거","value":9.5,"color":"#009e73"},{"label":"효과속도","value":6.5,"color":"#3b82f6"},{"label":"가격대","value":7.0,"color":"#f59e0b"},{"label":"섭취편의성","value":8.0,"color":"#d55e00"}]},{"name":"비타민D","scores":[{"label":"임상근거","value":8.0,"color":"#009e73"},{"label":"효과속도","value":6.0,"color":"#3b82f6"},{"label":"가격대","value":9.0,"color":"#f59e0b"},{"label":"섭취편의성","value":9.5,"color":"#d55e00"}]}]'></div>
+<div class="chart-radar" data-title="비타민D, 편의성 최고·효과속도는 최저" data-items='[{"name":"홍삼 추출액","scores":[{"label":"임상근거","value":9.5,"color":"#009e73"},{"label":"효과속도","value":8.5,"color":"#3b82f6"},{"label":"가격대","value":6.5,"color":"#f59e0b"},{"label":"섭취편의성","value":7.5,"color":"#d55e00"}]},{"name":"루테인","scores":[{"label":"임상근거","value":9.0,"color":"#009e73"},{"label":"효과속도","value":7.0,"color":"#3b82f6"},{"label":"가격대","value":8.0,"color":"#f59e0b"},{"label":"섭취편의성","value":9.0,"color":"#d55e00"}]},{"name":"프로바이오틱스","scores":[{"label":"임상근거","value":8.5,"color":"#009e73"},{"label":"효과속도","value":7.5,"color":"#3b82f6"},{"label":"가격대","value":8.5,"color":"#f59e0b"},{"label":"섭취편의성","value":8.5,"color":"#d55e00"}]},{"name":"오메가-3","scores":[{"label":"임상근거","value":9.5,"color":"#009e73"},{"label":"효과속도","value":6.5,"color":"#3b82f6"},{"label":"가격대","value":7.0,"color":"#f59e0b"},{"label":"섭취편의성","value":8.0,"color":"#d55e00"}]},{"name":"비타민D","scores":[{"label":"임상근거","value":8.0,"color":"#009e73"},{"label":"효과속도","value":6.0,"color":"#3b82f6"},{"label":"가격대","value":9.0,"color":"#f59e0b"},{"label":"섭취편의성","value":9.5,"color":"#d55e00"}]}]'></div>
 
 ## 1위: 홍삼 추출액 – 피로회복과 면역력의 최강자
 
@@ -168,7 +168,7 @@ EPA/DHA 제품의 경우 최소 8주 이상 꾸준히 섭취해야 효과를 체
 
 월 1.5만~3만원대의 가성비 좋은 제품들이 많으며, 특히 일반의약품으로 처방받는 비타민D와 건강식품의 성분 함유량은 거의 동일하므로, 약국 상담을 통해 선택해도 좋습니다.
 
-<div class="chart-progress" data-title="건강 목표별 추천 건강식품 우선순위" data-labels="피로회복,눈건강,장건강,심혈관,뼈건강" data-values="95,70,85,80,75" data-colors="#009e73,#3b82f6,#f59e0b,#d55e00,#8b5cf6" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="피로회복이 우선순위 95점으로 최고" data-labels="피로회복,눈건강,장건강,심혈관,뼈건강" data-values="95,70,85,80,75" data-colors="#009e73,#3b82f6,#f59e0b,#d55e00,#8b5cf6" data-max="100" data-unit="점"></div>
 
 ## 건강식품 섭취 시 필수 지식
 
@@ -235,7 +235,7 @@ EPA/DHA 제품의 경우 최소 8주 이상 꾸준히 섭취해야 효과를 체
 - 월 비용: 약 7만원
 - 기간: 지속적 섭취
 
-<div class="chart-donut" data-title="2026년 건강식품 시장 선호도" data-labels="홍삼,루테인,프로바이오틱스,오메가-3,비타민D" data-values="28,24,22,18,8" data-colors="#d55e00,#009e73,#3b82f6,#f59e0b,#8b5cf6" data-unit="%"></div>
+<div class="chart-donut" data-title="홍삼이 선호도 28%로 가장 높음" data-labels="홍삼,루테인,프로바이오틱스,오메가-3,비타민D" data-values="28,24,22,18,8" data-colors="#d55e00,#009e73,#3b82f6,#f59e0b,#8b5cf6" data-unit="%"></div>
 
 ## 참고 자료
 

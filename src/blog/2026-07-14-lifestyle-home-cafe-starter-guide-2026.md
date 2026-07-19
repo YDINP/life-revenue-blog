@@ -43,7 +43,7 @@ faq:
 
 ## 예산별 시작 조합
 
-<div class="chart-bar" data-orient="vertical" data-title="홈카페 입문 예산 배분 우선순위 (참고용)" data-labels="원두(신선도),그라인더,추출 도구,주변 소품" data-values="10,8,7,3" data-colors="#009e73,#3b82f6,#f59e0b,#94a3b8" data-unit="점"></div>
+<div class="chart-bar" data-orient="vertical" data-title="예산 배분은 원두(신선도) 최우선, 소품은 최소 (참고용)" data-labels="원두(신선도),그라인더,추출 도구,주변 소품" data-values="10,8,7,3" data-colors="#009e73,#3b82f6,#f59e0b,#94a3b8" data-unit="점"></div>
 
 - **가성비 입문**: 핸드드립 세트 + 수동 그라인더 + 신선한 원두
 - **편리 우선**: 캡슐 머신 또는 전자동

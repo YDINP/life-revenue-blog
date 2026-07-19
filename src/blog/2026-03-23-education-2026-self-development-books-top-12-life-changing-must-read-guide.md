@@ -132,7 +132,7 @@ faq:
 
 ## 2026년 자기계발 도서 추천 도서별 평가
 
-<div class="chart-radar" data-title="도서별 종합 평가" data-items='[{"name":"돈의 흐름을 읽는 자","scores":[{"label":"실용성","value":9,"color":"#009e73"},{"label":"가독성","value":8,"color":"#3b82f6"},{"label":"변화유도","value":8,"color":"#f59e0b"},{"label":"시대성","value":9,"color":"#d55e00"}]},{"name":"하루 25시간 만들기","scores":[{"label":"실용성","value":9,"color":"#009e73"},{"label":"가독성","value":9,"color":"#3b82f6"},{"label":"변화유도","value":9,"color":"#f59e0b"},{"label":"시대성","value":8,"color":"#d55e00"}]}]'></div>
+<div class="chart-radar" data-title="하루 25시간 만들기, 3개 항목 9점 최고" data-items='[{"name":"돈의 흐름을 읽는 자","scores":[{"label":"실용성","value":9,"color":"#009e73"},{"label":"가독성","value":8,"color":"#3b82f6"},{"label":"변화유도","value":8,"color":"#f59e0b"},{"label":"시대성","value":9,"color":"#d55e00"}]},{"name":"하루 25시간 만들기","scores":[{"label":"실용성","value":9,"color":"#009e73"},{"label":"가독성","value":9,"color":"#3b82f6"},{"label":"변화유도","value":9,"color":"#f59e0b"},{"label":"시대성","value":8,"color":"#d55e00"}]}]'></div>
 
 ## 도서 선택 체크리스트
 
@@ -168,7 +168,7 @@ faq:
 
 ## 2026년 자기계발 트렌드
 
-<div class="chart-bar" data-orient="vertical" data-title="2026년 자기계발 분야별 관심도" data-labels="재정관리,시간관리,건강습관,대인관계,자기인식" data-values="82,78,75,68,72" data-colors="#009e73,#3b82f6,#f59e0b,#d55e00,#8b5cf6" data-unit="%"></div>
+<div class="chart-bar" data-orient="vertical" data-title="자기계발 관심도, 재정관리가 82%로 최고" data-labels="재정관리,시간관리,건강습관,대인관계,자기인식" data-values="82,78,75,68,72" data-colors="#009e73,#3b82f6,#f59e0b,#d55e00,#8b5cf6" data-unit="%"></div>
 
 2026년 자기계발 분야의 관심도 조사 결과, 재정 관리에 대한 관심이 가장 높습니다(82%). 이는 경제 불확실성이 커지면서 개인 재정 관리의 중요성이 높아졌기 때문입니다. 그 다음으로 시간 관리(78%), 건강 습관(75%) 순서입니다.
 

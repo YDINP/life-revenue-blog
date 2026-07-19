@@ -44,7 +44,7 @@ faq:
 
 한 번에 다 갖추려다 지치기 쉽습니다. '잠자리 → 전원 → 환경' 순으로 늘리세요.
 
-<div class="chart-progress" data-title="차박 입문 장비 우선순위(중요도)" data-labels="평탄화 매트,대용량 파워뱅크,모기장·타프,조리·쿨러" data-values="95,86,74,60" data-colors="#7a5aa6,#2563eb,#009e73,#f59e0b" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="차박 필수템 1순위는 평탄화 매트(95점)" data-labels="평탄화 매트,대용량 파워뱅크,모기장·타프,조리·쿨러" data-values="95,86,74,60" data-colors="#7a5aa6,#2563eb,#009e73,#f59e0b" data-max="100" data-unit="점"></div>
 
 | 장비 | 역할 | 초보 팁 |
 |------|------|--------|

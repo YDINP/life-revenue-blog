@@ -66,7 +66,7 @@ faq:
 
 같은 2박 3일이라도 지역과 숙박 등급에 따라 예산이 크게 달라집니다. 아래는 2인 기준 중급 숙소를 가정한 총예산 비교입니다.
 
-<div class="chart-bar" data-title="2인 2박3일 총예산 비교(항공 제외)" data-labels="삼척,순천,통영,강릉,여수,속초,제주" data-values="47,51,57,62,63,58,88" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6,#d55e00,#06b6d4,#ec4899" data-unit="만원"></div>
+<div class="chart-bar" data-title="제주 예산 88만원으로 7곳 중 최고(항공 제외)" data-labels="삼척,순천,통영,강릉,여수,속초,제주" data-values="47,51,57,62,63,58,88" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6,#d55e00,#06b6d4,#ec4899" data-unit="만원" data-highlight="max"></div>
 
 - 최저가 그룹(40만원대): 삼척·순천 — 한적하고 물가가 저렴
 - 중간 그룹(50만~60만원대): 강릉·여수·속초·통영 — 인기 관광 인프라
@@ -103,7 +103,7 @@ faq:
 
 여행 스타일에 따라 중시하는 요소가 다릅니다. 4개 지표로 대표 3개 지역의 강점을 비교했습니다.
 
-<div class="chart-progress" data-title="지역별 만족도 지표(강릉·제주·여수)" data-labels="접근성,가성비,풍경,가족편의" data-values="90,70,88,82" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="접근성 지표 90점으로 최고(강릉·제주·여수)" data-labels="접근성,가성비,풍경,가족편의" data-values="90,70,88,82" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
 
 - 접근성 최강: 강릉(KTX 2시간)
 - 풍경 최강: 제주(자연 다양성)

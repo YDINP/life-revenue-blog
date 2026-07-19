@@ -54,7 +54,7 @@ faq:
 
 문제는 '단 걸 안 먹는데도' 당이 초과된다는 점입니다. 소스, 음료, 가공식품에 숨은 당이 대부분이기 때문입니다.
 
-<div class="chart-bar" data-title="흔한 식품의 첨가당 함량" data-labels="가당 음료 1캔,시럽 라떼,가당 요거트,시리얼 1회분,토마토소스 파스타" data-values="27,22,18,12,9" data-colors="#d55e00,#f59e0b,#8b5cf6,#2563eb,#009e73" data-unit="g"></div>
+<div class="chart-bar" data-title="가당 음료 1캔 첨가당 27g으로 가장 많음" data-labels="가당 음료 1캔,시럽 라떼,가당 요거트,시리얼 1회분,토마토소스 파스타" data-values="27,22,18,12,9" data-colors="#d55e00,#f59e0b,#8b5cf6,#2563eb,#009e73" data-unit="g" data-highlight="max"></div>
 
 가당 음료 한 캔이면 이미 하루 권장량을 넘깁니다. 그래서 저당 식습관의 첫걸음은 '고형 음식'이 아니라 '마시는 당'을 줄이는 데서 시작합니다.
 
@@ -87,7 +87,7 @@ faq:
 
 같은 당이라도 언제 먹느냐에 따라 몸이 반응하는 방식이 다릅니다. 무조건 줄이기보다 '필요한 순간에 전략적으로'가 핵심입니다.
 
-<div class="chart-progress" data-title="상황별 권장 당 섭취 전략" data-labels="공복 아침,일반 식사,운동 직후,저녁 야식" data-values="40,55,80,20" data-colors="#f59e0b,#2563eb,#009e73,#d55e00" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="운동 직후 당 섭취 전략점수 80점으로 최고" data-labels="공복 아침,일반 식사,운동 직후,저녁 야식" data-values="40,55,80,20" data-colors="#f59e0b,#2563eb,#009e73,#d55e00" data-max="100" data-unit="점"></div>
 
 ### 아침: 단순당은 피하고 단백질부터
 

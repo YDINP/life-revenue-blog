@@ -46,7 +46,7 @@ faq:
 
 금리 숫자만 보면 낭패를 봅니다. 아래 세 가지를 함께 확인하세요.
 
-<div class="chart-progress" data-title="파킹통장 선택 시 확인 중요도" data-labels="조건 없는 기본금리,우대 달성 난이도,고금리 적용 한도,이자 지급 주기" data-values="90,82,78,60" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="파킹통장 선택 시 기본금리 확인이 최우선(90점)" data-labels="조건 없는 기본금리,우대 달성 난이도,고금리 적용 한도,이자 지급 주기" data-values="90,82,78,60" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
 
 - 기본금리: 우대 없이 받는 금리(광고 최고금리와 다름)
 - 우대조건: 급여이체·카드실적·첫 거래 등 달성 난이도

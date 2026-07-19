@@ -38,7 +38,7 @@ faq:
 
 절약의 첫걸음은 '내 돈이 어디로 새는지' 아는 것입니다. 일반적인 국내 2박 3일 여행의 평균 예산 배분은 다음과 같습니다.
 
-<div class="chart-donut" data-title="국내 여행 평균 예산 배분" data-labels="숙박,교통,식비,활동비" data-values="35,25,25,15" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6" data-unit="%"></div>
+<div class="chart-donut" data-title="숙박이 여행 예산의 35%로 최다" data-labels="숙박,교통,식비,활동비" data-values="35,25,25,15" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6" data-unit="%"></div>
 
 보시다시피 숙박과 교통이 전체의 60%를 차지합니다. 이 두 항목에서 절약하면 전체 예산이 극적으로 줄어듭니다. 반대로 활동비(15%)를 아끼는 것은 여행의 재미만 깎을 뿐 효과가 작습니다.
 
@@ -108,7 +108,7 @@ faq:
 
 교통은 예산의 25%를 차지하지만 선택지가 가장 많은 항목입니다.
 
-<div class="chart-bar" data-orient="vertical" data-title="서울-강릉 편도 교통수단별 요금" data-labels="KTX,시외버스,무궁화호,카풀" data-values="27000,15000,17000,12000" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6" data-unit="원"></div>
+<div class="chart-bar" data-orient="vertical" data-title="카풀이 1.2만원으로 서울-강릉 편도 최저가" data-labels="KTX,시외버스,무궁화호,카풀" data-values="27000,15000,17000,12000" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6" data-unit="원" data-highlight="min"></div>
 
 - 무궁화호·시외버스: KTX 대비 40~60% 저렴, 시간 여유가 있다면 최선
 - 얼리버드 예약: 고속버스·기차 사전 예약 시 10~30% 할인

@@ -38,7 +38,7 @@ faq:
 
 서귀포는 제주에서 가장 온화하고 바다 풍경이 극적인 지역입니다. 올레길이 촘촘히 연결돼 있어 하루 한 코스씩 걸으며 자연·문화·미식을 균형 있게 즐길 수 있습니다.
 
-<div class="chart-progress" data-title="서귀포 슬로우 여행 만족 요소" data-labels="풍경,여유,미식,접근성" data-values="95,90,85,78" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="풍경 만족도 95점으로 요소 중 최고" data-labels="풍경,여유,미식,접근성" data-values="95,90,85,78" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
 
 - 풍경: 외돌개·정방폭포 등 해안 절경 밀집
 - 여유: 평탄한 코스로 서두를 필요 없음
@@ -118,7 +118,7 @@ faq:
 
 표준형 예산(58만원) 기준 항목별 비중입니다. 슬로우 여행은 활동비보다 숙박·식비·이동에 무게가 실립니다.
 
-<div class="chart-donut" data-title="표준형 예산 배분" data-labels="숙박,항공,식비,교통,입장료" data-values="31,22,21,17,9" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6,#d55e00" data-unit="%"></div>
+<div class="chart-donut" data-title="숙박이 예산의 31%로 최대 비중" data-labels="숙박,항공,식비,교통,입장료" data-values="31,22,21,17,9" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6,#d55e00" data-unit="%"></div>
 
 ---
 

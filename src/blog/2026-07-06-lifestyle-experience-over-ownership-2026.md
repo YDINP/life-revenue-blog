@@ -38,7 +38,7 @@ faq:
 
 2026년 소비자들이 경험으로 무게중심을 옮긴 데는 이유가 있습니다. 고물가로 지출 하나하나가 신중해지자, '남는 것'에 돈을 쓰려는 심리가 강해진 것입니다.
 
-<div class="chart-bar" data-title="소비 유형별 만족 지속 기간 체감" data-labels="충동 물건 구매,계획 물건 구매,일상 소소한 경험,여행·배움 경험" data-values="5,30,90,180" data-colors="#d55e00,#f59e0b,#009e73,#2563eb" data-unit="일"></div>
+<div class="chart-bar" data-title="여행·배움 경험 만족이 충동구매의 36배 지속" data-labels="충동 물건 구매,계획 물건 구매,일상 소소한 경험,여행·배움 경험" data-values="5,30,90,180" data-colors="#d55e00,#f59e0b,#009e73,#2563eb" data-unit="일" data-highlight="max"></div>
 
 물건은 소유한 뒤 관리와 처분의 부담이 남지만, 경험은 부담 없이 기억만 남습니다. 이 차이가 소비의 방향을 바꾸고 있습니다.
 
@@ -80,7 +80,7 @@ faq:
 
 번아웃과 만성 피로가 일상어가 된 2026년, 소비의 또 다른 축은 '회복'입니다. 자극적인 즐거움보다 몸과 마음이 충전되는 경험에 시간과 돈을 쓰는 흐름입니다.
 
-<div class="chart-donut" data-title="2026 회복·웰니스 소비 관심 분야" data-labels="수면·휴식,운동·요가,자연·아웃도어,명상·마음챙김" data-values="32,28,22,18" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6" data-unit="%"></div>
+<div class="chart-donut" data-title="수면·휴식이 회복·웰니스 관심 1위(32%)" data-labels="수면·휴식,운동·요가,자연·아웃도어,명상·마음챙김" data-values="32,28,22,18" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6" data-unit="%"></div>
 
 수면 관리 제품, 요가·명상 클래스, 자연 속 짧은 여행, 디지털 디톡스가 대표적입니다. 이제 회복 소비는 사치가 아니라 자신을 유지하기 위한 필수 관리로 여겨집니다.
 
@@ -88,7 +88,7 @@ faq:
 
 트렌드를 아는 것과 따라가는 것은 다릅니다. 유행하는 경험을 무작정 좇으면 '경험'이라는 이름의 낭비가 될 수 있습니다. 아래 기준으로 나에게 맞는 소비를 걸러보세요.
 
-<div class="chart-progress" data-title="나에게 맞는 경험 소비 점검 기준" data-labels="회복·충전 여부,취향 일치도,반복 가치,후회 없음" data-values="85,80,70,88" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="'후회 없음' 기준이 88점으로 점검항목 최고" data-labels="회복·충전 여부,취향 일치도,반복 가치,후회 없음" data-values="85,80,70,88" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
 
 점검 질문 3가지:
 

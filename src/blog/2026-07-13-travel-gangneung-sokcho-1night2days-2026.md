@@ -53,7 +53,7 @@ faq:
 
 ## 1박2일 동선 2안 — 이동시간으로 검증
 
-<div class="chart-progress" data-title="동선별 순수 이동시간(왕복 기준)" data-labels="A. 강릉 집중형(KTX 왕복),B. 강릉+속초 연계형(KTX+시외버스),C. 속초 직행형(고속버스 왕복)" data-values="4,7.2,4.7" data-colors="#009e73,#d55e00,#2563eb" data-max="8" data-unit="시간"></div>
+<div class="chart-progress" data-title="강릉 집중형이 이동시간 최소 4시간(왕복)" data-labels="A. 강릉 집중형(KTX 왕복),B. 강릉+속초 연계형(KTX+시외버스),C. 속초 직행형(고속버스 왕복)" data-values="4,7.2,4.7" data-colors="#009e73,#d55e00,#2563eb" data-max="8" data-unit="시간"></div>
 
 ### A안. 강릉 집중형 — **추천**
 

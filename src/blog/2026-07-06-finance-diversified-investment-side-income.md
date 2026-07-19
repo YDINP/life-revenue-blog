@@ -71,14 +71,14 @@ faq:
 
 배분 비율은 소득과 생활 상황에 따라 다르지만, 초보자를 위한 표준 모델은 아래와 같습니다.
 
-<div class="chart-donut" data-title="월 수입 배분 비율 (표준 모델)" data-labels="소비,투자,비상금,자기계발" data-values="50,25,15,10" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6" data-unit="%"></div>
+<div class="chart-donut" data-title="소비가 수입의 절반(50%) 차지 (표준 모델)" data-labels="소비,투자,비상금,자기계발" data-values="50,25,15,10" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6" data-unit="%"></div>
 
 - 소비 50%: 고정비(월세·통신)와 변동비(식비·여가)를 합친 생활비입니다.
 - 투자 25%: ETF, 연금계좌, 적금 등 미래를 위한 자산입니다.
 - 비상금 15%: 목표치(생활비 3~6개월)를 채울 때까지 우선 적립합니다.
 - 자기계발 10%: 부업 역량 강화나 기술 습득에 재투자합니다.
 
-<div class="chart-progress" data-title="목적별 통장 목표 달성률 (예시)" data-labels="비상금,투자,자기계발" data-values="60,45,70" data-colors="#f59e0b,#009e73,#8b5cf6" data-max="100" data-unit="%"></div>
+<div class="chart-progress" data-title="자기계발 목표 달성률 70%로 셋 중 최고 (예시)" data-labels="비상금,투자,자기계발" data-values="60,45,70" data-colors="#f59e0b,#009e73,#8b5cf6" data-max="100" data-unit="%"></div>
 
 <div class="callout-tip">💡 <strong>팁:</strong> 비상금 목표(생활비 3~6개월치)를 아직 못 채웠다면, 투자 비중을 잠시 줄이고 비상금을 먼저 채우세요. 안전망 없이 투자부터 늘리면, 급전이 필요할 때 손실 구간에서 투자금을 헐게 되는 최악의 상황이 벌어집니다.</div>
 

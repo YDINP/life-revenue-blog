@@ -117,7 +117,7 @@ faq:
 3. **투자 대상 성향 점검.** 해외 ETF 비중을 늘리고 싶다면 기존 ISA를, 국내 성장주·국민성장펀드에 관심이 있다면 생산적 금융 ISA를 활용하는 식으로 역할을 나누세요.
 4. **공식 발표 알림 설정.** 금융위원회·거래 금융사의 공지를 기준으로 삼고, 커뮤니티 숫자는 검증 전까지 참고용으로만 쓰세요.
 
-<div class="chart-progress" data-title="생산적 금융 ISA 정보 확정도 (2026년 7월 기준)" data-labels="가입 대상·중복가입 규칙,투자 대상 범위,비과세·납입 한도 수치,공식 출시일" data-values="80,70,25,20" data-colors="#009e73,#3b82f6,#f59e0b,#d55e00" data-max="100" data-unit="%"></div>
+<div class="chart-progress" data-title="가입 대상 규칙 80% 확정, 출시일은 20%뿐 (2026년 7월 기준)" data-labels="가입 대상·중복가입 규칙,투자 대상 범위,비과세·납입 한도 수치,공식 출시일" data-values="80,70,25,20" data-colors="#009e73,#3b82f6,#f59e0b,#d55e00" data-max="100" data-unit="%"></div>
 
 ## 마무리
 

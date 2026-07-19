@@ -61,7 +61,7 @@ faq:
 
 ## 냉방병에 취약한 사람들
 
-<div class="chart-progress" data-title="냉방병 위험군별 취약도" data-labels="사무직 장시간 냉방노출,고령자,임산부,실내외 잦은 이동(영업·배달),혈액순환 저하 체질" data-values="88,80,78,75,70" data-colors="#2563eb,#7a5aa6,#f59e0b,#009e73,#06b6d4" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="사무직 장시간 냉방노출이 취약도 88점으로 최고" data-labels="사무직 장시간 냉방노출,고령자,임산부,실내외 잦은 이동(영업·배달),혈액순환 저하 체질" data-values="88,80,78,75,70" data-colors="#2563eb,#7a5aa6,#f59e0b,#009e73,#06b6d4" data-max="100" data-unit="점"></div>
 
 - 사무직: 하루 8시간 이상 같은 냉방 공간에 노출
 - 고령자·임산부: 체온 조절 기능이 상대적으로 약함

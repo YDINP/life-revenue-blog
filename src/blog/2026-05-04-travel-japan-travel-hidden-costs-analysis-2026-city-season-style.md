@@ -66,7 +66,7 @@ faq:
 
 많은 여행자가 일본 식당 이용을 비싼 것으로 착각하지만, 편의점과 현지식당 활용으로 50% 절감 가능합니다.
 
-<div class="chart-bar" data-orient="vertical" data-title="일본 도시별 1인 1식 평균 비용" data-labels="도쿄,오사카,교토,나고야" data-values="12500,10800,11200,10000" data-colors="#3b82f6,#009e73,#f59e0b,#d55e00" data-unit="원"></div>
+<div class="chart-bar" data-orient="vertical" data-title="도쿄 1식 비용, 나고야보다 25% 비쌈" data-labels="도쿄,오사카,교토,나고야" data-values="12500,10800,11200,10000" data-colors="#3b82f6,#009e73,#f59e0b,#d55e00" data-unit="원"></div>
 
 식사 유형별 가격 가이드:
 - 편의점 도시락: 3,500~5,000원 (아침/점심 최적)
@@ -82,7 +82,7 @@ faq:
 
 일본 교통비는 개별 승차 vs 주간/월간 패스 선택이 비용을 크게 좌우합니다.
 
-<div class="chart-donut" data-title="일본 여행자 예산 구성비" data-labels="숙박,식사,교통,입장료,쇼핑" data-values="35,20,18,12,15" data-colors="#3b82f6,#009e73,#f59e0b,#d55e00,#8b5cf6" data-unit="%"></div>
+<div class="chart-donut" data-title="숙박이 예산의 35%로 최대 비중" data-labels="숙박,식사,교통,입장료,쇼핑" data-values="35,20,18,12,15" data-colors="#3b82f6,#009e73,#f59e0b,#d55e00,#8b5cf6" data-unit="%"></div>
 
 도시별 교통 패스 가성비:
 
@@ -104,7 +104,7 @@ faq:
 
 일본 여행은 계절에 따라 가격이 극단적으로 변합니다. 성수기는 숙박비, 항공권, 입장료 모두 오릅니다.
 
-<div class="chart-versus" data-title="비수기 vs 성수기" data-name-a="비수기(1월,7월)" data-name-b="성수기(3월,11월)" data-color-a="#009e73" data-color-b="#d55e00" data-items='[{"label":"항공료","a":120000,"b":180000},{"label":"호텔","a":100000,"b":150000},{"label":"입장료","a":50000,"b":70000}]'></div>
+<div class="chart-versus" data-title="성수기 항공료, 비수기보다 50% 비쌈" data-name-a="비수기(1월,7월)" data-name-b="성수기(3월,11월)" data-color-a="#009e73" data-color-b="#d55e00" data-items='[{"label":"항공료","a":120000,"b":180000},{"label":"호텔","a":100000,"b":150000},{"label":"입장료","a":50000,"b":70000}]'></div>
 
 비용 최적 시기:
 - 가장 저렴: 1월 중순~2월 초(항공료 -30%)
@@ -213,7 +213,7 @@ faq:
 
 ## 항공료 절감: 성수기라도 20~30% 줄일 수 있다
 
-<div class="chart-progress" data-title="항공사별 가성비 평가" data-labels="대한항공,아시아나,진에어,티웨이" data-values="70,68,82,80" data-colors="#3b82f6,#009e73,#f59e0b,#d55e00" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="진에어 가성비 82점으로 4개사 중 최고" data-labels="대한항공,아시아나,진에어,티웨이" data-values="70,68,82,80" data-colors="#3b82f6,#009e73,#f59e0b,#d55e00" data-max="100" data-unit="점"></div>
 
 항공료 절감 전략:
 - 6주 전 예약: 성수기도 5~10% 저렴

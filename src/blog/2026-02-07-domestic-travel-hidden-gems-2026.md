@@ -16,7 +16,7 @@ coupangLinks:
 
 제주도, 부산, 강릉은 이미 알고 있죠? 이번에는 사람들이 잘 모르는 국내 숨은 명소를 소개합니다. 관광객이 적고, 조용하고, 힐링되는 곳들입니다.
 
-<div class="chart-progress" data-title="숨은 명소 매력도" data-labels="경치,조용함,접근성,가성비,인스타감성" data-values="95,90,75,85,90" data-colors="#009e73,#3b82f6,#8b5cf6,#f59e0b,#ec4899" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="경치 95점으로 매력 요소 중 최고" data-labels="경치,조용함,접근성,가성비,인스타감성" data-values="95,90,75,85,90" data-colors="#009e73,#3b82f6,#8b5cf6,#f59e0b,#ec4899" data-max="100" data-unit="점"></div>
 
 
 <!-- seo-inlink -->
@@ -189,7 +189,7 @@ coupangLinks:
 - 주차: 5천원
 - 숙박: 모텔 7~10만원
 
-<div class="chart-radar" data-title="여행지 유형별 매력 비교" data-items='[{"name":"담양","scores":[{"label":"자연경관","value":90,"color":"#009e73"},{"label":"액티비티","value":60,"color":"#009e73"},{"label":"먹거리","value":75,"color":"#009e73"},{"label":"숙박시설","value":80,"color":"#009e73"},{"label":"포토존","value":95,"color":"#009e73"}]},{"name":"양양","scores":[{"label":"자연경관","value":85,"color":"#3b82f6"},{"label":"액티비티","value":95,"color":"#3b82f6"},{"label":"먹거리","value":80,"color":"#3b82f6"},{"label":"숙박시설","value":85,"color":"#3b82f6"},{"label":"포토존","value":90,"color":"#3b82f6"}]},{"name":"남해","scores":[{"label":"자연경관","value":95,"color":"#f59e0b"},{"label":"액티비티","value":70,"color":"#f59e0b"},{"label":"먹거리","value":85,"color":"#f59e0b"},{"label":"숙박시설","value":75,"color":"#f59e0b"},{"label":"포토존","value":100,"color":"#f59e0b"}]}]'></div>
+<div class="chart-radar" data-title="남해, 포토존 100점으로 전체 최고" data-items='[{"name":"담양","scores":[{"label":"자연경관","value":90,"color":"#009e73"},{"label":"액티비티","value":60,"color":"#009e73"},{"label":"먹거리","value":75,"color":"#009e73"},{"label":"숙박시설","value":80,"color":"#009e73"},{"label":"포토존","value":95,"color":"#009e73"}]},{"name":"양양","scores":[{"label":"자연경관","value":85,"color":"#3b82f6"},{"label":"액티비티","value":95,"color":"#3b82f6"},{"label":"먹거리","value":80,"color":"#3b82f6"},{"label":"숙박시설","value":85,"color":"#3b82f6"},{"label":"포토존","value":90,"color":"#3b82f6"}]},{"name":"남해","scores":[{"label":"자연경관","value":95,"color":"#f59e0b"},{"label":"액티비티","value":70,"color":"#f59e0b"},{"label":"먹거리","value":85,"color":"#f59e0b"},{"label":"숙박시설","value":75,"color":"#f59e0b"},{"label":"포토존","value":100,"color":"#f59e0b"}]}]'></div>
 
 ## 8. 경기 가평 아침고요수목원
 

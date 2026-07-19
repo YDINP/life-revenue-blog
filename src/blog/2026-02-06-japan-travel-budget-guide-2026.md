@@ -22,7 +22,7 @@ coupangLinks:
 
 ## 1. 일본 여행 예산 개요
 
-<div class="chart-donut" data-title="일본 여행 4박 5일 예산 비율" data-labels="항공권,숙박,식비,교통,쇼핑/관광" data-values="40,25,15,10,10" data-colors="#3b82f6,#009e73,#f59e0b,#8b5cf6,#ec4899" data-unit="%"></div>
+<div class="chart-donut" data-title="항공권이 예산의 40%로 최대 비중" data-labels="항공권,숙박,식비,교통,쇼핑/관광" data-values="40,25,15,10,10" data-colors="#3b82f6,#009e73,#f59e0b,#8b5cf6,#ec4899" data-unit="%"></div>
 
 ### 4박 5일 예산 (1인 기준)
 
@@ -66,7 +66,7 @@ coupangLinks:
 
 ## 3. 숙박 (1박 3~15만원)
 
-<div class="chart-radar" data-title="숙소 유형별 평가" data-items='[{"name":"호스텔","scores":[{"label":"가격","value":95,"color":"#009e73"},{"label":"위치","value":70,"color":"#009e73"},{"label":"시설","value":50,"color":"#009e73"},{"label":"체험","value":70,"color":"#009e73"},{"label":"편의성","value":60,"color":"#009e73"}]},{"name":"비즈니스호텔","scores":[{"label":"가격","value":75,"color":"#3b82f6"},{"label":"위치","value":85,"color":"#3b82f6"},{"label":"시설","value":80,"color":"#3b82f6"},{"label":"체험","value":50,"color":"#3b82f6"},{"label":"편의성","value":95,"color":"#3b82f6"}]},{"name":"료칸","scores":[{"label":"가격","value":30,"color":"#f59e0b"},{"label":"위치","value":60,"color":"#f59e0b"},{"label":"시설","value":95,"color":"#f59e0b"},{"label":"체험","value":100,"color":"#f59e0b"},{"label":"편의성","value":70,"color":"#f59e0b"}]}]'></div>
+<div class="chart-radar" data-title="료칸, 체험 100점 최고·가격은 최저" data-items='[{"name":"호스텔","scores":[{"label":"가격","value":95,"color":"#009e73"},{"label":"위치","value":70,"color":"#009e73"},{"label":"시설","value":50,"color":"#009e73"},{"label":"체험","value":70,"color":"#009e73"},{"label":"편의성","value":60,"color":"#009e73"}]},{"name":"비즈니스호텔","scores":[{"label":"가격","value":75,"color":"#3b82f6"},{"label":"위치","value":85,"color":"#3b82f6"},{"label":"시설","value":80,"color":"#3b82f6"},{"label":"체험","value":50,"color":"#3b82f6"},{"label":"편의성","value":95,"color":"#3b82f6"}]},{"name":"료칸","scores":[{"label":"가격","value":30,"color":"#f59e0b"},{"label":"위치","value":60,"color":"#f59e0b"},{"label":"시설","value":95,"color":"#f59e0b"},{"label":"체험","value":100,"color":"#f59e0b"},{"label":"편의성","value":70,"color":"#f59e0b"}]}]'></div>
 
 ### 호스텔/게스트하우스
 

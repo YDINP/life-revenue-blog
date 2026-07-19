@@ -50,7 +50,7 @@ faq:
 
 에어컨 전기료는 설정온도에 민감하게 반응합니다. 1도만 높여도 소비전력이 눈에 띄게 줄어듭니다.
 
-<div class="chart-bar" data-orient="vertical" data-title="에어컨 설정온도별 상대 소비전력" data-labels="24도,25도,26도,27도,28도" data-values="100,86,73,61,51" data-colors="#d55e00,#f97316,#f59e0b,#009e73,#06b6d4" data-unit="%"></div>
+<div class="chart-bar" data-orient="vertical" data-title="28도 설정 시 24도 대비 전력 49% 절감" data-labels="24도,25도,26도,27도,28도" data-values="100,86,73,61,51" data-colors="#d55e00,#f97316,#f59e0b,#009e73,#06b6d4" data-unit="%"></div>
 
 24도 단독 냉방을 26~27도 + 서큘레이터 조합으로 바꾸면 체감온도는 비슷하면서 전력은 30% 안팎 줄일 수 있습니다. 냉방비 절감의 핵심은 '온도를 더 낮추는 것'이 아니라 '찬 공기를 잘 퍼뜨리는 것'입니다.
 
@@ -97,7 +97,7 @@ faq:
   <span class="ci-cta">최저가 →</span>
 </a>
 
-<div class="chart-progress" data-title="냉방비 절감 방법별 효과 체감도" data-labels="혼합 냉방,설정온도 1도↑,필터 청소,차광 커튼" data-values="85,80,66,58" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
+<div class="chart-progress" data-title="혼합 냉방 체감효과 85점으로 방법 중 최고" data-labels="혼합 냉방,설정온도 1도↑,필터 청소,차광 커튼" data-values="85,80,66,58" data-colors="#2563eb,#009e73,#f59e0b,#8b5cf6" data-max="100" data-unit="점"></div>
 
 <div class="callout-tip">💡 팁: 어떤 냉감가전을 조합할지 고민된다면 <a href="/blog/2026-07-11-lifestyle-cooling-appliances-fan-dehumidifier-2026/" class="callout-link">2026 여름 휴대용 선풍기·제습기 추천 TOP</a>에서 공간별 조합을 확인하세요. 장마철엔 제습기만으로도 끈적임이 줄어 에어컨 가동을 줄일 수 있습니다.</div>
 
