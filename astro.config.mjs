@@ -25,7 +25,7 @@ export default defineConfig({
   site: 'https://life-revenue-blog.vercel.app',
   integrations: [
     sitemap({
-      filter: (page) => !page.includes('/dashboard'),
+      filter: (page) => !page.includes('/dashboard') && !page.includes('/go/'),
       changefreq: 'weekly',
       priority: 0.7,
       serialize(item) {

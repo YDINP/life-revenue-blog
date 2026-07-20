@@ -1,0 +1,44 @@
+---
+// 외부(네이버 등) 유입 → LF 경유로 클릭을 집계한 뒤 페이퍼닥으로 이동시키는 추적 리다이렉트.
+// 네이버 글에는 이 URL을 쓴다: https://life-revenue-blog.vercel.app/go/paperdoc?src=naver
+// 대시보드 paperdoc 탭에 source=lifeflow / placement=<src> 로 잡힌다. 검색 색인은 제외(noindex).
+const TARGET = 'https://paperdoc-web.vercel.app/';
+const ANALYTICS = 'https://xyprbsmagtlzebxyxsvj.supabase.co/functions/v1/analytics-ingest';
+---
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta http-equiv="refresh" content={`2;url=${TARGET}`} />
+    <title>페이퍼닥으로 이동 중…</title>
+    <style>
+      body { font-family: system-ui, -apple-system, "Malgun Gothic", sans-serif; margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #0f1420; color: #e5e7eb; }
+      .box { text-align: center; line-height: 1.7; }
+      a { color: #57e6c3; font-weight: 700; }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>페이퍼닥으로 이동 중입니다…</p>
+      <p><a href={TARGET}>바로 이동하기 →</a></p>
+    </div>
+    <script is:inline define:vars={{ TARGET, ANALYTICS }}>
+      (function () {
+        var src = 'external';
+        try { src = new URLSearchParams(location.search).get('src') || 'external'; } catch (e) {}
+        try {
+          var payload = JSON.stringify({
+            event_type: 'paperdoc_click',
+            source: 'lifeflow',
+            metadata: { placement: src, url: TARGET, path: '/go/paperdoc', ref: document.referrer || 'direct' },
+          });
+          if (navigator.sendBeacon) navigator.sendBeacon(ANALYTICS, new Blob([payload], { type: 'application/json' }));
+          else fetch(ANALYTICS, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: payload, keepalive: true });
+        } catch (e) {}
+        setTimeout(function () { location.replace(TARGET); }, 250);
+      })();
+    </script>
+  </body>
+</html>
