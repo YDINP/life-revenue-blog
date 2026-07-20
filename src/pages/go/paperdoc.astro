@@ -31,10 +31,12 @@ const ANALYTICS = 'https://xyprbsmagtlzebxyxsvj.supabase.co/functions/v1/analyti
         var src = 'external';
         try { src = new URLSearchParams(location.search).get('src') || 'external'; } catch (e) {}
         try {
+          // source=paperdoc: LF 블로그 실적이 아니라 '페이퍼닥 유입'으로 집계(대시보드에서 LF에 안 섞임).
+          // 실제 유입 출처(naver 등)는 placement 에 보존.
           var payload = JSON.stringify({
             event_type: 'paperdoc_click',
-            source: 'lifeflow',
-            metadata: { placement: src, url: TARGET, path: '/go/paperdoc', ref: document.referrer || 'direct' },
+            source: 'paperdoc',
+            metadata: { placement: src, referrer_site: 'lifeflow', url: TARGET, path: '/go/paperdoc', ref: document.referrer || 'direct' },
           });
           // keepalive fetch: 같은 탭 이동에도 요청이 끝까지 전송됨(sendBeacon은 즉시 이동 시 취소될 수 있음).
           // 전송이 끝나면(또는 실패해도) 이동하고, 안전을 위해 최대 800ms 뒤엔 무조건 이동.
