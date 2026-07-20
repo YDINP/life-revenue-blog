@@ -2591,15 +2591,23 @@ section > h2::after {
 
 /* ===== Newsletter CTA ===== */
 .newsletter-cta {
-  background: linear-gradient(135deg, var(--color-primary), #8b5cf6);
-  border-radius: 16px;
-  padding: 2.5rem;
+  /* LifeFlow 브랜드(따뜻한 포레스트 그린) — 기존 보라 제거 */
+  background: linear-gradient(135deg, var(--color-primary-dark, #14483d) 0%, var(--color-primary, #1e6b5c) 55%, var(--color-primary-light, #2f8a78) 100%);
+  border-radius: 18px;
+  padding: 2.5rem 2rem;
   margin: 2rem 0;
   text-align: center;
   color: #fff;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 14px 34px -14px rgba(20, 72, 61, 0.55);
 }
+.newsletter-illus {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.6rem;
+}
+.newsletter-illus svg { display: block; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.18)); }
 
 .newsletter-cta::before {
   content: '';
