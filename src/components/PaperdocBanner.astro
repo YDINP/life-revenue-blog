@@ -11,8 +11,8 @@
   rel="noopener sponsored"
   aria-label="페이퍼닥 - 계약서 AI 분석 플랫폼 바로가기"
 >
+  <span class="pd-post-tag">제휴 · 광고</span>
   <span class="pd-post-frame">
-    <span class="pd-post-tag" aria-hidden="true">제휴</span>
     <img
       class="pd-post-img"
       src="/pd-post.webp"
@@ -51,20 +51,14 @@
     border-radius: 16px;
   }
   /* 제휴 표기 칩 (좌상단, 반투명) */
+  /* 배너 이미지 위 오버레이 대신, 이미지 '바깥 위'에 두어 로고·아이콘과 겹치지 않게 함(광고 고지 명확) */
   .pd-post-tag {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 3;
-    padding: 0.2em 0.6em;
-    border-radius: 999px;
-    font-size: 0.66rem;
+    display: inline-block;
+    margin: 0 0 6px 2px;
+    font-size: 0.64rem;
     font-weight: 700;
     letter-spacing: 0.02em;
-    color: #fff;
-    background: rgba(11, 16, 32, 0.55);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
+    color: var(--color-text-muted, #8a8f98);
   }
   /* 주기적 광택 스윕 */
   .pd-post-shine {
