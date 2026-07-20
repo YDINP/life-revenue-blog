@@ -178,7 +178,7 @@ const seriesTotal = seriesPosts.length;
 <BaseLayout title={title} description={description} image={imageObj?.url} ogType="article" noindex={noindex}>
   <!-- 포스트 전용 OG article 메타 (head) -->
   <Fragment slot="head">
-    {imageObj && <link rel="preload" as="image" href={pexelsUrl(imageObj.url, 900)} imagesrcset={heroSrcset} imagesizes={heroSizes} fetchpriority="high" />}
+    {imageObj && <link rel="preload" as="image" href={heroSrcset ? pexelsUrl(imageObj.url, 900) : imageObj.url} imagesrcset={heroSrcset} imagesizes={heroSizes} fetchpriority="high" />}
     <meta property="article:published_time" content={pubDateObj.toISOString()} />
     {updatedDate && <meta property="article:modified_time" content={new Date(updatedDate).toISOString()} />}
     <meta property="article:section" content={category} />

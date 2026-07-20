@@ -5,7 +5,7 @@ pubDate: "2026-07-14"
 author: "LifeFlow"
 category: "health"
 tags: [영양제, 프로바이오틱스, 루테인, 건강기능식품, 목적별영양제]
-heroImage: "https://images.pexels.com/photos/3683074/pexels-photo-3683074.jpeg?auto=compress&cs=tinysrgb&w=1200"
+heroImage: "/images/supplement-by-purpose-2026.jpg"
 coupangLinks:
   - title: "눈 영양제 (루테인)"
     url: "https://www.coupang.com/np/search?q=%EB%A3%A8%ED%85%8C%EC%9D%B8%20%EB%88%88%20%EC%98%81%EC%96%91%EC%A0%9C&src=1139000&spec=10799999&addtag=200&ctag=%EB%A3%A8%ED%85%8C%EC%9D%B8%20%EB%88%88%20%EC%98%81%EC%96%91%EC%A0%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%A3%A8%ED%85%8C%EC%9D%B8%20%EB%88%88%20%EC%98%81%EC%96%91%EC%A0%9C"
@@ -26,7 +26,7 @@ faq:
 
 영양제 코너에 서면 막막합니다. 종합비타민, 오메가3, 유산균, 루테인, 콜라겐… 다 좋다는데 다 살 순 없죠. 2026년 건기식 트렌드의 핵심은 **'목적성 소비'** — 막연히 사지 말고 **내 목적부터** 정하는 겁니다. 눈·장·관절·회복별로 갈라 드립니다.
 
-![목적별로 나눠 담은 영양제와 메모](/images/supplement-by-purpose-2026.jpg)
+![다양한 영양제](https://images.pexels.com/photos/3683074/pexels-photo-3683074.jpeg?auto=compress&cs=tinysrgb&w=940)
 
 ## 큰 흐름: '종합'에서 '목적별'로
 

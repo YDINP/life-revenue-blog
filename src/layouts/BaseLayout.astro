@@ -15,7 +15,8 @@ const { title, description, image, canonicalUrl, ogType = 'website', noindex = f
 const siteTitle = 'LifeFlow - 더 나은 삶을 위한 인사이트';
 const fullTitle = title === siteTitle ? title : `${title} | ${siteTitle}`;
 const defaultOgImage = 'https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&dpr=1';
-const ogImage = image || defaultOgImage;
+// 로컬 heroImage(/images/…)도 OG에선 절대 URL 이어야 소셜 미리보기가 뜬다. 이미 절대면 그대로.
+const ogImage = new URL(image || defaultOgImage, Astro.site).href;
 const canonical = canonicalUrl || Astro.url.href;
 const currentPath = Astro.url.pathname;
 
