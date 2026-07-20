@@ -1,0 +1,298 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+// 실제 파일시스템의 education 카테고리 글에서 데이터를 가져온다 — 허구 slug 방지.
+const allPosts = Object.entries(import.meta.glob('../../../blog/**/*.md', { eager: true }))
+  .filter(([, p]) => !p.frontmatter?.draft)
+  .map(([path, post]) => ({
+    slug: path.split('/').pop().replace('.md', ''),
+    ...post.frontmatter,
+  }));
+
+const educationPosts = allPosts.filter((p) => p.category === 'education');
+
+const GROUPS = [
+  {
+    key: 'certificates',
+    title: '자격증 & 커리어',
+    desc: '취업·이직에 실제로 쓰이는 자격증 비교와 국비지원 학습 제도.',
+    slugs: [
+      '2026-07-07-education-top-certificates-2026-career',
+      '2026-07-08-education-data-certificate-sqld-adsp-guide',
+      '2026-07-11-education-national-tomorrow-learning-card-free-ai-coding',
+      '2026-07-14-education-accounting-finance-certificates-top5-2026',
+      '2026-07-14-education-electrical-certificate-2026-guide',
+      '2026-07-15-education-certificates-2026-h2',
+    ],
+  },
+  {
+    key: 'self-development',
+    title: '자기계발 & 생산성',
+    desc: '학습 전략, 루틴 설계, 퍼스널 브랜딩까지 직장인 자기계발 실전법.',
+    slugs: [
+      '2026-02-07-self-learning-strategies-2026',
+      '2026-02-27-education-2026-science-based-self-learning-cognitive-psychology-strategies',
+      '2026-03-23-education-2026-self-development-books-top-12-life-changing-must-read-guide',
+      '2026-07-05-education-personal-branding-guide',
+      '2026-07-06-education-ai-productivity-after-work',
+      '2026-07-15-education-professional-self-development-routine-2026',
+    ],
+  },
+  {
+    key: 'reading',
+    title: '독서 습관',
+    desc: '바쁜 직장인이 꾸준히 읽는 법과 책 고르는 기준의 과학적 근거.',
+    slugs: [
+      '2026-02-16-education-reading-habit-building-2026-busy-professionals',
+      '2026-02-18-education-reading-preference-matching-strategy-2026',
+      '2026-02-23-education-2026-reading-habit-neuroscience-brain-formation-strategy',
+    ],
+  },
+  {
+    key: 'language',
+    title: '외국어 학습',
+    desc: '입문부터 발음·회화 심화까지 단계별 외국어 학습 전략.',
+    slugs: [
+      '2026-02-13-effective-foreign-language-learning-strategies',
+      '2026-02-17-education-advanced-foreign-language-learning-2026-pronunciation-cultural-immersion',
+      '2026-02-22-education-2026-foreign-language-speaking-practice-intensive-guide',
+    ],
+  },
+  {
+    key: 'online-course',
+    title: '온라인 강의 & 학습 비용',
+    desc: '클래스101·인프런·유데미 비교, 코딩 입문, 사교육비 절감법.',
+    slugs: [
+      '2026-02-08-online-course-platform-comparison',
+      '2026-02-21-education-coding-beginner-guide-2026-3months-first-project',
+      '2026-02-26-education-2026-online-course-selection-guide-job-goal-matching-platform',
+      '2026-04-13-education-online-learning-platform-comparison-2026-goal-based-selection-guide',
+      '2026-07-14-education-private-education-cost-saving-2026',
+    ],
+  },
+];
+
+const grouped = GROUPS.map((g) => ({
+  ...g,
+  posts: g.slugs.map((slug) => educationPosts.find((p) => p.slug === slug)).filter(Boolean),
+})).filter((g) => g.posts.length > 0);
+
+// 그룹표에 없는 education 글이 있으면(신규 발행분) 놓치지 않도록 별도 섹션에 자동 편입
+const usedSlugs = new Set(GROUPS.flatMap((g) => g.slugs));
+const leftover = educationPosts.filter((p) => !usedSlugs.has(p.slug));
+
+const orderedForLd = [...grouped.flatMap((g) => g.posts), ...leftover];
+const siteUrl = 'https://life-revenue-blog.vercel.app';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'CollectionPage',
+      '@id': `${siteUrl}/guide/growth/#collectionpage`,
+      name: '2026 자기계발 & 커리어 성장 가이드',
+      description: '자격증, 자기계발 루틴, 독서 습관, 외국어 학습, 온라인 강의까지 LifeFlow 교육 글을 주제별로 묶은 큐레이션 가이드.',
+      url: `${siteUrl}/guide/growth/`,
+      isPartOf: { '@id': `${siteUrl}/#website` },
+    },
+    {
+      '@type': 'ItemList',
+      '@id': `${siteUrl}/guide/growth/#itemlist`,
+      itemListElement: orderedForLd.map((post, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: `${siteUrl}/blog/${post.slug}/`,
+        name: post.title,
+      })),
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '홈', item: `${siteUrl}/` },
+        { '@type': 'ListItem', position: 2, name: '가이드', item: `${siteUrl}/guide/` },
+        { '@type': 'ListItem', position: 3, name: '자기계발 & 커리어 성장 가이드', item: `${siteUrl}/guide/growth/` },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="2026 자기계발 & 커리어 성장 가이드: 자격증부터 학습 루틴까지"
+  description="자격증, 자기계발 루틴, 독서 습관, 외국어 학습, 온라인 강의까지 — LifeFlow의 교육·자기계발 글을 주제별로 묶은 큐레이션 가이드입니다."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <article class="guide-hub">
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <ol>
+        <li><a href="/">홈</a></li>
+        <li><a href="/guide/">가이드</a></li>
+        <li aria-current="page">자기계발 & 커리어 성장 가이드</li>
+      </ol>
+    </nav>
+
+    <header class="hub-header">
+      <span class="hub-eyebrow">📚 GROWTH GUIDE</span>
+      <h1>2026 자기계발 & 커리어 성장 가이드: 자격증부터 학습 루틴까지</h1>
+      <p>
+        "성장하고 싶은데 뭐부터 해야 할지 모르겠다"는 고민을 위한 페이지입니다. 커리어에 바로
+        도움되는 <strong>자격증</strong>부터 시작해, 학습을 지속시키는 <strong>자기계발 루틴</strong>과
+        <strong>독서 습관</strong>을 붙이고, 필요하면 <strong>외국어</strong>와 <strong>온라인
+        강의</strong>로 구체적인 실력을 채우는 순서로 묶었습니다.
+      </p>
+      <p>
+        아래 목록은 LifeFlow에 실제로 발행된 교육·자기계발 글 {educationPosts.length}편을 이 순서에
+        맞춰 주제별로 묶은 것입니다. 트렌드 요약이 아니라 각 주제를 깊게 다룬 개별 글로 바로
+        이동할 수 있도록 큐레이션했습니다.
+      </p>
+    </header>
+
+    {grouped.map((g) => (
+      <section class="hub-group" id={g.key}>
+        <div class="hub-group-head">
+          <h2>{g.title}</h2>
+          <p>{g.desc}</p>
+        </div>
+        <ul class="hub-list">
+          {g.posts.map((post) => (
+            <li>
+              <a href={`/blog/${post.slug}/`}>{post.title}</a>
+              <p>{post.description}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+
+    {leftover.length > 0 && (
+      <section class="hub-group" id="more">
+        <div class="hub-group-head">
+          <h2>그 외 자기계발 글</h2>
+          <p>아직 위 분류에 편입되지 않은 최신 글입니다.</p>
+        </div>
+        <ul class="hub-list">
+          {leftover.map((post) => (
+            <li>
+              <a href={`/blog/${post.slug}/`}>{post.title}</a>
+              <p>{post.description}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <footer class="hub-footer">
+      <a href="/blog/education/">교육 카테고리 전체 글 보기 →</a>
+      <a href="/guide/money/">재테크 입문 가이드 →</a>
+    </footer>
+  </article>
+</BaseLayout>
+
+<style>
+.guide-hub {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+.breadcrumb li + li::before {
+  content: '/';
+  margin-right: 0.4rem;
+  color: var(--color-text-muted);
+}
+.breadcrumb a { color: var(--color-text-secondary); }
+.breadcrumb a:hover { color: var(--color-primary); }
+
+.hub-header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--color-border);
+}
+.hub-eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--cat-education);
+  margin-bottom: 0.6rem;
+}
+.hub-header h1 {
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: 800;
+  margin: 0 0 1.2rem;
+}
+.hub-header p {
+  color: var(--color-text-secondary);
+  line-height: 1.75;
+  margin: 0 0 1rem;
+}
+.hub-header p:last-child { margin-bottom: 0; }
+
+.hub-group {
+  margin-bottom: 2.4rem;
+}
+.hub-group-head h2 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin: 0 0 0.35rem;
+}
+.hub-group-head p {
+  color: var(--color-text-secondary);
+  font-size: 0.92rem;
+  margin: 0 0 1rem;
+}
+
+.hub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.9rem;
+}
+.hub-list li {
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.hub-list li:hover {
+  border-color: var(--color-primary);
+  background: var(--color-bg-secondary);
+}
+.hub-list a {
+  font-weight: 700;
+  color: var(--color-text);
+  text-decoration: none;
+  line-height: 1.45;
+}
+.hub-list a:hover { color: var(--color-primary); }
+.hub-list p {
+  margin: 0.35rem 0 0;
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+}
+
+.hub-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+  font-weight: 700;
+}
+.hub-footer a { color: var(--color-primary); text-decoration: none; }
+.hub-footer a:hover { text-decoration: underline; }
+</style>

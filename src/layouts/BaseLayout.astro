@@ -146,6 +146,7 @@ const siteLd = {
         <div class="nav-right">
           <div class="nav-links" id="nav-menu">
             <a href="/blog/" class={currentPath === '/blog/' ? 'active' : ''}>Blog</a>
+            <a href="/guide/" class={currentPath.includes('/guide') ? 'active' : ''}>가이드</a>
             <a href="/blog/lifestyle/" class={currentPath.includes('/blog/lifestyle') ? 'active' : ''}>라이프스타일</a>
             <a href="/blog/finance/" class={currentPath.includes('/blog/finance') ? 'active' : ''}>금융</a>
             <a href="/blog/health/" class={currentPath.includes('/blog/health') ? 'active' : ''}>건강</a>
@@ -193,6 +194,7 @@ const siteLd = {
             <h4>바로가기</h4>
             <ul>
               <li><a href="/blog/">전체 글</a></li>
+              <li><a href="/guide/">가이드</a></li>
               <li><a href="/rss.xml">RSS 피드</a></li>
               <li><a href="https://ai-revenue-blog.vercel.app/" target="_blank" rel="noopener">TechFlow 블로그 &rarr;</a></li>
               <li><a href="https://virtual-in-playing.vercel.app/" target="_blank" rel="noopener">VIP 게임채널 &rarr;</a></li>

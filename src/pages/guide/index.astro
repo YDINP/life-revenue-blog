@@ -1,0 +1,149 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const allPosts = Object.entries(import.meta.glob('../../blog/**/*.md', { eager: true }))
+  .filter(([, p]) => !p.frontmatter?.draft)
+  .map(([, post]) => post.frontmatter);
+
+const financeCount = allPosts.filter((p) => p.category === 'finance').length;
+const educationCount = allPosts.filter((p) => p.category === 'education').length;
+
+const hubs = [
+  {
+    href: '/guide/money/',
+    emoji: '💰',
+    title: '재테크 입문 가이드',
+    desc: '자산 배분부터 절세, 예적금, 정부지원금, 부업까지',
+    count: financeCount,
+    accent: 'finance',
+  },
+  {
+    href: '/guide/growth/',
+    emoji: '📚',
+    title: '자기계발 & 커리어 성장 가이드',
+    desc: '자격증부터 학습 루틴, 독서, 외국어, 온라인 강의까지',
+    count: educationCount,
+    accent: 'education',
+  },
+];
+
+const siteUrl = 'https://life-revenue-blog.vercel.app';
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'CollectionPage',
+      '@id': `${siteUrl}/guide/#collectionpage`,
+      name: 'LifeFlow 가이드',
+      description: '주제별로 큐레이션한 LifeFlow 콘텐츠 가이드 모음.',
+      url: `${siteUrl}/guide/`,
+      isPartOf: { '@id': `${siteUrl}/#website` },
+    },
+    {
+      '@type': 'ItemList',
+      '@id': `${siteUrl}/guide/#itemlist`,
+      itemListElement: hubs.map((h, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: `${siteUrl}${h.href}`,
+        name: h.title,
+      })),
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: '홈', item: `${siteUrl}/` },
+        { '@type': 'ListItem', position: 2, name: '가이드', item: `${siteUrl}/guide/` },
+      ],
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="가이드 - LifeFlow"
+  description="주제별로 큐레이션한 LifeFlow 가이드 모음. 재테크와 자기계발·커리어 성장 콘텐츠를 한눈에 확인하세요."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <div class="guide-index">
+    <header class="guide-index-header">
+      <h1>가이드</h1>
+      <p>주제별로 묶은 LifeFlow 큐레이션 가이드입니다. 관심 있는 주제부터 둘러보세요.</p>
+    </header>
+
+    <div class="guide-cards">
+      {hubs.map((h) => (
+        <a href={h.href} class="guide-card" data-accent={h.accent}>
+          <span class="guide-card-emoji">{h.emoji}</span>
+          <h2>{h.title}</h2>
+          <p>{h.desc}</p>
+          <span class="guide-card-count">{h.count}개의 글</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+.guide-index {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+.guide-index-header {
+  text-align: center;
+  padding: 2rem 1rem 3rem;
+}
+.guide-index-header h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin: 0 0 0.6rem;
+}
+.guide-index-header p {
+  color: var(--color-text-secondary);
+}
+
+.guide-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.guide-card {
+  display: block;
+  padding: 2rem 1.6rem;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  text-decoration: none;
+  color: var(--color-text);
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.guide-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+.guide-card-emoji {
+  font-size: 2.2rem;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+.guide-card h2 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem;
+}
+.guide-card p {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin: 0 0 1rem;
+}
+.guide-card-count {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+.guide-card[data-accent="finance"] .guide-card-count { color: var(--cat-finance); }
+.guide-card[data-accent="education"] .guide-card-count { color: var(--cat-education); }
+</style>
