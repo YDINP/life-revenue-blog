@@ -11,6 +11,10 @@ coupangLinks:
     url: "https://www.coupang.com/np/search?q=%EB%A3%A8%ED%85%8C%EC%9D%B8%20%EB%88%88%20%EC%98%81%EC%96%91%EC%A0%9C&src=1139000&spec=10799999&addtag=200&ctag=%EB%A3%A8%ED%85%8C%EC%9D%B8%20%EB%88%88%20%EC%98%81%EC%96%91%EC%A0%9C&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%A3%A8%ED%85%8C%EC%9D%B8%20%EB%88%88%20%EC%98%81%EC%96%91%EC%A0%9C"
   - title: "프로바이오틱스 유산균"
     url: "https://www.coupang.com/np/search?q=%ED%94%84%EB%A1%9C%EB%B0%94%EC%9D%B4%EC%98%A4%ED%8B%B1%EC%8A%A4%20%EC%9C%A0%EC%82%B0%EA%B7%A0&src=1139000&spec=10799999&addtag=200&ctag=%ED%94%84%EB%A1%9C%EB%B0%94%EC%9D%B4%EC%98%A4%ED%8B%B1%EC%8A%A4%20%EC%9C%A0%EC%82%B0%EA%B7%A0&lptag=AF7838146&pageType=SEARCH&pageValue=%ED%94%84%EB%A1%9C%EB%B0%94%EC%9D%B4%EC%98%A4%ED%8B%B1%EC%8A%A4%20%EC%9C%A0%EC%82%B0%EA%B7%A0"
+  - title: "관절 영양제 (MSM·글루코사민)"
+    url: "https://www.coupang.com/np/search?q=%EA%B4%80%EC%A0%88%20%EC%98%81%EC%96%91%EC%A0%9C%20%EA%B8%80%EB%A3%A8%EC%BD%94%EC%82%AC%EB%AF%BC%20MSM&src=1139000&spec=10799999&addtag=200&ctag=%EA%B4%80%EC%A0%88%20%EC%98%81%EC%96%91%EC%A0%9C%20%EA%B8%80%EB%A3%A8%EC%BD%94%EC%82%AC%EB%AF%BC%20MSM&lptag=AF7838146&pageType=SEARCH&pageValue=%EA%B4%80%EC%A0%88%20%EC%98%81%EC%96%91%EC%A0%9C%20%EA%B8%80%EB%A3%A8%EC%BD%94%EC%82%AC%EB%AF%BC%20MSM"
+  - title: "단백질 보충제 (프로틴)"
+    url: "https://www.coupang.com/np/search?q=%EB%8B%A8%EB%B0%B1%EC%A7%88%20%EB%B3%B4%EC%B6%A9%EC%A0%9C%20%ED%94%84%EB%A1%9C%ED%8B%B4&src=1139000&spec=10799999&addtag=200&ctag=%EB%8B%A8%EB%B0%B1%EC%A7%88%20%EB%B3%B4%EC%B6%A9%EC%A0%9C%20%ED%94%84%EB%A1%9C%ED%8B%B4&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%8B%A8%EB%B0%B1%EC%A7%88%20%EB%B3%B4%EC%B6%A9%EC%A0%9C%20%ED%94%84%EB%A1%9C%ED%8B%B4"
 faq:
   - q: "영양제, 뭐부터 먹어야 하나요?"
     a: "'좋다니까'가 아니라 '내 목적'부터 정하는 게 순서입니다. 2026년 건기식 트렌드가 종합비타민 같은 막연한 소비에서 눈·장·관절·회복처럼 목적성 소비로 옮겨간 이유이기도 합니다. 스크린을 오래 본다면 눈, 소화·면역이 고민이면 장, 운동을 한다면 회복, 나이가 들며 무릎이 신경 쓰이면 관절 식으로, 내 생활에서 가장 아쉬운 한두 가지부터 고르세요. 다 먹으려다 돈만 나가고 관리도 안 됩니다."
@@ -57,6 +61,18 @@ faq:
 
 <div class="callout-tip">💡 유산균 고르는 법: (1) <b>균주 다양성</b>(락토바실러스·비피더스 등 복합), (2) <b>보장균수</b>(유통기한까지 살아있는 균 수 표시). 장 환경은 개인차가 커서 2~4주 먹어보고 컨디션·배변 변화로 판단하세요.</div>
 
+## 관절: 즉효 대신 꾸준함
+
+나이나 운동으로 무릎·연골이 신경 쓰이면 대표 원료는 **MSM·글루코사민·보스웰리아**, 여기에 저용량으로 쓰는 비변성 II형 콜라겐(UC-II)이 더해진 제품이 많습니다. 진통제처럼 바로 듣는 게 아니라 **2~3개월 꾸준히** 먹으며 체감하는 성분이라, 며칠 먹고 효과가 없다고 그만두면 의미가 없습니다.
+
+<div class="callout-tip">💡 고르는 법: 글루코사민은 효과 평가가 엇갈려, MSM·보스웰리아·UC-II를 함께 보는 편이 낫습니다. 무릎이 붓거나 통증이 이어지면 영양제보다 <b>정형외과 진료가 먼저</b>입니다.</div>
+
+## 회복: 단백질과 수면이 8할
+
+운동 후 회복은 사실 영양제보다 **단백질 섭취와 수면**이 핵심입니다. 그 위에 부족한 만큼만 보충제로 메우는 순서예요. 운동을 한다면 단백질은 하루 체중 1kg당 약 1.2~1.6g이 기준이고, 식사로 채우기 어려울 때 프로틴 보충제로 보완합니다.
+
+<div class="callout-info">💡 참고: 마그네슘·아연 등은 수면·근육 컨디션과 관련이 있지만, <b>잠을 줄이면서 보충제로 회복을 사려는 건 순서가 틀렸습니다.</b> 회복의 8할은 잘 먹고 잘 자는 기본에서 나옵니다.</div>
+
 ## 흔한 함정: 중복 섭취
 
 <div class="callout-warning">⚠️ 중요: 종합비타민 + 개별 비타민 + 기능성 제품을 겹치면 <b>지용성 비타민(A·D·E)이 과다</b>해질 수 있습니다. 겹치는 성분을 확인하고 상한을 넘기지 마세요. '많이=좋다'가 아닙니다.</div>
@@ -70,6 +86,7 @@ faq:
 - 2026 건기식 = **목적성 소비**(눈·장·관절·회복)
 - **내 생활에서 아쉬운 한두 가지**부터
 - 눈=루테인, 장=균주 다양성+보장균수
+- 관절=MSM·보스웰리아 등 **꾸준히**(즉효 아님), 회복=**단백질+수면**이 먼저
 - **중복 섭취(지용성 비타민 과다) 주의**
 - 영양제는 **수면·식사·운동 위에 얹는 보조**
 
