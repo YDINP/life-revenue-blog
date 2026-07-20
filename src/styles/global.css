@@ -2591,23 +2591,28 @@ section > h2::after {
 
 /* ===== Newsletter CTA ===== */
 .newsletter-cta {
-  /* LifeFlow 브랜드(따뜻한 포레스트 그린) — 기존 보라 제거 */
-  background: linear-gradient(135deg, var(--color-primary-dark, #14483d) 0%, var(--color-primary, #1e6b5c) 55%, var(--color-primary-light, #2f8a78) 100%);
+  /* 라이트=포슬린 베이지(블로그 전체 톤), 다크=웜다크 — 테마 변수로 자동 전환 */
+  background: linear-gradient(135deg,
+    color-mix(in srgb, var(--color-primary) 7%, var(--color-ground)) 0%,
+    var(--color-bg-secondary) 52%,
+    color-mix(in srgb, var(--color-primary) 10%, var(--color-ground)) 100%);
+  border: 1px solid var(--color-border);
   border-radius: 18px;
   padding: 2.5rem 2rem;
   margin: 2rem 0;
   text-align: center;
-  color: #fff;
+  color: var(--color-text);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 14px 34px -14px rgba(20, 72, 61, 0.55);
+  box-shadow: var(--shadow-md);
 }
 .newsletter-illus {
   display: flex;
   justify-content: center;
   margin-bottom: 0.6rem;
+  color: var(--color-primary);
 }
-.newsletter-illus svg { display: block; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.18)); }
+.newsletter-illus svg { display: block; filter: drop-shadow(0 3px 7px color-mix(in srgb, var(--color-primary) 30%, transparent)); }
 
 .newsletter-cta::before {
   content: '';
@@ -2616,7 +2621,7 @@ section > h2::after {
   right: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, color-mix(in srgb, var(--color-primary) 12%, transparent) 0%, transparent 68%);
   pointer-events: none;
 }
 
@@ -2628,12 +2633,12 @@ section > h2::after {
 .newsletter-cta h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #fff;
+  color: var(--color-primary);
   font-weight: 800;
 }
 
 .newsletter-cta p {
-  opacity: 0.9;
+  color: var(--color-text-secondary);
   margin-bottom: 1.5rem;
   font-size: 0.95rem;
 }
@@ -2648,39 +2653,40 @@ section > h2::after {
 .newsletter-form input[type="email"] {
   flex: 1;
   padding: 0.75rem 1rem;
-  border: 2px solid rgba(255,255,255,0.3);
+  border: 1.5px solid var(--color-border);
   border-radius: 8px;
-  background: rgba(255,255,255,0.15);
-  color: #fff;
+  background: var(--color-bg);
+  color: var(--color-text);
   font-size: 1rem;
   transition: all 0.2s ease;
 }
 
 .newsletter-form input[type="email"]::placeholder {
-  color: rgba(255,255,255,0.7);
+  color: var(--color-text-muted);
 }
 
 .newsletter-form input[type="email"]:focus {
   outline: none;
-  border-color: #fff;
-  background: rgba(255,255,255,0.25);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 18%, transparent);
 }
 
 .newsletter-form button {
   padding: 0.75rem 1.5rem;
-  background: #fff;
-  color: var(--color-primary);
+  background: var(--color-primary);
+  color: #fff;
   border: none;
   border-radius: 8px;
   font-weight: 700;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
   white-space: nowrap;
 }
 
 .newsletter-form button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  background: var(--color-primary-dark);
+  box-shadow: 0 6px 16px -6px color-mix(in srgb, var(--color-primary) 55%, transparent);
 }
 
 .newsletter-form button:active {
@@ -2689,13 +2695,13 @@ section > h2::after {
 
 .newsletter-privacy {
   font-size: 0.8rem;
-  opacity: 0.7;
+  color: var(--color-text-muted);
   margin-top: 0.75rem;
   margin-bottom: 0;
 }
 
 .newsletter-privacy a {
-  color: #fff;
+  color: var(--color-primary);
   text-decoration: underline;
 }
 
@@ -2703,22 +2709,26 @@ section > h2::after {
 .newsletter-error {
   display: none;
   padding: 1rem;
-  background: rgba(255,255,255,0.2);
   border-radius: 8px;
   margin-top: 1rem;
   font-size: 0.9rem;
   font-weight: 600;
 }
 
-.newsletter-error {
-  background: rgba(239, 68, 68, 0.2);
-  border: 1px solid rgba(239, 68, 68, 0.4);
+.newsletter-success {
+  background: color-mix(in srgb, var(--color-primary) 12%, transparent);
+  color: var(--color-primary);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 30%, transparent);
 }
 
-.newsletter-success svg,
-.newsletter-error svg {
-  color: #fff;
+.newsletter-error {
+  background: color-mix(in srgb, var(--cat-health) 12%, transparent);
+  color: var(--cat-health);
+  border: 1px solid color-mix(in srgb, var(--cat-health) 34%, transparent);
 }
+
+.newsletter-success svg { color: var(--color-primary); }
+.newsletter-error svg { color: var(--cat-health); }
 
 .newsletter-cta-compact {
   padding: 1.75rem;

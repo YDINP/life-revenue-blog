@@ -345,13 +345,19 @@ const siteLd = {
         // 3) 관리자 플래그가 있으면 집계하지 않음
         try { if (localStorage.getItem(NOTRACK_KEY) === '1') return; } catch (e) {}
         const slug = window.location.pathname.replace(/^\/blog\//, '').replace(/\/$/, '');
+        // 이메일 등 UTM 유입 별도 집계(이메일 클라는 referrer를 지워 UTM이 유일 신호)
+        const usp = new URLSearchParams(window.location.search);
+        const utmSource = usp.get('utm_source') || '';
+        const utmExtra = utmSource
+          ? { utm_source: utmSource, utm_medium: usp.get('utm_medium') || '', utm_campaign: usp.get('utm_campaign') || '' }
+          : {};
         fetch(ANALYTICS_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             event_type: 'pageview',
             source: 'lifeflow',
-            metadata: { slug, title: document.title, path: window.location.pathname, referrer: document.referrer || 'direct', user_agent: navigator.userAgent }
+            metadata: { slug, title: document.title, path: window.location.pathname, referrer: document.referrer || 'direct', user_agent: navigator.userAgent, ...utmExtra }
           })
         }).catch(() => {});
 
