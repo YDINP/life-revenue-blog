@@ -26,6 +26,8 @@ const ANALYTICS = 'https://xyprbsmagtlzebxyxsvj.supabase.co/functions/v1/analyti
     </div>
     <script is:inline define:vars={{ TARGET, ANALYTICS }}>
       (function () {
+        var moved = false;
+        function go() { if (!moved) { moved = true; location.replace(TARGET); } }
         var src = 'external';
         try { src = new URLSearchParams(location.search).get('src') || 'external'; } catch (e) {}
         try {
@@ -34,10 +36,12 @@ const ANALYTICS = 'https://xyprbsmagtlzebxyxsvj.supabase.co/functions/v1/analyti
             source: 'lifeflow',
             metadata: { placement: src, url: TARGET, path: '/go/paperdoc', ref: document.referrer || 'direct' },
           });
-          if (navigator.sendBeacon) navigator.sendBeacon(ANALYTICS, new Blob([payload], { type: 'application/json' }));
-          else fetch(ANALYTICS, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: payload, keepalive: true });
-        } catch (e) {}
-        setTimeout(function () { location.replace(TARGET); }, 250);
+          // keepalive fetch: 같은 탭 이동에도 요청이 끝까지 전송됨(sendBeacon은 즉시 이동 시 취소될 수 있음).
+          // 전송이 끝나면(또는 실패해도) 이동하고, 안전을 위해 최대 800ms 뒤엔 무조건 이동.
+          fetch(ANALYTICS, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: payload, keepalive: true })
+            .then(go, go);
+        } catch (e) { go(); }
+        setTimeout(go, 800);
       })();
     </script>
   </body>
