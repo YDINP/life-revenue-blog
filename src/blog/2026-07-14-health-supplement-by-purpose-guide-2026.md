@@ -26,7 +26,7 @@ faq:
 
 영양제 코너에 서면 막막합니다. 종합비타민, 오메가3, 유산균, 루테인, 콜라겐… 다 좋다는데 다 살 순 없죠. 2026년 건기식 트렌드의 핵심은 **'목적성 소비'** — 막연히 사지 말고 **내 목적부터** 정하는 겁니다. 눈·장·관절·회복별로 갈라 드립니다.
 
-![다양한 영양제](https://images.pexels.com/photos/3683074/pexels-photo-3683074.jpeg?auto=compress&cs=tinysrgb&w=940)
+![목적별로 나눠 담은 영양제와 메모](/images/supplement-by-purpose-2026.jpg)
 
 ## 큰 흐름: '종합'에서 '목적별'로
 
@@ -47,7 +47,7 @@ faq:
 
 ## 눈: 루테인이 기본
 
-![영양제를 손에 든 모습](https://images.pexels.com/photos/3873188/pexels-photo-3873188.jpeg?auto=compress&cs=tinysrgb&w=940)
+![오래 스크린을 본 뒤 안경을 벗고 눈을 누르는 모습](/images/eye-health-lutein-2026.jpg)
 
 대표 성분은 **루테인·지아잔틴**, 여기에 아스타잔틴 항산화가 더해진 제품이 많습니다.
 
