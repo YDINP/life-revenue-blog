@@ -6,6 +6,11 @@ author: "LifeFlow"
 category: "travel"
 tags: [엔저, 일본여행, 환전, 트래블카드, 엔원환율]
 heroImage: "/images/yen-exchange-2026.webp"
+coupangLinks:
+  - title: "해외여행 유심 이심"
+    url: "https://www.coupang.com/np/search?q=%ED%95%B4%EC%99%B8%EC%97%AC%ED%96%89%20%EC%9C%A0%EC%8B%AC%20%EC%9D%B4%EC%8B%AC&src=1139000&spec=10799999&addtag=200&ctag=%ED%95%B4%EC%99%B8%EC%97%AC%ED%96%89%20%EC%9C%A0%EC%8B%AC%20%EC%9D%B4%EC%8B%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%ED%95%B4%EC%99%B8%EC%97%AC%ED%96%89%20%EC%9C%A0%EC%8B%AC%20%EC%9D%B4%EC%8B%AC"
+  - title: "여행용 보조배터리"
+    url: "https://www.coupang.com/np/search?q=%EC%97%AC%ED%96%89%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&src=1139000&spec=10799999&addtag=200&ctag=%EC%97%AC%ED%96%89%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%97%AC%ED%96%89%EC%9A%A9%20%EB%B3%B4%EC%A1%B0%EB%B0%B0%ED%84%B0%EB%A6%AC"
 faq:
   - q: "지금 엔화 환전해도 될까요, 더 기다려야 할까요?"
     a: "2026년 7월 중순 기준 엔/원 환율은 100엔당 약 950원대로, 달러/엔(USD/JPY)도 162엔대 수준의 역대급 엔저 국면입니다. 다만 환율은 계속 변동하므로 '더 떨어질 때까지 기다리자'는 예측은 위험합니다. 여름휴가 성수기와 겹쳐 환전 수요가 몰리는 시기이기도 해, 여행 일정이 확정됐다면 한 번에 몰아서 바꾸기보다 나눠서 환전하는 방식으로 리스크를 줄이는 게 현실적입니다."
