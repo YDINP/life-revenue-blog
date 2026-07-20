@@ -20,23 +20,38 @@ const ogImage = new URL(image || defaultOgImage, Astro.site).href;
 const canonical = canonicalUrl || Astro.url.href;
 const currentPath = Astro.url.pathname;
 
-// WebSite JSON-LD schema with SearchAction
-const websiteSchema = {
+// 사이트 전역 JSON-LD: WebSite(검색 EntryPoint는 /blog/?q= 라우트가 실제로 쿼리를 처리하므로 포함) + Organization
+const siteLd = {
   '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: 'LifeFlow',
-  alternateName: 'LifeFlow Blog',
-  url: 'https://life-revenue-blog.vercel.app',
-  description: '라이프스타일, 금융, 건강, 교육, 여행 전문 블로그 - 더 나은 삶을 위한 실용 정보',
-  inLanguage: 'ko-KR',
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: {
-      '@type': 'EntryPoint',
-      urlTemplate: 'https://life-revenue-blog.vercel.app/blog/?q={search_term_string}',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': 'https://life-revenue-blog.vercel.app/#website',
+      name: 'LifeFlow',
+      alternateName: 'LifeFlow Blog',
+      url: 'https://life-revenue-blog.vercel.app',
+      description: '라이프스타일, 금융, 건강, 교육, 여행 전문 블로그 - 더 나은 삶을 위한 실용 정보',
+      inLanguage: 'ko-KR',
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: 'https://life-revenue-blog.vercel.app/blog/?q={search_term_string}',
+        },
+        'query-input': 'required name=search_term_string',
+      },
     },
-    'query-input': 'required name=search_term_string',
-  },
+    {
+      '@type': 'Organization',
+      '@id': 'https://life-revenue-blog.vercel.app/#organization',
+      name: 'LifeFlow',
+      url: 'https://life-revenue-blog.vercel.app',
+      logo: {
+        '@type': 'ImageObject',
+        url: new URL('/favicon.svg', Astro.site).href,
+      },
+    },
+  ],
 };
 ---
 
@@ -86,8 +101,8 @@ const websiteSchema = {
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="alternate" type="application/rss+xml" title={siteTitle} href="/rss.xml" />
 
-    <!-- WebSite Schema -->
-    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+    <!-- 사이트 전역 JSON-LD (WebSite + Organization) -->
+    <script type="application/ld+json" set:html={JSON.stringify(siteLd)} />
 
     <!-- Pretendard (본문 산세) + Nanum Myeongjo (신문 세리프) -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />

@@ -65,16 +65,20 @@ const canonicalUrl = Astro.url.href;
 const imageObj = heroImage ? { url: heroImage, alt: title } : undefined;
 const heroSrcset = imageObj ? pexelsSrcset(imageObj.url, [600, 900, 1200]) : undefined;
 const heroSizes = '(max-width: 900px) 100vw, 880px';
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
+// heroImage는 Pexels 절대URL 또는 로컬 /images/... 상대경로 둘 다 가능 → schema.image는 항상 절대URL이어야 함(BaseLayout의 og:image와 동일 패턴)
+const absoluteHeroImage = imageObj ? new URL(imageObj.url, Astro.site).href : undefined;
+const dateModifiedIso = updatedDate ? new Date(updatedDate).toISOString() : pubDateObj.toISOString();
+
+const blogPostingLd = {
+  '@type': 'BlogPosting',
+  '@id': `${canonicalUrl}#blogposting`,
   headline: title,
   description: description,
   datePublished: pubDateObj.toISOString(),
-  ...(updatedDate && { dateModified: new Date(updatedDate).toISOString() }),
+  dateModified: dateModifiedIso,
   author: {
-    '@type': 'Person',
-    name: author,
+    '@type': 'Organization',
+    name: 'LifeFlow',
   },
   publisher: {
     '@type': 'Organization',
@@ -89,19 +93,12 @@ const jsonLd = {
     '@type': 'WebPage',
     '@id': canonicalUrl,
   },
-  keywords: tags.join(', '),
-  ...(imageObj && {
-    image: {
-      '@type': 'ImageObject',
-      url: imageObj.url,
-      alt: imageObj.alt,
-    },
-  }),
+  ...(tags && tags.length > 0 && { keywords: tags.join(', ') }),
+  ...(absoluteHeroImage && { image: absoluteHeroImage }),
 };
 
 // BreadcrumbList schema for navigation hierarchy
 const breadcrumbLd = {
-  '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
     {
@@ -126,13 +123,13 @@ const breadcrumbLd = {
       '@type': 'ListItem',
       position: 4,
       name: title,
+      item: canonicalUrl,
     },
   ],
 };
 
-// FAQPage JSON-LD (구글 FAQ 리치 스니펫)
+// FAQPage JSON-LD (구글 FAQ 리치 스니펫) — frontmatter에 faq 배열이 있을 때만 생성
 const faqLd = faq && faq.length > 0 ? {
-  '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: faq.map(item => ({
     '@type': 'Question',
@@ -143,6 +140,12 @@ const faqLd = faq && faq.length > 0 ? {
     },
   })),
 } : null;
+
+// 단일 <script>로 병합 — 누락 필드가 있어도 깨진 엔트리 없이 안전하게 필터링
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [blogPostingLd, breadcrumbLd, faqLd].filter(Boolean),
+};
 
 // Get slug from URL
 const currentSlug = Astro.url.pathname.split('/').filter(Boolean).pop() || '';
@@ -186,10 +189,8 @@ const seriesTotal = seriesPosts.length;
     <meta property="article:author" content={author} />
   </Fragment>
 
-  <!-- JSON-LD Structured Data -->
+  <!-- JSON-LD Structured Data (BlogPosting + BreadcrumbList + FAQPage(선택) @graph) -->
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
-  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
-  {faqLd && <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />}
 
   <article class="blog-post">
     <!-- Breadcrumb Navigation -->
