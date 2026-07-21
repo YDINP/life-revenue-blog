@@ -6,6 +6,11 @@ author: "LifeFlow"
 category: "lifestyle"
 tags: [반려동물, 강아지여름나기, 고양이건강, 폭염, 반려견열사병]
 heroImage: "/images/pet-summer-heat-care-2026.jpg"
+coupangLinks:
+  - title: "반려동물 쿨매트"
+    url: "https://www.coupang.com/np/search?q=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC%20%EC%BF%A8%EB%A7%A4%ED%8A%B8&src=1139000&spec=10799999&addtag=200&ctag=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC%20%EC%BF%A8%EB%A7%A4%ED%8A%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC%20%EC%BF%A8%EB%A7%A4%ED%8A%B8"
+  - title: "강아지·고양이 자동급수기"
+    url: "https://www.coupang.com/np/search?q=%EA%B0%95%EC%95%84%EC%A7%80%20%EA%B3%A0%EC%96%91%EC%9D%B4%20%EC%9E%90%EB%8F%99%EA%B8%89%EC%88%98%EA%B8%B0&src=1139000&spec=10799999&addtag=200&ctag=%EA%B0%95%EC%95%84%EC%A7%80%20%EA%B3%A0%EC%96%91%EC%9D%B4%20%EC%9E%90%EB%8F%99%EA%B8%89%EC%88%98%EA%B8%B0&lptag=AF7838146&pageType=SEARCH&pageValue=%EA%B0%95%EC%95%84%EC%A7%80%20%EA%B3%A0%EC%96%91%EC%9D%B4%20%EC%9E%90%EB%8F%99%EA%B8%89%EC%88%98%EA%B8%B0"
 draft: false
 faq:
   - q: "강아지 산책, 여름엔 언제 시키는 게 좋나요?"
@@ -61,6 +66,15 @@ faq:
 - **쿨매트** — 아이가 올라가 열을 식히는 기본템. 물리적 냉감 소재가 무난(젤 타입은 무는 습관 있는 아이라면 주의).
 - **자동급수기** — 물을 자주 갈아주기 어려운 맞벌이 가정에 유용. 신선한 물을 늘 공급.
 - **쿨링 조끼·목쿨러** — 짧은 외출 시 체온 상승을 늦춰줍니다.
+
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC%20%EC%BF%A8%EB%A7%A4%ED%8A%B8&src=1139000&spec=10799999&addtag=200&ctag=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC%20%EC%BF%A8%EB%A7%A4%ED%8A%B8&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC%20%EC%BF%A8%EB%A7%A4%ED%8A%B8" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">반려동물 쿨매트·여름 쿨링용품</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
 
 ## 정리
 
