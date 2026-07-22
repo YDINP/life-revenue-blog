@@ -1,4 +1,5 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from 'node:fs';
+import { autoPublishToWP } from './wp-autopublish.mjs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -393,6 +394,8 @@ ${content}${coupangSection}
   const filePath = join(blogDir, fileName);
   writeFileSync(filePath, fullContent, 'utf-8');
   console.log(`Blog post written: src/blog/${fileName}`);
+  // mungge.com(WordPress) 자동 발행 — WP env 있을 때만(없으면 Astro만)
+  await autoPublishToWP(filePath, { silo: '생활·재테크' });
 }
 
 async function main() {
