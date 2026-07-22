@@ -178,7 +178,7 @@ const seriesIndex = seriesPosts.findIndex(p => p.slug === currentSlug);
 const seriesTotal = seriesPosts.length;
 ---
 
-<BaseLayout title={title} description={description} image={imageObj?.url} ogType="article" noindex={noindex}>
+<BaseLayout title={title} description={description} image={imageObj?.url} ogType="article" noindex={noindex} canonicalUrl={noindex ? undefined : `https://mungge.com/${slug}/`}>
   <!-- 포스트 전용 OG article 메타 (head) -->
   <Fragment slot="head">
     {imageObj && <link rel="preload" as="image" href={heroSrcset ? pexelsUrl(imageObj.url, 900) : imageObj.url} imagesrcset={heroSrcset} imagesizes={heroSizes} fetchpriority="high" />}
