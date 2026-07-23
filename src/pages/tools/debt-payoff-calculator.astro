@@ -1,0 +1,377 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = '부채 상환 계산기 — 스노볼 vs 아발란치';
+const description = '내 빚을 언제 다 갚을 수 있을까? 스노볼(작은 빚부터)과 아발란치(고금리부터)를 실제 월별 시뮬레이션으로 비교해 상환 기간·총이자·절약액까지 계산하는 무료 도구입니다.';
+const ogImage = '/og/debt-payoff-calculator.png';
+
+const appLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: '부채 상환 계산기 — 스노볼 vs 아발란치',
+  applicationCategory: 'FinanceApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'KRW' },
+  description: '스노볼과 아발란치 상환 전략을 월별 시뮬레이션으로 비교해 완납일·총이자·절약액을 계산하는 무료 도구.',
+};
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: '스노볼과 아발란치 중 뭐가 더 좋나요?', acceptedAnswer: { '@type': 'Answer', text: '이자만 보면 아발란치가 유리하지만, 차이가 작다면 중간에 포기하지 않는 스노볼이 실제 완납률은 더 높을 수 있습니다.' } },
+    { '@type': 'Question', name: '월 납입액이 이자보다 적으면 어떻게 되나요?', acceptedAnswer: { '@type': 'Answer', text: '잔액이 계속 늘어 영원히 갚을 수 없습니다. 여유자금을 늘리거나 고금리 빚부터 정리해야 합니다.' } },
+    { '@type': 'Question', name: '입력한 정보가 저장되나요?', acceptedAnswer: { '@type': 'Answer', text: '아니요. 모든 계산은 브라우저 안에서만 이뤄지며 입력값은 서버로 전송·저장되지 않습니다.' } },
+    { '@type': 'Question', name: '실제 대출과 결과가 다를 수 있나요?', acceptedAnswer: { '@type': 'Answer', text: '네. 중도상환 수수료, 변동금리, 리볼빙 최소결제, 일할 이자계산 등은 단순화했습니다.' } },
+  ],
+};
+---
+<BaseLayout title={title} description={description} image={ogImage} ogType="website">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(appLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+  </Fragment>
+
+  <div class="dpc">
+    <div class="wrap">
+      <span class="eyebrow"><span class="dot"></span>무료 · 설치 불필요 · 브라우저에서 바로 계산</span>
+      <h1>부채 상환 계산기<br><span class="grad">스노볼 vs 아발란치</span></h1>
+      <p class="gloss">작은 빚부터 갚는 <b style="color:var(--emerald)">눈덩이(스노볼)</b> vs 고금리부터 갚는 <b style="color:var(--teal)">눈사태(아발란치)</b> — 어느 쪽이 내게 유리할까?</p>
+      <p class="sub">두 전략을 <b>실제 월별 시뮬레이션</b>으로 돌려 상환 기간·총이자·절약액까지 한눈에 비교합니다.</p>
+
+      <form id="calcForm" onsubmit="event.preventDefault();calc(true)">
+      <div class="card">
+        <div class="card-h"><span class="n">1</span><h2>내 부채 입력</h2></div>
+        <div class="debt-head"><div>이름</div><div>잔액 (원)</div><div>연이자율 (%)</div><div>월 최소상환 (원)</div><div></div></div>
+        <div id="debts"></div>
+        <button type="button" class="addbtn" onclick="addDebt()">＋ 부채 추가</button>
+        <div class="err" id="err" role="alert"></div>
+        <div class="extra">
+          <label for="extra">매달 여유자금</label>
+          <div class="fld"><input id="extra" type="text" inputmode="numeric" value="300,000" aria-label="매달 여유자금(원)"></div>
+          <span class="hint">최소상환 외에 추가로 넣을 금액</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-h"><span class="n">2</span><h2>전략 선택 &amp; 계산</h2></div>
+        <div class="strat">
+          <div class="seg" id="method" role="radiogroup" aria-label="상환 전략">
+            <button type="button" data-m="snowball" class="on" role="radio" aria-checked="true" onclick="setMethod('snowball')">❄️ 스노볼</button>
+            <button type="button" data-m="avalanche" role="radio" aria-checked="false" onclick="setMethod('avalanche')">🏔️ 아발란치</button>
+          </div>
+          <button type="submit" class="go">계산하기</button>
+        </div>
+        <p class="tip"><b>스노볼</b> — 잔액이 작은 빚부터 갚아 성취감으로 동기 유지. &nbsp;<b>아발란치</b> — 금리가 높은 빚부터 갚아 이자를 최소화(수학적 최적).</p>
+      </div>
+      </form>
+
+      <div class="card" id="out">
+        <div class="card-h"><span class="n">3</span><h2 id="resHead" tabindex="-1">결과</h2></div>
+        <div id="ok" aria-live="polite">
+          <div class="hero-lbl">예상 완납 시점</div>
+          <div class="hero"><span class="big grad" id="r-date">–</span></div>
+          <div class="hero-sent" id="r-sent"></div>
+          <div class="kpis">
+            <div class="kpi"><div class="l">완납까지</div><div class="v em" id="r-dur">–</div></div>
+            <div class="kpi"><div class="l">총 이자 지출</div><div class="v bl" id="r-interest">–</div></div>
+            <div class="kpi"><div class="l">총 상환액</div><div class="v" id="r-total">–</div></div>
+          </div>
+          <div class="save" id="r-save"></div>
+          <div class="chartwrap">
+            <div class="chart-t"><span>남은 잔액 추이</span>
+              <span class="legend"><span><i style="background:#34d399"></i>스노볼</span><span><i style="background:#22d3ee"></i>아발란치</span></span>
+            </div>
+            <div class="chart-box" id="chartBox">
+              <span class="chart-y top" id="cy-top"></span><span class="chart-y bot">0원</span>
+              <svg id="chart" viewBox="0 0 600 190" preserveAspectRatio="none" role="img" aria-label="상환 기간에 따른 남은 잔액 추이 그래프"></svg>
+              <div class="cguide" id="cguide"></div>
+              <div class="cdot" id="cdotA" style="background:#34d399"></div>
+              <div class="cdot" id="cdotB" style="background:#22d3ee"></div>
+              <div class="ctip" id="ctip"></div>
+            </div>
+            <div class="chart-x"><span>오늘</span><span id="cx-end"></span></div>
+          </div>
+        </div>
+        <div class="warn" id="r-warn" style="display:none"></div>
+      </div>
+
+      <div class="cta" id="cta" style="display:none">
+        <h3>💡 빚이 줄어드는 과정을 매달 자동으로 채워주는 대시보드</h3>
+        <p>지금 이메일을 남기면 방금 계산한 상환 플랜을 담을 수 있는 <b>무료 「부채 눈덩이 시트」</b>를 바로 보내드려요. 예산·거래·순자산·비상금까지 관리하는 정식 대시보드는 출시 때 얼리버드 가격으로 가장 먼저 안내드립니다.</p>
+        <div class="emailrow">
+          <input id="email" type="email" placeholder="이메일 주소" aria-label="이메일 주소">
+          <button type="button" onclick="subscribe()">무료 시트 받기</button>
+        </div>
+        <div class="fine" id="cta-msg" aria-live="polite">스팸 없이 재무 도구 소식만. 언제든 해지할 수 있어요.</div>
+      </div>
+
+      <div class="content">
+        <h2>스노볼 vs 아발란치, 무엇이 다를까?</h2>
+        <p><b>부채 스노볼(눈덩이)</b>은 잔액이 <b>가장 작은 빚부터</b> 순서대로 갚는 방법입니다. 빚 하나를 빨리 없애는 성취감이 커서 <b>끝까지 포기하지 않게</b> 도와줍니다.</p>
+        <p><b>부채 아발란치(눈사태)</b>는 <b>금리가 가장 높은 빚부터</b> 갚는 방법입니다. 이자를 가장 적게 내는 <b>수학적으로 최적</b>인 전략이지만, 첫 빚을 없애기까지 시간이 더 걸릴 수 있습니다.</p>
+        <h2>이 계산기는 어떻게 계산하나요?</h2>
+        <p>매달 ① 각 부채에 이자를 더하고 ② 최소상환액을 낸 뒤 ③ 남는 여유자금을 전략 순서(스노볼=작은 잔액, 아발란치=고금리)의 <b>1순위 부채에 몰아서</b> 갚습니다. 빚 하나가 사라지면 그 최소상환액이 다음 빚으로 <b>눈덩이처럼 굴러가</b> 상환 속도가 점점 빨라집니다. 이 과정을 완납까지 월 단위로 시뮬레이션합니다.</p>
+        <h2>자주 묻는 질문</h2>
+        <h3>스노볼과 아발란치 중 뭐가 더 좋나요?</h3>
+        <p>이자만 보면 아발란치가 유리하지만, 차이가 작다면 중간에 포기하지 않는 스노볼이 실제 완납률은 더 높을 수 있습니다. 위 계산기로 두 결과의 차이를 직접 비교해 보세요.</p>
+        <h3>월 납입액이 이자보다 적으면 어떻게 되나요?</h3>
+        <p>잔액이 계속 늘어 영원히 갚을 수 없습니다. 이 경우 계산기가 "완납 불가"를 안내합니다. 여유자금을 늘리거나 고금리 빚부터 정리해야 합니다.</p>
+        <h3>입력한 정보가 저장되나요?</h3>
+        <p>아니요. 모든 계산은 브라우저 안에서만 이뤄지며, 입력값은 서버로 전송·저장되지 않습니다.</p>
+        <h3>실제 대출과 결과가 다를 수 있나요?</h3>
+        <p>네. 중도상환 수수료, 변동금리, 리볼빙 최소결제(잔액의 %), 일할 이자계산 등은 단순화했습니다. 방향을 잡는 참고용으로 활용하세요.</p>
+      </div>
+
+      <p class="disc">참고용 계산기입니다. 최소상환은 고정 금액, 이자는 월복리로 단순화했으며 실제 리볼빙 최소결제(잔액 %)·마이너스통장(이자만)·일할 이자와 다를 수 있습니다. 입력값은 서버로 전송되지 않고 브라우저에서만 계산됩니다.</p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style is:global>
+.dpc{--bg:#0a0f1a;--bg2:#0d1524;--surface:#121c2e;--surface2:#0e1626;--line:#1f2c42;--line2:#2a3a56;--text:#eef2f8;--mut:#9fb0c6;--dim:#8b97ac;--emerald:#34d399;--teal:#22d3ee;--rose:#fb7185;--grad:linear-gradient(135deg,#34d399,#22d3ee);--radius:18px;--shadow:0 12px 40px -12px rgba(0,0,0,.55);
+  max-width:920px;margin:26px auto;padding:28px 22px 32px;border-radius:24px;border:1px solid #17233a;
+  background:radial-gradient(700px 400px at 12% -8%,rgba(52,211,153,.10),transparent 60%),radial-gradient(600px 400px at 100% 0%,rgba(34,211,238,.08),transparent 55%),linear-gradient(180deg,var(--bg2),var(--bg));
+  color:var(--text);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.55;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
+.dpc *{box-sizing:border-box;margin:0;padding:0}
+.dpc .wrap{max-width:100%;margin:0 auto}
+.dpc .eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--emerald);background:rgba(52,211,153,.10);border:1px solid rgba(52,211,153,.22);padding:5px 12px;border-radius:999px;margin-bottom:16px}
+.dpc .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.2)}
+.dpc h1{font-size:clamp(26px,5vw,38px);font-weight:800;line-height:1.12;letter-spacing:-.03em;color:var(--text)}
+.dpc .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.dpc .gloss{color:var(--mut);font-size:15px;margin-top:10px;font-weight:500}
+.dpc .sub{color:var(--mut);font-size:16px;margin:8px 0 26px;max-width:640px}
+.dpc .card{background:linear-gradient(180deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:18px;box-shadow:var(--shadow)}
+.dpc .card-h{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.dpc .card-h .n{width:26px;height:26px;border-radius:8px;background:rgba(52,211,153,.12);color:var(--emerald);display:grid;place-items:center;font-size:13px;font-weight:700}
+.dpc .card-h h2{font-size:16.5px;font-weight:700;letter-spacing:-.02em;color:var(--text)}
+.dpc .debt-head,.dpc .debt-row{display:grid;grid-template-columns:1.4fr 1.2fr .9fr 1.1fr 32px;gap:10px;align-items:center}
+.dpc .debt-head{padding:0 4px 8px;font-size:12px;color:var(--mut);font-weight:600}
+.dpc .debt-row{margin-bottom:9px}
+.dpc .fld{position:relative}
+.dpc .fld .cap{display:none}
+.dpc .fld input{width:100%;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:11px 12px;color:var(--text);font-size:14.5px;font-family:inherit;transition:border-color .15s,box-shadow .15s}
+.dpc .fld input::placeholder{color:#6b7890}
+.dpc .fld input:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.14)}
+.dpc .rm{background:rgba(251,113,133,.08);border:1px solid rgba(251,113,133,.2);color:var(--rose);width:32px;height:38px;border-radius:10px;cursor:pointer;font-size:16px;transition:background .15s}
+.dpc .rm:hover{background:rgba(251,113,133,.18)}
+.dpc .addbtn{margin-top:6px;background:transparent;border:1px dashed var(--line2);color:var(--mut);border-radius:11px;padding:10px 14px;font-size:13.5px;font-weight:600;font-family:inherit;cursor:pointer;transition:.15s}
+.dpc .addbtn:hover{border-color:var(--emerald);color:var(--emerald)}
+.dpc .err{display:none;color:var(--rose);font-size:13px;font-weight:600;margin-top:10px}
+.dpc .extra{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}
+.dpc .extra label{font-size:14px;color:var(--mut);font-weight:600}
+.dpc .extra .fld{width:160px}
+.dpc .extra .hint{font-size:12.5px;color:var(--dim)}
+.dpc .strat{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.dpc .seg{display:inline-flex;background:var(--surface2);border:1px solid var(--line);border-radius:12px;padding:4px;gap:2px}
+.dpc .seg button{background:transparent;color:var(--mut);border:none;padding:9px 16px;font-size:13.5px;font-weight:600;font-family:inherit;cursor:pointer;border-radius:9px;transition:.18s}
+.dpc .seg button.on{background:var(--grad);color:#04121b;font-weight:700;box-shadow:0 4px 14px -4px rgba(34,211,238,.5)}
+.dpc .go{margin-left:auto;background:var(--grad);color:#04121b;border:none;border-radius:12px;padding:12px 26px;font-weight:800;font-size:15px;font-family:inherit;cursor:pointer;box-shadow:0 8px 22px -8px rgba(52,211,153,.6);transition:transform .12s,filter .15s}
+.dpc .go:hover{filter:brightness(1.05)}
+.dpc .go:active{transform:translateY(1px)}
+.dpc .tip{font-size:13px;color:var(--mut);margin-top:12px;line-height:1.5}
+.dpc .tip b{color:var(--text)}
+.dpc button:focus-visible,.dpc input:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.dpc #out{display:none}
+.dpc .hero-lbl{font-size:13px;color:var(--mut);font-weight:600;margin:2px 0 2px}
+.dpc .hero{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding:0 2px 6px}
+.dpc .hero .big{font-size:clamp(30px,7vw,46px);font-weight:800;letter-spacing:-.03em}
+.dpc .hero-sent{font-size:15px;color:var(--mut);margin:2px 2px 18px}
+.dpc .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.dpc .kpi{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:15px 16px}
+.dpc .kpi .l{font-size:12.5px;color:var(--mut);font-weight:600}
+.dpc .kpi .v{font-size:21px;font-weight:800;margin-top:5px;letter-spacing:-.02em;color:var(--text)}
+.dpc .v.em{color:var(--emerald)}.dpc .v.bl{color:var(--teal)}
+.dpc .save{margin-top:16px;background:linear-gradient(135deg,rgba(52,211,153,.12),rgba(34,211,238,.08));border:1px solid rgba(52,211,153,.25);border-radius:14px;padding:15px 17px;font-size:14.5px;color:#d7efe6}
+.dpc .save b{color:var(--emerald)}
+.dpc .save .amt{font-size:19px;font-weight:800;color:var(--emerald)}
+.dpc .warn{margin-top:8px;background:rgba(251,113,133,.09);border:1px solid rgba(251,113,133,.3);border-radius:14px;padding:16px 18px;font-size:14.5px;color:#fdd9df}
+.dpc .warn b{color:var(--rose)}
+.dpc .chartwrap{margin-top:18px}
+.dpc .chart-t{font-size:13px;color:var(--mut);font-weight:600;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
+.dpc .legend{display:flex;gap:16px;font-size:12px;color:var(--mut)}
+.dpc .legend i{display:inline-block;width:18px;height:3px;border-radius:2px;margin-right:6px;vertical-align:middle}
+.dpc .chart-box{position:relative;touch-action:pan-y}
+.dpc .cguide{position:absolute;top:0;height:190px;width:1px;background:var(--line2);pointer-events:none;display:none}
+.dpc .cdot{position:absolute;width:9px;height:9px;border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;display:none;box-shadow:0 0 0 2px var(--surface2)}
+.dpc .ctip{position:absolute;pointer-events:none;background:#0b1420;border:1px solid var(--line2);border-radius:10px;padding:8px 11px;font-size:12.5px;line-height:1.5;color:var(--text);white-space:nowrap;display:none;transform:translate(-50%,-115%);z-index:5;box-shadow:0 10px 24px -8px rgba(0,0,0,.65)}
+.dpc .ctip .m{color:var(--dim);font-size:11.5px;margin-bottom:3px}
+.dpc .ctip .s{color:#34d399;font-weight:700}.dpc .ctip .a{color:#22d3ee;font-weight:700}
+.dpc .chart-y{position:absolute;left:0;font-size:11px;color:var(--dim);pointer-events:none}
+.dpc .chart-y.top{top:-2px}.dpc .chart-y.bot{bottom:16px}
+.dpc svg#chart{width:100%;height:190px;display:block;overflow:visible}
+.dpc .gl{stroke:var(--line);stroke-width:1}
+.dpc .chart-x{display:flex;justify-content:space-between;font-size:11px;color:var(--dim);margin-top:4px}
+.dpc .cta{background:linear-gradient(135deg,#0f2740,#12233a);border:1px solid var(--line2);border-radius:var(--radius);padding:24px;position:relative;overflow:hidden;margin-bottom:18px}
+.dpc .cta::before{content:"";position:absolute;inset:0;background:radial-gradient(400px 160px at 90% 0%,rgba(34,211,238,.14),transparent 70%);pointer-events:none}
+.dpc .cta h3{font-size:19px;font-weight:800;letter-spacing:-.02em;margin-bottom:7px;position:relative;color:var(--text)}
+.dpc .cta p{color:var(--mut);font-size:14px;margin-bottom:14px;max-width:580px;position:relative}
+.dpc .emailrow{display:flex;gap:9px;flex-wrap:wrap;position:relative}
+.dpc .emailrow input{flex:1;min-width:220px;background:var(--surface2);border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:var(--text);font-size:14.5px;font-family:inherit}
+.dpc .emailrow input:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(34,211,238,.14)}
+.dpc .emailrow button{background:var(--grad);color:#04121b;border:none;border-radius:12px;padding:12px 22px;font-weight:800;font-size:14.5px;font-family:inherit;cursor:pointer;transition:.15s}
+.dpc .emailrow button:hover{filter:brightness(1.05)}
+.dpc .fine{font-size:11.5px;color:var(--dim);margin-top:10px;position:relative}
+.dpc .content{color:var(--mut);font-size:15px}
+.dpc .content h2{font-size:19px;color:var(--text);font-weight:800;letter-spacing:-.02em;margin:26px 0 10px}
+.dpc .content h3{font-size:15.5px;color:var(--text);font-weight:700;margin:16px 0 4px}
+.dpc .content p{margin-bottom:8px}
+.dpc .content ul{margin:6px 0 6px 18px}.dpc .content li{margin-bottom:5px}
+.dpc .disc{font-size:12px;color:var(--dim);margin-top:22px;line-height:1.6}
+@media(max-width:600px){
+  .dpc{padding:20px 14px 24px;margin:16px auto;border-radius:18px}
+  .dpc .debt-head{display:none}
+  .dpc .debt-row{grid-template-columns:1fr 1fr;gap:10px;background:var(--surface2);border:1px solid var(--line);border-radius:12px;padding:12px;position:relative}
+  .dpc .debt-row .fld input{background:var(--surface)}
+  .dpc .debt-row .fld:nth-child(1){grid-column:1/-1}
+  .dpc .fld .cap{display:block;font-size:11px;color:var(--dim);margin-bottom:4px;font-weight:600}
+  .dpc .rm{position:absolute;top:9px;right:9px;width:26px;height:26px;font-size:13px}
+  .dpc .kpis{grid-template-columns:1fr}
+  .dpc .go{margin-left:0;width:100%}
+}
+</style>
+
+<script is:inline>
+let method='snowball';
+const won=n=>Math.round(n).toLocaleString('ko-KR')+'원';
+const wonShort=n=>{n=Math.round(n);if(n>=100000000)return (n/100000000).toFixed(1).replace(/\.0$/,'')+'억원';if(n>=10000)return Math.round(n/10000).toLocaleString('ko-KR')+'만원';return n.toLocaleString('ko-KR')+'원'};
+const cint=v=>parseFloat(String(v).replace(/[^0-9.]/g,''))||0;
+const seed=[
+  {name:'자동차 할부',bal:'3,000,000',apr:5.0,min:'90,000'},
+  {name:'신용카드',bal:'6,000,000',apr:22.0,min:'180,000'},
+  {name:'마이너스통장',bal:'9,000,000',apr:9.5,min:'120,000'},
+];
+function fmtInput(el){const raw=el.value.replace(/[^0-9]/g,'');el.value=raw?parseInt(raw,10).toLocaleString('ko-KR'):'';}
+function row(d={name:'',bal:'',apr:'',min:''}){
+  const el=document.createElement('div');el.className='debt-row';
+  el.innerHTML='<div class="fld"><span class="cap">이름</span><input aria-label="부채 이름" placeholder="예: 신용카드" value="'+d.name+'"></div>'
+  +'<div class="fld"><span class="cap">잔액 (원)</span><input aria-label="잔액(원)" inputmode="numeric" placeholder="잔액" value="'+d.bal+'" oninput="fmtInput(this)"></div>'
+  +'<div class="fld"><span class="cap">연이자율 (%)</span><input aria-label="연이자율(%)" type="number" inputmode="decimal" step="0.1" min="0" placeholder="연이자율" value="'+d.apr+'"></div>'
+  +'<div class="fld"><span class="cap">월 최소상환 (원)</span><input aria-label="월 최소상환(원)" inputmode="numeric" placeholder="최소상환" value="'+d.min+'" oninput="fmtInput(this)"></div>'
+  +'<button type="button" class="rm" title="삭제" aria-label="이 부채 삭제" onclick="this.closest(\'.debt-row\').remove()">×</button>';
+  return el;
+}
+function addDebt(d){document.getElementById('debts').appendChild(row(d))}
+function setMethod(m){method=m;document.querySelectorAll('#method button').forEach(b=>{const on=b.dataset.m===m;b.classList.toggle('on',on);b.setAttribute('aria-checked',on)});if(document.getElementById('out').style.display==='block')calc(false)}
+seed.forEach(addDebt);
+document.getElementById('extra').addEventListener('input',e=>fmtInput(e.target));
+
+function readDebts(){
+  const out=[];
+  document.querySelectorAll('#debts .debt-row').forEach(r=>{
+    const i=r.querySelectorAll('input');
+    const bal=cint(i[1].value), apr=Math.max(0,parseFloat(i[2].value)||0), min=Math.max(0,cint(i[3].value));
+    if(bal>0) out.push({name:i[0].value||'부채',bal,apr,min});
+  });
+  return out;
+}
+function simulate(debts,extra,method){
+  debts=debts.map((d,idx)=>({...d,idx}));
+  const snowOrder=[...debts].sort((x,y)=>x.bal-y.bal).map(d=>d.idx);
+  const order=a=>method==='avalanche'
+    ? [...a].sort((x,y)=>y.apr-x.apr)
+    : snowOrder.map(i=>a.find(d=>d.idx===i)).filter(Boolean);
+  const budget=extra+debts.reduce((s,d)=>s+(d.min>0?d.min:0),0);
+  const start=debts.reduce((s,d)=>s+d.bal,0);
+  let months=0,interest=0,paid=0,guard=0;const series=[start];
+  while(debts.some(d=>d.bal>0.01)&&guard<1200){
+    guard++;months++;
+    debts.forEach(d=>{if(d.bal>0){const i=d.bal*(d.apr/100/12);d.bal+=i;interest+=i;}});
+    let pool=budget;
+    debts.forEach(d=>{if(d.bal>0){const p=Math.min(d.min,d.bal);d.bal-=p;pool-=p;paid+=p;}});
+    for(const t of order(debts)){if(!t)continue;if(pool<=0)break;if(t.bal>0){const p=Math.min(pool,t.bal);t.bal-=p;pool-=p;paid+=p;}}
+    series.push(Math.max(0,debts.reduce((s,d)=>s+d.bal,0)));
+  }
+  const converged=!debts.some(d=>d.bal>0.01);
+  return {months,interest,paid,series,converged,start};
+}
+const fmtMonths=m=>{const y=Math.floor(m/12),mo=m%12;return (y?y+'년 ':'')+(mo?mo+'개월':(y?'':'0개월'))};
+const dateAfter=m=>{const d=new Date();d.setMonth(d.getMonth()+m);return d.getFullYear()+'년 '+(d.getMonth()+1)+'월'};
+
+function drawChart(a,b){
+  const W=600,H=190,pad=8;
+  const maxLen=Math.max(a.series.length,b.series.length);
+  const padSeries=s=>{const out=s.slice();while(out.length<maxLen)out.push(0);return out;};
+  const A=padSeries(a.series),B=padSeries(b.series);
+  const maxVal=Math.max(A[0],B[0],1);
+  const step=W/Math.max(maxLen-1,1);
+  const path=s=>s.map((v,i)=>(i===0?'M':'L')+(i*step).toFixed(1)+','+(H-pad-(v/maxVal)*(H-pad*2)).toFixed(1)).join(' ');
+  const grid=[0,.25,.5,.75,1].map(f=>'<line class="gl" x1="0" y1="'+(pad+f*(H-pad*2)).toFixed(1)+'" x2="'+W+'" y2="'+(pad+f*(H-pad*2)).toFixed(1)+'"/>').join('');
+  document.getElementById('chart').innerHTML=grid
+    +'<path d="'+path(A)+'" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linejoin="round" vector-effect="non-scaling-stroke" opacity="'+(method==='snowball'?1:.45)+'"/>'
+    +'<path d="'+path(B)+'" fill="none" stroke="#22d3ee" stroke-width="2.5" stroke-linejoin="round" vector-effect="non-scaling-stroke" opacity="'+(method==='avalanche'?1:.45)+'"/>';
+  document.getElementById('cy-top').textContent=wonShort(maxVal);
+  window.__chart={A,B,maxVal,maxLen,H,pad};
+}
+(function(){
+  const box=document.getElementById('chartBox');if(!box)return;
+  const guide=document.getElementById('cguide'),dA=document.getElementById('cdotA'),dB=document.getElementById('cdotB'),tip=document.getElementById('ctip');
+  function move(clientX){
+    const c=window.__chart;if(!c)return;
+    const rect=box.getBoundingClientRect();
+    let frac=(clientX-rect.left)/rect.width;frac=Math.max(0,Math.min(1,frac));
+    const idx=Math.round(frac*(c.maxLen-1));
+    const x=(idx/Math.max(c.maxLen-1,1))*rect.width;
+    const yv=v=>c.H-c.pad-(v/c.maxVal)*(c.H-c.pad*2);
+    const yA=yv(c.A[idx]),yB=yv(c.B[idx]);
+    guide.style.display='block';guide.style.left=x+'px';
+    dA.style.display='block';dA.style.left=x+'px';dA.style.top=yA+'px';
+    dB.style.display='block';dB.style.left=x+'px';dB.style.top=yB+'px';
+    tip.style.display='block';tip.style.left=Math.max(46,Math.min(rect.width-46,x))+'px';tip.style.top=(Math.min(yA,yB)-6)+'px';
+    tip.innerHTML='<div class="m">'+idx+'개월 후</div><div><span class="s">스노볼</span> '+won(c.A[idx])+'</div><div><span class="a">아발란치</span> '+won(c.B[idx])+'</div>';
+  }
+  function hide(){guide.style.display=dA.style.display=dB.style.display=tip.style.display='none';}
+  box.addEventListener('mousemove',e=>move(e.clientX));
+  box.addEventListener('mouseleave',hide);
+  box.addEventListener('touchstart',e=>{if(e.touches[0])move(e.touches[0].clientX);},{passive:true});
+  box.addEventListener('touchmove',e=>{if(e.touches[0])move(e.touches[0].clientX);},{passive:true});
+})();
+function calc(scroll){
+  const debts=readDebts();const extra=cint(document.getElementById('extra').value);
+  const err=document.getElementById('err');
+  if(!debts.length){err.textContent='잔액이 있는 부채를 1개 이상 입력해 주세요.';err.style.display='block';return;}
+  err.style.display='none';
+  const snow=simulate(debts,extra,'snowball'), aval=simulate(debts,extra,'avalanche');
+  const cur=method==='snowball'?snow:aval;
+  document.getElementById('out').style.display='block';
+  document.getElementById('cta').style.display='block';
+  if(!cur.converged){
+    document.getElementById('ok').style.display='none';
+    const w=document.getElementById('r-warn');w.style.display='block';
+    w.innerHTML='⚠️ <b>현재 납입액으로는 완납이 불가능합니다.</b><br>매달 내는 금액이 이자보다 적어 잔액이 계속 늘어납니다. <b>여유자금을 늘리거나</b> 금리가 가장 높은 빚부터 정리해 이자 부담을 먼저 줄이세요.';
+  }else{
+    document.getElementById('r-warn').style.display='none';
+    document.getElementById('ok').style.display='block';
+    document.getElementById('r-date').textContent=dateAfter(cur.months);
+    document.getElementById('r-sent').textContent='이 속도라면 '+dateAfter(cur.months)+'에 모든 빚을 다 갚습니다 (약 '+fmtMonths(cur.months)+').';
+    document.getElementById('r-dur').textContent=fmtMonths(cur.months);
+    document.getElementById('r-interest').textContent=won(cur.interest);
+    document.getElementById('r-total').textContent=won(cur.paid);
+    const both=snow.converged&&aval.converged;
+    const saved=snow.interest-aval.interest, mdiff=snow.months-aval.months;
+    const s=document.getElementById('r-save');
+    if(!both){s.innerHTML='한쪽 전략은 현재 납입액으로 완납되지 않아 비교를 생략합니다.';}
+    else if(saved>1000){s.innerHTML='🏔️ <b>아발란치</b>로 갚으면 스노볼보다 이자를 <span class="amt">'+won(saved)+'</span> 아끼고'+(mdiff>0?' <b>'+mdiff+'개월</b> 더 빨리 끝납니다.':' 총이자가 더 적습니다.')+' &nbsp;다만 스노볼은 작은 빚을 먼저 없애 <b>포기하지 않게</b> 돕습니다.';}
+    else if(saved<-1000){s.innerHTML='❄️ 이 구성에선 <b>스노볼</b>이 이자를 <span class="amt">'+won(-saved)+'</span> 더 적게 냅니다. 작은 빚부터 없애는 동기부여 효과까지 고려하면 스노볼이 유리합니다.';}
+    else{s.innerHTML='이 부채 구성에선 두 전략의 총이자가 거의 같습니다. 성취감을 원하면 스노볼, 이자 최소화를 원하면 아발란치를 고르세요.';}
+    drawChart(snow,aval);
+    document.getElementById('cx-end').textContent=dateAfter(cur.months);
+  }
+  const h=document.getElementById('resHead');
+  if(scroll){h.focus();document.getElementById('out').scrollIntoView({behavior:'smooth',block:'start'});}
+}
+function subscribe(){
+  const e=document.getElementById('email').value.trim();const msg=document.getElementById('cta-msg');
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)){msg.textContent='올바른 이메일 주소를 입력해 주세요.';msg.style.color='#fb7185';return;}
+  try{
+    fetch('https://xyprbsmagtlzebxyxsvj.supabase.co/functions/v1/analytics-ingest',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({event_type:'newsletter_subscribe',source:'lifeflow',metadata:{email:e,campaign:'debt-calculator',page:location.pathname,subscribed_at:new Date().toISOString()}})
+    }).catch(()=>{});
+  }catch(_){}
+  msg.textContent='감사합니다! 무료 시트와 대시보드 소식을 이 주소로 보내드릴게요.';msg.style.color='#34d399';
+  try{localStorage.setItem('newsletter-subscribed','true');}catch(_){}
+  document.getElementById('email').value='';
+}
+calc(false);
+</script>
+
