@@ -9,8 +9,10 @@ heroImage: "https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg?a
 coupangLinks:
   - title: "가계부 다이어리"
     url: "https://www.coupang.com/np/search?q=%EA%B0%80%EA%B3%84%EB%B6%80%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&src=1139000&spec=10799999&addtag=200&ctag=%EA%B0%80%EA%B3%84%EB%B6%80%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%EA%B0%80%EA%B3%84%EB%B6%80%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC"
+    imageUrl: "https://images.pexels.com/photos/4386289/pexels-photo-4386289.jpeg?auto=compress&cs=tinysrgb&w=300"
   - title: "서류 파일 정리함"
     url: "https://www.coupang.com/np/search?q=%EC%84%9C%EB%A5%98%20%ED%8C%8C%EC%9D%BC%20%EC%A0%95%EB%A6%AC%ED%95%A8&src=1139000&spec=10799999&addtag=200&ctag=%EC%84%9C%EB%A5%98%20%ED%8C%8C%EC%9D%BC%20%EC%A0%95%EB%A6%AC%ED%95%A8&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%84%9C%EB%A5%98%20%ED%8C%8C%EC%9D%BC%20%EC%A0%95%EB%A6%AC%ED%95%A8"
+    imageUrl: "https://images.pexels.com/photos/6693661/pexels-photo-6693661.jpeg?auto=compress&cs=tinysrgb&w=300"
 faq:
   - q: "근로장려금은 얼마까지 받을 수 있나요?"
     a: "가구 유형(단독·홑벌이·맞벌이)과 총소득 구간에 따라 지급액이 달라집니다. 일반적으로 단독가구보다 홑벌이·맞벌이 가구의 최대 지급액이 크며, 가구 유형별로 최대 지급액이 정해져 있습니다. 다만 구체적 금액과 소득 구간은 매년 조정되므로, 본인 예상 지급액은 국세청 홈택스의 근로장려금 계산기(자동 산정)로 확인하는 것이 가장 정확합니다."

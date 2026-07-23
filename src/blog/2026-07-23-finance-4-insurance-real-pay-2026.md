@@ -9,6 +9,7 @@ heroImage: "https://images.pexels.com/photos/4386289/pexels-photo-4386289.jpeg?a
 coupangLinks:
   - title: "가계부 다이어리"
     url: "https://www.coupang.com/np/search?q=%EA%B0%80%EA%B3%84%EB%B6%80%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&src=1139000&spec=10799999&addtag=200&ctag=%EA%B0%80%EA%B3%84%EB%B6%80%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%EA%B0%80%EA%B3%84%EB%B6%80%20%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC"
+    imageUrl: "https://images.pexels.com/photos/4386289/pexels-photo-4386289.jpeg?auto=compress&cs=tinysrgb&w=300"
 faq:
   - q: "4대보험은 무엇으로 구성되나요?"
     a: "국민연금, 건강보험(장기요양보험 포함), 고용보험, 산재보험 네 가지를 묶어 4대보험이라 부릅니다. 이 중 산재보험은 전액 사업주가 부담하므로 근로자 월급에서 공제되는 것은 국민연금·건강보험(+장기요양)·고용보험 세 가지입니다."

@@ -359,7 +359,7 @@ ${chartInstruction}
 
   const tagsYaml = tags.map(t => `  - "${t}"`).join('\n');
   const coupangYaml = coupangProducts
-    .map(p => `  - title: "${p.title}"\n    url: "${p.url}"`)
+    .map(p => `  - title: "${p.title}"\n    url: "${p.url}"\n    imageUrl: "${p.imageUrl || ''}"`)
     .join('\n');
 
   // FAQ YAML
