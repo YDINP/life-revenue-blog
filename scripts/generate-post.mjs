@@ -7,7 +7,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
 
 // ── Config ──────────────────────────────────────────────────────────
-const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
+const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN;
 const PEXELS_API_KEY = process.env.PEXELS_API_KEY;
 const AUTHOR = 'LifeFlow';
 const CHART_COLORS = ['#10b981', '#3b82f6', '#f59e0b', '#ef4444', '#8b5cf6'];
@@ -57,7 +57,10 @@ function slugify(title) {
 }
 
 async function callClaude(prompt) {
-  const res = await fetch('https://api.anthropic.com/v1/messages', {
+  // 게이트웨이 호환: ANTHROPIC_BASE_URL/BLOG_CLAUDE_MODEL 있으면 우선(로컬), 없으면 공식 API(GH Actions)
+  const CLAUDE_API_URL = `${process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com'}/v1/messages`;
+  const CLAUDE_MODEL = process.env.BLOG_CLAUDE_MODEL || 'claude-haiku-4-5-20251001';
+  const res = await fetch(CLAUDE_API_URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -65,7 +68,7 @@ async function callClaude(prompt) {
       'anthropic-version': '2023-06-01',
     },
     body: JSON.stringify({
-      model: 'claude-haiku-4-5-20251001',
+      model: CLAUDE_MODEL,
       max_tokens: 8192,
       messages: [{ role: 'user', content: prompt }],
     }),
