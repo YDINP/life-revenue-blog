@@ -1,0 +1,293 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = '학점(GPA) 계산기 4.5 만점';
+const description = '이번 학기 평점, 지금 바로 계산하세요. 과목별 학점수와 성적(A+~F)만 넣으면 4.5 만점 GPA와 총 이수학점·백분율 환산을 자동으로 계산합니다. 과목 추가·삭제 자유롭게, 무료·설치 불필요.';
+const ogImage = '/og/gpa-calculator.png';
+
+const appLd = {
+  '@context': 'https://schema.org', '@type': 'WebApplication',
+  name: '학점(GPA) 계산기 4.5 만점', applicationCategory: 'UtilitiesApplication', operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'KRW' },
+  description: '과목별 학점수와 성적을 입력해 4.5 만점 평점(GPA)과 총 이수학점·백분율 환산을 계산하는 무료 도구.',
+};
+const faqLd = {
+  '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+    { '@type': 'Question', name: 'GPA는 어떻게 계산하나요?', acceptedAnswer: { '@type': 'Answer', text: '각 과목의 (학점수 × 성적 평점)을 모두 더한 뒤, 총 이수학점으로 나눈 값이 평점(GPA)입니다. 이 계산기는 A+ 4.5 만점 기준을 사용합니다.' } },
+    { '@type': 'Question', name: '4.5 만점과 4.3 만점은 무엇이 다른가요?', acceptedAnswer: { '@type': 'Answer', text: '학교마다 A+에 부여하는 최고 평점이 다릅니다. 4.5 만점은 A+ 4.5·A 4.0, 4.3 만점은 A+ 4.3·A 4.0을 씁니다. 이 도구는 4.5 만점 기준이므로 학교 규정을 꼭 확인하세요.' } },
+    { '@type': 'Question', name: 'F 학점도 GPA에 포함되나요?', acceptedAnswer: { '@type': 'Answer', text: '네. F는 평점 0.0이지만 이수학점은 분모(총 학점)에 그대로 포함되어 GPA를 크게 떨어뜨립니다. 재수강으로 성적을 정정하기 전까지는 계속 반영됩니다.' } },
+    { '@type': 'Question', name: '백분율 환산 점수는 정확한가요?', acceptedAnswer: { '@type': 'Answer', text: '백분율은 GPA ÷ 4.5 × 100으로 근사한 참고값입니다. 교환학생·유학 지원 등에 쓰이는 공식 환산표는 기관마다 달라 반드시 해당 기관 기준을 확인해야 합니다.' } },
+  ],
+};
+---
+<BaseLayout title={title} description={description} image={ogImage} ogType="website">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(appLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+  </Fragment>
+
+  <div class="dpc">
+    <div class="wrap">
+      <span class="eyebrow"><span class="dot"></span>4.5 만점 기준 · 무료 · 설치 불필요</span>
+      <h1>학점(GPA) 계산기 <span class="grad">4.5 만점</span></h1>
+      <p class="sub">이번 학기 평점, 몇 점일까요? 과목별 <b>학점수와 성적만 입력</b>하면 4.5 만점 GPA와 총 이수학점·백분율 환산을 바로 계산합니다.</p>
+
+      <form id="calcForm" onsubmit="event.preventDefault();calc(true)">
+      <div class="card">
+        <div class="card-h"><span class="n">1</span><h2>과목 정보 입력</h2></div>
+        <div class="rows-h">
+          <span class="rh-name">과목명 (선택)</span>
+          <span class="rh-credit">학점수</span>
+          <span class="rh-grade">성적</span>
+          <span class="rh-del"></span>
+        </div>
+        <div id="rows"></div>
+        <div class="rowbtns">
+          <button type="button" class="addrow" onclick="addRow()">+ 과목 추가</button>
+        </div>
+        <div class="strat">
+          <button type="submit" class="go">평점 계산</button>
+        </div>
+        <p class="tip">각 과목의 <b>학점수(이수 학점)</b>와 <b>성적</b>을 넣으세요. 성적은 A+ 4.5 ~ F 0.0의 <b>4.5 만점</b> 기준으로 환산됩니다. F는 평점 0.0이지만 <b>이수학점은 분모에 포함</b>되어 평균을 떨어뜨립니다.</p>
+      </div>
+      </form>
+
+      <div class="card" id="out">
+        <div class="card-h"><span class="n">2</span><h2 id="resHead" tabindex="-1">평점 결과</h2></div>
+        <div class="hero-lbl">평점 (GPA · 예상)</div>
+        <div class="res-hero"><span class="big grad" id="r-gpa">–</span><span class="permo">/ 4.5</span></div>
+        <div class="hero-sent" id="r-sent"></div>
+        <div class="kpis">
+          <div class="kpi"><div class="l">총 이수학점</div><div class="v em" id="r-credits">–</div></div>
+          <div class="kpi"><div class="l">과목 수</div><div class="v" id="r-count">–</div></div>
+          <div class="kpi"><div class="l">백분율 환산</div><div class="v bl" id="r-pct">–</div></div>
+        </div>
+        <div class="barwrap">
+          <div class="stackbar" id="stackbar"><div class="seg net" id="seg-net"></div><div class="seg ded" id="seg-ded"></div></div>
+          <div class="barleg"><span><i class="net"></i>취득 평점 <b id="leg-net"></b></span><span><i class="ded"></i>남은 폭 <b id="leg-ded"></b></span></div>
+        </div>
+        <div class="brk">
+          <div class="brk-t">과목별 반영 내역 (학점수 × 평점)</div>
+          <div id="brk-list"></div>
+          <div class="brk-row total"><span>가중 평점 합계 ÷ 총 학점</span><b id="d-total">–</b></div>
+        </div>
+      </div>
+
+      <div class="cta" id="cta" style="display:none">
+        <h3>💡 다음 학기 목표 학점, 미리 설계하고 싶다면</h3>
+        <p>목표 GPA 달성 플랜과 공부 루틴·시간표 관리 팁을 담은 <b>학습 도구 뉴스레터</b>를 보내드려요. 새 학습 계산기와 무료 시트도 가장 먼저 안내드립니다.</p>
+        <div class="emailrow">
+          <input id="email" type="email" placeholder="이메일 주소" aria-label="이메일 주소">
+          <button type="button" onclick="subscribe()">뉴스레터 받기</button>
+        </div>
+        <div class="fine" id="cta-msg" aria-live="polite">스팸 없이 학습 도구 소식만. 언제든 해지할 수 있어요.</div>
+      </div>
+
+      <div class="content">
+        <h2>GPA(평점)란?</h2>
+        <p><b>GPA</b>(Grade Point Average, 평점)는 각 과목의 성적을 숫자 평점으로 바꾼 뒤, <b>학점수로 가중평균</b>한 값입니다. 3학점짜리 A+는 2학점짜리 A+보다 평균에 더 크게 반영됩니다.</p>
+        <h2>4.5 만점 성적 → 평점 환산표</h2>
+        <ul>
+          <li><b>A+</b> 4.5 · <b>A</b> 4.0</li>
+          <li><b>B+</b> 3.5 · <b>B</b> 3.0</li>
+          <li><b>C+</b> 2.5 · <b>C</b> 2.0</li>
+          <li><b>D+</b> 1.5 · <b>D</b> 1.0</li>
+          <li><b>F</b> 0.0 (평점은 0이지만 이수학점은 분모에 포함)</li>
+        </ul>
+        <h2>자주 묻는 질문</h2>
+        <h3>4.5 만점과 4.3 만점은 무엇이 다른가요?</h3>
+        <p>학교마다 A+의 최고 평점이 다릅니다. 4.5 만점은 A+를 4.5로, 4.3 만점은 A+를 4.3으로 봅니다. 이 계산기는 <b>4.5 만점</b> 기준이므로, 4.3 만점 학교라면 학교 규정을 확인하세요.</p>
+        <h3>F 학점은 어떻게 반영되나요?</h3>
+        <p>F는 평점 0.0으로 계산되지만 <b>이수학점은 분모(총 학점)에 포함</b>됩니다. 그래서 F 한 과목이 전체 평균을 크게 낮춥니다. 재수강으로 성적을 정정하면 반영이 달라집니다.</p>
+        <h3>백분율 환산은 믿어도 되나요?</h3>
+        <p>여기 백분율은 <b>GPA ÷ 4.5 × 100</b>으로 근사한 참고값입니다. 유학·교환학생 지원용 공식 환산표는 기관마다 다르니, 실제 제출 시에는 해당 기관 기준을 확인하세요.</p>
+      </div>
+
+      <p class="disc">참고용 계산기입니다. A+ 4.5 만점 기준으로 가중평균 GPA를 계산하며, 백분율 환산(GPA÷4.5×100)은 근사값입니다. 학교·기관마다 평점 체계(4.3/4.0 만점, P/F 처리, 재수강 반영)가 달라 실제 성적표와 다를 수 있습니다. 입력값은 서버로 전송되지 않고 브라우저에서만 계산됩니다.</p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style is:global>
+.dpc{--grad:linear-gradient(135deg,#34d399,#22d3ee);--radius:18px;
+  --surface:#ffffff;--surface2:#f4f7fb;--line:#e5eaf1;--line2:#d4dce7;
+  --text:#0f1a2b;--mut:#48566b;--dim:#6a7889;--emerald:#0c9c6b;--teal:#0d7d9c;--rose:#e11d63;
+  --gradtext:linear-gradient(135deg,#0aa06e,#0d86a6);
+  --shadow:0 10px 30px -14px rgba(20,45,90,.16);--panelborder:#e6ecf3;
+  --panel:radial-gradient(700px 400px at 12% -8%,rgba(52,211,153,.07),transparent 60%),radial-gradient(600px 400px at 100% 0%,rgba(34,211,238,.06),transparent 55%),linear-gradient(180deg,#f8fbfe,#eef3f9);
+  max-width:920px;margin:26px auto;padding:28px 22px 32px;border-radius:24px;border:1px solid var(--panelborder);
+  background:var(--panel);color:var(--text);
+  font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.55;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
+html.dark .dpc{--surface:#121c2e;--surface2:#0e1626;--line:#1f2c42;--line2:#2a3a56;
+  --text:#eef2f8;--mut:#9fb0c6;--dim:#8b97ac;--emerald:#34d399;--teal:#22d3ee;--rose:#fb7185;
+  --gradtext:linear-gradient(135deg,#34d399,#22d3ee);
+  --shadow:0 12px 40px -12px rgba(0,0,0,.55);--panelborder:#17233a;
+  --panel:radial-gradient(700px 400px at 12% -8%,rgba(52,211,153,.10),transparent 60%),radial-gradient(600px 400px at 100% 0%,rgba(34,211,238,.08),transparent 55%),linear-gradient(180deg,#0d1524,#0a0f1a)}
+.dpc *{box-sizing:border-box;margin:0;padding:0}
+.dpc .wrap{max-width:100%;margin:0 auto}
+.dpc .eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--emerald);background:rgba(52,211,153,.10);border:1px solid rgba(52,211,153,.22);padding:5px 12px;border-radius:999px;margin-bottom:16px}
+.dpc .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.2)}
+.dpc h1{font-size:clamp(26px,5vw,38px);font-weight:800;line-height:1.12;letter-spacing:-.03em;color:var(--text)}
+.dpc .grad{background:var(--gradtext);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.dpc .sub{color:var(--mut);font-size:16px;margin:12px 0 26px;max-width:640px}
+.dpc .card{background:linear-gradient(180deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:18px;box-shadow:var(--shadow)}
+.dpc .card-h{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.dpc .card-h .n{width:26px;height:26px;border-radius:8px;background:rgba(52,211,153,.12);color:var(--emerald);display:grid;place-items:center;font-size:13px;font-weight:700}
+.dpc .card-h h2{font-size:16.5px;font-weight:700;letter-spacing:-.02em;color:var(--text)}
+.dpc .frow{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.dpc .fld{position:relative}
+.dpc .fld .cap{display:block;font-size:12px;color:var(--mut);font-weight:600;margin-bottom:5px}
+.dpc .fld input{width:100%;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:11px 12px;color:var(--text);font-size:15px;font-family:inherit;transition:border-color .15s,box-shadow .15s}
+.dpc .fld input::placeholder{color:var(--dim)}
+.dpc .fld input:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.14)}
+.dpc .strat{display:flex;margin-top:6px}
+.dpc .go{margin-left:auto;background:var(--grad);color:#04121b;border:none;border-radius:12px;padding:12px 26px;font-weight:800;font-size:15px;font-family:inherit;cursor:pointer;box-shadow:0 8px 22px -8px rgba(52,211,153,.6);transition:transform .12s,filter .15s}
+.dpc .go:hover{filter:brightness(1.05)}.dpc .go:active{transform:translateY(1px)}
+.dpc .tip{font-size:13px;color:var(--mut);margin-top:14px;line-height:1.5}
+.dpc .tip b{color:var(--text)}
+.dpc button:focus-visible,.dpc input:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.dpc #out{display:none}
+.dpc .hero-lbl{font-size:13px;color:var(--mut);font-weight:600;margin:2px 0}
+.dpc .res-hero{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;padding:0 2px 4px;background:none;border-radius:0;text-align:left;margin:0}
+.dpc .res-hero .big{font-size:clamp(30px,7vw,46px);font-weight:800;letter-spacing:-.03em}
+.dpc .permo{font-size:16px;color:var(--mut);font-weight:600}
+.dpc .hero-sent{font-size:15px;color:var(--mut);margin:2px 2px 18px}
+.dpc .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.dpc .kpi{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:15px 16px}
+.dpc .kpi .l{font-size:12.5px;color:var(--mut);font-weight:600}
+.dpc .kpi .v{font-size:20px;font-weight:800;margin-top:5px;letter-spacing:-.02em;color:var(--text)}
+.dpc .v.em{color:var(--emerald)}.dpc .v.bl{color:var(--teal)}
+.dpc .barwrap{margin-top:18px}
+.dpc .stackbar{display:flex;height:30px;border-radius:9px;overflow:hidden;border:1px solid var(--line);background:var(--surface2)}
+.dpc .stackbar .seg{height:100%}
+.dpc .stackbar .seg.net{background:linear-gradient(90deg,#34d399,#22d3ee)}
+.dpc .stackbar .seg.ded{background:repeating-linear-gradient(45deg,var(--line2),var(--line2) 6px,var(--surface2) 6px,var(--surface2) 12px)}
+.dpc .barleg{display:flex;gap:16px;font-size:12.5px;color:var(--mut);margin-top:8px}
+.dpc .barleg i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:middle}
+.dpc .barleg i.net{background:#22d3ee}.dpc .barleg i.ded{background:var(--line2)}
+.dpc .barleg b{color:var(--text)}
+.dpc .brk{margin-top:18px;border-top:1px solid var(--line);padding-top:14px}
+.dpc .brk-t{font-size:13px;color:var(--mut);font-weight:700;margin-bottom:8px}
+.dpc .brk-row{display:flex;justify-content:space-between;align-items:center;padding:8px 2px;font-size:14.5px;border-bottom:1px solid var(--line)}
+.dpc .brk-row span{color:var(--text)}
+.dpc .brk-row em{font-style:normal;font-size:12px;color:var(--dim);margin-left:6px}
+.dpc .brk-row b{color:var(--text);font-weight:700}
+.dpc .brk-row.total{border-bottom:none;margin-top:4px;font-weight:800}
+.dpc .brk-row.total span,.dpc .brk-row.total b{color:var(--rose);font-size:15.5px}
+.dpc .cta{background:linear-gradient(135deg,#0f2740,#12233a);border:1px solid #274563;border-radius:var(--radius);padding:24px;position:relative;overflow:hidden;margin-bottom:18px}
+.dpc .cta::before{content:"";position:absolute;inset:0;background:radial-gradient(400px 160px at 90% 0%,rgba(34,211,238,.14),transparent 70%);pointer-events:none}
+.dpc .cta h3{font-size:19px;font-weight:800;letter-spacing:-.02em;margin-bottom:7px;position:relative;color:#f2f7fb}
+.dpc .cta p{color:#aabdd0;font-size:14px;margin-bottom:14px;max-width:580px;position:relative}
+.dpc .cta .fine{color:#8097ad}
+.dpc .emailrow{display:flex;gap:9px;flex-wrap:wrap;position:relative}
+.dpc .cta .emailrow input{flex:1;min-width:220px;background:#0d1b2c;border:1px solid #26445f;border-radius:12px;padding:12px 14px;color:#eef2f8;font-size:14.5px;font-family:inherit}
+.dpc .cta .emailrow input::placeholder{color:#7089a0}
+.dpc .emailrow button{background:var(--grad);color:#04121b;border:none;border-radius:12px;padding:12px 22px;font-weight:800;font-size:14.5px;font-family:inherit;cursor:pointer;transition:.15s}
+.dpc .emailrow button:hover{filter:brightness(1.05)}
+.dpc .fine{font-size:11.5px;margin-top:10px;position:relative}
+.dpc .content{color:var(--mut);font-size:15px}
+.dpc .content h2{font-size:19px;color:var(--text);font-weight:800;letter-spacing:-.02em;margin:26px 0 10px}
+.dpc .content h3{font-size:15.5px;color:var(--text);font-weight:700;margin:16px 0 4px}
+.dpc .content p{margin-bottom:8px}
+.dpc .content ul{margin:6px 0 6px 18px}.dpc .content li{margin-bottom:5px}
+.dpc .disc{font-size:12px;color:var(--dim);margin-top:22px;line-height:1.6}
+@media(max-width:600px){
+  .dpc{padding:20px 14px 24px;margin:16px auto;border-radius:18px}
+  .dpc .frow{grid-template-columns:1fr}
+  .dpc .kpis{grid-template-columns:1fr}
+  .dpc .go{width:100%}
+}
+/* GPA tool-specific */
+.dpc .rows-h{display:grid;grid-template-columns:1fr 84px 96px 38px;gap:8px;padding:0 2px 6px;font-size:11.5px;color:var(--mut);font-weight:600}
+.dpc .rows-h .rh-credit,.dpc .rows-h .rh-grade{text-align:center}
+.dpc .grow{display:grid;grid-template-columns:1fr 84px 96px 38px;gap:8px;margin-bottom:8px;align-items:center}
+.dpc .grow input,.dpc .grow select{width:100%;background:var(--surface2);border:1px solid var(--line);border-radius:10px;padding:10px 11px;color:var(--text);font-size:14.5px;font-family:inherit;transition:border-color .15s,box-shadow .15s}
+.dpc .grow input:focus,.dpc .grow select:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.14)}
+.dpc .grow .cr,.dpc .grow select{text-align:center}
+.dpc .grow .del{background:transparent;border:1px solid var(--line);border-radius:9px;color:var(--rose);font-size:18px;line-height:1;padding:0;height:40px;cursor:pointer;transition:.15s}
+.dpc .grow .del:hover{background:rgba(225,29,99,.08);border-color:var(--rose)}
+.dpc .rowbtns{margin-top:4px}
+.dpc .addrow{background:var(--surface2);border:1px dashed var(--line2);border-radius:11px;padding:10px 16px;color:var(--emerald);font-weight:700;font-size:14px;font-family:inherit;cursor:pointer;transition:.15s;width:100%}
+.dpc .addrow:hover{border-color:var(--emerald);background:rgba(52,211,153,.06)}
+@media(max-width:600px){
+  .dpc .rows-h{grid-template-columns:1fr 60px 78px 34px}
+  .dpc .grow{grid-template-columns:1fr 60px 78px 34px}
+}
+</style>
+
+<script is:inline>
+const GP={'A+':4.5,'A':4.0,'B+':3.5,'B':3.0,'C+':2.5,'C':2.0,'D+':1.5,'D':1.0,'F':0.0};
+const GRADES=['A+','A','B+','B','C+','C','D+','D','F'];
+const SEED=[{name:'',credit:3,grade:'A+'},{name:'',credit:3,grade:'B+'},{name:'',credit:2,grade:'A'}];
+function gradeOpts(sel){return GRADES.map(g=>`<option value="${g}"${g===sel?' selected':''}>${g}</option>`).join('');}
+function rowHtml(r){
+  return `<input type="text" class="nm" placeholder="예: 미적분학" value="${String(r.name||'').replace(/"/g,'&quot;')}" aria-label="과목명">`
+    +`<input type="number" class="cr" inputmode="numeric" min="0" step="0.5" value="${r.credit}" aria-label="학점수">`
+    +`<select class="gr" aria-label="성적">${gradeOpts(r.grade)}</select>`
+    +`<button type="button" class="del" onclick="delRow(this)" aria-label="이 과목 삭제">×</button>`;
+}
+function addRow(seed){
+  const wrap=document.getElementById('rows');
+  const div=document.createElement('div');
+  div.className='grow';
+  div.innerHTML=rowHtml(seed&&seed.grade?seed:{name:'',credit:3,grade:'A+'});
+  wrap.appendChild(div);
+}
+function delRow(btn){
+  const rows=document.getElementById('rows');
+  if(rows.children.length<=1)return; // 최소 한 행 유지
+  const row=btn.closest('.grow');
+  if(row)row.remove();
+}
+function calc(scroll){
+  const rows=[...document.querySelectorAll('#rows .grow')];
+  let totCredit=0,totWeighted=0,count=0;
+  const brk=[];
+  for(const row of rows){
+    const name=(row.querySelector('.nm').value||'').trim();
+    const credit=parseFloat(row.querySelector('.cr').value)||0;
+    const grade=row.querySelector('.gr').value;
+    const gp=GP[grade];
+    if(credit<=0||gp===undefined)continue;
+    totCredit+=credit;
+    totWeighted+=credit*gp;
+    count++;
+    brk.push({name:name||`과목 ${count}`,credit,grade,gp});
+  }
+  if(totCredit<=0||count===0)return; // 무효/0 방어
+  const gpa=totWeighted/totCredit;
+  const pct=gpa/4.5*100;
+  const f1=n=>n.toLocaleString('ko-KR',{minimumFractionDigits:1,maximumFractionDigits:1});
+  // render
+  document.getElementById('out').style.display='block';
+  document.getElementById('cta').style.display='block';
+  document.getElementById('r-gpa').textContent=gpa.toFixed(2);
+  document.getElementById('r-sent').textContent=`총 ${count.toLocaleString('ko-KR')}과목 ${f1(totCredit)}학점 기준, 4.5 만점에 예상 평점 ${gpa.toFixed(2)}점입니다.`;
+  document.getElementById('r-credits').textContent=f1(totCredit)+'학점';
+  document.getElementById('r-count').textContent=count.toLocaleString('ko-KR')+'과목';
+  document.getElementById('r-pct').textContent=pct.toFixed(1)+'점';
+  // bar: 4.5 만점 중 취득 비율
+  const netPct=Math.max(0,Math.min(100,gpa/4.5*100));
+  document.getElementById('seg-net').style.width=netPct+'%';
+  document.getElementById('seg-ded').style.width=(100-netPct)+'%';
+  document.getElementById('leg-net').textContent=gpa.toFixed(2)+' / 4.5';
+  document.getElementById('leg-ded').textContent=(4.5-gpa).toFixed(2)+'점';
+  // 과목별 반영 내역
+  const list=document.getElementById('brk-list');
+  list.innerHTML=brk.map(b=>`<div class="brk-row"><span>${b.name.replace(/</g,'&lt;')} <em>${f1(b.credit)}학점 · ${b.grade} (${b.gp.toFixed(1)})</em></span><b>${f1(b.credit*b.gp)}점</b></div>`).join('');
+  document.getElementById('d-total').textContent=`${f1(totWeighted)} ÷ ${f1(totCredit)} = ${gpa.toFixed(2)}`;
+  const h=document.getElementById('resHead');
+  if(scroll){h.focus();document.getElementById('out').scrollIntoView({behavior:'smooth',block:'start'});}
+}
+function subscribe(){
+  const e=document.getElementById('email').value.trim();const msg=document.getElementById('cta-msg');
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)){msg.textContent='올바른 이메일 주소를 입력해 주세요.';msg.style.color='#fb7185';return;}
+  try{fetch('https://xyprbsmagtlzebxyxsvj.supabase.co/functions/v1/analytics-ingest',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({event_type:'newsletter_subscribe',source:'lifeflow',metadata:{email:e,campaign:'gpa-calculator',page:location.pathname,subscribed_at:new Date().toISOString()}})}).catch(()=>{});}catch(_){}
+  msg.textContent='감사합니다! 학습 도구 뉴스레터와 새 계산기 소식을 보내드릴게요.';msg.style.color='#34d399';
+  try{localStorage.setItem('newsletter-subscribed','true');}catch(_){}
+  document.getElementById('email').value='';
+}
+// 기본 3개 행 시드
+SEED.forEach(r=>addRow(r));
+calc(false);
+</script>

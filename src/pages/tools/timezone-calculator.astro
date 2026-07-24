@@ -1,0 +1,305 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = '세계 시차 계산기 2026';
+const description = '서울과 뉴욕, 런던, 도쿄는 지금 몇 시일까? 14개 주요 도시의 현재 현지 시각과 시차를 서머타임(DST)까지 자동 반영해 실시간으로 계산합니다. 여행·출장·해외 미팅 시간 확인에 무료·설치 불필요.';
+const ogImage = '/og/timezone-calculator.png';
+
+const CITIES = [
+  { n: '서울', tz: 'Asia/Seoul' },
+  { n: '도쿄', tz: 'Asia/Tokyo' },
+  { n: '베이징', tz: 'Asia/Shanghai' },
+  { n: '방콕', tz: 'Asia/Bangkok' },
+  { n: '두바이', tz: 'Asia/Dubai' },
+  { n: '델리', tz: 'Asia/Kolkata' },
+  { n: '런던', tz: 'Europe/London' },
+  { n: '파리', tz: 'Europe/Paris' },
+  { n: '뉴욕', tz: 'America/New_York' },
+  { n: 'LA', tz: 'America/Los_Angeles' },
+  { n: '시카고', tz: 'America/Chicago' },
+  { n: '시드니', tz: 'Australia/Sydney' },
+  { n: '하와이', tz: 'Pacific/Honolulu' },
+  { n: '상파울루', tz: 'America/Sao_Paulo' },
+];
+
+const appLd = {
+  '@context': 'https://schema.org', '@type': 'WebApplication',
+  name: '세계 시차 계산기 2026', applicationCategory: 'UtilitiesApplication', operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'KRW' },
+  description: '주요 도시의 현재 현지 시각과 시차를 서머타임(DST)까지 자동 반영해 실시간으로 계산하는 무료 도구.',
+};
+const faqLd = {
+  '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+    { '@type': 'Question', name: '시차는 어떻게 계산되나요?', acceptedAnswer: { '@type': 'Answer', text: '두 도시의 UTC 기준 오프셋 차이가 시차입니다. 예를 들어 서울(UTC+9)과 뉴욕(서머타임 UTC-4)은 13시간 차이가 나며, 이 계산기는 브라우저의 국제화(Intl) API로 각 도시의 표준 타임존 규칙을 적용해 자동 계산합니다.' } },
+    { '@type': 'Question', name: '서머타임(DST)도 자동으로 반영되나요?', acceptedAnswer: { '@type': 'Answer', text: '네. 각 도시의 IANA 타임존(예: America/New_York)을 사용하므로, 해당 지역이 서머타임 시행 기간이면 오프셋과 시차가 자동으로 조정되어 표시됩니다.' } },
+    { '@type': 'Question', name: '표시되는 시각은 정확한가요?', acceptedAnswer: { '@type': 'Answer', text: '현재 시각은 사용자 기기의 시계를 기준으로 계산합니다. 기기 시계가 정확하면 각 도시의 현지 시각도 정확합니다. 기기 시간이 어긋나 있으면 결과도 함께 어긋날 수 있습니다.' } },
+    { '@type': 'Question', name: '어떤 도시를 지원하나요?', acceptedAnswer: { '@type': 'Answer', text: '서울·도쿄·베이징·방콕·두바이·델리·런던·파리·뉴욕·LA·시카고·시드니·하와이·상파울루 등 여행·출장이 잦은 주요 14개 도시를 지원합니다.' } },
+  ],
+};
+---
+<BaseLayout title={title} description={description} image={ogImage} ogType="website">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(appLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+  </Fragment>
+
+  <div class="dpc">
+    <div class="wrap">
+      <span class="eyebrow"><span class="dot"></span>실시간 · 서머타임 자동 반영 · 무료</span>
+      <h1>세계 시차 계산기 <span class="grad">2026</span></h1>
+      <p class="sub">지금 뉴욕은, 런던은, 도쿄는 몇 시일까요? 주요 도시의 <b>현재 현지 시각과 시차</b>를 서머타임까지 자동 반영해 실시간으로 알려드립니다.</p>
+
+      <form id="calcForm" onsubmit="event.preventDefault();calc(true)">
+      <div class="card">
+        <div class="card-h"><span class="n">1</span><h2>도시 선택</h2></div>
+        <div class="frow">
+          <div class="fld"><span class="cap">기준 도시</span>
+            <select id="from" aria-label="기준 도시" onchange="calc(false)">
+              {CITIES.map(c => <option value={c.tz} selected={c.n === '서울'}>{c.n}</option>)}
+            </select>
+          </div>
+          <div class="fld"><span class="cap">대상 도시</span>
+            <select id="to" aria-label="대상 도시" onchange="calc(false)">
+              {CITIES.map(c => <option value={c.tz} selected={c.n === '뉴욕'}>{c.n}</option>)}
+            </select>
+          </div>
+        </div>
+        <div class="strat">
+          <button type="submit" class="go">시차 계산</button>
+        </div>
+        <p class="tip">기준 도시를 <b>내가 있는 곳</b>, 대상 도시를 <b>확인하고 싶은 곳</b>으로 두면 편합니다. 시각은 <b>1초마다 자동 갱신</b>되며, 서머타임 시행 지역은 시차가 자동으로 바뀝니다.</p>
+      </div>
+      </form>
+
+      <div class="card" id="out">
+        <div class="card-h"><span class="n">2</span><h2 id="resHead" tabindex="-1">현재 시각</h2></div>
+        <div class="hero-lbl" id="hero-lbl">대상 도시 현재 시각</div>
+        <div class="res-hero"><span class="big grad" id="r-time">–</span><span class="permo" id="r-city">–</span></div>
+        <div class="hero-sent" id="r-sent"></div>
+        <div class="kpis">
+          <div class="kpi"><div class="l">기준 도시 현재 시각</div><div class="v em" id="r-fromtime">–</div></div>
+          <div class="kpi"><div class="l">시차 (기준 대비)</div><div class="v bl" id="r-diff">–</div></div>
+          <div class="kpi"><div class="l">대상 도시 날짜</div><div class="v" id="r-todate">–</div></div>
+        </div>
+        <div class="brk">
+          <div class="brk-t">양쪽 도시 현재 시각</div>
+          <div class="brk-row"><span id="l-from">기준 도시</span><b id="v-from">–</b></div>
+          <div class="brk-row"><span id="l-to">대상 도시</span><b id="v-to">–</b></div>
+          <div class="brk-row total"><span>시차</span><b id="v-diff">–</b></div>
+        </div>
+      </div>
+
+      <div class="cta" id="cta" style="display:none">
+        <h3>✈️ 여행·출장 도구를 가장 먼저 받아보고 싶다면</h3>
+        <p>세계 시차·환율·해외 미팅 시간 정리 등 여행에 바로 쓰는 <b>무료 도구</b> 소식을 여행 도구 뉴스레터로 보내드려요. 새 도구가 나오면 가장 먼저 안내드립니다.</p>
+        <div class="emailrow">
+          <input id="email" type="email" placeholder="이메일 주소" aria-label="이메일 주소">
+          <button type="button" onclick="subscribe()">무료 도구 소식 받기</button>
+        </div>
+        <div class="fine" id="cta-msg" aria-live="polite">스팸 없이 여행 도구 뉴스레터만. 언제든 해지할 수 있어요.</div>
+      </div>
+
+      <div class="content">
+        <h2>세계 시차란?</h2>
+        <p><b>시차</b>는 두 도시의 UTC(세계 표준시) 기준 <b>오프셋 차이</b>입니다. 서울은 UTC+9로 사계절 고정이지만, 뉴욕·런던·파리처럼 <b>서머타임(DST)</b>을 쓰는 도시는 계절에 따라 오프셋이 바뀌어 시차도 달라집니다.</p>
+        <h2>서머타임(DST)은 자동으로 반영되나요?</h2>
+        <p>네. 이 계산기는 브라우저의 국제화(Intl) API와 각 도시의 <b>IANA 타임존</b>(예: <code>America/New_York</code>)을 사용합니다. 대상 지역이 서머타임 기간이면 오프셋과 시차가 <b>자동으로 조정</b>되므로 별도 설정이 필요 없습니다.</p>
+        <ul>
+          <li><b>서울</b> — UTC+9 (서머타임 없음)</li>
+          <li><b>뉴욕·시카고·LA</b> — 서머타임 시행(3~11월 오프셋 +1시간)</li>
+          <li><b>런던·파리</b> — 서머타임 시행</li>
+          <li><b>도쿄·베이징·방콕·두바이·델리</b> — 서머타임 없음</li>
+          <li><b>시드니</b> — 남반구라 서머타임 시기가 반대(10~4월)</li>
+        </ul>
+        <h2>자주 묻는 질문</h2>
+        <h3>시차는 어떻게 계산되나요?</h3>
+        <p>동일한 순간에 각 도시가 표시하는 현지 시각의 차이를 비교합니다. 기준 도시보다 대상 도시가 <b>빠르면 +</b>, <b>느리면 -</b>로 표시하며, 인도(+30분)처럼 30분 단위 시차도 정확히 반영합니다.</p>
+        <h3>표시 시각이 실제와 다를 수 있나요?</h3>
+        <p>현재 시각은 <b>사용자 기기의 시계</b>를 기준으로 계산합니다. 기기 시간이 어긋나 있으면 결과도 함께 어긋날 수 있으니, 정확한 시각이 필요하면 기기 시간을 자동 동기화로 맞춰주세요.</p>
+        <h3>해외 미팅 시간은 어떻게 정하나요?</h3>
+        <p>기준 도시를 내가 있는 곳, 대상 도시를 상대방 도시로 두고 시차를 확인한 뒤, 내가 편한 시각에서 시차를 더하거나 빼면 상대방 현지 시각을 알 수 있습니다.</p>
+      </div>
+
+      <p class="disc">참고용 도구입니다. 현재 시각은 사용자 기기의 시계와 브라우저 국제화(Intl) API의 타임존 규칙을 기반으로 계산하며, 예정된 서머타임 정책 변경이나 기기 시간 오차에 따라 실제와 다를 수 있습니다. 입력값은 서버로 전송되지 않고 브라우저에서만 계산됩니다.</p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style is:global>
+.dpc{--grad:linear-gradient(135deg,#34d399,#22d3ee);--radius:18px;
+  --surface:#ffffff;--surface2:#f4f7fb;--line:#e5eaf1;--line2:#d4dce7;
+  --text:#0f1a2b;--mut:#48566b;--dim:#6a7889;--emerald:#0c9c6b;--teal:#0d7d9c;--rose:#e11d63;
+  --gradtext:linear-gradient(135deg,#0aa06e,#0d86a6);
+  --shadow:0 10px 30px -14px rgba(20,45,90,.16);--panelborder:#e6ecf3;
+  --panel:radial-gradient(700px 400px at 12% -8%,rgba(52,211,153,.07),transparent 60%),radial-gradient(600px 400px at 100% 0%,rgba(34,211,238,.06),transparent 55%),linear-gradient(180deg,#f8fbfe,#eef3f9);
+  max-width:920px;margin:26px auto;padding:28px 22px 32px;border-radius:24px;border:1px solid var(--panelborder);
+  background:var(--panel);color:var(--text);
+  font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.55;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
+html.dark .dpc{--surface:#121c2e;--surface2:#0e1626;--line:#1f2c42;--line2:#2a3a56;
+  --text:#eef2f8;--mut:#9fb0c6;--dim:#8b97ac;--emerald:#34d399;--teal:#22d3ee;--rose:#fb7185;
+  --gradtext:linear-gradient(135deg,#34d399,#22d3ee);
+  --shadow:0 12px 40px -12px rgba(0,0,0,.55);--panelborder:#17233a;
+  --panel:radial-gradient(700px 400px at 12% -8%,rgba(52,211,153,.10),transparent 60%),radial-gradient(600px 400px at 100% 0%,rgba(34,211,238,.08),transparent 55%),linear-gradient(180deg,#0d1524,#0a0f1a)}
+.dpc *{box-sizing:border-box;margin:0;padding:0}
+.dpc .wrap{max-width:100%;margin:0 auto}
+.dpc .eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--emerald);background:rgba(52,211,153,.10);border:1px solid rgba(52,211,153,.22);padding:5px 12px;border-radius:999px;margin-bottom:16px}
+.dpc .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.2)}
+.dpc h1{font-size:clamp(26px,5vw,38px);font-weight:800;line-height:1.12;letter-spacing:-.03em;color:var(--text)}
+.dpc .grad{background:var(--gradtext);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.dpc .sub{color:var(--mut);font-size:16px;margin:12px 0 26px;max-width:640px}
+.dpc .card{background:linear-gradient(180deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:18px;box-shadow:var(--shadow)}
+.dpc .card-h{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.dpc .card-h .n{width:26px;height:26px;border-radius:8px;background:rgba(52,211,153,.12);color:var(--emerald);display:grid;place-items:center;font-size:13px;font-weight:700}
+.dpc .card-h h2{font-size:16.5px;font-weight:700;letter-spacing:-.02em;color:var(--text)}
+.dpc .frow{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.dpc .fld{position:relative}
+.dpc .fld .cap{display:block;font-size:12px;color:var(--mut);font-weight:600;margin-bottom:5px}
+.dpc .fld input{width:100%;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:11px 12px;color:var(--text);font-size:15px;font-family:inherit;transition:border-color .15s,box-shadow .15s}
+.dpc .fld input::placeholder{color:var(--dim)}
+.dpc .fld input:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.14)}
+.dpc .strat{display:flex;margin-top:6px}
+.dpc .go{margin-left:auto;background:var(--grad);color:#04121b;border:none;border-radius:12px;padding:12px 26px;font-weight:800;font-size:15px;font-family:inherit;cursor:pointer;box-shadow:0 8px 22px -8px rgba(52,211,153,.6);transition:transform .12s,filter .15s}
+.dpc .go:hover{filter:brightness(1.05)}.dpc .go:active{transform:translateY(1px)}
+.dpc .tip{font-size:13px;color:var(--mut);margin-top:14px;line-height:1.5}
+.dpc .tip b{color:var(--text)}
+.dpc button:focus-visible,.dpc input:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.dpc #out{display:none}
+.dpc .hero-lbl{font-size:13px;color:var(--mut);font-weight:600;margin:2px 0}
+.dpc .res-hero{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;padding:0 2px 4px;background:none;border-radius:0;text-align:left;margin:0}
+.dpc .res-hero .big{font-size:clamp(30px,7vw,46px);font-weight:800;letter-spacing:-.03em}
+.dpc .permo{font-size:16px;color:var(--mut);font-weight:600}
+.dpc .hero-sent{font-size:15px;color:var(--mut);margin:2px 2px 18px}
+.dpc .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.dpc .kpi{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:15px 16px}
+.dpc .kpi .l{font-size:12.5px;color:var(--mut);font-weight:600}
+.dpc .kpi .v{font-size:20px;font-weight:800;margin-top:5px;letter-spacing:-.02em;color:var(--text)}
+.dpc .v.em{color:var(--emerald)}.dpc .v.bl{color:var(--teal)}
+.dpc .barwrap{margin-top:18px}
+.dpc .stackbar{display:flex;height:30px;border-radius:9px;overflow:hidden;border:1px solid var(--line);background:var(--surface2)}
+.dpc .stackbar .seg{height:100%}
+.dpc .stackbar .seg.net{background:linear-gradient(90deg,#34d399,#22d3ee)}
+.dpc .stackbar .seg.ded{background:repeating-linear-gradient(45deg,var(--line2),var(--line2) 6px,var(--surface2) 6px,var(--surface2) 12px)}
+.dpc .barleg{display:flex;gap:16px;font-size:12.5px;color:var(--mut);margin-top:8px}
+.dpc .barleg i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:middle}
+.dpc .barleg i.net{background:#22d3ee}.dpc .barleg i.ded{background:var(--line2)}
+.dpc .barleg b{color:var(--text)}
+.dpc .brk{margin-top:18px;border-top:1px solid var(--line);padding-top:14px}
+.dpc .brk-t{font-size:13px;color:var(--mut);font-weight:700;margin-bottom:8px}
+.dpc .brk-row{display:flex;justify-content:space-between;align-items:center;padding:8px 2px;font-size:14.5px;border-bottom:1px solid var(--line)}
+.dpc .brk-row span{color:var(--text)}
+.dpc .brk-row em{font-style:normal;font-size:12px;color:var(--dim);margin-left:6px}
+.dpc .brk-row b{color:var(--text);font-weight:700}
+.dpc .brk-row.total{border-bottom:none;margin-top:4px;font-weight:800}
+.dpc .brk-row.total span,.dpc .brk-row.total b{color:var(--rose);font-size:15.5px}
+.dpc .cta{background:linear-gradient(135deg,#0f2740,#12233a);border:1px solid #274563;border-radius:var(--radius);padding:24px;position:relative;overflow:hidden;margin-bottom:18px}
+.dpc .cta::before{content:"";position:absolute;inset:0;background:radial-gradient(400px 160px at 90% 0%,rgba(34,211,238,.14),transparent 70%);pointer-events:none}
+.dpc .cta h3{font-size:19px;font-weight:800;letter-spacing:-.02em;margin-bottom:7px;position:relative;color:#f2f7fb}
+.dpc .cta p{color:#aabdd0;font-size:14px;margin-bottom:14px;max-width:580px;position:relative}
+.dpc .cta .fine{color:#8097ad}
+.dpc .emailrow{display:flex;gap:9px;flex-wrap:wrap;position:relative}
+.dpc .cta .emailrow input{flex:1;min-width:220px;background:#0d1b2c;border:1px solid #26445f;border-radius:12px;padding:12px 14px;color:#eef2f8;font-size:14.5px;font-family:inherit}
+.dpc .cta .emailrow input::placeholder{color:#7089a0}
+.dpc .emailrow button{background:var(--grad);color:#04121b;border:none;border-radius:12px;padding:12px 22px;font-weight:800;font-size:14.5px;font-family:inherit;cursor:pointer;transition:.15s}
+.dpc .emailrow button:hover{filter:brightness(1.05)}
+.dpc .fine{font-size:11.5px;margin-top:10px;position:relative}
+.dpc .content{color:var(--mut);font-size:15px}
+.dpc .content h2{font-size:19px;color:var(--text);font-weight:800;letter-spacing:-.02em;margin:26px 0 10px}
+.dpc .content h3{font-size:15.5px;color:var(--text);font-weight:700;margin:16px 0 4px}
+.dpc .content p{margin-bottom:8px}
+.dpc .content ul{margin:6px 0 6px 18px}.dpc .content li{margin-bottom:5px}
+.dpc .content code{background:var(--surface2);border:1px solid var(--line);border-radius:5px;padding:1px 6px;font-size:13px}
+.dpc .disc{font-size:12px;color:var(--dim);margin-top:22px;line-height:1.6}
+@media(max-width:600px){
+  .dpc{padding:20px 14px 24px;margin:16px auto;border-radius:18px}
+  .dpc .frow{grid-template-columns:1fr}
+  .dpc .kpis{grid-template-columns:1fr}
+  .dpc .go{width:100%}
+}
+/* tool-specific */
+.dpc .fld select{width:100%;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:11px 12px;color:var(--text);font-size:15px;font-family:inherit;transition:border-color .15s,box-shadow .15s;-webkit-appearance:none;appearance:none;cursor:pointer;background-image:linear-gradient(45deg,transparent 50%,var(--mut) 50%),linear-gradient(135deg,var(--mut) 50%,transparent 50%);background-position:calc(100% - 18px) calc(50% - 2px),calc(100% - 13px) calc(50% - 2px);background-size:5px 5px,5px 5px;background-repeat:no-repeat}
+.dpc .fld select:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.14)}
+</style>
+
+<script is:inline>
+// UTC 오프셋(분) — 두 존의 동일 순간 로컬시각 차이로 계산 (DST 자동반영)
+function offMin(tz, date){
+  const loc = new Date(date.toLocaleString('en-US', { timeZone: tz }));
+  const utc = new Date(date.toLocaleString('en-US', { timeZone: 'UTC' }));
+  return Math.round((loc - utc) / 60000);
+}
+function fmtClock(tz, date){ // HH:MM:SS (24h)
+  return new Intl.DateTimeFormat('ko-KR', { timeZone: tz, hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false }).format(date);
+}
+function fmtClock12(tz, date){ // 오전/오후 h:mm
+  return new Intl.DateTimeFormat('ko-KR', { timeZone: tz, hour: 'numeric', minute: '2-digit', hour12: true }).format(date);
+}
+function fmtDate(tz, date){ // 2026년 7월 24일 (금)
+  return new Intl.DateTimeFormat('ko-KR', { timeZone: tz, year: 'numeric', month: 'long', day: 'numeric', weekday: 'short' }).format(date);
+}
+function fmtDateShort(tz, date){ // 7월 24일 (금)
+  return new Intl.DateTimeFormat('ko-KR', { timeZone: tz, month: 'long', day: 'numeric', weekday: 'short' }).format(date);
+}
+function diffText(min){
+  const a = Math.abs(min); const h = Math.floor(a / 60); const m = a % 60;
+  let s = h + '시간'; if(m) s += ' ' + m + '분'; return s;
+}
+let _timer = null;
+function calc(scroll){
+  const fromSel = document.getElementById('from');
+  const toSel = document.getElementById('to');
+  const fromTz = fromSel.value, toTz = toSel.value;
+  const fromName = fromSel.selectedOptions[0].text;
+  const toName = toSel.selectedOptions[0].text;
+  const now = new Date();
+  const diff = offMin(toTz, now) - offMin(fromTz, now); // 대상 - 기준 (분)
+
+  document.getElementById('out').style.display = 'block';
+  document.getElementById('cta').style.display = 'block';
+
+  // Big: 대상 도시 현재 시각
+  document.getElementById('hero-lbl').textContent = toName + ' 현재 시각';
+  document.getElementById('r-time').textContent = fmtClock(toTz, now);
+  document.getElementById('r-city').textContent = '/ ' + toName;
+
+  // 문장
+  let rel;
+  if(diff > 0) rel = fromName + '보다 ' + diffText(diff) + ' 빠릅니다';
+  else if(diff < 0) rel = fromName + '보다 ' + diffText(diff) + ' 느립니다';
+  else rel = fromName + '과(와) 시차가 없습니다';
+  document.getElementById('r-sent').textContent =
+    toName + '은(는) 지금 ' + fmtDate(toTz, now) + ' ' + fmtClock12(toTz, now) + ', ' + rel + '.';
+
+  // KPIs
+  document.getElementById('r-fromtime').textContent = fmtClock(fromTz, now);
+  const sign = diff > 0 ? '+' : (diff < 0 ? '-' : '');
+  document.getElementById('r-diff').textContent = diff === 0 ? '동일 (시차 없음)' : sign + diffText(diff);
+  document.getElementById('r-todate').textContent = fmtDateShort(toTz, now);
+
+  // 상세
+  document.getElementById('l-from').textContent = fromName + ' (기준)';
+  document.getElementById('l-to').textContent = toName + ' (대상)';
+  document.getElementById('v-from').textContent = fmtDate(fromTz, now) + ' ' + fmtClock(fromTz, now);
+  document.getElementById('v-to').textContent = fmtDate(toTz, now) + ' ' + fmtClock(toTz, now);
+  document.getElementById('v-diff').textContent = diff === 0 ? '시차 없음' : sign + diffText(diff);
+
+  if(scroll){
+    const h = document.getElementById('resHead');
+    h.focus();
+    document.getElementById('out').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+function subscribe(){
+  const e = document.getElementById('email').value.trim();
+  const msg = document.getElementById('cta-msg');
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)){ msg.textContent = '올바른 이메일 주소를 입력해 주세요.'; msg.style.color = '#fb7185'; return; }
+  try{ fetch('https://xyprbsmagtlzebxyxsvj.supabase.co/functions/v1/analytics-ingest', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ event_type: 'newsletter_subscribe', source: 'lifeflow', metadata: { email: e, campaign: 'timezone-calculator', page: location.pathname, subscribed_at: new Date().toISOString() } }) }).catch(() => {}); }catch(_){}
+  msg.textContent = '감사합니다! 여행 도구 뉴스레터를 보내드릴게요.'; msg.style.color = '#34d399';
+  try{ localStorage.setItem('newsletter-subscribed', 'true'); }catch(_){}
+  document.getElementById('email').value = '';
+}
+document.getElementById('from').addEventListener('change', () => calc(false));
+document.getElementById('to').addEventListener('change', () => calc(false));
+calc(false);
+// 1초마다 시계 갱신 (스크롤/포커스 없이)
+_timer = setInterval(() => calc(false), 1000);
+</script>

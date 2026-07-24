@@ -15,7 +15,7 @@ const faqLd = {
   '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
     { '@type': 'Question', name: '주택용 전기요금 누진제는 몇 단계인가요?', acceptedAnswer: { '@type': 'Answer', text: '주택용 저압 전기요금은 3단계 누진제입니다. 사용량이 많아질수록 높은 단가가 적용되며, 그 밖의 계절 기준 1구간(0~200kWh) 120.0원, 2구간(201~400kWh) 214.6원, 3구간(400kWh 초과) 307.3원입니다.' } },
     { '@type': 'Question', name: '여름철에는 누진 구간이 완화되나요?', acceptedAnswer: { '@type': 'Answer', text: '네. 냉방 사용이 많은 7~8월에는 누진 구간이 상향 조정됩니다. 1구간이 0~300kWh, 2구간이 301~450kWh, 3구간이 450kWh 초과로 넓어져 같은 사용량이라도 요금이 낮아집니다.' } },
-    { '@type': 'Question', name: '전기요금에는 어떤 항목이 포함되나요?', acceptedAnswer: { '@type': 'Answer', text: '기본요금과 사용량에 따른 전력량요금에 더해 기후환경요금, 연료비조정액이 붙어 전기요금계가 됩니다. 여기에 부가가치세 10%와 전력산업기반기금 3.7%를 더한 뒤 10원 미만을 절사한 금액이 청구액입니다.' } },
+    { '@type': 'Question', name: '전기요금에는 어떤 항목이 포함되나요?', acceptedAnswer: { '@type': 'Answer', text: '기본요금과 사용량에 따른 전력량요금에 더해 기후환경요금, 연료비조정액이 붙어 전기요금계가 됩니다. 여기에 부가가치세 10%와 전력산업기반기금 2.7%를 더한 뒤 10원 미만을 절사한 금액이 청구액입니다.' } },
     { '@type': 'Question', name: '실제 고지서와 금액이 다를 수 있나요?', acceptedAnswer: { '@type': 'Answer', text: '네. 이 계산기는 2024년 요율을 기준으로 한 예상치이며, 실제 청구는 검침일 기준 일할 계산·복지할인·계약종별(고압/누진 완화 등)에 따라 달라집니다.' } },
   ],
 };
@@ -73,7 +73,7 @@ const faqLd = {
           <div class="brk-row"><span>기후환경요금 <em>9.0원/kWh</em></span><b id="d-climate">–</b></div>
           <div class="brk-row"><span>연료비조정액 <em>5.0원/kWh</em></span><b id="d-fuel">–</b></div>
           <div class="brk-row"><span>부가가치세 <em>전기요금계의 10%</em></span><b id="d-vat">–</b></div>
-          <div class="brk-row"><span>전력산업기반기금 <em>전기요금계의 3.7%</em></span><b id="d-fund">–</b></div>
+          <div class="brk-row"><span>전력산업기반기금 <em>전기요금계의 2.7%</em></span><b id="d-fund">–</b></div>
           <div class="brk-row total"><span>청구금액 (10원 미만 절사)</span><b id="d-total">–</b></div>
         </div>
       </div>
@@ -90,7 +90,7 @@ const faqLd = {
 
       <div class="content">
         <h2>주택용 전기요금은 어떻게 계산되나요?</h2>
-        <p>주택용 저압 전기요금은 <b>기본요금 + 전력량요금 + 기후환경요금 + 연료비조정액</b>으로 전기요금계를 구한 뒤, 여기에 <b>부가가치세(10%)</b>와 <b>전력산업기반기금(3.7%)</b>을 더하고 10원 미만을 절사해 청구합니다.</p>
+        <p>주택용 저압 전기요금은 <b>기본요금 + 전력량요금 + 기후환경요금 + 연료비조정액</b>으로 전기요금계를 구한 뒤, 여기에 <b>부가가치세(10%)</b>와 <b>전력산업기반기금(2.7%)</b>을 더하고 10원 미만을 절사해 청구합니다.</p>
         <h2>2024년 주택용 저압 누진 단가</h2>
         <ul>
           <li><b>1구간</b> — 120.0원/kWh (그 밖의 계절 0~200kWh, 여름철 0~300kWh)</li>
@@ -213,7 +213,7 @@ function fmtInput(el){const raw=el.value.replace(/[^0-9]/g,'');el.value=raw?pars
 // 2024 한전 주택용 저압 (예상)
 const UNIT=[120.0,214.6,307.3];      // 누진 3구간 단가(원/kWh)
 const CLIMATE=9.0, FUEL=5.0;         // 기후환경요금·연료비조정액(원/kWh)
-const VAT=0.10, FUND=0.037;          // 부가세·전력산업기반기금
+const VAT=0.10, FUND=0.027;          // 부가세·전력산업기반기금
 let SEASON='normal';
 function setSeason(v){
   SEASON=v;

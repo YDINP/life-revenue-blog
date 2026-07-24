@@ -1,0 +1,297 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = '단위 변환기 (길이·무게·넓이·부피·온도)';
+const description = '평↔㎡, 인치↔cm, kg↔lb, 섭씨↔화씨까지 한 번에. 길이·무게·넓이·부피·온도 단위를 즉시 변환하는 무료 도구입니다. 설치 불필요, 브라우저에서 바로 계산합니다.';
+const ogImage = '/og/unit-converter.png';
+
+const appLd = {
+  '@context': 'https://schema.org', '@type': 'WebApplication',
+  name: '단위 변환기', applicationCategory: 'UtilitiesApplication', operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'KRW' },
+  description: '길이·무게·넓이·부피·온도 단위를 실시간으로 변환하는 무료 도구. 평↔㎡, 인치↔cm, kg↔lb, ℃↔℉ 등을 지원합니다.',
+};
+const faqLd = {
+  '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+    { '@type': 'Question', name: '1평은 몇 제곱미터(㎡)인가요?', acceptedAnswer: { '@type': 'Answer', text: '1평은 약 3.306㎡입니다. 반대로 1㎡는 약 0.3025평입니다. 아파트 전용면적 84㎡는 약 25.4평입니다.' } },
+    { '@type': 'Question', name: '1인치는 몇 cm인가요?', acceptedAnswer: { '@type': 'Answer', text: '1인치(inch)는 정확히 2.54cm입니다. 1피트(ft)는 12인치로 약 30.48cm입니다.' } },
+    { '@type': 'Question', name: '섭씨를 화씨로 어떻게 바꾸나요?', acceptedAnswer: { '@type': 'Answer', text: '℉ = ℃ × 9/5 + 32 로 계산합니다. 예를 들어 0℃는 32℉, 100℃는 212℉, 36.5℃는 약 97.7℉입니다.' } },
+    { '@type': 'Question', name: 'kg과 파운드(lb)의 관계는요?', acceptedAnswer: { '@type': 'Answer', text: '1kg은 약 2.2046파운드(lb)이고, 1파운드는 약 0.4536kg입니다. 1온스(oz)는 약 28.35g입니다.' } },
+  ],
+};
+---
+<BaseLayout title={title} description={description} image={ogImage} ogType="website">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(appLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+  </Fragment>
+
+  <div class="dpc">
+    <div class="wrap">
+      <span class="eyebrow"><span class="dot"></span>길이·무게·넓이·부피·온도 · 무료 · 설치 불필요</span>
+      <h1>단위 변환기 <span class="grad">올인원</span></h1>
+      <p class="sub">평↔㎡, 인치↔cm, kg↔lb, 섭씨↔화씨까지. 카테고리를 고르고 값을 넣으면 <b>원하는 단위로 즉시 변환</b>됩니다.</p>
+
+      <form id="calcForm" onsubmit="event.preventDefault();calc(true)">
+      <div class="card">
+        <div class="card-h"><span class="n">1</span><h2>변환할 값 입력</h2></div>
+        <div class="frow">
+          <div class="fld"><span class="cap">카테고리</span>
+            <select id="cat" aria-label="변환 카테고리" onchange="onCat()">
+              <option value="길이">길이</option>
+              <option value="무게">무게</option>
+              <option value="넓이">넓이</option>
+              <option value="부피">부피</option>
+              <option value="온도">온도</option>
+            </select>
+          </div>
+          <div class="fld"><span class="cap">입력값</span><input id="val" type="number" step="any" aria-label="변환할 값" value="1" oninput="calc(false)"></div>
+        </div>
+        <div class="frow">
+          <div class="fld"><span class="cap">원래 단위</span><select id="from" aria-label="원래 단위" onchange="calc(false)"></select></div>
+          <div class="fld"><span class="cap">대상 단위</span><select id="to" aria-label="대상 단위" onchange="calc(false)"></select></div>
+        </div>
+        <div class="strat">
+          <button type="button" class="swap" onclick="swapUnits()">⇄ 단위 바꾸기</button>
+          <button type="submit" class="go">변환하기</button>
+        </div>
+        <p class="tip">카테고리를 바꾸면 단위 목록이 자동으로 갱신됩니다. <b>온도</b>는 비례가 아니라 공식(℃×9/5+32 등)으로 변환합니다. 값은 서버로 전송되지 않고 <b>브라우저에서만</b> 계산됩니다.</p>
+      </div>
+      </form>
+
+      <div class="card" id="out">
+        <div class="card-h"><span class="n">2</span><h2 id="resHead" tabindex="-1">변환 결과</h2></div>
+        <div class="hero-lbl">변환값 (예상)</div>
+        <div class="res-hero"><span class="big grad" id="r-out">–</span><span class="permo" id="r-unit"></span></div>
+        <div class="hero-sent" id="r-sent"></div>
+        <div class="kpis">
+          <div class="kpi"><div class="l">단위 관계 (1 기준)</div><div class="v em" id="r-rate">–</div></div>
+          <div class="kpi"><div class="l">역변환 (1 기준)</div><div class="v" id="r-inv">–</div></div>
+          <div class="kpi"><div class="l">카테고리</div><div class="v bl" id="r-cat">–</div></div>
+        </div>
+        <div class="brk">
+          <div class="brk-t">전체 단위로 변환</div>
+          <div id="brkrows"></div>
+        </div>
+      </div>
+
+      <div class="cta" id="cta" style="display:none">
+        <h3>💡 생활 계산·변환 도구를 더 받아보고 싶다면</h3>
+        <p>단위 변환, 평수 계산, 대출·전세 계산까지 — 실생활에 바로 쓰는 <b>무료 도구 모음</b>과 새 도구 소식을 <b>생활 도구 뉴스레터</b>로 보내드려요.</p>
+        <div class="emailrow">
+          <input id="email" type="email" placeholder="이메일 주소" aria-label="이메일 주소">
+          <button type="button" onclick="subscribe()">뉴스레터 받기</button>
+        </div>
+        <div class="fine" id="cta-msg" aria-live="polite">스팸 없이 생활 도구 소식만. 언제든 해지할 수 있어요.</div>
+      </div>
+
+      <div class="content">
+        <h2>단위 변환기란?</h2>
+        <p>길이·무게·넓이·부피·온도처럼 서로 다른 단위로 표시된 값을 <b>원하는 단위로 바꿔주는 도구</b>입니다. 각 단위를 국제 표준(SI) 기준값으로 환산한 뒤 대상 단위로 다시 나눠 계산하며, 온도는 비례가 성립하지 않아 별도 공식을 씁니다.</p>
+        <h2>자주 쓰는 변환</h2>
+        <ul>
+          <li><b>넓이</b> — 1평 = 약 3.306㎡, 1㎡ = 약 0.3025평 (전용 84㎡ ≈ 25.4평)</li>
+          <li><b>길이</b> — 1인치 = 2.54cm, 1피트 = 30.48cm, 1마일 = 약 1.609km</li>
+          <li><b>무게</b> — 1kg = 약 2.205lb, 1lb = 약 0.4536kg, 1oz = 약 28.35g</li>
+          <li><b>온도</b> — ℉ = ℃ × 9/5 + 32, K = ℃ + 273.15</li>
+        </ul>
+        <h2>자주 묻는 질문</h2>
+        <h3>1평은 몇 ㎡인가요?</h3>
+        <p>1평은 약 <b>3.306㎡</b>입니다. 반대로 1㎡는 약 0.3025평입니다. 부동산 전용면적을 평으로 가늠할 때 유용합니다.</p>
+        <h3>인치와 cm는 어떻게 바꾸나요?</h3>
+        <p>1인치(inch)는 정확히 <b>2.54cm</b>입니다. 모니터·TV 인치나 해외 사이즈 표기를 변환할 때 자주 쓰입니다.</p>
+        <h3>결과가 아주 크거나 작으면요?</h3>
+        <p>값이 매우 크거나 작을 때는 자릿수 손실을 줄이기 위해 <b>지수 표기(예: 1.234e-5)</b>로 표시합니다. 표시된 숫자는 반올림된 <b>예상값</b>이므로 정밀 계산에는 원본 공식을 확인하세요.</p>
+      </div>
+
+      <p class="disc">참고용 변환 도구입니다. 표시되는 값은 표준 환산 계수로 계산한 예상값이며 자리 반올림으로 미세한 오차가 있을 수 있습니다. 입력값은 서버로 전송되지 않고 브라우저에서만 계산됩니다.</p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style is:global>
+.dpc{--grad:linear-gradient(135deg,#34d399,#22d3ee);--radius:18px;
+  --surface:#ffffff;--surface2:#f4f7fb;--line:#e5eaf1;--line2:#d4dce7;
+  --text:#0f1a2b;--mut:#48566b;--dim:#6a7889;--emerald:#0c9c6b;--teal:#0d7d9c;--rose:#e11d63;
+  --gradtext:linear-gradient(135deg,#0aa06e,#0d86a6);
+  --shadow:0 10px 30px -14px rgba(20,45,90,.16);--panelborder:#e6ecf3;
+  --panel:radial-gradient(700px 400px at 12% -8%,rgba(52,211,153,.07),transparent 60%),radial-gradient(600px 400px at 100% 0%,rgba(34,211,238,.06),transparent 55%),linear-gradient(180deg,#f8fbfe,#eef3f9);
+  max-width:920px;margin:26px auto;padding:28px 22px 32px;border-radius:24px;border:1px solid var(--panelborder);
+  background:var(--panel);color:var(--text);
+  font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.55;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
+html.dark .dpc{--surface:#121c2e;--surface2:#0e1626;--line:#1f2c42;--line2:#2a3a56;
+  --text:#eef2f8;--mut:#9fb0c6;--dim:#8b97ac;--emerald:#34d399;--teal:#22d3ee;--rose:#fb7185;
+  --gradtext:linear-gradient(135deg,#34d399,#22d3ee);
+  --shadow:0 12px 40px -12px rgba(0,0,0,.55);--panelborder:#17233a;
+  --panel:radial-gradient(700px 400px at 12% -8%,rgba(52,211,153,.10),transparent 60%),radial-gradient(600px 400px at 100% 0%,rgba(34,211,238,.08),transparent 55%),linear-gradient(180deg,#0d1524,#0a0f1a)}
+.dpc *{box-sizing:border-box;margin:0;padding:0}
+.dpc .wrap{max-width:100%;margin:0 auto}
+.dpc .eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--emerald);background:rgba(52,211,153,.10);border:1px solid rgba(52,211,153,.22);padding:5px 12px;border-radius:999px;margin-bottom:16px}
+.dpc .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.2)}
+.dpc h1{font-size:clamp(26px,5vw,38px);font-weight:800;line-height:1.12;letter-spacing:-.03em;color:var(--text)}
+.dpc .grad{background:var(--gradtext);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.dpc .sub{color:var(--mut);font-size:16px;margin:12px 0 26px;max-width:640px}
+.dpc .card{background:linear-gradient(180deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:18px;box-shadow:var(--shadow)}
+.dpc .card-h{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.dpc .card-h .n{width:26px;height:26px;border-radius:8px;background:rgba(52,211,153,.12);color:var(--emerald);display:grid;place-items:center;font-size:13px;font-weight:700}
+.dpc .card-h h2{font-size:16.5px;font-weight:700;letter-spacing:-.02em;color:var(--text)}
+.dpc .frow{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.dpc .fld{position:relative}
+.dpc .fld .cap{display:block;font-size:12px;color:var(--mut);font-weight:600;margin-bottom:5px}
+.dpc .fld input{width:100%;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:11px 12px;color:var(--text);font-size:15px;font-family:inherit;transition:border-color .15s,box-shadow .15s}
+.dpc .fld input::placeholder{color:var(--dim)}
+.dpc .fld input:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.14)}
+.dpc .strat{display:flex;margin-top:6px}
+.dpc .go{margin-left:auto;background:var(--grad);color:#04121b;border:none;border-radius:12px;padding:12px 26px;font-weight:800;font-size:15px;font-family:inherit;cursor:pointer;box-shadow:0 8px 22px -8px rgba(52,211,153,.6);transition:transform .12s,filter .15s}
+.dpc .go:hover{filter:brightness(1.05)}.dpc .go:active{transform:translateY(1px)}
+.dpc .tip{font-size:13px;color:var(--mut);margin-top:14px;line-height:1.5}
+.dpc .tip b{color:var(--text)}
+.dpc button:focus-visible,.dpc input:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.dpc #out{display:none}
+.dpc .hero-lbl{font-size:13px;color:var(--mut);font-weight:600;margin:2px 0}
+.dpc .res-hero{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;padding:0 2px 4px;background:none;border-radius:0;text-align:left;margin:0}
+.dpc .res-hero .big{font-size:clamp(30px,7vw,46px);font-weight:800;letter-spacing:-.03em}
+.dpc .permo{font-size:16px;color:var(--mut);font-weight:600}
+.dpc .hero-sent{font-size:15px;color:var(--mut);margin:2px 2px 18px}
+.dpc .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.dpc .kpi{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:15px 16px}
+.dpc .kpi .l{font-size:12.5px;color:var(--mut);font-weight:600}
+.dpc .kpi .v{font-size:20px;font-weight:800;margin-top:5px;letter-spacing:-.02em;color:var(--text)}
+.dpc .v.em{color:var(--emerald)}.dpc .v.bl{color:var(--teal)}
+.dpc .barwrap{margin-top:18px}
+.dpc .stackbar{display:flex;height:30px;border-radius:9px;overflow:hidden;border:1px solid var(--line);background:var(--surface2)}
+.dpc .stackbar .seg{height:100%}
+.dpc .stackbar .seg.net{background:linear-gradient(90deg,#34d399,#22d3ee)}
+.dpc .stackbar .seg.ded{background:repeating-linear-gradient(45deg,var(--line2),var(--line2) 6px,var(--surface2) 6px,var(--surface2) 12px)}
+.dpc .barleg{display:flex;gap:16px;font-size:12.5px;color:var(--mut);margin-top:8px}
+.dpc .barleg i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:middle}
+.dpc .barleg i.net{background:#22d3ee}.dpc .barleg i.ded{background:var(--line2)}
+.dpc .barleg b{color:var(--text)}
+.dpc .brk{margin-top:18px;border-top:1px solid var(--line);padding-top:14px}
+.dpc .brk-t{font-size:13px;color:var(--mut);font-weight:700;margin-bottom:8px}
+.dpc .brk-row{display:flex;justify-content:space-between;align-items:center;padding:8px 2px;font-size:14.5px;border-bottom:1px solid var(--line)}
+.dpc .brk-row span{color:var(--text)}
+.dpc .brk-row em{font-style:normal;font-size:12px;color:var(--dim);margin-left:6px}
+.dpc .brk-row b{color:var(--text);font-weight:700}
+.dpc .brk-row.total{border-bottom:none;margin-top:4px;font-weight:800}
+.dpc .brk-row.total span,.dpc .brk-row.total b{color:var(--rose);font-size:15.5px}
+.dpc .cta{background:linear-gradient(135deg,#0f2740,#12233a);border:1px solid #274563;border-radius:var(--radius);padding:24px;position:relative;overflow:hidden;margin-bottom:18px}
+.dpc .cta::before{content:"";position:absolute;inset:0;background:radial-gradient(400px 160px at 90% 0%,rgba(34,211,238,.14),transparent 70%);pointer-events:none}
+.dpc .cta h3{font-size:19px;font-weight:800;letter-spacing:-.02em;margin-bottom:7px;position:relative;color:#f2f7fb}
+.dpc .cta p{color:#aabdd0;font-size:14px;margin-bottom:14px;max-width:580px;position:relative}
+.dpc .cta .fine{color:#8097ad}
+.dpc .emailrow{display:flex;gap:9px;flex-wrap:wrap;position:relative}
+.dpc .cta .emailrow input{flex:1;min-width:220px;background:#0d1b2c;border:1px solid #26445f;border-radius:12px;padding:12px 14px;color:#eef2f8;font-size:14.5px;font-family:inherit}
+.dpc .cta .emailrow input::placeholder{color:#7089a0}
+.dpc .emailrow button{background:var(--grad);color:#04121b;border:none;border-radius:12px;padding:12px 22px;font-weight:800;font-size:14.5px;font-family:inherit;cursor:pointer;transition:.15s}
+.dpc .emailrow button:hover{filter:brightness(1.05)}
+.dpc .fine{font-size:11.5px;margin-top:10px;position:relative}
+.dpc .content{color:var(--mut);font-size:15px}
+.dpc .content h2{font-size:19px;color:var(--text);font-weight:800;letter-spacing:-.02em;margin:26px 0 10px}
+.dpc .content h3{font-size:15.5px;color:var(--text);font-weight:700;margin:16px 0 4px}
+.dpc .content p{margin-bottom:8px}
+.dpc .content ul{margin:6px 0 6px 18px}.dpc .content li{margin-bottom:5px}
+.dpc .disc{font-size:12px;color:var(--dim);margin-top:22px;line-height:1.6}
+@media(max-width:600px){
+  .dpc{padding:20px 14px 24px;margin:16px auto;border-radius:18px}
+  .dpc .frow{grid-template-columns:1fr}
+  .dpc .kpis{grid-template-columns:1fr}
+  .dpc .go{width:100%}
+}
+/* tool-specific */
+.dpc .fld select{width:100%;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:11px 12px;color:var(--text);font-size:15px;font-family:inherit;transition:border-color .15s,box-shadow .15s;appearance:none;-webkit-appearance:none;cursor:pointer}
+.dpc .fld select:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.14)}
+.dpc .strat{gap:10px}
+.dpc .swap{background:var(--surface2);color:var(--text);border:1px solid var(--line2);border-radius:12px;padding:12px 18px;font-weight:700;font-size:14px;font-family:inherit;cursor:pointer;transition:.15s}
+.dpc .swap:hover{border-color:var(--emerald);color:var(--emerald)}
+.dpc .brk-row.hi span,.dpc .brk-row.hi b{color:var(--emerald)}
+</style>
+
+<script is:inline>
+const UNITS={
+  '길이':{m:1,cm:0.01,mm:0.001,km:1000,inch:0.0254,ft:0.3048,mile:1609.344},
+  '무게':{kg:1,g:0.001,mg:0.000001,ton:1000,lb:0.45359237,oz:0.0283495},
+  '넓이':{'㎡':1,'cm²':0.0001,'km²':1000000,'평':3.3057851,'ha':10000,'ft²':0.092903},
+  '부피':{L:1,mL:0.001,'m³':1000,gal:3.785411784,'ft³':28.316846},
+  '온도':{'℃':1,'℉':1,'K':1}
+};
+const LABEL={
+  m:'미터 (m)',cm:'센티미터 (cm)',mm:'밀리미터 (mm)',km:'킬로미터 (km)',inch:'인치 (inch)',ft:'피트 (ft)',mile:'마일 (mile)',
+  kg:'킬로그램 (kg)',g:'그램 (g)',mg:'밀리그램 (mg)',ton:'톤 (ton)',lb:'파운드 (lb)',oz:'온스 (oz)',
+  '㎡':'제곱미터 (㎡)','cm²':'제곱센티미터 (cm²)','km²':'제곱킬로미터 (km²)','평':'평','ha':'헥타르 (ha)','ft²':'제곱피트 (ft²)',
+  L:'리터 (L)',mL:'밀리리터 (mL)','m³':'세제곱미터 (m³)',gal:'갤런 (gal)','ft³':'세제곱피트 (ft³)',
+  '℃':'섭씨 (℃)','℉':'화씨 (℉)','K':'켈빈 (K)'
+};
+const DEFAULTS={'길이':['inch','cm'],'무게':['kg','lb'],'넓이':['평','㎡'],'부피':['L','gal'],'온도':['℃','℉']};
+
+function fmtNum(n){
+  if(n===undefined||n===null||isNaN(n)||!isFinite(n))return '–';
+  const a=Math.abs(n);
+  if(a!==0&&(a>=1e12||a<1e-4))return n.toExponential(3);
+  let dec;
+  if(a===0)dec=0; else if(a>=1000)dec=2; else if(a>=1)dec=4; else dec=6;
+  return n.toLocaleString('ko-KR',{maximumFractionDigits:dec});
+}
+function convTemp(v,from,to){
+  let c; // to Celsius
+  if(from==='℃')c=v; else if(from==='℉')c=(v-32)*5/9; else c=v-273.15;
+  if(to==='℃')return c; if(to==='℉')return c*9/5+32; return c+273.15;
+}
+function convert(cat,v,from,to){
+  if(cat==='온도')return convTemp(v,from,to);
+  const f=UNITS[cat];
+  return v*f[from]/f[to];
+}
+function fillUnits(){
+  const cat=document.getElementById('cat').value;
+  const keys=Object.keys(UNITS[cat]);
+  const from=document.getElementById('from'),to=document.getElementById('to');
+  from.innerHTML='';to.innerHTML='';
+  keys.forEach(k=>{from.appendChild(new Option(LABEL[k]||k,k));to.appendChild(new Option(LABEL[k]||k,k));});
+  const d=DEFAULTS[cat];from.value=d[0];to.value=d[1];
+}
+function onCat(){fillUnits();calc(false);}
+function swapUnits(){
+  const from=document.getElementById('from'),to=document.getElementById('to');
+  const a=from.value;from.value=to.value;to.value=a;calc(false);
+}
+function calc(scroll){
+  const cat=document.getElementById('cat').value;
+  const from=document.getElementById('from').value;
+  const to=document.getElementById('to').value;
+  const v=parseFloat(document.getElementById('val').value);
+  if(isNaN(v))return;
+  const res=convert(cat,v,from,to);
+  const rate=convert(cat,1,from,to);   // 1 from → to
+  const inv=convert(cat,1,to,from);    // 1 to → from
+  document.getElementById('out').style.display='block';
+  document.getElementById('cta').style.display='block';
+  document.getElementById('r-out').textContent=fmtNum(res);
+  document.getElementById('r-unit').textContent=to;
+  document.getElementById('r-sent').textContent=`${fmtNum(v)} ${from} 은(는) 약 ${fmtNum(res)} ${to} 입니다.`;
+  document.getElementById('r-rate').textContent=`1 ${from} = ${fmtNum(rate)} ${to}`;
+  document.getElementById('r-inv').textContent=`1 ${to} = ${fmtNum(inv)} ${from}`;
+  document.getElementById('r-cat').textContent=cat;
+  // 전체 단위로 변환
+  const keys=Object.keys(UNITS[cat]);
+  let html='';
+  keys.forEach(k=>{
+    const val=convert(cat,v,from,k);
+    const hi=k===to?' hi':'';
+    html+=`<div class="brk-row${hi}"><span>${LABEL[k]||k}</span><b>${fmtNum(val)} ${k}</b></div>`;
+  });
+  document.getElementById('brkrows').innerHTML=html;
+  const h=document.getElementById('resHead');
+  if(scroll){h.focus();document.getElementById('out').scrollIntoView({behavior:'smooth',block:'start'});}
+}
+function subscribe(){
+  const e=document.getElementById('email').value.trim();const msg=document.getElementById('cta-msg');
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)){msg.textContent='올바른 이메일 주소를 입력해 주세요.';msg.style.color='#fb7185';return;}
+  try{fetch('https://xyprbsmagtlzebxyxsvj.supabase.co/functions/v1/analytics-ingest',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({event_type:'newsletter_subscribe',source:'lifeflow',metadata:{email:e,campaign:'unit-converter',page:location.pathname,subscribed_at:new Date().toISOString()}})}).catch(()=>{});}catch(_){}
+  msg.textContent='감사합니다! 생활 도구 뉴스레터를 보내드릴게요.';msg.style.color='#34d399';
+  try{localStorage.setItem('newsletter-subscribed','true');}catch(_){}
+  document.getElementById('email').value='';
+}
+fillUnits();
+calc(false);
+</script>

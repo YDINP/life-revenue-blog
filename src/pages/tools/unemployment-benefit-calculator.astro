@@ -1,0 +1,278 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = '실업급여(구직급여) 계산기 2025';
+const description = '퇴사·실직하면 실업급여 얼마나 받을까? 이직 전 3개월 평균임금과 나이·고용보험 가입기간으로 1일 구직급여, 소정급여일수, 총 예상 수령액을 2025년 상·하한액(66,000·64,192원) 기준으로 바로 계산합니다. 무료·설치 불필요.';
+const ogImage = '/og/unemployment-benefit-calculator.png';
+
+const appLd = {
+  '@context': 'https://schema.org', '@type': 'WebApplication',
+  name: '실업급여(구직급여) 계산기 2025', applicationCategory: 'FinanceApplication', operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'KRW' },
+  description: '이직 전 3개월 평균임금과 나이·고용보험 가입기간으로 구직급여일액·소정급여일수·총 예상 수령액을 계산하는 무료 도구. 2025년 상·하한액 반영.',
+};
+const faqLd = {
+  '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+    { '@type': 'Question', name: '구직급여일액은 어떻게 계산하나요?', acceptedAnswer: { '@type': 'Answer', text: '이직 전 3개월간 1일 평균임금의 60%가 구직급여일액입니다. 1일 평균임금은 (월평균 세전급여×3)÷91.31로 계산합니다.' } },
+    { '@type': 'Question', name: '실업급여 상·하한액은 얼마인가요?', acceptedAnswer: { '@type': 'Answer', text: '2025년 기준 구직급여일액 상한은 1일 66,000원, 하한은 1일 64,192원(최저임금의 80%)입니다. 평균임금의 60%가 이 범위를 벗어나면 상·하한액으로 조정됩니다. 상·하한액은 매년 변동됩니다.' } },
+    { '@type': 'Question', name: '소정급여일수는 어떻게 정해지나요?', acceptedAnswer: { '@type': 'Answer', text: '이직일 기준 나이(50세 미만/이상)와 고용보험 총 가입기간에 따라 120일부터 270일까지 결정됩니다. 가입기간이 길고 50세 이상(또는 장애인)일수록 지급일수가 늘어납니다.' } },
+    { '@type': 'Question', name: '실업급여 수급 요건은 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: '이직 전 18개월 동안 고용보험 피보험 단위기간이 180일 이상이고, 비자발적(경영상 해고·계약만료 등) 이직이며, 근로 의사와 능력이 있음에도 재취업하지 못한 상태에서 적극적으로 구직활동을 해야 합니다. 최종 수급 여부는 고용센터가 판정합니다.' } },
+  ],
+};
+---
+<BaseLayout title={title} description={description} image={ogImage} ogType="website">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(appLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+  </Fragment>
+
+  <div class="dpc">
+    <div class="wrap">
+      <span class="eyebrow"><span class="dot"></span>2025년 상·하한액 기준 · 무료 · 설치 불필요</span>
+      <h1>실업급여(구직급여) <span class="grad">계산기</span></h1>
+      <p class="sub">퇴사·실직하면 구직급여, 얼마나 받을 수 있을까요? 이직 전 3개월 평균임금과 나이·가입기간으로 <b>1일 구직급여·소정급여일수·총 예상 수령액</b>을 바로 계산합니다.</p>
+
+      <form id="calcForm" onsubmit="event.preventDefault();calc(true)">
+      <div class="card">
+        <div class="card-h"><span class="n">1</span><h2>수급 정보 입력</h2></div>
+        <div class="frow one">
+          <div class="fld"><span class="cap">이직 전 3개월 월평균 세전급여 (원)</span><input id="avgpay" inputmode="numeric" aria-label="이직 전 3개월 월평균 세전급여(원)" value="3,000,000" oninput="fmtInput(this)"></div>
+        </div>
+        <div class="frow">
+          <div class="fld">
+            <span class="cap">나이 (이직일 기준)</span>
+            <div class="seg-toggle" id="ageToggle" role="group" aria-label="나이 선택">
+              <button type="button" class="seg-btn active" data-age="under" onclick="setAge('under')">50세 미만</button>
+              <button type="button" class="seg-btn" data-age="over" onclick="setAge('over')">50세 이상 · 장애인</button>
+            </div>
+          </div>
+          <div class="fld"><span class="cap">고용보험 총 가입기간</span>
+            <select id="period" aria-label="고용보험 총 가입기간" onchange="calc(false)">
+              <option value="u1">1년 미만</option>
+              <option value="y1_3">1년 이상 3년 미만</option>
+              <option value="y3_5" selected>3년 이상 5년 미만</option>
+              <option value="y5_10">5년 이상 10년 미만</option>
+              <option value="y10">10년 이상</option>
+            </select>
+          </div>
+        </div>
+        <div class="strat">
+          <button type="submit" class="go">실업급여 계산</button>
+        </div>
+        <p class="tip">월평균 세전급여는 <b>이직 전 3개월간 받은 임금 총액을 기준</b>으로 하며, 상여·수당 등이 포함됩니다. 소정급여일수는 <b>나이와 고용보험 가입기간</b>에 따라 120~270일로 정해지며, 장애인은 50세 이상과 동일하게 적용됩니다.</p>
+      </div>
+      </form>
+
+      <div class="card" id="out">
+        <div class="card-h"><span class="n">2</span><h2 id="resHead" tabindex="-1">예상 수령액</h2></div>
+        <div class="hero-lbl">총 예상 수령액 (예상)</div>
+        <div class="res-hero"><span class="big grad" id="r-total">–</span><span class="permo">/ 소정급여일수 전액</span></div>
+        <div class="hero-sent" id="r-sent"></div>
+        <div class="kpis">
+          <div class="kpi"><div class="l">1일 구직급여</div><div class="v em" id="r-daily">–</div></div>
+          <div class="kpi"><div class="l">소정급여일수</div><div class="v" id="r-days">–</div></div>
+          <div class="kpi"><div class="l">1일 평균임금</div><div class="v bl" id="r-avgday">–</div></div>
+        </div>
+        <div class="brk">
+          <div class="brk-t">계산 내역 (예상)</div>
+          <div class="brk-row"><span>1일 평균임금 <em>월급여×3 ÷ 91.31</em></span><b id="b-avg">–</b></div>
+          <div class="brk-row"><span>구직급여일액 <em>평균임금의 60%</em></span><b id="b-raw">–</b></div>
+          <div class="brk-row"><span>상·하한 적용 후 일액 <em id="b-clamp-note">상한 66,000·하한 64,192</em></span><b id="b-clamp">–</b></div>
+          <div class="brk-row"><span>소정급여일수 <em id="b-days-note"></em></span><b id="b-days">–</b></div>
+          <div class="brk-row total"><span>총 예상 수령액</span><b id="b-total">–</b></div>
+        </div>
+      </div>
+
+      <div class="cta" id="cta" style="display:none">
+        <h3>💡 실직 기간, 재무 관리가 막막하다면</h3>
+        <p>실업급여가 들어오는 동안 <b>지출을 줄이고 재취업까지 버티는 예산 관리 시트</b>를 무료로 보내드려요. 정식 재무 대시보드는 출시 때 얼리버드 가격으로 가장 먼저 안내드립니다.</p>
+        <div class="emailrow">
+          <input id="email" type="email" placeholder="이메일 주소" aria-label="이메일 주소">
+          <button type="button" onclick="subscribe()">무료 시트 받기</button>
+        </div>
+        <div class="fine" id="cta-msg" aria-live="polite">스팸 없이 재무 도구 소식만. 언제든 해지할 수 있어요.</div>
+      </div>
+
+      <div class="content">
+        <h2>실업급여(구직급여)란?</h2>
+        <p><b>구직급여</b>는 고용보험에 가입한 근로자가 <b>비자발적으로 이직</b>한 뒤 재취업 활동을 하는 기간에 지급되는 실업급여입니다. 하루 지급액인 <b>구직급여일액</b>에 <b>소정급여일수</b>를 곱한 금액을 나누어 받게 됩니다.</p>
+        <h2>2025년 계산 방식</h2>
+        <ul>
+          <li><b>1일 평균임금</b> — (이직 전 3개월 월평균 세전급여 × 3) ÷ 91.31</li>
+          <li><b>구직급여일액</b> — 1일 평균임금의 60%</li>
+          <li><b>상·하한액</b> — 1일 상한 66,000원 / 하한 64,192원(최저임금 80%)으로 조정</li>
+          <li><b>소정급여일수</b> — 나이·가입기간에 따라 120~270일</li>
+          <li><b>총 예상 수령액</b> — 구직급여일액 × 소정급여일수</li>
+        </ul>
+        <h2>자주 묻는 질문</h2>
+        <h3>구직급여일액은 어떻게 계산하나요?</h3>
+        <p>이직 전 3개월 1일 평균임금의 <b>60%</b>가 구직급여일액입니다. 다만 상한(66,000원)과 하한(64,192원) 사이로 조정되므로, 평균임금이 낮아도 하한액은 보장됩니다.</p>
+        <h3>소정급여일수는 어떻게 정해지나요?</h3>
+        <p>이직일 기준 나이(50세 미만/이상)와 고용보험 총 가입기간에 따라 <b>120일부터 270일</b>까지 정해집니다. 장애인은 50세 이상과 동일하게 적용됩니다.</p>
+        <h3>실제 수급액과 다를 수 있나요?</h3>
+        <p>네. 실제 평균임금 산정, 취업촉진수당, 반복수급 감액, 조기재취업수당 등에 따라 달라지며 <b>최종 수급 여부와 금액은 고용센터가 판정</b>합니다. 이 계산기는 예상치입니다.</p>
+      </div>
+
+      <p class="disc">참고용 계산기입니다. 2025년 구직급여 상한 66,000원·하한 64,192원 기준이며 상·하한액과 최저임금은 매년 변동됩니다. 소정급여일수·수급 요건·실제 지급액은 고용센터 판정에 따라 달라질 수 있으며, 모든 결과는 예상치입니다. 입력값은 서버로 전송되지 않고 브라우저에서만 계산됩니다.</p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style is:global>
+.dpc{--grad:linear-gradient(135deg,#34d399,#22d3ee);--radius:18px;
+  --surface:#ffffff;--surface2:#f4f7fb;--line:#e5eaf1;--line2:#d4dce7;
+  --text:#0f1a2b;--mut:#48566b;--dim:#6a7889;--emerald:#0c9c6b;--teal:#0d7d9c;--rose:#e11d63;
+  --gradtext:linear-gradient(135deg,#0aa06e,#0d86a6);
+  --shadow:0 10px 30px -14px rgba(20,45,90,.16);--panelborder:#e6ecf3;
+  --panel:radial-gradient(700px 400px at 12% -8%,rgba(52,211,153,.07),transparent 60%),radial-gradient(600px 400px at 100% 0%,rgba(34,211,238,.06),transparent 55%),linear-gradient(180deg,#f8fbfe,#eef3f9);
+  max-width:920px;margin:26px auto;padding:28px 22px 32px;border-radius:24px;border:1px solid var(--panelborder);
+  background:var(--panel);color:var(--text);
+  font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.55;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
+html.dark .dpc{--surface:#121c2e;--surface2:#0e1626;--line:#1f2c42;--line2:#2a3a56;
+  --text:#eef2f8;--mut:#9fb0c6;--dim:#8b97ac;--emerald:#34d399;--teal:#22d3ee;--rose:#fb7185;
+  --gradtext:linear-gradient(135deg,#34d399,#22d3ee);
+  --shadow:0 12px 40px -12px rgba(0,0,0,.55);--panelborder:#17233a;
+  --panel:radial-gradient(700px 400px at 12% -8%,rgba(52,211,153,.10),transparent 60%),radial-gradient(600px 400px at 100% 0%,rgba(34,211,238,.08),transparent 55%),linear-gradient(180deg,#0d1524,#0a0f1a)}
+.dpc *{box-sizing:border-box;margin:0;padding:0}
+.dpc .wrap{max-width:100%;margin:0 auto}
+.dpc .eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--emerald);background:rgba(52,211,153,.10);border:1px solid rgba(52,211,153,.22);padding:5px 12px;border-radius:999px;margin-bottom:16px}
+.dpc .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.2)}
+.dpc h1{font-size:clamp(26px,5vw,38px);font-weight:800;line-height:1.12;letter-spacing:-.03em;color:var(--text)}
+.dpc .grad{background:var(--gradtext);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.dpc .sub{color:var(--mut);font-size:16px;margin:12px 0 26px;max-width:640px}
+.dpc .card{background:linear-gradient(180deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:18px;box-shadow:var(--shadow)}
+.dpc .card-h{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.dpc .card-h .n{width:26px;height:26px;border-radius:8px;background:rgba(52,211,153,.12);color:var(--emerald);display:grid;place-items:center;font-size:13px;font-weight:700}
+.dpc .card-h h2{font-size:16.5px;font-weight:700;letter-spacing:-.02em;color:var(--text)}
+.dpc .frow{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.dpc .fld{position:relative}
+.dpc .fld .cap{display:block;font-size:12px;color:var(--mut);font-weight:600;margin-bottom:5px}
+.dpc .fld input{width:100%;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:11px 12px;color:var(--text);font-size:15px;font-family:inherit;transition:border-color .15s,box-shadow .15s}
+.dpc .fld input::placeholder{color:var(--dim)}
+.dpc .fld input:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.14)}
+.dpc .strat{display:flex;margin-top:6px}
+.dpc .go{margin-left:auto;background:var(--grad);color:#04121b;border:none;border-radius:12px;padding:12px 26px;font-weight:800;font-size:15px;font-family:inherit;cursor:pointer;box-shadow:0 8px 22px -8px rgba(52,211,153,.6);transition:transform .12s,filter .15s}
+.dpc .go:hover{filter:brightness(1.05)}.dpc .go:active{transform:translateY(1px)}
+.dpc .tip{font-size:13px;color:var(--mut);margin-top:14px;line-height:1.5}
+.dpc .tip b{color:var(--text)}
+.dpc button:focus-visible,.dpc input:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.dpc #out{display:none}
+.dpc .hero-lbl{font-size:13px;color:var(--mut);font-weight:600;margin:2px 0}
+.dpc .res-hero{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;padding:0 2px 4px;background:none;border-radius:0;text-align:left;margin:0}
+.dpc .res-hero .big{font-size:clamp(30px,7vw,46px);font-weight:800;letter-spacing:-.03em}
+.dpc .permo{font-size:16px;color:var(--mut);font-weight:600}
+.dpc .hero-sent{font-size:15px;color:var(--mut);margin:2px 2px 18px}
+.dpc .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.dpc .kpi{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:15px 16px}
+.dpc .kpi .l{font-size:12.5px;color:var(--mut);font-weight:600}
+.dpc .kpi .v{font-size:20px;font-weight:800;margin-top:5px;letter-spacing:-.02em;color:var(--text)}
+.dpc .v.em{color:var(--emerald)}.dpc .v.bl{color:var(--teal)}
+.dpc .barwrap{margin-top:18px}
+.dpc .stackbar{display:flex;height:30px;border-radius:9px;overflow:hidden;border:1px solid var(--line);background:var(--surface2)}
+.dpc .stackbar .seg{height:100%}
+.dpc .stackbar .seg.net{background:linear-gradient(90deg,#34d399,#22d3ee)}
+.dpc .stackbar .seg.ded{background:repeating-linear-gradient(45deg,var(--line2),var(--line2) 6px,var(--surface2) 6px,var(--surface2) 12px)}
+.dpc .barleg{display:flex;gap:16px;font-size:12.5px;color:var(--mut);margin-top:8px}
+.dpc .barleg i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:middle}
+.dpc .barleg i.net{background:#22d3ee}.dpc .barleg i.ded{background:var(--line2)}
+.dpc .barleg b{color:var(--text)}
+.dpc .brk{margin-top:18px;border-top:1px solid var(--line);padding-top:14px}
+.dpc .brk-t{font-size:13px;color:var(--mut);font-weight:700;margin-bottom:8px}
+.dpc .brk-row{display:flex;justify-content:space-between;align-items:center;padding:8px 2px;font-size:14.5px;border-bottom:1px solid var(--line)}
+.dpc .brk-row span{color:var(--text)}
+.dpc .brk-row em{font-style:normal;font-size:12px;color:var(--dim);margin-left:6px}
+.dpc .brk-row b{color:var(--text);font-weight:700}
+.dpc .brk-row.total{border-bottom:none;margin-top:4px;font-weight:800}
+.dpc .brk-row.total span,.dpc .brk-row.total b{color:var(--rose);font-size:15.5px}
+.dpc .cta{background:linear-gradient(135deg,#0f2740,#12233a);border:1px solid #274563;border-radius:var(--radius);padding:24px;position:relative;overflow:hidden;margin-bottom:18px}
+.dpc .cta::before{content:"";position:absolute;inset:0;background:radial-gradient(400px 160px at 90% 0%,rgba(34,211,238,.14),transparent 70%);pointer-events:none}
+.dpc .cta h3{font-size:19px;font-weight:800;letter-spacing:-.02em;margin-bottom:7px;position:relative;color:#f2f7fb}
+.dpc .cta p{color:#aabdd0;font-size:14px;margin-bottom:14px;max-width:580px;position:relative}
+.dpc .cta .fine{color:#8097ad}
+.dpc .emailrow{display:flex;gap:9px;flex-wrap:wrap;position:relative}
+.dpc .cta .emailrow input{flex:1;min-width:220px;background:#0d1b2c;border:1px solid #26445f;border-radius:12px;padding:12px 14px;color:#eef2f8;font-size:14.5px;font-family:inherit}
+.dpc .cta .emailrow input::placeholder{color:#7089a0}
+.dpc .emailrow button{background:var(--grad);color:#04121b;border:none;border-radius:12px;padding:12px 22px;font-weight:800;font-size:14.5px;font-family:inherit;cursor:pointer;transition:.15s}
+.dpc .emailrow button:hover{filter:brightness(1.05)}
+.dpc .fine{font-size:11.5px;margin-top:10px;position:relative}
+.dpc .content{color:var(--mut);font-size:15px}
+.dpc .content h2{font-size:19px;color:var(--text);font-weight:800;letter-spacing:-.02em;margin:26px 0 10px}
+.dpc .content h3{font-size:15.5px;color:var(--text);font-weight:700;margin:16px 0 4px}
+.dpc .content p{margin-bottom:8px}
+.dpc .content ul{margin:6px 0 6px 18px}.dpc .content li{margin-bottom:5px}
+.dpc .disc{font-size:12px;color:var(--dim);margin-top:22px;line-height:1.6}
+@media(max-width:600px){
+  .dpc{padding:20px 14px 24px;margin:16px auto;border-radius:18px}
+  .dpc .frow{grid-template-columns:1fr}
+  .dpc .kpis{grid-template-columns:1fr}
+  .dpc .go{width:100%}
+}
+/* tool-specific: 나이 세그먼트 토글 + select */
+.dpc .frow.one{grid-template-columns:1fr}
+.dpc .seg-toggle{display:flex;gap:6px;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:4px}
+.dpc .seg-btn{flex:1;background:transparent;border:none;border-radius:8px;padding:9px 8px;color:var(--mut);font-size:13.5px;font-weight:700;font-family:inherit;cursor:pointer;transition:.15s;white-space:nowrap}
+.dpc .seg-btn:hover{color:var(--text)}
+.dpc .seg-btn.active{background:var(--grad);color:#04121b;box-shadow:0 6px 16px -8px rgba(52,211,153,.6)}
+.dpc .fld select{width:100%;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:11px 12px;color:var(--text);font-size:15px;font-family:inherit;cursor:pointer;transition:border-color .15s,box-shadow .15s;appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--dim) 50%),linear-gradient(135deg,var(--dim) 50%,transparent 50%);background-position:calc(100% - 18px) center,calc(100% - 13px) center;background-size:5px 5px,5px 5px;background-repeat:no-repeat}
+.dpc .fld select:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.14)}
+</style>
+
+<script is:inline>
+const won=n=>Math.round(n).toLocaleString('ko-KR')+'원';
+const cint=v=>parseFloat(String(v).replace(/[^0-9.]/g,''))||0;
+function fmtInput(el){const raw=el.value.replace(/[^0-9]/g,'');el.value=raw?parseInt(raw,10).toLocaleString('ko-KR'):'';}
+// 2025 기준
+const DAILY_MAX=66000, DAILY_MIN=64192, RATE=0.6, DIVISOR=91.31;
+// 소정급여일수 표
+const DAYS={
+  under:{u1:120,y1_3:150,y3_5:180,y5_10:210,y10:240},
+  over: {u1:120,y1_3:180,y3_5:210,y5_10:240,y10:270}
+};
+const PERIOD_LABEL={u1:'1년 미만',y1_3:'1~3년',y3_5:'3~5년',y5_10:'5~10년',y10:'10년 이상'};
+let ageGroup='under';
+function setAge(v){
+  ageGroup=v;
+  document.querySelectorAll('#ageToggle .seg-btn').forEach(b=>b.classList.toggle('active',b.dataset.age===v));
+  calc(false);
+}
+function calc(scroll){
+  const avg=cint(document.getElementById('avgpay').value);
+  const period=document.getElementById('period').value;
+  if(avg<=0)return;
+  const dailyAvg=(avg*3)/DIVISOR;          // 1일 평균임금
+  const raw=dailyAvg*RATE;                  // 구직급여일액(60%)
+  let daily=raw, clampNote='범위 내(조정 없음)';
+  if(daily>DAILY_MAX){daily=DAILY_MAX;clampNote='상한 66,000원 적용';}
+  else if(daily<DAILY_MIN){daily=DAILY_MIN;clampNote='하한 64,192원 적용';}
+  const days=DAYS[ageGroup][period];
+  const total=daily*days;
+  const ageLabel=ageGroup==='over'?'50세 이상·장애인':'50세 미만';
+  // render
+  document.getElementById('out').style.display='block';
+  document.getElementById('cta').style.display='block';
+  document.getElementById('r-total').textContent=won(total);
+  document.getElementById('r-sent').textContent=`1일 ${won(daily)} × 소정급여일수 ${days}일 기준 총 예상 수령액입니다.`;
+  document.getElementById('r-daily').textContent=won(daily);
+  document.getElementById('r-days').textContent=days+'일';
+  document.getElementById('r-avgday').textContent=won(dailyAvg);
+  document.getElementById('b-avg').textContent=won(dailyAvg);
+  document.getElementById('b-raw').textContent=won(raw);
+  document.getElementById('b-clamp').textContent=won(daily);
+  document.getElementById('b-clamp-note').textContent=clampNote;
+  document.getElementById('b-days').textContent=days+'일';
+  document.getElementById('b-days-note').textContent=`${ageLabel} · 가입 ${PERIOD_LABEL[period]}`;
+  document.getElementById('b-total').textContent=won(total);
+  const h=document.getElementById('resHead');
+  if(scroll){h.focus();document.getElementById('out').scrollIntoView({behavior:'smooth',block:'start'});}
+}
+function subscribe(){
+  const e=document.getElementById('email').value.trim();const msg=document.getElementById('cta-msg');
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)){msg.textContent='올바른 이메일 주소를 입력해 주세요.';msg.style.color='#fb7185';return;}
+  try{fetch('https://xyprbsmagtlzebxyxsvj.supabase.co/functions/v1/analytics-ingest',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({event_type:'newsletter_subscribe',source:'lifeflow',metadata:{email:e,campaign:'unemployment-benefit-calculator',page:location.pathname,subscribed_at:new Date().toISOString()}})}).catch(()=>{});}catch(_){}
+  msg.textContent='감사합니다! 실직 기간 예산 관리 시트와 대시보드 소식을 보내드릴게요.';msg.style.color='#34d399';
+  try{localStorage.setItem('newsletter-subscribed','true');}catch(_){}
+  document.getElementById('email').value='';
+}
+document.getElementById('avgpay').addEventListener('input',e=>fmtInput(e.target));
+calc(false);
+</script>

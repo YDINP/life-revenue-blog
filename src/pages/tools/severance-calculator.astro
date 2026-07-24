@@ -202,8 +202,8 @@ const cint=v=>parseFloat(String(v).replace(/[^0-9.]/g,''))||0;
 function fmtInput(el){const raw=el.value.replace(/[^0-9]/g,'');el.value=raw?parseInt(raw,10).toLocaleString('ko-KR'):'';}
 function todayStr(){const d=new Date();const p=n=>String(n).padStart(2,'0');return d.getFullYear()+'-'+p(d.getMonth()+1)+'-'+p(d.getDate());}
 function periodText(days){
-  const totalMonths=Math.floor(days/30.4375);
-  const y=Math.floor(totalMonths/12), m=totalMonths%12;
+  const y=Math.floor(days/365);
+  const m=Math.floor((days-y*365)/30.4375);
   if(y<=0)return m+'개월';
   return m>0?y+'년 '+m+'개월':y+'년';
 }
