@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = '무료 금융 도구 모음';
+const description = '부채 상환 계산기부터 예산·저축 도구까지 — LifeFlow가 만든 무료 금융 계산기 모음. 설치·가입 없이 브라우저에서 바로 사용하세요.';
+
+// 새 도구는 이 배열에 항목만 추가하면 됩니다.
+const tools = [
+  {
+    href: '/tools/debt-payoff-calculator/',
+    emoji: '💳',
+    title: '부채 상환 계산기',
+    desc: '스노볼 vs 아발란치 전략을 월별 시뮬레이션으로 비교. 완납 예상일·총이자·절약액을 3초 만에 계산합니다.',
+    tag: '인기',
+  },
+];
+
+const itemListLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: '무료 금융 도구 모음',
+  itemListElement: tools.map((t, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: t.title,
+    url: new URL(t.href, Astro.site).href,
+  })),
+};
+---
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(itemListLd)} />
+  </Fragment>
+
+  <section class="tools-hub">
+    <p class="th-eyebrow">무료 · 설치 불필요 · 브라우저에서 바로</p>
+    <h1>금융 도구 모음</h1>
+    <p class="th-sub">복잡한 재무 계산을 브라우저에서 바로. 필요한 도구를 골라 쓰세요. 새로운 도구가 계속 추가됩니다.</p>
+
+    <div class="tools-grid">
+      {tools.map((t) => (
+        <a class="tool-card" href={t.href}>
+          <div class="tc-top">
+            <span class="tc-emoji">{t.emoji}</span>
+            {t.tag && <span class="tc-tag">{t.tag}</span>}
+          </div>
+          <h3>{t.title}</h3>
+          <p>{t.desc}</p>
+          <span class="tc-go">열기 →</span>
+        </a>
+      ))}
+      <div class="tool-card soon">
+        <div class="tc-top"><span class="tc-emoji">🧰</span></div>
+        <h3>더 많은 도구 준비 중</h3>
+        <p>예산 계산기, 연봉 실수령액 계산기, 목돈 모으기 계산기 등을 곧 추가할 예정입니다.</p>
+        <span class="tc-go dim">Coming soon</span>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.tools-hub{max-width:860px;margin:0 auto;padding:20px 0 34px}
+.th-eyebrow{display:inline-block;font-size:12.5px;font-weight:700;color:#0c9c6b;background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.25);padding:5px 12px;border-radius:999px;margin-bottom:14px}
+:global(html.dark) .th-eyebrow{color:#34d399}
+.tools-hub h1{font-size:clamp(26px,5vw,36px);font-weight:800;letter-spacing:-.02em;margin:0 0 10px}
+.th-sub{opacity:.72;font-size:16px;margin-bottom:24px;max-width:620px;line-height:1.6}
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:16px}
+.tool-card{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid #e6ecf3;border-radius:16px;padding:20px;transition:transform .12s ease,border-color .15s;box-shadow:0 6px 20px -14px rgba(20,45,90,.22)}
+:global(html.dark) .tool-card{background:#121c2e;border-color:#1f2c42;box-shadow:0 10px 30px -16px rgba(0,0,0,.6)}
+.tool-card:hover{transform:translateY(-2px);border-color:#34d399}
+.tool-card.soon{opacity:.6;pointer-events:none}
+.tc-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.tc-emoji{font-size:26px;line-height:1}
+.tc-tag{font-size:11px;font-weight:700;color:#0c9c6b;background:rgba(52,211,153,.12);padding:3px 9px;border-radius:999px}
+:global(html.dark) .tc-tag{color:#34d399}
+.tool-card h3{font-size:17px;font-weight:800;margin:0 0 6px;letter-spacing:-.01em}
+.tool-card p{font-size:14px;opacity:.72;line-height:1.55;margin:0 0 14px}
+.tc-go{font-size:14px;font-weight:700;color:#0c9c6b}
+:global(html.dark) .tc-go{color:#34d399}
+.tc-go.dim{opacity:.55;color:inherit;font-weight:600}
+</style>

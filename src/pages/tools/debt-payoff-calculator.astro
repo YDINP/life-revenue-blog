@@ -69,7 +69,7 @@ const faqLd = {
         <div class="card-h"><span class="n">3</span><h2 id="resHead" tabindex="-1">결과</h2></div>
         <div id="ok" aria-live="polite">
           <div class="hero-lbl">예상 완납 시점</div>
-          <div class="hero"><span class="big grad" id="r-date">–</span></div>
+          <div class="res-hero"><span class="big grad" id="r-date">–</span></div>
           <div class="hero-sent" id="r-sent"></div>
           <div class="kpis">
             <div class="kpi"><div class="l">완납까지</div><div class="v em" id="r-dur">–</div></div>
@@ -128,16 +128,26 @@ const faqLd = {
 </BaseLayout>
 
 <style is:global>
-.dpc{--bg:#0a0f1a;--bg2:#0d1524;--surface:#121c2e;--surface2:#0e1626;--line:#1f2c42;--line2:#2a3a56;--text:#eef2f8;--mut:#9fb0c6;--dim:#8b97ac;--emerald:#34d399;--teal:#22d3ee;--rose:#fb7185;--grad:linear-gradient(135deg,#34d399,#22d3ee);--radius:18px;--shadow:0 12px 40px -12px rgba(0,0,0,.55);
-  max-width:920px;margin:26px auto;padding:28px 22px 32px;border-radius:24px;border:1px solid #17233a;
-  background:radial-gradient(700px 400px at 12% -8%,rgba(52,211,153,.10),transparent 60%),radial-gradient(600px 400px at 100% 0%,rgba(34,211,238,.08),transparent 55%),linear-gradient(180deg,var(--bg2),var(--bg));
-  color:var(--text);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.55;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
+.dpc{--grad:linear-gradient(135deg,#34d399,#22d3ee);--radius:18px;
+  --surface:#ffffff;--surface2:#f4f7fb;--line:#e5eaf1;--line2:#d4dce7;
+  --text:#0f1a2b;--mut:#48566b;--dim:#6a7889;--emerald:#0c9c6b;--teal:#0d7d9c;--rose:#e11d63;
+  --gradtext:linear-gradient(135deg,#0aa06e,#0d86a6);
+  --shadow:0 10px 30px -14px rgba(20,45,90,.16);--panelborder:#e6ecf3;
+  --panel:radial-gradient(700px 400px at 12% -8%,rgba(52,211,153,.07),transparent 60%),radial-gradient(600px 400px at 100% 0%,rgba(34,211,238,.06),transparent 55%),linear-gradient(180deg,#f8fbfe,#eef3f9);
+  max-width:920px;margin:26px auto;padding:28px 22px 32px;border-radius:24px;border:1px solid var(--panelborder);
+  background:var(--panel);color:var(--text);
+  font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.55;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
+html.dark .dpc{--surface:#121c2e;--surface2:#0e1626;--line:#1f2c42;--line2:#2a3a56;
+  --text:#eef2f8;--mut:#9fb0c6;--dim:#8b97ac;--emerald:#34d399;--teal:#22d3ee;--rose:#fb7185;
+  --gradtext:linear-gradient(135deg,#34d399,#22d3ee);
+  --shadow:0 12px 40px -12px rgba(0,0,0,.55);--panelborder:#17233a;
+  --panel:radial-gradient(700px 400px at 12% -8%,rgba(52,211,153,.10),transparent 60%),radial-gradient(600px 400px at 100% 0%,rgba(34,211,238,.08),transparent 55%),linear-gradient(180deg,#0d1524,#0a0f1a)}
 .dpc *{box-sizing:border-box;margin:0;padding:0}
 .dpc .wrap{max-width:100%;margin:0 auto}
 .dpc .eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--emerald);background:rgba(52,211,153,.10);border:1px solid rgba(52,211,153,.22);padding:5px 12px;border-radius:999px;margin-bottom:16px}
 .dpc .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.2)}
 .dpc h1{font-size:clamp(26px,5vw,38px);font-weight:800;line-height:1.12;letter-spacing:-.03em;color:var(--text)}
-.dpc .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.dpc .grad{background:var(--gradtext);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .dpc .gloss{color:var(--mut);font-size:15px;margin-top:10px;font-weight:500}
 .dpc .sub{color:var(--mut);font-size:16px;margin:8px 0 26px;max-width:640px}
 .dpc .card{background:linear-gradient(180deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:18px;box-shadow:var(--shadow)}
@@ -150,7 +160,7 @@ const faqLd = {
 .dpc .fld{position:relative}
 .dpc .fld .cap{display:none}
 .dpc .fld input{width:100%;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:11px 12px;color:var(--text);font-size:14.5px;font-family:inherit;transition:border-color .15s,box-shadow .15s}
-.dpc .fld input::placeholder{color:#6b7890}
+.dpc .fld input::placeholder{color:var(--dim)}
 .dpc .fld input:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.14)}
 .dpc .rm{background:rgba(251,113,133,.08);border:1px solid rgba(251,113,133,.2);color:var(--rose);width:32px;height:38px;border-radius:10px;cursor:pointer;font-size:16px;transition:background .15s}
 .dpc .rm:hover{background:rgba(251,113,133,.18)}
@@ -173,18 +183,18 @@ const faqLd = {
 .dpc button:focus-visible,.dpc input:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
 .dpc #out{display:none}
 .dpc .hero-lbl{font-size:13px;color:var(--mut);font-weight:600;margin:2px 0 2px}
-.dpc .hero{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding:0 2px 6px}
-.dpc .hero .big{font-size:clamp(30px,7vw,46px);font-weight:800;letter-spacing:-.03em}
+.dpc .res-hero{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding:0 2px 6px;background:none;border-radius:0;text-align:left;margin:0}
+.dpc .res-hero .big{font-size:clamp(30px,7vw,46px);font-weight:800;letter-spacing:-.03em}
 .dpc .hero-sent{font-size:15px;color:var(--mut);margin:2px 2px 18px}
 .dpc .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .dpc .kpi{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:15px 16px}
 .dpc .kpi .l{font-size:12.5px;color:var(--mut);font-weight:600}
 .dpc .kpi .v{font-size:21px;font-weight:800;margin-top:5px;letter-spacing:-.02em;color:var(--text)}
 .dpc .v.em{color:var(--emerald)}.dpc .v.bl{color:var(--teal)}
-.dpc .save{margin-top:16px;background:linear-gradient(135deg,rgba(52,211,153,.12),rgba(34,211,238,.08));border:1px solid rgba(52,211,153,.25);border-radius:14px;padding:15px 17px;font-size:14.5px;color:#d7efe6}
+.dpc .save{margin-top:16px;background:linear-gradient(135deg,rgba(52,211,153,.12),rgba(34,211,238,.08));border:1px solid rgba(52,211,153,.28);border-radius:14px;padding:15px 17px;font-size:14.5px;color:var(--text)}
 .dpc .save b{color:var(--emerald)}
 .dpc .save .amt{font-size:19px;font-weight:800;color:var(--emerald)}
-.dpc .warn{margin-top:8px;background:rgba(251,113,133,.09);border:1px solid rgba(251,113,133,.3);border-radius:14px;padding:16px 18px;font-size:14.5px;color:#fdd9df}
+.dpc .warn{margin-top:8px;background:rgba(251,113,133,.10);border:1px solid rgba(251,113,133,.32);border-radius:14px;padding:16px 18px;font-size:14.5px;color:var(--text)}
 .dpc .warn b{color:var(--rose)}
 .dpc .chartwrap{margin-top:18px}
 .dpc .chart-t{font-size:13px;color:var(--mut);font-weight:600;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
@@ -201,10 +211,13 @@ const faqLd = {
 .dpc svg#chart{width:100%;height:190px;display:block;overflow:visible}
 .dpc .gl{stroke:var(--line);stroke-width:1}
 .dpc .chart-x{display:flex;justify-content:space-between;font-size:11px;color:var(--dim);margin-top:4px}
-.dpc .cta{background:linear-gradient(135deg,#0f2740,#12233a);border:1px solid var(--line2);border-radius:var(--radius);padding:24px;position:relative;overflow:hidden;margin-bottom:18px}
+.dpc .cta{background:linear-gradient(135deg,#0f2740,#12233a);border:1px solid #274563;border-radius:var(--radius);padding:24px;position:relative;overflow:hidden;margin-bottom:18px}
 .dpc .cta::before{content:"";position:absolute;inset:0;background:radial-gradient(400px 160px at 90% 0%,rgba(34,211,238,.14),transparent 70%);pointer-events:none}
-.dpc .cta h3{font-size:19px;font-weight:800;letter-spacing:-.02em;margin-bottom:7px;position:relative;color:var(--text)}
-.dpc .cta p{color:var(--mut);font-size:14px;margin-bottom:14px;max-width:580px;position:relative}
+.dpc .cta h3{font-size:19px;font-weight:800;letter-spacing:-.02em;margin-bottom:7px;position:relative;color:#f2f7fb}
+.dpc .cta p{color:#aabdd0;font-size:14px;margin-bottom:14px;max-width:580px;position:relative}
+.dpc .cta .fine{color:#8097ad}
+.dpc .cta .emailrow input{background:#0d1b2c;border:1px solid #26445f;color:#eef2f8}
+.dpc .cta .emailrow input::placeholder{color:#7089a0}
 .dpc .emailrow{display:flex;gap:9px;flex-wrap:wrap;position:relative}
 .dpc .emailrow input{flex:1;min-width:220px;background:var(--surface2);border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:var(--text);font-size:14.5px;font-family:inherit}
 .dpc .emailrow input:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(34,211,238,.14)}
