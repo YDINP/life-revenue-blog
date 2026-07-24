@@ -21,10 +21,10 @@ const AD_SLOT_IDS: Record<string, string> = {
 };
 // Kakao AdFit 광고단위 (DAN-xxxxxxxx). unit 이 비면 미노출. w/h 는 단위 생성 시 크기와 일치시킬 것.
 const ADFIT_UNITS: Record<string, { unit: string; w: number; h: number }> = {
-  anchor:  { unit: '', w: 320, h: 100 }, // 모바일 하단 배너
-  bottom:  { unit: '', w: 728, h: 90 },  // 본문 하단 (PC)
-  mid:     { unit: '', w: 300, h: 250 }, // 본문 중간 사각형
-  top:     { unit: '', w: 728, h: 90 },
+  anchor:  { unit: 'DAN-9ntKeIG6TVxsZA5B', w: 320, h: 100 }, // 모바일 하단 배너 (전 페이지)
+  top:     { unit: 'DAN-ZHhI6MvJo2zmbgW7', w: 728, h: 90 },  // 블로그 본문 상단 (PC)
+  bottom:  { unit: 'DAN-EOpRhlPlnBrzsv55', w: 300, h: 250 }, // 블로그 본문 하단 (PC)
+  mid:     { unit: '', w: 300, h: 250 },
   sidebar: { unit: '', w: 300, h: 250 },
 };
 
@@ -40,13 +40,13 @@ const isMid = position === 'mid';
   <div class="anchor-ad" id="anchor-ad">
     <button class="anchor-ad-close" type="button" aria-label="광고 닫기" onclick="this.parentElement.remove()">×</button>
     <ins class="kakao_ad_area" style="display:none;" data-ad-unit={adfit.unit} data-ad-width={String(adfit.w)} data-ad-height={String(adfit.h)}></ins>
-    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    <script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
   </div>
 )}
 {useAdfit && !isAnchor && (
   <div class="ad-slot" data-ad-position={position}>
     <ins class="kakao_ad_area" style="display:none;" data-ad-unit={adfit.unit} data-ad-width={String(adfit.w)} data-ad-height={String(adfit.h)}></ins>
-    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+    <script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
   </div>
 )}
 
