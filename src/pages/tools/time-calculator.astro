@@ -1,0 +1,299 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = '시간 계산기 — 경과 시간·시각 더하기 빼기';
+const description = '두 시각 사이의 경과 시간(근무시간)과, 특정 시각에서 시간을 더하거나 뺀 결과 시각을 바로 계산합니다. 자정을 넘기는 야간 근무도 지원하고, 결과를 24시간제와 오전/오후로 함께 보여줘요. 무료·설치 불필요.';
+const ogImage = '/og/time-calculator.png';
+
+const appLd = {
+  '@context': 'https://schema.org', '@type': 'WebApplication',
+  name: '시간 계산기', applicationCategory: 'UtilitiesApplication', operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'KRW' },
+  description: '두 시각의 경과 시간과 시각 더하기·빼기를 계산하는 무료 도구. 자정 넘김(야간 근무) 지원, 24시간제·오전/오후 동시 표기.',
+};
+const faqLd = {
+  '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+    { '@type': 'Question', name: '근무시간은 어떻게 계산하나요?', acceptedAnswer: { '@type': 'Answer', text: '‘시간 간격’ 모드에서 시작 시각과 종료 시각을 입력하면 경과 시간이 시:분, 총 분, 소수 시간으로 계산됩니다. 휴게시간은 별도로 빼서 계산하세요.' } },
+    { '@type': 'Question', name: '자정을 넘기는 야간 근무는 어떻게 계산하나요?', acceptedAnswer: { '@type': 'Answer', text: '종료 시각이 다음 날인 경우 ‘자정 넘김(다음 날)’을 체크하면 24시간(1440분)을 더해 계산합니다. 예: 22:00~06:00은 8시간입니다.' } },
+    { '@type': 'Question', name: '특정 시각에 시간을 더하거나 뺄 수 있나요?', acceptedAnswer: { '@type': 'Answer', text: '‘시각 계산’ 모드에서 기준 시각을 넣고 더하기/빼기와 시간·분을 입력하면 결과 시각이 나옵니다. 24시간을 넘거나 자정 이전으로 가면 다음 날/전날 표시도 함께 보여줘요.' } },
+    { '@type': 'Question', name: '결과가 오전/오후로도 표시되나요?', acceptedAnswer: { '@type': 'Answer', text: '네. 결과 시각은 24시간제(예: 15:30)와 한글 오전/오후 표기(예: 오후 3시 30분)를 함께 보여줍니다.' } },
+  ],
+};
+---
+<BaseLayout title={title} description={description} image={ogImage} ogType="website">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(appLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+  </Fragment>
+
+  <div class="dpc">
+    <div class="wrap">
+      <span class="eyebrow"><span class="dot"></span>경과 시간 · 시각 더하기 · 무료 · 설치 불필요</span>
+      <h1>시간 계산기 <span class="grad">경과·더하기</span></h1>
+      <p class="sub">두 시각 사이 <b>경과 시간(근무시간)</b>을 구하거나, 기준 시각에 <b>시간을 더하고 빼서</b> 결과 시각을 바로 계산하세요. 자정을 넘기는 야간 근무도 지원합니다.</p>
+
+      <form id="calcForm" onsubmit="event.preventDefault();calc(true)">
+      <div class="card">
+        <div class="card-h"><span class="n">1</span><h2>계산 정보 입력</h2></div>
+        <div class="fld"><span class="cap">계산 모드</span>
+          <select id="mode" aria-label="계산 모드" onchange="switchMode()">
+            <option value="A">시간 간격 — 두 시각의 경과 시간</option>
+            <option value="B">시각 계산 — 시각에 시간 더하기·빼기</option>
+          </select>
+        </div>
+
+        <div id="modeA">
+          <div class="frow" style="margin-top:12px">
+            <div class="fld"><span class="cap">시작 시각</span><input id="start" type="time" aria-label="시작 시각" value="09:00" onchange="calc(false)"></div>
+            <div class="fld"><span class="cap">종료 시각</span><input id="end" type="time" aria-label="종료 시각" value="18:00" onchange="calc(false)"></div>
+          </div>
+          <label class="chk"><input id="overnight" type="checkbox" onchange="calc(false)">종료 시각이 다음 날이에요 (자정 넘김)</label>
+        </div>
+
+        <div id="modeB" style="display:none">
+          <div class="frow" style="margin-top:12px">
+            <div class="fld"><span class="cap">기준 시각</span><input id="base" type="time" aria-label="기준 시각" value="09:00" onchange="calc(false)"></div>
+            <div class="fld"><span class="cap">연산</span>
+              <select id="op" aria-label="연산" onchange="calc(false)">
+                <option value="add">더하기 (+)</option>
+                <option value="sub">빼기 (−)</option>
+              </select>
+            </div>
+          </div>
+          <div class="frow">
+            <div class="fld"><span class="cap">시간</span><input id="addh" type="number" min="0" step="1" aria-label="더하거나 뺄 시간" value="1"></div>
+            <div class="fld"><span class="cap">분</span><input id="addm" type="number" min="0" step="1" aria-label="더하거나 뺄 분" value="30"></div>
+          </div>
+        </div>
+
+        <div class="strat">
+          <button type="submit" class="go">계산하기</button>
+        </div>
+        <p class="tip"><b>시간 간격</b>은 근무시간·회의시간 계산에 쓰세요. 밤 시간대(예: 22:00~06:00)는 <b>자정 넘김</b>을 체크해야 정확합니다. <b>시각 계산</b>은 “지금부터 3시간 30분 뒤”처럼 결과 시각을 구할 때 편리해요.</p>
+      </div>
+      </form>
+
+      <div class="card" id="out">
+        <div class="card-h"><span class="n">2</span><h2 id="resHead" tabindex="-1">계산 결과</h2></div>
+        <div class="hero-lbl" id="r-lbl">경과 시간</div>
+        <div class="res-hero"><span class="big grad" id="r-main">–</span><span class="permo" id="r-unit"></span></div>
+        <div class="hero-sent" id="r-sent"></div>
+        <div class="kpis">
+          <div class="kpi"><div class="l" id="l1">–</div><div class="v em" id="r-k1">–</div></div>
+          <div class="kpi"><div class="l" id="l2">–</div><div class="v" id="r-k2">–</div></div>
+          <div class="kpi"><div class="l" id="l3">–</div><div class="v bl" id="r-k3">–</div></div>
+        </div>
+        <div class="brk">
+          <div class="brk-t" id="brk-t">입력 요약</div>
+          <div id="brk-body"></div>
+        </div>
+      </div>
+
+      <div class="cta" id="cta" style="display:none">
+        <h3>💡 생활에 바로 쓰는 계산 도구, 더 받아보세요</h3>
+        <p>근무시간·날짜·단위 변환처럼 실생활에서 자주 찾는 계산 도구와 꿀팁을 <b>생활 도구 뉴스레터</b>로 보내드려요. 스팸 없이 유용한 것만 골라서요.</p>
+        <div class="emailrow">
+          <input id="email" type="email" placeholder="이메일 주소" aria-label="이메일 주소">
+          <button type="button" onclick="subscribe()">뉴스레터 구독</button>
+        </div>
+        <div class="fine" id="cta-msg" aria-live="polite">스팸 없이 생활 도구 소식만. 언제든 해지할 수 있어요.</div>
+      </div>
+
+      <div class="content">
+        <h2>시간 계산기 사용법</h2>
+        <p>이 도구는 두 가지 계산을 지원합니다. 상단의 <b>계산 모드</b>를 바꿔 원하는 계산을 선택하세요. 모든 계산은 브라우저에서만 이뤄지며 입력값은 서버로 전송되지 않습니다.</p>
+        <h3>시간 간격 — 경과 시간(근무시간)</h3>
+        <p><b>시작 시각</b>과 <b>종료 시각</b>을 입력하면 두 시각 사이의 경과 시간을 <b>시:분</b>, <b>총 분</b>, <b>소수 시간</b>으로 보여줍니다. 소수 시간은 급여 계산(시급 × 시간)에 바로 쓰기 좋아요. 밤을 새워 다음 날 끝나는 근무라면 <b>‘자정 넘김(다음 날)’</b>을 체크하세요.</p>
+        <h3>시각 계산 — 시각 더하기·빼기</h3>
+        <p><b>기준 시각</b>에 원하는 <b>시간·분</b>을 더하거나 빼서 <b>결과 시각</b>을 구합니다. 결과는 24시간제(예: 15:30)와 한글 오전/오후(예: 오후 3시 30분)로 함께 표시되고, 자정을 넘기거나 앞서면 <b>다음 날/전날</b> 여부도 알려줍니다.</p>
+        <h2>자주 묻는 질문</h2>
+        <h3>휴게시간은 어떻게 빼나요?</h3>
+        <p>경과 시간에서 휴게시간을 직접 빼세요. 예를 들어 09:00~18:00(9시간)에서 점심 1시간을 빼면 실근무 8시간입니다. 이 계산기는 순수 경과 시간만 계산합니다.</p>
+        <h3>자정을 넘기면 왜 음수가 나오나요?</h3>
+        <p>종료 시각이 시작 시각보다 이른 숫자(예: 22:00 → 06:00)일 때는 다음 날로 봐야 하므로 <b>‘자정 넘김’</b>을 체크해야 합니다. 그러면 24시간을 더해 올바르게 계산됩니다.</p>
+        <h3>연장·야간 가산수당도 계산되나요?</h3>
+        <p>아니요. 이 도구는 순수 경과 시간만 계산합니다. 야간(22:00~06:00)·연장·휴일 가산율은 회사·근로계약 기준에 따라 별도로 적용하세요.</p>
+      </div>
+
+      <p class="disc">참고용 시간 계산기입니다. 경과 시간·시각 계산은 정확히 산출되지만, 휴게시간 공제와 연장·야간·휴일 가산수당은 반영되지 않습니다. 입력값은 서버로 전송되지 않고 브라우저에서만 계산됩니다.</p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style is:global>
+.dpc{--grad:linear-gradient(135deg,#34d399,#22d3ee);--radius:18px;
+  --surface:#ffffff;--surface2:#f4f7fb;--line:#e5eaf1;--line2:#d4dce7;
+  --text:#0f1a2b;--mut:#48566b;--dim:#6a7889;--emerald:#0c9c6b;--teal:#0d7d9c;--rose:#e11d63;
+  --gradtext:linear-gradient(135deg,#0aa06e,#0d86a6);
+  --shadow:0 10px 30px -14px rgba(20,45,90,.16);--panelborder:#e6ecf3;
+  --panel:radial-gradient(700px 400px at 12% -8%,rgba(52,211,153,.07),transparent 60%),radial-gradient(600px 400px at 100% 0%,rgba(34,211,238,.06),transparent 55%),linear-gradient(180deg,#f8fbfe,#eef3f9);
+  max-width:920px;margin:26px auto;padding:28px 22px 32px;border-radius:24px;border:1px solid var(--panelborder);
+  background:var(--panel);color:var(--text);
+  font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.55;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
+html.dark .dpc{--surface:#121c2e;--surface2:#0e1626;--line:#1f2c42;--line2:#2a3a56;
+  --text:#eef2f8;--mut:#9fb0c6;--dim:#8b97ac;--emerald:#34d399;--teal:#22d3ee;--rose:#fb7185;
+  --gradtext:linear-gradient(135deg,#34d399,#22d3ee);
+  --shadow:0 12px 40px -12px rgba(0,0,0,.55);--panelborder:#17233a;
+  --panel:radial-gradient(700px 400px at 12% -8%,rgba(52,211,153,.10),transparent 60%),radial-gradient(600px 400px at 100% 0%,rgba(34,211,238,.08),transparent 55%),linear-gradient(180deg,#0d1524,#0a0f1a)}
+.dpc *{box-sizing:border-box;margin:0;padding:0}
+.dpc .wrap{max-width:100%;margin:0 auto}
+.dpc .eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--emerald);background:rgba(52,211,153,.10);border:1px solid rgba(52,211,153,.22);padding:5px 12px;border-radius:999px;margin-bottom:16px}
+.dpc .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.2)}
+.dpc h1{font-size:clamp(26px,5vw,38px);font-weight:800;line-height:1.12;letter-spacing:-.03em;color:var(--text)}
+.dpc .grad{background:var(--gradtext);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.dpc .sub{color:var(--mut);font-size:16px;margin:12px 0 26px;max-width:640px}
+.dpc .card{background:linear-gradient(180deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:18px;box-shadow:var(--shadow)}
+.dpc .card-h{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.dpc .card-h .n{width:26px;height:26px;border-radius:8px;background:rgba(52,211,153,.12);color:var(--emerald);display:grid;place-items:center;font-size:13px;font-weight:700}
+.dpc .card-h h2{font-size:16.5px;font-weight:700;letter-spacing:-.02em;color:var(--text)}
+.dpc .frow{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.dpc .fld{position:relative}
+.dpc .fld .cap{display:block;font-size:12px;color:var(--mut);font-weight:600;margin-bottom:5px}
+.dpc .fld input{width:100%;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:11px 12px;color:var(--text);font-size:15px;font-family:inherit;transition:border-color .15s,box-shadow .15s}
+.dpc .fld input::placeholder{color:var(--dim)}
+.dpc .fld input:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.14)}
+.dpc .strat{display:flex;margin-top:6px}
+.dpc .go{margin-left:auto;background:var(--grad);color:#04121b;border:none;border-radius:12px;padding:12px 26px;font-weight:800;font-size:15px;font-family:inherit;cursor:pointer;box-shadow:0 8px 22px -8px rgba(52,211,153,.6);transition:transform .12s,filter .15s}
+.dpc .go:hover{filter:brightness(1.05)}.dpc .go:active{transform:translateY(1px)}
+.dpc .tip{font-size:13px;color:var(--mut);margin-top:14px;line-height:1.5}
+.dpc .tip b{color:var(--text)}
+.dpc button:focus-visible,.dpc input:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.dpc #out{display:none}
+.dpc .hero-lbl{font-size:13px;color:var(--mut);font-weight:600;margin:2px 0}
+.dpc .res-hero{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;padding:0 2px 4px;background:none;border-radius:0;text-align:left;margin:0}
+.dpc .res-hero .big{font-size:clamp(30px,7vw,46px);font-weight:800;letter-spacing:-.03em}
+.dpc .permo{font-size:16px;color:var(--mut);font-weight:600}
+.dpc .hero-sent{font-size:15px;color:var(--mut);margin:2px 2px 18px}
+.dpc .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.dpc .kpi{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:15px 16px}
+.dpc .kpi .l{font-size:12.5px;color:var(--mut);font-weight:600}
+.dpc .kpi .v{font-size:20px;font-weight:800;margin-top:5px;letter-spacing:-.02em;color:var(--text)}
+.dpc .v.em{color:var(--emerald)}.dpc .v.bl{color:var(--teal)}
+.dpc .barwrap{margin-top:18px}
+.dpc .stackbar{display:flex;height:30px;border-radius:9px;overflow:hidden;border:1px solid var(--line);background:var(--surface2)}
+.dpc .stackbar .seg{height:100%}
+.dpc .stackbar .seg.net{background:linear-gradient(90deg,#34d399,#22d3ee)}
+.dpc .stackbar .seg.ded{background:repeating-linear-gradient(45deg,var(--line2),var(--line2) 6px,var(--surface2) 6px,var(--surface2) 12px)}
+.dpc .barleg{display:flex;gap:16px;font-size:12.5px;color:var(--mut);margin-top:8px}
+.dpc .barleg i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:middle}
+.dpc .barleg i.net{background:#22d3ee}.dpc .barleg i.ded{background:var(--line2)}
+.dpc .barleg b{color:var(--text)}
+.dpc .brk{margin-top:18px;border-top:1px solid var(--line);padding-top:14px}
+.dpc .brk-t{font-size:13px;color:var(--mut);font-weight:700;margin-bottom:8px}
+.dpc .brk-row{display:flex;justify-content:space-between;align-items:center;padding:8px 2px;font-size:14.5px;border-bottom:1px solid var(--line)}
+.dpc .brk-row span{color:var(--text)}
+.dpc .brk-row em{font-style:normal;font-size:12px;color:var(--dim);margin-left:6px}
+.dpc .brk-row b{color:var(--text);font-weight:700}
+.dpc .brk-row.total{border-bottom:none;margin-top:4px;font-weight:800}
+.dpc .brk-row.total span,.dpc .brk-row.total b{color:var(--rose);font-size:15.5px}
+.dpc .cta{background:linear-gradient(135deg,#0f2740,#12233a);border:1px solid #274563;border-radius:var(--radius);padding:24px;position:relative;overflow:hidden;margin-bottom:18px}
+.dpc .cta::before{content:"";position:absolute;inset:0;background:radial-gradient(400px 160px at 90% 0%,rgba(34,211,238,.14),transparent 70%);pointer-events:none}
+.dpc .cta h3{font-size:19px;font-weight:800;letter-spacing:-.02em;margin-bottom:7px;position:relative;color:#f2f7fb}
+.dpc .cta p{color:#aabdd0;font-size:14px;margin-bottom:14px;max-width:580px;position:relative}
+.dpc .cta .fine{color:#8097ad}
+.dpc .emailrow{display:flex;gap:9px;flex-wrap:wrap;position:relative}
+.dpc .cta .emailrow input{flex:1;min-width:220px;background:#0d1b2c;border:1px solid #26445f;border-radius:12px;padding:12px 14px;color:#eef2f8;font-size:14.5px;font-family:inherit}
+.dpc .cta .emailrow input::placeholder{color:#7089a0}
+.dpc .emailrow button{background:var(--grad);color:#04121b;border:none;border-radius:12px;padding:12px 22px;font-weight:800;font-size:14.5px;font-family:inherit;cursor:pointer;transition:.15s}
+.dpc .emailrow button:hover{filter:brightness(1.05)}
+.dpc .fine{font-size:11.5px;margin-top:10px;position:relative}
+.dpc .content{color:var(--mut);font-size:15px}
+.dpc .content h2{font-size:19px;color:var(--text);font-weight:800;letter-spacing:-.02em;margin:26px 0 10px}
+.dpc .content h3{font-size:15.5px;color:var(--text);font-weight:700;margin:16px 0 4px}
+.dpc .content p{margin-bottom:8px}
+.dpc .content ul{margin:6px 0 6px 18px}.dpc .content li{margin-bottom:5px}
+.dpc .disc{font-size:12px;color:var(--dim);margin-top:22px;line-height:1.6}
+@media(max-width:600px){
+  .dpc{padding:20px 14px 24px;margin:16px auto;border-radius:18px}
+  .dpc .frow{grid-template-columns:1fr}
+  .dpc .kpis{grid-template-columns:1fr}
+  .dpc .go{width:100%}
+}
+/* tool-specific */
+.dpc select{width:100%;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:11px 12px;color:var(--text);font-size:15px;font-family:inherit;transition:border-color .15s,box-shadow .15s}
+.dpc select:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.14)}
+.dpc .chk{display:flex;align-items:center;gap:9px;font-size:14px;color:var(--text);font-weight:600;margin-top:4px;cursor:pointer;user-select:none}
+.dpc .chk input{width:17px;height:17px;accent-color:var(--emerald);cursor:pointer}
+</style>
+
+<script is:inline>
+const pad2=n=>String(n).padStart(2,'0');
+const t2m=v=>{if(!v)return null;const p=String(v).split(':');const h=parseInt(p[0],10),m=parseInt(p[1],10);if(isNaN(h)||isNaN(m))return null;return h*60+m;};
+const iint=v=>{const n=parseInt(v,10);return isNaN(n)?0:Math.max(0,n);};
+function toKorean(h,m){const period=h<12?'오전':'오후';let h12=h%12;if(h12===0)h12=12;return `${period} ${h12}시${m>0?' '+m+'분':''}`;}
+function switchMode(){
+  const mode=document.getElementById('mode').value;
+  document.getElementById('modeA').style.display=mode==='A'?'block':'none';
+  document.getElementById('modeB').style.display=mode==='B'?'block':'none';
+  calc(false);
+}
+function calc(scroll){
+  const mode=document.getElementById('mode').value;
+  const out=document.getElementById('out');
+  const setL=(a,b,c)=>{document.getElementById('l1').textContent=a;document.getElementById('l2').textContent=b;document.getElementById('l3').textContent=c;};
+  const setK=(a,b,c)=>{document.getElementById('r-k1').textContent=a;document.getElementById('r-k2').textContent=b;document.getElementById('r-k3').textContent=c;};
+  if(mode==='A'){
+    const s=t2m(document.getElementById('start').value);
+    const e=t2m(document.getElementById('end').value);
+    document.getElementById('r-lbl').textContent='경과 시간';
+    if(s===null||e===null)return;
+    const overnight=document.getElementById('overnight').checked;
+    let diff=e-s;if(overnight)diff+=1440;
+    out.style.display='block';document.getElementById('cta').style.display='block';
+    if(diff<0){
+      document.getElementById('r-main').textContent='–';
+      document.getElementById('r-unit').textContent='';
+      document.getElementById('r-sent').textContent='종료 시각이 시작 시각보다 빠릅니다. 다음 날까지 이어지는 근무라면 아래 ‘자정 넘김’을 체크하세요.';
+      setL('총 분','소수 시간','시:분');setK('–','–','–');
+      document.getElementById('brk-body').innerHTML='';
+      return;
+    }
+    const h=Math.floor(diff/60),m=diff%60;
+    document.getElementById('r-main').textContent=`${h}시간${m>0?' '+m+'분':''}`;
+    document.getElementById('r-unit').textContent='';
+    document.getElementById('r-sent').textContent=`${document.getElementById('start').value}부터 ${document.getElementById('end').value}${overnight?'(다음 날)':''}까지의 경과 시간입니다.`;
+    setL('총 분','소수 시간','시:분 형식');
+    setK(diff.toLocaleString('ko-KR')+'분',(diff/60).toFixed(2)+'시간',`${pad2(h)}:${pad2(m)}`);
+    document.getElementById('brk-t').textContent='입력 요약';
+    document.getElementById('brk-body').innerHTML=
+      `<div class="brk-row"><span>시작 시각</span><b>${document.getElementById('start').value}</b></div>`+
+      `<div class="brk-row"><span>종료 시각</span><b>${document.getElementById('end').value}${overnight?' <em>다음 날</em>':''}</b></div>`+
+      `<div class="brk-row total"><span>경과 시간</span><b>${h}시간${m>0?' '+m+'분':''}</b></div>`;
+  }else{
+    const b=t2m(document.getElementById('base').value);
+    document.getElementById('r-lbl').textContent='결과 시각';
+    if(b===null)return;
+    const op=document.getElementById('op').value;
+    const addh=iint(document.getElementById('addh').value);
+    const addm=iint(document.getElementById('addm').value);
+    const delta=(addh*60+addm)*(op==='sub'?-1:1);
+    const total=b+delta;
+    const result=((total%1440)+1440)%1440;
+    const dayOff=Math.floor(total/1440);
+    const h=Math.floor(result/60),m=result%60;
+    out.style.display='block';document.getElementById('cta').style.display='block';
+    document.getElementById('r-main').textContent=`${pad2(h)}:${pad2(m)}`;
+    document.getElementById('r-unit').textContent='';
+    const dayTxt=dayOff>0?` (${dayOff}일 후)`:dayOff<0?` (${-dayOff}일 전)`:'';
+    document.getElementById('r-sent').textContent=`${document.getElementById('base').value}에 ${addh}시간 ${addm}분을 ${op==='sub'?'뺀':'더한'} 결과입니다 — ${toKorean(h,m)}${dayTxt}.`;
+    setL('오전/오후','계산량','날짜 이동');
+    setK(toKorean(h,m),`${op==='sub'?'−':'+'} ${addh}시간 ${addm}분`,dayOff===0?'당일':(dayOff>0?`+${dayOff}일`:`${dayOff}일`));
+    document.getElementById('brk-t').textContent='입력 요약';
+    document.getElementById('brk-body').innerHTML=
+      `<div class="brk-row"><span>기준 시각</span><b>${document.getElementById('base').value}</b></div>`+
+      `<div class="brk-row"><span>연산</span><b>${op==='sub'?'빼기':'더하기'} ${addh}시간 ${addm}분</b></div>`+
+      `<div class="brk-row total"><span>결과 시각</span><b>${pad2(h)}:${pad2(m)}${dayTxt}</b></div>`;
+  }
+  const hd=document.getElementById('resHead');
+  if(scroll){hd.focus();out.scrollIntoView({behavior:'smooth',block:'start'});}
+}
+function subscribe(){
+  const e=document.getElementById('email').value.trim();const msg=document.getElementById('cta-msg');
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)){msg.textContent='올바른 이메일 주소를 입력해 주세요.';msg.style.color='#fb7185';return;}
+  try{fetch('https://xyprbsmagtlzebxyxsvj.supabase.co/functions/v1/analytics-ingest',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({event_type:'newsletter_subscribe',source:'lifeflow',metadata:{email:e,campaign:'time-calculator',page:location.pathname,subscribed_at:new Date().toISOString()}})}).catch(()=>{});}catch(_){}
+  msg.textContent='감사합니다! 생활에 유용한 도구 소식을 보내드릴게요.';msg.style.color='#34d399';
+  try{localStorage.setItem('newsletter-subscribed','true');}catch(_){}
+  document.getElementById('email').value='';
+}
+calc(false);
+</script>

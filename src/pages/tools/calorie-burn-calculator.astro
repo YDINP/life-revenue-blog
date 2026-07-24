@@ -1,0 +1,263 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = '운동 칼로리 소모 계산기';
+const description = '걷기·조깅·자전거·수영·등산·줄넘기 등 운동 종류와 체중·시간만 넣으면 소모 칼로리를 바로 계산합니다. MET(대사당량) 기반 공식으로 분당 소모량과 공깃밥·치킨 환산까지 보여주는 무료 도구. 설치 불필요.';
+const ogImage = '/og/calorie-burn-calculator.png';
+
+const appLd = {
+  '@context': 'https://schema.org', '@type': 'WebApplication',
+  name: '운동 칼로리 소모 계산기', applicationCategory: 'HealthApplication', operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'KRW' },
+  description: 'MET(대사당량) 기반으로 운동 종류·체중·시간에 따른 소모 칼로리를 계산하는 무료 도구.',
+};
+const faqLd = {
+  '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+    { '@type': 'Question', name: 'MET(대사당량)란 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: 'MET(Metabolic Equivalent of Task)는 안정 시 대비 활동 강도를 나타내는 단위입니다. 1MET는 가만히 앉아 있을 때의 에너지 소비이며, 조깅(7MET)은 안정 시의 약 7배 에너지를 쓴다는 뜻입니다.' } },
+    { '@type': 'Question', name: '소모 칼로리는 어떻게 계산하나요?', acceptedAnswer: { '@type': 'Answer', text: '소모 칼로리(kcal) = MET × 3.5 × 체중(kg) ÷ 200 × 시간(분) 공식으로 계산합니다. 운동 종류마다 정해진 평균 MET 값에 본인의 체중과 운동 시간을 넣어 추정합니다.' } },
+    { '@type': 'Question', name: '실제 소모량과 얼마나 다를 수 있나요?', acceptedAnswer: { '@type': 'Answer', text: 'MET는 평균값이라 개인차가 큽니다. 심박수, 근육량·체성분, 운동 강도와 숙련도, 기온 등에 따라 실제 소모 칼로리는 달라집니다. 정확한 측정은 심박계·활동량계를 참고하세요.' } },
+    { '@type': 'Question', name: '체중이 많이 나가면 칼로리를 더 소모하나요?', acceptedAnswer: { '@type': 'Answer', text: '네. 공식에서 체중이 클수록 소모 칼로리가 비례해 늘어납니다. 같은 운동을 같은 시간 해도 체중이 무거운 사람이 더 많은 에너지를 씁니다.' } },
+  ],
+};
+---
+<BaseLayout title={title} description={description} image={ogImage} ogType="website">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(appLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+  </Fragment>
+
+  <div class="dpc">
+    <div class="wrap">
+      <span class="eyebrow"><span class="dot"></span>MET 기반 · 무료 · 설치 불필요</span>
+      <h1>운동 칼로리 소모 <span class="grad">계산기</span></h1>
+      <p class="sub">오늘 운동으로 얼마나 태웠을까요? 운동 종류·체중·시간만 넣으면 <b>MET(대사당량) 공식</b>으로 소모 칼로리와 분당 소모량을 바로 계산합니다.</p>
+
+      <form id="calcForm" onsubmit="event.preventDefault();calc(true)">
+      <div class="card">
+        <div class="card-h"><span class="n">1</span><h2>운동 정보 입력</h2></div>
+        <div class="frow">
+          <div class="fld"><span class="cap">체중 (kg)</span><input id="weight" type="number" min="1" step="0.1" aria-label="체중(kg)" value="65"></div>
+          <div class="fld"><span class="cap">운동 시간 (분)</span><input id="minutes" type="number" min="1" step="1" aria-label="운동 시간(분)" value="30"></div>
+        </div>
+        <div class="frow one">
+          <div class="fld"><span class="cap">운동 종류</span>
+            <select id="activity" aria-label="운동 종류">
+              <option value="걷기(보통)" data-met="3.5">걷기 (보통, MET 3.5)</option>
+              <option value="빠르게 걷기" data-met="4.3">빠르게 걷기 (MET 4.3)</option>
+              <option value="조깅" data-met="7.0" selected>조깅 (MET 7.0)</option>
+              <option value="달리기" data-met="9.8">달리기 (MET 9.8)</option>
+              <option value="자전거" data-met="7.5">자전거 (MET 7.5)</option>
+              <option value="수영" data-met="8.0">수영 (MET 8.0)</option>
+              <option value="등산" data-met="6.5">등산 (MET 6.5)</option>
+              <option value="줄넘기" data-met="12.3">줄넘기 (MET 12.3)</option>
+              <option value="웨이트 트레이닝" data-met="6.0">웨이트 트레이닝 (MET 6.0)</option>
+              <option value="요가" data-met="2.5">요가 (MET 2.5)</option>
+              <option value="필라테스" data-met="3.0">필라테스 (MET 3.0)</option>
+              <option value="계단 오르기" data-met="8.0">계단 오르기 (MET 8.0)</option>
+              <option value="축구" data-met="7.0">축구 (MET 7.0)</option>
+              <option value="농구" data-met="6.5">농구 (MET 6.5)</option>
+              <option value="배드민턴" data-met="5.5">배드민턴 (MET 5.5)</option>
+              <option value="테니스" data-met="7.3">테니스 (MET 7.3)</option>
+              <option value="청소·집안일" data-met="3.3">청소·집안일 (MET 3.3)</option>
+              <option value="골프" data-met="4.8">골프 (MET 4.8)</option>
+            </select>
+          </div>
+        </div>
+        <div class="strat">
+          <button type="submit" class="go">칼로리 계산</button>
+        </div>
+        <p class="tip">MET(대사당량)는 운동 강도를 나타내는 값으로, 값이 클수록 같은 시간에 더 많은 칼로리를 태웁니다. 결과는 <b>평균 MET 기반 예상치</b>이며 심박수·체성분에 따라 개인차가 있습니다.</p>
+      </div>
+      </form>
+
+      <div class="card" id="out">
+        <div class="card-h"><span class="n">2</span><h2 id="resHead" tabindex="-1">소모 칼로리</h2></div>
+        <div class="hero-lbl">소모 칼로리 (예상)</div>
+        <div class="res-hero"><span class="big grad" id="r-kcal">–</span><span class="permo">kcal</span></div>
+        <div class="hero-sent" id="r-sent"></div>
+        <div class="kpis">
+          <div class="kpi"><div class="l">분당 소모</div><div class="v em" id="r-permin">–</div></div>
+          <div class="kpi"><div class="l">적용 MET</div><div class="v bl" id="r-met">–</div></div>
+          <div class="kpi"><div class="l">운동 시간</div><div class="v" id="r-time">–</div></div>
+        </div>
+        <div class="brk">
+          <div class="brk-t">칼로리 환산 (재미로 보기)</div>
+          <div class="brk-row"><span>공깃밥 <em>1공기 ≈ 300kcal</em></span><b id="c-rice">–</b></div>
+          <div class="brk-row"><span>치킨 1조각 <em>≈ 250kcal</em></span><b id="c-chicken">–</b></div>
+          <div class="brk-row total"><span>총 소모 칼로리</span><b id="c-total">–</b></div>
+        </div>
+      </div>
+
+      <div class="cta" id="cta" style="display:none">
+        <h3>💡 운동·건강 관리를 더 쉽게 하고 싶다면</h3>
+        <p>매주 검증된 <b>건강 도구와 운동·식단 팁</b>을 정리해 보내드려요. 새 계산기와 건강 관리 가이드를 가장 먼저 받아보세요.</p>
+        <div class="emailrow">
+          <input id="email" type="email" placeholder="이메일 주소" aria-label="이메일 주소">
+          <button type="button" onclick="subscribe()">뉴스레터 받기</button>
+        </div>
+        <div class="fine" id="cta-msg" aria-live="polite">스팸 없이 건강 도구 소식만. 언제든 해지할 수 있어요.</div>
+      </div>
+
+      <div class="content">
+        <h2>운동 칼로리 소모량이란?</h2>
+        <p>운동으로 태우는 칼로리는 <b>운동 강도(MET)</b>, <b>체중</b>, <b>운동 시간</b>에 따라 결정됩니다. 같은 운동이라도 체중이 무겁거나 오래 할수록 더 많은 에너지를 소비합니다.</p>
+        <h2>MET(대사당량)란?</h2>
+        <p><b>MET</b>(Metabolic Equivalent of Task)는 가만히 앉아 있을 때(1MET)를 기준으로 활동 강도를 나타내는 단위입니다. 조깅은 7MET, 줄넘기는 12.3MET처럼 값이 클수록 강도가 높습니다.</p>
+        <ul>
+          <li><b>저강도 (2~4 MET)</b> — 요가, 필라테스, 청소·집안일, 걷기</li>
+          <li><b>중강도 (4~7 MET)</b> — 빠르게 걷기, 골프, 배드민턴, 등산, 농구</li>
+          <li><b>고강도 (7 MET 이상)</b> — 조깅, 달리기, 자전거, 수영, 줄넘기</li>
+        </ul>
+        <h2>계산 공식</h2>
+        <p>이 계산기는 다음 공식을 사용합니다.</p>
+        <ul>
+          <li><b>소모 칼로리(kcal) = MET × 3.5 × 체중(kg) ÷ 200 × 시간(분)</b></li>
+        </ul>
+        <h2>자주 묻는 질문</h2>
+        <h3>MET는 어떻게 정해지나요?</h3>
+        <p>운동별 MET는 대규모 연구로 측정한 <b>평균값</b>입니다. 개인의 숙련도·강도에 따라 실제 소비는 달라질 수 있습니다.</p>
+        <h3>실제 소모량과 다를 수 있나요?</h3>
+        <p>네. 심박수, 근육량·체성분, 운동 강도, 기온 등에 따라 달라집니다. 이 계산기는 <b>예상치</b>이며 정확한 측정은 심박계·활동량계를 참고하세요.</p>
+        <h3>다이어트에 어떻게 활용하나요?</h3>
+        <p>체지방 1kg을 빼려면 약 7,700kcal를 소비해야 합니다. 소모 칼로리와 섭취 칼로리를 함께 관리하면 목표 설정에 도움이 됩니다.</p>
+      </div>
+
+      <p class="disc">참고용 계산기입니다. 운동별 평균 MET(대사당량)를 기준으로 소모 칼로리를 추정하며, 심박수·근육량·체성분·운동 강도 등 개인차에 따라 실제 값과 다를 수 있습니다. 입력값은 서버로 전송되지 않고 브라우저에서만 계산됩니다.</p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style is:global>
+.dpc{--grad:linear-gradient(135deg,#34d399,#22d3ee);--radius:18px;
+  --surface:#ffffff;--surface2:#f4f7fb;--line:#e5eaf1;--line2:#d4dce7;
+  --text:#0f1a2b;--mut:#48566b;--dim:#6a7889;--emerald:#0c9c6b;--teal:#0d7d9c;--rose:#e11d63;
+  --gradtext:linear-gradient(135deg,#0aa06e,#0d86a6);
+  --shadow:0 10px 30px -14px rgba(20,45,90,.16);--panelborder:#e6ecf3;
+  --panel:radial-gradient(700px 400px at 12% -8%,rgba(52,211,153,.07),transparent 60%),radial-gradient(600px 400px at 100% 0%,rgba(34,211,238,.06),transparent 55%),linear-gradient(180deg,#f8fbfe,#eef3f9);
+  max-width:920px;margin:26px auto;padding:28px 22px 32px;border-radius:24px;border:1px solid var(--panelborder);
+  background:var(--panel);color:var(--text);
+  font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.55;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
+html.dark .dpc{--surface:#121c2e;--surface2:#0e1626;--line:#1f2c42;--line2:#2a3a56;
+  --text:#eef2f8;--mut:#9fb0c6;--dim:#8b97ac;--emerald:#34d399;--teal:#22d3ee;--rose:#fb7185;
+  --gradtext:linear-gradient(135deg,#34d399,#22d3ee);
+  --shadow:0 12px 40px -12px rgba(0,0,0,.55);--panelborder:#17233a;
+  --panel:radial-gradient(700px 400px at 12% -8%,rgba(52,211,153,.10),transparent 60%),radial-gradient(600px 400px at 100% 0%,rgba(34,211,238,.08),transparent 55%),linear-gradient(180deg,#0d1524,#0a0f1a)}
+.dpc *{box-sizing:border-box;margin:0;padding:0}
+.dpc .wrap{max-width:100%;margin:0 auto}
+.dpc .eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--emerald);background:rgba(52,211,153,.10);border:1px solid rgba(52,211,153,.22);padding:5px 12px;border-radius:999px;margin-bottom:16px}
+.dpc .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.2)}
+.dpc h1{font-size:clamp(26px,5vw,38px);font-weight:800;line-height:1.12;letter-spacing:-.03em;color:var(--text)}
+.dpc .grad{background:var(--gradtext);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.dpc .sub{color:var(--mut);font-size:16px;margin:12px 0 26px;max-width:640px}
+.dpc .card{background:linear-gradient(180deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:18px;box-shadow:var(--shadow)}
+.dpc .card-h{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.dpc .card-h .n{width:26px;height:26px;border-radius:8px;background:rgba(52,211,153,.12);color:var(--emerald);display:grid;place-items:center;font-size:13px;font-weight:700}
+.dpc .card-h h2{font-size:16.5px;font-weight:700;letter-spacing:-.02em;color:var(--text)}
+.dpc .frow{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.dpc .fld{position:relative}
+.dpc .fld .cap{display:block;font-size:12px;color:var(--mut);font-weight:600;margin-bottom:5px}
+.dpc .fld input{width:100%;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:11px 12px;color:var(--text);font-size:15px;font-family:inherit;transition:border-color .15s,box-shadow .15s}
+.dpc .fld input::placeholder{color:var(--dim)}
+.dpc .fld input:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.14)}
+.dpc .strat{display:flex;margin-top:6px}
+.dpc .go{margin-left:auto;background:var(--grad);color:#04121b;border:none;border-radius:12px;padding:12px 26px;font-weight:800;font-size:15px;font-family:inherit;cursor:pointer;box-shadow:0 8px 22px -8px rgba(52,211,153,.6);transition:transform .12s,filter .15s}
+.dpc .go:hover{filter:brightness(1.05)}.dpc .go:active{transform:translateY(1px)}
+.dpc .tip{font-size:13px;color:var(--mut);margin-top:14px;line-height:1.5}
+.dpc .tip b{color:var(--text)}
+.dpc button:focus-visible,.dpc input:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.dpc #out{display:none}
+.dpc .hero-lbl{font-size:13px;color:var(--mut);font-weight:600;margin:2px 0}
+.dpc .res-hero{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;padding:0 2px 4px;background:none;border-radius:0;text-align:left;margin:0}
+.dpc .res-hero .big{font-size:clamp(30px,7vw,46px);font-weight:800;letter-spacing:-.03em}
+.dpc .permo{font-size:16px;color:var(--mut);font-weight:600}
+.dpc .hero-sent{font-size:15px;color:var(--mut);margin:2px 2px 18px}
+.dpc .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.dpc .kpi{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:15px 16px}
+.dpc .kpi .l{font-size:12.5px;color:var(--mut);font-weight:600}
+.dpc .kpi .v{font-size:20px;font-weight:800;margin-top:5px;letter-spacing:-.02em;color:var(--text)}
+.dpc .v.em{color:var(--emerald)}.dpc .v.bl{color:var(--teal)}
+.dpc .barwrap{margin-top:18px}
+.dpc .stackbar{display:flex;height:30px;border-radius:9px;overflow:hidden;border:1px solid var(--line);background:var(--surface2)}
+.dpc .stackbar .seg{height:100%}
+.dpc .stackbar .seg.net{background:linear-gradient(90deg,#34d399,#22d3ee)}
+.dpc .stackbar .seg.ded{background:repeating-linear-gradient(45deg,var(--line2),var(--line2) 6px,var(--surface2) 6px,var(--surface2) 12px)}
+.dpc .barleg{display:flex;gap:16px;font-size:12.5px;color:var(--mut);margin-top:8px}
+.dpc .barleg i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:middle}
+.dpc .barleg i.net{background:#22d3ee}.dpc .barleg i.ded{background:var(--line2)}
+.dpc .barleg b{color:var(--text)}
+.dpc .brk{margin-top:18px;border-top:1px solid var(--line);padding-top:14px}
+.dpc .brk-t{font-size:13px;color:var(--mut);font-weight:700;margin-bottom:8px}
+.dpc .brk-row{display:flex;justify-content:space-between;align-items:center;padding:8px 2px;font-size:14.5px;border-bottom:1px solid var(--line)}
+.dpc .brk-row span{color:var(--text)}
+.dpc .brk-row em{font-style:normal;font-size:12px;color:var(--dim);margin-left:6px}
+.dpc .brk-row b{color:var(--text);font-weight:700}
+.dpc .brk-row.total{border-bottom:none;margin-top:4px;font-weight:800}
+.dpc .brk-row.total span,.dpc .brk-row.total b{color:var(--rose);font-size:15.5px}
+.dpc .cta{background:linear-gradient(135deg,#0f2740,#12233a);border:1px solid #274563;border-radius:var(--radius);padding:24px;position:relative;overflow:hidden;margin-bottom:18px}
+.dpc .cta::before{content:"";position:absolute;inset:0;background:radial-gradient(400px 160px at 90% 0%,rgba(34,211,238,.14),transparent 70%);pointer-events:none}
+.dpc .cta h3{font-size:19px;font-weight:800;letter-spacing:-.02em;margin-bottom:7px;position:relative;color:#f2f7fb}
+.dpc .cta p{color:#aabdd0;font-size:14px;margin-bottom:14px;max-width:580px;position:relative}
+.dpc .cta .fine{color:#8097ad}
+.dpc .emailrow{display:flex;gap:9px;flex-wrap:wrap;position:relative}
+.dpc .cta .emailrow input{flex:1;min-width:220px;background:#0d1b2c;border:1px solid #26445f;border-radius:12px;padding:12px 14px;color:#eef2f8;font-size:14.5px;font-family:inherit}
+.dpc .cta .emailrow input::placeholder{color:#7089a0}
+.dpc .emailrow button{background:var(--grad);color:#04121b;border:none;border-radius:12px;padding:12px 22px;font-weight:800;font-size:14.5px;font-family:inherit;cursor:pointer;transition:.15s}
+.dpc .emailrow button:hover{filter:brightness(1.05)}
+.dpc .fine{font-size:11.5px;margin-top:10px;position:relative}
+.dpc .content{color:var(--mut);font-size:15px}
+.dpc .content h2{font-size:19px;color:var(--text);font-weight:800;letter-spacing:-.02em;margin:26px 0 10px}
+.dpc .content h3{font-size:15.5px;color:var(--text);font-weight:700;margin:16px 0 4px}
+.dpc .content p{margin-bottom:8px}
+.dpc .content ul{margin:6px 0 6px 18px}.dpc .content li{margin-bottom:5px}
+.dpc .disc{font-size:12px;color:var(--dim);margin-top:22px;line-height:1.6}
+@media(max-width:600px){
+  .dpc{padding:20px 14px 24px;margin:16px auto;border-radius:18px}
+  .dpc .frow{grid-template-columns:1fr}
+  .dpc .kpis{grid-template-columns:1fr}
+  .dpc .go{width:100%}
+}
+.dpc .frow.one{grid-template-columns:1fr}
+.dpc .fld select{width:100%;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:11px 12px;color:var(--text);font-size:15px;font-family:inherit;transition:border-color .15s,box-shadow .15s;appearance:none;-webkit-appearance:none;cursor:pointer}
+.dpc .fld select:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.14)}
+</style>
+
+<script is:inline>
+const kcalFmt=n=>Math.round(n).toLocaleString('ko-KR');
+const MET={'걷기(보통)':3.5,'빠르게 걷기':4.3,'조깅':7.0,'달리기':9.8,'자전거':7.5,'수영':8.0,'등산':6.5,'줄넘기':12.3,'웨이트 트레이닝':6.0,'요가':2.5,'필라테스':3.0,'계단 오르기':8.0,'축구':7.0,'농구':6.5,'배드민턴':5.5,'테니스':7.3,'청소·집안일':3.3,'골프':4.8};
+function calc(scroll){
+  const weight=parseFloat(document.getElementById('weight').value)||0;
+  const minutes=parseFloat(document.getElementById('minutes').value)||0;
+  const sel=document.getElementById('activity');
+  const activity=sel.value;
+  const met=MET[activity]||parseFloat(sel.options[sel.selectedIndex].dataset.met)||0;
+  if(weight<=0||minutes<=0||met<=0)return;
+  // 소모 칼로리 = MET × 3.5 × 체중(kg) ÷ 200 × 시간(분)
+  const kcal=met*3.5*weight/200*minutes;
+  const perMin=kcal/minutes;
+  const rice=kcal/300;
+  const chicken=kcal/250;
+  // render
+  document.getElementById('out').style.display='block';
+  document.getElementById('cta').style.display='block';
+  document.getElementById('r-kcal').textContent=kcalFmt(kcal);
+  document.getElementById('r-sent').textContent=`${activity}을(를) ${minutes}분 하면 약 ${kcalFmt(kcal)}kcal를 소모하는 것으로 예상됩니다.`;
+  document.getElementById('r-permin').textContent=perMin.toFixed(1)+' kcal';
+  document.getElementById('r-met').textContent=met.toFixed(1);
+  document.getElementById('r-time').textContent=kcalFmt(minutes)+'분';
+  document.getElementById('c-rice').textContent='약 '+rice.toFixed(1)+'공기';
+  document.getElementById('c-chicken').textContent='약 '+chicken.toFixed(1)+'조각';
+  document.getElementById('c-total').textContent=kcalFmt(kcal)+'kcal';
+  const h=document.getElementById('resHead');
+  if(scroll){h.focus();document.getElementById('out').scrollIntoView({behavior:'smooth',block:'start'});}
+}
+function subscribe(){
+  const e=document.getElementById('email').value.trim();const msg=document.getElementById('cta-msg');
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)){msg.textContent='올바른 이메일 주소를 입력해 주세요.';msg.style.color='#fb7185';return;}
+  try{fetch('https://xyprbsmagtlzebxyxsvj.supabase.co/functions/v1/analytics-ingest',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({event_type:'newsletter_subscribe',source:'lifeflow',metadata:{email:e,campaign:'calorie-burn-calculator',page:location.pathname,subscribed_at:new Date().toISOString()}})}).catch(()=>{});}catch(_){}
+  msg.textContent='감사합니다! 건강 도구와 운동·식단 팁 소식을 보내드릴게요.';msg.style.color='#34d399';
+  try{localStorage.setItem('newsletter-subscribed','true');}catch(_){}
+  document.getElementById('email').value='';
+}
+document.getElementById('activity').addEventListener('change',()=>calc(false));
+calc(false);
+</script>
