@@ -1,0 +1,274 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = '수면 시간 계산기 (수면 주기)';
+const description = '지금 자면 몇 시에 일어나야 개운할까? 반대로 이 시각에 일어나려면 언제 자야 할까? 90분 수면 주기와 잠드는 시간(14분)을 반영해 개운하게 깰 수 있는 추천 기상·취침 시각을 바로 계산합니다. 무료·설치 불필요.';
+const ogImage = '/og/sleep-calculator.png';
+
+const appLd = {
+  '@context': 'https://schema.org', '@type': 'WebApplication',
+  name: '수면 시간 계산기 (수면 주기)', applicationCategory: 'UtilitiesApplication', operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'KRW' },
+  description: '90분 수면 주기와 잠드는 시간을 반영해 개운하게 일어날 수 있는 추천 기상 시각·취침 시각을 계산하는 무료 도구.',
+};
+const faqLd = {
+  '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+    { '@type': 'Question', name: '수면 주기가 90분인 이유는 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: '수면은 얕은 잠·깊은 잠·렘(REM)수면이 하나로 이어진 주기를 밤새 반복합니다. 이 한 주기가 보통 약 90분이며, 밤 동안 4~6회 반복됩니다. 개인차가 있어 80~110분 정도로 볼 수 있습니다.' } },
+    { '@type': 'Question', name: '왜 수면 주기가 끝날 때 일어나면 개운한가요?', acceptedAnswer: { '@type': 'Answer', text: '주기의 끝(얕은 잠 구간)에 알람이 울리면 깨어나기 쉽고 수면 관성이 적어 개운합니다. 반대로 깊은 잠 한가운데서 깨면 같은 시간을 자도 더 피곤하게 느껴집니다.' } },
+    { '@type': 'Question', name: '하루에 몇 시간 자는 게 좋나요?', acceptedAnswer: { '@type': 'Answer', text: '성인 기준 권장 수면 시간은 하루 7~9시간입니다. 수면 주기로 보면 5~6주기(약 7.5~9시간)가 이 범위에 해당해 이 계산기에서 권장 값으로 표시됩니다.' } },
+    { '@type': 'Question', name: '잠드는 시간은 왜 더하나요?', acceptedAnswer: { '@type': 'Answer', text: '자리에 누워도 실제로 잠들기까지 평균 약 14분이 걸립니다. 그래서 취침 시각에 이 시간을 더한 뒤부터 수면 주기를 계산해야 실제 기상 시각이 더 정확합니다.' } },
+  ],
+};
+---
+<BaseLayout title={title} description={description} image={ogImage} ogType="website">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(appLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+  </Fragment>
+
+  <div class="dpc">
+    <div class="wrap">
+      <span class="eyebrow"><span class="dot"></span>90분 수면 주기 기반 · 무료 · 설치 불필요</span>
+      <h1>수면 시간 <span class="grad">계산기</span></h1>
+      <p class="sub">지금 자면 몇 시에 일어나야 개운할까요? 반대로 이 시각에 일어나려면 언제 자야 할까요? <b>90분 수면 주기</b>와 <b>잠드는 시간(약 14분)</b>을 반영해 개운하게 깰 수 있는 시각을 알려드립니다.</p>
+
+      <form id="calcForm" onsubmit="event.preventDefault();calc(true)">
+      <div class="card">
+        <div class="card-h"><span class="n">1</span><h2>계산 방식과 시각 입력</h2></div>
+        <div class="modeseg" id="mode" role="tablist" aria-label="계산 방식">
+          <button type="button" id="mode-A" class="on" aria-selected="true" onclick="setMode('A')">지금 자면 몇 시에 일어날까</button>
+          <button type="button" id="mode-B" aria-selected="false" onclick="setMode('B')">이 시각에 일어나려면 언제 잘까</button>
+        </div>
+        <div class="frow">
+          <div class="fld" id="fld-A"><span class="cap">취침 시각 (자리에 눕는 시각)</span><input id="bedtime" type="time" aria-label="취침 시각" onchange="calc(false)"></div>
+          <div class="fld" id="fld-B" style="display:none"><span class="cap">기상 목표 시각</span><input id="waketime" type="time" value="07:00" aria-label="기상 목표 시각" onchange="calc(false)"></div>
+        </div>
+        <div class="strat">
+          <button type="submit" class="go">추천 시각 계산</button>
+        </div>
+        <p class="tip">잠자리에 누워도 실제로 잠들기까지 평균 <b>약 14분</b>이 걸립니다. 수면 한 주기는 <b>약 90분</b>이며, 주기의 <b>끝(얕은 잠)</b>에 깨어나야 개운합니다. 그래서 5~6주기(약 7.5~9시간)를 권장으로 표시합니다.</p>
+      </div>
+      </form>
+
+      <div class="card" id="out">
+        <div class="card-h"><span class="n">2</span><h2 id="resHead" tabindex="-1">추천 시각</h2></div>
+        <div class="hero-lbl" id="r-lbl">예상 기상 시각 (권장 6사이클)</div>
+        <div class="res-hero"><span class="big grad" id="r-time">–</span><span class="permo" id="r-permo"></span></div>
+        <div class="hero-sent" id="r-sent"></div>
+        <div class="kpis">
+          <div class="kpi"><div class="l">권장 수면 시간</div><div class="v em" id="r-hours">–</div></div>
+          <div class="kpi"><div class="l">수면 주기</div><div class="v" id="r-cycles">–</div></div>
+          <div class="kpi"><div class="l">잠들기까지 반영</div><div class="v bl">약 14분</div></div>
+        </div>
+        <div class="brk">
+          <div class="brk-t" id="rec-t">주기별 추천 기상 시각</div>
+          <div id="reclist"></div>
+        </div>
+      </div>
+
+      <div class="cta" id="cta" style="display:none">
+        <h3>😴 잘 자고 잘 사는 습관이 궁금하다면</h3>
+        <p>수면·루틴·건강 관리에 바로 쓸 수 있는 실용 팁만 골라 보내드리는 <b>건강 도구 뉴스레터</b>를 무료로 받아보세요. 새로 나온 건강 계산기 소식도 가장 먼저 안내드립니다.</p>
+        <div class="emailrow">
+          <input id="email" type="email" placeholder="이메일 주소" aria-label="이메일 주소">
+          <button type="button" onclick="subscribe()">무료 뉴스레터 받기</button>
+        </div>
+        <div class="fine" id="cta-msg" aria-live="polite">스팸 없이 건강 도구 소식만. 언제든 해지할 수 있어요.</div>
+      </div>
+
+      <div class="content">
+        <h2>수면 주기(90분)란 무엇인가요?</h2>
+        <p>잠은 <b>얕은 잠 → 깊은 잠 → 렘(REM)수면</b>이 하나로 이어진 <b>주기</b>를 밤새 반복하는 과정입니다. 이 한 주기가 보통 <b>약 90분</b>이며, 하룻밤에 4~6회 반복됩니다. 이 계산기는 취침 시각에 잠드는 시간(약 14분)을 더한 뒤 90분 단위로 계산해, 주기가 끝나는 <b>얕은 잠 구간</b>에 맞춰 개운하게 깰 수 있는 시각을 추천합니다.</p>
+        <h2>개운하게 일어나는 원리</h2>
+        <ul>
+          <li><b>주기의 끝에 깨기</b> — 얕은 잠일 때 알람이 울리면 수면 관성이 적어 덜 피곤합니다.</li>
+          <li><b>깊은 잠 중 기상 피하기</b> — 같은 시간을 자도 깊은 잠 한가운데서 깨면 더 피곤합니다.</li>
+          <li><b>5~6주기 권장</b> — 약 7.5~9시간으로, 성인 권장 수면 시간(7~9시간)과 겹칩니다.</li>
+          <li><b>잠드는 시간 고려</b> — 눕자마자 잠들지 않으므로 약 14분을 더해 계산합니다.</li>
+        </ul>
+        <h2>자주 묻는 질문</h2>
+        <h3>수면 주기가 정확히 90분인가요?</h3>
+        <p>평균값입니다. 실제 주기는 사람마다 약 80~110분으로 차이가 있고, 나이·컨디션·수면 환경에 따라 달라집니다. 추천 시각은 <b>참고용 목표</b>로 활용하세요.</p>
+        <h3>추천 시각에 알람을 맞추면 항상 개운한가요?</h3>
+        <p>개운하게 깰 <b>확률</b>을 높여줍니다. 다만 카페인·음주·스트레스 등으로 주기가 흐트러질 수 있어 완벽히 일치하지는 않습니다.</p>
+        <h3>낮잠에도 쓸 수 있나요?</h3>
+        <p>짧은 낮잠은 1주기(약 90분)나 20분 이내가 좋습니다. 이 계산기는 밤잠 기준의 여러 주기 추천에 더 적합합니다.</p>
+      </div>
+
+      <p class="disc">참고용 계산기입니다. 수면 주기(약 90분)와 잠드는 시간(약 14분)은 평균값이며 개인차가 있어 실제 컨디션과 다를 수 있습니다. 수면 문제가 지속되면 전문가와 상담하세요. 입력값은 서버로 전송되지 않고 브라우저에서만 계산됩니다.</p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style is:global>
+.dpc{--grad:linear-gradient(135deg,#34d399,#22d3ee);--radius:18px;
+  --surface:#ffffff;--surface2:#f4f7fb;--line:#e5eaf1;--line2:#d4dce7;
+  --text:#0f1a2b;--mut:#48566b;--dim:#6a7889;--emerald:#0c9c6b;--teal:#0d7d9c;--rose:#e11d63;
+  --gradtext:linear-gradient(135deg,#0aa06e,#0d86a6);
+  --shadow:0 10px 30px -14px rgba(20,45,90,.16);--panelborder:#e6ecf3;
+  --panel:radial-gradient(700px 400px at 12% -8%,rgba(52,211,153,.07),transparent 60%),radial-gradient(600px 400px at 100% 0%,rgba(34,211,238,.06),transparent 55%),linear-gradient(180deg,#f8fbfe,#eef3f9);
+  max-width:920px;margin:26px auto;padding:28px 22px 32px;border-radius:24px;border:1px solid var(--panelborder);
+  background:var(--panel);color:var(--text);
+  font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.55;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
+html.dark .dpc{--surface:#121c2e;--surface2:#0e1626;--line:#1f2c42;--line2:#2a3a56;
+  --text:#eef2f8;--mut:#9fb0c6;--dim:#8b97ac;--emerald:#34d399;--teal:#22d3ee;--rose:#fb7185;
+  --gradtext:linear-gradient(135deg,#34d399,#22d3ee);
+  --shadow:0 12px 40px -12px rgba(0,0,0,.55);--panelborder:#17233a;
+  --panel:radial-gradient(700px 400px at 12% -8%,rgba(52,211,153,.10),transparent 60%),radial-gradient(600px 400px at 100% 0%,rgba(34,211,238,.08),transparent 55%),linear-gradient(180deg,#0d1524,#0a0f1a)}
+.dpc *{box-sizing:border-box;margin:0;padding:0}
+.dpc .wrap{max-width:100%;margin:0 auto}
+.dpc .eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--emerald);background:rgba(52,211,153,.10);border:1px solid rgba(52,211,153,.22);padding:5px 12px;border-radius:999px;margin-bottom:16px}
+.dpc .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.2)}
+.dpc h1{font-size:clamp(26px,5vw,38px);font-weight:800;line-height:1.12;letter-spacing:-.03em;color:var(--text)}
+.dpc .grad{background:var(--gradtext);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.dpc .sub{color:var(--mut);font-size:16px;margin:12px 0 26px;max-width:640px}
+.dpc .card{background:linear-gradient(180deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:18px;box-shadow:var(--shadow)}
+.dpc .card-h{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.dpc .card-h .n{width:26px;height:26px;border-radius:8px;background:rgba(52,211,153,.12);color:var(--emerald);display:grid;place-items:center;font-size:13px;font-weight:700}
+.dpc .card-h h2{font-size:16.5px;font-weight:700;letter-spacing:-.02em;color:var(--text)}
+.dpc .frow{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.dpc .fld{position:relative}
+.dpc .fld .cap{display:block;font-size:12px;color:var(--mut);font-weight:600;margin-bottom:5px}
+.dpc .fld input{width:100%;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:11px 12px;color:var(--text);font-size:15px;font-family:inherit;transition:border-color .15s,box-shadow .15s}
+.dpc .fld input::placeholder{color:var(--dim)}
+.dpc .fld input:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.14)}
+.dpc .strat{display:flex;margin-top:6px}
+.dpc .go{margin-left:auto;background:var(--grad);color:#04121b;border:none;border-radius:12px;padding:12px 26px;font-weight:800;font-size:15px;font-family:inherit;cursor:pointer;box-shadow:0 8px 22px -8px rgba(52,211,153,.6);transition:transform .12s,filter .15s}
+.dpc .go:hover{filter:brightness(1.05)}.dpc .go:active{transform:translateY(1px)}
+.dpc .tip{font-size:13px;color:var(--mut);margin-top:14px;line-height:1.5}
+.dpc .tip b{color:var(--text)}
+.dpc button:focus-visible,.dpc input:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.dpc #out{display:none}
+.dpc .hero-lbl{font-size:13px;color:var(--mut);font-weight:600;margin:2px 0}
+.dpc .res-hero{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;padding:0 2px 4px;background:none;border-radius:0;text-align:left;margin:0}
+.dpc .res-hero .big{font-size:clamp(30px,7vw,46px);font-weight:800;letter-spacing:-.03em}
+.dpc .permo{font-size:16px;color:var(--mut);font-weight:600}
+.dpc .hero-sent{font-size:15px;color:var(--mut);margin:2px 2px 18px}
+.dpc .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.dpc .kpi{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:15px 16px}
+.dpc .kpi .l{font-size:12.5px;color:var(--mut);font-weight:600}
+.dpc .kpi .v{font-size:20px;font-weight:800;margin-top:5px;letter-spacing:-.02em;color:var(--text)}
+.dpc .v.em{color:var(--emerald)}.dpc .v.bl{color:var(--teal)}
+.dpc .barwrap{margin-top:18px}
+.dpc .stackbar{display:flex;height:30px;border-radius:9px;overflow:hidden;border:1px solid var(--line);background:var(--surface2)}
+.dpc .stackbar .seg{height:100%}
+.dpc .stackbar .seg.net{background:linear-gradient(90deg,#34d399,#22d3ee)}
+.dpc .stackbar .seg.ded{background:repeating-linear-gradient(45deg,var(--line2),var(--line2) 6px,var(--surface2) 6px,var(--surface2) 12px)}
+.dpc .barleg{display:flex;gap:16px;font-size:12.5px;color:var(--mut);margin-top:8px}
+.dpc .barleg i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:middle}
+.dpc .barleg i.net{background:#22d3ee}.dpc .barleg i.ded{background:var(--line2)}
+.dpc .barleg b{color:var(--text)}
+.dpc .brk{margin-top:18px;border-top:1px solid var(--line);padding-top:14px}
+.dpc .brk-t{font-size:13px;color:var(--mut);font-weight:700;margin-bottom:8px}
+.dpc .brk-row{display:flex;justify-content:space-between;align-items:center;padding:8px 2px;font-size:14.5px;border-bottom:1px solid var(--line)}
+.dpc .brk-row span{color:var(--text)}
+.dpc .brk-row em{font-style:normal;font-size:12px;color:var(--dim);margin-left:6px}
+.dpc .brk-row b{color:var(--text);font-weight:700}
+.dpc .brk-row.total{border-bottom:none;margin-top:4px;font-weight:800}
+.dpc .brk-row.total span,.dpc .brk-row.total b{color:var(--rose);font-size:15.5px}
+.dpc .cta{background:linear-gradient(135deg,#0f2740,#12233a);border:1px solid #274563;border-radius:var(--radius);padding:24px;position:relative;overflow:hidden;margin-bottom:18px}
+.dpc .cta::before{content:"";position:absolute;inset:0;background:radial-gradient(400px 160px at 90% 0%,rgba(34,211,238,.14),transparent 70%);pointer-events:none}
+.dpc .cta h3{font-size:19px;font-weight:800;letter-spacing:-.02em;margin-bottom:7px;position:relative;color:#f2f7fb}
+.dpc .cta p{color:#aabdd0;font-size:14px;margin-bottom:14px;max-width:580px;position:relative}
+.dpc .cta .fine{color:#8097ad}
+.dpc .emailrow{display:flex;gap:9px;flex-wrap:wrap;position:relative}
+.dpc .cta .emailrow input{flex:1;min-width:220px;background:#0d1b2c;border:1px solid #26445f;border-radius:12px;padding:12px 14px;color:#eef2f8;font-size:14.5px;font-family:inherit}
+.dpc .cta .emailrow input::placeholder{color:#7089a0}
+.dpc .emailrow button{background:var(--grad);color:#04121b;border:none;border-radius:12px;padding:12px 22px;font-weight:800;font-size:14.5px;font-family:inherit;cursor:pointer;transition:.15s}
+.dpc .emailrow button:hover{filter:brightness(1.05)}
+.dpc .fine{font-size:11.5px;margin-top:10px;position:relative}
+.dpc .content{color:var(--mut);font-size:15px}
+.dpc .content h2{font-size:19px;color:var(--text);font-weight:800;letter-spacing:-.02em;margin:26px 0 10px}
+.dpc .content h3{font-size:15.5px;color:var(--text);font-weight:700;margin:16px 0 4px}
+.dpc .content p{margin-bottom:8px}
+.dpc .content ul{margin:6px 0 6px 18px}.dpc .content li{margin-bottom:5px}
+.dpc .disc{font-size:12px;color:var(--dim);margin-top:22px;line-height:1.6}
+@media(max-width:600px){
+  .dpc{padding:20px 14px 24px;margin:16px auto;border-radius:18px}
+  .dpc .frow{grid-template-columns:1fr}
+  .dpc .kpis{grid-template-columns:1fr}
+  .dpc .go{width:100%}
+}
+/* tool-specific */
+.dpc .modeseg{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.dpc .modeseg button{flex:1;min-width:210px;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:11px 14px;color:var(--mut);font-weight:700;font-size:14px;font-family:inherit;cursor:pointer;transition:.15s;text-align:center}
+.dpc .modeseg button.on{background:rgba(52,211,153,.12);border-color:var(--emerald);color:var(--emerald)}
+.dpc .brk-row.rec{background:rgba(52,211,153,.07);border-radius:8px;padding-left:8px;padding-right:8px}
+.dpc .brk-row.rec b{color:var(--emerald)}
+.dpc .rec-tag{font-style:normal;font-size:11px;font-weight:800;color:var(--emerald);background:rgba(52,211,153,.14);border-radius:999px;padding:2px 8px;margin-left:8px}
+</style>
+
+<script is:inline>
+const CYCLE=90, FALL=14;
+let mode='A';
+function pad(n){return String(n).padStart(2,'0');}
+function toMin(v){ // "HH:MM" -> minutes, or null
+  if(!v||!/^\d{1,2}:\d{2}$/.test(v))return null;
+  const[h,m]=v.split(':').map(Number);
+  if(h>23||m>59)return null;
+  return h*60+m;
+}
+function fmtT(min){ // minutes (any int) -> "오전 6시 30분"
+  min=((Math.round(min)%1440)+1440)%1440;
+  const h=Math.floor(min/60), m=min%60;
+  const ap=h<12?'오전':'오후';
+  let h12=h%12; if(h12===0)h12=12;
+  return `${ap} ${h12}시${m>0?' '+m+'분':''}`;
+}
+function hoursLabel(c){const v=c*1.5;return (Number.isInteger(v)?v:v.toFixed(1))+'시간';}
+function setMode(m){
+  mode=m;
+  document.getElementById('mode-A').classList.toggle('on',m==='A');
+  document.getElementById('mode-B').classList.toggle('on',m==='B');
+  document.getElementById('mode-A').setAttribute('aria-selected',m==='A');
+  document.getElementById('mode-B').setAttribute('aria-selected',m==='B');
+  document.getElementById('fld-A').style.display=m==='A'?'':'none';
+  document.getElementById('fld-B').style.display=m==='B'?'':'none';
+  calc(false);
+}
+function calc(scroll){
+  const cycles=[6,5,4,3];
+  let base;
+  if(mode==='A'){ base=toMin(document.getElementById('bedtime').value); }
+  else { base=toMin(document.getElementById('waketime').value); }
+  if(base===null)return;
+  // 대표(6사이클) 시각
+  const big = mode==='A' ? base+FALL+6*CYCLE : base-FALL-6*CYCLE;
+  document.getElementById('out').style.display='block';
+  document.getElementById('cta').style.display='block';
+  document.getElementById('r-lbl').textContent = mode==='A'
+    ? '예상 기상 시각 (권장 6사이클)' : '예상 취침 시각 (권장 6사이클)';
+  document.getElementById('r-permo').textContent = mode==='A' ? '에 기상' : '에 취침';
+  document.getElementById('r-time').textContent = fmtT(big);
+  document.getElementById('r-sent').textContent = mode==='A'
+    ? `입력한 시각에 자리에 누우면, 잠드는 시간과 6번의 수면 주기(약 9시간)를 거쳐 이 시각에 개운하게 일어날 수 있어요.`
+    : `목표 기상 시각에 개운하게 일어나려면, 6번의 수면 주기(약 9시간)를 확보할 수 있는 이 시각쯤 잠자리에 드는 게 좋아요.`;
+  document.getElementById('r-hours').textContent='9시간';
+  document.getElementById('r-cycles').textContent='6사이클';
+  document.getElementById('rec-t').textContent = mode==='A'
+    ? '주기별 추천 기상 시각' : '주기별 추천 취침 시각';
+  // 리스트: 사이클 많은 순(잠 많이 자는 순)
+  let html='';
+  for(const c of cycles){
+    const t = mode==='A' ? base+FALL+c*CYCLE : base-FALL-c*CYCLE;
+    const rec=(c===6||c===5);
+    html += `<div class="brk-row${rec?' rec':''}"><span>${c}사이클 <em>수면 약 ${hoursLabel(c)}</em>${rec?'<i class="rec-tag">권장</i>':''}</span><b>${fmtT(t)}</b></div>`;
+  }
+  document.getElementById('reclist').innerHTML=html;
+  if(scroll){const h=document.getElementById('resHead');h.focus();document.getElementById('out').scrollIntoView({behavior:'smooth',block:'start'});}
+}
+function subscribe(){
+  const e=document.getElementById('email').value.trim();const msg=document.getElementById('cta-msg');
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)){msg.textContent='올바른 이메일 주소를 입력해 주세요.';msg.style.color='#fb7185';return;}
+  try{fetch('https://xyprbsmagtlzebxyxsvj.supabase.co/functions/v1/analytics-ingest',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({event_type:'newsletter_subscribe',source:'lifeflow',metadata:{email:e,campaign:'sleep-calculator',page:location.pathname,subscribed_at:new Date().toISOString()}})}).catch(()=>{});}catch(_){}
+  msg.textContent='감사합니다! 건강 도구 뉴스레터를 보내드릴게요.';msg.style.color='#34d399';
+  try{localStorage.setItem('newsletter-subscribed','true');}catch(_){}
+  document.getElementById('email').value='';
+}
+// seed: 취침 시각을 현재 시각으로
+(function(){
+  const now=new Date();
+  document.getElementById('bedtime').value=pad(now.getHours())+':'+pad(now.getMinutes());
+})();
+calc(false);
+</script>
