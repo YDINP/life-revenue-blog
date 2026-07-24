@@ -76,6 +76,8 @@ noindex: true
 
 건강한 식단은 위와 같은 비율로 구성되어야 합니다. 탄수화물은 전체 칼로리의 50%, 단백질은 25%, 지방은 25% 정도를 차지하는 것이 이상적입니다.
 
+> 💡 키·몸무게로 BMI와 하루 권장 칼로리(BMR·TDEE)를 계산해 볼 수 있어요 — [BMI·칼로리 계산기](/tools/bmi-calorie-calculator/)로 내 하루 권장 칼로리를 먼저 확인해 보세요.
+
 ## 주요 영양소별 식품 점수 평가
 
 <div class="chart-progress" data-title="주요 식품의 영양 점수" data-labels="연어,브로콜리,계란,통곡물,베리류" data-values="95,92,90,88,85" data-colors="#f59e0b,#009e73,#3b82f6,#d55e00,#8b5cf6" data-max="100" data-unit="점"></div>

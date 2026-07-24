@@ -109,6 +109,8 @@ noindex: true
 
 <div class="chart-bar" data-orient="vertical" data-title="4인 가족 3박 4일 여행 예산 비교" data-labels="예산절감형,표준형,프리미엄형" data-values="850000,1450000,2100000" data-colors="#009e73,#3b82f6,#f59e0b" data-unit="원"></div>
 
+> 💡 여행·모임 경비를 인원수로 딱 나눠 1인당 금액을 계산해 볼 수 있어요 — [더치페이 계산기](/tools/dutchpay-calculator/)로 직접 확인해 보세요.
+
 ### 예산절감형 (약 850,000원/3박 4일)
 
 - 숙소: 게스트하우스 (50,000원 × 3박)

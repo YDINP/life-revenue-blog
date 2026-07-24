@@ -34,6 +34,8 @@ noindex: true
 
 기존의 "안정성만 추구하는 저금리 예금" 전략으로는 인플레이션을 따라잡기 어려워졌습니다. 따라서 현금 자산과 변액 자산의 균형잡힌 포트폴리오가 중요해졌습니다.
 
+> 💡 금리가 바뀌면 대출 상환 부담도 함께 달라집니다. 원리금균등·원금균등 상환의 월 상환액과 총이자를 비교 — [대출 이자 계산기](/tools/loan-calculator/)로 직접 확인해 보세요.
+
 
 <a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EB%B6%80%EC%9E%90%20%EC%95%84%EB%B9%A0%20%EA%B0%80%EB%82%9C%ED%95%9C%20%EC%95%84%EB%B9%A0&src=1139000&spec=10799999&addtag=200&ctag=%EB%B6%80%EC%9E%90%20%EC%95%84%EB%B9%A0%20%EA%B0%80%EB%82%9C%ED%95%9C%20%EC%95%84%EB%B9%A0&lptag=AF7838146&pageType=SEARCH&pageValue=%EB%B6%80%EC%9E%90%20%EC%95%84%EB%B9%A0%20%EA%B0%80%EB%82%9C%ED%95%9C%20%EC%95%84%EB%B9%A0" target="_blank" rel="noopener noreferrer nofollow">
   <span class="ci-icon" aria-hidden="true">🛒</span>
