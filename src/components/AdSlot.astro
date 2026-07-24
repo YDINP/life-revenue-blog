@@ -1,33 +1,57 @@
 ---
 /**
- * AdSlot - Google AdSense 광고 슬롯
+ * AdSlot - 광고 슬롯 (Kakao AdFit 우선, Google AdSense 폴백)
  *
- * data-ad-slot이 비어있으면 렌더링하지 않음 (auto-ads가 대신 처리).
- * 애드센스 대시보드에서 광고 단위 생성 후 AD_SLOT_IDS에 slot ID 입력하면 즉시 활성화.
- *   - top/bottom: 본문 상·하단 디스플레이
- *   - mid: 본문 중간 인-아티클(fluid)
- *   - anchor: 모바일 하단 고정(스티키)
+ * 활성화 방법:
+ *  - Kakao AdFit: adfit.kakao.com → 매체(life-revenue-blog.vercel.app) 등록 → 광고단위 생성
+ *    → 발급된 단위 ID(DAN-xxxxxxxx)를 아래 ADFIT_UNITS[position].unit 에 입력하면 즉시 노출.
+ *    (단위 생성 시 고른 크기와 w/h 를 맞춰야 함)
+ *  - Google AdSense: 승인 후 광고단위 slot ID 를 AD_SLOT_IDS[position] 에 입력.
+ *  - 한 position 에 AdFit 단위가 있으면 AdFit, 없고 AdSense slot 이 있으면 AdSense, 둘 다 없으면 미노출.
+ *   position: top/bottom(본문 하단) · mid(인-아티클) · sidebar · anchor(모바일 하단 고정)
  */
 interface Props {
   position: 'top' | 'bottom' | 'sidebar' | 'mid' | 'anchor';
 }
-
 const { position } = Astro.props;
 
+// Google AdSense 광고단위 slot ID
 const AD_SLOT_IDS: Record<string, string> = {
-  top: '',
-  bottom: '',
-  sidebar: '',
-  mid: '',
-  anchor: '',
+  top: '', bottom: '', sidebar: '', mid: '', anchor: '',
+};
+// Kakao AdFit 광고단위 (DAN-xxxxxxxx). unit 이 비면 미노출. w/h 는 단위 생성 시 크기와 일치시킬 것.
+const ADFIT_UNITS: Record<string, { unit: string; w: number; h: number }> = {
+  anchor:  { unit: '', w: 320, h: 100 }, // 모바일 하단 배너
+  bottom:  { unit: '', w: 728, h: 90 },  // 본문 하단 (PC)
+  mid:     { unit: '', w: 300, h: 250 }, // 본문 중간 사각형
+  top:     { unit: '', w: 728, h: 90 },
+  sidebar: { unit: '', w: 300, h: 250 },
 };
 
 const slotId = AD_SLOT_IDS[position] || '';
+const adfit = ADFIT_UNITS[position] || { unit: '', w: 0, h: 0 };
+const useAdfit = !!adfit.unit;
 const isAnchor = position === 'anchor';
 const isMid = position === 'mid';
 ---
 
-{slotId && isAnchor && (
+{/* ── Kakao AdFit (우선) ── */}
+{useAdfit && isAnchor && (
+  <div class="anchor-ad" id="anchor-ad">
+    <button class="anchor-ad-close" type="button" aria-label="광고 닫기" onclick="this.parentElement.remove()">×</button>
+    <ins class="kakao_ad_area" style="display:none;" data-ad-unit={adfit.unit} data-ad-width={String(adfit.w)} data-ad-height={String(adfit.h)}></ins>
+    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+  </div>
+)}
+{useAdfit && !isAnchor && (
+  <div class="ad-slot" data-ad-position={position}>
+    <ins class="kakao_ad_area" style="display:none;" data-ad-unit={adfit.unit} data-ad-width={String(adfit.w)} data-ad-height={String(adfit.h)}></ins>
+    <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+  </div>
+)}
+
+{/* ── Google AdSense (AdFit 미설정 시 폴백) ── */}
+{!useAdfit && slotId && isAnchor && (
   <div class="anchor-ad" id="anchor-ad">
     <button class="anchor-ad-close" type="button" aria-label="광고 닫기" onclick="this.parentElement.remove()">×</button>
     <ins class="adsbygoogle"
@@ -39,8 +63,7 @@ const isMid = position === 'mid';
     <script is:inline>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </div>
 )}
-
-{slotId && !isAnchor && (
+{!useAdfit && slotId && !isAnchor && (
   <div class="ad-slot" data-ad-position={position}>
     <ins class="adsbygoogle"
       style="display:block"

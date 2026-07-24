@@ -1,0 +1,263 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = '퇴직금 계산기 2026';
+const description = '입사일·퇴사일과 최근 3개월 월평균 급여만 넣으면 예상 퇴직금이 바로 나옵니다. 근로기준법 평균임금 방식(1일 평균임금 × 30일 × 재직일수/365)으로 계산하며, 1년 미만 여부와 재직기간·1일 평균임금까지 함께 보여줍니다. 무료·설치 불필요.';
+const ogImage = '/og/severance-calculator.png';
+
+const appLd = {
+  '@context': 'https://schema.org', '@type': 'WebApplication',
+  name: '퇴직금 계산기 2026', applicationCategory: 'FinanceApplication', operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'KRW' },
+  description: '근로기준법 평균임금 방식으로 입사일·퇴사일과 월평균 급여를 반영해 예상 퇴직금을 계산하는 무료 도구.',
+};
+const faqLd = {
+  '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+    { '@type': 'Question', name: '평균임금은 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: '퇴직 전 3개월간 지급된 임금 총액을 그 기간의 총일수로 나눈 1일 금액입니다. 퇴직금은 이 1일 평균임금에 30일을 곱하고 재직일수 비율(재직일수/365)을 곱해 산정합니다.' } },
+    { '@type': 'Question', name: '상여금과 연차수당도 평균임금에 포함되나요?', acceptedAnswer: { '@type': 'Answer', text: '정기 상여금은 3개월분에 해당하는 금액을 안분해 포함하고, 연차수당은 퇴직 전전년도 발생분의 3/12을 반영하는 것이 일반적입니다. 이 계산기는 월평균 급여만 입력받으므로 상여·연차수당이 많다면 실제 퇴직금이 더 커질 수 있습니다.' } },
+    { '@type': 'Question', name: '1년 미만 근무하면 퇴직금을 못 받나요?', acceptedAnswer: { '@type': 'Answer', text: '네. 근로기준법상 법정 퇴직금은 계속근로기간이 1년(365일) 이상인 경우에만 발생합니다. 1년 미만은 법정 퇴직금 지급 대상이 아닙니다.' } },
+    { '@type': 'Question', name: '퇴직금에도 세금이 붙나요?', acceptedAnswer: { '@type': 'Answer', text: '네. 퇴직소득세와 지방소득세가 별도로 원천징수됩니다. 근속연수공제·환산급여공제 등으로 일반 근로소득보다 세부담이 낮지만, 이 계산기는 세전 예상 퇴직금만 보여줍니다.' } },
+  ],
+};
+---
+<BaseLayout title={title} description={description} image={ogImage} ogType="website">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(appLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+  </Fragment>
+
+  <div class="dpc">
+    <div class="wrap">
+      <span class="eyebrow"><span class="dot"></span>근로기준법 평균임금 방식 · 무료 · 설치 불필요</span>
+      <h1>퇴직금 계산기 <span class="grad">2026</span></h1>
+      <p class="sub">입사일·퇴사일과 최근 3개월 월평균 급여만 넣으면 <b>예상 퇴직금</b>이 바로 나옵니다. 재직기간과 1일 평균임금까지 한눈에 확인하세요.</p>
+
+      <form id="calcForm" onsubmit="event.preventDefault();calc(true)">
+      <div class="card">
+        <div class="card-h"><span class="n">1</span><h2>급여·재직 정보 입력</h2></div>
+        <div class="frow">
+          <div class="fld"><span class="cap">최근 3개월 월평균 세전급여 (원)</span><input id="avgpay" inputmode="numeric" aria-label="최근 3개월 월평균 세전급여(원)" value="3,500,000" oninput="fmtInput(this)"></div>
+        </div>
+        <div class="frow">
+          <div class="fld"><span class="cap">입사일</span><input id="join" type="date" aria-label="입사일" value="2021-01-02"></div>
+          <div class="fld"><span class="cap">퇴사일 (마지막 근무 다음 날)</span><input id="leave" type="date" aria-label="퇴사일"></div>
+        </div>
+        <div class="strat">
+          <button type="submit" class="go">퇴직금 계산</button>
+        </div>
+        <p class="tip">월평균 급여는 <b>퇴직 전 3개월간 받은 세전 급여의 월평균</b>을 넣습니다. 정기 상여금·연차수당이 있다면 실제 평균임금이 더 커집니다. 퇴사일은 보통 <b>마지막 근무일의 다음 날</b>(재직 마지막 날 +1)로 계산합니다.</p>
+      </div>
+      </form>
+
+      <div class="card" id="out">
+        <div class="card-h"><span class="n">2</span><h2 id="resHead" tabindex="-1">예상 퇴직금</h2></div>
+        <div class="hero-lbl">예상 퇴직금 (세전)</div>
+        <div class="res-hero"><span class="big grad" id="r-sev">–</span><span class="permo">원</span></div>
+        <div class="hero-sent" id="r-sent"></div>
+        <div class="kpis">
+          <div class="kpi"><div class="l">재직기간</div><div class="v" id="r-period">–</div></div>
+          <div class="kpi"><div class="l">1일 평균임금 (예상)</div><div class="v em" id="r-daily">–</div></div>
+          <div class="kpi"><div class="l">30일분 (1개월분)</div><div class="v bl" id="r-thirty">–</div></div>
+        </div>
+        <div class="brk">
+          <div class="brk-t">계산 내역</div>
+          <div class="brk-row"><span>월평균 세전급여</span><b id="d-avg">–</b></div>
+          <div class="brk-row"><span>재직일수 <em>퇴사일 − 입사일</em></span><b id="d-days">–</b></div>
+          <div class="brk-row"><span>1일 평균임금 <em>월급×3 ÷ 91.31</em></span><b id="d-daily">–</b></div>
+          <div class="brk-row"><span>30일분 <em>1일 평균임금 × 30</em></span><b id="d-thirty">–</b></div>
+          <div class="brk-row"><span>재직 비율 <em>재직일수 ÷ 365</em></span><b id="d-ratio">–</b></div>
+          <div class="brk-row total"><span>예상 퇴직금</span><b id="d-total">–</b></div>
+        </div>
+      </div>
+
+      <div class="cta" id="cta" style="display:none">
+        <h3>💡 받은 퇴직금, 새는 곳 없이 굴리고 싶다면</h3>
+        <p>퇴직금·목돈을 예산·저축·순자산까지 한 번에 관리하는 <b>무료 가계부 시트</b>를 보내드려요. 정식 재무 대시보드는 출시 때 얼리버드 가격으로 가장 먼저 안내드립니다.</p>
+        <div class="emailrow">
+          <input id="email" type="email" placeholder="이메일 주소" aria-label="이메일 주소">
+          <button type="button" onclick="subscribe()">무료 시트 받기</button>
+        </div>
+        <div class="fine" id="cta-msg" aria-live="polite">스팸 없이 재무 도구 소식만. 언제든 해지할 수 있어요.</div>
+      </div>
+
+      <div class="content">
+        <h2>퇴직금은 어떻게 계산하나요?</h2>
+        <p>법정 퇴직금은 <b>1일 평균임금 × 30일 × (재직일수 ÷ 365)</b>로 산정합니다. 계속근로 1년마다 30일분(약 한 달치) 평균임금을 지급하는 구조입니다. 이 계산기는 최근 3개월 월평균 급여를 <b>(월급 × 3) ÷ 91.31</b>로 나눠 1일 평균임금을 근사합니다(3개월 ≈ 91.31일).</p>
+        <h2>평균임금과 통상임금</h2>
+        <ul>
+          <li><b>평균임금</b> — 퇴직 전 3개월 임금 총액 ÷ 그 기간 총일수. 상여·연차수당 등이 반영됩니다.</li>
+          <li><b>통상임금</b> — 정기·일률·고정적으로 지급되는 기본 임금. 평균임금이 통상임금보다 낮으면 통상임금을 평균임금으로 봅니다.</li>
+          <li><b>재직 1년 미만</b> — 법정 퇴직금 지급 대상이 아닙니다.</li>
+        </ul>
+        <h2>자주 묻는 질문</h2>
+        <h3>상여금·연차수당도 포함되나요?</h3>
+        <p>정기 상여금은 3개월분 안분액, 연차수당은 전전년도 발생분의 3/12을 평균임금에 더하는 것이 일반적입니다. 이 계산기는 월평균 급여만 입력받으므로, 상여·연차수당이 많다면 실제 퇴직금이 더 커질 수 있습니다.</p>
+        <h3>1년 미만이면 정말 못 받나요?</h3>
+        <p>법정 퇴직금은 계속근로 1년(365일) 이상일 때만 발생합니다. 다만 회사 규정이나 근로계약으로 별도 지급을 정했다면 그에 따를 수 있습니다.</p>
+        <h3>세금은 얼마나 떼나요?</h3>
+        <p>퇴직소득세와 지방소득세가 별도로 원천징수됩니다. 근속연수공제 등으로 일반 소득보다 세부담이 낮지만, 이 계산기는 <b>세전 예상 퇴직금</b>만 보여줍니다.</p>
+      </div>
+
+      <p class="disc">참고용 계산기입니다. 상여금·연차수당 포함 여부, 통상임금 비교, 회사 규정에 따라 실제 퇴직금이 달라질 수 있는 <b>예상치</b>이며 퇴직소득세는 반영하지 않았습니다. 입력값은 서버로 전송되지 않고 브라우저에서만 계산됩니다.</p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style is:global>
+.dpc{--grad:linear-gradient(135deg,#34d399,#22d3ee);--radius:18px;
+  --surface:#ffffff;--surface2:#f4f7fb;--line:#e5eaf1;--line2:#d4dce7;
+  --text:#0f1a2b;--mut:#48566b;--dim:#6a7889;--emerald:#0c9c6b;--teal:#0d7d9c;--rose:#e11d63;
+  --gradtext:linear-gradient(135deg,#0aa06e,#0d86a6);
+  --shadow:0 10px 30px -14px rgba(20,45,90,.16);--panelborder:#e6ecf3;
+  --panel:radial-gradient(700px 400px at 12% -8%,rgba(52,211,153,.07),transparent 60%),radial-gradient(600px 400px at 100% 0%,rgba(34,211,238,.06),transparent 55%),linear-gradient(180deg,#f8fbfe,#eef3f9);
+  max-width:920px;margin:26px auto;padding:28px 22px 32px;border-radius:24px;border:1px solid var(--panelborder);
+  background:var(--panel);color:var(--text);
+  font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.55;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
+html.dark .dpc{--surface:#121c2e;--surface2:#0e1626;--line:#1f2c42;--line2:#2a3a56;
+  --text:#eef2f8;--mut:#9fb0c6;--dim:#8b97ac;--emerald:#34d399;--teal:#22d3ee;--rose:#fb7185;
+  --gradtext:linear-gradient(135deg,#34d399,#22d3ee);
+  --shadow:0 12px 40px -12px rgba(0,0,0,.55);--panelborder:#17233a;
+  --panel:radial-gradient(700px 400px at 12% -8%,rgba(52,211,153,.10),transparent 60%),radial-gradient(600px 400px at 100% 0%,rgba(34,211,238,.08),transparent 55%),linear-gradient(180deg,#0d1524,#0a0f1a)}
+.dpc *{box-sizing:border-box;margin:0;padding:0}
+.dpc .wrap{max-width:100%;margin:0 auto}
+.dpc .eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--emerald);background:rgba(52,211,153,.10);border:1px solid rgba(52,211,153,.22);padding:5px 12px;border-radius:999px;margin-bottom:16px}
+.dpc .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.2)}
+.dpc h1{font-size:clamp(26px,5vw,38px);font-weight:800;line-height:1.12;letter-spacing:-.03em;color:var(--text)}
+.dpc .grad{background:var(--gradtext);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.dpc .sub{color:var(--mut);font-size:16px;margin:12px 0 26px;max-width:640px}
+.dpc .card{background:linear-gradient(180deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:18px;box-shadow:var(--shadow)}
+.dpc .card-h{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.dpc .card-h .n{width:26px;height:26px;border-radius:8px;background:rgba(52,211,153,.12);color:var(--emerald);display:grid;place-items:center;font-size:13px;font-weight:700}
+.dpc .card-h h2{font-size:16.5px;font-weight:700;letter-spacing:-.02em;color:var(--text)}
+.dpc .frow{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.dpc .fld{position:relative}
+.dpc .fld .cap{display:block;font-size:12px;color:var(--mut);font-weight:600;margin-bottom:5px}
+.dpc .fld input{width:100%;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:11px 12px;color:var(--text);font-size:15px;font-family:inherit;transition:border-color .15s,box-shadow .15s}
+.dpc .fld input::placeholder{color:var(--dim)}
+.dpc .fld input:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.14)}
+.dpc .strat{display:flex;margin-top:6px}
+.dpc .go{margin-left:auto;background:var(--grad);color:#04121b;border:none;border-radius:12px;padding:12px 26px;font-weight:800;font-size:15px;font-family:inherit;cursor:pointer;box-shadow:0 8px 22px -8px rgba(52,211,153,.6);transition:transform .12s,filter .15s}
+.dpc .go:hover{filter:brightness(1.05)}.dpc .go:active{transform:translateY(1px)}
+.dpc .tip{font-size:13px;color:var(--mut);margin-top:14px;line-height:1.5}
+.dpc .tip b{color:var(--text)}
+.dpc button:focus-visible,.dpc input:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.dpc #out{display:none}
+.dpc .hero-lbl{font-size:13px;color:var(--mut);font-weight:600;margin:2px 0}
+.dpc .res-hero{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;padding:0 2px 4px;background:none;border-radius:0;text-align:left;margin:0}
+.dpc .res-hero .big{font-size:clamp(30px,7vw,46px);font-weight:800;letter-spacing:-.03em}
+.dpc .permo{font-size:16px;color:var(--mut);font-weight:600}
+.dpc .hero-sent{font-size:15px;color:var(--mut);margin:2px 2px 18px}
+.dpc .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.dpc .kpi{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:15px 16px}
+.dpc .kpi .l{font-size:12.5px;color:var(--mut);font-weight:600}
+.dpc .kpi .v{font-size:20px;font-weight:800;margin-top:5px;letter-spacing:-.02em;color:var(--text)}
+.dpc .v.em{color:var(--emerald)}.dpc .v.bl{color:var(--teal)}
+.dpc .barwrap{margin-top:18px}
+.dpc .stackbar{display:flex;height:30px;border-radius:9px;overflow:hidden;border:1px solid var(--line);background:var(--surface2)}
+.dpc .stackbar .seg{height:100%}
+.dpc .stackbar .seg.net{background:linear-gradient(90deg,#34d399,#22d3ee)}
+.dpc .stackbar .seg.ded{background:repeating-linear-gradient(45deg,var(--line2),var(--line2) 6px,var(--surface2) 6px,var(--surface2) 12px)}
+.dpc .barleg{display:flex;gap:16px;font-size:12.5px;color:var(--mut);margin-top:8px}
+.dpc .barleg i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:middle}
+.dpc .barleg i.net{background:#22d3ee}.dpc .barleg i.ded{background:var(--line2)}
+.dpc .barleg b{color:var(--text)}
+.dpc .brk{margin-top:18px;border-top:1px solid var(--line);padding-top:14px}
+.dpc .brk-t{font-size:13px;color:var(--mut);font-weight:700;margin-bottom:8px}
+.dpc .brk-row{display:flex;justify-content:space-between;align-items:center;padding:8px 2px;font-size:14.5px;border-bottom:1px solid var(--line)}
+.dpc .brk-row span{color:var(--text)}
+.dpc .brk-row em{font-style:normal;font-size:12px;color:var(--dim);margin-left:6px}
+.dpc .brk-row b{color:var(--text);font-weight:700}
+.dpc .brk-row.total{border-bottom:none;margin-top:4px;font-weight:800}
+.dpc .brk-row.total span,.dpc .brk-row.total b{color:var(--rose);font-size:15.5px}
+.dpc .cta{background:linear-gradient(135deg,#0f2740,#12233a);border:1px solid #274563;border-radius:var(--radius);padding:24px;position:relative;overflow:hidden;margin-bottom:18px}
+.dpc .cta::before{content:"";position:absolute;inset:0;background:radial-gradient(400px 160px at 90% 0%,rgba(34,211,238,.14),transparent 70%);pointer-events:none}
+.dpc .cta h3{font-size:19px;font-weight:800;letter-spacing:-.02em;margin-bottom:7px;position:relative;color:#f2f7fb}
+.dpc .cta p{color:#aabdd0;font-size:14px;margin-bottom:14px;max-width:580px;position:relative}
+.dpc .cta .fine{color:#8097ad}
+.dpc .emailrow{display:flex;gap:9px;flex-wrap:wrap;position:relative}
+.dpc .cta .emailrow input{flex:1;min-width:220px;background:#0d1b2c;border:1px solid #26445f;border-radius:12px;padding:12px 14px;color:#eef2f8;font-size:14.5px;font-family:inherit}
+.dpc .cta .emailrow input::placeholder{color:#7089a0}
+.dpc .emailrow button{background:var(--grad);color:#04121b;border:none;border-radius:12px;padding:12px 22px;font-weight:800;font-size:14.5px;font-family:inherit;cursor:pointer;transition:.15s}
+.dpc .emailrow button:hover{filter:brightness(1.05)}
+.dpc .fine{font-size:11.5px;margin-top:10px;position:relative}
+.dpc .content{color:var(--mut);font-size:15px}
+.dpc .content h2{font-size:19px;color:var(--text);font-weight:800;letter-spacing:-.02em;margin:26px 0 10px}
+.dpc .content h3{font-size:15.5px;color:var(--text);font-weight:700;margin:16px 0 4px}
+.dpc .content p{margin-bottom:8px}
+.dpc .content ul{margin:6px 0 6px 18px}.dpc .content li{margin-bottom:5px}
+.dpc .disc{font-size:12px;color:var(--dim);margin-top:22px;line-height:1.6}
+.dpc .disc b{color:var(--mut)}
+.dpc .note{margin-top:12px;font-size:13px;color:var(--rose);font-weight:600}
+@media(max-width:600px){
+  .dpc{padding:20px 14px 24px;margin:16px auto;border-radius:18px}
+  .dpc .frow{grid-template-columns:1fr}
+  .dpc .kpis{grid-template-columns:1fr}
+  .dpc .go{width:100%}
+}
+</style>
+
+<script is:inline>
+const won=n=>Math.round(n).toLocaleString('ko-KR')+'원';
+const cint=v=>parseFloat(String(v).replace(/[^0-9.]/g,''))||0;
+function fmtInput(el){const raw=el.value.replace(/[^0-9]/g,'');el.value=raw?parseInt(raw,10).toLocaleString('ko-KR'):'';}
+function todayStr(){const d=new Date();const p=n=>String(n).padStart(2,'0');return d.getFullYear()+'-'+p(d.getMonth()+1)+'-'+p(d.getDate());}
+function periodText(days){
+  const totalMonths=Math.floor(days/30.4375);
+  const y=Math.floor(totalMonths/12), m=totalMonths%12;
+  if(y<=0)return m+'개월';
+  return m>0?y+'년 '+m+'개월':y+'년';
+}
+function calc(scroll){
+  const avg=cint(document.getElementById('avgpay').value);
+  const joinV=document.getElementById('join').value;
+  const leaveV=document.getElementById('leave').value;
+  if(avg<=0||!joinV||!leaveV)return;
+  const jd=new Date(joinV+'T00:00:00'), ld=new Date(leaveV+'T00:00:00');
+  if(isNaN(jd)||isNaN(ld))return;
+  const days=Math.round((ld-jd)/86400000);
+  const sent=document.getElementById('r-sent');
+  document.getElementById('out').style.display='block';
+  document.getElementById('cta').style.display='block';
+  if(days<=0){
+    document.getElementById('r-sev').textContent='–';
+    sent.textContent='퇴사일은 입사일보다 뒤여야 합니다. 날짜를 다시 확인해 주세요.';
+    sent.style.color='var(--rose)';
+    ['r-period','r-daily','r-thirty','d-avg','d-days','d-daily','d-thirty','d-ratio','d-total'].forEach(id=>document.getElementById(id).textContent='–');
+    if(scroll){document.getElementById('resHead').focus();document.getElementById('out').scrollIntoView({behavior:'smooth',block:'start'});}
+    return;
+  }
+  const daily=(avg*3)/91.31;              // 1일 평균임금
+  const thirty=daily*30;                  // 30일분
+  const ratio=days/365;
+  const under=days<365;
+  const severance=under?0:thirty*ratio;   // 예상 퇴직금
+  sent.style.color='var(--mut)';
+  document.getElementById('r-sev').textContent=under?'0':Math.round(severance).toLocaleString('ko-KR');
+  document.getElementById('r-period').textContent=periodText(days);
+  document.getElementById('r-daily').textContent=won(daily);
+  document.getElementById('r-thirty').textContent=won(thirty);
+  document.getElementById('d-avg').textContent=won(avg);
+  document.getElementById('d-days').textContent=Math.round(days).toLocaleString('ko-KR')+'일';
+  document.getElementById('d-daily').textContent=won(daily);
+  document.getElementById('d-thirty').textContent=won(thirty);
+  document.getElementById('d-ratio').textContent=ratio.toFixed(2)+'배';
+  document.getElementById('d-total').textContent=under?'0원':won(severance);
+  if(under){
+    sent.textContent='재직 '+periodText(days)+'('+days+'일)로 1년 미만입니다. 1년 미만은 법정 퇴직금 대상이 아닙니다.';
+  }else{
+    sent.textContent='재직 '+periodText(days)+' · 1일 평균임금 '+won(daily)+' 기준 예상 세전 퇴직금입니다.';
+  }
+  if(scroll){const h=document.getElementById('resHead');h.focus();document.getElementById('out').scrollIntoView({behavior:'smooth',block:'start'});}
+}
+function subscribe(){
+  const e=document.getElementById('email').value.trim();const msg=document.getElementById('cta-msg');
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)){msg.textContent='올바른 이메일 주소를 입력해 주세요.';msg.style.color='#fb7185';return;}
+  try{fetch('https://xyprbsmagtlzebxyxsvj.supabase.co/functions/v1/analytics-ingest',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({event_type:'newsletter_subscribe',source:'lifeflow',metadata:{email:e,campaign:'severance-calculator',page:location.pathname,subscribed_at:new Date().toISOString()}})}).catch(()=>{});}catch(_){}
+  msg.textContent='감사합니다! 무료 가계부 시트와 대시보드 소식을 보내드릴게요.';msg.style.color='#34d399';
+  try{localStorage.setItem('newsletter-subscribed','true');}catch(_){}
+  document.getElementById('email').value='';
+}
+document.getElementById('avgpay').addEventListener('input',e=>fmtInput(e.target));
+(function(){const lv=document.getElementById('leave');if(!lv.value)lv.value=todayStr();})();
+calc(false);
+</script>

@@ -1,0 +1,282 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = '전기요금 계산기 (주택용) 2024';
+const description = '이번 달 전기요금, 미리 얼마 나올까? 2024년 한전 주택용 저압 누진제(3단계)와 기후환경요금·연료비조정액·부가세·전력산업기반기금을 반영해 예상 청구금액을 바로 계산합니다. 무료·설치 불필요.';
+const ogImage = '/og/electricity-bill-calculator.png';
+
+const appLd = {
+  '@context': 'https://schema.org', '@type': 'WebApplication',
+  name: '전기요금 계산기 (주택용)', applicationCategory: 'UtilitiesApplication', operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'KRW' },
+  description: '2024년 한전 주택용 저압 누진제를 반영해 월 사용량(kWh)으로 예상 전기요금 청구액과 항목별 내역을 계산하는 무료 도구.',
+};
+const faqLd = {
+  '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+    { '@type': 'Question', name: '주택용 전기요금 누진제는 몇 단계인가요?', acceptedAnswer: { '@type': 'Answer', text: '주택용 저압 전기요금은 3단계 누진제입니다. 사용량이 많아질수록 높은 단가가 적용되며, 그 밖의 계절 기준 1구간(0~200kWh) 120.0원, 2구간(201~400kWh) 214.6원, 3구간(400kWh 초과) 307.3원입니다.' } },
+    { '@type': 'Question', name: '여름철에는 누진 구간이 완화되나요?', acceptedAnswer: { '@type': 'Answer', text: '네. 냉방 사용이 많은 7~8월에는 누진 구간이 상향 조정됩니다. 1구간이 0~300kWh, 2구간이 301~450kWh, 3구간이 450kWh 초과로 넓어져 같은 사용량이라도 요금이 낮아집니다.' } },
+    { '@type': 'Question', name: '전기요금에는 어떤 항목이 포함되나요?', acceptedAnswer: { '@type': 'Answer', text: '기본요금과 사용량에 따른 전력량요금에 더해 기후환경요금, 연료비조정액이 붙어 전기요금계가 됩니다. 여기에 부가가치세 10%와 전력산업기반기금 3.7%를 더한 뒤 10원 미만을 절사한 금액이 청구액입니다.' } },
+    { '@type': 'Question', name: '실제 고지서와 금액이 다를 수 있나요?', acceptedAnswer: { '@type': 'Answer', text: '네. 이 계산기는 2024년 요율을 기준으로 한 예상치이며, 실제 청구는 검침일 기준 일할 계산·복지할인·계약종별(고압/누진 완화 등)에 따라 달라집니다.' } },
+  ],
+};
+---
+<BaseLayout title={title} description={description} image={ogImage} ogType="website">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(appLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+  </Fragment>
+
+  <div class="dpc">
+    <div class="wrap">
+      <span class="eyebrow"><span class="dot"></span>2024년 한전 요율 · 무료 · 설치 불필요</span>
+      <h1>전기요금 계산기 <span class="grad">주택용</span></h1>
+      <p class="sub">이번 달 전기요금, 고지서가 나오기 전에 미리 확인하세요. 월 사용량(kWh)만 넣으면 2024년 <b>누진제·부가세·기금까지 반영한 예상 청구금액</b>을 바로 계산합니다.</p>
+
+      <form id="calcForm" onsubmit="event.preventDefault();calc(true)">
+      <div class="card">
+        <div class="card-h"><span class="n">1</span><h2>사용량 정보 입력</h2></div>
+        <div class="frow">
+          <div class="fld"><span class="cap">월 사용량 (kWh)</span><input id="kwh" type="number" min="0" step="1" aria-label="월 사용량(kWh)" value="300"></div>
+          <div class="fld">
+            <span class="cap">계절</span>
+            <div class="toggle" id="season" role="group" aria-label="계절 선택">
+              <button type="button" class="seg-btn on" data-v="normal" onclick="setSeason('normal')">그 밖의 계절</button>
+              <button type="button" class="seg-btn" data-v="summer" onclick="setSeason('summer')">여름 (7~8월)</button>
+            </div>
+          </div>
+        </div>
+        <div class="strat">
+          <button type="submit" class="go">전기요금 계산</button>
+        </div>
+        <p class="tip">주택용 저압은 <b>3단계 누진제</b>로, 많이 쓸수록 높은 단가가 적용됩니다. <b>여름철(7~8월)</b>은 냉방 부담을 덜기 위해 누진 구간이 넓어져 같은 사용량이라도 요금이 낮아집니다. 아파트 관리비에 포함된 세대는 계약종별이 다를 수 있어요.</p>
+      </div>
+      </form>
+
+      <div class="card" id="out">
+        <div class="card-h"><span class="n">2</span><h2 id="resHead" tabindex="-1">예상 전기요금</h2></div>
+        <div class="hero-lbl">이번 달 예상 청구금액</div>
+        <div class="res-hero"><span class="big grad" id="r-bill">–</span><span class="permo">/ 월</span></div>
+        <div class="hero-sent" id="r-sent"></div>
+        <div class="kpis">
+          <div class="kpi"><div class="l">전기요금계</div><div class="v em" id="r-elec">–</div></div>
+          <div class="kpi"><div class="l">세금·기금</div><div class="v" id="r-taxes">–</div></div>
+          <div class="kpi"><div class="l">1kWh당 평균단가</div><div class="v bl" id="r-unit">–</div></div>
+        </div>
+        <div class="barwrap">
+          <div class="stackbar" id="stackbar"><div class="seg net" id="seg-elec"></div><div class="seg ded" id="seg-tax"></div></div>
+          <div class="barleg"><span><i class="net"></i>전기요금 <b id="leg-elec"></b></span><span><i class="ded"></i>세금·기금 <b id="leg-tax"></b></span></div>
+        </div>
+        <div class="brk">
+          <div class="brk-t">청구 내역 (예상)</div>
+          <div class="brk-row"><span>기본요금 <em id="e-base">사용량 구간</em></span><b id="d-base">–</b></div>
+          <div class="brk-row"><span>전력량요금 <em id="e-energy">누진 3단계</em></span><b id="d-energy">–</b></div>
+          <div class="brk-row"><span>기후환경요금 <em>9.0원/kWh</em></span><b id="d-climate">–</b></div>
+          <div class="brk-row"><span>연료비조정액 <em>5.0원/kWh</em></span><b id="d-fuel">–</b></div>
+          <div class="brk-row"><span>부가가치세 <em>전기요금계의 10%</em></span><b id="d-vat">–</b></div>
+          <div class="brk-row"><span>전력산업기반기금 <em>전기요금계의 3.7%</em></span><b id="d-fund">–</b></div>
+          <div class="brk-row total"><span>청구금액 (10원 미만 절사)</span><b id="d-total">–</b></div>
+        </div>
+      </div>
+
+      <div class="cta" id="cta" style="display:none">
+        <h3>💡 매달 관리비·공과금을 자동으로 관리하고 싶다면</h3>
+        <p>전기·가스·통신비까지 한눈에 담아 예산과 순자산을 관리하는 <b>무료 가계부 시트</b>를 보내드려요. 정식 재무 대시보드는 출시 때 얼리버드 가격으로 가장 먼저 안내드립니다.</p>
+        <div class="emailrow">
+          <input id="email" type="email" placeholder="이메일 주소" aria-label="이메일 주소">
+          <button type="button" onclick="subscribe()">무료 시트 받기</button>
+        </div>
+        <div class="fine" id="cta-msg" aria-live="polite">스팸 없이 생활 재무 도구 소식만. 언제든 해지할 수 있어요.</div>
+      </div>
+
+      <div class="content">
+        <h2>주택용 전기요금은 어떻게 계산되나요?</h2>
+        <p>주택용 저압 전기요금은 <b>기본요금 + 전력량요금 + 기후환경요금 + 연료비조정액</b>으로 전기요금계를 구한 뒤, 여기에 <b>부가가치세(10%)</b>와 <b>전력산업기반기금(3.7%)</b>을 더하고 10원 미만을 절사해 청구합니다.</p>
+        <h2>2024년 주택용 저압 누진 단가</h2>
+        <ul>
+          <li><b>1구간</b> — 120.0원/kWh (그 밖의 계절 0~200kWh, 여름철 0~300kWh)</li>
+          <li><b>2구간</b> — 214.6원/kWh (그 밖의 계절 201~400kWh, 여름철 301~450kWh)</li>
+          <li><b>3구간</b> — 307.3원/kWh (그 밖의 계절 400kWh 초과, 여름철 450kWh 초과)</li>
+          <li><b>기본요금</b> — 200kWh 이하 910원 · 400kWh 이하 1,600원 · 초과 7,300원</li>
+        </ul>
+        <h2>자주 묻는 질문</h2>
+        <h3>누진제는 왜 있나요?</h3>
+        <p>전력 과소비를 억제하기 위해 사용량이 많아질수록 높은 단가를 적용하는 제도입니다. 주택용 저압은 3단계로 나뉘며, 3구간 단가는 1구간의 두 배가 넘습니다.</p>
+        <h3>여름철 완화는 어떻게 적용되나요?</h3>
+        <p>7~8월에는 냉방 사용이 급증하므로 누진 구간 경계를 상향해 완화합니다. 1구간이 200kWh에서 300kWh로, 2구간 상한이 400kWh에서 450kWh로 넓어져 같은 사용량이라도 요금이 낮아집니다.</p>
+        <h3>실제 고지서와 다를 수 있나요?</h3>
+        <p>네. 이 계산기는 <b>예상치</b>입니다. 실제 청구는 검침일 기준 일할 계산, 복지·다자녀·대가족 할인, 계약종별(고압/아파트 단일계약 등)에 따라 달라집니다.</p>
+      </div>
+
+      <p class="disc">참고용 계산기입니다. 2024년 한전 주택용 저압 요율을 기준으로 한 <b>예상치</b>이며, 실제 청구금액은 검침일·복지할인·계약종별·기후환경요금 및 연료비조정액 변동에 따라 달라질 수 있습니다. 입력값은 서버로 전송되지 않고 브라우저에서만 계산됩니다.</p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style is:global>
+.dpc{--grad:linear-gradient(135deg,#34d399,#22d3ee);--radius:18px;
+  --surface:#ffffff;--surface2:#f4f7fb;--line:#e5eaf1;--line2:#d4dce7;
+  --text:#0f1a2b;--mut:#48566b;--dim:#6a7889;--emerald:#0c9c6b;--teal:#0d7d9c;--rose:#e11d63;
+  --gradtext:linear-gradient(135deg,#0aa06e,#0d86a6);
+  --shadow:0 10px 30px -14px rgba(20,45,90,.16);--panelborder:#e6ecf3;
+  --panel:radial-gradient(700px 400px at 12% -8%,rgba(52,211,153,.07),transparent 60%),radial-gradient(600px 400px at 100% 0%,rgba(34,211,238,.06),transparent 55%),linear-gradient(180deg,#f8fbfe,#eef3f9);
+  max-width:920px;margin:26px auto;padding:28px 22px 32px;border-radius:24px;border:1px solid var(--panelborder);
+  background:var(--panel);color:var(--text);
+  font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.55;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
+html.dark .dpc{--surface:#121c2e;--surface2:#0e1626;--line:#1f2c42;--line2:#2a3a56;
+  --text:#eef2f8;--mut:#9fb0c6;--dim:#8b97ac;--emerald:#34d399;--teal:#22d3ee;--rose:#fb7185;
+  --gradtext:linear-gradient(135deg,#34d399,#22d3ee);
+  --shadow:0 12px 40px -12px rgba(0,0,0,.55);--panelborder:#17233a;
+  --panel:radial-gradient(700px 400px at 12% -8%,rgba(52,211,153,.10),transparent 60%),radial-gradient(600px 400px at 100% 0%,rgba(34,211,238,.08),transparent 55%),linear-gradient(180deg,#0d1524,#0a0f1a)}
+.dpc *{box-sizing:border-box;margin:0;padding:0}
+.dpc .wrap{max-width:100%;margin:0 auto}
+.dpc .eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--emerald);background:rgba(52,211,153,.10);border:1px solid rgba(52,211,153,.22);padding:5px 12px;border-radius:999px;margin-bottom:16px}
+.dpc .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.2)}
+.dpc h1{font-size:clamp(26px,5vw,38px);font-weight:800;line-height:1.12;letter-spacing:-.03em;color:var(--text)}
+.dpc .grad{background:var(--gradtext);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.dpc .sub{color:var(--mut);font-size:16px;margin:12px 0 26px;max-width:640px}
+.dpc .card{background:linear-gradient(180deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:18px;box-shadow:var(--shadow)}
+.dpc .card-h{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.dpc .card-h .n{width:26px;height:26px;border-radius:8px;background:rgba(52,211,153,.12);color:var(--emerald);display:grid;place-items:center;font-size:13px;font-weight:700}
+.dpc .card-h h2{font-size:16.5px;font-weight:700;letter-spacing:-.02em;color:var(--text)}
+.dpc .frow{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.dpc .fld{position:relative}
+.dpc .fld .cap{display:block;font-size:12px;color:var(--mut);font-weight:600;margin-bottom:5px}
+.dpc .fld input{width:100%;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:11px 12px;color:var(--text);font-size:15px;font-family:inherit;transition:border-color .15s,box-shadow .15s}
+.dpc .fld input::placeholder{color:var(--dim)}
+.dpc .fld input:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.14)}
+.dpc .strat{display:flex;margin-top:6px}
+.dpc .go{margin-left:auto;background:var(--grad);color:#04121b;border:none;border-radius:12px;padding:12px 26px;font-weight:800;font-size:15px;font-family:inherit;cursor:pointer;box-shadow:0 8px 22px -8px rgba(52,211,153,.6);transition:transform .12s,filter .15s}
+.dpc .go:hover{filter:brightness(1.05)}.dpc .go:active{transform:translateY(1px)}
+.dpc .tip{font-size:13px;color:var(--mut);margin-top:14px;line-height:1.5}
+.dpc .tip b{color:var(--text)}
+.dpc button:focus-visible,.dpc input:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.dpc #out{display:none}
+.dpc .hero-lbl{font-size:13px;color:var(--mut);font-weight:600;margin:2px 0}
+.dpc .res-hero{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;padding:0 2px 4px;background:none;border-radius:0;text-align:left;margin:0}
+.dpc .res-hero .big{font-size:clamp(30px,7vw,46px);font-weight:800;letter-spacing:-.03em}
+.dpc .permo{font-size:16px;color:var(--mut);font-weight:600}
+.dpc .hero-sent{font-size:15px;color:var(--mut);margin:2px 2px 18px}
+.dpc .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.dpc .kpi{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:15px 16px}
+.dpc .kpi .l{font-size:12.5px;color:var(--mut);font-weight:600}
+.dpc .kpi .v{font-size:20px;font-weight:800;margin-top:5px;letter-spacing:-.02em;color:var(--text)}
+.dpc .v.em{color:var(--emerald)}.dpc .v.bl{color:var(--teal)}
+.dpc .barwrap{margin-top:18px}
+.dpc .stackbar{display:flex;height:30px;border-radius:9px;overflow:hidden;border:1px solid var(--line);background:var(--surface2)}
+.dpc .stackbar .seg{height:100%}
+.dpc .stackbar .seg.net{background:linear-gradient(90deg,#34d399,#22d3ee)}
+.dpc .stackbar .seg.ded{background:repeating-linear-gradient(45deg,var(--line2),var(--line2) 6px,var(--surface2) 6px,var(--surface2) 12px)}
+.dpc .barleg{display:flex;gap:16px;font-size:12.5px;color:var(--mut);margin-top:8px}
+.dpc .barleg i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:middle}
+.dpc .barleg i.net{background:#22d3ee}.dpc .barleg i.ded{background:var(--line2)}
+.dpc .barleg b{color:var(--text)}
+.dpc .brk{margin-top:18px;border-top:1px solid var(--line);padding-top:14px}
+.dpc .brk-t{font-size:13px;color:var(--mut);font-weight:700;margin-bottom:8px}
+.dpc .brk-row{display:flex;justify-content:space-between;align-items:center;padding:8px 2px;font-size:14.5px;border-bottom:1px solid var(--line)}
+.dpc .brk-row span{color:var(--text)}
+.dpc .brk-row em{font-style:normal;font-size:12px;color:var(--dim);margin-left:6px}
+.dpc .brk-row b{color:var(--text);font-weight:700}
+.dpc .brk-row.total{border-bottom:none;margin-top:4px;font-weight:800}
+.dpc .brk-row.total span,.dpc .brk-row.total b{color:var(--rose);font-size:15.5px}
+.dpc .cta{background:linear-gradient(135deg,#0f2740,#12233a);border:1px solid #274563;border-radius:var(--radius);padding:24px;position:relative;overflow:hidden;margin-bottom:18px}
+.dpc .cta::before{content:"";position:absolute;inset:0;background:radial-gradient(400px 160px at 90% 0%,rgba(34,211,238,.14),transparent 70%);pointer-events:none}
+.dpc .cta h3{font-size:19px;font-weight:800;letter-spacing:-.02em;margin-bottom:7px;position:relative;color:#f2f7fb}
+.dpc .cta p{color:#aabdd0;font-size:14px;margin-bottom:14px;max-width:580px;position:relative}
+.dpc .cta .fine{color:#8097ad}
+.dpc .emailrow{display:flex;gap:9px;flex-wrap:wrap;position:relative}
+.dpc .cta .emailrow input{flex:1;min-width:220px;background:#0d1b2c;border:1px solid #26445f;border-radius:12px;padding:12px 14px;color:#eef2f8;font-size:14.5px;font-family:inherit}
+.dpc .cta .emailrow input::placeholder{color:#7089a0}
+.dpc .emailrow button{background:var(--grad);color:#04121b;border:none;border-radius:12px;padding:12px 22px;font-weight:800;font-size:14.5px;font-family:inherit;cursor:pointer;transition:.15s}
+.dpc .emailrow button:hover{filter:brightness(1.05)}
+.dpc .fine{font-size:11.5px;margin-top:10px;position:relative}
+.dpc .content{color:var(--mut);font-size:15px}
+.dpc .content h2{font-size:19px;color:var(--text);font-weight:800;letter-spacing:-.02em;margin:26px 0 10px}
+.dpc .content h3{font-size:15.5px;color:var(--text);font-weight:700;margin:16px 0 4px}
+.dpc .content p{margin-bottom:8px}
+.dpc .content ul{margin:6px 0 6px 18px}.dpc .content li{margin-bottom:5px}
+.dpc .disc{font-size:12px;color:var(--dim);margin-top:22px;line-height:1.6}
+.dpc .toggle{display:flex;gap:6px;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:4px}
+.dpc .seg-btn{flex:1;background:transparent;border:none;border-radius:8px;padding:8px 6px;color:var(--mut);font-size:13.5px;font-weight:700;font-family:inherit;cursor:pointer;transition:.15s;letter-spacing:-.01em}
+.dpc .seg-btn.on{background:var(--grad);color:#04121b;box-shadow:0 6px 16px -8px rgba(52,211,153,.55)}
+@media(max-width:600px){
+  .dpc{padding:20px 14px 24px;margin:16px auto;border-radius:18px}
+  .dpc .frow{grid-template-columns:1fr}
+  .dpc .kpis{grid-template-columns:1fr}
+  .dpc .go{width:100%}
+}
+</style>
+
+<script is:inline>
+const won=n=>Math.round(n).toLocaleString('ko-KR')+'원';
+const cint=v=>parseFloat(String(v).replace(/[^0-9.]/g,''))||0;
+function fmtInput(el){const raw=el.value.replace(/[^0-9]/g,'');el.value=raw?parseInt(raw,10).toLocaleString('ko-KR'):'';}
+// 2024 한전 주택용 저압 (예상)
+const UNIT=[120.0,214.6,307.3];      // 누진 3구간 단가(원/kWh)
+const CLIMATE=9.0, FUEL=5.0;         // 기후환경요금·연료비조정액(원/kWh)
+const VAT=0.10, FUND=0.037;          // 부가세·전력산업기반기금
+let SEASON='normal';
+function setSeason(v){
+  SEASON=v;
+  document.querySelectorAll('#season .seg-btn').forEach(b=>b.classList.toggle('on',b.dataset.v===v));
+  calc(false);
+}
+function baseFee(kwh){ if(kwh<=200)return 910; if(kwh<=400)return 1600; return 7300; }
+function energyCharge(kwh,summer){ // 전력량요금 누진 합산
+  const b=summer?[300,150]:[200,200]; // 1구간 폭, 2구간 폭
+  const t1=Math.min(kwh,b[0])*UNIT[0];
+  const t2=kwh>b[0]?Math.min(kwh-b[0],b[1])*UNIT[1]:0;
+  const t3=kwh>(b[0]+b[1])?(kwh-(b[0]+b[1]))*UNIT[2]:0;
+  return t1+t2+t3;
+}
+function calc(scroll){
+  const kwh=Math.max(0,Math.floor(cint(document.getElementById('kwh').value)));
+  if(kwh<=0)return;
+  const summer=SEASON==='summer';
+  const base=baseFee(kwh);
+  const energy=energyCharge(kwh,summer);
+  const climate=kwh*CLIMATE;
+  const fuel=kwh*FUEL;
+  const elecTotal=base+energy+climate+fuel;       // 전기요금계
+  const vat=elecTotal*VAT;                          // 부가가치세
+  const fund=elecTotal*FUND;                        // 전력산업기반기금
+  const billRaw=elecTotal+vat+fund;
+  const bill=Math.floor(billRaw/10)*10;             // 10원 미만 절사
+  const taxes=vat+fund;
+  const unit=bill/kwh;
+  // render
+  document.getElementById('out').style.display='block';
+  document.getElementById('cta').style.display='block';
+  document.getElementById('r-bill').textContent=won(bill);
+  document.getElementById('r-sent').textContent=`${summer?'여름철(7~8월) 완화 구간':'그 밖의 계절'} 기준, 월 ${kwh.toLocaleString('ko-KR')}kWh 사용 시 예상 청구액입니다.`;
+  document.getElementById('r-elec').textContent=won(elecTotal);
+  document.getElementById('r-taxes').textContent=won(taxes);
+  document.getElementById('r-unit').textContent=Math.round(unit).toLocaleString('ko-KR')+'원';
+  const baseHint=kwh<=200?'200kWh 이하':(kwh<=400?'400kWh 이하':'400kWh 초과');
+  document.getElementById('e-base').textContent=baseHint;
+  document.getElementById('e-energy').textContent=summer?'여름 누진 3단계':'누진 3단계';
+  document.getElementById('d-base').textContent=won(base);
+  document.getElementById('d-energy').textContent=won(energy);
+  document.getElementById('d-climate').textContent=won(climate);
+  document.getElementById('d-fuel').textContent=won(fuel);
+  document.getElementById('d-vat').textContent=won(vat);
+  document.getElementById('d-fund').textContent=won(fund);
+  document.getElementById('d-total').textContent=won(bill);
+  const elecPct=Math.max(0,Math.min(100,elecTotal/billRaw*100));
+  document.getElementById('seg-elec').style.width=elecPct+'%';
+  document.getElementById('seg-tax').style.width=(100-elecPct)+'%';
+  document.getElementById('leg-elec').textContent=won(elecTotal);
+  document.getElementById('leg-tax').textContent=won(taxes);
+  const h=document.getElementById('resHead');
+  if(scroll){h.focus();document.getElementById('out').scrollIntoView({behavior:'smooth',block:'start'});}
+}
+function subscribe(){
+  const e=document.getElementById('email').value.trim();const msg=document.getElementById('cta-msg');
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)){msg.textContent='올바른 이메일 주소를 입력해 주세요.';msg.style.color='#fb7185';return;}
+  try{fetch('https://xyprbsmagtlzebxyxsvj.supabase.co/functions/v1/analytics-ingest',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({event_type:'newsletter_subscribe',source:'lifeflow',metadata:{email:e,campaign:'electricity-bill-calculator',page:location.pathname,subscribed_at:new Date().toISOString()}})}).catch(()=>{});}catch(_){}
+  msg.textContent='감사합니다! 무료 가계부 시트와 대시보드 소식을 보내드릴게요.';msg.style.color='#34d399';
+  try{localStorage.setItem('newsletter-subscribed','true');}catch(_){}
+  document.getElementById('email').value='';
+}
+document.getElementById('kwh').addEventListener('input',()=>calc(false));
+calc(false);
+</script>

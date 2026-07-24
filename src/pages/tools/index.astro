@@ -6,19 +6,25 @@ const description = '연봉 실수령액·부채 상환 계산기부터 건강·
 
 // 새 도구는 이 배열에 항목만 추가하면 자동으로 카드가 생성됩니다.
 const tools = [
-  { slug: 'salary-calculator', emoji: '💰', cat: '금융', title: '연봉 실수령액 계산기', desc: '2026년 4대보험·근로소득세를 반영해 내 연봉의 월·연 실수령액과 공제 내역을 계산합니다.', tag: 'NEW' },
-  { slug: 'age-calculator', emoji: '🎂', cat: '생활', title: '만 나이 계산기', desc: '생년월일로 만 나이·세는 나이·다음 생일 D-day·띠·별자리까지 한 번에 확인합니다.', tag: 'NEW' },
-  { slug: 'bmi-calorie-calculator', emoji: '🩺', cat: '건강', title: 'BMI·칼로리 계산기', desc: '키·몸무게로 BMI·표준체중·기초대사량(BMR)·하루 권장 칼로리를 계산합니다.', tag: 'NEW' },
-  { slug: 'dutchpay-calculator', emoji: '🧾', cat: '생활', title: '더치페이 계산기', desc: '총액·인원·팁으로 1인당 금액을 딱 나누고 정산 문구까지 복사할 수 있어요.', tag: 'NEW' },
+  { slug: 'salary-calculator', emoji: '💰', cat: '금융', title: '연봉 실수령액 계산기', desc: '2026년 4대보험·근로소득세를 반영해 내 연봉의 월·연 실수령액과 공제 내역을 계산합니다.', tag: '인기' },
+  { slug: 'severance-calculator', emoji: '📤', cat: '금융', title: '퇴직금 계산기', desc: '월평균급여와 재직기간으로 예상 퇴직금(세전)을 계산합니다.', tag: 'NEW' },
+  { slug: 'hourly-wage-calculator', emoji: '⏱️', cat: '금융', title: '시급 계산기', desc: '시급·근무시간으로 주휴수당 포함 주급·월 예상급여를 계산합니다.', tag: 'NEW' },
+  { slug: 'compound-interest-calculator', emoji: '📈', cat: '금융', title: '복리 계산기', desc: '복리 수익과 72법칙으로 목돈이 얼마나 불어나는지 계산합니다.', tag: 'NEW' },
+  { slug: 'age-calculator', emoji: '🎂', cat: '생활', title: '만 나이 계산기', desc: '생년월일로 만 나이·세는 나이·다음 생일 D-day·띠·별자리까지 확인합니다.' },
+  { slug: 'dday-calculator', emoji: '📅', cat: '생활', title: 'D-day·날짜 계산기', desc: '목표일까지 남은 날, 두 날짜 사이 일수를 계산합니다.', tag: 'NEW' },
+  { slug: 'dutchpay-calculator', emoji: '🧾', cat: '생활', title: '더치페이 계산기', desc: '총액·인원·팁으로 1인당 금액을 딱 나누고 정산 문구까지 복사할 수 있어요.' },
+  { slug: 'electricity-bill-calculator', emoji: '⚡', cat: '생활', title: '전기요금 계산기', desc: '월 사용량(kWh)으로 주택용 전기요금을 누진제로 계산합니다.', tag: 'NEW' },
+  { slug: 'bmi-calorie-calculator', emoji: '🩺', cat: '건강', title: 'BMI·칼로리 계산기', desc: '키·몸무게로 BMI·표준체중·기초대사량(BMR)·하루 권장 칼로리를 계산합니다.' },
+  { slug: 'character-count', emoji: '✍️', cat: '교육', title: '글자수 세기', desc: '자소서·원고 글자수(공백 포함/제외)·단어·바이트·원고지를 실시간으로 셉니다.', tag: 'NEW' },
   { slug: 'savings-calculator', emoji: '🏦', cat: '금융', title: '예·적금 계산기', desc: '예금·적금의 단리/복리와 세후 만기 수령액·이자를 한눈에 계산합니다.' },
   { slug: 'loan-calculator', emoji: '📉', cat: '금융', title: '대출 이자 계산기', desc: '원리금균등·원금균등·만기일시 상환의 월 상환액과 총이자를 비교합니다.' },
   { slug: 'debt-payoff-calculator', emoji: '💳', cat: '금융', title: '부채 상환 계산기', desc: '스노볼 vs 아발란치 전략을 월별 시뮬레이션으로 비교. 완납일·총이자·절약액을 계산합니다.', tag: '인기' },
 ];
 
 const soon = [
-  { emoji: '🎓', cat: '교육', title: '학점·글자수 계산기' },
+  { emoji: '🎓', cat: '교육', title: '학점(GPA) 계산기' },
   { emoji: '✈️', cat: '여행', title: '환율·시차 계산기' },
-  { emoji: '⚡', cat: '생활', title: '전기요금 계산기' },
+  { emoji: '🧑‍⚖️', cat: '금융', title: '실업급여·연차수당 계산기' },
 ];
 
 const itemListLd = {
