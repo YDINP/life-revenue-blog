@@ -1,0 +1,281 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = '더치페이(N빵) 계산기';
+const description = '모임 총액을 인원 수로 딱 나눠드려요. 봉사료·팁 %와 100원·1000원 올림 단위까지 반영해 1인당 금액, 실제 걷는 총액, 남는 차액을 바로 계산합니다. 카톡으로 결과 복사도 한 번에. 무료·설치 불필요.';
+const ogImage = '/og/dutchpay-calculator.png';
+
+const appLd = {
+  '@context': 'https://schema.org', '@type': 'WebApplication',
+  name: '더치페이(N빵) 계산기', applicationCategory: 'UtilitiesApplication', operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'KRW' },
+  description: '모임 총액을 인원 수로 나눠 봉사료·올림 단위를 반영한 1인당 금액과 걷는 총액·차액을 계산하는 무료 더치페이 도구.',
+};
+const faqLd = {
+  '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+    { '@type': 'Question', name: '봉사료(팁)는 어떻게 계산하나요?', acceptedAnswer: { '@type': 'Answer', text: '총 금액에 봉사료 비율(%)을 곱해 더한 뒤 인원 수로 나눕니다. 예를 들어 총 100,000원에 봉사료 10%면 110,000원을 인원으로 나눠 1인당 금액을 구합니다.' } },
+    { '@type': 'Question', name: '올림 단위는 왜 필요한가요?', acceptedAnswer: { '@type': 'Answer', text: '1원 단위로 정확히 나누면 잔돈이 애매해집니다. 100원 또는 1000원 단위로 올림하면 각자 걷기 편하고, 남는 차액은 계좌 주인이 조금 이득을 보거나 팁으로 처리하면 됩니다.' } },
+    { '@type': 'Question', name: '남는 차액은 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: '올림한 1인당 금액에 인원을 곱한 실제 걷는 총액에서 실제 결제 총액(봉사료 포함)을 뺀 금액입니다. 올림 때문에 조금 더 걷히는 부분으로, 보통 총무가 갖거나 다음 모임 비용으로 쌓아둡니다.' } },
+    { '@type': 'Question', name: '결과를 카톡으로 공유할 수 있나요?', acceptedAnswer: { '@type': 'Answer', text: '네. 결과 복사 버튼을 누르면 상호·인원·총액·1인당 금액이 담긴 메시지가 클립보드에 복사됩니다. 카카오톡 모임 채팅방에 그대로 붙여넣으면 됩니다.' } },
+  ],
+};
+---
+<BaseLayout title={title} description={description} image={ogImage} ogType="website">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(appLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+  </Fragment>
+
+  <div class="dpc">
+    <div class="wrap">
+      <span class="eyebrow"><span class="dot"></span>봉사료·올림 반영 · 무료 · 설치 불필요</span>
+      <h1>더치페이 <span class="grad">N빵</span> 계산기</h1>
+      <p class="sub">모임 총액을 인원 수로 딱 나눠드려요. 봉사료(팁)와 100원·1000원 <b>올림 단위</b>까지 반영해 1인당 금액과 걷는 총액을 계산하고, 결과는 <b>카톡에 바로 복사</b>할 수 있어요.</p>
+
+      <form id="calcForm" onsubmit="event.preventDefault();calc(true)">
+      <div class="card">
+        <div class="card-h"><span class="n">1</span><h2>모임 정보 입력</h2></div>
+        <div class="frow">
+          <div class="fld"><span class="cap">총 금액 (원)</span><input id="amount" inputmode="numeric" aria-label="총 금액(원)" value="120,000" oninput="fmtInput(this)"></div>
+          <div class="fld"><span class="cap">인원 수 (명)</span><input id="people" type="number" min="1" step="1" aria-label="인원 수(명)" value="4"></div>
+        </div>
+        <div class="frow">
+          <div class="fld"><span class="cap">봉사료 / 팁 (%)</span><input id="tip" type="number" min="0" step="0.5" aria-label="봉사료·팁 비율(%)" value="0"></div>
+          <div class="fld"><span class="cap">올림 단위</span>
+            <select id="unit" aria-label="올림 단위" onchange="calc(false)">
+              <option value="1">1원 (정확히 나눔)</option>
+              <option value="100" selected>100원 단위 올림</option>
+              <option value="1000">1000원 단위 올림</option>
+            </select>
+          </div>
+        </div>
+        <div class="fld" style="margin-bottom:12px"><span class="cap">상호 / 모임 이름 (선택 · 공유 메시지에 표시)</span><input id="store" type="text" aria-label="상호 또는 모임 이름" placeholder="예: 삼겹살집 회식" value=""></div>
+        <div class="strat">
+          <button type="submit" class="go">1인당 계산</button>
+        </div>
+        <p class="tip">봉사료가 있으면 <b>총 금액에 %를 더한 뒤</b> 나눕니다. 올림 단위를 <b>100원·1000원</b>으로 두면 각자 걷기 편하고, 잔돈에서 생기는 차액은 총무가 정리하면 됩니다.</p>
+      </div>
+      </form>
+
+      <div class="card" id="out">
+        <div class="card-h"><span class="n">2</span><h2 id="resHead" tabindex="-1">1인당 금액</h2></div>
+        <div class="hero-lbl">1인당 낼 금액 (올림 적용)</div>
+        <div class="res-hero"><span class="big grad" id="r-per">–</span><span class="permo">/ 1명</span></div>
+        <div class="hero-sent" id="r-sent"></div>
+        <div class="kpis">
+          <div class="kpi"><div class="l">실제 걷는 총액</div><div class="v em" id="r-collect">–</div></div>
+          <div class="kpi"><div class="l">팁 포함 결제 총액</div><div class="v" id="r-total">–</div></div>
+          <div class="kpi"><div class="l">남는 차액</div><div class="v bl" id="r-diff">–</div></div>
+        </div>
+        <div class="brk">
+          <div class="brk-t">계산 내역</div>
+          <div class="brk-row"><span>총 금액</span><b id="b-amount">–</b></div>
+          <div class="brk-row"><span>봉사료 / 팁 <em id="b-tiprate">0%</em></span><b id="b-tip">–</b></div>
+          <div class="brk-row"><span>팁 포함 결제 총액</span><b id="b-total">–</b></div>
+          <div class="brk-row"><span>인원 <em id="b-unit">100원 올림</em></span><b id="b-people">–</b></div>
+          <div class="brk-row"><span>1인당 금액 (올림)</span><b id="b-per">–</b></div>
+          <div class="brk-row"><span>실제 걷는 총액</span><b id="b-collect">–</b></div>
+          <div class="brk-row total"><span>남는 차액</span><b id="b-diff">–</b></div>
+        </div>
+        <div class="strat" style="margin-top:16px">
+          <button type="button" class="copy" onclick="copyResult(this)">📋 결과 복사 (카톡 공유)</button>
+        </div>
+        <div class="fine copy-msg" id="copy-msg" aria-live="polite"></div>
+      </div>
+
+      <div class="cta" id="cta" style="display:none">
+        <h3>💡 모임·생활 계산이 잦다면</h3>
+        <p>더치페이·경조사비·구독료 나누기 같은 <b>생활 계산 도구</b>가 새로 나올 때마다 가장 먼저 알려드려요. 실생활에 바로 쓰는 무료 도구 소식만 담은 <b>생활 도구 뉴스레터</b>입니다.</p>
+        <div class="emailrow">
+          <input id="email" type="email" placeholder="이메일 주소" aria-label="이메일 주소">
+          <button type="button" onclick="subscribe()">뉴스레터 받기</button>
+        </div>
+        <div class="fine" id="cta-msg" aria-live="polite">스팸 없이 생활 도구 소식만. 언제든 해지할 수 있어요.</div>
+      </div>
+
+      <div class="content">
+        <h2>더치페이(N빵) 계산이란?</h2>
+        <p><b>더치페이</b>는 모임 결제 금액을 참석 인원으로 똑같이 나눠 각자 부담하는 방식입니다. 봉사료(팁)가 있으면 총액에 더한 뒤 나누고, 잔돈이 애매하지 않도록 <b>100원·1000원 단위로 올림</b>하면 각자 걷기가 훨씬 편해집니다.</p>
+        <h2>계산 방식</h2>
+        <ul>
+          <li><b>팁 포함 총액</b> = 총 금액 × (1 + 봉사료% ÷ 100)</li>
+          <li><b>1인당 금액</b> = ⌈ (팁 포함 총액 ÷ 인원) ÷ 올림단위 ⌉ × 올림단위</li>
+          <li><b>실제 걷는 총액</b> = 1인당 금액 × 인원</li>
+          <li><b>남는 차액</b> = 실제 걷는 총액 − 팁 포함 총액 (올림으로 더 걷히는 금액)</li>
+        </ul>
+        <h2>자주 묻는 질문</h2>
+        <h3>봉사료(팁)는 어떻게 계산하나요?</h3>
+        <p>총 금액에 봉사료 비율(%)을 곱해 더한 뒤 인원으로 나눕니다. 예를 들어 100,000원에 봉사료 10%면 110,000원을 인원으로 나눠 1인당 금액을 구합니다.</p>
+        <h3>올림 단위는 왜 두나요?</h3>
+        <p>1원 단위로 정확히 나누면 3,750원처럼 걷기 애매한 금액이 나옵니다. 100원·1000원 단위로 올림하면 각자 낼 금액이 깔끔해지고, 올림으로 조금 더 걷힌 차액은 총무가 정리하거나 다음 모임 비용으로 쌓아두면 됩니다.</p>
+        <h3>결과를 카톡으로 공유할 수 있나요?</h3>
+        <p>네. <b>결과 복사</b> 버튼을 누르면 상호·인원·총액·1인당 금액이 담긴 메시지가 클립보드에 복사됩니다. 카카오톡 모임 채팅방에 그대로 붙여넣으면 됩니다.</p>
+      </div>
+
+      <p class="disc">참고용 계산기입니다. 봉사료와 올림 단위를 반영해 계산하며, 실제 결제 방식·잔돈 처리는 모임 상황에 따라 달라질 수 있습니다. 입력값은 서버로 전송되지 않고 브라우저에서만 계산됩니다.</p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style is:global>
+.dpc{--grad:linear-gradient(135deg,#34d399,#22d3ee);--radius:18px;
+  --surface:#ffffff;--surface2:#f4f7fb;--line:#e5eaf1;--line2:#d4dce7;
+  --text:#0f1a2b;--mut:#48566b;--dim:#6a7889;--emerald:#0c9c6b;--teal:#0d7d9c;--rose:#e11d63;
+  --gradtext:linear-gradient(135deg,#0aa06e,#0d86a6);
+  --shadow:0 10px 30px -14px rgba(20,45,90,.16);--panelborder:#e6ecf3;
+  --panel:radial-gradient(700px 400px at 12% -8%,rgba(52,211,153,.07),transparent 60%),radial-gradient(600px 400px at 100% 0%,rgba(34,211,238,.06),transparent 55%),linear-gradient(180deg,#f8fbfe,#eef3f9);
+  max-width:920px;margin:26px auto;padding:28px 22px 32px;border-radius:24px;border:1px solid var(--panelborder);
+  background:var(--panel);color:var(--text);
+  font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.55;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
+html.dark .dpc{--surface:#121c2e;--surface2:#0e1626;--line:#1f2c42;--line2:#2a3a56;
+  --text:#eef2f8;--mut:#9fb0c6;--dim:#8b97ac;--emerald:#34d399;--teal:#22d3ee;--rose:#fb7185;
+  --gradtext:linear-gradient(135deg,#34d399,#22d3ee);
+  --shadow:0 12px 40px -12px rgba(0,0,0,.55);--panelborder:#17233a;
+  --panel:radial-gradient(700px 400px at 12% -8%,rgba(52,211,153,.10),transparent 60%),radial-gradient(600px 400px at 100% 0%,rgba(34,211,238,.08),transparent 55%),linear-gradient(180deg,#0d1524,#0a0f1a)}
+.dpc *{box-sizing:border-box;margin:0;padding:0}
+.dpc .wrap{max-width:100%;margin:0 auto}
+.dpc .eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--emerald);background:rgba(52,211,153,.10);border:1px solid rgba(52,211,153,.22);padding:5px 12px;border-radius:999px;margin-bottom:16px}
+.dpc .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.2)}
+.dpc h1{font-size:clamp(26px,5vw,38px);font-weight:800;line-height:1.12;letter-spacing:-.03em;color:var(--text)}
+.dpc .grad{background:var(--gradtext);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.dpc .sub{color:var(--mut);font-size:16px;margin:12px 0 26px;max-width:640px}
+.dpc .card{background:linear-gradient(180deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:18px;box-shadow:var(--shadow)}
+.dpc .card-h{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.dpc .card-h .n{width:26px;height:26px;border-radius:8px;background:rgba(52,211,153,.12);color:var(--emerald);display:grid;place-items:center;font-size:13px;font-weight:700}
+.dpc .card-h h2{font-size:16.5px;font-weight:700;letter-spacing:-.02em;color:var(--text)}
+.dpc .frow{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.dpc .fld{position:relative}
+.dpc .fld .cap{display:block;font-size:12px;color:var(--mut);font-weight:600;margin-bottom:5px}
+.dpc .fld input{width:100%;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:11px 12px;color:var(--text);font-size:15px;font-family:inherit;transition:border-color .15s,box-shadow .15s}
+.dpc .fld input::placeholder{color:var(--dim)}
+.dpc .fld input:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.14)}
+.dpc .strat{display:flex;margin-top:6px}
+.dpc .go{margin-left:auto;background:var(--grad);color:#04121b;border:none;border-radius:12px;padding:12px 26px;font-weight:800;font-size:15px;font-family:inherit;cursor:pointer;box-shadow:0 8px 22px -8px rgba(52,211,153,.6);transition:transform .12s,filter .15s}
+.dpc .go:hover{filter:brightness(1.05)}.dpc .go:active{transform:translateY(1px)}
+.dpc .tip{font-size:13px;color:var(--mut);margin-top:14px;line-height:1.5}
+.dpc .tip b{color:var(--text)}
+.dpc button:focus-visible,.dpc input:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.dpc #out{display:none}
+.dpc .hero-lbl{font-size:13px;color:var(--mut);font-weight:600;margin:2px 0}
+.dpc .res-hero{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;padding:0 2px 4px;background:none;border-radius:0;text-align:left;margin:0}
+.dpc .res-hero .big{font-size:clamp(30px,7vw,46px);font-weight:800;letter-spacing:-.03em}
+.dpc .permo{font-size:16px;color:var(--mut);font-weight:600}
+.dpc .hero-sent{font-size:15px;color:var(--mut);margin:2px 2px 18px}
+.dpc .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.dpc .kpi{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:15px 16px}
+.dpc .kpi .l{font-size:12.5px;color:var(--mut);font-weight:600}
+.dpc .kpi .v{font-size:20px;font-weight:800;margin-top:5px;letter-spacing:-.02em;color:var(--text)}
+.dpc .v.em{color:var(--emerald)}.dpc .v.bl{color:var(--teal)}
+.dpc .barwrap{margin-top:18px}
+.dpc .stackbar{display:flex;height:30px;border-radius:9px;overflow:hidden;border:1px solid var(--line);background:var(--surface2)}
+.dpc .stackbar .seg{height:100%}
+.dpc .stackbar .seg.net{background:linear-gradient(90deg,#34d399,#22d3ee)}
+.dpc .stackbar .seg.ded{background:repeating-linear-gradient(45deg,var(--line2),var(--line2) 6px,var(--surface2) 6px,var(--surface2) 12px)}
+.dpc .barleg{display:flex;gap:16px;font-size:12.5px;color:var(--mut);margin-top:8px}
+.dpc .barleg i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:middle}
+.dpc .barleg i.net{background:#22d3ee}.dpc .barleg i.ded{background:var(--line2)}
+.dpc .barleg b{color:var(--text)}
+.dpc .brk{margin-top:18px;border-top:1px solid var(--line);padding-top:14px}
+.dpc .brk-t{font-size:13px;color:var(--mut);font-weight:700;margin-bottom:8px}
+.dpc .brk-row{display:flex;justify-content:space-between;align-items:center;padding:8px 2px;font-size:14.5px;border-bottom:1px solid var(--line)}
+.dpc .brk-row span{color:var(--text)}
+.dpc .brk-row em{font-style:normal;font-size:12px;color:var(--dim);margin-left:6px}
+.dpc .brk-row b{color:var(--text);font-weight:700}
+.dpc .brk-row.total{border-bottom:none;margin-top:4px;font-weight:800}
+.dpc .brk-row.total span,.dpc .brk-row.total b{color:var(--rose);font-size:15.5px}
+.dpc .cta{background:linear-gradient(135deg,#0f2740,#12233a);border:1px solid #274563;border-radius:var(--radius);padding:24px;position:relative;overflow:hidden;margin-bottom:18px}
+.dpc .cta::before{content:"";position:absolute;inset:0;background:radial-gradient(400px 160px at 90% 0%,rgba(34,211,238,.14),transparent 70%);pointer-events:none}
+.dpc .cta h3{font-size:19px;font-weight:800;letter-spacing:-.02em;margin-bottom:7px;position:relative;color:#f2f7fb}
+.dpc .cta p{color:#aabdd0;font-size:14px;margin-bottom:14px;max-width:580px;position:relative}
+.dpc .cta .fine{color:#8097ad}
+.dpc .emailrow{display:flex;gap:9px;flex-wrap:wrap;position:relative}
+.dpc .cta .emailrow input{flex:1;min-width:220px;background:#0d1b2c;border:1px solid #26445f;border-radius:12px;padding:12px 14px;color:#eef2f8;font-size:14.5px;font-family:inherit}
+.dpc .cta .emailrow input::placeholder{color:#7089a0}
+.dpc .emailrow button{background:var(--grad);color:#04121b;border:none;border-radius:12px;padding:12px 22px;font-weight:800;font-size:14.5px;font-family:inherit;cursor:pointer;transition:.15s}
+.dpc .emailrow button:hover{filter:brightness(1.05)}
+.dpc .fine{font-size:11.5px;margin-top:10px;position:relative}
+.dpc .content{color:var(--mut);font-size:15px}
+.dpc .content h2{font-size:19px;color:var(--text);font-weight:800;letter-spacing:-.02em;margin:26px 0 10px}
+.dpc .content h3{font-size:15.5px;color:var(--text);font-weight:700;margin:16px 0 4px}
+.dpc .content p{margin-bottom:8px}
+.dpc .content ul{margin:6px 0 6px 18px}.dpc .content li{margin-bottom:5px}
+.dpc .disc{font-size:12px;color:var(--dim);margin-top:22px;line-height:1.6}
+@media(max-width:600px){
+  .dpc{padding:20px 14px 24px;margin:16px auto;border-radius:18px}
+  .dpc .frow{grid-template-columns:1fr}
+  .dpc .kpis{grid-template-columns:1fr}
+  .dpc .go{width:100%}
+}
+/* dutchpay-specific */
+.dpc .fld select{width:100%;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:11px 12px;color:var(--text);font-size:15px;font-family:inherit;cursor:pointer;transition:border-color .15s,box-shadow .15s;-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2348566b' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:34px}
+.dpc .fld select:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.14)}
+.dpc .copy{margin-left:auto;background:var(--surface2);color:var(--text);border:1px solid var(--line2);border-radius:12px;padding:12px 24px;font-weight:800;font-size:14.5px;font-family:inherit;cursor:pointer;transition:transform .12s,filter .15s,border-color .15s}
+.dpc .copy:hover{border-color:var(--emerald);filter:brightness(1.02)}.dpc .copy:active{transform:translateY(1px)}
+.dpc .copy-msg{color:var(--emerald);font-weight:600;min-height:16px;text-align:right}
+</style>
+
+<script is:inline>
+const won=n=>Math.round(n).toLocaleString('ko-KR')+'원';
+const cint=v=>parseFloat(String(v).replace(/[^0-9.]/g,''))||0;
+function fmtInput(el){const raw=el.value.replace(/[^0-9]/g,'');el.value=raw?parseInt(raw,10).toLocaleString('ko-KR'):'';}
+let LAST=null; // {store,people,total,per}
+function calc(scroll){
+  const amount=cint(document.getElementById('amount').value);
+  const people=Math.max(1,parseInt(document.getElementById('people').value)||1);
+  const tip=Math.max(0,parseFloat(document.getElementById('tip').value)||0);
+  const unit=Math.max(1,parseInt(document.getElementById('unit').value)||1);
+  const store=document.getElementById('store').value.trim();
+  if(amount<=0)return;
+  const tipAmt=amount*(tip/100);
+  const total=amount+tipAmt;
+  const per=Math.ceil((total/people)/unit)*unit;
+  const collect=per*people;
+  const diff=collect-total;
+  const unitLbl=unit===1?'1원 단위':unit===1000?'1000원 올림':'100원 올림';
+  // render
+  document.getElementById('out').style.display='block';
+  document.getElementById('cta').style.display='block';
+  document.getElementById('r-per').textContent=won(per);
+  document.getElementById('r-sent').textContent=`${people}명이 ${won(total)}을 나누면 한 명당 ${won(per)}씩 걷으면 됩니다.`;
+  document.getElementById('r-collect').textContent=won(collect);
+  document.getElementById('r-total').textContent=won(total);
+  document.getElementById('r-diff').textContent=(diff>0?'+':'')+won(diff);
+  document.getElementById('b-amount').textContent=won(amount);
+  document.getElementById('b-tiprate').textContent=(tip%1===0?tip:tip.toFixed(1))+'%';
+  document.getElementById('b-tip').textContent=won(tipAmt);
+  document.getElementById('b-total').textContent=won(total);
+  document.getElementById('b-unit').textContent=unitLbl;
+  document.getElementById('b-people').textContent=people+'명';
+  document.getElementById('b-per').textContent=won(per);
+  document.getElementById('b-collect').textContent=won(collect);
+  document.getElementById('b-diff').textContent=(diff>0?'+':'')+won(diff);
+  LAST={store,people,total,per};
+  document.getElementById('copy-msg').textContent='';
+  const h=document.getElementById('resHead');
+  if(scroll){h.focus();document.getElementById('out').scrollIntoView({behavior:'smooth',block:'start'});}
+}
+function copyResult(btn){
+  if(!LAST)return;
+  const {store,people,total,per}=LAST;
+  const head=store?store+' ':'';
+  const msg=`💸 ${head}${people}명 더치페이\n총 ${won(total)} → 1인당 ${won(per)}`;
+  const done=()=>{const m=document.getElementById('copy-msg');m.textContent='복사됐어요! 카톡에 붙여넣으세요.';setTimeout(()=>{m.textContent='';},3000);};
+  try{
+    navigator.clipboard.writeText(msg).then(done).catch(()=>fallbackCopy(msg,done));
+  }catch(_){fallbackCopy(msg,done);}
+}
+function fallbackCopy(text,cb){
+  try{const ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.focus();ta.select();document.execCommand('copy');document.body.removeChild(ta);cb();}
+  catch(_){const m=document.getElementById('copy-msg');m.textContent='복사에 실패했어요. 직접 선택해 복사해 주세요.';m.style.color='#fb7185';}
+}
+function subscribe(){
+  const e=document.getElementById('email').value.trim();const msg=document.getElementById('cta-msg');
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)){msg.textContent='올바른 이메일 주소를 입력해 주세요.';msg.style.color='#fb7185';return;}
+  try{fetch('https://xyprbsmagtlzebxyxsvj.supabase.co/functions/v1/analytics-ingest',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({event_type:'newsletter_subscribe',source:'lifeflow',metadata:{email:e,campaign:'dutchpay-calculator',page:location.pathname,subscribed_at:new Date().toISOString()}})}).catch(()=>{});}catch(_){}
+  msg.textContent='감사합니다! 생활 도구 소식을 이메일로 보내드릴게요.';msg.style.color='#34d399';
+  try{localStorage.setItem('newsletter-subscribed','true');}catch(_){}
+  document.getElementById('email').value='';
+}
+document.getElementById('amount').addEventListener('input',e=>fmtInput(e.target));
+calc(false);
+</script>

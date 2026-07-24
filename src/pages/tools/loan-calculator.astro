@@ -1,0 +1,291 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = '대출 이자 계산기 2026';
+const description = '대출원금·연이자율·기간만 넣으면 월 상환액, 총 이자, 총 상환액을 바로 계산합니다. 원리금균등·원금균등·만기일시 3가지 상환방식을 한 번에 비교하세요. 무료·설치 불필요.';
+const ogImage = '/og/loan-calculator.png';
+
+const appLd = {
+  '@context': 'https://schema.org', '@type': 'WebApplication',
+  name: '대출 이자 계산기 2026', applicationCategory: 'FinanceApplication', operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'KRW' },
+  description: '대출원금·연이자율·기간을 입력해 원리금균등·원금균등·만기일시 상환방식별 월 상환액과 총 이자, 총 상환액을 계산하는 무료 도구.',
+};
+const faqLd = {
+  '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+    { '@type': 'Question', name: '원리금균등과 원금균등 상환의 차이는 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: '원리금균등은 매월 갚는 금액(원금+이자)이 동일해 계획이 쉽지만 초기에는 이자 비중이 큽니다. 원금균등은 매월 갚는 원금이 같고 이자는 남은 원금에 붙어 갈수록 상환액이 줄며, 같은 조건이면 총 이자가 원리금균등보다 적습니다.' } },
+    { '@type': 'Question', name: '만기일시상환은 언제 유리한가요?', acceptedAnswer: { '@type': 'Answer', text: '매월 이자만 내고 만기에 원금을 한 번에 갚는 방식입니다. 월 부담이 가장 낮지만 원금이 줄지 않아 총 이자가 가장 많습니다. 단기 브릿지 자금이나 곧 매도할 자산 담보대출에 주로 씁니다.' } },
+    { '@type': 'Question', name: '중도상환수수료는 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: '약정 기간 전에 대출을 앞당겨 갚을 때 은행이 부과하는 수수료로, 보통 남은 원금의 0.5~1.5%에 잔여기간 비율을 곱해 계산하며 대개 3년이 지나면 면제됩니다. 이 계산기에는 반영되지 않으니 상환 계획 시 별도로 확인하세요.' } },
+    { '@type': 'Question', name: '실제 대출 상환액과 다를 수 있나요?', acceptedAnswer: { '@type': 'Answer', text: '네. 실제 상환액은 이자 계산 방식(연 365일 일할 등), 거치기간, 우대금리, 중도상환수수료, 취급수수료에 따라 달라집니다. 이 계산기는 월 복리 기준의 예상치입니다.' } },
+  ],
+};
+---
+<BaseLayout title={title} description={description} image={ogImage} ogType="website">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(appLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+  </Fragment>
+
+  <div class="dpc">
+    <div class="wrap">
+      <span class="eyebrow"><span class="dot"></span>3가지 상환방식 비교 · 무료 · 설치 불필요</span>
+      <h1>대출 이자 <span class="grad">계산기</span></h1>
+      <p class="sub">대출원금·금리·기간만 넣으면 <b>월 상환액과 총 이자, 총 상환액</b>이 바로 나옵니다. 원리금균등·원금균등·만기일시를 버튼 하나로 비교하세요.</p>
+
+      <form id="calcForm" onsubmit="event.preventDefault();calc(true)">
+      <div class="card">
+        <div class="card-h"><span class="n">1</span><h2>대출 정보 입력</h2></div>
+        <div class="frow">
+          <div class="fld"><span class="cap">대출원금 (원)</span><input id="principal" inputmode="numeric" aria-label="대출원금(원)" value="100,000,000" oninput="fmtInput(this)"></div>
+          <div class="fld"><span class="cap">연이자율 (%)</span><input id="rate" type="number" min="0" step="0.1" aria-label="연이자율(%)" value="4.5"></div>
+        </div>
+        <div class="frow">
+          <div class="fld"><span class="cap">대출기간 (개월)</span><input id="months" type="number" min="1" step="1" aria-label="대출기간(개월)" value="360"></div>
+          <div class="fld"><span class="cap">상환방식</span>
+            <div class="seg-toggle" role="group" aria-label="상환방식 선택">
+              <button type="button" class="seg-btn on" onclick="setMethod('equal',this)">원리금균등</button>
+              <button type="button" class="seg-btn" onclick="setMethod('principal',this)">원금균등</button>
+              <button type="button" class="seg-btn" onclick="setMethod('bullet',this)">만기일시</button>
+            </div>
+          </div>
+        </div>
+        <div class="strat">
+          <button type="submit" class="go">상환액 계산</button>
+        </div>
+        <p class="tip"><b>원리금균등</b>은 매월 상환액이 같고, <b>원금균등</b>은 매월 원금이 같아 상환액이 줄어들며, <b>만기일시</b>는 이자만 내다 만기에 원금을 한 번에 갚습니다. 30년=360개월, 10년=120개월입니다.</p>
+      </div>
+      </form>
+
+      <div class="card" id="out">
+        <div class="card-h"><span class="n">2</span><h2 id="resHead" tabindex="-1">상환 결과</h2></div>
+        <div class="hero-lbl" id="hero-lbl">월 상환액 (예상)</div>
+        <div class="res-hero"><span class="big grad" id="r-net">–</span><span class="permo">/ 월</span></div>
+        <div class="hero-sent" id="r-sent"></div>
+        <div class="kpis">
+          <div class="kpi"><div class="l">총 이자</div><div class="v" id="r-interest">–</div></div>
+          <div class="kpi"><div class="l">총 상환액</div><div class="v em" id="r-total">–</div></div>
+          <div class="kpi"><div class="l">원금 대비 이자</div><div class="v bl" id="r-ratio">–</div></div>
+        </div>
+        <div class="barwrap">
+          <div class="stackbar" id="stackbar"><div class="seg net" id="seg-net"></div><div class="seg ded" id="seg-ded"></div></div>
+          <div class="barleg"><span><i class="net"></i>원금 <b id="leg-net"></b></span><span><i class="ded"></i>이자 <b id="leg-ded"></b></span></div>
+        </div>
+        <div class="brk">
+          <div class="brk-t">상환 상세</div>
+          <div id="brk-rows"></div>
+        </div>
+      </div>
+
+      <div class="cta" id="cta" style="display:none">
+        <h3>💡 여러 대출을 한 번에 정리하고 싶다면</h3>
+        <p>어떤 빚부터 갚아야 이자를 가장 아낄지 궁금하다면 <a href="/tools/debt-payoff-calculator/" style="color:#67e8f9;font-weight:700">부채 상환 계산기</a>로 눈덩이·눈사태 전략을 비교해 보세요. 순자산과 상환 계획을 한 화면에서 관리하는 <b>무료 재무 대시보드 시트</b>도 보내드립니다.</p>
+        <div class="emailrow">
+          <input id="email" type="email" placeholder="이메일 주소" aria-label="이메일 주소">
+          <button type="button" onclick="subscribe()">무료 시트 받기</button>
+        </div>
+        <div class="fine" id="cta-msg" aria-live="polite">스팸 없이 재무 도구 소식만. 언제든 해지할 수 있어요.</div>
+      </div>
+
+      <div class="content">
+        <h2>대출 상환방식, 뭐가 다를까?</h2>
+        <p>같은 원금·금리·기간이라도 <b>상환방식</b>에 따라 매월 갚는 돈과 총 이자가 달라집니다. 크게 세 가지가 있습니다.</p>
+        <ul>
+          <li><b>원리금균등상환</b> — 매월 갚는 금액(원금+이자)이 동일. 자금 계획이 쉬워 주택담보대출에 가장 많이 쓰입니다. 초기엔 이자 비중이 큽니다.</li>
+          <li><b>원금균등상환</b> — 매월 갚는 <b>원금</b>이 같고 이자는 남은 원금에만 붙어 상환액이 갈수록 줄어듭니다. 같은 조건이면 총 이자가 가장 적습니다.</li>
+          <li><b>만기일시상환</b> — 매월 이자만 내고 만기에 원금을 한 번에 상환. 월 부담은 낮지만 원금이 줄지 않아 총 이자가 가장 많습니다.</li>
+        </ul>
+        <h2>총 이자를 줄이는 3가지 원칙</h2>
+        <ul>
+          <li><b>기간을 줄이세요</b> — 같은 금리라도 기간이 길수록 총 이자가 눈덩이처럼 불어납니다.</li>
+          <li><b>금리 0.5%도 크다</b> — 억 단위 장기 대출에서 0.5%p 차이는 수백만 원의 이자로 이어집니다.</li>
+          <li><b>여유가 되면 원금균등</b> — 초기 상환 부담을 감당할 수 있다면 원금균등이 이자를 아낍니다.</li>
+        </ul>
+        <h2>자주 묻는 질문</h2>
+        <h3>원리금균등과 원금균등의 차이는?</h3>
+        <p>원리금균등은 매월 상환액이 같아 예측이 쉽지만 초기 이자 비중이 큽니다. 원금균등은 매월 원금이 같고 이자가 줄어 상환액이 감소하며, 같은 조건이면 총 이자가 더 적습니다.</p>
+        <h3>만기일시상환은 언제 유리한가요?</h3>
+        <p>월 부담이 가장 낮아 단기 브릿지 자금이나 곧 매도할 자산의 담보대출에 적합합니다. 다만 원금이 줄지 않아 총 이자가 가장 많으므로 장기 보유에는 불리합니다.</p>
+        <h3>중도상환수수료를 주의하세요</h3>
+        <p>약정 기간 전에 대출을 앞당겨 갚으면 남은 원금의 0.5~1.5%에 잔여기간 비율을 곱한 <b>중도상환수수료</b>가 붙습니다(보통 3년 경과 시 면제). 이 계산기에는 반영되지 않으니 조기상환 전 은행에 꼭 확인하세요.</p>
+      </div>
+
+      <p class="disc">참고용 계산기입니다. 월 복리(연이율÷12) 기준으로 계산하며 실제 대출은 이자 계산 방식(일할 등)·거치기간·우대금리·중도상환수수료·취급수수료에 따라 달라질 수 있습니다. 입력값은 서버로 전송되지 않고 브라우저에서만 계산됩니다.</p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style is:global>
+.dpc{--grad:linear-gradient(135deg,#34d399,#22d3ee);--radius:18px;
+  --surface:#ffffff;--surface2:#f4f7fb;--line:#e5eaf1;--line2:#d4dce7;
+  --text:#0f1a2b;--mut:#48566b;--dim:#6a7889;--emerald:#0c9c6b;--teal:#0d7d9c;--rose:#e11d63;
+  --gradtext:linear-gradient(135deg,#0aa06e,#0d86a6);
+  --shadow:0 10px 30px -14px rgba(20,45,90,.16);--panelborder:#e6ecf3;
+  --panel:radial-gradient(700px 400px at 12% -8%,rgba(52,211,153,.07),transparent 60%),radial-gradient(600px 400px at 100% 0%,rgba(34,211,238,.06),transparent 55%),linear-gradient(180deg,#f8fbfe,#eef3f9);
+  max-width:920px;margin:26px auto;padding:28px 22px 32px;border-radius:24px;border:1px solid var(--panelborder);
+  background:var(--panel);color:var(--text);
+  font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.55;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
+html.dark .dpc{--surface:#121c2e;--surface2:#0e1626;--line:#1f2c42;--line2:#2a3a56;
+  --text:#eef2f8;--mut:#9fb0c6;--dim:#8b97ac;--emerald:#34d399;--teal:#22d3ee;--rose:#fb7185;
+  --gradtext:linear-gradient(135deg,#34d399,#22d3ee);
+  --shadow:0 12px 40px -12px rgba(0,0,0,.55);--panelborder:#17233a;
+  --panel:radial-gradient(700px 400px at 12% -8%,rgba(52,211,153,.10),transparent 60%),radial-gradient(600px 400px at 100% 0%,rgba(34,211,238,.08),transparent 55%),linear-gradient(180deg,#0d1524,#0a0f1a)}
+.dpc *{box-sizing:border-box;margin:0;padding:0}
+.dpc .wrap{max-width:100%;margin:0 auto}
+.dpc .eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--emerald);background:rgba(52,211,153,.10);border:1px solid rgba(52,211,153,.22);padding:5px 12px;border-radius:999px;margin-bottom:16px}
+.dpc .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.2)}
+.dpc h1{font-size:clamp(26px,5vw,38px);font-weight:800;line-height:1.12;letter-spacing:-.03em;color:var(--text)}
+.dpc .grad{background:var(--gradtext);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.dpc .sub{color:var(--mut);font-size:16px;margin:12px 0 26px;max-width:640px}
+.dpc .card{background:linear-gradient(180deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:18px;box-shadow:var(--shadow)}
+.dpc .card-h{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.dpc .card-h .n{width:26px;height:26px;border-radius:8px;background:rgba(52,211,153,.12);color:var(--emerald);display:grid;place-items:center;font-size:13px;font-weight:700}
+.dpc .card-h h2{font-size:16.5px;font-weight:700;letter-spacing:-.02em;color:var(--text)}
+.dpc .frow{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.dpc .fld{position:relative}
+.dpc .fld .cap{display:block;font-size:12px;color:var(--mut);font-weight:600;margin-bottom:5px}
+.dpc .fld input{width:100%;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:11px 12px;color:var(--text);font-size:15px;font-family:inherit;transition:border-color .15s,box-shadow .15s}
+.dpc .fld input::placeholder{color:var(--dim)}
+.dpc .fld input:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.14)}
+.dpc .strat{display:flex;margin-top:6px}
+.dpc .go{margin-left:auto;background:var(--grad);color:#04121b;border:none;border-radius:12px;padding:12px 26px;font-weight:800;font-size:15px;font-family:inherit;cursor:pointer;box-shadow:0 8px 22px -8px rgba(52,211,153,.6);transition:transform .12s,filter .15s}
+.dpc .go:hover{filter:brightness(1.05)}.dpc .go:active{transform:translateY(1px)}
+.dpc .tip{font-size:13px;color:var(--mut);margin-top:14px;line-height:1.5}
+.dpc .tip b{color:var(--text)}
+.dpc button:focus-visible,.dpc input:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.dpc #out{display:none}
+.dpc .hero-lbl{font-size:13px;color:var(--mut);font-weight:600;margin:2px 0}
+.dpc .res-hero{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;padding:0 2px 4px;background:none;border-radius:0;text-align:left;margin:0}
+.dpc .res-hero .big{font-size:clamp(30px,7vw,46px);font-weight:800;letter-spacing:-.03em}
+.dpc .permo{font-size:16px;color:var(--mut);font-weight:600}
+.dpc .hero-sent{font-size:15px;color:var(--mut);margin:2px 2px 18px}
+.dpc .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.dpc .kpi{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:15px 16px}
+.dpc .kpi .l{font-size:12.5px;color:var(--mut);font-weight:600}
+.dpc .kpi .v{font-size:20px;font-weight:800;margin-top:5px;letter-spacing:-.02em;color:var(--text)}
+.dpc .v.em{color:var(--emerald)}.dpc .v.bl{color:var(--teal)}
+.dpc .barwrap{margin-top:18px}
+.dpc .stackbar{display:flex;height:30px;border-radius:9px;overflow:hidden;border:1px solid var(--line);background:var(--surface2)}
+.dpc .stackbar .seg{height:100%}
+.dpc .stackbar .seg.net{background:linear-gradient(90deg,#34d399,#22d3ee)}
+.dpc .stackbar .seg.ded{background:repeating-linear-gradient(45deg,var(--line2),var(--line2) 6px,var(--surface2) 6px,var(--surface2) 12px)}
+.dpc .barleg{display:flex;gap:16px;font-size:12.5px;color:var(--mut);margin-top:8px}
+.dpc .barleg i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:middle}
+.dpc .barleg i.net{background:#22d3ee}.dpc .barleg i.ded{background:var(--line2)}
+.dpc .barleg b{color:var(--text)}
+.dpc .brk{margin-top:18px;border-top:1px solid var(--line);padding-top:14px}
+.dpc .brk-t{font-size:13px;color:var(--mut);font-weight:700;margin-bottom:8px}
+.dpc .brk-row{display:flex;justify-content:space-between;align-items:center;padding:8px 2px;font-size:14.5px;border-bottom:1px solid var(--line)}
+.dpc .brk-row span{color:var(--text)}
+.dpc .brk-row em{font-style:normal;font-size:12px;color:var(--dim);margin-left:6px}
+.dpc .brk-row b{color:var(--text);font-weight:700}
+.dpc .brk-row.total{border-bottom:none;margin-top:4px;font-weight:800}
+.dpc .brk-row.total span,.dpc .brk-row.total b{color:var(--rose);font-size:15.5px}
+.dpc .cta{background:linear-gradient(135deg,#0f2740,#12233a);border:1px solid #274563;border-radius:var(--radius);padding:24px;position:relative;overflow:hidden;margin-bottom:18px}
+.dpc .cta::before{content:"";position:absolute;inset:0;background:radial-gradient(400px 160px at 90% 0%,rgba(34,211,238,.14),transparent 70%);pointer-events:none}
+.dpc .cta h3{font-size:19px;font-weight:800;letter-spacing:-.02em;margin-bottom:7px;position:relative;color:#f2f7fb}
+.dpc .cta p{color:#aabdd0;font-size:14px;margin-bottom:14px;max-width:580px;position:relative}
+.dpc .cta .fine{color:#8097ad}
+.dpc .emailrow{display:flex;gap:9px;flex-wrap:wrap;position:relative}
+.dpc .cta .emailrow input{flex:1;min-width:220px;background:#0d1b2c;border:1px solid #26445f;border-radius:12px;padding:12px 14px;color:#eef2f8;font-size:14.5px;font-family:inherit}
+.dpc .cta .emailrow input::placeholder{color:#7089a0}
+.dpc .emailrow button{background:var(--grad);color:#04121b;border:none;border-radius:12px;padding:12px 22px;font-weight:800;font-size:14.5px;font-family:inherit;cursor:pointer;transition:.15s}
+.dpc .emailrow button:hover{filter:brightness(1.05)}
+.dpc .fine{font-size:11.5px;margin-top:10px;position:relative}
+.dpc .content{color:var(--mut);font-size:15px}
+.dpc .content h2{font-size:19px;color:var(--text);font-weight:800;letter-spacing:-.02em;margin:26px 0 10px}
+.dpc .content h3{font-size:15.5px;color:var(--text);font-weight:700;margin:16px 0 4px}
+.dpc .content p{margin-bottom:8px}
+.dpc .content ul{margin:6px 0 6px 18px}.dpc .content li{margin-bottom:5px}
+.dpc .disc{font-size:12px;color:var(--dim);margin-top:22px;line-height:1.6}
+/* tool-specific: 상환방식 세그먼트 토글 */
+.dpc .seg-toggle{display:flex;gap:0;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:4px}
+.dpc .seg-btn{flex:1;background:none;border:none;border-radius:8px;padding:9px 4px;font-size:13px;font-weight:700;color:var(--mut);font-family:inherit;cursor:pointer;transition:background .15s,color .15s;letter-spacing:-.02em}
+.dpc .seg-btn.on{background:var(--grad);color:#04121b;box-shadow:0 6px 16px -8px rgba(52,211,153,.6)}
+@media(max-width:600px){
+  .dpc{padding:20px 14px 24px;margin:16px auto;border-radius:18px}
+  .dpc .frow{grid-template-columns:1fr}
+  .dpc .kpis{grid-template-columns:1fr}
+  .dpc .go{width:100%}
+}
+</style>
+
+<script is:inline>
+const won=n=>Math.round(n).toLocaleString('ko-KR')+'원';
+const cint=v=>parseFloat(String(v).replace(/[^0-9.]/g,''))||0;
+function fmtInput(el){const raw=el.value.replace(/[^0-9]/g,'');el.value=raw?parseInt(raw,10).toLocaleString('ko-KR'):'';}
+let method='equal';
+function setMethod(m,el){
+  method=m;
+  document.querySelectorAll('.seg-btn').forEach(b=>b.classList.remove('on'));
+  if(el)el.classList.add('on');
+  calc(false);
+}
+function calc(scroll){
+  const P=cint(document.getElementById('principal').value);
+  const annual=Math.max(0,parseFloat(document.getElementById('rate').value)||0);
+  const n=Math.max(0,parseInt(document.getElementById('months').value)||0);
+  if(P<=0||n<=0)return;
+  const i=annual/1200; // 월이율
+  let big,heroLbl,heroSent,totalInterest,totalPay,rows='';
+  if(method==='equal'){
+    const monthly=i===0?P/n:P*i/(1-Math.pow(1+i,-n));
+    totalPay=monthly*n; totalInterest=totalPay-P; big=monthly;
+    heroLbl='월 상환액 (매월 고정)';
+    heroSent=`연 ${annual}%로 ${n}개월간 매월 ${won(monthly)}씩 상환합니다.`;
+    rows=`<div class="brk-row"><span>매월 상환액 <em>원리금 균등</em></span><b>${won(monthly)}</b></div>`
+        +`<div class="brk-row"><span>대출원금</span><b>${won(P)}</b></div>`
+        +`<div class="brk-row"><span>총 이자</span><b>${won(totalInterest)}</b></div>`
+        +`<div class="brk-row total"><span>총 상환액</span><b>${won(totalPay)}</b></div>`;
+  }else if(method==='principal'){
+    const monthlyPrincipal=P/n;
+    const firstInterest=P*i;
+    const firstPay=monthlyPrincipal+firstInterest;
+    const lastInterest=monthlyPrincipal*i;
+    const lastPay=monthlyPrincipal+lastInterest;
+    totalInterest=i*P*(n+1)/2; totalPay=P+totalInterest; big=firstPay;
+    heroLbl='첫 달 상환액 (매월 감소)';
+    heroSent=`첫 달 ${won(firstPay)}에서 매월 조금씩 줄어들어 마지막 달 ${won(lastPay)}을 상환합니다.`;
+    rows=`<div class="brk-row"><span>매월 상환 원금 <em>균등</em></span><b>${won(monthlyPrincipal)}</b></div>`
+        +`<div class="brk-row"><span>첫 달 상환액 <em>최대</em></span><b>${won(firstPay)}</b></div>`
+        +`<div class="brk-row"><span>마지막 달 상환액 <em>최소</em></span><b>${won(lastPay)}</b></div>`
+        +`<div class="brk-row"><span>총 이자</span><b>${won(totalInterest)}</b></div>`
+        +`<div class="brk-row total"><span>총 상환액</span><b>${won(totalPay)}</b></div>`;
+  }else{ // bullet 만기일시
+    const monthlyInterest=P*i;
+    totalInterest=P*i*n; totalPay=P+totalInterest; big=monthlyInterest;
+    heroLbl='월 이자 (만기 원금 별도)';
+    heroSent=`매월 이자 ${won(monthlyInterest)}만 내고 만기에 원금 ${won(P)}을 한 번에 상환합니다.`;
+    rows=`<div class="brk-row"><span>매월 이자</span><b>${won(monthlyInterest)}</b></div>`
+        +`<div class="brk-row"><span>만기 원금 일시상환</span><b>${won(P)}</b></div>`
+        +`<div class="brk-row"><span>총 이자</span><b>${won(totalInterest)}</b></div>`
+        +`<div class="brk-row total"><span>총 상환액</span><b>${won(totalPay)}</b></div>`;
+  }
+  // render
+  document.getElementById('out').style.display='block';
+  document.getElementById('cta').style.display='block';
+  document.getElementById('hero-lbl').textContent=heroLbl;
+  document.getElementById('r-net').textContent=won(big);
+  document.getElementById('r-sent').textContent=heroSent;
+  document.getElementById('r-interest').textContent=won(totalInterest);
+  document.getElementById('r-total').textContent=won(totalPay);
+  document.getElementById('r-ratio').textContent=(totalInterest/P*100).toFixed(1)+'%';
+  document.getElementById('brk-rows').innerHTML=rows;
+  const netPct=Math.max(0,Math.min(100,P/totalPay*100));
+  document.getElementById('seg-net').style.width=netPct+'%';
+  document.getElementById('seg-ded').style.width=(100-netPct)+'%';
+  document.getElementById('leg-net').textContent=won(P);
+  document.getElementById('leg-ded').textContent=won(totalInterest);
+  const h=document.getElementById('resHead');
+  if(scroll){h.focus();document.getElementById('out').scrollIntoView({behavior:'smooth',block:'start'});}
+}
+function subscribe(){
+  const e=document.getElementById('email').value.trim();const msg=document.getElementById('cta-msg');
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)){msg.textContent='올바른 이메일 주소를 입력해 주세요.';msg.style.color='#fb7185';return;}
+  try{fetch('https://xyprbsmagtlzebxyxsvj.supabase.co/functions/v1/analytics-ingest',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({event_type:'newsletter_subscribe',source:'lifeflow',metadata:{email:e,campaign:'loan-calculator',page:location.pathname,subscribed_at:new Date().toISOString()}})}).catch(()=>{});}catch(_){}
+  msg.textContent='감사합니다! 무료 재무 대시보드 시트와 도구 소식을 보내드릴게요.';msg.style.color='#34d399';
+  try{localStorage.setItem('newsletter-subscribed','true');}catch(_){}
+  document.getElementById('email').value='';
+}
+document.getElementById('principal').addEventListener('input',e=>fmtInput(e.target));
+calc(false);
+</script>

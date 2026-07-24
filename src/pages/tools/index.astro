@@ -1,30 +1,29 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-const title = '무료 금융 도구 모음';
-const description = '부채 상환 계산기부터 예산·저축 도구까지 — LifeFlow가 만든 무료 금융 계산기 모음. 설치·가입 없이 브라우저에서 바로 사용하세요.';
+const title = '무료 생활 도구 모음';
+const description = '연봉 실수령액·부채 상환 계산기부터 건강·생활·여행 도구까지 — LifeFlow가 만든 무료 온라인 도구 모음. 즐겨찾기하고 브라우저에서 바로 사용하세요.';
 
-// 새 도구는 이 배열에 항목만 추가하면 됩니다.
+// 새 도구는 이 배열에 항목만 추가하면 자동으로 카드가 생성됩니다.
 const tools = [
-  {
-    href: '/tools/debt-payoff-calculator/',
-    emoji: '💳',
-    title: '부채 상환 계산기',
-    desc: '스노볼 vs 아발란치 전략을 월별 시뮬레이션으로 비교. 완납 예상일·총이자·절약액을 3초 만에 계산합니다.',
-    tag: '인기',
-  },
+  { slug: 'salary-calculator', emoji: '💰', cat: '금융', title: '연봉 실수령액 계산기', desc: '2026년 4대보험·근로소득세를 반영해 내 연봉의 월·연 실수령액과 공제 내역을 계산합니다.', tag: 'NEW' },
+  { slug: 'age-calculator', emoji: '🎂', cat: '생활', title: '만 나이 계산기', desc: '생년월일로 만 나이·세는 나이·다음 생일 D-day·띠·별자리까지 한 번에 확인합니다.', tag: 'NEW' },
+  { slug: 'bmi-calorie-calculator', emoji: '🩺', cat: '건강', title: 'BMI·칼로리 계산기', desc: '키·몸무게로 BMI·표준체중·기초대사량(BMR)·하루 권장 칼로리를 계산합니다.', tag: 'NEW' },
+  { slug: 'dutchpay-calculator', emoji: '🧾', cat: '생활', title: '더치페이 계산기', desc: '총액·인원·팁으로 1인당 금액을 딱 나누고 정산 문구까지 복사할 수 있어요.', tag: 'NEW' },
+  { slug: 'savings-calculator', emoji: '🏦', cat: '금융', title: '예·적금 계산기', desc: '예금·적금의 단리/복리와 세후 만기 수령액·이자를 한눈에 계산합니다.' },
+  { slug: 'loan-calculator', emoji: '📉', cat: '금융', title: '대출 이자 계산기', desc: '원리금균등·원금균등·만기일시 상환의 월 상환액과 총이자를 비교합니다.' },
+  { slug: 'debt-payoff-calculator', emoji: '💳', cat: '금융', title: '부채 상환 계산기', desc: '스노볼 vs 아발란치 전략을 월별 시뮬레이션으로 비교. 완납일·총이자·절약액을 계산합니다.', tag: '인기' },
+];
+
+const soon = [
+  { emoji: '🎓', cat: '교육', title: '학점·글자수 계산기' },
+  { emoji: '✈️', cat: '여행', title: '환율·시차 계산기' },
+  { emoji: '⚡', cat: '생활', title: '전기요금 계산기' },
 ];
 
 const itemListLd = {
-  '@context': 'https://schema.org',
-  '@type': 'ItemList',
-  name: '무료 금융 도구 모음',
-  itemListElement: tools.map((t, i) => ({
-    '@type': 'ListItem',
-    position: i + 1,
-    name: t.title,
-    url: new URL(t.href, Astro.site).href,
-  })),
+  '@context': 'https://schema.org', '@type': 'ItemList', name: '무료 생활 도구 모음',
+  itemListElement: tools.map((t, i) => ({ '@type': 'ListItem', position: i + 1, name: t.title, url: new URL('/tools/' + t.slug + '/', Astro.site).href })),
 };
 ---
 <BaseLayout title={title} description={description}>
@@ -34,44 +33,61 @@ const itemListLd = {
 
   <section class="tools-hub">
     <p class="th-eyebrow">무료 · 설치 불필요 · 브라우저에서 바로</p>
-    <h1>금융 도구 모음</h1>
-    <p class="th-sub">복잡한 재무 계산을 브라우저에서 바로. 필요한 도구를 골라 쓰세요. 새로운 도구가 계속 추가됩니다.</p>
+    <h1>생활 도구 모음</h1>
+    <p class="th-sub">복잡한 계산을 브라우저에서 한 번에. 돈·건강·일상에 필요한 도구를 골라 쓰세요. <b>★를 눌러 즐겨찾기</b>하면 맨 위로 고정됩니다.</p>
 
-    <div class="tools-grid">
+    <div class="tools-grid" id="tools-grid">
       {tools.map((t) => (
-        <a class="tool-card" href={t.href}>
-          <div class="tc-top">
-            <span class="tc-emoji">{t.emoji}</span>
-            {t.tag && <span class="tc-tag">{t.tag}</span>}
-          </div>
-          <h3>{t.title}</h3>
-          <p>{t.desc}</p>
-          <span class="tc-go">열기 →</span>
-        </a>
+        <div class="tool-card" data-slug={t.slug}>
+          <button class="tc-fav" type="button" aria-label="즐겨찾기" aria-pressed="false" data-slug={t.slug}>☆</button>
+          <a class="tc-link" href={'/tools/' + t.slug + '/'}>
+            <div class="tc-top">
+              <span class="tc-emoji">{t.emoji}</span>
+              <span class="tc-cat">{t.cat}</span>
+              {t.tag && <span class="tc-tag">{t.tag}</span>}
+            </div>
+            <h3>{t.title}</h3>
+            <p>{t.desc}</p>
+            <span class="tc-go">열기 →</span>
+          </a>
+        </div>
       ))}
-      <div class="tool-card soon">
-        <div class="tc-top"><span class="tc-emoji">🧰</span></div>
-        <h3>더 많은 도구 준비 중</h3>
-        <p>예산 계산기, 연봉 실수령액 계산기, 목돈 모으기 계산기 등을 곧 추가할 예정입니다.</p>
-        <span class="tc-go dim">Coming soon</span>
-      </div>
+      {soon.map((t) => (
+        <div class="tool-card soon">
+          <div class="tc-top"><span class="tc-emoji">{t.emoji}</span><span class="tc-cat">{t.cat}</span></div>
+          <h3>{t.title}</h3>
+          <p>곧 추가될 예정입니다.</p>
+          <span class="tc-go dim">Coming soon</span>
+        </div>
+      ))}
     </div>
   </section>
 </BaseLayout>
 
 <style>
-.tools-hub{max-width:860px;margin:0 auto;padding:20px 0 34px}
+.tools-hub{max-width:900px;margin:0 auto;padding:20px 0 34px}
 .th-eyebrow{display:inline-block;font-size:12.5px;font-weight:700;color:#0c9c6b;background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.25);padding:5px 12px;border-radius:999px;margin-bottom:14px}
 :global(html.dark) .th-eyebrow{color:#34d399}
 .tools-hub h1{font-size:clamp(26px,5vw,36px);font-weight:800;letter-spacing:-.02em;margin:0 0 10px}
-.th-sub{opacity:.72;font-size:16px;margin-bottom:24px;max-width:620px;line-height:1.6}
+.th-sub{opacity:.72;font-size:16px;margin-bottom:24px;max-width:640px;line-height:1.6}
+.th-sub b{opacity:1}
 .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:16px}
-.tool-card{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid #e6ecf3;border-radius:16px;padding:20px;transition:transform .12s ease,border-color .15s;box-shadow:0 6px 20px -14px rgba(20,45,90,.22)}
+.tool-card{position:relative;background:#fff;border:1px solid #e6ecf3;border-radius:16px;transition:transform .12s ease,border-color .15s;box-shadow:0 6px 20px -14px rgba(20,45,90,.22)}
 :global(html.dark) .tool-card{background:#121c2e;border-color:#1f2c42;box-shadow:0 10px 30px -16px rgba(0,0,0,.6)}
 .tool-card:hover{transform:translateY(-2px);border-color:#34d399}
-.tool-card.soon{opacity:.6;pointer-events:none}
-.tc-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.tool-card.soon{opacity:.6}
+.tc-link{display:block;text-decoration:none;color:inherit;padding:20px}
+.tool-card.soon>.tc-top,.tool-card.soon>h3,.tool-card.soon>p,.tool-card.soon>.tc-go{padding-left:20px;padding-right:20px}
+.tool-card.soon>.tc-top{padding-top:20px}.tool-card.soon>.tc-go{padding-bottom:20px;display:inline-block}
+.tc-fav{position:absolute;top:12px;right:12px;z-index:2;background:none;border:none;cursor:pointer;font-size:21px;line-height:1;color:#c3ccd8;padding:2px 4px;border-radius:8px;transition:transform .1s,color .15s}
+.tc-fav:hover{transform:scale(1.15)}
+.tool-card.faved .tc-fav{color:#f5b301}
+:global(html.dark) .tc-fav{color:#3f4c60}
+:global(html.dark) .tool-card.faved .tc-fav{color:#fbbf24}
+.tc-top{display:flex;align-items:center;gap:8px;margin-bottom:12px;padding-right:26px}
 .tc-emoji{font-size:26px;line-height:1}
+.tc-cat{font-size:11px;font-weight:700;color:#5a6b82;background:rgba(90,107,130,.12);padding:3px 9px;border-radius:999px}
+:global(html.dark) .tc-cat{color:#9fb0c6;background:rgba(159,176,198,.14)}
 .tc-tag{font-size:11px;font-weight:700;color:#0c9c6b;background:rgba(52,211,153,.12);padding:3px 9px;border-radius:999px}
 :global(html.dark) .tc-tag{color:#34d399}
 .tool-card h3{font-size:17px;font-weight:800;margin:0 0 6px;letter-spacing:-.01em}
@@ -80,3 +96,45 @@ const itemListLd = {
 :global(html.dark) .tc-go{color:#34d399}
 .tc-go.dim{opacity:.55;color:inherit;font-weight:600}
 </style>
+
+<script>
+  (function () {
+    const FAV_KEY = 'lifeflow-tool-favs';
+    const ANALYTICS = 'https://xyprbsmagtlzebxyxsvj.supabase.co/functions/v1/analytics-ingest';
+    const grid = document.getElementById('tools-grid');
+    if (!grid) return;
+    const cards = Array.from(grid.querySelectorAll('.tool-card[data-slug]'));
+    const soonCards = Array.from(grid.querySelectorAll('.tool-card.soon'));
+    function getFavs() { try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch (e) { return []; } }
+    function setFavs(a) { try { localStorage.setItem(FAV_KEY, JSON.stringify(a)); } catch (e) {} }
+    let favs = getFavs();
+    function render() {
+      cards.forEach((c) => {
+        const s = c.dataset.slug, f = favs.indexOf(s) > -1;
+        c.classList.toggle('faved', f);
+        const b = c.querySelector('.tc-fav');
+        if (b) { b.textContent = f ? '★' : '☆'; b.setAttribute('aria-pressed', f ? 'true' : 'false'); }
+      });
+      // 즐겨찾기한 도구를 맨 앞으로, 예정 카드는 맨 뒤로
+      const faved = cards.filter((c) => favs.indexOf(c.dataset.slug) > -1);
+      const rest = cards.filter((c) => favs.indexOf(c.dataset.slug) < 0);
+      faved.concat(rest, soonCards).forEach((c) => grid.appendChild(c));
+    }
+    grid.querySelectorAll('.tc-fav').forEach((b) => b.addEventListener('click', (e) => {
+      e.preventDefault(); e.stopPropagation();
+      const s = b.dataset.slug;
+      const i = favs.indexOf(s);
+      if (i > -1) favs.splice(i, 1); else favs.push(s);
+      setFavs(favs); render();
+    }));
+    // 도구 진입 추적 — 대시보드에 tool_click 이벤트로 별도 수집
+    grid.querySelectorAll('.tc-link').forEach((a) => a.addEventListener('click', () => {
+      const card = a.closest('.tool-card'); const s = card && card.dataset.slug;
+      if (!s) return;
+      const payload = JSON.stringify({ event_type: 'tool_click', source: 'lifeflow', metadata: { tool: s, faved: favs.indexOf(s) > -1, from: 'hub', path: '/tools/' } });
+      try { navigator.sendBeacon(ANALYTICS, new Blob([payload], { type: 'application/json' })); }
+      catch (e) { try { fetch(ANALYTICS, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: payload, keepalive: true }); } catch (e2) {} }
+    }));
+    render();
+  })();
+</script>

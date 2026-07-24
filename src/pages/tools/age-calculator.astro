@@ -1,0 +1,266 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = '만 나이 계산기 — 세는 나이·연 나이·띠·별자리 한 번에';
+const description = '생년월일만 넣으면 만 나이(만 나이 통일법 기준)와 세는 나이·연 나이, 다음 생일 D-day, 태어난 요일, 띠(12지), 별자리, 살아온 총 일수까지 바로 계산합니다. 무료·설치 불필요.';
+const ogImage = '/og/age-calculator.png';
+
+const appLd = {
+  '@context': 'https://schema.org', '@type': 'WebApplication',
+  name: '만 나이 계산기', applicationCategory: 'UtilitiesApplication', operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'KRW' },
+  description: '생년월일로 만 나이·세는 나이·연 나이·다음 생일 D-day·요일·띠·별자리·총 일수를 계산하는 무료 도구.',
+};
+const faqLd = {
+  '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+    { '@type': 'Question', name: '만 나이는 어떻게 계산하나요?', acceptedAnswer: { '@type': 'Answer', text: '올해에서 태어난 해를 뺀 뒤, 아직 올해 생일이 지나지 않았으면 1을 더 뺍니다. 예를 들어 생일이 아직 안 지났다면 (기준연도 − 출생연도 − 1)이 만 나이입니다.' } },
+    { '@type': 'Question', name: '만 나이 통일법이란 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: '2023년 6월 28일부터 시행된 제도로, 법령·계약·문서에서 나이를 별도 규정이 없으면 만 나이로 통일합니다. 이제 일상에서도 만 나이 사용이 원칙입니다.' } },
+    { '@type': 'Question', name: '세는 나이(한국식 나이)와 무엇이 다른가요?', acceptedAnswer: { '@type': 'Answer', text: '세는 나이는 태어날 때 1살로 시작해 새해마다 한 살을 더합니다. 그래서 만 나이보다 보통 1~2살 많습니다. 만 나이 통일법 이후 공식적으로는 만 나이를 사용합니다.' } },
+    { '@type': 'Question', name: '연 나이는 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: '연 나이는 기준연도에서 출생연도만 뺀 값으로, 생일과 무관하게 계산합니다. 병역·청소년보호법 등 일부 법령에서 사용합니다.' } },
+  ],
+};
+---
+<BaseLayout title={title} description={description} image={ogImage} ogType="website">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(appLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+  </Fragment>
+
+  <div class="dpc">
+    <div class="wrap">
+      <span class="eyebrow"><span class="dot"></span>만 나이 통일법 기준 · 무료 · 설치 불필요</span>
+      <h1>만 나이 <span class="grad">계산기</span></h1>
+      <p class="sub">생년월일만 넣으면 <b>만 나이·세는 나이·연 나이</b>는 물론 다음 생일 D-day, 태어난 요일, 띠·별자리, 살아온 총 일수까지 한 번에 확인할 수 있어요.</p>
+
+      <form id="calcForm" onsubmit="event.preventDefault();calc(true)">
+      <div class="card">
+        <div class="card-h"><span class="n">1</span><h2>날짜 입력</h2></div>
+        <div class="frow">
+          <div class="fld"><span class="cap">생년월일</span><input id="birth" type="date" aria-label="생년월일"></div>
+          <div class="fld"><span class="cap">기준일 (기본: 오늘)</span><input id="base" type="date" aria-label="기준일"></div>
+        </div>
+        <div class="strat">
+          <button type="submit" class="go">나이 계산</button>
+        </div>
+        <p class="tip">기준일은 나이를 세는 날짜예요. 비워도 <b>오늘</b> 기준으로 자동 계산됩니다. 생년월일은 기준일보다 앞서야 해요.</p>
+      </div>
+      </form>
+
+      <div class="card" id="out">
+        <div class="card-h"><span class="n">2</span><h2 id="resHead" tabindex="-1">나이 결과</h2></div>
+        <div class="hero-lbl">만 나이</div>
+        <div class="res-hero"><span class="big grad" id="r-age">–</span><span class="permo">세</span></div>
+        <div class="hero-sent" id="r-sent"></div>
+        <div class="kpis">
+          <div class="kpi"><div class="l">세는 나이 (한국식)</div><div class="v em" id="r-korean">–</div></div>
+          <div class="kpi"><div class="l">연 나이</div><div class="v" id="r-yearage">–</div></div>
+          <div class="kpi"><div class="l">다음 생일까지</div><div class="v bl" id="r-dday">–</div></div>
+        </div>
+        <div class="brk">
+          <div class="brk-t">태어난 날 정보</div>
+          <div class="brk-row"><span>태어난 요일</span><b id="d-weekday">–</b></div>
+          <div class="brk-row"><span>띠 <em>12지</em></span><b id="d-zodiac">–</b></div>
+          <div class="brk-row"><span>별자리</span><b id="d-star">–</b></div>
+          <div class="brk-row"><span>다음 생일</span><b id="d-nextbday">–</b></div>
+          <div class="brk-row total"><span>살아온 총 일수</span><b id="d-days">–</b></div>
+        </div>
+      </div>
+
+      <div class="cta" id="cta" style="display:none">
+        <h3>💡 생활에 유용한 계산기·정보를 놓치고 싶지 않다면</h3>
+        <p>만 나이 계산기처럼 <b>실생활에 바로 쓰는 도구와 꿀팁</b>을 뉴스레터로 정리해 보내드려요. 스팸 없이, 딱 필요한 것만.</p>
+        <div class="emailrow">
+          <input id="email" type="email" placeholder="이메일 주소" aria-label="이메일 주소">
+          <button type="button" onclick="subscribe()">무료 구독하기</button>
+        </div>
+        <div class="fine" id="cta-msg" aria-live="polite">스팸 없이 생활에 유용한 도구·정보 소식만. 언제든 해지할 수 있어요.</div>
+      </div>
+
+      <div class="content">
+        <h2>만 나이란?</h2>
+        <p><b>만 나이</b>는 태어난 날을 기준으로 실제로 산 햇수를 세는 나이입니다. 올해에서 태어난 해를 빼되, 올해 생일이 아직 안 지났으면 한 살을 더 뺍니다. 2023년 6월 28일 <b>만 나이 통일법</b> 시행 이후, 법령·계약·일상 모두 원칙적으로 만 나이를 사용합니다.</p>
+        <h2>세 가지 나이 비교</h2>
+        <ul>
+          <li><b>만 나이</b> — 생일이 지났는지까지 반영한 실제 나이. 공식 기준입니다.</li>
+          <li><b>세는 나이(한국식)</b> — 태어나면 1살, 새해마다 +1살. 만 나이보다 보통 1~2살 많습니다.</li>
+          <li><b>연 나이</b> — 기준연도 − 출생연도. 생일과 무관하며 병역·청소년보호법 등에서 사용합니다.</li>
+        </ul>
+        <h2>자주 묻는 질문</h2>
+        <h3>만 나이 통일법 이후 무엇이 달라졌나요?</h3>
+        <p>별도 규정이 없으면 모든 나이를 만 나이로 봅니다. 계약서·안내문의 "나이"는 만 나이를 의미하므로 혼동이 줄어듭니다.</p>
+        <h3>다음 생일까지 D-day는 어떻게 계산하나요?</h3>
+        <p>기준일 이후에 오는 가장 가까운 생일까지 남은 일수입니다. 생일 당일이면 D-day는 0일, 즉 오늘이 생일입니다.</p>
+        <h3>띠와 별자리는 무엇을 기준으로 하나요?</h3>
+        <p>띠는 태어난 <b>해</b>의 12지(쥐·소·호랑이…)를, 별자리는 태어난 <b>월·일</b>이 속한 12별자리를 기준으로 표시합니다.</p>
+      </div>
+
+      <p class="disc">참고용 계산기입니다. 만 나이는 만 나이 통일법(2023.6.28.) 기준으로 계산하며, 띠는 양력 연도 기준의 간이 표기라 음력 설 이전 출생은 실제 띠와 다를 수 있습니다. 입력값은 서버로 전송되지 않고 브라우저에서만 계산됩니다.</p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style is:global>
+.dpc{--grad:linear-gradient(135deg,#34d399,#22d3ee);--radius:18px;
+  --surface:#ffffff;--surface2:#f4f7fb;--line:#e5eaf1;--line2:#d4dce7;
+  --text:#0f1a2b;--mut:#48566b;--dim:#6a7889;--emerald:#0c9c6b;--teal:#0d7d9c;--rose:#e11d63;
+  --gradtext:linear-gradient(135deg,#0aa06e,#0d86a6);
+  --shadow:0 10px 30px -14px rgba(20,45,90,.16);--panelborder:#e6ecf3;
+  --panel:radial-gradient(700px 400px at 12% -8%,rgba(52,211,153,.07),transparent 60%),radial-gradient(600px 400px at 100% 0%,rgba(34,211,238,.06),transparent 55%),linear-gradient(180deg,#f8fbfe,#eef3f9);
+  max-width:920px;margin:26px auto;padding:28px 22px 32px;border-radius:24px;border:1px solid var(--panelborder);
+  background:var(--panel);color:var(--text);
+  font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.55;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
+html.dark .dpc{--surface:#121c2e;--surface2:#0e1626;--line:#1f2c42;--line2:#2a3a56;
+  --text:#eef2f8;--mut:#9fb0c6;--dim:#8b97ac;--emerald:#34d399;--teal:#22d3ee;--rose:#fb7185;
+  --gradtext:linear-gradient(135deg,#34d399,#22d3ee);
+  --shadow:0 12px 40px -12px rgba(0,0,0,.55);--panelborder:#17233a;
+  --panel:radial-gradient(700px 400px at 12% -8%,rgba(52,211,153,.10),transparent 60%),radial-gradient(600px 400px at 100% 0%,rgba(34,211,238,.08),transparent 55%),linear-gradient(180deg,#0d1524,#0a0f1a)}
+.dpc *{box-sizing:border-box;margin:0;padding:0}
+.dpc .wrap{max-width:100%;margin:0 auto}
+.dpc .eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--emerald);background:rgba(52,211,153,.10);border:1px solid rgba(52,211,153,.22);padding:5px 12px;border-radius:999px;margin-bottom:16px}
+.dpc .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.2)}
+.dpc h1{font-size:clamp(26px,5vw,38px);font-weight:800;line-height:1.12;letter-spacing:-.03em;color:var(--text)}
+.dpc .grad{background:var(--gradtext);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.dpc .sub{color:var(--mut);font-size:16px;margin:12px 0 26px;max-width:640px}
+.dpc .card{background:linear-gradient(180deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:18px;box-shadow:var(--shadow)}
+.dpc .card-h{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.dpc .card-h .n{width:26px;height:26px;border-radius:8px;background:rgba(52,211,153,.12);color:var(--emerald);display:grid;place-items:center;font-size:13px;font-weight:700}
+.dpc .card-h h2{font-size:16.5px;font-weight:700;letter-spacing:-.02em;color:var(--text)}
+.dpc .frow{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.dpc .fld{position:relative}
+.dpc .fld .cap{display:block;font-size:12px;color:var(--mut);font-weight:600;margin-bottom:5px}
+.dpc .fld input{width:100%;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:11px 12px;color:var(--text);font-size:15px;font-family:inherit;transition:border-color .15s,box-shadow .15s}
+.dpc .fld input::placeholder{color:var(--dim)}
+.dpc .fld input:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.14)}
+.dpc .strat{display:flex;margin-top:6px}
+.dpc .go{margin-left:auto;background:var(--grad);color:#04121b;border:none;border-radius:12px;padding:12px 26px;font-weight:800;font-size:15px;font-family:inherit;cursor:pointer;box-shadow:0 8px 22px -8px rgba(52,211,153,.6);transition:transform .12s,filter .15s}
+.dpc .go:hover{filter:brightness(1.05)}.dpc .go:active{transform:translateY(1px)}
+.dpc .tip{font-size:13px;color:var(--mut);margin-top:14px;line-height:1.5}
+.dpc .tip b{color:var(--text)}
+.dpc button:focus-visible,.dpc input:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.dpc #out{display:none}
+.dpc .hero-lbl{font-size:13px;color:var(--mut);font-weight:600;margin:2px 0}
+.dpc .res-hero{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;padding:0 2px 4px;background:none;border-radius:0;text-align:left;margin:0}
+.dpc .res-hero .big{font-size:clamp(30px,7vw,46px);font-weight:800;letter-spacing:-.03em}
+.dpc .permo{font-size:16px;color:var(--mut);font-weight:600}
+.dpc .hero-sent{font-size:15px;color:var(--mut);margin:2px 2px 18px}
+.dpc .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.dpc .kpi{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:15px 16px}
+.dpc .kpi .l{font-size:12.5px;color:var(--mut);font-weight:600}
+.dpc .kpi .v{font-size:20px;font-weight:800;margin-top:5px;letter-spacing:-.02em;color:var(--text)}
+.dpc .v.em{color:var(--emerald)}.dpc .v.bl{color:var(--teal)}
+.dpc .barwrap{margin-top:18px}
+.dpc .stackbar{display:flex;height:30px;border-radius:9px;overflow:hidden;border:1px solid var(--line);background:var(--surface2)}
+.dpc .stackbar .seg{height:100%}
+.dpc .stackbar .seg.net{background:linear-gradient(90deg,#34d399,#22d3ee)}
+.dpc .stackbar .seg.ded{background:repeating-linear-gradient(45deg,var(--line2),var(--line2) 6px,var(--surface2) 6px,var(--surface2) 12px)}
+.dpc .barleg{display:flex;gap:16px;font-size:12.5px;color:var(--mut);margin-top:8px}
+.dpc .barleg i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:middle}
+.dpc .barleg i.net{background:#22d3ee}.dpc .barleg i.ded{background:var(--line2)}
+.dpc .barleg b{color:var(--text)}
+.dpc .brk{margin-top:18px;border-top:1px solid var(--line);padding-top:14px}
+.dpc .brk-t{font-size:13px;color:var(--mut);font-weight:700;margin-bottom:8px}
+.dpc .brk-row{display:flex;justify-content:space-between;align-items:center;padding:8px 2px;font-size:14.5px;border-bottom:1px solid var(--line)}
+.dpc .brk-row span{color:var(--text)}
+.dpc .brk-row em{font-style:normal;font-size:12px;color:var(--dim);margin-left:6px}
+.dpc .brk-row b{color:var(--text);font-weight:700}
+.dpc .brk-row.total{border-bottom:none;margin-top:4px;font-weight:800}
+.dpc .brk-row.total span,.dpc .brk-row.total b{color:var(--rose);font-size:15.5px}
+.dpc .cta{background:linear-gradient(135deg,#0f2740,#12233a);border:1px solid #274563;border-radius:var(--radius);padding:24px;position:relative;overflow:hidden;margin-bottom:18px}
+.dpc .cta::before{content:"";position:absolute;inset:0;background:radial-gradient(400px 160px at 90% 0%,rgba(34,211,238,.14),transparent 70%);pointer-events:none}
+.dpc .cta h3{font-size:19px;font-weight:800;letter-spacing:-.02em;margin-bottom:7px;position:relative;color:#f2f7fb}
+.dpc .cta p{color:#aabdd0;font-size:14px;margin-bottom:14px;max-width:580px;position:relative}
+.dpc .cta .fine{color:#8097ad}
+.dpc .emailrow{display:flex;gap:9px;flex-wrap:wrap;position:relative}
+.dpc .cta .emailrow input{flex:1;min-width:220px;background:#0d1b2c;border:1px solid #26445f;border-radius:12px;padding:12px 14px;color:#eef2f8;font-size:14.5px;font-family:inherit}
+.dpc .cta .emailrow input::placeholder{color:#7089a0}
+.dpc .emailrow button{background:var(--grad);color:#04121b;border:none;border-radius:12px;padding:12px 22px;font-weight:800;font-size:14.5px;font-family:inherit;cursor:pointer;transition:.15s}
+.dpc .emailrow button:hover{filter:brightness(1.05)}
+.dpc .fine{font-size:11.5px;margin-top:10px;position:relative}
+.dpc .content{color:var(--mut);font-size:15px}
+.dpc .content h2{font-size:19px;color:var(--text);font-weight:800;letter-spacing:-.02em;margin:26px 0 10px}
+.dpc .content h3{font-size:15.5px;color:var(--text);font-weight:700;margin:16px 0 4px}
+.dpc .content p{margin-bottom:8px}
+.dpc .content ul{margin:6px 0 6px 18px}.dpc .content li{margin-bottom:5px}
+.dpc .disc{font-size:12px;color:var(--dim);margin-top:22px;line-height:1.6}
+@media(max-width:600px){
+  .dpc{padding:20px 14px 24px;margin:16px auto;border-radius:18px}
+  .dpc .frow{grid-template-columns:1fr}
+  .dpc .kpis{grid-template-columns:1fr}
+  .dpc .go{width:100%}
+}
+</style>
+
+<script is:inline>
+const ZODIAC=['원숭이','닭','개','돼지','쥐','소','호랑이','토끼','용','뱀','말','양'];
+const WEEKDAYS=['일','월','화','수','목','금','토'];
+function pad(n){return String(n).padStart(2,'0');}
+function toISO(d){return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());}
+function starSign(m,d){ // m: 1-12
+  const s=[[1,20,'염소자리'],[2,19,'물병자리'],[3,21,'물고기자리'],[4,20,'양자리'],[5,21,'황소자리'],[6,22,'쌍둥이자리'],[7,23,'게자리'],[8,23,'사자자리'],[9,24,'처녀자리'],[10,23,'천칭자리'],[11,23,'전갈자리'],[12,25,'궁수자리']];
+  const [ , cutD, sign]=s[m-1];
+  if(d<cutD)return sign;
+  return s[m%12][2];
+}
+function parseDate(v){
+  if(!v)return null;
+  const p=v.split('-').map(Number);
+  if(p.length!==3||p.some(isNaN))return null;
+  const d=new Date(p[0],p[1]-1,p[2]);
+  if(d.getFullYear()!==p[0]||d.getMonth()!==p[1]-1||d.getDate()!==p[2])return null;
+  return d;
+}
+function calc(scroll){
+  const birth=parseDate(document.getElementById('birth').value);
+  let base=parseDate(document.getElementById('base').value);
+  if(!base){base=new Date();base.setHours(0,0,0,0);}
+  if(!birth)return;
+  if(birth.getTime()>base.getTime())return;
+  const by=birth.getFullYear(),bm=birth.getMonth()+1,bd=birth.getDate();
+  const cy=base.getFullYear(),cm=base.getMonth()+1,cd=base.getDate();
+  // 만 나이
+  let age=cy-by;
+  if(cm<bm||(cm===bm&&cd<bd))age-=1;
+  // 세는 나이 / 연 나이
+  const korean=cy-by+1;
+  const yearAge=cy-by;
+  // 다음 생일 D-day
+  let nb=new Date(cy,bm-1,bd);
+  if(nb.getTime()<base.getTime())nb=new Date(cy+1,bm-1,bd);
+  const dday=Math.round((nb.getTime()-base.getTime())/86400000);
+  // 태어난 요일 / 띠 / 별자리 / 총일수
+  const weekday=WEEKDAYS[birth.getDay()]+'요일';
+  const zodiac=ZODIAC[((by%12)+12)%12]+'띠';
+  const star=starSign(bm,bd);
+  const totalDays=Math.round((base.getTime()-birth.getTime())/86400000);
+  // render
+  document.getElementById('out').style.display='block';
+  document.getElementById('cta').style.display='block';
+  document.getElementById('r-age').textContent=age.toLocaleString('ko-KR');
+  document.getElementById('r-sent').textContent=`${by}년 ${bm}월 ${bd}일생 · ${toISO(base)} 기준 만 ${age}세입니다.`;
+  document.getElementById('r-korean').textContent=korean.toLocaleString('ko-KR')+'세';
+  document.getElementById('r-yearage').textContent=yearAge.toLocaleString('ko-KR')+'세';
+  document.getElementById('r-dday').textContent=dday===0?'오늘이 생일! 🎉':'D-'+dday.toLocaleString('ko-KR');
+  document.getElementById('d-weekday').textContent=weekday;
+  document.getElementById('d-zodiac').textContent=zodiac;
+  document.getElementById('d-star').textContent=star;
+  document.getElementById('d-nextbday').textContent=dday===0?'오늘':toISO(nb)+' ('+WEEKDAYS[nb.getDay()]+')';
+  document.getElementById('d-days').textContent=totalDays.toLocaleString('ko-KR')+'일';
+  const h=document.getElementById('resHead');
+  if(scroll){h.focus();document.getElementById('out').scrollIntoView({behavior:'smooth',block:'start'});}
+}
+function subscribe(){
+  const e=document.getElementById('email').value.trim();const msg=document.getElementById('cta-msg');
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)){msg.textContent='올바른 이메일 주소를 입력해 주세요.';msg.style.color='#fb7185';return;}
+  try{fetch('https://xyprbsmagtlzebxyxsvj.supabase.co/functions/v1/analytics-ingest',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({event_type:'newsletter_subscribe',source:'lifeflow',metadata:{email:e,campaign:'age-calculator',page:location.pathname,subscribed_at:new Date().toISOString()}})}).catch(()=>{});}catch(_){}
+  msg.textContent='감사합니다! 생활에 유용한 도구·정보 소식을 보내드릴게요.';msg.style.color='#34d399';
+  try{localStorage.setItem('newsletter-subscribed','true');}catch(_){}
+  document.getElementById('email').value='';
+}
+(function(){
+  const t=new Date();t.setHours(0,0,0,0);
+  document.getElementById('base').value=toISO(t);
+  const bi=document.getElementById('birth');
+  if(!bi.value)bi.value='1995-05-15';
+})();
+calc(false);
+</script>

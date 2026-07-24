@@ -1,0 +1,294 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = 'BMI·칼로리 계산기 2026';
+const description = '내 키·몸무게로 BMI(체질량지수)와 판정을 바로 확인하고, 기초대사량(BMR)·활동대사량(TDEE), 감량·유지·증량 목표별 권장 칼로리까지 한 번에 계산합니다. 아시아-태평양 기준·Mifflin-St Jeor 공식. 무료·설치 불필요.';
+const ogImage = '/og/bmi-calorie-calculator.png';
+
+const appLd = {
+  '@context': 'https://schema.org', '@type': 'WebApplication',
+  name: 'BMI·칼로리 계산기 2026', applicationCategory: 'HealthApplication', operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'KRW' },
+  description: '키·몸무게·나이·활동량으로 BMI 판정과 기초대사량(BMR)·활동대사량(TDEE), 목표별 권장 칼로리를 계산하는 무료 도구.',
+};
+const faqLd = {
+  '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
+    { '@type': 'Question', name: 'BMI 정상 범위는 얼마인가요?', acceptedAnswer: { '@type': 'Answer', text: '아시아-태평양 기준으로 BMI 18.5~23 미만이 정상 범위입니다. 18.5 미만은 저체중, 23 이상은 과체중, 25 이상은 비만, 30 이상은 고도비만으로 봅니다. (WHO 국제 기준은 25 미만을 정상으로 보지만, 한국·아시아인은 더 낮은 기준을 씁니다.)' } },
+    { '@type': 'Question', name: 'BMI는 어떻게 계산하나요?', acceptedAnswer: { '@type': 'Answer', text: '체중(kg)을 키(m)의 제곱으로 나눕니다. 예를 들어 키 170cm(1.7m), 몸무게 65kg이면 65 ÷ (1.7 × 1.7) = 약 22.5입니다.' } },
+    { '@type': 'Question', name: '기초대사량(BMR)과 활동대사량(TDEE)의 차이는 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: 'BMR은 아무 활동 없이 생명 유지에만 쓰이는 하루 최소 에너지이고, TDEE는 BMR에 일상 활동·운동량(활동계수)을 곱한 실제 하루 소비 칼로리입니다. 다이어트·증량 목표 칼로리는 TDEE를 기준으로 잡습니다.' } },
+    { '@type': 'Question', name: '살을 빼려면 하루 몇 칼로리를 먹어야 하나요?', acceptedAnswer: { '@type': 'Answer', text: 'TDEE보다 하루 약 500kcal 적게 먹으면 주당 약 0.5kg 감량이 기대됩니다. 이 계산기는 TDEE−500(감량)·유지·TDEE+400(증량)을 권장 칼로리로 제시합니다. 개인차가 크므로 참고용입니다.' } },
+  ],
+};
+---
+<BaseLayout title={title} description={description} image={ogImage} ogType="website">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(appLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+  </Fragment>
+
+  <div class="dpc">
+    <div class="wrap">
+      <span class="eyebrow"><span class="dot"></span>아시아-태평양 기준 · 무료 · 설치 불필요</span>
+      <h1>BMI·칼로리 <span class="grad">계산기</span></h1>
+      <p class="sub">키와 몸무게만 넣으면 <b>BMI 판정과 표준체중</b>은 물론, <b>기초대사량·활동대사량과 목표별 권장 칼로리</b>까지 한 번에 계산해 드려요.</p>
+
+      <form id="calcForm" onsubmit="event.preventDefault();calc(true)">
+      <div class="card">
+        <div class="card-h"><span class="n">1</span><h2>내 정보 입력</h2></div>
+        <div class="fld" style="margin-bottom:12px">
+          <span class="cap">성별</span>
+          <div class="seg-toggle" role="group" aria-label="성별 선택">
+            <button type="button" id="sex-m" class="on" onclick="setSex('m')">남성</button>
+            <button type="button" id="sex-f" onclick="setSex('f')">여성</button>
+          </div>
+        </div>
+        <div class="frow">
+          <div class="fld"><span class="cap">키 (cm)</span><input id="height" type="number" min="80" max="250" step="0.1" aria-label="키(cm)" value="170"></div>
+          <div class="fld"><span class="cap">몸무게 (kg)</span><input id="weight" type="number" min="20" max="300" step="0.1" aria-label="몸무게(kg)" value="65"></div>
+        </div>
+        <div class="frow">
+          <div class="fld"><span class="cap">나이 (세)</span><input id="age" type="number" min="10" max="120" step="1" aria-label="나이(세)" value="30"></div>
+          <div class="fld"><span class="cap">활동량</span>
+            <select id="activity" aria-label="활동량 선택">
+              <option value="1.2">거의 없음 (좌식·운동 안 함)</option>
+              <option value="1.375">가벼운 활동 (주 1~3회)</option>
+              <option value="1.55" selected>보통 (주 3~5회)</option>
+              <option value="1.725">활발 (주 6~7회)</option>
+              <option value="1.9">매우 활발 (육체노동·선수)</option>
+            </select>
+          </div>
+        </div>
+        <div class="strat">
+          <button type="submit" class="go">계산하기</button>
+        </div>
+        <p class="tip">BMI는 <b>키·몸무게</b>만으로, 칼로리는 <b>나이·성별·활동량</b>까지 반영해 계산합니다. 근육량·체지방률은 반영되지 않아 참고용입니다.</p>
+      </div>
+      </form>
+
+      <div class="card" id="out">
+        <div class="card-h"><span class="n">2</span><h2 id="resHead" tabindex="-1">계산 결과</h2></div>
+        <div class="hero-lbl">내 BMI (체질량지수)</div>
+        <div class="res-hero"><span class="big grad" id="r-bmi">–</span><span class="permo" id="r-judge">–</span></div>
+        <div class="hero-sent" id="r-sent"></div>
+        <div class="kpis">
+          <div class="kpi"><div class="l">표준체중 (BMI 22)</div><div class="v em" id="r-ideal">–</div></div>
+          <div class="kpi"><div class="l">기초대사량 (BMR)</div><div class="v" id="r-bmr">–</div></div>
+          <div class="kpi"><div class="l">활동대사량 (TDEE)</div><div class="v bl" id="r-tdee">–</div></div>
+        </div>
+        <div class="barwrap">
+          <div class="stackbar" id="stackbar" aria-hidden="true"><div class="seg net" id="seg-bmi"></div></div>
+          <div class="barleg"><span>저체중</span><span>정상</span><span>과체중</span><span>비만</span></div>
+        </div>
+        <div class="brk">
+          <div class="brk-t">목표별 하루 권장 칼로리</div>
+          <div class="brk-row"><span>감량 <em>−500kcal · 주 약 0.5kg 감량</em></span><b id="d-lose">–</b></div>
+          <div class="brk-row"><span>유지 <em>현재 체중 유지</em></span><b id="d-keep">–</b></div>
+          <div class="brk-row"><span>증량 <em>+400kcal · 근육 증가 목표</em></span><b id="d-gain">–</b></div>
+          <div class="brk-row total"><span>표준체중까지 차이</span><b id="d-diff">–</b></div>
+        </div>
+      </div>
+
+      <div class="cta" id="cta" style="display:none">
+        <h3>💪 몸 만들기, 혼자 하면 작심삼일이죠</h3>
+        <p>주 1회, 실제로 지켜지는 <b>건강·운동 루틴 뉴스레터</b>를 보내드려요. 식단·홈트·다이어트 연구를 쉽게 풀어, 오늘 당장 따라 할 수 있는 것만 담았습니다.</p>
+        <div class="emailrow">
+          <input id="email" type="email" placeholder="이메일 주소" aria-label="이메일 주소">
+          <button type="button" onclick="subscribe()">무료로 구독하기</button>
+        </div>
+        <div class="fine" id="cta-msg" aria-live="polite">스팸 없이 건강 루틴 소식만. 언제든 해지할 수 있어요.</div>
+      </div>
+
+      <div class="content">
+        <h2>BMI란?</h2>
+        <p><b>BMI(Body Mass Index, 체질량지수)</b>는 체중(kg)을 키(m)의 제곱으로 나눈 값으로, 키 대비 체중이 적절한지를 간단히 가늠하는 지표입니다. 근육량·체지방률은 구분하지 않으므로 참고 지표로 활용하세요.</p>
+        <h2>BMI 판정 기준 (아시아-태평양)</h2>
+        <ul>
+          <li><b>저체중</b> — 18.5 미만</li>
+          <li><b>정상</b> — 18.5 이상 23 미만</li>
+          <li><b>과체중</b> — 23 이상 25 미만</li>
+          <li><b>비만</b> — 25 이상 30 미만</li>
+          <li><b>고도비만</b> — 30 이상</li>
+        </ul>
+        <p>한국·아시아인은 같은 BMI에서도 대사질환 위험이 높아, WHO 국제 기준(정상 25 미만)보다 낮은 기준을 적용합니다.</p>
+        <h2>기초대사량·활동대사량은 어떻게 구하나요?</h2>
+        <p>이 계산기는 널리 쓰이는 <b>Mifflin-St Jeor 공식</b>으로 기초대사량(BMR)을 구합니다.</p>
+        <ul>
+          <li><b>남성</b> — 10 × 몸무게(kg) + 6.25 × 키(cm) − 5 × 나이 + 5</li>
+          <li><b>여성</b> — 10 × 몸무게(kg) + 6.25 × 키(cm) − 5 × 나이 − 161</li>
+        </ul>
+        <p><b>활동대사량(TDEE)</b>은 BMR에 활동계수(1.2~1.9)를 곱한 값으로, 하루 실제 소비 칼로리에 가깝습니다.</p>
+        <h2>자주 묻는 질문</h2>
+        <h3>BMI 정상 범위는 얼마인가요?</h3>
+        <p>아시아-태평양 기준으로 <b>18.5 이상 23 미만</b>이 정상입니다. 18.5 미만은 저체중, 23 이상은 과체중부터 시작합니다.</p>
+        <h3>BMR과 TDEE의 차이는 무엇인가요?</h3>
+        <p>BMR은 아무것도 안 해도 생명 유지에 쓰이는 하루 최소 에너지, TDEE는 여기에 활동량을 곱한 실제 하루 소비량입니다. 다이어트·증량 목표는 TDEE를 기준으로 잡습니다.</p>
+        <h3>살을 빼려면 몇 칼로리를 먹어야 하나요?</h3>
+        <p>TDEE보다 하루 약 <b>500kcal</b> 적게 먹으면 주당 약 0.5kg 감량이 기대됩니다. 급격한 감량보다 꾸준함이 중요합니다.</p>
+      </div>
+
+      <p class="disc">참고용 계산기입니다. BMI·표준체중·BMR·TDEE는 통계적 공식(아시아-태평양 기준·Mifflin-St Jeor)에 따른 추정치이며, 실제 체성분·건강 상태는 근육량·체지방률·기저질환에 따라 크게 달라집니다. 의학적 판단은 전문의와 상담하세요. 입력값은 서버로 전송되지 않고 브라우저에서만 계산됩니다.</p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style is:global>
+.dpc{--grad:linear-gradient(135deg,#34d399,#22d3ee);--radius:18px;
+  --surface:#ffffff;--surface2:#f4f7fb;--line:#e5eaf1;--line2:#d4dce7;
+  --text:#0f1a2b;--mut:#48566b;--dim:#6a7889;--emerald:#0c9c6b;--teal:#0d7d9c;--rose:#e11d63;
+  --gradtext:linear-gradient(135deg,#0aa06e,#0d86a6);
+  --shadow:0 10px 30px -14px rgba(20,45,90,.16);--panelborder:#e6ecf3;
+  --panel:radial-gradient(700px 400px at 12% -8%,rgba(52,211,153,.07),transparent 60%),radial-gradient(600px 400px at 100% 0%,rgba(34,211,238,.06),transparent 55%),linear-gradient(180deg,#f8fbfe,#eef3f9);
+  max-width:920px;margin:26px auto;padding:28px 22px 32px;border-radius:24px;border:1px solid var(--panelborder);
+  background:var(--panel);color:var(--text);
+  font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.55;letter-spacing:-.01em;-webkit-font-smoothing:antialiased}
+html.dark .dpc{--surface:#121c2e;--surface2:#0e1626;--line:#1f2c42;--line2:#2a3a56;
+  --text:#eef2f8;--mut:#9fb0c6;--dim:#8b97ac;--emerald:#34d399;--teal:#22d3ee;--rose:#fb7185;
+  --gradtext:linear-gradient(135deg,#34d399,#22d3ee);
+  --shadow:0 12px 40px -12px rgba(0,0,0,.55);--panelborder:#17233a;
+  --panel:radial-gradient(700px 400px at 12% -8%,rgba(52,211,153,.10),transparent 60%),radial-gradient(600px 400px at 100% 0%,rgba(34,211,238,.08),transparent 55%),linear-gradient(180deg,#0d1524,#0a0f1a)}
+.dpc *{box-sizing:border-box;margin:0;padding:0}
+.dpc .wrap{max-width:100%;margin:0 auto}
+.dpc .eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--emerald);background:rgba(52,211,153,.10);border:1px solid rgba(52,211,153,.22);padding:5px 12px;border-radius:999px;margin-bottom:16px}
+.dpc .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.2)}
+.dpc h1{font-size:clamp(26px,5vw,38px);font-weight:800;line-height:1.12;letter-spacing:-.03em;color:var(--text)}
+.dpc .grad{background:var(--gradtext);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.dpc .sub{color:var(--mut);font-size:16px;margin:12px 0 26px;max-width:640px}
+.dpc .card{background:linear-gradient(180deg,var(--surface),var(--surface2));border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin-bottom:18px;box-shadow:var(--shadow)}
+.dpc .card-h{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.dpc .card-h .n{width:26px;height:26px;border-radius:8px;background:rgba(52,211,153,.12);color:var(--emerald);display:grid;place-items:center;font-size:13px;font-weight:700}
+.dpc .card-h h2{font-size:16.5px;font-weight:700;letter-spacing:-.02em;color:var(--text)}
+.dpc .frow{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.dpc .fld{position:relative}
+.dpc .fld .cap{display:block;font-size:12px;color:var(--mut);font-weight:600;margin-bottom:5px}
+.dpc .fld input{width:100%;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:11px 12px;color:var(--text);font-size:15px;font-family:inherit;transition:border-color .15s,box-shadow .15s}
+.dpc .fld input::placeholder{color:var(--dim)}
+.dpc .fld input:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.14)}
+.dpc .strat{display:flex;margin-top:6px}
+.dpc .go{margin-left:auto;background:var(--grad);color:#04121b;border:none;border-radius:12px;padding:12px 26px;font-weight:800;font-size:15px;font-family:inherit;cursor:pointer;box-shadow:0 8px 22px -8px rgba(52,211,153,.6);transition:transform .12s,filter .15s}
+.dpc .go:hover{filter:brightness(1.05)}.dpc .go:active{transform:translateY(1px)}
+.dpc .tip{font-size:13px;color:var(--mut);margin-top:14px;line-height:1.5}
+.dpc .tip b{color:var(--text)}
+.dpc button:focus-visible,.dpc input:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.dpc #out{display:none}
+.dpc .hero-lbl{font-size:13px;color:var(--mut);font-weight:600;margin:2px 0}
+.dpc .res-hero{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;padding:0 2px 4px;background:none;border-radius:0;text-align:left;margin:0}
+.dpc .res-hero .big{font-size:clamp(30px,7vw,46px);font-weight:800;letter-spacing:-.03em}
+.dpc .permo{font-size:16px;color:var(--mut);font-weight:600}
+.dpc .hero-sent{font-size:15px;color:var(--mut);margin:2px 2px 18px}
+.dpc .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.dpc .kpi{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:15px 16px}
+.dpc .kpi .l{font-size:12.5px;color:var(--mut);font-weight:600}
+.dpc .kpi .v{font-size:20px;font-weight:800;margin-top:5px;letter-spacing:-.02em;color:var(--text)}
+.dpc .v.em{color:var(--emerald)}.dpc .v.bl{color:var(--teal)}
+.dpc .barwrap{margin-top:18px}
+.dpc .stackbar{display:flex;height:30px;border-radius:9px;overflow:hidden;border:1px solid var(--line);background:var(--surface2)}
+.dpc .stackbar .seg{height:100%}
+.dpc .stackbar .seg.net{background:linear-gradient(90deg,#34d399,#22d3ee)}
+.dpc .stackbar .seg.ded{background:repeating-linear-gradient(45deg,var(--line2),var(--line2) 6px,var(--surface2) 6px,var(--surface2) 12px)}
+.dpc .barleg{display:flex;gap:16px;font-size:12.5px;color:var(--mut);margin-top:8px}
+.dpc .barleg i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:middle}
+.dpc .barleg i.net{background:#22d3ee}.dpc .barleg i.ded{background:var(--line2)}
+.dpc .barleg b{color:var(--text)}
+.dpc .brk{margin-top:18px;border-top:1px solid var(--line);padding-top:14px}
+.dpc .brk-t{font-size:13px;color:var(--mut);font-weight:700;margin-bottom:8px}
+.dpc .brk-row{display:flex;justify-content:space-between;align-items:center;padding:8px 2px;font-size:14.5px;border-bottom:1px solid var(--line)}
+.dpc .brk-row span{color:var(--text)}
+.dpc .brk-row em{font-style:normal;font-size:12px;color:var(--dim);margin-left:6px}
+.dpc .brk-row b{color:var(--text);font-weight:700}
+.dpc .brk-row.total{border-bottom:none;margin-top:4px;font-weight:800}
+.dpc .brk-row.total span,.dpc .brk-row.total b{color:var(--rose);font-size:15.5px}
+.dpc .cta{background:linear-gradient(135deg,#0f2740,#12233a);border:1px solid #274563;border-radius:var(--radius);padding:24px;position:relative;overflow:hidden;margin-bottom:18px}
+.dpc .cta::before{content:"";position:absolute;inset:0;background:radial-gradient(400px 160px at 90% 0%,rgba(34,211,238,.14),transparent 70%);pointer-events:none}
+.dpc .cta h3{font-size:19px;font-weight:800;letter-spacing:-.02em;margin-bottom:7px;position:relative;color:#f2f7fb}
+.dpc .cta p{color:#aabdd0;font-size:14px;margin-bottom:14px;max-width:580px;position:relative}
+.dpc .cta .fine{color:#8097ad}
+.dpc .emailrow{display:flex;gap:9px;flex-wrap:wrap;position:relative}
+.dpc .cta .emailrow input{flex:1;min-width:220px;background:#0d1b2c;border:1px solid #26445f;border-radius:12px;padding:12px 14px;color:#eef2f8;font-size:14.5px;font-family:inherit}
+.dpc .cta .emailrow input::placeholder{color:#7089a0}
+.dpc .emailrow button{background:var(--grad);color:#04121b;border:none;border-radius:12px;padding:12px 22px;font-weight:800;font-size:14.5px;font-family:inherit;cursor:pointer;transition:.15s}
+.dpc .emailrow button:hover{filter:brightness(1.05)}
+.dpc .fine{font-size:11.5px;margin-top:10px;position:relative}
+.dpc .content{color:var(--mut);font-size:15px}
+.dpc .content h2{font-size:19px;color:var(--text);font-weight:800;letter-spacing:-.02em;margin:26px 0 10px}
+.dpc .content h3{font-size:15.5px;color:var(--text);font-weight:700;margin:16px 0 4px}
+.dpc .content p{margin-bottom:8px}
+.dpc .content ul{margin:6px 0 6px 18px}.dpc .content li{margin-bottom:5px}
+.dpc .disc{font-size:12px;color:var(--dim);margin-top:22px;line-height:1.6}
+@media(max-width:600px){
+  .dpc{padding:20px 14px 24px;margin:16px auto;border-radius:18px}
+  .dpc .frow{grid-template-columns:1fr}
+  .dpc .kpis{grid-template-columns:1fr}
+  .dpc .go{width:100%}
+}
+/* tool-specific */
+.dpc .seg-toggle{display:flex;gap:8px}
+.dpc .seg-toggle button{flex:1;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:11px 12px;color:var(--mut);font-size:15px;font-weight:700;font-family:inherit;cursor:pointer;transition:border-color .15s,color .15s,background .15s}
+.dpc .seg-toggle button.on{border-color:var(--emerald);color:var(--emerald);background:rgba(52,211,153,.10)}
+.dpc select{width:100%;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:11px 12px;color:var(--text);font-size:15px;font-family:inherit;transition:border-color .15s,box-shadow .15s}
+.dpc select:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.14)}
+</style>
+
+<script is:inline>
+const kcal=n=>Math.round(n).toLocaleString('ko-KR')+'kcal';
+const kg=n=>(Math.round(n*10)/10).toLocaleString('ko-KR')+'kg';
+let SEX='m';
+function setSex(s){
+  SEX=s;
+  document.getElementById('sex-m').classList.toggle('on',s==='m');
+  document.getElementById('sex-f').classList.toggle('on',s==='f');
+  if(document.getElementById('out').style.display==='block')calc(false);
+}
+function judge(bmi){
+  if(bmi<18.5)return{label:'저체중',color:'#38bdf8',seg:0};
+  if(bmi<23)return{label:'정상',color:'var(--emerald)',seg:1};
+  if(bmi<25)return{label:'과체중',color:'#f59e0b',seg:2};
+  if(bmi<30)return{label:'비만',color:'var(--rose)',seg:3};
+  return{label:'고도비만',color:'var(--rose)',seg:3};
+}
+function calc(scroll){
+  const cm=parseFloat(document.getElementById('height').value)||0;
+  const wt=parseFloat(document.getElementById('weight').value)||0;
+  const age=parseInt(document.getElementById('age').value)||0;
+  const act=parseFloat(document.getElementById('activity').value)||1.2;
+  if(cm<=0||wt<=0||age<=0)return;
+  const m=cm/100;
+  const bmi=wt/(m*m);
+  const j=judge(bmi);
+  const ideal=22*m*m; // 표준체중 (BMI 22)
+  const bmr=SEX==='m'?(10*wt+6.25*cm-5*age+5):(10*wt+6.25*cm-5*age-161);
+  const tdee=bmr*act;
+  const diff=ideal-wt; // +면 늘려야, -면 빼야
+  // render
+  document.getElementById('out').style.display='block';
+  document.getElementById('cta').style.display='block';
+  document.getElementById('r-bmi').textContent=(Math.round(bmi*10)/10).toLocaleString('ko-KR');
+  const jd=document.getElementById('r-judge');
+  jd.textContent=j.label;jd.style.color=j.color;jd.style.fontWeight='800';
+  const diffTxt=Math.abs(diff)<0.5?'표준체중에 거의 딱 맞아요.':(diff<0?`표준체중보다 약 ${kg(-diff)} 많아요.`:`표준체중보다 약 ${kg(diff)} 적어요.`);
+  document.getElementById('r-sent').textContent=`키 ${cm}cm 기준 BMI ${(Math.round(bmi*10)/10)} · ${j.label}. ${diffTxt}`;
+  document.getElementById('r-ideal').textContent=kg(ideal);
+  document.getElementById('r-bmr').textContent=kcal(bmr);
+  document.getElementById('r-tdee').textContent=kcal(tdee);
+  document.getElementById('d-lose').textContent=kcal(tdee-500);
+  document.getElementById('d-keep').textContent=kcal(tdee);
+  document.getElementById('d-gain').textContent=kcal(tdee+400);
+  const diffRow=document.getElementById('d-diff');
+  diffRow.textContent=Math.abs(diff)<0.5?'거의 없음':(diff<0?`${kg(-diff)} 감량`:`${kg(diff)} 증량`);
+  // BMI bar: map 15~35 → 0~100%
+  const pct=Math.max(0,Math.min(100,(bmi-15)/(35-15)*100));
+  const seg=document.getElementById('seg-bmi');
+  seg.style.width=pct+'%';
+  seg.style.background=`linear-gradient(90deg,#34d399,${j.color==='var(--rose)'?'#fb7185':j.color==='#f59e0b'?'#f59e0b':'#22d3ee'})`;
+  const h=document.getElementById('resHead');
+  if(scroll){h.focus();document.getElementById('out').scrollIntoView({behavior:'smooth',block:'start'});}
+}
+function subscribe(){
+  const e=document.getElementById('email').value.trim();const msg=document.getElementById('cta-msg');
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)){msg.textContent='올바른 이메일 주소를 입력해 주세요.';msg.style.color='#fb7185';return;}
+  try{fetch('https://xyprbsmagtlzebxyxsvj.supabase.co/functions/v1/analytics-ingest',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({event_type:'newsletter_subscribe',source:'lifeflow',metadata:{email:e,campaign:'bmi-calorie-calculator',page:location.pathname,subscribed_at:new Date().toISOString()}})}).catch(()=>{});}catch(_){}
+  msg.textContent='감사합니다! 건강·운동 루틴 뉴스레터를 보내드릴게요.';msg.style.color='#34d399';
+  try{localStorage.setItem('newsletter-subscribed','true');}catch(_){}
+  document.getElementById('email').value='';
+}
+calc(false);
+</script>
