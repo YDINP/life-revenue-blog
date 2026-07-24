@@ -10,7 +10,7 @@ tags:
   - "실업급여"
   - "2026"
   - "구직활동"
-heroImage: ""
+heroImage: "https://mungge.com/wp-content/uploads/2026/07/lf-employment-2026-07-24.jpg"
 coupangLinks:
   - title: "부자 아빠 가난한 아빠"
     url: "https://link.coupang.com/a/dJhOT3"
