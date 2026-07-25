@@ -12,13 +12,6 @@ tags:
   - "창업자금"
   - "경영자금"
 heroImage: ""
-coupangLinks:
-  - title: "아날로그 알람시계"
-    url: "https://link.coupang.com/a/dJhOT3"
-    imageUrl: "https://images.pexels.com/photos/1198264/pexels-photo-1198264.jpeg?auto=compress&cs=tinysrgb&w=200"
-  - title: "종이 다이어리"
-    url: "https://link.coupang.com/a/dJhOT3"
-    imageUrl: "https://images.pexels.com/photos/733857/pexels-photo-733857.jpeg?auto=compress&cs=tinysrgb&w=200"
 faq:
   - q: "소상공인정책자금 대출이 일반 은행 대출과 가장 큰 차이는?"
     a: "정책자금은 금리가 연 4~5%로 일반 대출(7~9%)보다 2~3% 낮고, 상환기간이 최대 10년으로 길어 월 상환액이 훨씬 적습니다. 다만 신용등급 9등급 이상, 사업 1년 이상 경과 등 조건이 있습니다."
@@ -72,7 +65,7 @@ faq:
 
 ## 소상공인정책자금 종류별 지급액 및 금리
 
-<div class="chart-bar" data-title="2026년 소상공인정책자금 상품별 한도 비교" data-labels="보통운영자금,경영정상화자금,시설자금,기술개발자금,청년창업자금" data-values="250,150,700,300,200" data-colors="#3b82f6,#10b981,#f59e0b,#ef4444,#8b5cf6" data-unit="백만원"></div>
+<div class="chart-bar" data-title="2026년 소상공인정책자금 상품별 한도 비교" data-labels="보통운영자금,경영정상화자금,시설자금,기술개발자금,청년창업자금" data-values="2.5,1.5,7,3,2" data-colors="#3b82f6,#10b981,#f59e0b,#ef4444,#8b5cf6" data-unit="억원"></div>
 
 ### 1. 보통운영자금
 
@@ -275,10 +268,4 @@ faq:
 
 ---
 
-## 추천 상품
-
-> 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
-
-- [아날로그 알람시계](https://link.coupang.com/a/dJhOT3)
-- [종이 다이어리](https://link.coupang.com/a/dJhOT3)
 

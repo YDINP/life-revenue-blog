@@ -110,6 +110,17 @@ async function fetchPexelsImage(query) {
   }
 }
 
+// 차트 div의 data-labels/title에 LLM이 넣은 \\n·따옴표·중복콤마 정리(HTML 속성 깨짐 방지)
+function fixChartLabels(md) {
+  return md.replace(/<div class="chart-[^"]*"[^>]*><\/div>/g, (tag) =>
+    tag
+      .replace(/data-labels="([\s\S]*?)"(?=\s+data-|\s*>)/g, (m, v) =>
+        `data-labels="${v.replace(/\\n|\n/g, ' ').replace(/"/g, '').replace(/\s*,\s*/g, ',').replace(/\s+/g, ' ').trim()}"`)
+      .replace(/data-title="([\s\S]*?)"(?=\s+data-|\s*>)/g, (m, v) =>
+        `data-title="${v.replace(/\\n|\n/g, ' ').replace(/"/g, '').trim()}"`)
+  );
+}
+
 function pickCoupangProducts(categoryName, count = 2) {
   const products = coupangLinks[categoryName] || [];
   const shuffled = [...products].sort(() => Math.random() - 0.5);
@@ -342,7 +353,7 @@ ${chartInstruction}
   const heroImage = await fetchPexelsImage(searchTerm);
 
   // Pick coupang products
-  const coupangProducts = pickCoupangProducts(categoryName, 2);
+  const coupangProducts = revenue ? pickCoupangProducts(categoryName, 2) : [];
 
   // Build coupang section
   let coupangSection = '';
@@ -395,7 +406,7 @@ ${content}${coupangSection}
   }
 
   const filePath = join(blogDir, fileName);
-  writeFileSync(filePath, fullContent, 'utf-8');
+  writeFileSync(filePath, fixChartLabels(fullContent), 'utf-8');
   console.log(`Blog post written: src/blog/${fileName}`);
   // mungge.com(WordPress) 자동 발행 — WP env 있을 때만(없으면 Astro만)
   await autoPublishToWP(filePath, { silo: '생활·재테크' });
