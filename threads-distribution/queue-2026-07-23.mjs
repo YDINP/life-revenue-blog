@@ -8,7 +8,7 @@ const SECRET = process.env.CRON_SECRET;
 if (!SECRET) { console.error('CRON_SECRET 환경변수 필요'); process.exit(1); }
 
 const U = (slug) =>
-  `https://life-revenue-blog.vercel.app/blog/${slug}/?utm_source=threads&utm_medium=social&utm_campaign=nochimyon`;
+  `https://mungge.com/${slug}/?utm_source=threads&utm_medium=social&utm_campaign=nochimyon`;
 
 const posts = [
   {
