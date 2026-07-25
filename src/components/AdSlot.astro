@@ -23,16 +23,27 @@ const AD_SLOT_IDS: Record<string, string> = {
 const ADFIT_UNITS: Record<string, { unit: string; w: number; h: number }> = {
   anchor:  { unit: 'DAN-9ntKeIG6TVxsZA5B', w: 320, h: 100 }, // 모바일 하단 배너 (전 페이지)
   top:     { unit: 'DAN-ZHhI6MvJo2zmbgW7', w: 728, h: 90 },  // 블로그 본문 상단 (PC)
-  bottom:  { unit: 'DAN-EOpRhlPlnBrzsv55', w: 300, h: 250 }, // 블로그 본문 하단 (PC)
+  bottom:  { unit: 'DAN-EOpRhlPlnBrzsv55', w: 300, h: 250 }, // 블로그 본문 하단 (PC/모바일 공용, 300px 이하라 안전)
   mid:     { unit: '', w: 300, h: 250 },
   sidebar: { unit: '', w: 300, h: 250 },
+};
+// 모바일(<768px) 전용 단위. AdFit 단위는 고정폭 iframe 이라 단위 폭이 화면보다 넓으면
+// 좌우가 잘린다(예: top 728x90 을 360px 화면에 노출 → 잘림 + 페이지 가로 스크롤).
+// → PC 단위 폭이 화면보다 넓은 슬롯은 모바일에서 반드시 별도 단위(320x100·300x250)를 쓴다.
+//   unit 이 비어 있으면 그 슬롯은 모바일에서 숨김(잘린 광고를 내보내지 않음).
+// ⚠️ 같은 단위 ID를 한 페이지에 두 번 넣으면 두 번째는 서빙되지 않으므로 재사용 금지.
+const ADFIT_MOBILE_UNITS: Record<string, { unit: string; w: number; h: number }> = {
+  top: { unit: '', w: 320, h: 100 }, // TODO: AdFit 콘솔에서 모바일 320x100 단위 생성 후 ID 입력
 };
 
 const slotId = AD_SLOT_IDS[position] || '';
 const adfit = ADFIT_UNITS[position] || { unit: '', w: 0, h: 0 };
+const adfitM = ADFIT_MOBILE_UNITS[position] || null;
 const useAdfit = !!adfit.unit;
 const isAnchor = position === 'anchor';
 const isMid = position === 'mid';
+// PC 단위 폭이 모바일 화면(360px 기준)을 넘으면 모바일에선 숨기고 모바일 단위로 대체한다.
+const pcTooWideForMobile = !isAnchor && adfit.w > 336;
 ---
 
 {/* ── Kakao AdFit (우선) ── */}
@@ -44,8 +55,14 @@ const isMid = position === 'mid';
   </div>
 )}
 {useAdfit && !isAnchor && (
-  <div class="ad-slot" data-ad-position={position}>
+  <div class="ad-slot" data-ad-position={position} data-ad-viewport={pcTooWideForMobile ? 'pc' : 'all'}>
     <ins class="kakao_ad_area" style="display:none;" data-ad-unit={adfit.unit} data-ad-width={String(adfit.w)} data-ad-height={String(adfit.h)}></ins>
+    <script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+  </div>
+)}
+{useAdfit && !isAnchor && pcTooWideForMobile && adfitM?.unit && (
+  <div class="ad-slot" data-ad-position={position} data-ad-viewport="mobile">
+    <ins class="kakao_ad_area" style="display:none;" data-ad-unit={adfitM.unit} data-ad-width={String(adfitM.w)} data-ad-height={String(adfitM.h)}></ins>
     <script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
   </div>
 )}
@@ -81,6 +98,16 @@ const isMid = position === 'mid';
   min-height: 100px;
   margin: 2rem 0;
   text-align: center;
+  /* AdFit iframe 은 고정폭이라 좁은 화면에서 부모를 밀어 페이지 전체에 가로 스크롤을
+     만든다. 슬롯 안에서만 넘치게 잘라 레이아웃 붕괴를 막는다. */
+  max-width: 100%;
+  overflow: hidden;
+}
+/* PC 단위(728x90 등)는 모바일에서 잘리므로 숨기고, 모바일 단위가 있으면 그것만 노출 */
+.ad-slot[data-ad-viewport='mobile'] { display: none; }
+@media (max-width: 767px) {
+  .ad-slot[data-ad-viewport='pc'] { display: none; }
+  .ad-slot[data-ad-viewport='mobile'] { display: block; }
 }
 .anchor-ad {
   position: fixed;
@@ -92,7 +119,13 @@ const isMid = position === 'mid';
   box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.12);
   text-align: center;
   padding: 2px 0;
+  padding-bottom: calc(2px + env(safe-area-inset-bottom, 0px));
   min-height: 52px;
+  /* iOS Safari: position:fixed 는 '축소된' 레이아웃 뷰포트 기준이라 위로 스크롤해
+     하단 툴바가 올라오면 배너가 툴바 뒤로 밀려 내려간 것처럼 보인다.
+     아래 스크립트가 visualViewport 차이만큼 끌어올린다. */
+  transform: translateY(0);
+  will-change: transform;
 }
 :global(:root.dark) .anchor-ad {
   background: rgba(18, 19, 26, 0.98);
@@ -115,3 +148,56 @@ const isMid = position === 'mid';
   .anchor-ad { display: none; }
 }
 </style>
+
+{isAnchor && (
+  <script is:inline>
+    (function () {
+      var el = document.getElementById('anchor-ad');
+      if (!el) return;
+
+      // 1) 하단 고정배너가 본문 마지막 줄·푸터를 덮지 않도록 body 에 여백 확보.
+      //    배너 실제 높이를 측정해 반영하고, 광고가 늦게 로드돼 높이가 바뀌면 다시 반영한다.
+      function syncSpacer() {
+        if (!document.body.contains(el)) {
+          document.body.style.paddingBottom = '';
+          document.documentElement.style.removeProperty('--anchor-ad-h');
+          return;
+        }
+        var h = el.offsetHeight || 0;
+        document.documentElement.style.setProperty('--anchor-ad-h', h + 'px');
+        document.body.style.paddingBottom = h + 'px';
+      }
+
+      // 2) iOS Safari 하단 툴바 보정.
+      //    위로 스크롤하면 툴바가 펼쳐지는데, position:fixed 의 기준(레이아웃 뷰포트)은
+      //    툴바 아래까지라서 배너가 툴바 뒤로 내려가 보인다. 레이아웃 뷰포트와
+      //    visualViewport 의 하단 차이만큼 끌어올려 항상 화면 안에 붙여둔다.
+      var vv = window.visualViewport;
+      function syncOffset() {
+        if (!vv || !document.body.contains(el)) return;
+        var hidden = window.innerHeight - (vv.height + vv.offsetTop);
+        el.style.transform = 'translateY(' + -Math.max(0, Math.round(hidden)) + 'px)';
+      }
+
+      function syncAll() { syncOffset(); syncSpacer(); }
+
+      if (vv) {
+        vv.addEventListener('resize', syncAll, { passive: true });
+        vv.addEventListener('scroll', syncOffset, { passive: true });
+      }
+      window.addEventListener('orientationchange', syncAll);
+
+      // 광고 iframe 이 비동기로 삽입되며 높이가 변하므로 크기 변화를 관찰한다.
+      if (window.ResizeObserver) new ResizeObserver(syncSpacer).observe(el);
+      // 닫기 버튼으로 배너가 제거되면 여백도 회수한다.
+      if (window.MutationObserver) {
+        new MutationObserver(function () {
+          if (!document.body.contains(el)) syncSpacer();
+        }).observe(document.body, { childList: true });
+      }
+
+      syncAll();
+      window.addEventListener('load', syncAll);
+    })();
+  </script>
+)}

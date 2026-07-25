@@ -621,3 +621,27 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initReveal);
   else initReveal();
 })();
+
+// ===== 넓은 표 가로 스크롤 안내 =====
+// .table-scroll 은 넘치는 표를 가로 스크롤로 처리하지만, 모바일에서는 오른쪽 열이
+// 잘려 있다는 사실 자체가 보이지 않아 독자가 스크롤을 시도하지 않는다.
+// 실제로 넘칠 때만 힌트와 페이드를 붙이고, 끝까지 밀면 없앤다.
+(function() {
+  function initTableHint() {
+    var wraps = document.querySelectorAll('.post-content .table-scroll');
+    wraps.forEach(function(w) {
+      function sync() {
+        var over = w.scrollWidth - w.clientWidth > 4;
+        w.classList.toggle('is-scrollable', over);
+        // 오른쪽에 남은 스크롤이 있을 때만 페이드 유지
+        w.classList.toggle('at-end', over && w.scrollLeft >= w.scrollWidth - w.clientWidth - 4);
+      }
+      w.addEventListener('scroll', sync, { passive: true });
+      if (window.ResizeObserver) new ResizeObserver(sync).observe(w);
+      sync();
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initTableHint);
+  else initTableHint();
+  window.addEventListener('load', initTableHint);
+})();

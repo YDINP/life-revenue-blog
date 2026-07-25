@@ -1464,6 +1464,28 @@ section > h2::after {
   -webkit-overflow-scrolling: touch;
 }
 
+/* 표가 실제로 넘칠 때만(.is-scrollable, blog-post.js 가 판정) "넘겨보세요" 힌트를
+   붙인다. 잘린 열이 있다는 걸 알려주지 않으면 모바일에서 3열 이후를 아무도 못 본다.
+   끝까지 스크롤하면(.at-end) 힌트를 지운다.
+   힌트는 스크롤 컨테이너 안이 아니라 ::before 로 넣고 sticky left:0 으로 고정해,
+   가로로 밀어도 문구가 화면 밖으로 사라지지 않게 한다. */
+.post-content .table-scroll.is-scrollable::before {
+  content: '좌우로 넘겨서 나머지 열 보기 →';
+  display: block;
+  position: sticky;
+  left: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  padding-bottom: 0.4rem;
+  transition: opacity 0.2s;
+}
+.post-content .table-scroll.at-end::before { opacity: 0; }
+@media (min-width: 768px) {
+  /* 데스크톱에서 넘치는 표는 드물고, 넘쳐도 마우스·트랙패드로 자연히 해결된다 */
+  .post-content .table-scroll.is-scrollable::before { display: none; }
+}
+
 .post-content table {
   width: 100%;
   border-collapse: collapse;
@@ -2578,8 +2600,10 @@ section > h2::after {
     height: 4px;
   }
 
+  /* 하단 고정 광고배너(--anchor-ad-h, AdSlot.astro 에서 실제 높이 주입) 위로 띄운다.
+     겹치면 버튼이 광고를 가려 노출·클릭이 모두 손해다. */
   .back-to-top {
-    bottom: 1.5rem;
+    bottom: calc(1.5rem + var(--anchor-ad-h, 0px));
     right: 1.5rem;
   }
 }
