@@ -7,8 +7,12 @@ category: "travel"
 tags: [트래블카드, 트래블로그, 트래블월렛, 해외여행환전, 여행경비]
 heroImage: "https://images.pexels.com/photos/1051071/pexels-photo-1051071.jpeg?auto=compress&cs=tinysrgb&w=1200"
 coupangLinks:
-  - title: "해외여행 준비물"
-    url: "https://www.coupang.com/np/search?q=%ED%95%B4%EC%99%B8%EC%97%AC%ED%96%89%20%EC%A4%80%EB%B9%84%EB%AC%BC&src=1139000&spec=10799999&addtag=200&ctag=%ED%95%B4%EC%99%B8%EC%97%AC%ED%96%89%20%EC%A4%80%EB%B9%84%EB%AC%BC&lptag=AF7838146&pageType=SEARCH&pageValue=%ED%95%B4%EC%99%B8%EC%97%AC%ED%96%89%20%EC%A4%80%EB%B9%84%EB%AC%BC"
+  - title: "여권 케이스·카드지갑"
+    url: "https://www.coupang.com/np/search?q=%EC%97%AC%EA%B6%8C%20%EC%BC%80%EC%9D%B4%EC%8A%A4%20%EC%B9%B4%EB%93%9C%EC%A7%80%EA%B0%91&src=1139000&spec=10799999&addtag=200&ctag=%EC%97%AC%EA%B6%8C%20%EC%BC%80%EC%9D%B4%EC%8A%A4%20%EC%B9%B4%EB%93%9C%EC%A7%80%EA%B0%91&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%97%AC%EA%B6%8C%20%EC%BC%80%EC%9D%B4%EC%8A%A4%20%EC%B9%B4%EB%93%9C%EC%A7%80%EA%B0%91"
+  - title: "해외여행 유심·이심"
+    url: "https://www.coupang.com/np/search?q=%ED%95%B4%EC%99%B8%EC%97%AC%ED%96%89%20%EC%9C%A0%EC%8B%AC%20%EC%9D%B4%EC%8B%AC&src=1139000&spec=10799999&addtag=200&ctag=%ED%95%B4%EC%99%B8%EC%97%AC%ED%96%89%20%EC%9C%A0%EC%8B%AC%20%EC%9D%B4%EC%8B%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%ED%95%B4%EC%99%B8%EC%97%AC%ED%96%89%20%EC%9C%A0%EC%8B%AC%20%EC%9D%B4%EC%8B%AC"
+  - title: "여행용 멀티어댑터"
+    url: "https://www.coupang.com/np/search?q=%EC%97%AC%ED%96%89%EC%9A%A9%20%EB%A9%80%ED%8B%B0%EC%96%B4%EB%8C%91%ED%84%B0&src=1139000&spec=10799999&addtag=200&ctag=%EC%97%AC%ED%96%89%EC%9A%A9%20%EB%A9%80%ED%8B%B0%EC%96%B4%EB%8C%91%ED%84%B0&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%97%AC%ED%96%89%EC%9A%A9%20%EB%A9%80%ED%8B%B0%EC%96%B4%EB%8C%91%ED%84%B0"
 faq:
   - q: "트래블로그와 트래블월렛, 뭐가 다른가요?"
     a: "환전 무료 통화 범위와 환급 조건이 핵심 차이입니다. 트래블로그는 달러·유로·엔·파운드 등 4개 통화 환전이 무료이고, 특히 일본 세븐일레븐의 세븐뱅크 ATM에서 한도 없이 무료로 엔화를 뽑을 수 있어 일본 여행에 강합니다. 대신 남은 외화를 원화로 되돌릴 때 1% 환급 수수료가 있습니다. 트래블월렛은 달러·유로·엔 3개 통화 무료(그 외 0.5~2.5%)에, 시중 모든 은행 계좌를 연결할 수 있고 남은 돈을 100% 전액 환급해 줍니다. '일본·다통화'는 트래블로그, '전액 환급·은행 자유'는 트래블월렛이 유리합니다."
@@ -46,6 +50,17 @@ faq:
 
 <div class="callout-warning">⚠️ 주의: 여행지 통화가 '무료 환전 대상'인지 먼저 확인하세요. 마이너 통화는 수수료(0.5~2.5%)가 붙어, 무료라 믿고 크게 환전하면 손해입니다.</div>
 
+트래블카드 앱은 현지에서 **데이터가 있어야** 충전·결제·환율 확인이 됩니다. 로밍보다 저렴한 **현지 유심·이심**을 출국 전에 챙겨두세요.
+
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%ED%95%B4%EC%99%B8%EC%97%AC%ED%96%89%20%EC%9C%A0%EC%8B%AC%20%EC%9D%B4%EC%8B%AC&src=1139000&spec=10799999&addtag=200&ctag=%ED%95%B4%EC%99%B8%EC%97%AC%ED%96%89%20%EC%9C%A0%EC%8B%AC%20%EC%9D%B4%EC%8B%AC&lptag=AF7838146&pageType=SEARCH&pageValue=%ED%95%B4%EC%99%B8%EC%97%AC%ED%96%89%20%EC%9C%A0%EC%8B%AC%20%EC%9D%B4%EC%8B%AC" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">해외여행 유심·이심</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
+
 ## 수수료 0원 만드는 조합
 
 ![여행 경비를 계산하는 모습](https://images.pexels.com/photos/3943716/pexels-photo-3943716.jpeg?auto=compress&cs=tinysrgb&w=940)
@@ -58,6 +73,17 @@ faq:
 
 - **분할 환전**: 앱에서 유리할 때 나눠 충전 → 환율 변동 위험 완화
 - **카드 2장**: 브랜드 다른 카드(비자+마스터/유니온페이) + 비상 현금 → 결제 전부 막히는 최악 방지
+
+<a class="coupang-inline" href="https://www.coupang.com/np/search?q=%EC%97%AC%EA%B6%8C%20%EC%BC%80%EC%9D%B4%EC%8A%A4%20%EC%B9%B4%EB%93%9C%EC%A7%80%EA%B0%91&src=1139000&spec=10799999&addtag=200&ctag=%EC%97%AC%EA%B6%8C%20%EC%BC%80%EC%9D%B4%EC%8A%A4%20%EC%B9%B4%EB%93%9C%EC%A7%80%EA%B0%91&lptag=AF7838146&pageType=SEARCH&pageValue=%EC%97%AC%EA%B6%8C%20%EC%BC%80%EC%9D%B4%EC%8A%A4%20%EC%B9%B4%EB%93%9C%EC%A7%80%EA%B0%91" target="_blank" rel="noopener noreferrer nofollow">
+  <span class="ci-icon" aria-hidden="true">🛒</span>
+  <span class="ci-body">
+    <span class="ci-label">쿠팡 추천</span>
+    <span class="ci-title">여권 케이스·카드지갑</span>
+  </span>
+  <span class="ci-cta">최저가 →</span>
+</a>
+
+카드 2장에 여권까지 한곳에 넣는 **여권 케이스**가 있으면 공항·환전·출입국에서 허둥대지 않습니다.
 
 여행 경비를 더 아끼려면 [일본 여행 예산 가이드](/blog/2026-02-06-japan-travel-budget-guide-2026/)도 함께 보세요.
 
