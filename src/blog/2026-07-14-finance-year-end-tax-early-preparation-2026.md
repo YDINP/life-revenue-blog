@@ -49,7 +49,7 @@ faq:
 
 ## 2. 신용카드: 25% 문턱 관리
 
-![지출을 점검하는 모습](https://images.pexels.com/photos/9258909/pexels-photo-9258909.jpeg?auto=compress&cs=tinysrgb&w=940)
+![카드 결제 단말기와 노트북으로 지출을 확인하는 모습](https://images.pexels.com/photos/5239883/pexels-photo-5239883.jpeg?auto=compress&cs=tinysrgb&w=940)
 
 카드 공제는 **총급여의 25%를 넘게 써야** 그 초과분부터 시작됩니다.
 

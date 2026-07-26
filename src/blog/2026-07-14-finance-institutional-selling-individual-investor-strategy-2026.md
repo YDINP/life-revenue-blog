@@ -51,7 +51,7 @@ faq:
 
 <div class="chart-bar" data-title="비중 기준 리밸런싱이 가장 적합(9점)" data-labels="기간 기준(연 1~2회),비중 기준(±5~10%p),감정 기준" data-values="8,9,2" data-colors="#3b82f6,#009e73,#d55e00" data-unit="점" data-highlight="max"></div>
 
-![저축과 자산관리](https://images.pexels.com/photos/9258909/pexels-photo-9258909.jpeg?auto=compress&cs=tinysrgb&w=940)
+![포트폴리오 리포트를 펼쳐놓고 비중을 점검하는 모습](https://images.pexels.com/photos/6801682/pexels-photo-6801682.jpeg?auto=compress&cs=tinysrgb&w=940)
 
 ## 하지 말아야 할 것: 레버리지·인버스로 '대응'
 

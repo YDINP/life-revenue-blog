@@ -24,7 +24,7 @@ faq:
 
 결혼 준비는 인생에서 손꼽히는 큰 지출인데, **어디서 돈이 새는지 모르면** 예산이 순식간에 무너집니다. "남들 하는 만큼"을 따라가다 보면 끝이 없죠. 2026년 결혼 비용을 항목별로 나누고, **통제 가능한 것과 아닌 것**을 구분해 현실적으로 아끼는 법을 정리했습니다.
 
-![결혼 예산을 계산하는 모습](https://images.pexels.com/photos/9258909/pexels-photo-9258909.jpeg?auto=compress&cs=tinysrgb&w=940)
+![결혼 준비 노트와 반지, 흰 꽃](https://images.pexels.com/photos/10443101/pexels-photo-10443101.jpeg?auto=compress&cs=tinysrgb&w=940)
 
 ## 큰 그림: 어디에 돈이 몰리나
 

@@ -59,7 +59,7 @@ faq:
 - 위치: 바로 꺼낼 수 있는 안전한 계좌(예: 파킹통장)
 - 원칙: 투자하지 말 것 — 비상금은 '수익'이 아니라 '안심'이 목적
 
-![저축과 재정 계획](https://images.pexels.com/photos/9258909/pexels-photo-9258909.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=430&w=940)
+!['저축'이라고 적힌 동전 저금통을 든 손](https://images.pexels.com/photos/9929281/pexels-photo-9929281.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=430&w=940)
 
 ## 3단계: 신용점수 — 미래의 이자를 좌우한다
 
