@@ -20,7 +20,11 @@
   .pd-pop[hidden] { display: none; }
   .pd-pop {
     position: fixed;
-    inset: 0;
+    /* 하단 고정 광고(.anchor-ad, z-index 60)를 팝업(z-index 200)이 덮어버려
+       모바일에서 애드핏 배너가 "사라진 것처럼" 보였다. AdSlot(anchor) 스크립트가
+       세팅하는 --anchor-ad-h 만큼 팝업 박스를 위로 비켜세워 배너를 살려둔다.
+       (배너가 없거나 닫히면 변수도 제거되므로 폴백 0px = 전체 화면) */
+    inset: 0 0 calc(var(--anchor-ad-h, 0px) + 8px) 0;
     z-index: 200;
     display: flex;
     align-items: center;
