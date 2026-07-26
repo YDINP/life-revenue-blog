@@ -47,7 +47,7 @@ faq:
 - 월 수령액 **최대 +4만 원** 인상
 - 초기보증료 **1.5% → 1.0%**(4억 주택 기준 600만→400만 원)
 
-![노후 자산을 계획하는 모습](https://images.pexels.com/photos/9258909/pexels-photo-9258909.jpeg?auto=compress&cs=tinysrgb&w=940)
+![창가에서 함께 노후 자금을 살펴보는 노부부](https://images.pexels.com/photos/7231071/pexels-photo-7231071.jpeg?auto=compress&cs=tinysrgb&w=940)
 
 <div class="callout-tip">💡 팁: 집은 있지만 현금 흐름이 부족한 고령층에게 <b>가입 문턱↓·월 수령↑</b>. 단, 가입하면 조건이 고정되니 상속·이사·매각 계획까지 함께 따져 HF 상담으로 예상 수령액을 확인하세요.</div>
 
