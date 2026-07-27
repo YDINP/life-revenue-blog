@@ -1,0 +1,940 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://mungge.com/",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "https://mungge.com/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/",
+      "destination": "https://mungge.com/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-02-06-japan-travel-budget-guide-2026",
+      "destination": "https://mungge.com/2026-02-06-japan-travel-budget-guide-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-02-06-japan-travel-budget-guide-2026/",
+      "destination": "https://mungge.com/2026-02-06-japan-travel-budget-guide-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-02-07-domestic-travel-hidden-gems-2026",
+      "destination": "https://mungge.com/2026-02-07-domestic-travel-hidden-gems-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-02-07-domestic-travel-hidden-gems-2026/",
+      "destination": "https://mungge.com/2026-02-07-domestic-travel-hidden-gems-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-02-16-health-2026-gi-based-nutrition-guide-blood-sugar-management",
+      "destination": "https://mungge.com/2026-02-16-health-2026-gi-based-nutrition-guide-blood-sugar-management/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-02-16-health-2026-gi-based-nutrition-guide-blood-sugar-management/",
+      "destination": "https://mungge.com/2026-02-16-health-2026-gi-based-nutrition-guide-blood-sugar-management/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-02-20-lifestyle-2026-single-household-budget-saving-items-top-15",
+      "destination": "https://mungge.com/2026-02-20-lifestyle-2026-single-household-budget-saving-items-top-15/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-02-20-lifestyle-2026-single-household-budget-saving-items-top-15/",
+      "destination": "https://mungge.com/2026-02-20-lifestyle-2026-single-household-budget-saving-items-top-15/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-02-23-travel-korea-hidden-gems-travel-guide-2026-top-10-photo-spots",
+      "destination": "https://mungge.com/2026-02-23-travel-korea-hidden-gems-travel-guide-2026-top-10-photo-spots/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-02-23-travel-korea-hidden-gems-travel-guide-2026-top-10-photo-spots/",
+      "destination": "https://mungge.com/2026-02-23-travel-korea-hidden-gems-travel-guide-2026-top-10-photo-spots/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-02-25-health-2026-sleep-improvement-scientific-lifestyle-habits-guide",
+      "destination": "https://mungge.com/2026-02-25-health-2026-sleep-improvement-scientific-lifestyle-habits-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-02-25-health-2026-sleep-improvement-scientific-lifestyle-habits-guide/",
+      "destination": "https://mungge.com/2026-02-25-health-2026-sleep-improvement-scientific-lifestyle-habits-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-02-27-health-2026-health-supplements-top-5-comparison-ingredients-efficacy-value",
+      "destination": "https://mungge.com/2026-02-27-health-2026-health-supplements-top-5-comparison-ingredients-efficacy-value/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-02-27-health-2026-health-supplements-top-5-comparison-ingredients-efficacy-value/",
+      "destination": "https://mungge.com/2026-02-27-health-2026-health-supplements-top-5-comparison-ingredients-efficacy-value/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-02-27-travel-2026-essential-travel-packing-checklist-63-items-category-guide",
+      "destination": "https://mungge.com/2026-02-27-travel-2026-essential-travel-packing-checklist-63-items-category-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-02-27-travel-2026-essential-travel-packing-checklist-63-items-category-guide/",
+      "destination": "https://mungge.com/2026-02-27-travel-2026-essential-travel-packing-checklist-63-items-category-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-03-23-education-2026-self-development-books-top-12-life-changing-must-read-guide",
+      "destination": "https://mungge.com/2026-03-23-education-2026-self-development-books-top-12-life-changing-must-read-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-03-23-education-2026-self-development-books-top-12-life-changing-must-read-guide/",
+      "destination": "https://mungge.com/2026-03-23-education-2026-self-development-books-top-12-life-changing-must-read-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-05-04-travel-japan-travel-hidden-costs-analysis-2026-city-season-style",
+      "destination": "https://mungge.com/2026-05-04-travel-japan-travel-hidden-costs-analysis-2026-city-season-style/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-05-04-travel-japan-travel-hidden-costs-analysis-2026-city-season-style/",
+      "destination": "https://mungge.com/2026-05-04-travel-japan-travel-hidden-costs-analysis-2026-city-season-style/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-05-education-personal-branding-guide",
+      "destination": "https://mungge.com/2026-07-05-education-personal-branding-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-05-education-personal-branding-guide/",
+      "destination": "https://mungge.com/2026-07-05-education-personal-branding-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-05-finance-2026-wealth-megatrends-5",
+      "destination": "https://mungge.com/2026-07-05-finance-2026-wealth-megatrends-5/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-05-finance-2026-wealth-megatrends-5/",
+      "destination": "https://mungge.com/2026-07-05-finance-2026-wealth-megatrends-5/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-05-health-nutrition-tracking-apps-top5",
+      "destination": "https://mungge.com/2026-07-05-health-nutrition-tracking-apps-top5/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-05-health-nutrition-tracking-apps-top5/",
+      "destination": "https://mungge.com/2026-07-05-health-nutrition-tracking-apps-top5/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-05-travel-jeju-seogwipo-coastal-trekking-course",
+      "destination": "https://mungge.com/2026-07-05-travel-jeju-seogwipo-coastal-trekking-course/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-05-travel-jeju-seogwipo-coastal-trekking-course/",
+      "destination": "https://mungge.com/2026-07-05-travel-jeju-seogwipo-coastal-trekking-course/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-06-education-ai-productivity-after-work",
+      "destination": "https://mungge.com/2026-07-06-education-ai-productivity-after-work/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-06-education-ai-productivity-after-work/",
+      "destination": "https://mungge.com/2026-07-06-education-ai-productivity-after-work/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-06-finance-diversified-investment-side-income",
+      "destination": "https://mungge.com/2026-07-06-finance-diversified-investment-side-income/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-06-finance-diversified-investment-side-income/",
+      "destination": "https://mungge.com/2026-07-06-finance-diversified-investment-side-income/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-06-health-healthy-pleasure-diet-2026",
+      "destination": "https://mungge.com/2026-07-06-health-healthy-pleasure-diet-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-06-health-healthy-pleasure-diet-2026/",
+      "destination": "https://mungge.com/2026-07-06-health-healthy-pleasure-diet-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-06-lifestyle-experience-over-ownership-2026",
+      "destination": "https://mungge.com/2026-07-06-lifestyle-experience-over-ownership-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-06-lifestyle-experience-over-ownership-2026/",
+      "destination": "https://mungge.com/2026-07-06-lifestyle-experience-over-ownership-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-06-travel-summer-valley-water-activity-guide",
+      "destination": "https://mungge.com/2026-07-06-travel-summer-valley-water-activity-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-06-travel-summer-valley-water-activity-guide/",
+      "destination": "https://mungge.com/2026-07-06-travel-summer-valley-water-activity-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-07-education-top-certificates-2026-career",
+      "destination": "https://mungge.com/2026-07-07-education-top-certificates-2026-career/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-07-education-top-certificates-2026-career/",
+      "destination": "https://mungge.com/2026-07-07-education-top-certificates-2026-career/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-07-finance-etf-investment-beginners-leverage",
+      "destination": "https://mungge.com/2026-07-07-finance-etf-investment-beginners-leverage/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-07-finance-etf-investment-beginners-leverage/",
+      "destination": "https://mungge.com/2026-07-07-finance-etf-investment-beginners-leverage/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-07-health-tropical-night-sleep-disorder-sleeptech",
+      "destination": "https://mungge.com/2026-07-07-health-tropical-night-sleep-disorder-sleeptech/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-07-health-tropical-night-sleep-disorder-sleeptech/",
+      "destination": "https://mungge.com/2026-07-07-health-tropical-night-sleep-disorder-sleeptech/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-07-lifestyle-low-sugar-zero-sugar-eating",
+      "destination": "https://mungge.com/2026-07-07-lifestyle-low-sugar-zero-sugar-eating/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-07-lifestyle-low-sugar-zero-sugar-eating/",
+      "destination": "https://mungge.com/2026-07-07-lifestyle-low-sugar-zero-sugar-eating/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-07-travel-budget-domestic-summer-vacation-guide",
+      "destination": "https://mungge.com/2026-07-07-travel-budget-domestic-summer-vacation-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-07-travel-budget-domestic-summer-vacation-guide/",
+      "destination": "https://mungge.com/2026-07-07-travel-budget-domestic-summer-vacation-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-08-education-data-certificate-sqld-adsp-guide",
+      "destination": "https://mungge.com/2026-07-08-education-data-certificate-sqld-adsp-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-08-education-data-certificate-sqld-adsp-guide/",
+      "destination": "https://mungge.com/2026-07-08-education-data-certificate-sqld-adsp-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-08-finance-tax-saving-accounts-isa-pension-irp",
+      "destination": "https://mungge.com/2026-07-08-finance-tax-saving-accounts-isa-pension-irp/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-08-finance-tax-saving-accounts-isa-pension-irp/",
+      "destination": "https://mungge.com/2026-07-08-finance-tax-saving-accounts-isa-pension-irp/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-08-health-heatwave-health-management-guide",
+      "destination": "https://mungge.com/2026-07-08-health-heatwave-health-management-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-08-health-heatwave-health-management-guide/",
+      "destination": "https://mungge.com/2026-07-08-health-heatwave-health-management-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-08-lifestyle-minimal-utility-consumption",
+      "destination": "https://mungge.com/2026-07-08-lifestyle-minimal-utility-consumption/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-08-lifestyle-minimal-utility-consumption/",
+      "destination": "https://mungge.com/2026-07-08-lifestyle-minimal-utility-consumption/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-08-travel-summer-domestic-destinations-2026-top7",
+      "destination": "https://mungge.com/2026-07-08-travel-summer-domestic-destinations-2026-top7/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-08-travel-summer-domestic-destinations-2026-top7/",
+      "destination": "https://mungge.com/2026-07-08-travel-summer-domestic-destinations-2026-top7/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-11-education-national-tomorrow-learning-card-free-ai-coding",
+      "destination": "https://mungge.com/2026-07-11-education-national-tomorrow-learning-card-free-ai-coding/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-11-education-national-tomorrow-learning-card-free-ai-coding/",
+      "destination": "https://mungge.com/2026-07-11-education-national-tomorrow-learning-card-free-ai-coding/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-11-health-air-conditioning-sickness-electricity-bill",
+      "destination": "https://mungge.com/2026-07-11-health-air-conditioning-sickness-electricity-bill/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-11-health-air-conditioning-sickness-electricity-bill/",
+      "destination": "https://mungge.com/2026-07-11-health-air-conditioning-sickness-electricity-bill/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-11-health-summer-food-poisoning-prevention",
+      "destination": "https://mungge.com/2026-07-11-health-summer-food-poisoning-prevention/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-11-health-summer-food-poisoning-prevention/",
+      "destination": "https://mungge.com/2026-07-11-health-summer-food-poisoning-prevention/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-11-lifestyle-cooling-appliances-fan-dehumidifier-2026",
+      "destination": "https://mungge.com/2026-07-11-lifestyle-cooling-appliances-fan-dehumidifier-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-11-lifestyle-cooling-appliances-fan-dehumidifier-2026/",
+      "destination": "https://mungge.com/2026-07-11-lifestyle-cooling-appliances-fan-dehumidifier-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-11-travel-hometown-love-donation-tax-benefit-guide",
+      "destination": "https://mungge.com/2026-07-11-travel-hometown-love-donation-tax-benefit-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-11-travel-hometown-love-donation-tax-benefit-guide/",
+      "destination": "https://mungge.com/2026-07-11-travel-hometown-love-donation-tax-benefit-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-11-travel-vietnam-danang-nhatrang-phuquoc-summer-2026",
+      "destination": "https://mungge.com/2026-07-11-travel-vietnam-danang-nhatrang-phuquoc-summer-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-11-travel-vietnam-danang-nhatrang-phuquoc-summer-2026/",
+      "destination": "https://mungge.com/2026-07-11-travel-vietnam-danang-nhatrang-phuquoc-summer-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-12-finance-consumption-coupon-2026-expiry-guide",
+      "destination": "https://mungge.com/2026-07-12-finance-consumption-coupon-2026-expiry-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-12-finance-consumption-coupon-2026-expiry-guide/",
+      "destination": "https://mungge.com/2026-07-12-finance-consumption-coupon-2026-expiry-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-12-finance-parking-account-2026-comparison",
+      "destination": "https://mungge.com/2026-07-12-finance-parking-account-2026-comparison/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-12-finance-parking-account-2026-comparison/",
+      "destination": "https://mungge.com/2026-07-12-finance-parking-account-2026-comparison/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-12-finance-youth-future-savings-2026-guide",
+      "destination": "https://mungge.com/2026-07-12-finance-youth-future-savings-2026-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-12-finance-youth-future-savings-2026-guide/",
+      "destination": "https://mungge.com/2026-07-12-finance-youth-future-savings-2026-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-12-finance-youth-leap-account-2026-guide",
+      "destination": "https://mungge.com/2026-07-12-finance-youth-leap-account-2026-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-12-finance-youth-leap-account-2026-guide/",
+      "destination": "https://mungge.com/2026-07-12-finance-youth-leap-account-2026-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-12-finance-youth-tomorrow-fund-2026-guide",
+      "destination": "https://mungge.com/2026-07-12-finance-youth-tomorrow-fund-2026-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-12-finance-youth-tomorrow-fund-2026-guide/",
+      "destination": "https://mungge.com/2026-07-12-finance-youth-tomorrow-fund-2026-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-12-lifestyle-car-camping-chabak-beginner-guide-2026",
+      "destination": "https://mungge.com/2026-07-12-lifestyle-car-camping-chabak-beginner-guide-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-12-lifestyle-car-camping-chabak-beginner-guide-2026/",
+      "destination": "https://mungge.com/2026-07-12-lifestyle-car-camping-chabak-beginner-guide-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-12-lifestyle-electricity-bill-support-2026-summer",
+      "destination": "https://mungge.com/2026-07-12-lifestyle-electricity-bill-support-2026-summer/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-12-lifestyle-electricity-bill-support-2026-summer/",
+      "destination": "https://mungge.com/2026-07-12-lifestyle-electricity-bill-support-2026-summer/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-12-lifestyle-worldcup-2026-broadcast-guide",
+      "destination": "https://mungge.com/2026-07-12-lifestyle-worldcup-2026-broadcast-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-12-lifestyle-worldcup-2026-broadcast-guide/",
+      "destination": "https://mungge.com/2026-07-12-lifestyle-worldcup-2026-broadcast-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-12-travel-korea-waterpark-2026-top-comparison",
+      "destination": "https://mungge.com/2026-07-12-travel-korea-waterpark-2026-top-comparison/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-12-travel-korea-waterpark-2026-top-comparison/",
+      "destination": "https://mungge.com/2026-07-12-travel-korea-waterpark-2026-top-comparison/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-13-finance-property-tax-july-2026-card-payment-guide",
+      "destination": "https://mungge.com/2026-07-13-finance-property-tax-july-2026-card-payment-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-13-finance-property-tax-july-2026-card-payment-guide/",
+      "destination": "https://mungge.com/2026-07-13-finance-property-tax-july-2026-card-payment-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-13-health-heatwave-major-warning-2026-guide",
+      "destination": "https://mungge.com/2026-07-13-health-heatwave-major-warning-2026-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-13-health-heatwave-major-warning-2026-guide/",
+      "destination": "https://mungge.com/2026-07-13-health-heatwave-major-warning-2026-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-13-travel-gangneung-sokcho-1night2days-2026",
+      "destination": "https://mungge.com/2026-07-13-travel-gangneung-sokcho-1night2days-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-13-travel-gangneung-sokcho-1night2days-2026/",
+      "destination": "https://mungge.com/2026-07-13-travel-gangneung-sokcho-1night2days-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-education-accounting-finance-certificates-top5-2026",
+      "destination": "https://mungge.com/2026-07-14-education-accounting-finance-certificates-top5-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-education-accounting-finance-certificates-top5-2026/",
+      "destination": "https://mungge.com/2026-07-14-education-accounting-finance-certificates-top5-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-education-electrical-certificate-2026-guide",
+      "destination": "https://mungge.com/2026-07-14-education-electrical-certificate-2026-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-education-electrical-certificate-2026-guide/",
+      "destination": "https://mungge.com/2026-07-14-education-electrical-certificate-2026-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-education-private-education-cost-saving-2026",
+      "destination": "https://mungge.com/2026-07-14-education-private-education-cost-saving-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-education-private-education-cost-saving-2026/",
+      "destination": "https://mungge.com/2026-07-14-education-private-education-cost-saving-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-finance-financial-literacy-first-salary-beginner-guide",
+      "destination": "https://mungge.com/2026-07-14-finance-financial-literacy-first-salary-beginner-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-finance-financial-literacy-first-salary-beginner-guide/",
+      "destination": "https://mungge.com/2026-07-14-finance-financial-literacy-first-salary-beginner-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-finance-institutional-selling-individual-investor-strategy-2026",
+      "destination": "https://mungge.com/2026-07-14-finance-institutional-selling-individual-investor-strategy-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-finance-institutional-selling-individual-investor-strategy-2026/",
+      "destination": "https://mungge.com/2026-07-14-finance-institutional-selling-individual-investor-strategy-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-finance-jeonse-wolse-lease-checklist-2026",
+      "destination": "https://mungge.com/2026-07-14-finance-jeonse-wolse-lease-checklist-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-finance-jeonse-wolse-lease-checklist-2026/",
+      "destination": "https://mungge.com/2026-07-14-finance-jeonse-wolse-lease-checklist-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-finance-national-housing-pension-reform-2026",
+      "destination": "https://mungge.com/2026-07-14-finance-national-housing-pension-reform-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-finance-national-housing-pension-reform-2026/",
+      "destination": "https://mungge.com/2026-07-14-finance-national-housing-pension-reform-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-finance-productive-finance-isa-2026-guide",
+      "destination": "https://mungge.com/2026-07-14-finance-productive-finance-isa-2026-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-finance-productive-finance-isa-2026-guide/",
+      "destination": "https://mungge.com/2026-07-14-finance-productive-finance-isa-2026-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-finance-stock-tax-saving-guide-2026",
+      "destination": "https://mungge.com/2026-07-14-finance-stock-tax-saving-guide-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-finance-stock-tax-saving-guide-2026/",
+      "destination": "https://mungge.com/2026-07-14-finance-stock-tax-saving-guide-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-finance-year-end-tax-early-preparation-2026",
+      "destination": "https://mungge.com/2026-07-14-finance-year-end-tax-early-preparation-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-finance-year-end-tax-early-preparation-2026/",
+      "destination": "https://mungge.com/2026-07-14-finance-year-end-tax-early-preparation-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-health-supplement-by-purpose-guide-2026",
+      "destination": "https://mungge.com/2026-07-14-health-supplement-by-purpose-guide-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-health-supplement-by-purpose-guide-2026/",
+      "destination": "https://mungge.com/2026-07-14-health-supplement-by-purpose-guide-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-lifestyle-home-cafe-starter-guide-2026",
+      "destination": "https://mungge.com/2026-07-14-lifestyle-home-cafe-starter-guide-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-lifestyle-home-cafe-starter-guide-2026/",
+      "destination": "https://mungge.com/2026-07-14-lifestyle-home-cafe-starter-guide-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-lifestyle-homecation-setup-items-2026",
+      "destination": "https://mungge.com/2026-07-14-lifestyle-homecation-setup-items-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-lifestyle-homecation-setup-items-2026/",
+      "destination": "https://mungge.com/2026-07-14-lifestyle-homecation-setup-items-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-lifestyle-summer-camping-gear-checklist-2026",
+      "destination": "https://mungge.com/2026-07-14-lifestyle-summer-camping-gear-checklist-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-lifestyle-summer-camping-gear-checklist-2026/",
+      "destination": "https://mungge.com/2026-07-14-lifestyle-summer-camping-gear-checklist-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-lifestyle-wedding-cost-budget-guide-2026",
+      "destination": "https://mungge.com/2026-07-14-lifestyle-wedding-cost-budget-guide-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-lifestyle-wedding-cost-budget-guide-2026/",
+      "destination": "https://mungge.com/2026-07-14-lifestyle-wedding-cost-budget-guide-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-travel-travel-card-comparison-2026",
+      "destination": "https://mungge.com/2026-07-14-travel-travel-card-comparison-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-14-travel-travel-card-comparison-2026/",
+      "destination": "https://mungge.com/2026-07-14-travel-travel-card-comparison-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-15-education-certificates-2026-h2",
+      "destination": "https://mungge.com/2026-07-15-education-certificates-2026-h2/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-15-education-certificates-2026-h2/",
+      "destination": "https://mungge.com/2026-07-15-education-certificates-2026-h2/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-15-education-professional-self-development-routine-2026",
+      "destination": "https://mungge.com/2026-07-15-education-professional-self-development-routine-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-15-education-professional-self-development-routine-2026/",
+      "destination": "https://mungge.com/2026-07-15-education-professional-self-development-routine-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-15-finance-government-subsidy-2026-h2",
+      "destination": "https://mungge.com/2026-07-15-finance-government-subsidy-2026-h2/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-15-finance-government-subsidy-2026-h2/",
+      "destination": "https://mungge.com/2026-07-15-finance-government-subsidy-2026-h2/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-15-finance-savings-deposit-rates-2026-h2",
+      "destination": "https://mungge.com/2026-07-15-finance-savings-deposit-rates-2026-h2/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-15-finance-savings-deposit-rates-2026-h2/",
+      "destination": "https://mungge.com/2026-07-15-finance-savings-deposit-rates-2026-h2/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-15-health-summer-air-conditioning-sickness-2026",
+      "destination": "https://mungge.com/2026-07-15-health-summer-air-conditioning-sickness-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-15-health-summer-air-conditioning-sickness-2026/",
+      "destination": "https://mungge.com/2026-07-15-health-summer-air-conditioning-sickness-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-15-health-summer-diet-low-calorie-2026",
+      "destination": "https://mungge.com/2026-07-15-health-summer-diet-low-calorie-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-15-health-summer-diet-low-calorie-2026/",
+      "destination": "https://mungge.com/2026-07-15-health-summer-diet-low-calorie-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-15-lifestyle-rainy-season-dehumidify-mold-2026",
+      "destination": "https://mungge.com/2026-07-15-lifestyle-rainy-season-dehumidify-mold-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-15-lifestyle-rainy-season-dehumidify-mold-2026/",
+      "destination": "https://mungge.com/2026-07-15-lifestyle-rainy-season-dehumidify-mold-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-15-lifestyle-single-household-summer-electricity-saving-2026",
+      "destination": "https://mungge.com/2026-07-15-lifestyle-single-household-summer-electricity-saving-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-15-lifestyle-single-household-summer-electricity-saving-2026/",
+      "destination": "https://mungge.com/2026-07-15-lifestyle-single-household-summer-electricity-saving-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-15-travel-august-domestic-vacation-2026",
+      "destination": "https://mungge.com/2026-07-15-travel-august-domestic-vacation-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-15-travel-august-domestic-vacation-2026/",
+      "destination": "https://mungge.com/2026-07-15-travel-august-domestic-vacation-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-15-travel-summer-budget-overseas-2026",
+      "destination": "https://mungge.com/2026-07-15-travel-summer-budget-overseas-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-15-travel-summer-budget-overseas-2026/",
+      "destination": "https://mungge.com/2026-07-15-travel-summer-budget-overseas-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-16-finance-chuseok-bonus-money-management-2026",
+      "destination": "https://mungge.com/2026-07-16-finance-chuseok-bonus-money-management-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-16-finance-chuseok-bonus-money-management-2026/",
+      "destination": "https://mungge.com/2026-07-16-finance-chuseok-bonus-money-management-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-16-finance-deposit-interest-after-tax-real-return-2026",
+      "destination": "https://mungge.com/2026-07-16-finance-deposit-interest-after-tax-real-return-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-16-finance-deposit-interest-after-tax-real-return-2026/",
+      "destination": "https://mungge.com/2026-07-16-finance-deposit-interest-after-tax-real-return-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-16-health-autumn-allergy-rhinitis-prevention-2026",
+      "destination": "https://mungge.com/2026-07-16-health-autumn-allergy-rhinitis-prevention-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-16-health-autumn-allergy-rhinitis-prevention-2026/",
+      "destination": "https://mungge.com/2026-07-16-health-autumn-allergy-rhinitis-prevention-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-16-travel-chuseok-2026-domestic-travel-traffic",
+      "destination": "https://mungge.com/2026-07-16-travel-chuseok-2026-domestic-travel-traffic/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-16-travel-chuseok-2026-domestic-travel-traffic/",
+      "destination": "https://mungge.com/2026-07-16-travel-chuseok-2026-domestic-travel-traffic/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-18-lifestyle-movie-discount-coupon-6000won-2026-2nd",
+      "destination": "https://mungge.com/2026-07-18-lifestyle-movie-discount-coupon-6000won-2026-2nd/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-18-lifestyle-movie-discount-coupon-6000won-2026-2nd/",
+      "destination": "https://mungge.com/2026-07-18-lifestyle-movie-discount-coupon-6000won-2026-2nd/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-19-lifestyle-sambok-jungbok-boyangsik-2026",
+      "destination": "https://mungge.com/2026-07-19-lifestyle-sambok-jungbok-boyangsik-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-19-lifestyle-sambok-jungbok-boyangsik-2026/",
+      "destination": "https://mungge.com/2026-07-19-lifestyle-sambok-jungbok-boyangsik-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-20-finance-2027-minimum-wage-10700-real-pay",
+      "destination": "https://mungge.com/2026-07-20-finance-2027-minimum-wage-10700-real-pay/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-20-finance-2027-minimum-wage-10700-real-pay/",
+      "destination": "https://mungge.com/2026-07-20-finance-2027-minimum-wage-10700-real-pay/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-20-finance-real-estate-contract-review-checklist",
+      "destination": "https://mungge.com/2026-07-20-finance-real-estate-contract-review-checklist/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-20-finance-real-estate-contract-review-checklist/",
+      "destination": "https://mungge.com/2026-07-20-finance-real-estate-contract-review-checklist/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-20-lifestyle-climate-card-last-recharge-2026",
+      "destination": "https://mungge.com/2026-07-20-lifestyle-climate-card-last-recharge-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-20-lifestyle-climate-card-last-recharge-2026/",
+      "destination": "https://mungge.com/2026-07-20-lifestyle-climate-card-last-recharge-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-20-travel-yen-low-japan-exchange-timing-2026",
+      "destination": "https://mungge.com/2026-07-20-travel-yen-low-japan-exchange-timing-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-20-travel-yen-low-japan-exchange-timing-2026/",
+      "destination": "https://mungge.com/2026-07-20-travel-yen-low-japan-exchange-timing-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-21-lifestyle-pet-summer-heat-care",
+      "destination": "https://mungge.com/2026-07-21-lifestyle-pet-summer-heat-care/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-21-lifestyle-pet-summer-heat-care/",
+      "destination": "https://mungge.com/2026-07-21-lifestyle-pet-summer-heat-care/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-23-finance-4-insurance-real-pay-2026",
+      "destination": "https://mungge.com/2026-07-23-finance-4-insurance-real-pay-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-23-finance-4-insurance-real-pay-2026/",
+      "destination": "https://mungge.com/2026-07-23-finance-4-insurance-real-pay-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-23-finance-labor-incentive-2026-guide",
+      "destination": "https://mungge.com/2026-07-23-finance-labor-incentive-2026-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-23-finance-labor-incentive-2026-guide/",
+      "destination": "https://mungge.com/2026-07-23-finance-labor-incentive-2026-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-23-finance-weekly-holiday-allowance-2026",
+      "destination": "https://mungge.com/2026-07-23-finance-weekly-holiday-allowance-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-23-finance-weekly-holiday-allowance-2026/",
+      "destination": "https://mungge.com/2026-07-23-finance-weekly-holiday-allowance-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-24-finance-national-employment-support-2026-conditions-application-benefits",
+      "destination": "https://mungge.com/2026-07-24-finance-national-employment-support-2026-conditions-application-benefits/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-24-finance-national-employment-support-2026-conditions-application-benefits/",
+      "destination": "https://mungge.com/2026-07-24-finance-national-employment-support-2026-conditions-application-benefits/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-25-lifestyle-small-business-policy-fund-2026-guide",
+      "destination": "https://mungge.com/2026-07-25-lifestyle-small-business-policy-fund-2026-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-25-lifestyle-small-business-policy-fund-2026-guide/",
+      "destination": "https://mungge.com/2026-07-25-lifestyle-small-business-policy-fund-2026-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-26-finance-health-insurance-2026-premium-benefits-application-guide",
+      "destination": "https://mungge.com/2026-07-26-finance-health-insurance-2026-premium-benefits-application-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-26-finance-health-insurance-2026-premium-benefits-application-guide/",
+      "destination": "https://mungge.com/2026-07-26-finance-health-insurance-2026-premium-benefits-application-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-27-health-car-insurance-2026-premium-conditions-benefits-guide",
+      "destination": "https://mungge.com/2026-07-27-health-car-insurance-2026-premium-conditions-benefits-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-27-health-car-insurance-2026-premium-conditions-benefits-guide/",
+      "destination": "https://mungge.com/2026-07-27-health-car-insurance-2026-premium-conditions-benefits-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/hokkaido-furano-summer-lavender-2026",
+      "destination": "https://mungge.com/hokkaido-furano-summer-lavender-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/hokkaido-furano-summer-lavender-2026/",
+      "destination": "https://mungge.com/hokkaido-furano-summer-lavender-2026/",
+      "permanent": true
+    }
+  ]
+}
