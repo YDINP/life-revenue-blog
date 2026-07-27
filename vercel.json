@@ -857,6 +857,16 @@
       "permanent": true
     },
     {
+      "source": "/blog/2026-07-22-finance-kosdaq-delisting-risk-guide-2026",
+      "destination": "https://mungge.com/2026-07-22-finance-kosdaq-delisting-risk-guide-2026/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2026-07-22-finance-kosdaq-delisting-risk-guide-2026/",
+      "destination": "https://mungge.com/2026-07-22-finance-kosdaq-delisting-risk-guide-2026/",
+      "permanent": true
+    },
+    {
       "source": "/blog/2026-07-23-finance-4-insurance-real-pay-2026",
       "destination": "https://mungge.com/2026-07-23-finance-4-insurance-real-pay-2026/",
       "permanent": true
@@ -934,16 +944,6 @@
     {
       "source": "/blog/hokkaido-furano-summer-lavender-2026/",
       "destination": "https://mungge.com/hokkaido-furano-summer-lavender-2026/",
-      "permanent": true
-    },
-    {
-      "source": "/blog/2026-07-22-finance-kosdaq-delisting-risk-guide-2026",
-      "destination": "https://mungge.com/2026-07-22-finance-kosdaq-delisting-risk-guide-2026/",
-      "permanent": true
-    },
-    {
-      "source": "/blog/2026-07-22-finance-kosdaq-delisting-risk-guide-2026/",
-      "destination": "https://mungge.com/2026-07-22-finance-kosdaq-delisting-risk-guide-2026/",
       "permanent": true
     }
   ]
