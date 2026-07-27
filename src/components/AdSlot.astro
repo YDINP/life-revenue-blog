@@ -49,7 +49,6 @@ const pcTooWideForMobile = !isAnchor && adfit.w > 336;
 {/* ── Kakao AdFit (우선) ── */}
 {useAdfit && isAnchor && (
   <div class="anchor-ad" id="anchor-ad">
-    <button class="anchor-ad-close" type="button" aria-label="광고 닫기" onclick="this.parentElement.remove()">×</button>
     <ins class="kakao_ad_area" style="display:none;" data-ad-unit={adfit.unit} data-ad-width={String(adfit.w)} data-ad-height={String(adfit.h)}></ins>
     <script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
   </div>
@@ -70,7 +69,6 @@ const pcTooWideForMobile = !isAnchor && adfit.w > 336;
 {/* ── Google AdSense (AdFit 미설정 시 폴백) ── */}
 {!useAdfit && slotId && isAnchor && (
   <div class="anchor-ad" id="anchor-ad">
-    <button class="anchor-ad-close" type="button" aria-label="광고 닫기" onclick="this.parentElement.remove()">×</button>
     <ins class="adsbygoogle"
       style="display:block"
       data-ad-client="ca-pub-9400779918671270"
@@ -130,20 +128,10 @@ const pcTooWideForMobile = !isAnchor && adfit.w > 336;
 :global(:root.dark) .anchor-ad {
   background: rgba(18, 19, 26, 0.98);
 }
-.anchor-ad-close {
-  position: absolute;
-  top: -22px;
-  right: 6px;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  font-size: 14px;
-  line-height: 1;
-  cursor: pointer;
-}
+/* ⚠️ 하단 고정배너에 닫기(×) 버튼을 두지 말 것.
+   AdFit 심사 반려 사유: "광고의 오클릭을 유발시킬 수 있는 매체는 광고게재가 허용되지 않습니다
+   — 광고 닫기 버튼이 설치되어 있어 보류" (2026-07-27, life-revenue-blog).
+   광고에 인접한 버튼은 오클릭 유발로 간주되므로 어떤 형태로도 재도입 금지. */
 @media (min-width: 768px) {
   .anchor-ad { display: none; }
 }
@@ -189,12 +177,6 @@ const pcTooWideForMobile = !isAnchor && adfit.w > 336;
 
       // 광고 iframe 이 비동기로 삽입되며 높이가 변하므로 크기 변화를 관찰한다.
       if (window.ResizeObserver) new ResizeObserver(syncSpacer).observe(el);
-      // 닫기 버튼으로 배너가 제거되면 여백도 회수한다.
-      if (window.MutationObserver) {
-        new MutationObserver(function () {
-          if (!document.body.contains(el)) syncSpacer();
-        }).observe(document.body, { childList: true });
-      }
 
       syncAll();
       window.addEventListener('load', syncAll);
