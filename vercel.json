@@ -945,6 +945,276 @@
       "source": "/blog/hokkaido-furano-summer-lavender-2026/",
       "destination": "https://mungge.com/hokkaido-furano-summer-lavender-2026/",
       "permanent": true
+    },
+    {
+      "source": "/tools",
+      "destination": "https://mungge.com/tools/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/",
+      "destination": "https://mungge.com/tools/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/age-calculator",
+      "destination": "https://mungge.com/tools/age-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/age-calculator/",
+      "destination": "https://mungge.com/tools/age-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/annual-leave-calculator",
+      "destination": "https://mungge.com/tools/annual-leave-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/annual-leave-calculator/",
+      "destination": "https://mungge.com/tools/annual-leave-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/bmi-calorie-calculator",
+      "destination": "https://mungge.com/tools/bmi-calorie-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/bmi-calorie-calculator/",
+      "destination": "https://mungge.com/tools/bmi-calorie-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/calorie-burn-calculator",
+      "destination": "https://mungge.com/tools/calorie-burn-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/calorie-burn-calculator/",
+      "destination": "https://mungge.com/tools/calorie-burn-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/character-count",
+      "destination": "https://mungge.com/tools/character-count/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/character-count/",
+      "destination": "https://mungge.com/tools/character-count/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/compound-interest-calculator",
+      "destination": "https://mungge.com/tools/compound-interest-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/compound-interest-calculator/",
+      "destination": "https://mungge.com/tools/compound-interest-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/dday-calculator",
+      "destination": "https://mungge.com/tools/dday-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/dday-calculator/",
+      "destination": "https://mungge.com/tools/dday-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/debt-payoff-calculator",
+      "destination": "https://mungge.com/tools/debt-payoff-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/debt-payoff-calculator/",
+      "destination": "https://mungge.com/tools/debt-payoff-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/discount-calculator",
+      "destination": "https://mungge.com/tools/discount-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/discount-calculator/",
+      "destination": "https://mungge.com/tools/discount-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/dutchpay-calculator",
+      "destination": "https://mungge.com/tools/dutchpay-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/dutchpay-calculator/",
+      "destination": "https://mungge.com/tools/dutchpay-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/electricity-bill-calculator",
+      "destination": "https://mungge.com/tools/electricity-bill-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/electricity-bill-calculator/",
+      "destination": "https://mungge.com/tools/electricity-bill-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/exchange-rate-calculator",
+      "destination": "https://mungge.com/tools/exchange-rate-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/exchange-rate-calculator/",
+      "destination": "https://mungge.com/tools/exchange-rate-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/gold-price-calculator",
+      "destination": "https://mungge.com/tools/gold-price-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/gold-price-calculator/",
+      "destination": "https://mungge.com/tools/gold-price-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/gpa-calculator",
+      "destination": "https://mungge.com/tools/gpa-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/gpa-calculator/",
+      "destination": "https://mungge.com/tools/gpa-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/hourly-wage-calculator",
+      "destination": "https://mungge.com/tools/hourly-wage-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/hourly-wage-calculator/",
+      "destination": "https://mungge.com/tools/hourly-wage-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/loan-calculator",
+      "destination": "https://mungge.com/tools/loan-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/loan-calculator/",
+      "destination": "https://mungge.com/tools/loan-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/salary-calculator",
+      "destination": "https://mungge.com/tools/salary-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/salary-calculator/",
+      "destination": "https://mungge.com/tools/salary-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/savings-calculator",
+      "destination": "https://mungge.com/tools/savings-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/savings-calculator/",
+      "destination": "https://mungge.com/tools/savings-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/severance-calculator",
+      "destination": "https://mungge.com/tools/severance-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/severance-calculator/",
+      "destination": "https://mungge.com/tools/severance-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/sleep-calculator",
+      "destination": "https://mungge.com/tools/sleep-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/sleep-calculator/",
+      "destination": "https://mungge.com/tools/sleep-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/time-calculator",
+      "destination": "https://mungge.com/tools/time-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/time-calculator/",
+      "destination": "https://mungge.com/tools/time-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/timezone-calculator",
+      "destination": "https://mungge.com/tools/timezone-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/timezone-calculator/",
+      "destination": "https://mungge.com/tools/timezone-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/unemployment-benefit-calculator",
+      "destination": "https://mungge.com/tools/unemployment-benefit-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/unemployment-benefit-calculator/",
+      "destination": "https://mungge.com/tools/unemployment-benefit-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/unit-converter",
+      "destination": "https://mungge.com/tools/unit-converter/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/unit-converter/",
+      "destination": "https://mungge.com/tools/unit-converter/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/vat-calculator",
+      "destination": "https://mungge.com/tools/vat-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/vat-calculator/",
+      "destination": "https://mungge.com/tools/vat-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/water-intake-calculator",
+      "destination": "https://mungge.com/tools/water-intake-calculator/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/water-intake-calculator/",
+      "destination": "https://mungge.com/tools/water-intake-calculator/",
+      "permanent": true
     }
   ]
 }
