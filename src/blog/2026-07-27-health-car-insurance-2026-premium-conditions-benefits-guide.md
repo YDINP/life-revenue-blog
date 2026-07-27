@@ -163,8 +163,6 @@ faq:
 
 ## 가입 전 반드시 확인할 약관 체크리스트
 
-<div class="chart-progress" data-title="중요 확인사항" data-labels="대인배상 한도" data-values="95" data-colors="#10b981" data-max="100" data-unit="필수"></div>
-
 **1. 대인배상 한도**: 무제한 vs 제한 (제한되지 않은 것 권장)
 
 **2. 자손해 공제금**: 차량 손상 시 본인 부담액 (0~50만 원 범위, 낮을수록 좋음)

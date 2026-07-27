@@ -105,7 +105,7 @@ noindex: true
 
 ## 회복 전략 실행 예시: 주간 계획표
 
-<div class="chart-bar" data-title="주간 회복 우선순위 (운동 강도에 따른 회복 필요도)" data-labels="월 (가슴)" data-values="85" data-colors="#d55e00"></div>
+<div class="chart-bar" data-title="요일별 회복 필요도(운동 강도 기준)" data-labels="월 (가슴·고강도),화 (회복일),수 (하체·최고강도)" data-values="85,30,95" data-colors="#d55e00,#009e73,#8b5cf6" data-unit="점"></div>
 
 더 직관적인 실행 방안:
 
