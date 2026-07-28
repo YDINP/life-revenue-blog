@@ -82,6 +82,23 @@ async function readClaudeStream(res) {
 }
 
 async function callClaude(prompt) {
+  // 기본 경로는 Claude Code CLI(사용자 구독 세션). 게이트웨이 크레딧 소진(403)이나
+  // 장시간 요청 504를 타지 않는다. CLI를 못 쓰면 아래 HTTP 경로로 폴백하고,
+  // BLOG_LLM=http 면 처음부터 HTTP를 쓴다(GitHub Actions 등 CLI 없는 환경).
+  if (process.env.BLOG_LLM !== 'http') {
+    try {
+      const cli = await import('../../automation/llm-cli.mjs');
+      if (cli.claudeCliAvailable()) {
+        console.log('[LLM] Claude Code CLI');
+        return await cli.callClaudeCli(prompt, { model: process.env.BLOG_CLAUDE_CLI_MODEL || '' });
+      }
+      console.warn('[LLM] CLI 없음 → HTTP 폴백');
+    } catch (e) {
+      console.warn(`[LLM] CLI 경로 실패(${e.message}) → HTTP 폴백`);
+    }
+  }
+
+  console.log('[LLM] HTTP API');
   // 게이트웨이 호환: ANTHROPIC_BASE_URL/BLOG_CLAUDE_MODEL 있으면 우선(로컬), 없으면 공식 API(GH Actions)
   const CLAUDE_API_URL = `${process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com'}/v1/messages`;
   const CLAUDE_MODEL = process.env.BLOG_CLAUDE_MODEL || 'claude-haiku-4-5-20251001';
