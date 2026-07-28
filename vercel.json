@@ -1230,6 +1230,11 @@
       "source": "/blog/tags/:tag*",
       "destination": "https://mungge.com/",
       "permanent": true
+    },
+    {
+      "source": "/blog/tags/:tag*/",
+      "destination": "https://mungge.com/",
+      "permanent": true
     }
   ]
 }
