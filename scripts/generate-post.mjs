@@ -56,6 +56,31 @@ function slugify(title) {
     .slice(0, 50);
 }
 
+// SSE(stream:true) 응답에서 텍스트 델타만 이어붙여 반환.
+// 왜 스트리밍인가: 본문 생성은 max_tokens 8192짜리 장시간 요청이라, 논스트리밍으로 보내면
+// 게이트웨이(nginx)가 첫 바이트를 못 받고 504 Gateway Time-out을 낸다(2026-07-28 발행 실패).
+async function readClaudeStream(res) {
+  const decoder = new TextDecoder();
+  let buf = '';
+  let text = '';
+  for await (const chunk of res.body) {
+    buf += decoder.decode(chunk, { stream: true });
+    let i;
+    while ((i = buf.indexOf('\n')) >= 0) {
+      const line = buf.slice(0, i).trim();
+      buf = buf.slice(i + 1);
+      if (!line.startsWith('data:')) continue;
+      const payload = line.slice(5).trim();
+      if (!payload || payload === '[DONE]') continue;
+      let ev;
+      try { ev = JSON.parse(payload); } catch { continue; }
+      if (ev.type === 'content_block_delta' && ev.delta?.text) text += ev.delta.text;
+      if (ev.type === 'error') throw new Error(`Claude stream error: ${JSON.stringify(ev.error)}`);
+    }
+  }
+  return text;
+}
+
 async function callClaude(prompt) {
   // 게이트웨이 호환: ANTHROPIC_BASE_URL/BLOG_CLAUDE_MODEL 있으면 우선(로컬), 없으면 공식 API(GH Actions)
   const CLAUDE_API_URL = `${process.env.ANTHROPIC_BASE_URL || 'https://api.anthropic.com'}/v1/messages`;
@@ -70,6 +95,7 @@ async function callClaude(prompt) {
     body: JSON.stringify({
       model: CLAUDE_MODEL,
       max_tokens: 8192,
+      stream: true,
       messages: [{ role: 'user', content: prompt }],
     }),
   });
@@ -79,8 +105,7 @@ async function callClaude(prompt) {
     throw new Error(`Claude API ${res.status}: ${errBody}`);
   }
 
-  const data = await res.json();
-  return data.content[0].text;
+  return await readClaudeStream(res);
 }
 
 async function fetchPexelsImage(query) {
