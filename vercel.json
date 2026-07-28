@@ -1215,6 +1215,21 @@
       "source": "/tools/water-intake-calculator/",
       "destination": "https://mungge.com/tools/water-intake-calculator/",
       "permanent": true
+    },
+    {
+      "source": "/blog/tags",
+      "destination": "https://mungge.com/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/",
+      "destination": "https://mungge.com/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/:tag*",
+      "destination": "https://mungge.com/",
+      "permanent": true
     }
   ]
 }
