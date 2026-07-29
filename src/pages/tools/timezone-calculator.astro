@@ -218,6 +218,9 @@ html.dark .dpc{--surface:#121c2e;--surface2:#0e1626;--line:#1f2c42;--line2:#2a3a
 /* tool-specific */
 .dpc .fld select{width:100%;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:11px 12px;color:var(--text);font-size:15px;font-family:inherit;transition:border-color .15s,box-shadow .15s;-webkit-appearance:none;appearance:none;cursor:pointer;background-image:linear-gradient(45deg,transparent 50%,var(--mut) 50%),linear-gradient(135deg,var(--mut) 50%,transparent 50%);background-position:calc(100% - 18px) calc(50% - 2px),calc(100% - 13px) calc(50% - 2px);background-size:5px 5px,5px 5px;background-repeat:no-repeat}
 .dpc .fld select:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.14)}
+/* 열린 옵션 목록: option 배경을 비워두면 브라우저가 자체 기본색(대개 흰색)으로 팝업을 그리는데
+   글자색만 select 에서 상속돼 다크모드에서 흰 배경+흰 글자가 된다. 배경·글자를 함께 못박는다. */
+.dpc select option,.dpc select optgroup{background-color:var(--surface);color:var(--text)}
 </style>
 
 <script is:inline>

@@ -203,6 +203,9 @@ html.dark .dpc{--surface:#121c2e;--surface2:#0e1626;--line:#1f2c42;--line2:#2a3a
 .dpc .grow{display:grid;grid-template-columns:1fr 84px 96px 38px;gap:8px;margin-bottom:8px;align-items:center}
 .dpc .grow input,.dpc .grow select{width:100%;background:var(--surface2);border:1px solid var(--line);border-radius:10px;padding:10px 11px;color:var(--text);font-size:14.5px;font-family:inherit;transition:border-color .15s,box-shadow .15s}
 .dpc .grow input:focus,.dpc .grow select:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.14)}
+/* 열린 옵션 목록: option 배경을 비워두면 브라우저가 자체 기본색(대개 흰색)으로 팝업을 그리는데
+   글자색만 select 에서 상속돼 다크모드에서 흰 배경+흰 글자가 된다. 배경·글자를 함께 못박는다. */
+.dpc select option,.dpc select optgroup{background-color:var(--surface);color:var(--text)}
 .dpc .grow .cr,.dpc .grow select{text-align:center}
 .dpc .grow .del{background:transparent;border:1px solid var(--line);border-radius:9px;color:var(--rose);font-size:18px;line-height:1;padding:0;height:40px;cursor:pointer;transition:.15s}
 .dpc .grow .del:hover{background:rgba(225,29,99,.08);border-color:var(--rose)}

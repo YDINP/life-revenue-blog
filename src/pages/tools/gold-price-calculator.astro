@@ -1,22 +1,22 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-const title = '금 시세 계산기 (실시간)';
-const description = '오늘 금 한 돈은 얼마일까? 국제 금값(런던 기준)과 실시간 환율을 반영해 순금(24K)·18K·14K의 1돈·1g·원하는 중량 시세를 바로 계산합니다. 무료·설치 불필요.';
+const title = '금 시세 계산기 (살 때·팔 때)';
+const description = '오늘 금 한 돈은 얼마일까? 한국금거래소 고시 시세를 그대로 반영해 순금(24K)·18K·14K를 살 때(VAT 포함)와 팔 때(매입) 가격으로 각각 계산합니다. 무료·설치 불필요.';
 const ogImage = '/og/gold-price-calculator.png';
 
 const appLd = {
   '@context': 'https://schema.org', '@type': 'WebApplication',
-  name: '금 시세 계산기 (실시간)', applicationCategory: 'FinanceApplication', operatingSystem: 'Web',
+  name: '금 시세 계산기 (살 때·팔 때)', applicationCategory: 'FinanceApplication', operatingSystem: 'Web',
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'KRW' },
-  description: '국제 금값과 실시간 환율을 반영해 순금(24K)·18K·14K의 돈/그램/킬로그램 시세를 계산하는 무료 도구.',
+  description: '한국금거래소 고시 시세로 순금(24K)·18K·14K의 살 때·팔 때 가격을 돈/그램/킬로그램 단위로 계산하는 무료 도구.',
 };
 const faqLd = {
   '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: '금 한 돈은 몇 그램인가요?', acceptedAnswer: { '@type': 'Answer', text: '금 한 돈(1돈)은 3.75g입니다. 이 계산기의 기본 단위도 1돈(3.75g)입니다.' } },
-    { '@type': 'Question', name: '이 시세는 어디 기준인가요?', acceptedAnswer: { '@type': 'Answer', text: '국제 금값(런던 기준, 트로이온스당 USD)과 실시간 환율(USD→KRW)로 계산한 참고 시세입니다. 금은방 매입/판매가는 공임·부가세·마진으로 달라집니다.' } },
-    { '@type': 'Question', name: '24K·18K·14K 차이는 무엇인가요?', acceptedAnswer: { '@type': 'Answer', text: '금의 순도 차이입니다. 24K는 순금(약 99.9%), 18K는 75%, 14K는 58.5%가 금이며 나머지는 다른 금속입니다. 순도가 낮을수록 시세도 낮아집니다.' } },
-    { '@type': 'Question', name: '실제 살 때·팔 때 가격과 왜 다른가요?', acceptedAnswer: { '@type': 'Answer', text: '세공비(공임)·부가세(10%)·업체 마진 때문입니다. 살 때는 이런 비용이 더해지고, 팔 때는 마진이 빠져 국제 시세보다 낮게 매입됩니다.' } },
+    { '@type': 'Question', name: '금 한 돈은 몇 그램인가요?', acceptedAnswer: { '@type': 'Answer', text: '금 한 돈(1돈)은 3.75g입니다. 한국금거래소 고시 시세도 3.75g 단위로 발표되며, 이 계산기의 기본 단위도 1돈(3.75g)입니다.' } },
+    { '@type': 'Question', name: '이 시세는 어디 기준인가요?', acceptedAnswer: { '@type': 'Answer', text: '한국금거래소(koreagoldx.co.kr)가 발표하는 오늘의 고시 시세입니다. 살 때는 부가세(VAT)가 포함된 가격, 팔 때는 한국금거래소 매입 기준가입니다.' } },
+    { '@type': 'Question', name: '살 때와 팔 때 가격이 왜 이렇게 다른가요?', acceptedAnswer: { '@type': 'Answer', text: '살 때 가격에는 부가세 10%와 유통 마진이 더해지고, 팔 때는 마진이 빠진 매입가가 적용됩니다. 그래서 순금 1돈을 사서 바로 되팔면 통상 15% 안팎의 손실이 발생합니다.' } },
+    { '@type': 'Question', name: '18K·14K의 살 때 가격은 왜 참고용인가요?', acceptedAnswer: { '@type': 'Answer', text: '한국금거래소는 18K·14K의 살 때 가격을 "제품시세 적용"으로 고시합니다. 실제 구매가는 세공비(공임)가 포함된 개별 제품 가격으로 정해지므로, 계산기의 18K·14K 살 때 값은 참고용으로만 쓰는 것이 정확합니다.' } },
   ],
 };
 ---
@@ -28,9 +28,9 @@ const faqLd = {
 
   <div class="dpc">
     <div class="wrap">
-      <span class="eyebrow"><span class="dot"></span>실시간 국제 금값·환율 반영 · 무료 · 설치 불필요</span>
+      <span class="eyebrow"><span class="dot"></span>한국금거래소 고시 시세 반영 · 무료 · 설치 불필요</span>
       <h1>금 시세 <span class="grad">계산기</span></h1>
-      <p class="sub">오늘 금 한 돈은 얼마일까요? 국제 금값(런던 기준)과 실시간 환율로 <b>순금(24K)·18K·14K의 돈·그램 시세</b>를 바로 계산합니다.</p>
+      <p class="sub">오늘 금 한 돈은 얼마일까요? <b>한국금거래소 고시 시세</b>를 그대로 받아 순금(24K)·18K·14K를 <b>살 때(VAT 포함)</b>와 <b>팔 때(매입)</b> 가격으로 각각 계산합니다.</p>
 
       <form id="calcForm" onsubmit="event.preventDefault();calc(true)">
       <div class="card">
@@ -48,37 +48,52 @@ const faqLd = {
         <div class="frow">
           <div class="fld"><span class="cap">순도</span>
             <select id="karat" aria-label="순도" onchange="calc(false)">
-              <option value="1" selected>24K 순금 (99.9%)</option>
-              <option value="0.75">18K (75%)</option>
-              <option value="0.5833">14K (58.5%)</option>
+              <option value="pure" selected>24K 순금 (99.9%)</option>
+              <option value="k18">18K (75%)</option>
+              <option value="k14">14K (58.5%)</option>
             </select>
           </div>
-          <div class="fld"><span class="cap">기준 시각</span><input id="asof" type="text" aria-label="기준 시각" value="불러오는 중…" readonly></div>
+          <div class="fld"><span class="cap">고시 시각</span><input id="asof" type="text" aria-label="고시 시각" value="불러오는 중…" readonly></div>
         </div>
         <div class="strat">
           <button type="submit" class="go">금 시세 계산</button>
         </div>
-        <p class="tip">금 <b>한 돈은 3.75g</b>입니다. 순도는 <b>24K=순금(99.9%)·18K=75%·14K=58.5%</b> 기준으로 배율이 적용됩니다. 시세는 페이지 접속 시 국제 금값·환율을 자동으로 불러와 계산합니다.</p>
+        <p class="tip">금 <b>한 돈은 3.75g</b>이고, 한국금거래소 고시 시세도 <b>3.75g 단위</b>로 발표됩니다. 순도별로 <b>따로 고시된 가격</b>을 쓰기 때문에 24K 가격에 배율을 곱한 값과는 다릅니다.</p>
       </div>
       </form>
 
       <div class="card" id="out">
-        <div class="card-h"><span class="n">2</span><h2 id="resHead" tabindex="-1">예상 금액</h2></div>
-        <div class="hero-lbl">예상 금액 (KRW)</div>
-        <div class="res-hero"><span class="big grad" id="r-total">–</span></div>
+        <div class="card-h"><span class="n">2</span><h2 id="resHead" tabindex="-1">살 때 · 팔 때 가격</h2></div>
+        <div class="dual">
+          <div class="dcell">
+            <div class="dl">내가 살 때 <em>VAT 포함</em></div>
+            <div class="dv grad" id="r-buy">–</div>
+          </div>
+          <div class="dcell">
+            <div class="dl">내가 팔 때 <em>매입</em></div>
+            <div class="dv" id="r-sell">–</div>
+          </div>
+        </div>
         <div class="hero-sent" id="r-sent"></div>
         <div class="kpis">
-          <div class="kpi"><div class="l">순금 1돈 시세 (24K 3.75g)</div><div class="v em" id="r-don">–</div></div>
-          <div class="kpi"><div class="l">순금 1g 시세</div><div class="v" id="r-gram">–</div></div>
-          <div class="kpi"><div class="l">기준 시각</div><div class="v bl" id="r-asof">–</div></div>
+          <div class="kpi"><div class="l">순금 1돈 살 때 (24K 3.75g)</div><div class="v em" id="r-don-buy">–</div></div>
+          <div class="kpi"><div class="l">순금 1돈 팔 때 (24K 3.75g)</div><div class="v" id="r-don-sell">–</div></div>
+          <div class="kpi"><div class="l">고시 시각</div><div class="v bl" id="r-asof">–</div></div>
         </div>
         <div class="brk">
-          <div class="brk-t">순도별 1돈(3.75g) 시세</div>
-          <div class="brk-row hl"><span>24K 순금 <em>순도 100%</em></span><b id="d-24">–</b></div>
-          <div class="brk-row"><span>18K <em>순도 75%</em></span><b id="d-18">–</b></div>
-          <div class="brk-row"><span>14K <em>순도 58.5%</em></span><b id="d-14">–</b></div>
+          <div class="brk-t">한국금거래소 고시 시세 · 1돈(3.75g) 기준</div>
+          <div class="trow th"><span>구분</span><b>살 때 (VAT 포함)</b><b>팔 때 (매입)</b></div>
+          <div class="trow hl"><span>24K 순금</span><b id="b-24">–</b><b id="s-24">–</b></div>
+          <div class="trow"><span>18K</span><b id="b-18">–</b><b id="s-18">–</b></div>
+          <div class="trow"><span>14K</span><b id="b-14">–</b><b id="s-14">–</b></div>
+          <div class="trow chg"><span>전일 대비 <em>24K</em></span><b id="c-24b">–</b><b id="c-24s">–</b></div>
+        </div>
+        <p class="note">* 18K·14K의 <b>살 때</b>는 한국금거래소가 <b>“제품시세 적용”</b>으로 고시합니다. 실제 구매가는 세공비(공임)가 포함된 제품 가격으로 정해지므로 위 값은 참고용입니다.</p>
+        <div class="brk">
+          <div class="brk-t">참고 · 국제 시세</div>
           <div class="brk-row"><span>국제 금값 <em>oz당 USD</em></span><b id="d-oz">–</b></div>
-          <div class="brk-row total"><span>적용 환율 <em>USD/KRW</em></span><b id="d-fx">–</b></div>
+          <div class="brk-row"><span>국제 시세 환산 <em>순금 1g</em></span><b id="d-gram">–</b></div>
+          <div class="brk-row"><span>국제 시세 환산 <em>순금 1돈</em></span><b id="d-don">–</b></div>
         </div>
       </div>
 
@@ -93,24 +108,25 @@ const faqLd = {
       </div>
 
       <div class="content">
-        <h2>금 시세는 어떻게 계산되나요?</h2>
-        <p>국제 금값은 보통 <b>트로이온스(oz)당 미국 달러(USD)</b>로 거래됩니다. 1 트로이온스는 <b>31.1034768g</b>이므로, 순금 1g 시세는 <b>(국제 금값 ÷ 31.1034768) × 환율(USD→KRW)</b>로 구합니다. 여기에 중량과 순도 배율을 곱하면 예상 금액이 됩니다.</p>
-        <h2>순도(K)별 배율</h2>
+        <h2>살 때와 팔 때, 왜 이렇게 차이가 날까요?</h2>
+        <p>한국금거래소는 같은 순금 1돈에 대해 <b>살 때 가격</b>과 <b>팔 때 가격</b>을 따로 고시합니다. 살 때 가격에는 <b>부가세 10%</b>와 유통 마진이 더해지고, 팔 때는 그 마진이 빠진 <b>매입가</b>가 적용됩니다. 그래서 순금을 사서 곧바로 되팔면 통상 <b>15% 안팎의 손실</b>이 발생합니다. 금을 단기 매매 수단으로 보기 어려운 가장 큰 이유입니다.</p>
+        <h2>순도(K)별로 가격이 따로 고시됩니다</h2>
+        <p>18K·14K는 24K 가격에 순도 배율을 곱해 구하는 것이 아니라, 거래소가 <b>순도별로 별도의 고시가</b>를 발표합니다. 이 계산기도 그 고시가를 그대로 사용합니다.</p>
         <ul>
-          <li><b>24K 순금</b> — 순도 약 99.9%, 배율 1.0</li>
-          <li><b>18K</b> — 순도 75%, 배율 0.75</li>
-          <li><b>14K</b> — 순도 58.5%, 배율 0.5833</li>
+          <li><b>24K 순금</b> — 순도 약 99.9%. 살 때·팔 때 모두 고시가가 있습니다.</li>
+          <li><b>18K</b> — 순도 75%. 팔 때만 고시되고, 살 때는 “제품시세 적용”입니다.</li>
+          <li><b>14K</b> — 순도 58.5%. 18K와 동일하게 살 때는 제품 가격으로 정해집니다.</li>
         </ul>
         <h2>자주 묻는 질문</h2>
         <h3>금 한 돈은 몇 그램인가요?</h3>
-        <p>금 한 돈(1돈)은 <b>3.75g</b>입니다. 이 계산기의 기본 단위도 1돈(3.75g)으로 맞춰져 있습니다.</p>
+        <p>금 한 돈(1돈)은 <b>3.75g</b>입니다. 고시 시세도 3.75g 단위로 나오며, 이 계산기의 기본 단위도 1돈으로 맞춰져 있습니다.</p>
         <h3>이 시세는 어디 기준인가요?</h3>
-        <p>국제 금값(런던 기준)과 실시간 환율(USD→KRW)로 계산한 <b>참고 시세</b>입니다. 금은방 매입/판매가는 공임·부가세·마진에 따라 달라집니다.</p>
-        <h3>실제 살 때·팔 때 가격과 왜 다른가요?</h3>
-        <p><b>세공비(공임)·부가세(10%)·업체 마진</b> 때문입니다. 살 때는 이런 비용이 더해지고, 팔 때는 마진이 빠져 국제 시세보다 낮게 매입됩니다.</p>
+        <p><b>한국금거래소</b>가 발표하는 오늘의 고시 시세입니다. 살 때는 VAT 포함가, 팔 때는 거래소 매입 기준가입니다.</p>
+        <h3>금은방 가격과 다를 수 있나요?</h3>
+        <p>네. 개별 금은방·주얼리 매장은 여기에 <b>세공비(공임)</b>와 자체 마진을 얹기 때문에 실제 결제 금액은 더 높아질 수 있습니다. 반대로 팔 때는 제품 상태·중량 측정에 따라 조금씩 달라집니다.</p>
       </div>
 
-      <p class="disc">국제 금값·환율 기반 참고 추정치이며 실제 금은방·거래소 매입/판매가(세공비·부가세 별도)와 다를 수 있습니다. 입력값은 서버로 전송되지 않고 브라우저에서만 계산됩니다.</p>
+      <p class="disc">한국금거래소 고시 시세를 그대로 표시한 참고용 계산 결과이며, 실제 거래 가격은 매장·제품·세공비에 따라 달라질 수 있습니다. 입력값은 서버로 전송되지 않고 브라우저에서만 계산됩니다.</p>
     </div>
   </div>
 </BaseLayout>
@@ -155,32 +171,19 @@ html.dark .dpc{--surface:#121c2e;--surface2:#0e1626;--line:#1f2c42;--line2:#2a3a
 .dpc button:focus-visible,.dpc input:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
 .dpc #out{display:none}
 .dpc .hero-lbl{font-size:13px;color:var(--mut);font-weight:600;margin:2px 0}
-.dpc .res-hero{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;padding:0 2px 4px;background:none;border-radius:0;text-align:left;margin:0}
-.dpc .res-hero .big{font-size:clamp(30px,7vw,46px);font-weight:800;letter-spacing:-.03em}
-.dpc .permo{font-size:16px;color:var(--mut);font-weight:600}
-.dpc .hero-sent{font-size:15px;color:var(--mut);margin:2px 2px 18px}
+.dpc .hero-sent{font-size:15px;color:var(--mut);margin:10px 2px 18px}
 .dpc .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .dpc .kpi{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:15px 16px}
 .dpc .kpi .l{font-size:12.5px;color:var(--mut);font-weight:600}
 .dpc .kpi .v{font-size:20px;font-weight:800;margin-top:5px;letter-spacing:-.02em;color:var(--text)}
 .dpc .v.em{color:var(--emerald)}.dpc .v.bl{color:var(--teal)}
-.dpc .barwrap{margin-top:18px}
-.dpc .stackbar{display:flex;height:30px;border-radius:9px;overflow:hidden;border:1px solid var(--line);background:var(--surface2)}
-.dpc .stackbar .seg{height:100%}
-.dpc .stackbar .seg.net{background:linear-gradient(90deg,#34d399,#22d3ee)}
-.dpc .stackbar .seg.ded{background:repeating-linear-gradient(45deg,var(--line2),var(--line2) 6px,var(--surface2) 6px,var(--surface2) 12px)}
-.dpc .barleg{display:flex;gap:16px;font-size:12.5px;color:var(--mut);margin-top:8px}
-.dpc .barleg i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:middle}
-.dpc .barleg i.net{background:#22d3ee}.dpc .barleg i.ded{background:var(--line2)}
-.dpc .barleg b{color:var(--text)}
 .dpc .brk{margin-top:18px;border-top:1px solid var(--line);padding-top:14px}
 .dpc .brk-t{font-size:13px;color:var(--mut);font-weight:700;margin-bottom:8px}
 .dpc .brk-row{display:flex;justify-content:space-between;align-items:center;padding:8px 2px;font-size:14.5px;border-bottom:1px solid var(--line)}
 .dpc .brk-row span{color:var(--text)}
 .dpc .brk-row em{font-style:normal;font-size:12px;color:var(--dim);margin-left:6px}
 .dpc .brk-row b{color:var(--text);font-weight:700}
-.dpc .brk-row.total{border-bottom:none;margin-top:4px;font-weight:800}
-.dpc .brk-row.total span,.dpc .brk-row.total b{color:var(--rose);font-size:15.5px}
+.dpc .brk-row:last-child{border-bottom:none}
 .dpc .cta{background:linear-gradient(135deg,#0f2740,#12233a);border:1px solid #274563;border-radius:var(--radius);padding:24px;position:relative;overflow:hidden;margin-bottom:18px}
 .dpc .cta::before{content:"";position:absolute;inset:0;background:radial-gradient(400px 160px at 90% 0%,rgba(34,211,238,.14),transparent 70%);pointer-events:none}
 .dpc .cta h3{font-size:19px;font-weight:800;letter-spacing:-.02em;margin-bottom:7px;position:relative;color:#f2f7fb}
@@ -208,55 +211,118 @@ html.dark .dpc{--surface:#121c2e;--surface2:#0e1626;--line:#1f2c42;--line2:#2a3a
 .dpc .fld select{width:100%;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:11px 12px;color:var(--text);font-size:15px;font-family:inherit;transition:border-color .15s,box-shadow .15s;-webkit-appearance:none;appearance:none;cursor:pointer;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%236a7889' d='M6 8 0 0h12z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px}
 .dpc .fld select:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.14)}
+/* 열린 옵션 목록: option 배경을 비워두면 브라우저가 자체 기본색(대개 흰색)으로 팝업을 그리는데
+   글자색만 select 에서 상속돼 다크모드에서 흰 배경+흰 글자가 된다. 배경·글자를 함께 못박는다. */
+.dpc select option,.dpc select optgroup{background-color:var(--surface);color:var(--text)}
 .dpc .fld input[readonly]{color:var(--mut);cursor:default}
-.dpc .brk-row.hl{background:rgba(52,211,153,.07);border-radius:8px;padding-left:8px;padding-right:8px}
-.dpc .brk-row.hl b{color:var(--emerald)}
+.dpc .dual{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.dpc .dcell{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.dpc .dcell .dl{font-size:12.5px;color:var(--mut);font-weight:700}
+.dpc .dcell .dl em{font-style:normal;font-weight:600;color:var(--dim);margin-left:4px}
+.dpc .dcell .dv{font-size:clamp(22px,4.6vw,32px);font-weight:800;letter-spacing:-.03em;margin-top:4px;color:var(--text)}
+.dpc .trow{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:8px;align-items:center;padding:8px 2px;font-size:14.5px;border-bottom:1px solid var(--line)}
+.dpc .trow span{color:var(--text)}
+.dpc .trow em{font-style:normal;font-size:12px;color:var(--dim);margin-left:5px}
+.dpc .trow b{color:var(--text);font-weight:700;text-align:right}
+.dpc .trow.th{font-size:12px;color:var(--mut);border-bottom:1px solid var(--line2)}
+.dpc .trow.th b{color:var(--mut);font-weight:700}
+.dpc .trow.hl{background:rgba(52,211,153,.07);border-radius:8px;padding-left:8px;padding-right:8px}
+.dpc .trow.hl b{color:var(--emerald)}
+.dpc .trow.chg{border-bottom:none}
+.dpc .trow.chg b{font-weight:700;font-size:13.5px}
+.dpc .up{color:var(--rose)}.dpc .down{color:var(--teal)}
+.dpc .note{font-size:12px;color:var(--dim);margin-top:10px;line-height:1.6}
+.dpc .note b{color:var(--mut)}
+@media(max-width:600px){
+  .dpc .dual{grid-template-columns:1fr}
+  .dpc .trow{grid-template-columns:1fr 1fr 1fr;font-size:13px}
+}
 </style>
 
 <script is:inline>
-const OZ_G=31.1034768;
+const GOLD_API='https://ai-revenue-blog.vercel.app/api/daily-report?action=gold-price';
+const DON_G=3.75;                       // 고시가 단위: 1돈 = 3.75g
 const won=n=>Math.round(n).toLocaleString('ko-KR')+'원';
-// live market state
-let MK={goldUsdOz:0,usdKrw:0,asof:'',ready:false};
-function gram24Krw(){return (MK.goldUsdOz/OZ_G)*MK.usdKrw;} // 순금 1g KRW
-function fmtDate(d){const p=n=>String(n).padStart(2,'0');return d.getFullYear()+'-'+p(d.getMonth()+1)+'-'+p(d.getDate())+' 기준';}
+const KLBL={pure:'24K 순금',k18:'18K',k14:'14K'};
+let MK={ready:false,prices:null,intl:null,asof:''};
+
+function fmtAsof(s){
+  // "2026-07-29 15:17:14" → "2026-07-29 15:17 고시"
+  const m=String(s||'').match(/^(\d{4})-(\d{2})-(\d{2})[ T](\d{2}):(\d{2})/);
+  if(!m)return String(s||'');
+  return m[1]+'-'+m[2]+'-'+m[3]+' '+m[4]+':'+m[5]+' 고시';
+}
+function fmtDiff(amount,pct){
+  if(amount===null||amount===undefined)return '–';
+  const up=amount>0, flat=Math.abs(amount)<1;
+  const arrow=flat?'–':(up?'▲':'▼');
+  const p=(pct===null||pct===undefined)?'':' ('+(pct>0?'+':'')+pct+'%)';
+  return arrow+' '+Math.abs(Math.round(amount)).toLocaleString('ko-KR')+'원'+p;
+}
+function paintDiff(el,amount){
+  el.classList.remove('up','down');
+  if(amount===null||amount===undefined)return;
+  if(Math.abs(amount)<1)return;
+  el.classList.add(amount>0?'up':'down');
+}
 function showErr(m){
   document.getElementById('out').style.display='block';
-  document.getElementById('r-total').textContent='–';
+  document.getElementById('r-buy').textContent='–';
+  document.getElementById('r-sell').textContent='–';
   document.getElementById('r-sent').textContent=m;
   document.getElementById('asof').value='—';
 }
 function calc(scroll){
-  if(!MK.ready){return;} // 시세 로딩 전이면 대기
+  if(!MK.ready){return;}
   const amount=parseFloat(document.getElementById('amount').value);
-  const perUnit=parseFloat(document.getElementById('unit').value)||1; // grams per unit
-  const karat=parseFloat(document.getElementById('karat').value)||1;
+  const perUnit=parseFloat(document.getElementById('unit').value)||1;   // 단위 1개당 g
+  const key=document.getElementById('karat').value;
+  const row=MK.prices[key];
+  document.getElementById('out').style.display='block';
   if(!(amount>0)){
-    document.getElementById('out').style.display='block';
-    document.getElementById('r-total').textContent='–';
+    document.getElementById('r-buy').textContent='–';
+    document.getElementById('r-sell').textContent='–';
     document.getElementById('r-sent').textContent='중량을 입력해 주세요.';
     return;
   }
-  const g1=gram24Krw();          // 순금 1g
-  const don24=g1*3.75;           // 순금 1돈 (24K)
-  const grams=amount*perUnit;    // 총 그램(순금 환산 전)
-  const total=grams*karat*g1;    // 예상 금액
-  // render
-  document.getElementById('out').style.display='block';
+  const grams=amount*perUnit;
+  const dons=grams/DON_G;                     // 고시가는 1돈 단위이므로 돈으로 환산
+  const buy=row.buy?dons*row.buy:null;
+  const sell=row.sell?dons*row.sell:null;
   document.getElementById('cta').style.display='block';
-  document.getElementById('r-total').textContent=won(total);
-  const karatLbl=(karat===1?'24K':(karat===0.75?'18K':'14K'));
-  document.getElementById('r-sent').textContent=`${karatLbl} 기준 ${grams.toLocaleString('ko-KR')}g의 예상 시세입니다.`;
-  document.getElementById('r-don').textContent=won(don24);
-  document.getElementById('r-gram').textContent=won(g1);
+  document.getElementById('r-buy').textContent=buy?won(buy):'제품시세 적용';
+  document.getElementById('r-sell').textContent=sell?won(sell):'–';
+  let sent=KLBL[key]+' '+grams.toLocaleString('ko-KR')+'g('+(Math.round(dons*100)/100).toLocaleString('ko-KR')+'돈) 기준입니다.';
+  if(buy&&sell){
+    const gap=buy-sell;
+    sent+=' 사서 바로 되팔면 '+won(gap)+'('+(-Math.round(gap/buy*1000)/10)+'%) 손실입니다.';
+  }
+  if(key!=='pure')sent+=' 18K·14K의 살 때는 제품시세가 적용되니 참고용으로만 보세요.';
+  document.getElementById('r-sent').textContent=sent;
+
+  const p=MK.prices;
+  document.getElementById('r-don-buy').textContent=won(p.pure.buy);
+  document.getElementById('r-don-sell').textContent=won(p.pure.sell);
   document.getElementById('r-asof').textContent=MK.asof;
-  document.getElementById('d-24').textContent=won(don24);
-  document.getElementById('d-18').textContent=won(don24*0.75);
-  document.getElementById('d-14').textContent=won(don24*0.5833);
-  document.getElementById('d-oz').textContent='$'+MK.goldUsdOz.toLocaleString('en-US',{maximumFractionDigits:2});
-  document.getElementById('d-fx').textContent=MK.usdKrw.toLocaleString('ko-KR',{maximumFractionDigits:2})+'원';
-  const h=document.getElementById('resHead');
-  if(scroll){h.focus();document.getElementById('out').scrollIntoView({behavior:'smooth',block:'start'});}
+  document.getElementById('b-24').textContent=won(p.pure.buy);
+  document.getElementById('s-24').textContent=won(p.pure.sell);
+  document.getElementById('b-18').textContent=p.k18.buy?won(p.k18.buy)+'*':'제품시세*';
+  document.getElementById('s-18').textContent=won(p.k18.sell);
+  document.getElementById('b-14').textContent=p.k14.buy?won(p.k14.buy)+'*':'제품시세*';
+  document.getElementById('s-14').textContent=won(p.k14.sell);
+  const cb=document.getElementById('c-24b'), cs=document.getElementById('c-24s');
+  cb.textContent=fmtDiff(p.pure.buyDiff,p.pure.buyPct);   paintDiff(cb,p.pure.buyDiff);
+  cs.textContent=fmtDiff(p.pure.sellDiff,p.pure.sellPct); paintDiff(cs,p.pure.sellDiff);
+
+  const oz=MK.intl&&MK.intl.usdPerOz, g1=MK.intl&&MK.intl.krwPerGram;
+  document.getElementById('d-oz').textContent=oz?'$'+oz.toLocaleString('en-US',{maximumFractionDigits:2}):'–';
+  document.getElementById('d-gram').textContent=g1?won(g1):'–';
+  document.getElementById('d-don').textContent=g1?won(g1*DON_G):'–';
+
+  if(scroll){
+    const h=document.getElementById('resHead');
+    h.focus();document.getElementById('out').scrollIntoView({behavior:'smooth',block:'start'});
+  }
 }
 function subscribe(){
   const e=document.getElementById('email').value.trim();const msg=document.getElementById('cta-msg');
@@ -266,23 +332,12 @@ function subscribe(){
   try{localStorage.setItem('newsletter-subscribed','true');}catch(_){}
   document.getElementById('email').value='';
 }
-// load live market data
-Promise.all([
-  fetch('https://api.gold-api.com/price/XAU').then(r=>r.json()),
-  fetch('https://open.er-api.com/v6/latest/USD').then(r=>r.json())
-]).then(([gold,fx])=>{
-  const oz=parseFloat(gold&&gold.price);
-  const krw=parseFloat(fx&&fx.rates&&fx.rates.KRW);
-  if(!(oz>0)||!(krw>0))throw new Error('bad data');
-  MK.goldUsdOz=oz;MK.usdKrw=krw;
-  // 기준 시각: 금값 updatedAt 우선, 없으면 환율 time_last_update, 없으면 오늘
-  let asof;
-  if(gold&&gold.updatedAt){const d=new Date(gold.updatedAt);if(!isNaN(d))asof=fmtDate(d);}
-  if(!asof&&fx&&fx.time_last_update_utc){const d=new Date(fx.time_last_update_utc);if(!isNaN(d))asof=fmtDate(d);}
-  if(!asof)asof=fmtDate(new Date());
-  MK.asof=asof;MK.ready=true;
-  document.getElementById('asof').value=asof;
-  calc(false); // seed: 3.75g 24K = 순금 1돈
+// 한국금거래소 고시 시세 — CORS 때문에 자체 프록시(엣지 10분 캐시)를 경유한다
+fetch(GOLD_API).then(r=>r.json()).then(j=>{
+  if(!j||!j.ok||!j.prices||!j.prices.pure||!j.prices.pure.buy)throw new Error('bad data');
+  MK.prices=j.prices;MK.intl=j.intl||null;MK.asof=fmtAsof(j.asof);MK.ready=true;
+  document.getElementById('asof').value=MK.asof;
+  calc(false);      // 기본값: 24K 1돈
 }).catch(()=>{
   showErr('금 시세 정보를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.');
 });

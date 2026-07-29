@@ -209,6 +209,9 @@ html.dark .dpc{--surface:#121c2e;--surface2:#0e1626;--line:#1f2c42;--line2:#2a3a
 /* dutchpay-specific */
 .dpc .fld select{width:100%;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:11px 12px;color:var(--text);font-size:15px;font-family:inherit;cursor:pointer;transition:border-color .15s,box-shadow .15s;-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2348566b' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:34px}
 .dpc .fld select:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(52,211,153,.14)}
+/* 열린 옵션 목록: option 배경을 비워두면 브라우저가 자체 기본색(대개 흰색)으로 팝업을 그리는데
+   글자색만 select 에서 상속돼 다크모드에서 흰 배경+흰 글자가 된다. 배경·글자를 함께 못박는다. */
+.dpc select option,.dpc select optgroup{background-color:var(--surface);color:var(--text)}
 .dpc .copy{margin-left:auto;background:var(--surface2);color:var(--text);border:1px solid var(--line2);border-radius:12px;padding:12px 24px;font-weight:800;font-size:14.5px;font-family:inherit;cursor:pointer;transition:transform .12s,filter .15s,border-color .15s}
 .dpc .copy:hover{border-color:var(--emerald);filter:brightness(1.02)}.dpc .copy:active{transform:translateY(1px)}
 .dpc .copy-msg{color:var(--emerald);font-weight:600;min-height:16px;text-align:right}
