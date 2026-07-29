@@ -210,6 +210,47 @@ async function ensureCategory(env, auth, name, parentId = 0) {
   return hit.id;
 }
 
+// 태그 get-or-create. 카테고리와 달리 계층이 없어 이름만 맞추면 된다.
+// ⚠️ 순차 실행이다 — Promise.all 로 돌리면 같은 이름 태그가 동시에 없다고 판정돼
+//    중복 생성된다(WP 는 이름 중복을 막지 않는다).
+const _tagCache = new Map();
+async function ensureTag(env, auth, name) {
+  if (_tagCache.has(name)) return _tagCache.get(name);
+  const base = `${env.WP_URL.replace(/\/$/, '')}/wp-json/wp/v2/tags`;
+  const q = await (await fetch(`${base}?search=${encodeURIComponent(name)}&per_page=100`, { headers: { Authorization: auth } })).json();
+  let hit = Array.isArray(q) ? q.find((t) => t.name === name) : null;
+  if (!hit) {
+    const r = await fetch(base, { method: 'POST', headers: { Authorization: auth, 'Content-Type': 'application/json' }, body: JSON.stringify({ name }) });
+    hit = await r.json();
+    // 경합으로 이미 생겼으면 term_exists 에 기존 id 가 실려 온다
+    if (!r.ok) {
+      const existing = hit && hit.data && hit.data.term_id;
+      if (!existing) throw new Error(`태그 생성 실패(${name}): ${JSON.stringify(hit).slice(0, 200)}`);
+      hit = { id: existing };
+    }
+  }
+  _tagCache.set(name, hit.id);
+  return hit.id;
+}
+
+// frontmatter tags 파싱. 두 표기를 모두 받는다(생성기가 글마다 다르게 쓴다).
+//   tags: ["a", "b"]        ← TF 인라인 배열
+//   tags:\n  - a\n  - b     ← LF 블록 리스트
+export function parseTags(fm) {
+  const inline = fm.match(/^tags:\s*\[(.*?)\]\s*$/m);
+  if (inline) {
+    return inline[1].split(',').map((s) => s.trim().replace(/^["']|["']$/g, '')).filter(Boolean);
+  }
+  const block = fm.match(/^tags:\s*\r?\n((?:[ \t]*-[ \t]*.+\r?\n?)+)/m);
+  if (block) {
+    return block[1].split(/\r?\n/)
+      .map((l) => (l.match(/^[ \t]*-[ \t]*(.+?)[ \t]*$/) || [])[1])
+      .filter(Boolean)
+      .map((s) => s.replace(/^["']|["']$/g, ''));
+  }
+  return [];
+}
+
 export async function publishPost(file, { status = 'draft', env, keepChartDivs = false, silo = '', updateId = null } = {}) {
   env = env || envFromProcess();
   const raw = readFileSync(file, 'utf8');
@@ -236,9 +277,17 @@ export async function publishPost(file, { status = 'draft', env, keepChartDivs =
     categories = [leafId];
   }
 
+  // 태그: frontmatter 의 tags 를 전부 붙인다(카테고리는 1개지만 태그는 여러 개 동시 부여).
+  let tags;
+  const tagNames = parseTags(fm);
+  if (tagNames.length) {
+    tags = [];
+    for (const n of tagNames) tags.push(await ensureTag(env, auth, n)); // 순차 — 중복 생성 방지
+  }
+
   const res = await fetch(`${env.WP_URL.replace(/\/$/, '')}/wp-json/wp/v2/posts${updateId ? '/' + updateId : ''}`, {
     method: 'POST', headers: { Authorization: auth, 'Content-Type': 'application/json' },
-    body: JSON.stringify({ title, content, status, slug, excerpt: pick('description'), ...(categories ? { categories } : {}) }),
+    body: JSON.stringify({ title, content, status, slug, excerpt: pick('description'), ...(categories ? { categories } : {}), ...(tags ? { tags } : {}) }),
   });
   const post = await res.json();
   if (!res.ok) throw new Error(`WP ${res.status}: ${JSON.stringify(post).slice(0, 300)}`);
