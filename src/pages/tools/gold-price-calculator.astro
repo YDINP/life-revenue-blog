@@ -2,21 +2,21 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const title = '금 시세 계산기 (살 때·팔 때)';
-const description = '오늘 금 한 돈은 얼마일까? 한국금거래소 고시 시세를 그대로 반영해 순금(24K)·18K·14K를 살 때(VAT 포함)와 팔 때(매입) 가격으로 각각 계산합니다. 무료·설치 불필요.';
+const description = '오늘 금 한 돈은 얼마일까? 국내 금거래소 고시 시세를 그대로 반영해 순금(24K)·18K·14K를 살 때(VAT 포함)와 팔 때(매입) 가격으로 각각 계산합니다. 무료·설치 불필요.';
 const ogImage = '/og/gold-price-calculator.png';
 
 const appLd = {
   '@context': 'https://schema.org', '@type': 'WebApplication',
   name: '금 시세 계산기 (살 때·팔 때)', applicationCategory: 'FinanceApplication', operatingSystem: 'Web',
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'KRW' },
-  description: '한국금거래소 고시 시세로 순금(24K)·18K·14K의 살 때·팔 때 가격을 돈/그램/킬로그램 단위로 계산하는 무료 도구.',
+  description: '국내 금거래소 고시 시세로 순금(24K)·18K·14K의 살 때·팔 때 가격을 돈/그램/킬로그램 단위로 계산하는 무료 도구.',
 };
 const faqLd = {
   '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: [
-    { '@type': 'Question', name: '금 한 돈은 몇 그램인가요?', acceptedAnswer: { '@type': 'Answer', text: '금 한 돈(1돈)은 3.75g입니다. 한국금거래소 고시 시세도 3.75g 단위로 발표되며, 이 계산기의 기본 단위도 1돈(3.75g)입니다.' } },
-    { '@type': 'Question', name: '이 시세는 어디 기준인가요?', acceptedAnswer: { '@type': 'Answer', text: '한국금거래소(koreagoldx.co.kr)가 발표하는 오늘의 고시 시세입니다. 살 때는 부가세(VAT)가 포함된 가격, 팔 때는 한국금거래소 매입 기준가입니다.' } },
-    { '@type': 'Question', name: '살 때와 팔 때 가격이 왜 이렇게 다른가요?', acceptedAnswer: { '@type': 'Answer', text: '살 때 가격에는 부가세 10%와 유통 마진이 더해지고, 팔 때는 마진이 빠진 매입가가 적용됩니다. 그래서 순금 1돈을 사서 바로 되팔면 통상 15% 안팎의 손실이 발생합니다.' } },
-    { '@type': 'Question', name: '18K·14K의 살 때 가격은 왜 참고용인가요?', acceptedAnswer: { '@type': 'Answer', text: '한국금거래소는 18K·14K의 살 때 가격을 "제품시세 적용"으로 고시합니다. 실제 구매가는 세공비(공임)가 포함된 개별 제품 가격으로 정해지므로, 계산기의 18K·14K 살 때 값은 참고용으로만 쓰는 것이 정확합니다.' } },
+    { '@type': 'Question', name: '금 한 돈은 몇 그램인가요?', acceptedAnswer: { '@type': 'Answer', text: '금 한 돈(1돈)은 3.75g입니다. 국내 금거래소 고시 시세도 3.75g 단위로 발표되며, 이 계산기의 기본 단위도 1돈(3.75g)입니다.' } },
+    { '@type': 'Question', name: '이 시세는 어디 기준인가요?', acceptedAnswer: { '@type': 'Answer', text: '국내 금거래소가 발표하는 오늘의 고시 시세입니다. 살 때는 부가세(VAT)가 포함된 가격, 팔 때는 거래소 매입 기준가이며, 그날 실제로 사용한 거래소 이름과 고시 시각을 계산 결과에 함께 표시합니다.' } },
+    { '@type': 'Question', name: '살 때와 팔 때 가격이 왜 이렇게 다른가요?', acceptedAnswer: { '@type': 'Answer', text: '살 때 가격에는 부가세 10%와 유통 마진이 더해지고, 팔 때는 마진이 빠진 매입가가 적용됩니다. 그래서 순금 1돈을 사서 바로 되팔면 통상 13~15% 안팎의 손실이 발생합니다.' } },
+    { '@type': 'Question', name: '18K·14K의 살 때 가격은 왜 안 나오나요?', acceptedAnswer: { '@type': 'Answer', text: '거래소가 18K·14K의 살 때 가격을 "제품시세 적용"으로 고시하기 때문입니다. 실제 구매가는 세공비(공임)가 포함된 개별 제품 가격으로 정해지므로 고시가로는 금액을 특정할 수 없습니다. 팔 때(매입) 가격은 18K·14K도 그대로 고시됩니다.' } },
   ],
 };
 ---
@@ -28,9 +28,9 @@ const faqLd = {
 
   <div class="dpc">
     <div class="wrap">
-      <span class="eyebrow"><span class="dot"></span>한국금거래소 고시 시세 반영 · 무료 · 설치 불필요</span>
+      <span class="eyebrow"><span class="dot"></span>국내 금거래소 고시 시세 반영 · 무료 · 설치 불필요</span>
       <h1>금 시세 <span class="grad">계산기</span></h1>
-      <p class="sub">오늘 금 한 돈은 얼마일까요? <b>한국금거래소 고시 시세</b>를 그대로 받아 순금(24K)·18K·14K를 <b>살 때(VAT 포함)</b>와 <b>팔 때(매입)</b> 가격으로 각각 계산합니다.</p>
+      <p class="sub">오늘 금 한 돈은 얼마일까요? <b>국내 금거래소 고시 시세</b>를 그대로 받아 순금(24K)·18K·14K를 <b>살 때(VAT 포함)</b>와 <b>팔 때(매입)</b> 가격으로 각각 계산합니다.</p>
 
       <form id="calcForm" onsubmit="event.preventDefault();calc(true)">
       <div class="card">
@@ -58,7 +58,7 @@ const faqLd = {
         <div class="strat">
           <button type="submit" class="go">금 시세 계산</button>
         </div>
-        <p class="tip">금 <b>한 돈은 3.75g</b>이고, 한국금거래소 고시 시세도 <b>3.75g 단위</b>로 발표됩니다. 순도별로 <b>따로 고시된 가격</b>을 쓰기 때문에 24K 가격에 배율을 곱한 값과는 다릅니다.</p>
+        <p class="tip">금 <b>한 돈은 3.75g</b>이고, 국내 금거래소 고시 시세도 <b>3.75g 단위</b>로 발표됩니다. 순도별로 <b>따로 고시된 가격</b>을 쓰기 때문에 24K 가격에 배율을 곱한 값과는 다릅니다.</p>
       </div>
       </form>
 
@@ -81,14 +81,14 @@ const faqLd = {
           <div class="kpi"><div class="l">고시 시각</div><div class="v bl" id="r-asof">–</div></div>
         </div>
         <div class="brk">
-          <div class="brk-t">한국금거래소 고시 시세 · 1돈(3.75g) 기준</div>
+          <div class="brk-t" id="brk-src">고시 시세 · 1돈(3.75g) 기준</div>
           <div class="trow th"><span>구분</span><b>살 때 (VAT 포함)</b><b>팔 때 (매입)</b></div>
           <div class="trow hl"><span>24K 순금</span><b id="b-24">–</b><b id="s-24">–</b></div>
           <div class="trow"><span>18K</span><b id="b-18">–</b><b id="s-18">–</b></div>
           <div class="trow"><span>14K</span><b id="b-14">–</b><b id="s-14">–</b></div>
           <div class="trow chg"><span>전일 대비 <em>24K</em></span><b id="c-24b">–</b><b id="c-24s">–</b></div>
         </div>
-        <p class="note">* 18K·14K의 <b>살 때</b>는 한국금거래소가 <b>“제품시세 적용”</b>으로 고시합니다. 실제 구매가는 세공비(공임)가 포함된 제품 가격으로 정해지므로 위 값은 참고용입니다.</p>
+        <p class="note" id="src-note">* 18K·14K의 <b>살 때</b>는 거래소가 <b>“제품시세 적용”</b>으로 고시해 금액이 공개되지 않습니다 — 실제 구매가는 세공비(공임)가 포함된 개별 제품 가격으로 정해집니다. 팔 때(매입) 가격은 18K·14K도 그대로 고시됩니다.</p>
         <div class="brk">
           <div class="brk-t">참고 · 국제 시세</div>
           <div class="brk-row"><span>국제 금값 <em>oz당 USD</em></span><b id="d-oz">–</b></div>
@@ -109,7 +109,7 @@ const faqLd = {
 
       <div class="content">
         <h2>살 때와 팔 때, 왜 이렇게 차이가 날까요?</h2>
-        <p>한국금거래소는 같은 순금 1돈에 대해 <b>살 때 가격</b>과 <b>팔 때 가격</b>을 따로 고시합니다. 살 때 가격에는 <b>부가세 10%</b>와 유통 마진이 더해지고, 팔 때는 그 마진이 빠진 <b>매입가</b>가 적용됩니다. 그래서 순금을 사서 곧바로 되팔면 통상 <b>15% 안팎의 손실</b>이 발생합니다. 금을 단기 매매 수단으로 보기 어려운 가장 큰 이유입니다.</p>
+        <p>금거래소는 같은 순금 1돈에 대해 <b>살 때 가격</b>과 <b>팔 때 가격</b>을 따로 고시합니다. 살 때 가격에는 <b>부가세 10%</b>와 유통 마진이 더해지고, 팔 때는 그 마진이 빠진 <b>매입가</b>가 적용됩니다. 그래서 순금을 사서 곧바로 되팔면 통상 <b>13~15% 안팎의 손실</b>이 발생합니다. 금을 단기 매매 수단으로 보기 어려운 가장 큰 이유입니다.</p>
         <h2>순도(K)별로 가격이 따로 고시됩니다</h2>
         <p>18K·14K는 24K 가격에 순도 배율을 곱해 구하는 것이 아니라, 거래소가 <b>순도별로 별도의 고시가</b>를 발표합니다. 이 계산기도 그 고시가를 그대로 사용합니다.</p>
         <ul>
@@ -121,12 +121,12 @@ const faqLd = {
         <h3>금 한 돈은 몇 그램인가요?</h3>
         <p>금 한 돈(1돈)은 <b>3.75g</b>입니다. 고시 시세도 3.75g 단위로 나오며, 이 계산기의 기본 단위도 1돈으로 맞춰져 있습니다.</p>
         <h3>이 시세는 어디 기준인가요?</h3>
-        <p><b>한국금거래소</b>가 발표하는 오늘의 고시 시세입니다. 살 때는 VAT 포함가, 팔 때는 거래소 매입 기준가입니다.</p>
+        <p><b>국내 금거래소</b>가 발표하는 오늘의 고시 시세입니다. 살 때는 VAT 포함가, 팔 때는 거래소 매입 기준가이며, 그날 실제로 사용한 <b>거래소 이름과 고시 시각을 계산 결과 표 위에 그대로 표시</b>합니다.</p>
         <h3>금은방 가격과 다를 수 있나요?</h3>
         <p>네. 개별 금은방·주얼리 매장은 여기에 <b>세공비(공임)</b>와 자체 마진을 얹기 때문에 실제 결제 금액은 더 높아질 수 있습니다. 반대로 팔 때는 제품 상태·중량 측정에 따라 조금씩 달라집니다.</p>
       </div>
 
-      <p class="disc">한국금거래소 고시 시세를 그대로 표시한 참고용 계산 결과이며, 실제 거래 가격은 매장·제품·세공비에 따라 달라질 수 있습니다. 입력값은 서버로 전송되지 않고 브라우저에서만 계산됩니다.</p>
+      <p class="disc">국내 금거래소 고시 시세를 그대로 표시한 참고용 계산 결과이며, 실제 거래 가격은 매장·제품·세공비에 따라 달라질 수 있습니다. 입력값은 서버로 전송되지 않고 브라우저에서만 계산됩니다.</p>
     </div>
   </div>
 </BaseLayout>
@@ -240,17 +240,20 @@ html.dark .dpc{--surface:#121c2e;--surface2:#0e1626;--line:#1f2c42;--line2:#2a3a
 </style>
 
 <script is:inline>
-const GOLD_API='https://ai-revenue-blog.vercel.app/api/daily-report?action=gold-price';
+// 국내 고시가는 mungge 서버가 대신 읽어 동일 출처로 내려준다(한국금거래소는 해외·데이터센터 IP를 403 으로 막는다)
+const GOLD_API='https://mungge.com/wp-json/mungge/v1/gold';
 const DON_G=3.75;                       // 고시가 단위: 1돈 = 3.75g
 const won=n=>Math.round(n).toLocaleString('ko-KR')+'원';
 const KLBL={pure:'24K 순금',k18:'18K',k14:'14K'};
-let MK={ready:false,prices:null,intl:null,asof:''};
+let MK={ready:false,prices:null,intl:null,asof:'',source:''};
 
 function fmtAsof(s){
-  // "2026-07-29 15:17:14" → "2026-07-29 15:17 고시"
-  const m=String(s||'').match(/^(\d{4})-(\d{2})-(\d{2})[ T](\d{2}):(\d{2})/);
-  if(!m)return String(s||'');
-  return m[1]+'-'+m[2]+'-'+m[3]+' '+m[4]+':'+m[5]+' 고시';
+  // "2026-07-29 15:17:14" → "2026-07-29 15:17 고시" / 날짜만 오면 "2026-07-29 고시"
+  const t=String(s||'');
+  const m=t.match(/^(\d{4})-(\d{2})-(\d{2})[ T](\d{2}):(\d{2})/);
+  if(m)return m[1]+'-'+m[2]+'-'+m[3]+' '+m[4]+':'+m[5]+' 고시';
+  const d=t.match(/^(\d{4}-\d{2}-\d{2})/);
+  return d?d[1]+' 고시':t;
 }
 function fmtDiff(amount,pct){
   if(amount===null||amount===undefined)return '–';
@@ -296,28 +299,27 @@ function calc(scroll){
   if(buy&&sell){
     const gap=buy-sell;
     sent+=' 사서 바로 되팔면 '+won(gap)+'('+(-Math.round(gap/buy*1000)/10)+'%) 손실입니다.';
+  }else if(!buy){
+    sent+=' 이 순도의 살 때 가격은 거래소가 "제품시세 적용"으로 고시해 금액이 공개되지 않습니다.';
   }
-  if(key!=='pure')sent+=' 18K·14K의 살 때는 제품시세가 적용되니 참고용으로만 보세요.';
   document.getElementById('r-sent').textContent=sent;
 
   const p=MK.prices;
-  document.getElementById('r-don-buy').textContent=won(p.pure.buy);
-  document.getElementById('r-don-sell').textContent=won(p.pure.sell);
+  const cell=v=>v?won(v):'제품시세 적용';
+  document.getElementById('r-don-buy').textContent=cell(p.pure.buy);
+  document.getElementById('r-don-sell').textContent=cell(p.pure.sell);
   document.getElementById('r-asof').textContent=MK.asof;
-  document.getElementById('b-24').textContent=won(p.pure.buy);
-  document.getElementById('s-24').textContent=won(p.pure.sell);
-  document.getElementById('b-18').textContent=p.k18.buy?won(p.k18.buy)+'*':'제품시세*';
-  document.getElementById('s-18').textContent=won(p.k18.sell);
-  document.getElementById('b-14').textContent=p.k14.buy?won(p.k14.buy)+'*':'제품시세*';
-  document.getElementById('s-14').textContent=won(p.k14.sell);
+  document.getElementById('b-24').textContent=cell(p.pure.buy);
+  document.getElementById('s-24').textContent=cell(p.pure.sell);
+  document.getElementById('b-18').textContent=cell(p.k18.buy);
+  document.getElementById('s-18').textContent=cell(p.k18.sell);
+  document.getElementById('b-14').textContent=cell(p.k14.buy);
+  document.getElementById('s-14').textContent=cell(p.k14.sell);
   const cb=document.getElementById('c-24b'), cs=document.getElementById('c-24s');
   cb.textContent=fmtDiff(p.pure.buyDiff,p.pure.buyPct);   paintDiff(cb,p.pure.buyDiff);
   cs.textContent=fmtDiff(p.pure.sellDiff,p.pure.sellPct); paintDiff(cs,p.pure.sellDiff);
 
-  const oz=MK.intl&&MK.intl.usdPerOz, g1=MK.intl&&MK.intl.krwPerGram;
-  document.getElementById('d-oz').textContent=oz?'$'+oz.toLocaleString('en-US',{maximumFractionDigits:2}):'–';
-  document.getElementById('d-gram').textContent=g1?won(g1):'–';
-  document.getElementById('d-don').textContent=g1?won(g1*DON_G):'–';
+  paintIntl();
 
   if(scroll){
     const h=document.getElementById('resHead');
@@ -332,13 +334,37 @@ function subscribe(){
   try{localStorage.setItem('newsletter-subscribed','true');}catch(_){}
   document.getElementById('email').value='';
 }
-// 한국금거래소 고시 시세 — CORS 때문에 자체 프록시(엣지 10분 캐시)를 경유한다
+// 국내 고시가(살 때·팔 때) — mungge 서버 경유, 동일 출처
 fetch(GOLD_API).then(r=>r.json()).then(j=>{
-  if(!j||!j.ok||!j.prices||!j.prices.pure||!j.prices.pure.buy)throw new Error('bad data');
-  MK.prices=j.prices;MK.intl=j.intl||null;MK.asof=fmtAsof(j.asof);MK.ready=true;
+  if(!j||!j.ok||!j.prices||!j.prices.pure||!j.prices.pure.sell)throw new Error('bad data');
+  MK.prices=j.prices;MK.asof=fmtAsof(j.asof);MK.source=j.source||'';MK.ready=true;
   document.getElementById('asof').value=MK.asof;
+  if(MK.source){
+    document.getElementById('brk-src').textContent=MK.source+' 고시 시세 · 1돈(3.75g) 기준';
+    const n=document.getElementById('src-note');
+    n.insertAdjacentText('beforeend',' 출처: '+MK.source+(j.sourceUrl?' ('+j.sourceUrl.replace(/^https?:\/\/(www\.)?|\/$/g,'')+')':'')+'.');
+  }
   calc(false);      // 기본값: 24K 1돈
 }).catch(()=>{
   showErr('금 시세 정보를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.');
 });
+
+// 국제 시세(참고 행) — 국내 고시가와 독립. 실패해도 계산기는 그대로 동작한다.
+function paintIntl(){
+  const oz=MK.intl&&MK.intl.usdPerOz, g1=MK.intl&&MK.intl.krwPerGram;
+  const set=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v;};
+  set('d-oz',oz?'$'+oz.toLocaleString('en-US',{maximumFractionDigits:2}):'–');
+  set('d-gram',g1?won(g1):'–');
+  set('d-don',g1?won(g1*DON_G):'–');
+}
+Promise.all([
+  fetch('https://api.gold-api.com/price/XAU').then(r=>r.json()),
+  fetch('https://open.er-api.com/v6/latest/USD').then(r=>r.json())
+]).then(([gold,fx])=>{
+  const oz=parseFloat(gold&&gold.price);
+  const krw=parseFloat(fx&&fx.rates&&fx.rates.KRW);
+  if(!(oz>0)||!(krw>0))return;
+  MK.intl={usdPerOz:oz,krwPerGram:(oz/31.1034768)*krw};
+  paintIntl();
+}).catch(()=>{});
 </script>
