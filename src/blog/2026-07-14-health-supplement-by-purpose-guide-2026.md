@@ -51,7 +51,7 @@ faq:
 
 ## 눈: 루테인이 기본
 
-![오래 스크린을 본 뒤 안경을 벗고 눈을 누르는 모습](/images/eye-health-lutein-2026.jpg)
+![오래 스크린을 본 뒤 안경을 벗고 눈을 누르는 모습](https://mungge.com/wp-content/uploads/2026/07/eye-health-lutein-2026.jpg)
 
 대표 성분은 **루테인·지아잔틴**, 여기에 아스타잔틴 항산화가 더해진 제품이 많습니다.
 

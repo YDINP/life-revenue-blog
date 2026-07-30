@@ -33,7 +33,7 @@ faq:
 
 <div class="callout-warning">⚠️ 단두종(퍼그·불독·페르시안 등)은 호흡기 구조상 체온 조절이 더 어려워 여름철 각별한 주의가 필요합니다.</div>
 
-![쿨매트 위에서 헥헥거리며 더위를 식히는 고양이](/images/pet-summer-heat-care-2026-cat.jpg)
+![쿨매트 위에서 헥헥거리며 더위를 식히는 고양이](https://mungge.com/wp-content/uploads/2026/07/pet-summer-heat-care-2026-cat.jpg)
 
 ## 폭염철 반려동물 건강관리 5가지
 
