@@ -251,6 +251,29 @@ export function parseTags(fm) {
   return [];
 }
 
+// 카테고리 파싱 — 한 글이 성격상 두 곳에 걸치는 경우가 흔하다(예: "AI 코딩 에이전트 보안"은
+// Review 보다 AI·Dev 에 가깝다). 기존엔 category 1개만 읽어 한 곳에만 넣었다.
+// 지원 형식(우선순위):
+//   categories: [AI, Dev]        / categories:\n  - AI\n  - Dev
+//   category: "AI, Dev"          (쉼표 구분)
+//   category: "Review"           (기존 단일 — 그대로 동작)
+export function parseCategories(fm) {
+  const inline = fm.match(/^categories:\s*\[(.*?)\]\s*$/m);
+  if (inline) return inline[1].split(',').map((s) => s.trim().replace(/^["']|["']$/g, '')).filter(Boolean);
+  const block = fm.match(/^categories:\s*\r?\n((?:[ \t]*-[ \t]*.+\r?\n?)+)/m);
+  if (block) {
+    return block[1].split(/\r?\n/)
+      .map((l) => (l.match(/^[ \t]*-[ \t]*(.+?)[ \t]*$/) || [])[1])
+      .filter(Boolean)
+      .map((s) => s.replace(/^["']|["']$/g, ''));
+  }
+  const single = fm.match(/^category:\s*(.+?)\s*$/m);
+  if (single) {
+    return single[1].replace(/^["']|["']$/g, '').split(',').map((s) => s.trim()).filter(Boolean);
+  }
+  return [];
+}
+
 export async function publishPost(file, { status = 'draft', env, keepChartDivs = false, silo = '', updateId = null } = {}) {
   env = env || envFromProcess();
   const raw = readFileSync(file, 'utf8');
@@ -272,9 +295,12 @@ export async function publishPost(file, { status = 'draft', env, keepChartDivs =
   let categories;
   if (silo) {
     const parentId = await ensureCategory(env, auth, silo);
-    const leafName = pick('category') || silo;
-    const leafId = await ensureCategory(env, auth, leafName, parentId);
-    categories = [leafId];
+    const leafNames = parseCategories(fm);
+    if (!leafNames.length) leafNames.push(silo);
+    categories = [];
+    // 순차 — ensureCategory 는 get-or-create 라 병렬로 돌리면 같은 이름이 중복 생성된다(태그와 같은 함정).
+    for (const n of leafNames) categories.push(await ensureCategory(env, auth, n, parentId));
+    categories = [...new Set(categories)];
   }
 
   // 태그: frontmatter 의 tags 를 전부 붙인다(카테고리는 1개지만 태그는 여러 개 동시 부여).
