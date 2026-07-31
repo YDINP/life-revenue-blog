@@ -125,6 +125,39 @@ async function callClaude(prompt) {
   return await readClaudeStream(res);
 }
 
+// Pexels 는 **영문 스톡사진 API** 다. 한국어 주제 문자열을 그대로 던지면 토큰 일부만 걸려
+// 엉뚱한 사진이 온다(실측 2026-07-31: "모두의카드 2026 출시일…" → 졸업 가운 사진.
+// 'card'도 'transit'도 아닌 "2026"에 매칭됐다). 영문 장면 검색어로 바꿔서 던진다.
+// ⚠️ 같은 로직이 ai-revenue-blog 에는 deriveImageQueries 로 이미 있었다 — LF 에만 없어서 생긴 차이다.
+async function deriveImageQueries(searchTerm) {
+  if (!/[가-힣]/.test(searchTerm)) return [searchTerm];
+  try {
+    const raw = await callLLM(
+      `다음 한국어 블로그 주제에 어울리는 **영문 스톡사진 검색어** 3개를 만들어줘.\n` +
+      `- 각 2~4단어, 사진으로 찍힐 수 있는 구체적 장면일 것(추상 개념 금지)\n` +
+      `- 주제의 핵심 대상이 화면에 보여야 함\n` +
+      `- JSON 배열만 출력: ["...","...","..."]\n\n주제: ${searchTerm}`
+    );
+    const m = raw.match(/\[[\s\S]*?\]/);
+    const arr = m ? JSON.parse(m[0]) : null;
+    if (Array.isArray(arr) && arr.length) return arr.filter((x) => typeof x === 'string' && x.trim()).slice(0, 3);
+  } catch (e) {
+    console.log(`[Pexels] 영문 검색어 생성 실패(${e.message.slice(0, 60)}) — 원문 사용`);
+  }
+  return [searchTerm];
+}
+
+// 후보 검색어를 순서대로 시도해 첫 성공을 쓴다(첫 검색어가 너무 좁아 0건인 경우가 잦다).
+async function fetchHeroImage(searchTerm) {
+  const queries = await deriveImageQueries(searchTerm);
+  for (const q of queries) {
+    console.log(`[Pexels] 검색: ${q}`);
+    const img = await fetchPexelsImage(q);
+    if (img.url) return img;
+  }
+  return { url: '', photographer: '' };
+}
+
 async function fetchPexelsImage(query) {
   try {
     const url = `https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&per_page=1&orientation=landscape`;
@@ -462,7 +495,7 @@ ${chartInstruction}
 
   // Fetch hero image from Pexels
   console.log(`Fetching Pexels image for: ${searchTerm}`);
-  const heroImage = await fetchPexelsImage(searchTerm);
+  const heroImage = await fetchHeroImage(searchTerm);
 
   // Pick coupang products
   const coupangProducts = revenue ? pickCoupangProducts(categoryName, 2) : [];
