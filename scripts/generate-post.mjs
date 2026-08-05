@@ -478,14 +478,13 @@ ${chartInstruction}
     }
   }
 
-  // FAQ가 있으면 본문 하단에 "자주 묻는 질문" 섹션 추가
-  if (postData.faq && Array.isArray(postData.faq) && postData.faq.length > 0) {
-    let faqSection = '\n\n---\n\n## 자주 묻는 질문\n\n';
-    for (const item of postData.faq) {
-      faqSection += `### ${item.q}\n\n${item.a}\n\n`;
-    }
-    postData.content += faqSection;
-  }
+  // ⚠️ FAQ 를 본문 하단에 마크다운 섹션으로 덧붙이지 않는다(2026-08-05 제거).
+  //    publish-wordpress.mjs 가 frontmatter 의 faq 로 `<div class="mg-faq"><h2>자주 묻는 질문</h2>…`
+  //    위젯을 이미 렌더한다. 둘 다 넣으면 발행글에 "자주 묻는 질문" H2 가 2개 생기고
+  //    ez-toc 목차에도 `자주_묻는_질문`, `자주_묻는_질문-2` 로 중복 등재된다.
+  //    ⚠️ 08-04 에 ai-revenue-blog 쪽(b0e537a)만 고쳐서 LF 는 하루 더 중복 발행됐다.
+  //    두 레포에 같은 블록이 각각 있으니 한쪽만 고치면 반쪽짜리다.
+  //    FAQ 는 frontmatter 의 faq 가 SSOT — 위젯과 FAQPage JSON-LD 둘 다 거기서 나온다.
 
   const { title: rawTitle, slug: postSlug, description: rawDesc, tags, content } = postData;
   // YAML frontmatter 안전: 내부 따옴표 제거
