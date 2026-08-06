@@ -142,18 +142,36 @@ async function deriveImageQueries(searchTerm) {
     const arr = m ? JSON.parse(m[0]) : null;
     if (Array.isArray(arr) && arr.length) return arr.filter((x) => typeof x === 'string' && x.trim()).slice(0, 3);
   } catch (e) {
-    console.log(`[Pexels] 영문 검색어 생성 실패(${e.message.slice(0, 60)}) — 원문 사용`);
+    console.log(`[Pexels] 영문 검색어 생성 실패(${e.message.slice(0, 60)})`);
   }
-  return [searchTerm];
+  // ⚠️ 실패해도 **한국어 원문을 Pexels 로 보내지 않는다.** Pexels 는 한국어를 이해하지 못하고
+  //    문자열 안의 숫자 같은 토큰에 걸려 엉뚱한 사진을 준다 — 제목에 "2026" 이 들어간 LF 주제가
+  //    연속 사흘(08-04 노란우산공제 / 08-05 청년월세지원 / 08-06 디딤돌대출) 전부 **같은 졸업식
+  //    사진**(pexels 38651881, "class of 2026")을 받아 갔다. 주제와 무관한 히어로가 라이브로 나간다.
+  //    한국어가 섞여 있으면 카테고리 기준의 영문 폴백을 쓴다.
+  const CATEGORY_FALLBACK = {
+    finance: ['korean money and calculator', 'person reviewing bank documents', 'apartment building exterior'],
+    lifestyle: ['korean street daily life', 'cozy home interior', 'person walking city street'],
+  };
+  const cat = (process.env.INPUT_CATEGORY || 'finance').toLowerCase();
+  return CATEGORY_FALLBACK[cat] || CATEGORY_FALLBACK.finance;
 }
 
 // 후보 검색어를 순서대로 시도해 첫 성공을 쓴다(첫 검색어가 너무 좁아 0건인 경우가 잦다).
 async function fetchHeroImage(searchTerm) {
   const queries = await deriveImageQueries(searchTerm);
   for (const q of queries) {
+    // 한국어가 섞인 질의는 아예 보내지 않는다(위 주석의 졸업식 사진 사고).
+    if (/[가-힣]/.test(q)) {
+      console.log(`[Pexels] 한국어 질의 차단: ${q}`);
+      continue;
+    }
     console.log(`[Pexels] 검색: ${q}`);
     const img = await fetchPexelsImage(q);
-    if (img.url) return img;
+    if (img.url) {
+      console.log(`[Pexels] 채택: id=${img.id ?? '?'} alt="${(img.alt || '').slice(0, 60)}"`);
+      return img;
+    }
   }
   return { url: '', photographer: '' };
 }
@@ -176,6 +194,8 @@ async function fetchPexelsImage(query) {
       return {
         url: photo.src.large2x || photo.src.large || photo.src.original,
         photographer: photo.photographer,
+        id: photo.id,
+        alt: photo.alt,
       };
     }
     return { url: '', photographer: '' };
@@ -459,9 +479,32 @@ ${chartInstruction}
           ? tagsMatch[1].match(/"([^"]+)"/g).map(t => t.replace(/"/g, ''))
           : ['자동생성'];
         let rawContent = contentMatch[1];
-        const lastQuote = rawContent.lastIndexOf('"');
-        if (lastQuote > 0) rawContent = rawContent.slice(0, lastQuote);
+        // ⚠️ lastIndexOf('"') 로 자르면 content 뒤에 오는 "faq": [...] 가 통째로 본문에
+        //    딸려 들어간다. 발행글 끝에 원시 JSON 이 노출되고 frontmatter faq 는 비어
+        //    FAQ 위젯·FAQPage 스키마가 통째로 빠졌다(2026-08-05 TF, 08-06 LF 연속 발생).
+        //    content 문자열의 진짜 끝 = 닫는 따옴표 뒤에 쉼표 + 다음 키가 오는 지점이다.
+        const endAt = rawContent.search(/"\s*,\s*"[a-zA-Z_][a-zA-Z0-9_]*"\s*:/);
+        if (endAt > 0) rawContent = rawContent.slice(0, endAt);
+        else {
+          const lastQuote = rawContent.lastIndexOf('"');
+          if (lastQuote > 0) rawContent = rawContent.slice(0, lastQuote);
+        }
         rawContent = rawContent.replace(/\\n/g, '\n').replace(/\\"/g, '"').replace(/\\\\/g, '\\');
+
+        // 잘린 JSON 에서라도 faq 를 살려낸다. 못 살리면 빈 배열 → 위젯만 안 뜨고
+        // 본문에 원시 JSON 이 새는 일은 없다.
+        const recoveredFaq = [];
+        {
+          const src = (jsonStr.split(/"faq"\s*:\s*\[/)[1] || '');
+          const re = /"q"\s*:\s*"((?:[^"\\]|\\.)*)"\s*,\s*"a"\s*:\s*"((?:[^"\\]|\\.)*)"/g;
+          let mm;
+          while ((mm = re.exec(src))) {
+            recoveredFaq.push({
+              q: mm[1].replace(/\\"/g, '"').replace(/\\n/g, ' '),
+              a: mm[2].replace(/\\"/g, '"').replace(/\\n/g, ' '),
+            });
+          }
+        }
 
         postData = {
           title: titleMatch[1],
@@ -469,6 +512,7 @@ ${chartInstruction}
           description: descMatch ? descMatch[1] : titleMatch[1],
           tags,
           content: rawContent,
+          faq: recoveredFaq,
         };
       } else {
         throw new Error('Could not extract required fields');
