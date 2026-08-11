@@ -157,9 +157,52 @@ async function deriveImageQueries(searchTerm) {
   return CATEGORY_FALLBACK[cat] || CATEGORY_FALLBACK.finance;
 }
 
-// 후보 검색어를 순서대로 시도해 첫 성공을 쓴다(첫 검색어가 너무 좁아 0건인 경우가 잦다).
+// ⚠️ 2026-08-11 사고 — 서로 다른 주제 두 글이 **같은 대표이미지**로 나갔다
+//    (전세보증보험 3145 / 열대야 3164 둘 다 pexels 4386366). 원인은 `per_page=1`:
+//    상위 1건만 보므로 영문 질의가 조금만 겹쳐도 같은 사진이 결정적으로 나온다.
+//    → 후보를 여러 개 받고, **사이트가 이미 쓴 사진은 제외**한 뒤 관련성으로 고른다.
+
+// mungge 미디어 라이브러리에서 이미 쓴 pexels photo id 를 긁는다. 업로드 파일명이
+// `pexels-photo-<id>-<timestamp>.jpg` 라 slug 로 역추적된다. 자격증명·네트워크가
+// 없으면 빈 Set 을 돌려 기존 동작(중복 허용)으로 degrade — 히어로 선정 자체는 막지 않는다.
+let _usedPexelsIds = null;
+async function usedPexelsIds() {
+  if (_usedPexelsIds) return _usedPexelsIds;
+  const used = new Set();
+  const { WP_URL, WP_USER, WP_APP_PASS } = process.env;
+  if (WP_URL && WP_USER && WP_APP_PASS) {
+    const auth = 'Basic ' + Buffer.from(`${WP_USER}:${WP_APP_PASS}`).toString('base64');
+    try {
+      for (let page = 1; page <= 10; page++) {
+        const res = await fetch(`${WP_URL}/wp-json/wp/v2/media?per_page=100&page=${page}&_fields=slug`, {
+          headers: { Authorization: auth },
+        });
+        if (!res.ok) break;
+        const items = await res.json();
+        if (!Array.isArray(items) || !items.length) break;
+        for (const m of items) {
+          const hit = (m.slug || '').match(/pexels-photo-(\d+)/);
+          if (hit) used.add(hit[1]);
+        }
+        if (items.length < 100) break;
+      }
+    } catch (e) {
+      console.log(`[Pexels] 기사용 목록 조회 실패(${e.message.slice(0, 60)}) — 중복 검사 없이 진행`);
+    }
+  }
+  _usedPexelsIds = used;
+  return used;
+}
+
+const STOP_WORDS = new Set(['the', 'a', 'an', 'of', 'and', 'for', 'with', 'in', 'on', 'to', 'at']);
+
 async function fetchHeroImage(searchTerm) {
+  if (!PEXELS_API_KEY) return { url: '', photographer: '' };
+
   const queries = await deriveImageQueries(searchTerm);
+  const used = await usedPexelsIds();
+  const candidates = [];
+
   for (const q of queries) {
     // 한국어가 섞인 질의는 아예 보내지 않는다(위 주석의 졸업식 사진 사고).
     if (/[가-힣]/.test(q)) {
@@ -167,41 +210,48 @@ async function fetchHeroImage(searchTerm) {
       continue;
     }
     console.log(`[Pexels] 검색: ${q}`);
-    const img = await fetchPexelsImage(q);
-    if (img.url) {
-      console.log(`[Pexels] 채택: id=${img.id ?? '?'} alt="${(img.alt || '').slice(0, 60)}"`);
-      return img;
+    for (const p of await fetchPexelsCandidates(q)) {
+      if (used.has(String(p.id))) continue; // 이미 다른 글이 쓴 사진
+      candidates.push({ q, p });
     }
   }
-  return { url: '', photographer: '' };
+  if (!candidates.length) {
+    console.log(`[Pexels] 미사용 후보 0건 — 대표이미지 없이 진행`);
+    return { url: '', photographer: '' };
+  }
+
+  // 관련성 점수: 질의 토큰이 사진 alt 에 몇 개나 들어있나. 동점이면 검색 순위 유지.
+  const tokens = [...new Set(
+    queries.join(' ').toLowerCase().split(/[^a-z0-9]+/).filter((t) => t.length > 2 && !STOP_WORDS.has(t))
+  )];
+  const scored = candidates
+    .map(({ q, p }, i) => ({ q, p, i, score: tokens.reduce((s, t) => s + ((p.alt || '').toLowerCase().includes(t) ? 1 : 0), 0) }))
+    .sort((a, b) => b.score - a.score || a.i - b.i);
+
+  const best = scored[0];
+  console.log(`[Pexels] 채택: id=${best.p.id} 점수 ${best.score}/${tokens.length} alt="${(best.p.alt || '').slice(0, 60)}"`);
+  used.add(String(best.p.id)); // 같은 실행에서 다음 글이 또 집지 않도록
+  return {
+    url: best.p.src.large2x || best.p.src.large || best.p.src.original,
+    photographer: best.p.photographer,
+    id: best.p.id,
+    alt: best.p.alt,
+  };
 }
 
-async function fetchPexelsImage(query) {
+async function fetchPexelsCandidates(query) {
   try {
-    const url = `https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&per_page=1&orientation=landscape`;
-    const res = await fetch(url, {
-      headers: { Authorization: PEXELS_API_KEY },
-    });
-
+    const url = `https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&per_page=20&orientation=landscape`;
+    const res = await fetch(url, { headers: { Authorization: PEXELS_API_KEY } });
     if (!res.ok) {
-      console.warn(`Pexels API error ${res.status}, using fallback image`);
-      return { url: '', photographer: '' };
+      console.warn(`Pexels API error ${res.status} (${query})`);
+      return [];
     }
-
     const data = await res.json();
-    if (data.photos && data.photos.length > 0) {
-      const photo = data.photos[0];
-      return {
-        url: photo.src.large2x || photo.src.large || photo.src.original,
-        photographer: photo.photographer,
-        id: photo.id,
-        alt: photo.alt,
-      };
-    }
-    return { url: '', photographer: '' };
+    return data.photos || [];
   } catch (err) {
     console.warn('Pexels fetch failed:', err.message);
-    return { url: '', photographer: '' };
+    return [];
   }
 }
 
