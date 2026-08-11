@@ -175,6 +175,11 @@ function mdToHtml(src, canonicalUrl, { keepChartDivs = false } = {}) {
   }
   const fences = [];
   s = s.replace(/```(\w*)\n?([\s\S]*?)```/g, (_m, lang, code) => { fences.push({ lang, code: code.replace(/\n$/, '') }); return ` ${fences.length - 1} `; });
+  // 인라인 백틱 → <code>. 이게 없으면 워드프레스 wptexturize 가 백틱 안의 `--` 를
+  // en-dash(–) 로 바꿔 CLI 플래그가 통째로 망가진다(실측 2026-08-11: `--jinja` → `–jinja`).
+  // 굵게·링크 치환보다 먼저 빼내야 코드 안의 *·[ ] 가 마크업으로 오인되지 않는다.
+  const inlines = [];
+  s = s.replace(/`([^`\n]+)`/g, (_m, code) => { inlines.push(code); return `${inlines.length - 1}`; });
   s = s
     .replace(/^###\s+(.*)$/gm, '<h3>$1</h3>')
     .replace(/^##\s+(.*)$/gm, '<h2>$1</h2>')
@@ -190,6 +195,7 @@ function mdToHtml(src, canonicalUrl, { keepChartDivs = false } = {}) {
     return `<p>${p.replace(/\n/g, '<br>')}</p>`;
   }).join('\n');
   s = s.replace(/ (\d+) /g, (_x, i) => renderCodeCard(fences[i]));
+  s = s.replace(/(\d+)/g, (_x, i) => `<code>${esc(inlines[i])}</code>`);
   return s;
 }
 
