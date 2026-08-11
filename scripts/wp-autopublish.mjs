@@ -36,7 +36,13 @@ async function setFeatured(env, wpId, url, slug, publicBase) {
     ct = /\.png$/i.test(url) ? 'image/png' : /\.webp$/i.test(url) ? 'image/webp' : 'image/jpeg';
   }
   const ext = ct.includes('png') ? 'png' : ct.includes('webp') ? 'webp' : 'jpg';
-  const up = await fetch(`${B}/media`, { method: 'POST', headers: { Authorization: auth, 'Content-Type': ct, 'Content-Disposition': `attachment; filename="${slug}.${ext}"` }, body: buf });
+  // ⚠️ 파일명에 pexels photo id 를 남긴다. generate-post.mjs 의 "이미 쓴 사진 제외"는
+  //    미디어 slug 에서 `pexels-photo-<id>` 를 역추적하는데, 글 slug 로만 올리면 id 가
+  //    업로드 시점에 소실돼 중복 검사가 조용히 무력해진다(2026-08-11: 서로 다른 두 글이
+  //    같은 히어로로 나간 사고의 재발 경로). 글 slug 는 SEO 상 유지하고 id 만 덧붙인다.
+  const pexelsId = (url.match(/\/photos\/(\d+)\//) || [])[1];
+  const filename = pexelsId ? `${slug}-pexels-photo-${pexelsId}.${ext}` : `${slug}.${ext}`;
+  const up = await fetch(`${B}/media`, { method: 'POST', headers: { Authorization: auth, 'Content-Type': ct, 'Content-Disposition': `attachment; filename="${filename}"` }, body: buf });
   if (!up.ok) return;
   const media = await up.json();
   await fetch(`${B}/posts/${wpId}`, { method: 'POST', headers: { Authorization: auth, 'Content-Type': 'application/json' }, body: JSON.stringify({ featured_media: media.id }) });
