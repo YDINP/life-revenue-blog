@@ -17,6 +17,36 @@
       "permanent": true
     },
     {
+      "source": "/guide/growth",
+      "destination": "https://mungge.com/guide/career/",
+      "permanent": true
+    },
+    {
+      "source": "/guide/growth/",
+      "destination": "https://mungge.com/guide/career/",
+      "permanent": true
+    },
+    {
+      "source": "/guide/money",
+      "destination": "https://mungge.com/guide/asset/",
+      "permanent": true
+    },
+    {
+      "source": "/guide/money/",
+      "destination": "https://mungge.com/guide/asset/",
+      "permanent": true
+    },
+    {
+      "source": "/guide",
+      "destination": "https://mungge.com/guide/",
+      "permanent": true
+    },
+    {
+      "source": "/guide/",
+      "destination": "https://mungge.com/guide/",
+      "permanent": true
+    },
+    {
       "source": "/blog/2026-02-06-japan-travel-budget-guide-2026",
       "destination": "https://mungge.com/2026-02-06-japan-travel-budget-guide-2026/",
       "permanent": true
