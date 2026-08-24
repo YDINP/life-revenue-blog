@@ -183,6 +183,7 @@ function mdToHtml(src, canonicalUrl, { keepChartDivs = false } = {}) {
   s = s
     .replace(/^###\s+(.*)$/gm, '<h3>$1</h3>')
     .replace(/^##\s+(.*)$/gm, '<h2>$1</h2>')
+    .replace(/==(?!\s)(.+?)(?<!\s)==/g, '<mark>$1</mark>')
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     .replace(/^!\[[^\]]*\]\(([^)]+)\)/gm, '<figure><img src="$1" alt=""/></figure>')
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');

@@ -63,6 +63,8 @@ async function readClaudeStream(res) {
   const decoder = new TextDecoder();
   let buf = '';
   let text = '';
+  let stopReason = null;
+  let sawStop = false;
   for await (const chunk of res.body) {
     buf += decoder.decode(chunk, { stream: true });
     let i;
@@ -76,7 +78,21 @@ async function readClaudeStream(res) {
       try { ev = JSON.parse(payload); } catch { continue; }
       if (ev.type === 'content_block_delta' && ev.delta?.text) text += ev.delta.text;
       if (ev.type === 'error') throw new Error(`Claude stream error: ${JSON.stringify(ev.error)}`);
+      if (ev.type === 'message_delta' && ev.delta?.stop_reason) stopReason = ev.delta.stop_reason;
+      if (ev.type === 'message_stop') sawStop = true;
     }
+  }
+
+  /* ⚠ 잘린 응답을 정상 반환값처럼 돌려주지 않는다. 2026-08-19 LF 글이 본문 1/3 지점에서
+     끊긴 채 발행된 사고의 원인이 이 검증의 부재였다. */
+  if (stopReason === 'max_tokens') {
+    throw new Error('Claude 응답이 max_tokens 로 잘렸습니다(본문 미완성) — 재시도 필요');
+  }
+  if (!sawStop) {
+    throw new Error(`Claude 스트림이 정상 종료되지 않음(message_stop 없음, 수신 ${text.length}자) — 중간에 끊긴 응답이므로 폐기`);
+  }
+  if (!text.trim()) {
+    throw new Error('Claude 응답이 비어 있습니다');
   }
   return text;
 }
@@ -350,6 +366,14 @@ ${evidenceRaw}
 - 시행 전인 제도는 시제를 지키세요("오늘 마감" 같은 표현은 근거에 날짜가 있을 때만).
 - **매체명도 근거에 있는 것만** 쓰세요. 위 헤드라인 목록에 없는 매체("연합뉴스가 보도했다" 등)를
   끌어오지 마세요 — 있을 법한 매체를 적는 것도 날조입니다. 헤드라인에 적힌 매체·보도일 그대로만 인용하세요.
+- ⛔ **주제 이탈 금지.** 근거 묶음에는 뉴스 수집이 넓게 훑는 탓에 이 글의 주제와 무관한
+  헤드라인이 섞여 들어옵니다. 무관한 항목은 근거에 있더라도 **쓰지 마세요.**
+  한 글은 한 주제만 다룹니다. 분량이 모자라면 주제를 더 깊게 파세요.
+- ⛔ **잡다한 제도·행사·마감을 모아 붙이는 섹션을 만들지 마세요.** "이번 주 같이 챙길 것",
+  "~하는 김에 같이 챙기면 좋은 것" 같은 곁다리 묶음은 금지입니다. 실제로 이 형태에서
+  근거 없는 날짜·금액이 반복해서 나왔습니다.
+- ⛔ **헤드라인만 있고 본문이 없는 항목으로 단정하지 마세요.** 제목 한 줄만 확보된 건은
+  지급일·수량·마감일·요금을 확정 서술할 근거가 되지 못합니다. 그런 항목은 아예 빼세요.
 - 근거에서 **추론한 것**을 사실처럼 쓰지 마세요. 출시일과 종료일이 겹친다고 "병행 사용 가능",
   종료 보도가 있다고 "충전은 이미 끝났다"로 단정하는 식은 금지입니다.
   추론이면 "~로 보인다", "공식 안내 확인 필요"로 명확히 낮추세요.
@@ -421,7 +445,12 @@ ${citableSources.map((s) => `  - [${s.title}](${s.url})`).join('\n')}` : `- 인�
 **강조 포인트 — 콜아웃 박스 사용 금지**:
 - 콜아웃 박스(callout-tip/warning/info)를 사용하지 마세요.
 - 강조할 내용은 마크다운 **bold** 또는 > blockquote로 충분합니다.
-- 본문에서 이미 설명한 내용을 별도 박스로 반복하는 것은 가독성을 해칩니다.`;
+- 본문에서 이미 설명한 내용을 별도 박스로 반복하는 것은 가독성을 해칩니다.
+- 이 글에서 독자가 **단 한 줄만 가져간다면 그 문장**은 앞뒤를 등호 두 개로 감싸세요(예: ==핵심 문장==).
+  발행 시 <mark> 로 바뀌어 스크롤 진입할 때 형광펜이 칠해집니다.
+  ⚠ **글 전체에서 최대 2회**. 3회 이상 쓰면 강조가 아니라 배경이 되니 절대 넘기지 마세요.
+  ⚠ 등호 바로 안쪽에 공백을 두지 마세요(== 문장 == 은 변환되지 않습니다).
+  ⚠ 이미 **bold** 인 구간을 다시 등호로 감싸지 마세요. 둘 중 하나만 씁니다.`;
 
   // 기존 포스트 중복 방지 지시
   const dupeGuard = existingTitles && existingTitles.length > 0
@@ -695,7 +724,10 @@ async function main() {
   let generated = 0;
   for (let i = 0; i < categoryNames.length; i++) {
     const categoryName = categoryNames[i];
-    const categoryData = seeds.categories.find(c => c.name === categoryName);
+    // ⚠ 시드 키는 레포마다 표기가 다르다(TF=AI/Dev/Review/Game, LF=finance/lifestyle).
+    //   대소문자만 달라도 조용히 0편이 나오므로(2026-08-20 --category ai 로 두 번 날림) 무시하고 찾는다.
+    const categoryData = seeds.categories.find((c) => c.name === categoryName)
+      || seeds.categories.find((c) => String(c.name).toLowerCase() === String(categoryName).toLowerCase());
     if (!categoryData) {
       console.error(`[ERROR] Category "${categoryName}" not found in seeds`);
       continue;
