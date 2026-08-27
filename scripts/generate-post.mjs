@@ -282,10 +282,28 @@ function fixChartLabels(md) {
   );
 }
 
-function pickCoupangProducts(categoryName, count = 2) {
+// 카테고리 고정 표에서 **본문이 실제로 언급한 상품만** 고른다.
+// ⚠️ 예전 구현은 표에서 무작위로 2개를 뽑았다. 그래서 김치냉장고 글에 「아날로그 알람시계」가,
+//    처서 글에 알람시계가, 데이터 백업 글에 4K 모니터가 붙었다(2026-08 나흘 연속).
+//    본문과 무관한 제휴 목록은 애드센스가 "가치 없는 콘텐츠"로 판정하는 전형이고,
+//    실제로 2026-08-27 mungge.com 이 이 상태로 심사에서 떨어졌다.
+//    **하나도 안 맞으면 빈 배열을 돌려준다** — 무관한 링크를 다느니 안 다는 게 낫다.
+function pickCoupangProducts(categoryName, count = 2, body = '') {
   const products = coupangLinks[categoryName] || [];
-  const shuffled = [...products].sort(() => Math.random() - 0.5);
-  return shuffled.slice(0, count);
+  if (!products.length) return [];
+  const hay = String(body).replace(/s+/g, ' ');
+  if (!hay) return [];
+  // 상품명엔 규격(M2·28인치)이 붙어 본문 표현과 그대로 겹치지 않는다.
+  // 제목 전체 → 숫자 낀 토큰을 뺀 한글 부분 → 가장 긴 한글 토큰 순으로 느슨하게 본다.
+  const keysOf = (title) => {
+    const t = String(title || '').trim();
+    if (!t) return [];
+    const ko = t.split(/s+/).filter((w) => /[가-힣]{2,}/.test(w) && !/d/.test(w));
+    const keys = [t, ko.join(' ')];
+    if (ko.length) keys.push(ko.slice().sort((a, b) => b.length - a.length)[0]);
+    return [...new Set(keys.filter((k) => k && k.length >= 2))];
+  };
+  return products.filter((p) => keysOf(p.title).some((k) => hay.includes(k))).slice(0, count);
 }
 
 /**
@@ -620,16 +638,12 @@ ${chartInstruction}
   const heroImage = await fetchHeroImage(searchTerm);
 
   // Pick coupang products
-  const coupangProducts = revenue ? pickCoupangProducts(categoryName, 2) : [];
+  const coupangProducts = revenue ? pickCoupangProducts(categoryName, 2, content) : [];
 
-  // Build coupang section
-  let coupangSection = '';
-  if (coupangProducts.length > 0) {
-    coupangSection = `\n\n---\n\n## 추천 상품\n\n> 이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.\n\n`;
-    for (const product of coupangProducts) {
-      coupangSection += `- [${product.title}](${product.url})\n`;
-    }
-  }
+  // 마크다운 「추천 상품」 섹션은 더 이상 만들지 않는다.
+  // publish-wordpress.mjs 의 buildCoupangCards() 가 같은 상품으로 .cpc-wrap 카드를 만들어
+  // 한 글에 같은 목록이 두 번 실렸고, 이쪽 링크에는 rel="sponsored nofollow" 도 없었다.
+  const coupangSection = '';
 
   // Build frontmatter + full markdown
   const slug = postSlug || slugify(title);
