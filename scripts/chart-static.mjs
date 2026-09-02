@@ -94,8 +94,60 @@ function donut(a) {
   return h + '</div></div>';
 }
 
+// 항목 간 스케일 편차가 크면 공통 y축이 작은 항목을 바닥에 눕힌다
+// (수익률 3.8 과 안정성 95 를 한 축에 올리면 수익률 선이 안 보인다).
+// 그 경우에만 행별 독립 스케일인 좌우 대칭 막대로 물러선다.
+function lineScaleOk(items) {
+  if (items.length < 2) return false;
+  const maxes = items.map((it) => Math.max(it.a, it.b));
+  const top = Math.max(...maxes);
+  return top > 0 && Math.min(...maxes) >= top * 0.15;
+}
+
+// 꺾은선: 지표를 x축에 나열하고 두 시리즈를 각각 한 줄로 그린다.
+// 대칭 막대는 라벨을 중심으로 좌우 "반대 방향"으로 자라 공통 기준선이 없었다
+// → 두 값의 길이를 눈으로 겹쳐 볼 수 없었다. 선은 상하 위치가 곧 우열이다.
+// 선만 SVG(preserveAspectRatio=none)로 늘이고, 점·값·축라벨은 HTML 절대배치라
+// 어느 폭에서도 글자가 안 쪼그라든다. 식별은 색 단독이 아니다(A=속 빈 링 / B=꽉 찬 점 + 전 지점 값).
+function versusLine(a, items) {
+  const title = a.title || '';
+  const nameA = a.nameA || 'A', nameB = a.nameB || 'B';
+  const colorA = a.colorA || '#3b82f6', colorB = a.colorB || '#009e73';
+  const n = items.length;
+  const top = Math.max(...items.flatMap((it) => [it.a, it.b])) * 1.12;
+  const X = (i) => 10 + (i * 80) / (n - 1);
+  const Y = (v) => (top > 0 ? (v / top) * 100 : 0);
+  const pts = (k) => items.map((it, i) => `${X(i)},${100 - Y(it[k])}`).join(' ');
+
+  let h = title ? `<div class="chart-title">${title}</div>` : '';
+  h += '<div class="ln-legend">'
+    + `<span class="ln-key"><i class="ln-swatch ln-swatch-a" style="color:${colorA}"></i>${nameA}</span>`
+    + `<span class="ln-key"><i class="ln-swatch ln-swatch-b" style="color:${colorB}"></i>${nameB}</span>`
+    + '</div><div class="ln-area">'
+    + '<div class="ln-grid"><span></span><span></span><span></span><span></span></div>'
+    + '<svg class="ln-svg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">'
+    + `<polyline points="${pts('a')}" stroke="${colorA}" vector-effect="non-scaling-stroke" />`
+    + `<polyline points="${pts('b')}" stroke="${colorB}" vector-effect="non-scaling-stroke" /></svg>`;
+  items.forEach((it, i) => {
+    // 같은 지표의 두 점 중 위쪽 값은 라벨을 위로, 아래쪽은 아래로 → 값끼리 안 겹친다
+    for (const [k, dot, color] of [['a', 'ln-dot-a', colorA], ['b', 'ln-dot-b', colorB]]) {
+      const dir = it[k] >= it[k === 'a' ? 'b' : 'a'] ? 'ln-up' : 'ln-dn';
+      h += `<div class="ln-pt ${dir}" style="left:${X(i)}%;bottom:${Y(it[k])}%;color:${color}">`
+        + `<i class="ln-dot ${dot}"></i><b class="ln-v">${it[k]}</b></div>`;
+    }
+  });
+  return h + '</div><div class="ln-xaxis">'
+    + items.map((it, i) => `<span class="ln-x" style="left:${X(i)}%;width:${Math.min(96 / n, 30)}%">${it.label}</span>`).join('')
+    + '</div>';
+}
+
 function versus(a) {
-  const items = JSON.parse(a.items || '[]'), title = a.title || '';
+  const items = JSON.parse(a.items || '[]');
+  return lineScaleOk(items) ? versusLine(a, items) : versusBars(a, items);
+}
+
+function versusBars(a, items) {
+  const title = a.title || '';
   const nameA = a.nameA || 'A', nameB = a.nameB || 'B', colorA = a.colorA || '#3b82f6', colorB = a.colorB || '#009e73';
   let h = title ? `<div class="chart-title">${title}</div>` : '';
   h += `<div class="versus-header"><span class="versus-name" style="color:${colorA}">${nameA}</span><span class="versus-vs">VS</span><span class="versus-name" style="color:${colorB}">${nameB}</span></div><div class="versus-rows">`;
