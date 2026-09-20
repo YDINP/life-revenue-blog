@@ -296,7 +296,8 @@ const AI_DISCLOSURE_HTML =
   `<p class="${AI_DISCLOSURE_CLASS}" style="margin-top:2.5rem;padding-top:1rem;border-top:1px solid rgba(128,128,128,0.35);font-size:0.9em;line-height:1.75;opacity:0.75;">` +
   '이 글은 AI로 초안을 작성하고 사람이 사실 확인과 편집을 거쳐 발행했습니다. ' +
   '본문에 인용한 수치와 일정은 함께 링크한 출처에서 확인할 수 있으며, ' +
-  '제도·요금처럼 자주 바뀌는 정보는 공식 공지로 한 번 더 확인해 주세요.' +
+  '제도·요금처럼 자주 바뀌는 정보는 공식 공지로 한 번 더 확인해 주세요. ' +
+  '검수 절차와 필자 표기는 <a href="/about/">사이트 소개</a>에 정리해 두었습니다.' +
   '</p>';
 
 // 멱등: 이미 고지가 들어 있으면(클래스 마커 또는 문구 자체) 다시 붙이지 않는다.
