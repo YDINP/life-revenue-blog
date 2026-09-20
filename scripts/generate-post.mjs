@@ -282,6 +282,32 @@ function fixChartLabels(md) {
   );
 }
 
+// ─── AI 생성 고지 (본문 맨 끝) ────────────────────────────────────────
+/* AI-DISCLOSURE:BEGIN */
+// 발행 글마다 「AI 초안 + 사람 검수」 고지를 본문 맨 끝(참고 자료 뒤)에 붙인다.
+// ⚠️ 프롬프트로 LLM 에게 시키지 않는다 — 이 레포에서 반복적으로 빠뜨렸다.
+//    코드가 결정적으로 덧붙여야 한 편도 새지 않는다.
+// ⚠️ publish-wordpress.mjs 의 mdToHtml 은 blockquote(>) 와 수평선(---) 을 변환하지 않아
+//    그대로 본문에 노출된다. 반면 '<' 로 시작하는 문단은 원시 HTML 로 통과시키므로 <p> 로 쓴다.
+// ⚠️ 배경색을 박으면 사이트 다크모드에서 글자가 묻는다 → 색은 상속하고 opacity 로만 죽인다.
+//    (위젯 custom_html-2 는 건드릴 수 없으므로 스타일을 인라인으로 자립시킨다.)
+const AI_DISCLOSURE_CLASS = 'mg-ai-note';
+const AI_DISCLOSURE_HTML =
+  `<p class="${AI_DISCLOSURE_CLASS}" style="margin-top:2.5rem;padding-top:1rem;border-top:1px solid rgba(128,128,128,0.35);font-size:0.9em;line-height:1.75;opacity:0.75;">` +
+  '이 글은 AI로 초안을 작성하고 사람이 사실 확인과 편집을 거쳐 발행했습니다. ' +
+  '본문에 인용한 수치와 일정은 함께 링크한 출처에서 확인할 수 있으며, ' +
+  '제도·요금처럼 자주 바뀌는 정보는 공식 공지로 한 번 더 확인해 주세요.' +
+  '</p>';
+
+// 멱등: 이미 고지가 들어 있으면(클래스 마커 또는 문구 자체) 다시 붙이지 않는다.
+function appendAiDisclosure(body) {
+  const s = String(body ?? '');
+  if (s.includes(AI_DISCLOSURE_CLASS)) return s;
+  if (/AI(로|가)?\s*초안을\s*작성/.test(s.replace(/\s+/g, ' '))) return s;
+  return `${s.replace(/\s+$/, '')}\n\n${AI_DISCLOSURE_HTML}\n`;
+}
+/* AI-DISCLOSURE:END */
+
 // 카테고리 고정 표에서 **본문이 실제로 언급한 상품만** 고른다.
 // ⚠️ 예전 구현은 표에서 무작위로 2개를 뽑았다. 그래서 김치냉장고 글에 「아날로그 알람시계」가,
 //    처서 글에 알람시계가, 데이터 백업 글에 4K 모니터가 붙었다(2026-08 나흘 연속).
@@ -710,9 +736,10 @@ coupangLinks:
 ${coupangYaml}
 ${faqYaml}---`;
 
+  const bodyWithDisclosure = appendAiDisclosure(`${content}${coupangSection}`);
   const fullContent = `${frontmatter}
 
-${content}${coupangSection}
+${bodyWithDisclosure}
 `;
 
   // Write file
