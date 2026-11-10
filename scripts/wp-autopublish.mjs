@@ -1,7 +1,7 @@
 // 생성된 .md를 mungge.com(WordPress)에 자동 발행 + 대표이미지 설정.
 // generate-post.mjs 훅용. WP env(WP_URL/WP_USER/WP_APP_PASS) 없으면 조용히 스킵(Astro만).
 // 차트=정적렌더(keepChartDivs), 대표이미지=frontmatter hero 사이드로드, IndexNow는 WP 플러그인이 자동 핑.
-import { readFileSync, existsSync } from 'fs';
+import { readFileSync, existsSync, mkdirSync } from 'fs';
 import { execSync } from 'child_process';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
@@ -24,6 +24,8 @@ async function setFeatured(env, wpId, url, slug, publicBase) {
   if (/^https?:\/\//.test(url)) {
     // 원격(Pexels 등): node fetch는 403 → curl 사용
     const tmp = join(__dir, '..', '.tmp', `hero-${slug}.tmp`);
+    // ⚠ curl -o 는 폴더를 만들지 않는다. .tmp 가 없는 PC 에서는 대표이미지가 조용히 빠졌다(2026-11 집 PC 이전 후 TF 2편).
+    mkdirSync(dirname(tmp), { recursive: true });
     try { execSync(`curl -s -L --max-time 25 -A "Mozilla/5.0" -o "${tmp}" "${url}"`, { stdio: 'ignore' }); } catch { return; }
     if (!existsSync(tmp)) return;
     buf = readFileSync(tmp);
