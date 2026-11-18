@@ -148,7 +148,7 @@ async function callClaude(prompt) {
 async function deriveImageQueries(searchTerm) {
   if (!/[가-힣]/.test(searchTerm)) return [searchTerm];
   try {
-    const raw = await callLLM(
+    const raw = await callClaude(
       `다음 한국어 블로그 주제에 어울리는 **영문 스톡사진 검색어** 3개를 만들어줘.\n` +
       `- 각 2~4단어, 사진으로 찍힐 수 있는 구체적 장면일 것(추상 개념 금지)\n` +
       `- 주제의 핵심 대상이 화면에 보여야 함\n` +
