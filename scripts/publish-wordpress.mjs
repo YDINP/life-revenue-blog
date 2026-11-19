@@ -293,8 +293,7 @@ export async function publishPost(file, { status = 'draft', env, keepChartDivs =
   const canonical = `${env.CANONICAL_BASE.replace(/\/$/, '')}/${slug}/`;
   // 본문 상단 모바일 전용 광고(320x50). 데스크톱은 Ad Inserter 728(.code-block-1) 사용,
   // 모바일에선 CSS로 728 숨기고 이 320x50 노출(ba.min.js가 페이지 로드 시 자동 채움).
-  const MO_INPOST_AD = '<div class="mg-inpost-mo" style="justify-content:center;margin:1.5rem 0;"><ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-FxUxEhp2LCne6gT3" data-ad-width="320" data-ad-height="50"></ins></div>\n';
-  const content = injectCoupang(MO_INPOST_AD + buildTLDR(pick('description')) + mdToHtml(body, canonical, { keepChartDivs }), buildCoupangCards(parseCoupang(fm)))
+  const content = injectCoupang(buildTLDR(pick('description')) + mdToHtml(body, canonical, { keepChartDivs }), buildCoupangCards(parseCoupang(fm)))
     + buildFaq(parseFaq(fm), canonical);
   const auth = 'Basic ' + Buffer.from(`${env.WP_USER}:${env.WP_APP_PASS}`).toString('base64');
 
